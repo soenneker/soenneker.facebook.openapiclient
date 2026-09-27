@@ -1,0 +1,1920 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+  "info": {
+    "title": "Facebook Publishing API",
+    "version": "v26.0"
+  },
+  "servers": [
+    {
+      "url": "https://graph.facebook.com/v26.0"
+    }
+  ],
+  "paths": {
+    "/{node-id}/feed": {
+      "get": {
+        "operationId": "get_id_feed",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_hidden",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "show_expired",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "with",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/pagefeed_with_enum_param"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "PagePost",
+            "parameters": [
+              {
+                "name": "include_hidden",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "show_expired",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "with",
+                "required": false,
+                "type": "pagefeed_with_enum_param"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PagePost"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_id_feed",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "Page",
+            "parameters": [
+              {
+                "name": "attached_media",
+                "required": false,
+                "type": "list\u003CObject\u003E"
+              },
+              {
+                "name": "feed_targeting",
+                "required": false,
+                "type": "Object"
+              },
+              {
+                "name": "link",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "published",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "scheduled_publish_time",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "targeting",
+                "required": false,
+                "type": "Object"
+              },
+              {
+                "name": "unpublished_content_type",
+                "required": false,
+                "type": "pagefeed_unpublished_content_type_enum_param"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "attached_media": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  },
+                  "feed_targeting": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "message": {
+                    "type": "string"
+                  },
+                  "published": {
+                    "type": "boolean"
+                  },
+                  "scheduled_publish_time": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0
+                  },
+                  "targeting": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "unpublished_content_type": {
+                    "$ref": "#/components/schemas/pagefeed_unpublished_content_type_enum_param"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/photos": {
+      "get": {
+        "operationId": "get_id_photos",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "biz_tag_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "business_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/pagephotos_type_enum_param"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "Photo",
+            "parameters": [
+              {
+                "name": "biz_tag_id",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "business_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "type",
+                "required": false,
+                "type": "pagephotos_type_enum_param"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Photo"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_id_photos",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "Photo",
+            "parameters": [
+              {
+                "name": "alt_text_custom",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "caption",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "published",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "scheduled_publish_time",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "temporary",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "url",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "alt_text_custom": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "message": {
+                    "type": "string"
+                  },
+                  "published": {
+                    "type": "boolean"
+                  },
+                  "scheduled_publish_time": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0
+                  },
+                  "temporary": {
+                    "type": "boolean"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/posts": {
+      "get": {
+        "operationId": "get_id_posts",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_hidden",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "show_expired",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "with",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/pageposts_with_enum_param"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "PagePost",
+            "parameters": [
+              {
+                "name": "include_hidden",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "q",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "show_expired",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "with",
+                "required": false,
+                "type": "pageposts_with_enum_param"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PagePost"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/published_posts": {
+      "get": {
+        "operationId": "get_id_published_posts",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_hidden",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "show_expired",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "with",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/pagepublished_posts_with_enum_param"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "PagePost",
+            "parameters": [
+              {
+                "name": "include_hidden",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "show_expired",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "with",
+                "required": false,
+                "type": "pagepublished_posts_with_enum_param"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PagePost"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/scheduled_posts": {
+      "get": {
+        "operationId": "get_id_scheduled_posts",
+        "tags": [
+          "Page"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": null,
+            "returnType": "PagePost",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PagePost"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}": {
+      "get": {
+        "operationId": "get_id",
+        "tags": [
+          "Page",
+          "PagePost",
+          "Photo"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "account_linking_token",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "name": "primary_fb_page_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "primary_ig_user_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "Page",
+            "name": "#get",
+            "returnType": "Page",
+            "parameters": [
+              {
+                "name": "account_linking_token",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "PagePost",
+            "name": "#get",
+            "returnType": "PagePost",
+            "parameters": [
+              {
+                "name": "primary_fb_page_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "primary_ig_user_id",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "Photo",
+            "name": "#get",
+            "returnType": "Photo",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "delete_id",
+        "tags": [
+          "PagePost",
+          "Photo"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "PagePost",
+            "name": "#delete",
+            "returnType": "Object",
+            "parameters": []
+          },
+          {
+            "node": "Photo",
+            "name": "#delete",
+            "returnType": "Object",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_id",
+        "tags": [
+          "PagePost"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "PagePost",
+            "name": "#update",
+            "returnType": "PagePost",
+            "parameters": [
+              {
+                "name": "attached_media",
+                "required": false,
+                "type": "list\u003CObject\u003E"
+              },
+              {
+                "name": "backdated_time",
+                "required": false,
+                "type": "datetime"
+              },
+              {
+                "name": "backdated_time_granularity",
+                "required": false,
+                "type": "pagepost_backdated_time_granularity"
+              },
+              {
+                "name": "composer_session_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "direct_share_status",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "explicitly_added_mentionee_ids",
+                "required": false,
+                "type": "list\u003Cunsigned int\u003E"
+              },
+              {
+                "name": "feed_story_visibility",
+                "required": false,
+                "type": "pagepost_feed_story_visibility"
+              },
+              {
+                "name": "is_explicit_location",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_hidden",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_pinned",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_published",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "message",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "og_action_type_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "og_hide_object_attachment",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "og_icon_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "og_object_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "og_phrase",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "og_set_profile_badge",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "og_suggestion_mechanism",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "place",
+                "required": false,
+                "type": "Object"
+              },
+              {
+                "name": "privacy",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "product_item",
+                "required": false,
+                "type": "Object"
+              },
+              {
+                "name": "scheduled_publish_time",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "should_sync_product_edit",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "source_type",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "sponsor_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "sponsor_relationship",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "tags",
+                "required": false,
+                "type": "list\u003Cint\u003E"
+              },
+              {
+                "name": "text_format_preset_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "timeline_visibility",
+                "required": false,
+                "type": "pagepost_timeline_visibility"
+              },
+              {
+                "name": "tracking",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "attached_media": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  },
+                  "backdated_time": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "backdated_time_granularity": {
+                    "$ref": "#/components/schemas/pagepost_backdated_time_granularity"
+                  },
+                  "composer_session_id": {
+                    "type": "string"
+                  },
+                  "direct_share_status": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0
+                  },
+                  "explicitly_added_mentionee_ids": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "format": "int64",
+                        "minimum": 0
+                      }
+                    }
+                  },
+                  "feed_story_visibility": {
+                    "$ref": "#/components/schemas/pagepost_feed_story_visibility"
+                  },
+                  "is_explicit_location": {
+                    "type": "boolean"
+                  },
+                  "is_hidden": {
+                    "type": "boolean"
+                  },
+                  "is_pinned": {
+                    "type": "boolean"
+                  },
+                  "is_published": {
+                    "type": "boolean"
+                  },
+                  "message": {
+                    "type": "string"
+                  },
+                  "og_action_type_id": {
+                    "type": "string"
+                  },
+                  "og_hide_object_attachment": {
+                    "type": "boolean"
+                  },
+                  "og_icon_id": {
+                    "type": "string"
+                  },
+                  "og_object_id": {
+                    "type": "string"
+                  },
+                  "og_phrase": {
+                    "type": "string"
+                  },
+                  "og_set_profile_badge": {
+                    "type": "boolean"
+                  },
+                  "og_suggestion_mechanism": {
+                    "type": "string"
+                  },
+                  "place": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "privacy": {
+                    "type": "string"
+                  },
+                  "product_item": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "scheduled_publish_time": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0
+                  },
+                  "should_sync_product_edit": {
+                    "type": "boolean"
+                  },
+                  "source_type": {
+                    "type": "string"
+                  },
+                  "sponsor_id": {
+                    "type": "string"
+                  },
+                  "sponsor_relationship": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0
+                  },
+                  "tags": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "format": "int64"
+                      }
+                    }
+                  },
+                  "text_format_preset_id": {
+                    "type": "string"
+                  },
+                  "timeline_visibility": {
+                    "$ref": "#/components/schemas/pagepost_timeline_visibility"
+                  },
+                  "tracking": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/accounts": {
+      "get": {
+        "operationId": "get_id_accounts",
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ad_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "is_place",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "is_promotable",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "User",
+            "name": null,
+            "returnType": "Page",
+            "parameters": [
+              {
+                "name": "ad_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "is_place",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_promotable",
+                "required": false,
+                "type": "bool"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Page"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "pagefeed_unpublished_content_type_enum_param": {
+        "enum": [
+          "ADS_POST",
+          "DRAFT",
+          "INLINE_CREATED",
+          "PUBLISHED",
+          "PUBLISH_PENDING",
+          "REVIEWABLE_BRANDED_CONTENT",
+          "SCHEDULED",
+          "SCHEDULED_RECURRING"
+        ],
+        "type": "string"
+      },
+      "pagefeed_with_enum_param": {
+        "enum": [
+          "LOCATION"
+        ],
+        "type": "string"
+      },
+      "pagephotos_type_enum_param": {
+        "enum": [
+          "profile",
+          "tagged",
+          "uploaded"
+        ],
+        "type": "string"
+      },
+      "pagepost_backdated_time_granularity": {
+        "enum": [
+          "day",
+          "hour",
+          "min",
+          "month",
+          "none",
+          "year"
+        ],
+        "type": "string"
+      },
+      "pagepost_feed_story_visibility": {
+        "enum": [
+          "hidden",
+          "visible"
+        ],
+        "type": "string"
+      },
+      "pagepost_timeline_visibility": {
+        "enum": [
+          "forced_allow",
+          "hidden",
+          "normal"
+        ],
+        "type": "string"
+      },
+      "pageposts_with_enum_param": {
+        "enum": [
+          "LOCATION"
+        ],
+        "type": "string"
+      },
+      "pagepublished_posts_with_enum_param": {
+        "enum": [
+          "LOCATION"
+        ],
+        "type": "string"
+      },
+      "Page": {
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "PagePost": {
+        "type": "object",
+        "properties": {
+          "created_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "full_picture": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "is_published": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "permalink_url": {
+            "type": "string"
+          },
+          "picture": {
+            "type": "string"
+          },
+          "status_type": {
+            "type": "string"
+          },
+          "updated_time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Photo": {
+        "type": "object",
+        "properties": {
+          "created_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "id": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlatformImageSource"
+            }
+          },
+          "link": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "picture": {
+            "type": "string"
+          },
+          "width": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          }
+        }
+      },
+      "PlatformImageSource": {
+        "type": "object",
+        "properties": {
+          "height": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "source": {
+            "type": "string"
+          },
+          "width": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          }
+        }
+      },
+      "PublishingNode": {
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "created_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "full_picture": {
+            "type": "string"
+          },
+          "is_published": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "permalink_url": {
+            "type": "string"
+          },
+          "picture": {
+            "type": "string"
+          },
+          "status_type": {
+            "type": "string"
+          },
+          "updated_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlatformImageSource"
+            }
+          },
+          "width": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          }
+        }
+      },
+      "PublishingResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "post_id": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "metaAccessToken": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "metaAccessToken": []
+    }
+  ],
+  "x-meta-source": {
+    "repository": "https://github.com/facebook/facebook-business-sdk-codegen",
+    "revision": "8420be6d5752c568a4f01dd608fa3cce6b2db960",
+    "profile": "Facebook publishing"
+  }
+}
