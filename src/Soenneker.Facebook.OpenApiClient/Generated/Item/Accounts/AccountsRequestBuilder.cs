@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Facebook.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System;
 namespace Soenneker.Facebook.OpenApiClient.Item.Accounts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\accounts
+    /// Builds and executes requests for operations under \{nodeId}\accounts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountsRequestBuilder : BaseRequestBuilder
@@ -21,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Accounts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AccountsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/accounts{?ad_id*,after*,before*,fields*,is_place*,is_promotable*,limit*}", pathParameters)
+        public AccountsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/accounts{?ad_id*,after*,before*,fields*,is_place*,is_promotable*,limit*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,30 +30,86 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Accounts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AccountsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/accounts{?ad_id*,after*,before*,fields*,is_place*,is_promotable*,limit*}", rawUrl)
+        public AccountsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/accounts{?ad_id*,after*,before*,fields*,is_place*,is_promotable*,limit*,type*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccounts200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Accounts.Accounts4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Accounts.Accounts5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccountsDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccounts200Response?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccounts200Response> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToDeleteRequestInformation(requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccountsDefaultResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccounts200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAccounts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccounts200Response"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccountsDefaultResponse">When receiving a 4XX or 5XX status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccounts200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccounts200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Accounts.Accounts4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Accounts.Accounts5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccountsDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsGetResponse>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccounts200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.GetIdAccounts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccounts200Response"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountsDefaultResponse">When receiving a 4XX or 5XX status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccounts200Response?> PostAsync(global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccounts200Response> PostAsync(global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountsDefaultResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccounts200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccounts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder.AccountsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/accounts?uid={uid}{&type*}", PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -70,6 +127,25 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Accounts
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            return requestInfo;
+        }
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
@@ -78,6 +154,20 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Accounts
         public global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Facebook.OpenApiClient.Item.Accounts.AccountsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
+        public partial class AccountsRequestBuilderDeleteQueryParameters
+        #pragma warning restore CS1591
+        {
+            #pragma warning disable CS1591
+            [QueryParameter("type")]
+            public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationaccountsTypeEnumParam? Type { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("uid")]
+            public long? Uid { get; set; }
+            #pragma warning restore CS1591
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
@@ -147,6 +237,10 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Accounts
             #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("type")]
+            public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationaccountsTypeEnumParam? Type { get; set; }
             #pragma warning restore CS1591
         }
     }

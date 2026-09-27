@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Facebook.OpenApiClient.Item.Feed
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\feed
+    /// Builds and executes requests for operations under \{nodeId}\feed
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FeedRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Feed
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FeedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/feed{?after*,before*,fields*,include_hidden*,limit*,show_expired*,with*}", pathParameters)
+        public FeedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/feed{?after*,before*,fields*,include_hidden*,limit*,q*,show_expired*,since*,until*,with*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,54 +30,50 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Feed
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FeedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/feed{?after*,before*,fields*,include_hidden*,limit*,show_expired*,with*}", rawUrl)
+        public FeedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/feed{?after*,before*,fields*,include_hidden*,limit*,q*,show_expired*,since*,until*,with*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeed200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Feed.Feed4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Feed.Feed5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeedDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedRequestBuilder.FeedRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeed200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedRequestBuilder.FeedRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedRequestBuilder.FeedRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeed200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedRequestBuilder.FeedRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Feed.Feed4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Feed.Feed5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeedDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedGetResponse>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeed200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.GetIdFeed200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeed200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Feed.PublishingResult4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Feed.PublishingResult5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeedDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult?> PostAsync(global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeed200Response?> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult> PostAsync(global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeed200Response> PostAsync(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Feed.PublishingResult4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Feed.PublishingResult5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeedDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeed200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.PostIdFeed200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,18 +96,18 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Feed
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Item.Feed.FeedPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);
             return requestInfo;
         }
         /// <summary>
@@ -173,16 +169,46 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Feed
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("limit")]
-            public long? Limit { get; set; }
+            public int? Limit { get; set; }
             #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("q")]
+            public string? Q { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("q")]
+            public string Q { get; set; }
+            #pragma warning restore CS1591
+#endif
             #pragma warning disable CS1591
             [QueryParameter("show_expired")]
             public bool? ShowExpired { get; set; }
             #pragma warning restore CS1591
             #pragma warning disable CS1591
-            [QueryParameter("with")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.Pagefeed_with_enum_param? With { get; set; }
+            [QueryParameter("since")]
+            public DateTimeOffset? Since { get; set; }
             #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("until")]
+            public DateTimeOffset? Until { get; set; }
+            #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("with")]
+            public string? With { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("with")]
+            public string With { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

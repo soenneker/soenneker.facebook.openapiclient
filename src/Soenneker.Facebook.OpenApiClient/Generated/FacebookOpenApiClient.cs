@@ -6,6 +6,8 @@ using Microsoft.Kiota.Serialization.Form;
 using Microsoft.Kiota.Serialization.Json;
 using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
+using Soenneker.Facebook.OpenApiClient.Ad_campaign_placement;
+using Soenneker.Facebook.OpenApiClient.Integrity;
 using Soenneker.Facebook.OpenApiClient.Item;
 using System.Collections.Generic;
 using System.IO;
@@ -19,16 +21,26 @@ namespace Soenneker.Facebook.OpenApiClient
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FacebookOpenApiClient : BaseRequestBuilder
     {
+        /// <summary>The ad_campaign_placement property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Ad_campaign_placement.Ad_campaign_placementRequestBuilder Ad_campaign_placement
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Ad_campaign_placement.Ad_campaign_placementRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The integrity property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Integrity.IntegrityRequestBuilder Integrity
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Integrity.IntegrityRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.Facebook.OpenApiClient.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.NodeItemRequestBuilder"/></returns>
-        public global::Soenneker.Facebook.OpenApiClient.Item.NodeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.WithNodeItemRequestBuilder"/></returns>
+        public global::Soenneker.Facebook.OpenApiClient.Item.WithNodeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("node%2Did", position);
-                return new global::Soenneker.Facebook.OpenApiClient.Item.NodeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("nodeId", position);
+                return new global::Soenneker.Facebook.OpenApiClient.Item.WithNodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

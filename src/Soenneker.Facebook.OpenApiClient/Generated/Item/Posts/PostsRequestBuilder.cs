@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Facebook.OpenApiClient.Item.Posts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\posts
+    /// Builds and executes requests for operations under \{nodeId}\posts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Posts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PostsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/posts{?after*,before*,fields*,include_hidden*,limit*,q*,show_expired*,with*}", pathParameters)
+        public PostsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/posts{?after*,before*,fields*,include_hidden*,limit*,q*,show_expired*,since*,until*,with*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,30 +30,28 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Posts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PostsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/posts{?after*,before*,fields*,include_hidden*,limit*,q*,show_expired*,with*}", rawUrl)
+        public PostsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/posts{?after*,before*,fields*,include_hidden*,limit*,q*,show_expired*,since*,until*,with*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Posts.Posts4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Posts.Posts5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdPostsDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsRequestBuilder.PostsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsRequestBuilder.PostsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsRequestBuilder.PostsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsRequestBuilder.PostsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Posts.Posts4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Posts.Posts5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.GetIdPostsDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsGetResponse>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Item.Posts.PostsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -130,7 +128,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Posts
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("limit")]
-            public long? Limit { get; set; }
+            public int? Limit { get; set; }
             #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,9 +148,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Posts
             public bool? ShowExpired { get; set; }
             #pragma warning restore CS1591
             #pragma warning disable CS1591
-            [QueryParameter("with")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.Pageposts_with_enum_param? With { get; set; }
+            [QueryParameter("since")]
+            public DateTimeOffset? Since { get; set; }
             #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("until")]
+            public DateTimeOffset? Until { get; set; }
+            #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("with")]
+            public string? With { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("with")]
+            public string With { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

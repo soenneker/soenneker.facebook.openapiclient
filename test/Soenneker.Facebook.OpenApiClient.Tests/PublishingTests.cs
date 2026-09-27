@@ -10,7 +10,7 @@ using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Authentication;
 using Microsoft.Kiota.Http.HttpClientLibrary;
 using Soenneker.Facebook.OpenApiClient.Item.Feed;
-using Soenneker.Facebook.OpenApiClient.Item.Photos;
+using Soenneker.Facebook.OpenApiClient.Models;
 
 namespace Soenneker.Facebook.OpenApiClient.Tests;
 
@@ -22,17 +22,18 @@ public sealed class PublishingTests
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
             Check(request.RequestUri!.ToString() == "https://graph.facebook.com/v26.0/123/feed", "Feed URL");
-            var form = await ReadForm(request);
-            Check(form["message"] == "Hello & welcome + café", "Message encoding");
-            Check(form["link"] == "https://example.com/?a=1&b=2", "Link encoding");
-            Check(form["attached_media"] == """[{"media_fbid":"456"}]""", "Attached media JSON must stay a string");
+            Check(request.Content?.Headers.ContentType?.MediaType == "multipart/form-data", "Multipart supports all Page feed parameters, including files");
+            string body = await request.Content!.ReadAsStringAsync();
+            Check(body.Contains("Hello & welcome + café", StringComparison.Ordinal), "Message encoding");
+            Check(body.Contains("https://example.com/?a=1&b=2", StringComparison.Ordinal), "Link encoding");
+            Check(body.Contains("""[{"media_fbid":"456"}]""", StringComparison.Ordinal), "Attached media JSON");
             return Json("""{"id":"123_789"}""");
         }));
-        var result = await Create(http)["123"].Feed.PostAsync(new FeedPostRequestBody
-        {
-            Message = "Hello & welcome + café", Link = "https://example.com/?a=1&b=2",
-            AttachedMedia = """[{"media_fbid":"456"}]"""
-        });
+        var body = new MultipartBody();
+        body.AddOrReplacePart("message", "text/plain", "Hello & welcome + café");
+        body.AddOrReplacePart("link", "text/plain", "https://example.com/?a=1&b=2");
+        body.AddOrReplacePart("attached_media", "text/plain", """[{"media_fbid":"456"}]""");
+        var result = await Create(http)["123"].Feed.PostAsync(body);
         Check(result?.Id == "123_789", "Post ID deserialized");
     }
 
@@ -47,7 +48,7 @@ public sealed class PublishingTests
             Check(form["caption"] == "A photo", "Caption");
             return Json("""{"id":"456","post_id":"123_789"}""");
         }));
-        var result = await Create(http)["123"].Photos.PostAsync(new PhotosPostRequestBody { Url = "https://example.com/photo.jpg", Caption = "A photo" });
+        var result = await Create(http)["123"].Photos.PostAsync(new PostIdPhotosXWwwFormUrlencodedRequest { Url = "https://example.com/photo.jpg", Caption = "A photo" });
         Check(result?.Id == "456" && result.PostId == "123_789", "Photo/post IDs deserialized");
     }
 
@@ -60,9 +61,24 @@ public sealed class PublishingTests
         var client = Create(http);
         var page = await client["123"].Feed.GetAsync(config => config.QueryParameters.Fields = "id,message");
         Check(page?.Data?.Single().Id == "123_789", "Paged models");
-        try { await client["123"].Feed.PostAsync(new FeedPostRequestBody { Message = "Denied" }); }
+        var denied = new MultipartBody();
+        denied.AddOrReplacePart("message", "text/plain", "Denied");
+        try { await client["123"].Feed.PostAsync(denied); }
         catch (ApiException error) { Check(error.ResponseStatusCode == 403, "HTTP error status"); return; }
         throw new InvalidOperationException("API error was swallowed");
+    }
+    [Test]
+    public async Task CreatesAdvertisingCampaign()
+    {
+        using var http = new HttpClient(new Handler(async (request, _) =>
+        {
+            Check(request.RequestUri!.AbsolutePath == "/v26.0/act_123/campaigns", "Campaign endpoint");
+            var form = await ReadForm(request);
+            Check(form["name"] == "API coverage test", "Campaign request serialization");
+            return Json("""{"id":"987654321"}""");
+        }));
+        var result = await Create(http)["act_123"].Campaigns.PostAsync(new PostIdCampaignsXWwwFormUrlencodedRequest { Name = "API coverage test" });
+        Check(result?.Id == "987654321", "Campaign result ID");
     }
     private static FacebookOpenApiClient Create(HttpClient http)
     {

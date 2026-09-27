@@ -14,10 +14,68 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The album property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Album? Album { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Album Album { get; set; }
+#endif
+        /// <summary>The alt_text property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AltText { get; set; }
+#nullable restore
+#else
+        public string AltText { get; set; }
+#endif
+        /// <summary>The alt_text_custom property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AltTextCustom { get; set; }
+#nullable restore
+#else
+        public string AltTextCustom { get; set; }
+#endif
+        /// <summary>The backdated_time property</summary>
+        public DateTimeOffset? BackdatedTime { get; set; }
+        /// <summary>The backdated_time_granularity property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.AlbumphotosBackdatedTimeGranularityEnumParam? BackdatedTimeGranularity { get; set; }
+        /// <summary>The can_backdate property</summary>
+        public bool? CanBackdate { get; set; }
+        /// <summary>The can_delete property</summary>
+        public bool? CanDelete { get; set; }
+        /// <summary>The can_tag property</summary>
+        public bool? CanTag { get; set; }
         /// <summary>The created_time property</summary>
         public DateTimeOffset? CreatedTime { get; set; }
+        /// <summary>The event property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.EventType2? Event { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.EventType2 Event { get; set; }
+#endif
+        /// <summary>The from property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PhotoFromProperty? From { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PhotoFromProperty From { get; set; }
+#endif
         /// <summary>The height property</summary>
         public long? Height { get; set; }
+        /// <summary>The icon property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Icon { get; set; }
+#nullable restore
+#else
+        public string Icon { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,6 +108,22 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The name_tags property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.EntityAtTextRange>? NameTags { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.EntityAtTextRange> NameTags { get; set; }
+#endif
+        /// <summary>The page_story_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PageStoryId { get; set; }
+#nullable restore
+#else
+        public string PageStoryId { get; set; }
+#endif
         /// <summary>The picture property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,6 +131,42 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #nullable restore
 #else
         public string Picture { get; set; }
+#endif
+        /// <summary>The place property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Place? Place { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Place Place { get; set; }
+#endif
+        /// <summary>The position property</summary>
+        public long? Position { get; set; }
+        /// <summary>The source property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Source { get; set; }
+#nullable restore
+#else
+        public string Source { get; set; }
+#endif
+        /// <summary>The target property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Profile? Target { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Profile Target { get; set; }
+#endif
+        /// <summary>The updated_time property</summary>
+        public DateTimeOffset? UpdatedTime { get; set; }
+        /// <summary>The webp_images property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource>? WebpImages { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource> WebpImages { get; set; }
 #endif
         /// <summary>The width property</summary>
         public long? Width { get; set; }
@@ -85,13 +195,32 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "album", n => { Album = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Album>(global::Soenneker.Facebook.OpenApiClient.Models.Album.CreateFromDiscriminatorValue); } },
+                { "alt_text", n => { AltText = n.GetStringValue(); } },
+                { "alt_text_custom", n => { AltTextCustom = n.GetStringValue(); } },
+                { "backdated_time", n => { BackdatedTime = n.GetDateTimeOffsetValue(); } },
+                { "backdated_time_granularity", n => { BackdatedTimeGranularity = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AlbumphotosBackdatedTimeGranularityEnumParam>(); } },
+                { "can_backdate", n => { CanBackdate = n.GetBoolValue(); } },
+                { "can_delete", n => { CanDelete = n.GetBoolValue(); } },
+                { "can_tag", n => { CanTag = n.GetBoolValue(); } },
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
+                { "event", n => { Event = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.EventType2>(global::Soenneker.Facebook.OpenApiClient.Models.EventType2.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PhotoFromProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PhotoFromProperty.CreateFromDiscriminatorValue); } },
                 { "height", n => { Height = n.GetLongValue(); } },
+                { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "images", n => { Images = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource>(global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "link", n => { Link = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "name_tags", n => { NameTags = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.EntityAtTextRange>(global::Soenneker.Facebook.OpenApiClient.Models.EntityAtTextRange.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "page_story_id", n => { PageStoryId = n.GetStringValue(); } },
                 { "picture", n => { Picture = n.GetStringValue(); } },
+                { "place", n => { Place = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Place>(global::Soenneker.Facebook.OpenApiClient.Models.Place.CreateFromDiscriminatorValue); } },
+                { "position", n => { Position = n.GetLongValue(); } },
+                { "source", n => { Source = n.GetStringValue(); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Profile>(global::Soenneker.Facebook.OpenApiClient.Models.Profile.CreateFromDiscriminatorValue); } },
+                { "updated_time", n => { UpdatedTime = n.GetDateTimeOffsetValue(); } },
+                { "webp_images", n => { WebpImages = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource>(global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "width", n => { Width = n.GetLongValue(); } },
             };
         }
@@ -102,13 +231,32 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Album>("album", Album);
+            writer.WriteStringValue("alt_text", AltText);
+            writer.WriteStringValue("alt_text_custom", AltTextCustom);
+            writer.WriteDateTimeOffsetValue("backdated_time", BackdatedTime);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AlbumphotosBackdatedTimeGranularityEnumParam>("backdated_time_granularity", BackdatedTimeGranularity);
+            writer.WriteBoolValue("can_backdate", CanBackdate);
+            writer.WriteBoolValue("can_delete", CanDelete);
+            writer.WriteBoolValue("can_tag", CanTag);
             writer.WriteDateTimeOffsetValue("created_time", CreatedTime);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.EventType2>("event", Event);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PhotoFromProperty>("from", From);
             writer.WriteLongValue("height", Height);
+            writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource>("images", Images);
             writer.WriteStringValue("link", Link);
             writer.WriteStringValue("name", Name);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.EntityAtTextRange>("name_tags", NameTags);
+            writer.WriteStringValue("page_story_id", PageStoryId);
             writer.WriteStringValue("picture", Picture);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Place>("place", Place);
+            writer.WriteLongValue("position", Position);
+            writer.WriteStringValue("source", Source);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Profile>("target", Target);
+            writer.WriteDateTimeOffsetValue("updated_time", UpdatedTime);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PlatformImageSource>("webp_images", WebpImages);
             writer.WriteLongValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);
         }

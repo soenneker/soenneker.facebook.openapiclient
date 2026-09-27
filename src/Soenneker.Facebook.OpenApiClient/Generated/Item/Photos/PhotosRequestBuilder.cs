@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Facebook.OpenApiClient.Item.Photos
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\photos
+    /// Builds and executes requests for operations under \{nodeId}\photos
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PhotosRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Photos
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PhotosRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/photos{?after*,before*,biz_tag_id*,business_id*,fields*,limit*,type*}", pathParameters)
+        public PhotosRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/photos{?after*,before*,biz_tag_id*,business_id*,fields*,limit*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,54 +30,50 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Photos
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PhotosRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/photos{?after*,before*,biz_tag_id*,business_id*,fields*,limit*,type*}", rawUrl)
+        public PhotosRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/photos{?after*,before*,biz_tag_id*,business_id*,fields*,limit*,type*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotos200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Photos.Photos4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Photos.Photos5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotosDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosRequestBuilder.PhotosRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotos200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosRequestBuilder.PhotosRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosRequestBuilder.PhotosRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotos200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosRequestBuilder.PhotosRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Photos.Photos4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Photos.Photos5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotosDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosGetResponse>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotos200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.GetIdPhotos200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotos200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Photos.PublishingResult4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Photos.PublishingResult5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotosDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult?> PostAsync(global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotos200Response?> PostAsync(global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotosXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult> PostAsync(global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotos200Response> PostAsync(global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotosXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Photos.PublishingResult4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Photos.PublishingResult5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotosDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.PublishingResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotos200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotos200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,11 +96,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Photos
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotosXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Item.Photos.PhotosPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Facebook.OpenApiClient.Models.PostIdPhotosXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -188,10 +184,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Photos
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("type")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.Pagephotos_type_enum_param? Type { get; set; }
+            public string? Type { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("type")]
+            public string Type { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

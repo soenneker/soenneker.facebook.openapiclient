@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Facebook.OpenApiClient.Item.Published_posts
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\published_posts
+    /// Builds and executes requests for operations under \{nodeId}\published_posts
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Published_postsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Published_posts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Published_postsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/published_posts{?after*,before*,fields*,include_hidden*,limit*,show_expired*,with*}", pathParameters)
+        public Published_postsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/published_posts{?after*,before*,fields*,include_hidden*,limit*,show_expired*,with*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,30 +30,28 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Published_posts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Published_postsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/published_posts{?after*,before*,fields*,include_hidden*,limit*,show_expired*,with*}", rawUrl)
+        public Published_postsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/published_posts{?after*,before*,fields*,include_hidden*,limit*,show_expired*,with*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPosts200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_posts4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_posts5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPostsDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsRequestBuilder.Published_postsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPosts200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsRequestBuilder.Published_postsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsRequestBuilder.Published_postsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPosts200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsRequestBuilder.Published_postsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_posts4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_posts5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPostsDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsGetResponse>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Item.Published_posts.Published_postsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPosts200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.GetIdPublishedPosts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -138,7 +136,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Published_posts
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("with")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.Pagepublished_posts_with_enum_param? With { get; set; }
+            public global::Soenneker.Facebook.OpenApiClient.Models.PagepublishedPostsWithEnumParam? With { get; set; }
             #pragma warning restore CS1591
         }
     }

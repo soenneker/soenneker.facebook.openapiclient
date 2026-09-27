@@ -12,10 +12,106 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     public partial class PagePost : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The actions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostActions? Actions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostActions Actions { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The admin_creator property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostAdminCreatorProperty? AdminCreator { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostAdminCreatorProperty AdminCreator { get; set; }
+#endif
+        /// <summary>The allowed_advertising_objectives property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AllowedAdvertisingObjectives { get; set; }
+#nullable restore
+#else
+        public List<string> AllowedAdvertisingObjectives { get; set; }
+#endif
+        /// <summary>The application property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application? Application { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application Application { get; set; }
+#endif
+        /// <summary>The backdated_time property</summary>
+        public DateTimeOffset? BackdatedTime { get; set; }
+        /// <summary>The call_to_action property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostCallToActionProperty? CallToAction { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostCallToActionProperty CallToAction { get; set; }
+#endif
+        /// <summary>The can_reply_privately property</summary>
+        public bool? CanReplyPrivately { get; set; }
+        /// <summary>The child_attachments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostChildAttachments? ChildAttachments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostChildAttachments ChildAttachments { get; set; }
+#endif
+        /// <summary>The comments_mirroring_domain property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CommentsMirroringDomain { get; set; }
+#nullable restore
+#else
+        public string CommentsMirroringDomain { get; set; }
+#endif
+        /// <summary>The coordinates property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostCoordinatesProperty? Coordinates { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostCoordinatesProperty Coordinates { get; set; }
+#endif
         /// <summary>The created_time property</summary>
         public DateTimeOffset? CreatedTime { get; set; }
+        /// <summary>The event property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.EventType2? Event { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.EventType2 Event { get; set; }
+#endif
+        /// <summary>The expanded_height property</summary>
+        public long? ExpandedHeight { get; set; }
+        /// <summary>The expanded_width property</summary>
+        public long? ExpandedWidth { get; set; }
+        /// <summary>The feed_targeting property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostFeedTargetingProperty? FeedTargeting { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostFeedTargetingProperty FeedTargeting { get; set; }
+#endif
+        /// <summary>The from property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostFromProperty? From { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostFromProperty From { get; set; }
+#endif
         /// <summary>The full_picture property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,6 +119,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #nullable restore
 #else
         public string FullPicture { get; set; }
+#endif
+        /// <summary>The height property</summary>
+        public long? Height { get; set; }
+        /// <summary>The icon property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Icon { get; set; }
+#nullable restore
+#else
+        public string Icon { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,8 +138,38 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The instagram_eligibility property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InstagramEligibility { get; set; }
+#nullable restore
+#else
+        public string InstagramEligibility { get; set; }
+#endif
+        /// <summary>The is_app_share property</summary>
+        public bool? IsAppShare { get; set; }
+        /// <summary>The is_eligible_for_dark_post property</summary>
+        public bool? IsEligibleForDarkPost { get; set; }
+        /// <summary>The is_eligible_for_promotion property</summary>
+        public bool? IsEligibleForPromotion { get; set; }
+        /// <summary>The is_expired property</summary>
+        public bool? IsExpired { get; set; }
+        /// <summary>The is_fb_live_videos property</summary>
+        public bool? IsFbLiveVideos { get; set; }
+        /// <summary>The is_hidden property</summary>
+        public bool? IsHidden { get; set; }
+        /// <summary>The is_inline_created property</summary>
+        public bool? IsInlineCreated { get; set; }
+        /// <summary>The is_instagram_eligible property</summary>
+        public bool? IsInstagramEligible { get; set; }
+        /// <summary>The is_live_clip property</summary>
+        public bool? IsLiveClip { get; set; }
+        /// <summary>The is_popular property</summary>
+        public bool? IsPopular { get; set; }
         /// <summary>The is_published property</summary>
         public bool? IsPublished { get; set; }
+        /// <summary>The is_spherical property</summary>
+        public bool? IsSpherical { get; set; }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,6 +177,26 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #nullable restore
 #else
         public string Message { get; set; }
+#endif
+        /// <summary>The message_tags property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostMessageTags? MessageTags { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostMessageTags MessageTags { get; set; }
+#endif
+        /// <summary>The multi_share_end_card property</summary>
+        public bool? MultiShareEndCard { get; set; }
+        /// <summary>The multi_share_optimized property</summary>
+        public bool? MultiShareOptimized { get; set; }
+        /// <summary>The parent_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ParentId { get; set; }
+#nullable restore
+#else
+        public string ParentId { get; set; }
 #endif
         /// <summary>The permalink_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,6 +214,56 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string Picture { get; set; }
 #endif
+        /// <summary>The place property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Place? Place { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Place Place { get; set; }
+#endif
+        /// <summary>The privacy property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Privacy? Privacy { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Privacy Privacy { get; set; }
+#endif
+        /// <summary>The promotable_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PromotableId { get; set; }
+#nullable restore
+#else
+        public string PromotableId { get; set; }
+#endif
+        /// <summary>The promotion_status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PromotionStatus { get; set; }
+#nullable restore
+#else
+        public string PromotionStatus { get; set; }
+#endif
+        /// <summary>The properties property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostProperties? Properties { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostProperties Properties { get; set; }
+#endif
+        /// <summary>The scheduled_publish_time property</summary>
+        public float? ScheduledPublishTime { get; set; }
+        /// <summary>The shares property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostSharesProperty? Shares { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostSharesProperty Shares { get; set; }
+#endif
         /// <summary>The status_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,8 +272,64 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string StatusType { get; set; }
 #endif
+        /// <summary>The story property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Story { get; set; }
+#nullable restore
+#else
+        public string Story { get; set; }
+#endif
+        /// <summary>The story_tags property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostStoryTags? StoryTags { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostStoryTags StoryTags { get; set; }
+#endif
+        /// <summary>The subscribed property</summary>
+        public bool? Subscribed { get; set; }
+        /// <summary>The target property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.Profile? Target { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.Profile Target { get; set; }
+#endif
+        /// <summary>The targeting property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostTargetingProperty? Targeting { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostTargetingProperty Targeting { get; set; }
+#endif
+        /// <summary>The timeline_visibility property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagepostTimelineVisibility? TimelineVisibility { get; set; }
         /// <summary>The updated_time property</summary>
         public DateTimeOffset? UpdatedTime { get; set; }
+        /// <summary>The via property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostViaProperty? Via { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostViaProperty Via { get; set; }
+#endif
+        /// <summary>The video_buying_eligibility property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? VideoBuyingEligibility { get; set; }
+#nullable restore
+#else
+        public List<string> VideoBuyingEligibility { get; set; }
+#endif
+        /// <summary>The was_fb_live_videos property</summary>
+        public bool? WasFbLiveVideos { get; set; }
+        /// <summary>The width property</summary>
+        public long? Width { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PagePost"/> and sets the default values.
         /// </summary>
@@ -93,15 +355,65 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "actions", n => { Actions = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostActions>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostActions.CreateFromDiscriminatorValue); } },
+                { "admin_creator", n => { AdminCreator = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostAdminCreatorProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostAdminCreatorProperty.CreateFromDiscriminatorValue); } },
+                { "allowed_advertising_objectives", n => { AllowedAdvertisingObjectives = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Application>(global::Soenneker.Facebook.OpenApiClient.Models.Application.CreateFromDiscriminatorValue); } },
+                { "backdated_time", n => { BackdatedTime = n.GetDateTimeOffsetValue(); } },
+                { "call_to_action", n => { CallToAction = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostCallToActionProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostCallToActionProperty.CreateFromDiscriminatorValue); } },
+                { "can_reply_privately", n => { CanReplyPrivately = n.GetBoolValue(); } },
+                { "child_attachments", n => { ChildAttachments = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostChildAttachments>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostChildAttachments.CreateFromDiscriminatorValue); } },
+                { "comments_mirroring_domain", n => { CommentsMirroringDomain = n.GetStringValue(); } },
+                { "coordinates", n => { Coordinates = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostCoordinatesProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostCoordinatesProperty.CreateFromDiscriminatorValue); } },
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
+                { "event", n => { Event = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.EventType2>(global::Soenneker.Facebook.OpenApiClient.Models.EventType2.CreateFromDiscriminatorValue); } },
+                { "expanded_height", n => { ExpandedHeight = n.GetLongValue(); } },
+                { "expanded_width", n => { ExpandedWidth = n.GetLongValue(); } },
+                { "feed_targeting", n => { FeedTargeting = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostFeedTargetingProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostFeedTargetingProperty.CreateFromDiscriminatorValue); } },
+                { "from", n => { From = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostFromProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostFromProperty.CreateFromDiscriminatorValue); } },
                 { "full_picture", n => { FullPicture = n.GetStringValue(); } },
+                { "height", n => { Height = n.GetLongValue(); } },
+                { "icon", n => { Icon = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "instagram_eligibility", n => { InstagramEligibility = n.GetStringValue(); } },
+                { "is_app_share", n => { IsAppShare = n.GetBoolValue(); } },
+                { "is_eligible_for_dark_post", n => { IsEligibleForDarkPost = n.GetBoolValue(); } },
+                { "is_eligible_for_promotion", n => { IsEligibleForPromotion = n.GetBoolValue(); } },
+                { "is_expired", n => { IsExpired = n.GetBoolValue(); } },
+                { "is_fb_live_videos", n => { IsFbLiveVideos = n.GetBoolValue(); } },
+                { "is_hidden", n => { IsHidden = n.GetBoolValue(); } },
+                { "is_inline_created", n => { IsInlineCreated = n.GetBoolValue(); } },
+                { "is_instagram_eligible", n => { IsInstagramEligible = n.GetBoolValue(); } },
+                { "is_live_clip", n => { IsLiveClip = n.GetBoolValue(); } },
+                { "is_popular", n => { IsPopular = n.GetBoolValue(); } },
                 { "is_published", n => { IsPublished = n.GetBoolValue(); } },
+                { "is_spherical", n => { IsSpherical = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
+                { "message_tags", n => { MessageTags = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostMessageTags>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostMessageTags.CreateFromDiscriminatorValue); } },
+                { "multi_share_end_card", n => { MultiShareEndCard = n.GetBoolValue(); } },
+                { "multi_share_optimized", n => { MultiShareOptimized = n.GetBoolValue(); } },
+                { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "permalink_url", n => { PermalinkUrl = n.GetStringValue(); } },
                 { "picture", n => { Picture = n.GetStringValue(); } },
+                { "place", n => { Place = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Place>(global::Soenneker.Facebook.OpenApiClient.Models.Place.CreateFromDiscriminatorValue); } },
+                { "privacy", n => { Privacy = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Privacy>(global::Soenneker.Facebook.OpenApiClient.Models.Privacy.CreateFromDiscriminatorValue); } },
+                { "promotable_id", n => { PromotableId = n.GetStringValue(); } },
+                { "promotion_status", n => { PromotionStatus = n.GetStringValue(); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostProperties>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostProperties.CreateFromDiscriminatorValue); } },
+                { "scheduled_publish_time", n => { ScheduledPublishTime = n.GetFloatValue(); } },
+                { "shares", n => { Shares = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostSharesProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostSharesProperty.CreateFromDiscriminatorValue); } },
                 { "status_type", n => { StatusType = n.GetStringValue(); } },
+                { "story", n => { Story = n.GetStringValue(); } },
+                { "story_tags", n => { StoryTags = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostStoryTags>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostStoryTags.CreateFromDiscriminatorValue); } },
+                { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Profile>(global::Soenneker.Facebook.OpenApiClient.Models.Profile.CreateFromDiscriminatorValue); } },
+                { "targeting", n => { Targeting = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostTargetingProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostTargetingProperty.CreateFromDiscriminatorValue); } },
+                { "timeline_visibility", n => { TimelineVisibility = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagepostTimelineVisibility>(); } },
                 { "updated_time", n => { UpdatedTime = n.GetDateTimeOffsetValue(); } },
+                { "via", n => { Via = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostViaProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PagePostViaProperty.CreateFromDiscriminatorValue); } },
+                { "video_buying_eligibility", n => { VideoBuyingEligibility = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "was_fb_live_videos", n => { WasFbLiveVideos = n.GetBoolValue(); } },
+                { "width", n => { Width = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -111,15 +423,65 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostActions>("actions", Actions);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostAdminCreatorProperty>("admin_creator", AdminCreator);
+            writer.WriteCollectionOfPrimitiveValues<string>("allowed_advertising_objectives", AllowedAdvertisingObjectives);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Application>("application", Application);
+            writer.WriteDateTimeOffsetValue("backdated_time", BackdatedTime);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostCallToActionProperty>("call_to_action", CallToAction);
+            writer.WriteBoolValue("can_reply_privately", CanReplyPrivately);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostChildAttachments>("child_attachments", ChildAttachments);
+            writer.WriteStringValue("comments_mirroring_domain", CommentsMirroringDomain);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostCoordinatesProperty>("coordinates", Coordinates);
             writer.WriteDateTimeOffsetValue("created_time", CreatedTime);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.EventType2>("event", Event);
+            writer.WriteLongValue("expanded_height", ExpandedHeight);
+            writer.WriteLongValue("expanded_width", ExpandedWidth);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostFeedTargetingProperty>("feed_targeting", FeedTargeting);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostFromProperty>("from", From);
             writer.WriteStringValue("full_picture", FullPicture);
+            writer.WriteLongValue("height", Height);
+            writer.WriteStringValue("icon", Icon);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("instagram_eligibility", InstagramEligibility);
+            writer.WriteBoolValue("is_app_share", IsAppShare);
+            writer.WriteBoolValue("is_eligible_for_dark_post", IsEligibleForDarkPost);
+            writer.WriteBoolValue("is_eligible_for_promotion", IsEligibleForPromotion);
+            writer.WriteBoolValue("is_expired", IsExpired);
+            writer.WriteBoolValue("is_fb_live_videos", IsFbLiveVideos);
+            writer.WriteBoolValue("is_hidden", IsHidden);
+            writer.WriteBoolValue("is_inline_created", IsInlineCreated);
+            writer.WriteBoolValue("is_instagram_eligible", IsInstagramEligible);
+            writer.WriteBoolValue("is_live_clip", IsLiveClip);
+            writer.WriteBoolValue("is_popular", IsPopular);
             writer.WriteBoolValue("is_published", IsPublished);
+            writer.WriteBoolValue("is_spherical", IsSpherical);
             writer.WriteStringValue("message", Message);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostMessageTags>("message_tags", MessageTags);
+            writer.WriteBoolValue("multi_share_end_card", MultiShareEndCard);
+            writer.WriteBoolValue("multi_share_optimized", MultiShareOptimized);
+            writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("permalink_url", PermalinkUrl);
             writer.WriteStringValue("picture", Picture);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Place>("place", Place);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Privacy>("privacy", Privacy);
+            writer.WriteStringValue("promotable_id", PromotableId);
+            writer.WriteStringValue("promotion_status", PromotionStatus);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostProperties>("properties", Properties);
+            writer.WriteFloatValue("scheduled_publish_time", ScheduledPublishTime);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostSharesProperty>("shares", Shares);
             writer.WriteStringValue("status_type", StatusType);
+            writer.WriteStringValue("story", Story);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostStoryTags>("story_tags", StoryTags);
+            writer.WriteBoolValue("subscribed", Subscribed);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Profile>("target", Target);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostTargetingProperty>("targeting", Targeting);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagepostTimelineVisibility>("timeline_visibility", TimelineVisibility);
             writer.WriteDateTimeOffsetValue("updated_time", UpdatedTime);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.PagePostViaProperty>("via", Via);
+            writer.WriteCollectionOfPrimitiveValues<string>("video_buying_eligibility", VideoBuyingEligibility);
+            writer.WriteBoolValue("was_fb_live_videos", WasFbLiveVideos);
+            writer.WriteLongValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
