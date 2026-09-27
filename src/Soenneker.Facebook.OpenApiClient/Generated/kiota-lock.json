@@ -1,6 +1,6 @@
 {
   "descriptionHash": "70652F2B516D43A4CB86F94D1B792D46946387EBE393C908276AFBBD854D43F328C59A9C28C374C35431E0517DCDAEB01F98C0172F0FB5C88C75C1B8D703DE21",
-  "descriptionLocation": "../../../../../../../git/Soenneker/Facebook/soenneker.facebook.openapiclient/openapi.json",
+  "descriptionLocation": "../../../../../../../../git/Soenneker/Facebook/soenneker.facebook.openapiclient/openapi.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.35.0",
   "clientClassName": "FacebookOpenApiClient",
