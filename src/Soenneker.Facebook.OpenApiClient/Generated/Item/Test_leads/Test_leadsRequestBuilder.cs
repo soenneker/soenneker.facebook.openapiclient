@@ -121,7 +121,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Test_leads
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Test_leadsRequestBuilderGetQueryParameters
+        public partial class Test_leadsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

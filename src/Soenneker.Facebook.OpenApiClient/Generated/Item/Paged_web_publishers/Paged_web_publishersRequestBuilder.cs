@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Paged_web_publishers
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Paged_web_publishersRequestBuilderGetQueryParameters
+        public partial class Paged_web_publishersRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

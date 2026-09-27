@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Client_offsite_signal_container_
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Client_offsite_signal_container_business_objectsRequestBuilderGetQueryParameters
+        public partial class Client_offsite_signal_container_business_objectsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

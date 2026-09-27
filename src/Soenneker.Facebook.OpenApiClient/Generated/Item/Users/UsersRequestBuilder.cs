@@ -157,7 +157,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Users
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class UsersRequestBuilderDeleteQueryParameters
+        public partial class UsersRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -202,7 +202,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Users
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class UsersRequestBuilderGetQueryParameters
+        public partial class UsersRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

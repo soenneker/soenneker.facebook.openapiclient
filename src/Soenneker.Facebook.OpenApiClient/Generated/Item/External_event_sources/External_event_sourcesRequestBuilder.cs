@@ -157,7 +157,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.External_event_sources
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class External_event_sourcesRequestBuilderDeleteQueryParameters
+        public partial class External_event_sourcesRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.External_event_sources
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class External_event_sourcesRequestBuilderGetQueryParameters
+        public partial class External_event_sourcesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

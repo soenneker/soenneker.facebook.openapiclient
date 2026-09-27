@@ -121,7 +121,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Share_preverified_numbers
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Share_preverified_numbersRequestBuilderDeleteQueryParameters
+        public partial class Share_preverified_numbersRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

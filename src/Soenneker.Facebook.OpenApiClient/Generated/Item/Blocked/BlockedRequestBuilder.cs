@@ -157,7 +157,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Blocked
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class BlockedRequestBuilderDeleteQueryParameters
+        public partial class BlockedRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -188,7 +188,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Blocked
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class BlockedRequestBuilderGetQueryParameters
+        public partial class BlockedRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

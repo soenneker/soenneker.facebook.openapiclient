@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Cpas_merchant_config
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Cpas_merchant_configRequestBuilderGetQueryParameters
+        public partial class Cpas_merchant_configRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

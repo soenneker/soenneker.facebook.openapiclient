@@ -157,7 +157,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Advideos
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class AdvideosRequestBuilderDeleteQueryParameters
+        public partial class AdvideosRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Advideos
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class AdvideosRequestBuilderGetQueryParameters
+        public partial class AdvideosRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
             #pragma warning disable CS1591

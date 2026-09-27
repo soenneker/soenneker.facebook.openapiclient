@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Creator_asset_creatives
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Creator_asset_creativesRequestBuilderGetQueryParameters
+        public partial class Creator_asset_creativesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

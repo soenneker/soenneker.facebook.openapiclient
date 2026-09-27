@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Light_adsets
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Light_adsetsRequestBuilderGetQueryParameters
+        public partial class Light_adsetsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
             #pragma warning disable CS1591

@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Threat_privacy_groups_owner
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Threat_privacy_groups_ownerRequestBuilderGetQueryParameters
+        public partial class Threat_privacy_groups_ownerRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

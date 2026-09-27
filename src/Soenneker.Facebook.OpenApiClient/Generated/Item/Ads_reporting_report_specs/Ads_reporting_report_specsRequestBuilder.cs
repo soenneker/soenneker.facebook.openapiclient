@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads_reporting_report_specs
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Ads_reporting_report_specsRequestBuilderGetQueryParameters
+        public partial class Ads_reporting_report_specsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

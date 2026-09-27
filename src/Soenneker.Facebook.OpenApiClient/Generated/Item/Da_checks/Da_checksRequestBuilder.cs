@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Da_checksRequestBuilderGetQueryParameters
+        public partial class Da_checksRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

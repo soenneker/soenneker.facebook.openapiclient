@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ar_experience
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Ar_experienceRequestBuilderGetQueryParameters
+        public partial class Ar_experienceRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

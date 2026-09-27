@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Android_dialog_configs
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Android_dialog_configsRequestBuilderGetQueryParameters
+        public partial class Android_dialog_configsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

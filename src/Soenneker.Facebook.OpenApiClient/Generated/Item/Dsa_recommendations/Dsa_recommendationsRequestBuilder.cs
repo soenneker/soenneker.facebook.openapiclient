@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Dsa_recommendations
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Dsa_recommendationsRequestBuilderGetQueryParameters
+        public partial class Dsa_recommendationsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

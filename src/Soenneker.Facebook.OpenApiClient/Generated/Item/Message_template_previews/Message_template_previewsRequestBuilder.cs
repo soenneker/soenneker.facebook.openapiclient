@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_template_previews
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Message_template_previewsRequestBuilderGetQueryParameters
+        public partial class Message_template_previewsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
             #pragma warning disable CS1591

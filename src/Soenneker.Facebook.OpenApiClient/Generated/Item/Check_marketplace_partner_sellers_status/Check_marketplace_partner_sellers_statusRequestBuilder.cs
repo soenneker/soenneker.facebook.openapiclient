@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Check_marketplace_partner_seller
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Check_marketplace_partner_sellers_statusRequestBuilderGetQueryParameters
+        public partial class Check_marketplace_partner_sellers_statusRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

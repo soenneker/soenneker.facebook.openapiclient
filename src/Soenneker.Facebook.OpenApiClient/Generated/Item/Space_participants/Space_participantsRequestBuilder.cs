@@ -121,7 +121,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Space_participants
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Space_participantsRequestBuilderGetQueryParameters
+        public partial class Space_participantsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

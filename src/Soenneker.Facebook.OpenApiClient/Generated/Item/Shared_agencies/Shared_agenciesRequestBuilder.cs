@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Shared_agencies
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Shared_agenciesRequestBuilderGetQueryParameters
+        public partial class Shared_agenciesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
             #pragma warning disable CS1591

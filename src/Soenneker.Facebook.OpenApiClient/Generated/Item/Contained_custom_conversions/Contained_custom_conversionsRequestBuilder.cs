@@ -157,7 +157,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Contained_custom_conversions
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Contained_custom_conversionsRequestBuilderDeleteQueryParameters
+        public partial class Contained_custom_conversionsRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Contained_custom_conversions
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Contained_custom_conversionsRequestBuilderGetQueryParameters
+        public partial class Contained_custom_conversionsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

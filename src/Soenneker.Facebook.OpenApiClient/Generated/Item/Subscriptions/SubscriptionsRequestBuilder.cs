@@ -170,7 +170,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Subscriptions
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class SubscriptionsRequestBuilderDeleteQueryParameters
+        public partial class SubscriptionsRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -202,7 +202,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Subscriptions
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class SubscriptionsRequestBuilderGetQueryParameters
+        public partial class SubscriptionsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ios_fourteen_campaign_limits
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Ios_fourteen_campaign_limitsRequestBuilderGetQueryParameters
+        public partial class Ios_fourteen_campaign_limitsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

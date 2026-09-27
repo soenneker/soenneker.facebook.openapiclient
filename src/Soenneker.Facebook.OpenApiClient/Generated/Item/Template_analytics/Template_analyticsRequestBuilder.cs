@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Template_analytics
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Template_analyticsRequestBuilderGetQueryParameters
+        public partial class Template_analyticsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

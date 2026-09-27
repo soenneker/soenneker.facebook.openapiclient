@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Opted_in_members
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Opted_in_membersRequestBuilderGetQueryParameters
+        public partial class Opted_in_membersRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

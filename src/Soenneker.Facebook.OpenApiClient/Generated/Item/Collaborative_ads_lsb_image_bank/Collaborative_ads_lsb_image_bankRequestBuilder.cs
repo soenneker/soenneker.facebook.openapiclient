@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Collaborative_ads_lsb_image_bank
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Collaborative_ads_lsb_image_bankRequestBuilderGetQueryParameters
+        public partial class Collaborative_ads_lsb_image_bankRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

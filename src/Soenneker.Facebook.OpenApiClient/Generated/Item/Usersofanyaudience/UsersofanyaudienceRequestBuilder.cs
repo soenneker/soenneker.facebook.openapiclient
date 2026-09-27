@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Usersofanyaudience
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class UsersofanyaudienceRequestBuilderDeleteQueryParameters
+        public partial class UsersofanyaudienceRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

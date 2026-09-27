@@ -121,7 +121,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class ActivitiesRequestBuilderGetQueryParameters
+        public partial class ActivitiesRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
             #pragma warning disable CS1591

@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Order_management_apps
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Order_management_appsRequestBuilderGetQueryParameters
+        public partial class Order_management_appsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

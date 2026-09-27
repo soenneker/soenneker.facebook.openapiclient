@@ -80,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Managed_partner_ads_funding_sour
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Managed_partner_ads_funding_source_detailsRequestBuilderGetQueryParameters
+        public partial class Managed_partner_ads_funding_source_detailsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -121,7 +121,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ad_place_page_sets
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Ad_place_page_setsRequestBuilderGetQueryParameters
+        public partial class Ad_place_page_setsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
