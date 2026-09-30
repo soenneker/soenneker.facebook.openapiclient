@@ -17,7 +17,7 @@ namespace Soenneker.Facebook.OpenApiClient.Tests;
 public sealed class PublishingTests
 {
     [Test]
-    public async Task PostsTextLinksAndAttachedMediaWithExactEncoding()
+    public async ValueTask PostsTextLinksAndAttachedMediaWithExactEncoding()
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
@@ -38,7 +38,7 @@ public sealed class PublishingTests
     }
 
     [Test]
-    public async Task PostsPhotoByUrlAndReadsBothIds()
+    public async ValueTask PostsPhotoByUrlAndReadsBothIds()
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
@@ -53,7 +53,7 @@ public sealed class PublishingTests
     }
 
     [Test]
-    public async Task ReadsPagedPostsAndPropagatesApiErrors()
+    public async ValueTask ReadsPagedPostsAndPropagatesApiErrors()
     {
         using var http = new HttpClient(new Handler((request, _) => Task.FromResult(
             request.Method == HttpMethod.Get ? Json("""{"data":[{"id":"123_789","message":"hello"}],"paging":{"next":"https://graph.facebook.com/next"}}""")
@@ -68,7 +68,7 @@ public sealed class PublishingTests
         throw new InvalidOperationException("API error was swallowed");
     }
     [Test]
-    public async Task CreatesAdvertisingCampaign()
+    public async ValueTask CreatesAdvertisingCampaign()
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
