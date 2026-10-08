@@ -17,13 +17,13 @@ namespace Soenneker.Facebook.OpenApiClient.Tests;
 public sealed class PublishingTests
 {
     [Test]
-    public async ValueTask PostsTextLinksAndAttachedMediaWithExactEncoding()
+    public async ValueTask PostsTextLinksAndAttachedMediaWithExactEncoding(CancellationToken cancellationToken)
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
             Check(request.RequestUri!.ToString() == "https://graph.facebook.com/v26.0/123/feed", "Feed URL");
             Check(request.Content?.Headers.ContentType?.MediaType == "multipart/form-data", "Multipart supports all Page feed parameters, including files");
-            string body = await request.Content!.ReadAsStringAsync();
+            string body = await request.Content!.ReadAsStringAsync(cancellationToken: cancellationToken);
             Check(body.Contains("Hello & welcome + café", StringComparison.Ordinal), "Message encoding");
             Check(body.Contains("https://example.com/?a=1&b=2", StringComparison.Ordinal), "Link encoding");
             Check(body.Contains("""[{"media_fbid":"456"}]""", StringComparison.Ordinal), "Attached media JSON");
@@ -33,51 +33,51 @@ public sealed class PublishingTests
         body.AddOrReplacePart("message", "text/plain", "Hello & welcome + café");
         body.AddOrReplacePart("link", "text/plain", "https://example.com/?a=1&b=2");
         body.AddOrReplacePart("attached_media", "text/plain", """[{"media_fbid":"456"}]""");
-        var result = await Create(http)["123"].Feed.PostAsync(body);
+        var result = await Create(http)["123"].Feed.PostAsync(body, cancellationToken: cancellationToken);
         Check(result?.Id == "123_789", "Post ID deserialized");
     }
 
     [Test]
-    public async ValueTask PostsPhotoByUrlAndReadsBothIds()
+    public async ValueTask PostsPhotoByUrlAndReadsBothIds(CancellationToken cancellationToken)
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
             Check(request.RequestUri!.AbsolutePath == "/v26.0/123/photos", "Photo URL");
-            var form = await ReadForm(request);
+            var form = await ReadForm(request, cancellationToken: cancellationToken);
             Check(form["url"] == "https://example.com/photo.jpg", "Photo URL field");
             Check(form["caption"] == "A photo", "Caption");
             return Json("""{"id":"456","post_id":"123_789"}""");
         }));
-        var result = await Create(http)["123"].Photos.PostAsync(new PostIdPhotosXWwwFormUrlencodedRequest { Url = "https://example.com/photo.jpg", Caption = "A photo" });
+        var result = await Create(http)["123"].Photos.PostAsync(new PostIdPhotosXWwwFormUrlencodedRequest { Url = "https://example.com/photo.jpg", Caption = "A photo" }, cancellationToken: cancellationToken);
         Check(result?.Id == "456" && result.PostId == "123_789", "Photo/post IDs deserialized");
     }
 
     [Test]
-    public async ValueTask ReadsPagedPostsAndPropagatesApiErrors()
+    public async ValueTask ReadsPagedPostsAndPropagatesApiErrors(CancellationToken cancellationToken)
     {
         using var http = new HttpClient(new Handler((request, _) => Task.FromResult(
             request.Method == HttpMethod.Get ? Json("""{"data":[{"id":"123_789","message":"hello"}],"paging":{"next":"https://graph.facebook.com/next"}}""")
             : Json("""{"error":{"message":"Permission denied","type":"OAuthException","code":200}}""", HttpStatusCode.Forbidden))));
         var client = Create(http);
-        var page = await client["123"].Feed.GetAsync(config => config.QueryParameters.Fields = "id,message");
+        var page = await client["123"].Feed.GetAsync(config => config.QueryParameters.Fields = "id,message", cancellationToken: cancellationToken);
         Check(page?.Data?.Single().Id == "123_789", "Paged models");
         var denied = new MultipartBody();
         denied.AddOrReplacePart("message", "text/plain", "Denied");
-        try { await client["123"].Feed.PostAsync(denied); }
+        try { await client["123"].Feed.PostAsync(denied, cancellationToken: cancellationToken); }
         catch (ApiException error) { Check(error.ResponseStatusCode == 403, "HTTP error status"); return; }
         throw new InvalidOperationException("API error was swallowed");
     }
     [Test]
-    public async ValueTask CreatesAdvertisingCampaign()
+    public async ValueTask CreatesAdvertisingCampaign(CancellationToken cancellationToken)
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
             Check(request.RequestUri!.AbsolutePath == "/v26.0/act_123/campaigns", "Campaign endpoint");
-            var form = await ReadForm(request);
+            var form = await ReadForm(request, cancellationToken: cancellationToken);
             Check(form["name"] == "API coverage test", "Campaign request serialization");
             return Json("""{"id":"987654321"}""");
         }));
-        var result = await Create(http)["act_123"].Campaigns.PostAsync(new PostIdCampaignsXWwwFormUrlencodedRequest { Name = "API coverage test" });
+        var result = await Create(http)["act_123"].Campaigns.PostAsync(new PostIdCampaignsXWwwFormUrlencodedRequest { Name = "API coverage test" }, cancellationToken: cancellationToken);
         Check(result?.Id == "987654321", "Campaign result ID");
     }
     private static FacebookOpenApiClient Create(HttpClient http)
@@ -86,12 +86,12 @@ public sealed class PublishingTests
         return new FacebookOpenApiClient(new HttpClientRequestAdapter(new AnonymousAuthenticationProvider(), httpClient: http));
     }
 
-    private static async Task<Dictionary<string, string>> ReadForm(HttpRequestMessage request)
+    private static async Task<Dictionary<string, string>> ReadForm(HttpRequestMessage request, CancellationToken cancellationToken = default)
     {
         Check(request.Method == HttpMethod.Post, "POST request expected");
         Check(request.Headers.Authorization?.ToString() == "Bearer test-token", "Bearer token missing");
         Check(request.Content?.Headers.ContentType?.MediaType == "application/x-www-form-urlencoded", "Expected URL-encoded form");
-        return (await request.Content!.ReadAsStringAsync()).Split('&', StringSplitOptions.RemoveEmptyEntries)
+        return (await request.Content!.ReadAsStringAsync(cancellationToken: cancellationToken)).Split('&', StringSplitOptions.RemoveEmptyEntries)
             .Select(x => x.Split('=', 2)).ToDictionary(x => WebUtility.UrlDecode(x[0]), x => WebUtility.UrlDecode(x.Length > 1 ? x[1] : ""));
     }
 
