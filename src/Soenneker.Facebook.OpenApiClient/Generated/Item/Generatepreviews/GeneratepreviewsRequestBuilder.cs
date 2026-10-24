@@ -241,13 +241,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Generatepreviews
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("product_item_ids")]
-            public string[]? ProductItemIds { get; set; }
+            public string? ProductItemIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("product_item_ids")]
-            public string[] ProductItemIds { get; set; }
+            public string ProductItemIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

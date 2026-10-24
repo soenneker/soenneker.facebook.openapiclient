@@ -126,26 +126,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Saved_audiences
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("fields")]
-            public string[]? Fields { get; set; }
+            public string? Fields { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("fields")]
-            public string[] Fields { get; set; }
+            public string Fields { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("filtering")]
-            public string[]? Filtering { get; set; }
+            public string? Filtering { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("filtering")]
-            public string[] Filtering { get; set; }
+            public string Filtering { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

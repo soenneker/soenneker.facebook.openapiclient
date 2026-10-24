@@ -156,13 +156,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Branded_content_advertisable_med
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("media_relationship")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ShadowiguserbrandedContentAdvertisableMediasMediaRelationshipEnumParam[]? MediaRelationship { get; set; }
+            public string? MediaRelationship { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("media_relationship")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ShadowiguserbrandedContentAdvertisableMediasMediaRelationshipEnumParam[] MediaRelationship { get; set; }
+            public string MediaRelationship { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -177,13 +177,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Branded_content_advertisable_med
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("permalinks")]
-            public string[]? Permalinks { get; set; }
+            public string? Permalinks { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("permalinks")]
-            public string[] Permalinks { get; set; }
+            public string Permalinks { get; set; }
             #pragma warning restore CS1591
 #endif
         }

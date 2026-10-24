@@ -106,7 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adlabels
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Adlabels.AdlabelsRequestBuilder.AdlabelsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/adlabels{?execution_options*,adlabels*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/adlabels?adlabels={adlabels}{&execution_options*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -143,7 +143,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adlabels
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -164,26 +164,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adlabels
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("adlabels")]
-            public string[]? Adlabels { get; set; }
+            public string? Adlabels { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("adlabels")]
-            public string[] Adlabels { get; set; }
+            public string Adlabels { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("execution_options")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignadlabelsExecutionOptionsEnumParam[]? ExecutionOptions { get; set; }
+            public string? ExecutionOptions { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("execution_options")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignadlabelsExecutionOptionsEnumParam[] ExecutionOptions { get; set; }
+            public string ExecutionOptions { get; set; }
             #pragma warning restore CS1591
 #endif
         }

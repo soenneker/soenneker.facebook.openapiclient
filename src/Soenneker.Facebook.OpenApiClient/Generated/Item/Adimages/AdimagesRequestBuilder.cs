@@ -143,7 +143,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adimages
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -252,13 +252,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adimages
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("hashes")]
-            public string[]? Hashes { get; set; }
+            public string? Hashes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("hashes")]
-            public string[] Hashes { get; set; }
+            public string Hashes { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -290,13 +290,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adimages
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("selected_hashes")]
-            public string[]? SelectedHashes { get; set; }
+            public string? SelectedHashes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("selected_hashes")]
-            public string[] SelectedHashes { get; set; }
+            public string SelectedHashes { get; set; }
             #pragma warning restore CS1591
 #endif
         }

@@ -130,13 +130,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Assigned_pages
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("pages")]
-            public long?[]? Pages { get; set; }
+            public string? Pages { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("pages")]
-            public long?[] Pages { get; set; }
+            public string Pages { get; set; }
             #pragma warning restore CS1591
 #endif
         }

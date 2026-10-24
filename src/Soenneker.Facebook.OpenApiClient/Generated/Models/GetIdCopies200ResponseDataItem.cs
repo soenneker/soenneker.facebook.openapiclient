@@ -457,10 +457,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The issues_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdCopies200ResponseDataItem_issues_info>? IssuesInfo { get; set; }
+        public UntypedNode? IssuesInfo { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdCopies200ResponseDataItem_issues_info> IssuesInfo { get; set; }
+        public UntypedNode IssuesInfo { get; set; }
 #endif
         /// <summary>The last_budget_toggling_time property</summary>
         public DateTimeOffset? LastBudgetTogglingTime { get; set; }
@@ -942,7 +942,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "is_reels_trending_ads_enabled", n => { IsReelsTrendingAdsEnabled = n.GetBoolValue(); } },
                 { "is_sequenced_conversion_creation", n => { IsSequencedConversionCreation = n.GetBoolValue(); } },
                 { "is_skadnetwork_attribution", n => { IsSkadnetworkAttribution = n.GetBoolValue(); } },
-                { "issues_info", n => { IssuesInfo = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdCopies200ResponseDataItem_issues_info>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdCopies200ResponseDataItem_issues_info.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "issues_info", n => { IssuesInfo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "last_budget_toggling_time", n => { LastBudgetTogglingTime = n.GetDateTimeOffsetValue(); } },
                 { "last_updated_by_app_id", n => { LastUpdatedByAppId = n.GetStringValue(); } },
                 { "learning_stage_info", n => { LearningStageInfo = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignLearningStageInfo>(global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignLearningStageInfo.CreateFromDiscriminatorValue); } },
@@ -1090,7 +1090,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("is_reels_trending_ads_enabled", IsReelsTrendingAdsEnabled);
             writer.WriteBoolValue("is_sequenced_conversion_creation", IsSequencedConversionCreation);
             writer.WriteBoolValue("is_skadnetwork_attribution", IsSkadnetworkAttribution);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdCopies200ResponseDataItem_issues_info>("issues_info", IssuesInfo);
+            writer.WriteObjectValue<UntypedNode>("issues_info", IssuesInfo);
             writer.WriteDateTimeOffsetValue("last_budget_toggling_time", LastBudgetTogglingTime);
             writer.WriteStringValue("last_updated_by_app_id", LastUpdatedByAppId);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignLearningStageInfo>("learning_stage_info", LearningStageInfo);

@@ -130,13 +130,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adnetworkanalytics_results
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("query_ids")]
-            public string[]? QueryIds { get; set; }
+            public string? QueryIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("query_ids")]
-            public string[] QueryIds { get; set; }
+            public string QueryIds { get; set; }
             #pragma warning restore CS1591
 #endif
         }

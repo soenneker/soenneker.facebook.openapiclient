@@ -87,13 +87,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Reachestimate
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("adgroup_ids")]
-            public string[]? AdgroupIds { get; set; }
+            public string? AdgroupIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("adgroup_ids")]
-            public string[] AdgroupIds { get; set; }
+            public string AdgroupIds { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

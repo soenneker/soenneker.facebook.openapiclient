@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Template_group_analytics
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Template_group_analyticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/template_group_analytics?end={end}&granularity={granularity}&start={start}{&after*,before*,fields*,limit*,metric_types*,use_waba_timezone*,template_group_ids*}", pathParameters)
+        public Template_group_analyticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/template_group_analytics?end={end}&granularity={granularity}&start={start}&template_group_ids={template_group_ids}{&after*,before*,fields*,limit*,metric_types*,use_waba_timezone*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Template_group_analytics
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Template_group_analyticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/template_group_analytics?end={end}&granularity={granularity}&start={start}{&after*,before*,fields*,limit*,metric_types*,use_waba_timezone*,template_group_ids*}", rawUrl)
+        public Template_group_analyticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/template_group_analytics?end={end}&granularity={granularity}&start={start}&template_group_ids={template_group_ids}{&after*,before*,fields*,limit*,metric_types*,use_waba_timezone*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdTemplateGroupAnalytics200Response"/></returns>
@@ -138,13 +138,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Template_group_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("metric_types")]
-            public string[]? MetricTypes { get; set; }
+            public string? MetricTypes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("metric_types")]
-            public string[] MetricTypes { get; set; }
+            public string MetricTypes { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -155,13 +155,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Template_group_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("template_group_ids")]
-            public string[]? TemplateGroupIds { get; set; }
+            public string? TemplateGroupIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("template_group_ids")]
-            public string[] TemplateGroupIds { get; set; }
+            public string TemplateGroupIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

@@ -15,10 +15,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The actions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemActions? Actions { get; set; }
+        public UntypedNode? Actions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemActions Actions { get; set; }
+        public UntypedNode Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -69,10 +69,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The child_attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemChildAttachments? ChildAttachments { get; set; }
+        public UntypedNode? ChildAttachments { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemChildAttachments ChildAttachments { get; set; }
+        public UntypedNode ChildAttachments { get; set; }
 #endif
         /// <summary>The comments_mirroring_domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -205,10 +205,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The message_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemMessageTags? MessageTags { get; set; }
+        public UntypedNode? MessageTags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemMessageTags MessageTags { get; set; }
+        public UntypedNode MessageTags { get; set; }
 #endif
         /// <summary>The multi_share_end_card property</summary>
         public bool? MultiShareEndCard { get; set; }
@@ -289,10 +289,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemProperties? Properties { get; set; }
+        public UntypedNode? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemProperties Properties { get; set; }
+        public UntypedNode Properties { get; set; }
 #endif
         /// <summary>The scheduled_publish_time property</summary>
         public float? ScheduledPublishTime { get; set; }
@@ -331,10 +331,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The story_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemStoryTags? StoryTags { get; set; }
+        public UntypedNode? StoryTags { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemStoryTags StoryTags { get; set; }
+        public UntypedNode StoryTags { get; set; }
 #endif
         /// <summary>The subscribed property</summary>
         public bool? Subscribed { get; set; }
@@ -417,7 +417,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemActions>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemActions.CreateFromDiscriminatorValue); } },
+                { "actions", n => { Actions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "admin_creator", n => { AdminCreator = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemAdminCreator>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemAdminCreator.CreateFromDiscriminatorValue); } },
                 { "allowed_advertising_objectives", n => { AllowedAdvertisingObjectives = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Application>(global::Soenneker.Facebook.OpenApiClient.Models.Application.CreateFromDiscriminatorValue); } },
@@ -425,7 +425,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "call_to_action", n => { CallToAction = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemCallToAction>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemCallToAction.CreateFromDiscriminatorValue); } },
                 { "can_reply_privately", n => { CanReplyPrivately = n.GetBoolValue(); } },
                 { "caption", n => { Caption = n.GetStringValue(); } },
-                { "child_attachments", n => { ChildAttachments = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemChildAttachments>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemChildAttachments.CreateFromDiscriminatorValue); } },
+                { "child_attachments", n => { ChildAttachments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "comments_mirroring_domain", n => { CommentsMirroringDomain = n.GetStringValue(); } },
                 { "coordinates", n => { Coordinates = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemCoordinates>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemCoordinates.CreateFromDiscriminatorValue); } },
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
@@ -454,7 +454,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "is_spherical", n => { IsSpherical = n.GetBoolValue(); } },
                 { "link", n => { Link = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "message_tags", n => { MessageTags = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemMessageTags>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemMessageTags.CreateFromDiscriminatorValue); } },
+                { "message_tags", n => { MessageTags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "multi_share_end_card", n => { MultiShareEndCard = n.GetBoolValue(); } },
                 { "multi_share_optimized", n => { MultiShareOptimized = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -466,13 +466,13 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "privacy", n => { Privacy = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Privacy>(global::Soenneker.Facebook.OpenApiClient.Models.Privacy.CreateFromDiscriminatorValue); } },
                 { "promotable_id", n => { PromotableId = n.GetStringValue(); } },
                 { "promotion_status", n => { PromotionStatus = n.GetStringValue(); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemProperties>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemProperties.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "scheduled_publish_time", n => { ScheduledPublishTime = n.GetFloatValue(); } },
                 { "shares", n => { Shares = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemShares>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemShares.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "status_type", n => { StatusType = n.GetStringValue(); } },
                 { "story", n => { Story = n.GetStringValue(); } },
-                { "story_tags", n => { StoryTags = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemStoryTags>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemStoryTags.CreateFromDiscriminatorValue); } },
+                { "story_tags", n => { StoryTags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "subscribed", n => { Subscribed = n.GetBoolValue(); } },
                 { "target", n => { Target = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Profile>(global::Soenneker.Facebook.OpenApiClient.Models.Profile.CreateFromDiscriminatorValue); } },
                 { "targeting", n => { Targeting = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemTargeting>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemTargeting.CreateFromDiscriminatorValue); } },
@@ -492,7 +492,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemActions>("actions", Actions);
+            writer.WriteObjectValue<UntypedNode>("actions", Actions);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemAdminCreator>("admin_creator", AdminCreator);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_advertising_objectives", AllowedAdvertisingObjectives);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Application>("application", Application);
@@ -500,7 +500,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemCallToAction>("call_to_action", CallToAction);
             writer.WriteBoolValue("can_reply_privately", CanReplyPrivately);
             writer.WriteStringValue("caption", Caption);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemChildAttachments>("child_attachments", ChildAttachments);
+            writer.WriteObjectValue<UntypedNode>("child_attachments", ChildAttachments);
             writer.WriteStringValue("comments_mirroring_domain", CommentsMirroringDomain);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemCoordinates>("coordinates", Coordinates);
             writer.WriteDateTimeOffsetValue("created_time", CreatedTime);
@@ -529,7 +529,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("is_spherical", IsSpherical);
             writer.WriteStringValue("link", Link);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemMessageTags>("message_tags", MessageTags);
+            writer.WriteObjectValue<UntypedNode>("message_tags", MessageTags);
             writer.WriteBoolValue("multi_share_end_card", MultiShareEndCard);
             writer.WriteBoolValue("multi_share_optimized", MultiShareOptimized);
             writer.WriteStringValue("name", Name);
@@ -541,13 +541,13 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Privacy>("privacy", Privacy);
             writer.WriteStringValue("promotable_id", PromotableId);
             writer.WriteStringValue("promotion_status", PromotionStatus);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemProperties>("properties", Properties);
+            writer.WriteObjectValue<UntypedNode>("properties", Properties);
             writer.WriteFloatValue("scheduled_publish_time", ScheduledPublishTime);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemShares>("shares", Shares);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("status_type", StatusType);
             writer.WriteStringValue("story", Story);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemStoryTags>("story_tags", StoryTags);
+            writer.WriteObjectValue<UntypedNode>("story_tags", StoryTags);
             writer.WriteBoolValue("subscribed", Subscribed);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Profile>("target", Target);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdPosts200ResponseDataItemTargeting>("targeting", Targeting);

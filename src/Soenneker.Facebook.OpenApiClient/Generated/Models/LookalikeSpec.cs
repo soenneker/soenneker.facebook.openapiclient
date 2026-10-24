@@ -83,10 +83,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The target_country_names property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecTargetCountryNames? TargetCountryNames { get; set; }
+        public UntypedNode? TargetCountryNames { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecTargetCountryNames TargetCountryNames { get; set; }
+        public UntypedNode TargetCountryNames { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "ratio", n => { Ratio = n.GetFloatValue(); } },
                 { "starting_ratio", n => { StartingRatio = n.GetFloatValue(); } },
                 { "target_countries", n => { TargetCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "target_country_names", n => { TargetCountryNames = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecTargetCountryNames>(global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecTargetCountryNames.CreateFromDiscriminatorValue); } },
+                { "target_country_names", n => { TargetCountryNames = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -156,7 +156,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteFloatValue("ratio", Ratio);
             writer.WriteFloatValue("starting_ratio", StartingRatio);
             writer.WriteCollectionOfPrimitiveValues<string>("target_countries", TargetCountries);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecTargetCountryNames>("target_country_names", TargetCountryNames);
+            writer.WriteObjectValue<UntypedNode>("target_country_names", TargetCountryNames);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

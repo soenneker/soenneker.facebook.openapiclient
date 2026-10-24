@@ -134,13 +134,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Stories
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("status")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PagestoriesStatusEnumParam[]? Status { get; set; }
+            public string? Status { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("status")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PagestoriesStatusEnumParam[] Status { get; set; }
+            public string Status { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

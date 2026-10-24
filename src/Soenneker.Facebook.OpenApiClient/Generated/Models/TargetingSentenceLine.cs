@@ -33,10 +33,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The targetingsentencelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingSentenceLineTargetingsentencelines? Targetingsentencelines { get; set; }
+        public UntypedNode? Targetingsentencelines { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingSentenceLineTargetingsentencelines Targetingsentencelines { get; set; }
+        public UntypedNode Targetingsentencelines { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.TargetingSentenceLine"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "params", n => { Params = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Targeting>(global::Soenneker.Facebook.OpenApiClient.Models.Targeting.CreateFromDiscriminatorValue); } },
-                { "targetingsentencelines", n => { Targetingsentencelines = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.TargetingSentenceLineTargetingsentencelines>(global::Soenneker.Facebook.OpenApiClient.Models.TargetingSentenceLineTargetingsentencelines.CreateFromDiscriminatorValue); } },
+                { "targetingsentencelines", n => { Targetingsentencelines = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Targeting>("params", Params);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.TargetingSentenceLineTargetingsentencelines>("targetingsentencelines", Targetingsentencelines);
+            writer.WriteObjectValue<UntypedNode>("targetingsentencelines", Targetingsentencelines);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

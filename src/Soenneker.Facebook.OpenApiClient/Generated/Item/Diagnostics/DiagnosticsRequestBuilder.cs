@@ -87,39 +87,39 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Diagnostics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("affected_channels")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsAffectedChannelsEnumParam[]? AffectedChannels { get; set; }
+            public string? AffectedChannels { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("affected_channels")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsAffectedChannelsEnumParam[] AffectedChannels { get; set; }
+            public string AffectedChannels { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("affected_entities")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsAffectedEntitiesEnumParam[]? AffectedEntities { get; set; }
+            public string? AffectedEntities { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("affected_entities")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsAffectedEntitiesEnumParam[] AffectedEntities { get; set; }
+            public string AffectedEntities { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("affected_features")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsAffectedFeaturesEnumParam[]? AffectedFeatures { get; set; }
+            public string? AffectedFeatures { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("affected_features")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsAffectedFeaturesEnumParam[] AffectedFeatures { get; set; }
+            public string AffectedFeatures { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -169,26 +169,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Diagnostics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("severities")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsSeveritiesEnumParam[]? Severities { get; set; }
+            public string? Severities { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("severities")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsSeveritiesEnumParam[] Severities { get; set; }
+            public string Severities { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsTypesEnumParam[]? Types { get; set; }
+            public string? Types { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogdiagnosticsTypesEnumParam[] Types { get; set; }
+            public string Types { get; set; }
             #pragma warning restore CS1591
 #endif
         }

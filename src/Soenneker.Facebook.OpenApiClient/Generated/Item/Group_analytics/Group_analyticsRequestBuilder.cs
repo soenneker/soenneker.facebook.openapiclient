@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Group_analytics
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Group_analyticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/group_analytics?end={end}&start={start}{&after*,before*,fields*,granularity*,limit*,metric_types*,group_ids*}", pathParameters)
+        public Group_analyticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/group_analytics?end={end}&group_ids={group_ids}&start={start}{&after*,before*,fields*,granularity*,limit*,metric_types*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Group_analytics
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Group_analyticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/group_analytics?end={end}&start={start}{&after*,before*,fields*,granularity*,limit*,metric_types*,group_ids*}", rawUrl)
+        public Group_analyticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/group_analytics?end={end}&group_ids={group_ids}&start={start}{&after*,before*,fields*,granularity*,limit*,metric_types*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdGroupAnalytics200Response"/></returns>
@@ -134,13 +134,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Group_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("group_ids")]
-            public string[]? GroupIds { get; set; }
+            public string? GroupIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("group_ids")]
-            public string[] GroupIds { get; set; }
+            public string GroupIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -151,13 +151,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Group_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("metric_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountgroupAnalyticsMetricTypesEnumParam[]? MetricTypes { get; set; }
+            public string? MetricTypes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("metric_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountgroupAnalyticsMetricTypesEnumParam[] MetricTypes { get; set; }
+            public string MetricTypes { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

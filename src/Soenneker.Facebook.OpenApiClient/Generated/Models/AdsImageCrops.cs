@@ -17,66 +17,66 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The FourZeroZerox150 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X150Item>? FourZeroZerox150 { get; set; }
+        public UntypedNode? FourZeroZerox150 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X150Item> FourZeroZerox150 { get; set; }
+        public UntypedNode FourZeroZerox150 { get; set; }
 #endif
         /// <summary>The FourZeroZerox500 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X500Item>? FourZeroZerox500 { get; set; }
+        public UntypedNode? FourZeroZerox500 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X500Item> FourZeroZerox500 { get; set; }
+        public UntypedNode FourZeroZerox500 { get; set; }
 #endif
         /// <summary>The NineZerox160 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops90X160Item>? NineZerox160 { get; set; }
+        public UntypedNode? NineZerox160 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops90X160Item> NineZerox160 { get; set; }
+        public UntypedNode NineZerox160 { get; set; }
 #endif
         /// <summary>The OneNineOnex100 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops191X100Item>? OneNineOnex100 { get; set; }
+        public UntypedNode? OneNineOnex100 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops191X100Item> OneNineOnex100 { get; set; }
+        public UntypedNode OneNineOnex100 { get; set; }
 #endif
         /// <summary>The OneZeroZerox100 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X100Item>? OneZeroZerox100 { get; set; }
+        public UntypedNode? OneZeroZerox100 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X100Item> OneZeroZerox100 { get; set; }
+        public UntypedNode OneZeroZerox100 { get; set; }
 #endif
         /// <summary>The OneZeroZerox72 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X72Item>? OneZeroZerox72 { get; set; }
+        public UntypedNode? OneZeroZerox72 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X72Item> OneZeroZerox72 { get; set; }
+        public UntypedNode OneZeroZerox72 { get; set; }
 #endif
         /// <summary>The SixZeroZerox360 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops600X360Item>? SixZeroZerox360 { get; set; }
+        public UntypedNode? SixZeroZerox360 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops600X360Item> SixZeroZerox360 { get; set; }
+        public UntypedNode SixZeroZerox360 { get; set; }
 #endif
         /// <summary>The ThreeZeroZerox400 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops300X400Item>? ThreeZeroZerox400 { get; set; }
+        public UntypedNode? ThreeZeroZerox400 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops300X400Item> ThreeZeroZerox400 { get; set; }
+        public UntypedNode ThreeZeroZerox400 { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops"/> and sets the default values.
@@ -103,14 +103,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "400x150", n => { FourZeroZerox150 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X150Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X150Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "400x500", n => { FourZeroZerox500 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X500Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X500Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "90x160", n => { NineZerox160 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops90X160Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops90X160Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "191x100", n => { OneNineOnex100 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops191X100Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops191X100Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "100x100", n => { OneZeroZerox100 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X100Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X100Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "100x72", n => { OneZeroZerox72 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X72Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X72Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "600x360", n => { SixZeroZerox360 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops600X360Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops600X360Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "300x400", n => { ThreeZeroZerox400 = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops300X400Item>(global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops300X400Item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "400x150", n => { FourZeroZerox150 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "400x500", n => { FourZeroZerox500 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "90x160", n => { NineZerox160 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "191x100", n => { OneNineOnex100 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "100x100", n => { OneZeroZerox100 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "100x72", n => { OneZeroZerox72 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "600x360", n => { SixZeroZerox360 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "300x400", n => { ThreeZeroZerox400 = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,14 +120,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X150Item>("400x150", FourZeroZerox150);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops400X500Item>("400x500", FourZeroZerox500);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops90X160Item>("90x160", NineZerox160);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops191X100Item>("191x100", OneNineOnex100);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X100Item>("100x100", OneZeroZerox100);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops100X72Item>("100x72", OneZeroZerox72);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops600X360Item>("600x360", SixZeroZerox360);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops300X400Item>("300x400", ThreeZeroZerox400);
+            writer.WriteObjectValue<UntypedNode>("400x150", FourZeroZerox150);
+            writer.WriteObjectValue<UntypedNode>("400x500", FourZeroZerox500);
+            writer.WriteObjectValue<UntypedNode>("90x160", NineZerox160);
+            writer.WriteObjectValue<UntypedNode>("191x100", OneNineOnex100);
+            writer.WriteObjectValue<UntypedNode>("100x100", OneZeroZerox100);
+            writer.WriteObjectValue<UntypedNode>("100x72", OneZeroZerox72);
+            writer.WriteObjectValue<UntypedNode>("600x360", SixZeroZerox360);
+            writer.WriteObjectValue<UntypedNode>("300x400", ThreeZeroZerox400);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

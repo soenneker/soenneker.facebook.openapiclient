@@ -163,39 +163,39 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Targetingbrowse
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("regulated_categories")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccounttargetingbrowseRegulatedCategoriesEnumParam[]? RegulatedCategories { get; set; }
+            public string? RegulatedCategories { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("regulated_categories")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccounttargetingbrowseRegulatedCategoriesEnumParam[] RegulatedCategories { get; set; }
+            public string RegulatedCategories { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("regulated_countries")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccounttargetingbrowseRegulatedCountriesEnumParam[]? RegulatedCountries { get; set; }
+            public string? RegulatedCountries { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("regulated_countries")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccounttargetingbrowseRegulatedCountriesEnumParam[] RegulatedCountries { get; set; }
+            public string RegulatedCountries { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("whitelisted_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccounttargetingbrowseWhitelistedTypesEnumParam[]? WhitelistedTypes { get; set; }
+            public string? WhitelistedTypes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("whitelisted_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccounttargetingbrowseWhitelistedTypesEnumParam[] WhitelistedTypes { get; set; }
+            public string WhitelistedTypes { get; set; }
             #pragma warning restore CS1591
 #endif
         }

@@ -113,13 +113,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Event_stats
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("breakdowns")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogeventStatsBreakdownsEnumParam[]? Breakdowns { get; set; }
+            public string? Breakdowns { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("breakdowns")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogeventStatsBreakdownsEnumParam[] Breakdowns { get; set; }
+            public string Breakdowns { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

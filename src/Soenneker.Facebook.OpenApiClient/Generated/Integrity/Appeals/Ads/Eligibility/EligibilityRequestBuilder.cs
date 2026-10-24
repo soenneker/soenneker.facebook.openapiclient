@@ -87,13 +87,13 @@ namespace Soenneker.Facebook.OpenApiClient.Integrity.Appeals.Ads.Eligibility
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("ad_ids")]
-            public long?[]? AdIds { get; set; }
+            public string? AdIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("ad_ids")]
-            public long?[] AdIds { get; set; }
+            public string AdIds { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

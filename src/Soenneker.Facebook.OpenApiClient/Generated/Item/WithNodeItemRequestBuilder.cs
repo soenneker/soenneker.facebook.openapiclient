@@ -3303,7 +3303,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -3322,7 +3322,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -3369,13 +3369,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("adlabels")]
-            public string[]? Adlabels { get; set; }
+            public string? Adlabels { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("adlabels")]
-            public string[] Adlabels { get; set; }
+            public string Adlabels { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -3394,13 +3394,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("ids")]
-            public string[]? Ids { get; set; }
+            public string? Ids { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("ids")]
-            public string[] Ids { get; set; }
+            public string Ids { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3533,13 +3533,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("breakdowns")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdstudyobjectiveBreakdowns[]? Breakdowns { get; set; }
+            public string? Breakdowns { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("breakdowns")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdstudyobjectiveBreakdowns[] Breakdowns { get; set; }
+            public string Breakdowns { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3778,39 +3778,39 @@ namespace Soenneker.Facebook.OpenApiClient.Item
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("segment_use_cases")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogSegmentUseCases[]? SegmentUseCases { get; set; }
+            public string? SegmentUseCases { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("segment_use_cases")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogSegmentUseCases[] SegmentUseCases { get; set; }
+            public string SegmentUseCases { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("special_ad_categories")]
-            public string[]? SpecialAdCategories { get; set; }
+            public string? SpecialAdCategories { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("special_ad_categories")]
-            public string[] SpecialAdCategories { get; set; }
+            public string SpecialAdCategories { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("special_ad_category_countries")]
-            public string[]? SpecialAdCategoryCountries { get; set; }
+            public string? SpecialAdCategoryCountries { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("special_ad_category_countries")]
-            public string[] SpecialAdCategoryCountries { get; set; }
+            public string SpecialAdCategoryCountries { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -3821,13 +3821,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("target_countries")]
-            public string[]? TargetCountries { get; set; }
+            public string? TargetCountries { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("target_countries")]
-            public string[] TargetCountries { get; set; }
+            public string TargetCountries { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

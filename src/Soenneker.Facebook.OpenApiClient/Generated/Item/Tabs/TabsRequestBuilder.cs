@@ -130,13 +130,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Tabs
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("tab")]
-            public string[]? Tab { get; set; }
+            public string? Tab { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("tab")]
-            public string[] Tab { get; set; }
+            public string Tab { get; set; }
             #pragma warning restore CS1591
 #endif
         }

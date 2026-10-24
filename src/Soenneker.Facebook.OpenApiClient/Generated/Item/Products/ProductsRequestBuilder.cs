@@ -107,7 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Products
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -257,13 +257,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Products
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("product_ids")]
-            public string[]? ProductIds { get; set; }
+            public string? ProductIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("product_ids")]
-            public string[] ProductIds { get; set; }
+            public string ProductIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

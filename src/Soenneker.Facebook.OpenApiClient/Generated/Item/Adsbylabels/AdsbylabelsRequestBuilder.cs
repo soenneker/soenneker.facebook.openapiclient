@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adsbylabels
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdsbylabelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adsbylabels{?after*,before*,fields*,limit*,operator*,ad_label_ids*}", pathParameters)
+        public AdsbylabelsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adsbylabels?ad_label_ids={ad_label_ids}{&after*,before*,fields*,limit*,operator*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adsbylabels
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdsbylabelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adsbylabels{?after*,before*,fields*,limit*,operator*,ad_label_ids*}", rawUrl)
+        public AdsbylabelsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adsbylabels?ad_label_ids={ad_label_ids}{&after*,before*,fields*,limit*,operator*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdsbylabels200Response"/></returns>
@@ -87,13 +87,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adsbylabels
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("ad_label_ids")]
-            public string[]? AdLabelIds { get; set; }
+            public string? AdLabelIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("ad_label_ids")]
-            public string[] AdLabelIds { get; set; }
+            public string AdLabelIds { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

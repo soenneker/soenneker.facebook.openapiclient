@@ -107,7 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Salts
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -171,13 +171,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Salts
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("params")]
-            public string[]? Params { get; set; }
+            public string? Params { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("params")]
-            public string[] Params { get; set; }
+            public string Params { get; set; }
             #pragma warning restore CS1591
 #endif
         }

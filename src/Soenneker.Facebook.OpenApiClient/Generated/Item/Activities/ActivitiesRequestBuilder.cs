@@ -201,13 +201,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("extra_oids")]
-            public string[]? ExtraOids { get; set; }
+            public string? ExtraOids { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("extra_oids")]
-            public string[] ExtraOids { get; set; }
+            public string ExtraOids { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

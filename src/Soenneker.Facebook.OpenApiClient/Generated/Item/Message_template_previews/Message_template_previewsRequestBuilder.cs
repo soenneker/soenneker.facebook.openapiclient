@@ -130,13 +130,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_template_previews
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("button_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatePreviewsButtonTypesEnumParam[]? ButtonTypes { get; set; }
+            public string? ButtonTypes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("button_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatePreviewsButtonTypesEnumParam[] ButtonTypes { get; set; }
+            public string ButtonTypes { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -164,13 +164,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_template_previews
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("languages")]
-            public string[]? Languages { get; set; }
+            public string? Languages { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("languages")]
-            public string[] Languages { get; set; }
+            public string Languages { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

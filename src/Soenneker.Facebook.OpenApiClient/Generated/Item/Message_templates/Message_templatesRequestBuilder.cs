@@ -143,7 +143,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_templates
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -177,13 +177,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_templates
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("hsm_ids")]
-            public string[]? HsmIds { get; set; }
+            public string? HsmIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("hsm_ids")]
-            public string[] HsmIds { get; set; }
+            public string HsmIds { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -287,13 +287,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_templates
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("language")]
-            public string[]? Language { get; set; }
+            public string? Language { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("language")]
-            public string[] Language { get; set; }
+            public string Language { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -330,13 +330,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Message_templates
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("quality_score")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesQualityScoreEnumParam[]? QualityScore { get; set; }
+            public string? QualityScore { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("quality_score")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesQualityScoreEnumParam[] QualityScore { get; set; }
+            public string QualityScore { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

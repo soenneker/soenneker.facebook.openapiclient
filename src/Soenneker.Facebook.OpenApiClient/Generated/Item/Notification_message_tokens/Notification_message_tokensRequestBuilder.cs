@@ -113,13 +113,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("custom_audience_ids")]
-            public string[]? CustomAudienceIds { get; set; }
+            public string? CustomAudienceIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("custom_audience_ids")]
-            public string[] CustomAudienceIds { get; set; }
+            public string CustomAudienceIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -151,13 +151,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("opt_in_source")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessageTokensOptInSourceEnumParam[]? OptInSource { get; set; }
+            public string? OptInSource { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("opt_in_source")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessageTokensOptInSourceEnumParam[] OptInSource { get; set; }
+            public string OptInSource { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -168,13 +168,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("subscriber_tag_ids")]
-            public string[]? SubscriberTagIds { get; set; }
+            public string? SubscriberTagIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("subscriber_tag_ids")]
-            public string[] SubscriberTagIds { get; set; }
+            public string SubscriberTagIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

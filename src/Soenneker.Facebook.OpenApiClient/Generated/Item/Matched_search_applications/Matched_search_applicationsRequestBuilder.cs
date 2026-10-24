@@ -185,13 +185,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Matched_search_applications
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("stores_to_filter")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountmatchedSearchApplicationsStoresToFilterEnumParam[]? StoresToFilter { get; set; }
+            public string? StoresToFilter { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("stores_to_filter")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountmatchedSearchApplicationsStoresToFilterEnumParam[] StoresToFilter { get; set; }
+            public string StoresToFilter { get; set; }
             #pragma warning restore CS1591
 #endif
         }

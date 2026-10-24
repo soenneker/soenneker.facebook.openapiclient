@@ -113,26 +113,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Pricing_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("country_codes")]
-            public string[]? CountryCodes { get; set; }
+            public string? CountryCodes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("country_codes")]
-            public string[] CountryCodes { get; set; }
+            public string CountryCodes { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("dimensions")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsDimensionsEnumParam[]? Dimensions { get; set; }
+            public string? Dimensions { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("dimensions")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsDimensionsEnumParam[] Dimensions { get; set; }
+            public string Dimensions { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -164,52 +164,52 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Pricing_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("metric_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsMetricTypesEnumParam[]? MetricTypes { get; set; }
+            public string? MetricTypes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("metric_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsMetricTypesEnumParam[] MetricTypes { get; set; }
+            public string MetricTypes { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("phone_numbers")]
-            public string[]? PhoneNumbers { get; set; }
+            public string? PhoneNumbers { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("phone_numbers")]
-            public string[] PhoneNumbers { get; set; }
+            public string PhoneNumbers { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("pricing_categories")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsPricingCategoriesEnumParam[]? PricingCategories { get; set; }
+            public string? PricingCategories { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("pricing_categories")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsPricingCategoriesEnumParam[] PricingCategories { get; set; }
+            public string PricingCategories { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("pricing_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsPricingTypesEnumParam[]? PricingTypes { get; set; }
+            public string? PricingTypes { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("pricing_types")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpricingAnalyticsPricingTypesEnumParam[] PricingTypes { get; set; }
+            public string PricingTypes { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
@@ -220,13 +220,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Pricing_analytics
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("tiers")]
-            public string[]? Tiers { get; set; }
+            public string? Tiers { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("tiers")]
-            public string[] Tiers { get; set; }
+            public string Tiers { get; set; }
             #pragma warning restore CS1591
 #endif
         }

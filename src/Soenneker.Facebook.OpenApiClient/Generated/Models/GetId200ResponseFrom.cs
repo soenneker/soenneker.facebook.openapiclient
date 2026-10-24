@@ -491,10 +491,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The hometown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHometown? Hometown { get; set; }
+        public UntypedNode? Hometown { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHometown Hometown { get; set; }
+        public UntypedNode Hometown { get; set; }
 #endif
         /// <summary>The hours property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1348,7 +1348,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "has_transitioned_to_new_page_experience", n => { HasTransitionedToNewPageExperience = n.GetBoolValue(); } },
                 { "has_whatsapp_business_number", n => { HasWhatsappBusinessNumber = n.GetBoolValue(); } },
                 { "has_whatsapp_number", n => { HasWhatsappNumber = n.GetBoolValue(); } },
-                { "hometown", n => { Hometown = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHometown>(global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHometown.CreateFromDiscriminatorValue); } },
+                { "hometown", n => { Hometown = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "hours", n => { Hours = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHours>(global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHours.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "impressum", n => { Impressum = n.GetStringValue(); } },
@@ -1551,7 +1551,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("has_transitioned_to_new_page_experience", HasTransitionedToNewPageExperience);
             writer.WriteBoolValue("has_whatsapp_business_number", HasWhatsappBusinessNumber);
             writer.WriteBoolValue("has_whatsapp_number", HasWhatsappNumber);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHometown>("hometown", Hometown);
+            writer.WriteObjectValue<UntypedNode>("hometown", Hometown);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetId200ResponseFromHours>("hours", Hours);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("impressum", Impressum);

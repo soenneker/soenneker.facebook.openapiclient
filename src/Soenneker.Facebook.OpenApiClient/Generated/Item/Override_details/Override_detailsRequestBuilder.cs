@@ -126,13 +126,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Override_details
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("keys")]
-            public string[]? Keys { get; set; }
+            public string? Keys { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("keys")]
-            public string[] Keys { get; set; }
+            public string Keys { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

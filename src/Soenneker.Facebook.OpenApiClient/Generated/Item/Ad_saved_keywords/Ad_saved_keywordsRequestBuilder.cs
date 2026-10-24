@@ -113,13 +113,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ad_saved_keywords
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("fields")]
-            public string[]? Fields { get; set; }
+            public string? Fields { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("fields")]
-            public string[] Fields { get; set; }
+            public string Fields { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

@@ -130,13 +130,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Asyncadrequests
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("statuses")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignasyncadrequestsStatusesEnumParam[]? Statuses { get; set; }
+            public string? Statuses { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("statuses")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignasyncadrequestsStatusesEnumParam[] Statuses { get; set; }
+            public string Statuses { get; set; }
             #pragma warning restore CS1591
 #endif
         }

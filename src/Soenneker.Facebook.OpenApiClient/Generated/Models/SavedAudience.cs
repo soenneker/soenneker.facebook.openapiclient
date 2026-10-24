@@ -89,10 +89,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The sentence_lines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.SavedAudienceSentenceLines? SentenceLines { get; set; }
+        public UntypedNode? SentenceLines { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.SavedAudienceSentenceLines SentenceLines { get; set; }
+        public UntypedNode SentenceLines { get; set; }
 #endif
         /// <summary>The targeting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,7 +143,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "page_deletion_marked_delete_time", n => { PageDeletionMarkedDeleteTime = n.GetLongValue(); } },
                 { "permission_for_actions", n => { PermissionForActions = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions>(global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions.CreateFromDiscriminatorValue); } },
                 { "run_status", n => { RunStatus = n.GetStringValue(); } },
-                { "sentence_lines", n => { SentenceLines = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.SavedAudienceSentenceLines>(global::Soenneker.Facebook.OpenApiClient.Models.SavedAudienceSentenceLines.CreateFromDiscriminatorValue); } },
+                { "sentence_lines", n => { SentenceLines = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "targeting", n => { Targeting = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Targeting>(global::Soenneker.Facebook.OpenApiClient.Models.Targeting.CreateFromDiscriminatorValue); } },
                 { "time_created", n => { TimeCreated = n.GetDateTimeOffsetValue(); } },
                 { "time_updated", n => { TimeUpdated = n.GetDateTimeOffsetValue(); } },
@@ -168,7 +168,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("page_deletion_marked_delete_time", PageDeletionMarkedDeleteTime);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions>("permission_for_actions", PermissionForActions);
             writer.WriteStringValue("run_status", RunStatus);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.SavedAudienceSentenceLines>("sentence_lines", SentenceLines);
+            writer.WriteObjectValue<UntypedNode>("sentence_lines", SentenceLines);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Targeting>("targeting", Targeting);
             writer.WriteDateTimeOffsetValue("time_created", TimeCreated);
             writer.WriteDateTimeOffsetValue("time_updated", TimeUpdated);

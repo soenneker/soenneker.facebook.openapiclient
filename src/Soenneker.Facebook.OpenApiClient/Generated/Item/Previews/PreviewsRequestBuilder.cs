@@ -233,13 +233,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Previews
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("product_item_ids")]
-            public string[]? ProductItemIds { get; set; }
+            public string? ProductItemIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("product_item_ids")]
-            public string[] ProductItemIds { get; set; }
+            public string ProductItemIds { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -263,13 +263,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Previews
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("user_ids")]
-            public long?[]? UserIds { get; set; }
+            public string? UserIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("user_ids")]
-            public long?[] UserIds { get; set; }
+            public string UserIds { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

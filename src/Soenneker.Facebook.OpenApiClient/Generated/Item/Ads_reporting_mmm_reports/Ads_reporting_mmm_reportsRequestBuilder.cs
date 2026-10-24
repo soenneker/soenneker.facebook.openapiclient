@@ -126,13 +126,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads_reporting_mmm_reports
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("filtering")]
-            public string[]? Filtering { get; set; }
+            public string? Filtering { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("filtering")]
-            public string[] Filtering { get; set; }
+            public string Filtering { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

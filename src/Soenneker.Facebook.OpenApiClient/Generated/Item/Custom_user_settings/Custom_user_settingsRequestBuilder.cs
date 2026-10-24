@@ -106,7 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Custom_user_settings
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Custom_user_settings.Custom_user_settingsRequestBuilder.Custom_user_settingsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/custom_user_settings?psid={psid}{&params*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/custom_user_settings?params={params}&psid={psid}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -143,7 +143,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Custom_user_settings
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -164,13 +164,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Custom_user_settings
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("params")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PagecustomUserSettingsParamsEnumParam[]? Params { get; set; }
+            public string? Params { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("params")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PagecustomUserSettingsParamsEnumParam[] Params { get; set; }
+            public string Params { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

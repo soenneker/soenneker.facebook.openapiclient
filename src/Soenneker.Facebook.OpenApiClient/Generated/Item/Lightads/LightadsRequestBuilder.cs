@@ -147,13 +147,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Lightads
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("effective_status")]
-            public string[]? EffectiveStatus { get; set; }
+            public string? EffectiveStatus { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("effective_status")]
-            public string[] EffectiveStatus { get; set; }
+            public string EffectiveStatus { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -206,13 +206,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Lightads
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("sort")]
-            public string[]? Sort { get; set; }
+            public string? Sort { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("sort")]
-            public string[] Sort { get; set; }
+            public string Sort { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

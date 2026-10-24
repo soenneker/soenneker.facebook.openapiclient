@@ -106,7 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Locations
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Locations.LocationsRequestBuilder.LocationsRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/locations{?location_page_ids*,store_numbers*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/locations?location_page_ids={location_page_ids}&store_numbers={store_numbers}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -143,7 +143,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Locations
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -164,26 +164,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Locations
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("location_page_ids")]
-            public string[]? LocationPageIds { get; set; }
+            public string? LocationPageIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("location_page_ids")]
-            public string[] LocationPageIds { get; set; }
+            public string LocationPageIds { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("store_numbers")]
-            public long?[]? StoreNumbers { get; set; }
+            public string? StoreNumbers { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("store_numbers")]
-            public long?[] StoreNumbers { get; set; }
+            public string StoreNumbers { get; set; }
             #pragma warning restore CS1591
 #endif
         }

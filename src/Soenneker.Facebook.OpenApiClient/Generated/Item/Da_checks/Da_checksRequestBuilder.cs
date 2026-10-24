@@ -113,39 +113,39 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("capabilities")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetDaChecksGetCapabilitiesEnumParam[]? Capabilities { get; set; }
+            public string? Capabilities { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("capabilities")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetDaChecksGetCapabilitiesEnumParam[] Capabilities { get; set; }
+            public string Capabilities { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("categories")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetDaChecksGetCategoriesEnumParam[]? Categories { get; set; }
+            public string? Categories { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("categories")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetDaChecksGetCategoriesEnumParam[] Categories { get; set; }
+            public string Categories { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("checks")]
-            public string[]? Checks { get; set; }
+            public string? Checks { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("checks")]
-            public string[] Checks { get; set; }
+            public string Checks { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -165,13 +165,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("features")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetDaChecksGetFeaturesEnumParam[]? Features { get; set; }
+            public string? Features { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("features")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetDaChecksGetFeaturesEnumParam[] Features { get; set; }
+            public string Features { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

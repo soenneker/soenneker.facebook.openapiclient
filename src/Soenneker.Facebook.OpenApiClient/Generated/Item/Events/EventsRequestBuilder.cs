@@ -107,7 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Events
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -154,13 +154,13 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Events
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("event_state_filter")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PageeventsEventStateFilterEnumParam[]? EventStateFilter { get; set; }
+            public string? EventStateFilter { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("event_state_filter")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.PageeventsEventStateFilterEnumParam[] EventStateFilter { get; set; }
+            public string EventStateFilter { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
