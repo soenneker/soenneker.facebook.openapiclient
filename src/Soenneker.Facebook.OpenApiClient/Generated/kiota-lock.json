@@ -1,6 +1,6 @@
 {
   "descriptionHash": "B5C0DC467D1B468F10A6351FA180DF5320D9F250571FF9C4EF858F4767745922AB9852217DDAC34CF08DD8B48554C887C655012CAD182575185557089D2B5B97",
-  "descriptionLocation": "../../../temp_03a7cef8845344ab805ec545bcdeddd1/openapi.fixed.json",
+  "descriptionLocation": "../../../temp_4773f00a96b04febaacc1cc55745647d/openapi.fixed.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.36.1",
   "clientClassName": "FacebookOpenApiClient",
