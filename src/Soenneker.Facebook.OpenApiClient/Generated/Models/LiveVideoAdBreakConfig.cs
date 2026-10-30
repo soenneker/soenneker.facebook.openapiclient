@@ -11,41 +11,70 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LiveVideoAdBreakConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("default_ad_break_duration") is { } nullNodeDefaultAdBreakDuration && nullNodeDefaultAdBreakDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAdBreakDuration = null;
+            if (parseNode.GetChildNode("failure_reason_polling_interval") is { } nullNodeFailureReasonPollingInterval && nullNodeFailureReasonPollingInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReasonPollingInterval = null;
+            if (parseNode.GetChildNode("first_break_eligible_secs") is { } nullNodeFirstBreakEligibleSecs && nullNodeFirstBreakEligibleSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstBreakEligibleSecs = null;
+            if (parseNode.GetChildNode("guide_url") is { } nullNodeGuideUrl && nullNodeGuideUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuideUrl = null;
+            if (parseNode.GetChildNode("is_eligible_to_onboard") is { } nullNodeIsEligibleToOnboard && nullNodeIsEligibleToOnboard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEligibleToOnboard = null;
+            if (parseNode.GetChildNode("is_enabled") is { } nullNodeIsEnabled && nullNodeIsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabled = null;
+            if (parseNode.GetChildNode("onboarding_url") is { } nullNodeOnboardingUrl && nullNodeOnboardingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnboardingUrl = null;
+            if (parseNode.GetChildNode("preparing_duration") is { } nullNodePreparingDuration && nullNodePreparingDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreparingDuration = null;
+            if (parseNode.GetChildNode("time_between_ad_breaks_secs") is { } nullNodeTimeBetweenAdBreaksSecs && nullNodeTimeBetweenAdBreaksSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeBetweenAdBreaksSecs = null;
+            if (parseNode.GetChildNode("viewer_count_threshold") is { } nullNodeViewerCountThreshold && nullNodeViewerCountThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewerCountThreshold = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default_ad_break_duration property</summary>
-        public long? DefaultAdBreakDuration { get; set; }
+        public long? DefaultAdBreakDuration { get => _explicitNullValueDefaultAdBreakDuration; set { _explicitNullValueDefaultAdBreakDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_ad_break_duration"); else _explicitNullProperties?.Remove("default_ad_break_duration"); } }
+        private long? _explicitNullValueDefaultAdBreakDuration = default!;
         /// <summary>The failure_reason_polling_interval property</summary>
-        public long? FailureReasonPollingInterval { get; set; }
+        public long? FailureReasonPollingInterval { get => _explicitNullValueFailureReasonPollingInterval; set { _explicitNullValueFailureReasonPollingInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason_polling_interval"); else _explicitNullProperties?.Remove("failure_reason_polling_interval"); } }
+        private long? _explicitNullValueFailureReasonPollingInterval = default!;
         /// <summary>The first_break_eligible_secs property</summary>
-        public long? FirstBreakEligibleSecs { get; set; }
+        public long? FirstBreakEligibleSecs { get => _explicitNullValueFirstBreakEligibleSecs; set { _explicitNullValueFirstBreakEligibleSecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_break_eligible_secs"); else _explicitNullProperties?.Remove("first_break_eligible_secs"); } }
+        private long? _explicitNullValueFirstBreakEligibleSecs = default!;
         /// <summary>The guide_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuideUrl { get; set; }
+        public string? GuideUrl { get => _explicitNullValueGuideUrl; set { _explicitNullValueGuideUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guide_url"); else _explicitNullProperties?.Remove("guide_url"); } }
+        private string? _explicitNullValueGuideUrl = default!;
 #nullable restore
 #else
-        public string GuideUrl { get; set; }
+        public string GuideUrl { get => _explicitNullValueGuideUrl; set { _explicitNullValueGuideUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guide_url"); else _explicitNullProperties?.Remove("guide_url"); } }
+        private string _explicitNullValueGuideUrl = default!;
 #endif
         /// <summary>The is_eligible_to_onboard property</summary>
-        public bool? IsEligibleToOnboard { get; set; }
+        public bool? IsEligibleToOnboard { get => _explicitNullValueIsEligibleToOnboard; set { _explicitNullValueIsEligibleToOnboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eligible_to_onboard"); else _explicitNullProperties?.Remove("is_eligible_to_onboard"); } }
+        private bool? _explicitNullValueIsEligibleToOnboard = default!;
         /// <summary>The is_enabled property</summary>
-        public bool? IsEnabled { get; set; }
+        public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enabled"); else _explicitNullProperties?.Remove("is_enabled"); } }
+        private bool? _explicitNullValueIsEnabled = default!;
         /// <summary>The onboarding_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OnboardingUrl { get; set; }
+        public string? OnboardingUrl { get => _explicitNullValueOnboardingUrl; set { _explicitNullValueOnboardingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onboarding_url"); else _explicitNullProperties?.Remove("onboarding_url"); } }
+        private string? _explicitNullValueOnboardingUrl = default!;
 #nullable restore
 #else
-        public string OnboardingUrl { get; set; }
+        public string OnboardingUrl { get => _explicitNullValueOnboardingUrl; set { _explicitNullValueOnboardingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onboarding_url"); else _explicitNullProperties?.Remove("onboarding_url"); } }
+        private string _explicitNullValueOnboardingUrl = default!;
 #endif
         /// <summary>The preparing_duration property</summary>
-        public long? PreparingDuration { get; set; }
+        public long? PreparingDuration { get => _explicitNullValuePreparingDuration; set { _explicitNullValuePreparingDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preparing_duration"); else _explicitNullProperties?.Remove("preparing_duration"); } }
+        private long? _explicitNullValuePreparingDuration = default!;
         /// <summary>The time_between_ad_breaks_secs property</summary>
-        public long? TimeBetweenAdBreaksSecs { get; set; }
+        public long? TimeBetweenAdBreaksSecs { get => _explicitNullValueTimeBetweenAdBreaksSecs; set { _explicitNullValueTimeBetweenAdBreaksSecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_between_ad_breaks_secs"); else _explicitNullProperties?.Remove("time_between_ad_breaks_secs"); } }
+        private long? _explicitNullValueTimeBetweenAdBreaksSecs = default!;
         /// <summary>The viewer_count_threshold property</summary>
-        public long? ViewerCountThreshold { get; set; }
+        public long? ViewerCountThreshold { get => _explicitNullValueViewerCountThreshold; set { _explicitNullValueViewerCountThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewer_count_threshold"); else _explicitNullProperties?.Remove("viewer_count_threshold"); } }
+        private long? _explicitNullValueViewerCountThreshold = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoAdBreakConfig"/> and sets the default values.
         /// </summary>
@@ -61,7 +90,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoAdBreakConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoAdBreakConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoAdBreakConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +129,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("preparing_duration", PreparingDuration);
             writer.WriteLongValue("time_between_ad_breaks_secs", TimeBetweenAdBreaksSecs);
             writer.WriteLongValue("viewer_count_threshold", ViewerCountThreshold);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

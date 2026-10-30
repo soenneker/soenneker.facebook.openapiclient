@@ -11,48 +11,75 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class HighDemandPeriod : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ad_object_id") is { } nullNodeAdObjectId && nullNodeAdObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdObjectId = null;
+            if (parseNode.GetChildNode("budget_value") is { } nullNodeBudgetValue && nullNodeBudgetValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValue = null;
+            if (parseNode.GetChildNode("budget_value_type") is { } nullNodeBudgetValueType && nullNodeBudgetValueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValueType = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("recurrence_type") is { } nullNodeRecurrenceType && nullNodeRecurrenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurrenceType = null;
+            if (parseNode.GetChildNode("time_end") is { } nullNodeTimeEnd && nullNodeTimeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeEnd = null;
+            if (parseNode.GetChildNode("time_start") is { } nullNodeTimeStart && nullNodeTimeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeStart = null;
+            if (parseNode.GetChildNode("weekly_schedule") is { } nullNodeWeeklySchedule && nullNodeWeeklySchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeeklySchedule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_object_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdObjectId { get; set; }
+        public string? AdObjectId { get => _explicitNullValueAdObjectId; set { _explicitNullValueAdObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_object_id"); else _explicitNullProperties?.Remove("ad_object_id"); } }
+        private string? _explicitNullValueAdObjectId = default!;
 #nullable restore
 #else
-        public string AdObjectId { get; set; }
+        public string AdObjectId { get => _explicitNullValueAdObjectId; set { _explicitNullValueAdObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_object_id"); else _explicitNullProperties?.Remove("ad_object_id"); } }
+        private string _explicitNullValueAdObjectId = default!;
 #endif
         /// <summary>The budget_value property</summary>
-        public long? BudgetValue { get; set; }
+        public long? BudgetValue { get => _explicitNullValueBudgetValue; set { _explicitNullValueBudgetValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value"); else _explicitNullProperties?.Remove("budget_value"); } }
+        private long? _explicitNullValueBudgetValue = default!;
         /// <summary>The budget_value_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignbudgetSchedulesBudgetValueTypeEnumParam? BudgetValueType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignbudgetSchedulesBudgetValueTypeEnumParam? BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdcampaignbudgetSchedulesBudgetValueTypeEnumParam? _explicitNullValueBudgetValueType = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The recurrence_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecurrenceType { get; set; }
+        public string? RecurrenceType { get => _explicitNullValueRecurrenceType; set { _explicitNullValueRecurrenceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_type"); else _explicitNullProperties?.Remove("recurrence_type"); } }
+        private string? _explicitNullValueRecurrenceType = default!;
 #nullable restore
 #else
-        public string RecurrenceType { get; set; }
+        public string RecurrenceType { get => _explicitNullValueRecurrenceType; set { _explicitNullValueRecurrenceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurrence_type"); else _explicitNullProperties?.Remove("recurrence_type"); } }
+        private string _explicitNullValueRecurrenceType = default!;
 #endif
         /// <summary>The time_end property</summary>
-        public DateTimeOffset? TimeEnd { get; set; }
+        public DateTimeOffset? TimeEnd { get => _explicitNullValueTimeEnd; set { _explicitNullValueTimeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_end"); else _explicitNullProperties?.Remove("time_end"); } }
+        private DateTimeOffset? _explicitNullValueTimeEnd = default!;
         /// <summary>The time_start property</summary>
-        public DateTimeOffset? TimeStart { get; set; }
+        public DateTimeOffset? TimeStart { get => _explicitNullValueTimeStart; set { _explicitNullValueTimeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_start"); else _explicitNullProperties?.Remove("time_start"); } }
+        private DateTimeOffset? _explicitNullValueTimeStart = default!;
         /// <summary>The weekly_schedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment>? WeeklySchedule { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment>? WeeklySchedule { get => _explicitNullValueWeeklySchedule; set { _explicitNullValueWeeklySchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_schedule"); else _explicitNullProperties?.Remove("weekly_schedule"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment>? _explicitNullValueWeeklySchedule = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment> WeeklySchedule { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment> WeeklySchedule { get => _explicitNullValueWeeklySchedule; set { _explicitNullValueWeeklySchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weekly_schedule"); else _explicitNullProperties?.Remove("weekly_schedule"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment> _explicitNullValueWeeklySchedule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriod"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriod CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriod();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriod(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("time_end", TimeEnd);
             writer.WriteDateTimeOffsetValue("time_start", TimeStart);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.HighDemandPeriodTimeSuggestionWeeklySegment>("weekly_schedule", WeeklySchedule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

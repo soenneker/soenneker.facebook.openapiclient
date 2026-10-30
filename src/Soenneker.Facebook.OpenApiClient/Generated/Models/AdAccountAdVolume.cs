@@ -11,68 +11,105 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAccountAdVolume : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actor_id") is { } nullNodeActorId && nullNodeActorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorId = null;
+            if (parseNode.GetChildNode("actor_name") is { } nullNodeActorName && nullNodeActorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorName = null;
+            if (parseNode.GetChildNode("ad_limit_scope_business") is { } nullNodeAdLimitScopeBusiness && nullNodeAdLimitScopeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdLimitScopeBusiness = null;
+            if (parseNode.GetChildNode("ad_limit_scope_business_manager_id") is { } nullNodeAdLimitScopeBusinessManagerId && nullNodeAdLimitScopeBusinessManagerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdLimitScopeBusinessManagerId = null;
+            if (parseNode.GetChildNode("ad_limit_set_by_page_admin") is { } nullNodeAdLimitSetByPageAdmin && nullNodeAdLimitSetByPageAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdLimitSetByPageAdmin = null;
+            if (parseNode.GetChildNode("ads_running_or_in_review_count") is { } nullNodeAdsRunningOrInReviewCount && nullNodeAdsRunningOrInReviewCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdsRunningOrInReviewCount = null;
+            if (parseNode.GetChildNode("ads_running_or_in_review_count_subject_to_limit_set_by_page") is { } nullNodeAdsRunningOrInReviewCountSubjectToLimitSetByPage && nullNodeAdsRunningOrInReviewCountSubjectToLimitSetByPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdsRunningOrInReviewCountSubjectToLimitSetByPage = null;
+            if (parseNode.GetChildNode("current_account_ads_running_or_in_review_count") is { } nullNodeCurrentAccountAdsRunningOrInReviewCount && nullNodeCurrentAccountAdsRunningOrInReviewCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentAccountAdsRunningOrInReviewCount = null;
+            if (parseNode.GetChildNode("future_limit_activation_date") is { } nullNodeFutureLimitActivationDate && nullNodeFutureLimitActivationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureLimitActivationDate = null;
+            if (parseNode.GetChildNode("future_limit_on_ads_running_or_in_review") is { } nullNodeFutureLimitOnAdsRunningOrInReview && nullNodeFutureLimitOnAdsRunningOrInReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureLimitOnAdsRunningOrInReview = null;
+            if (parseNode.GetChildNode("limit_on_ads_running_or_in_review") is { } nullNodeLimitOnAdsRunningOrInReview && nullNodeLimitOnAdsRunningOrInReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitOnAdsRunningOrInReview = null;
+            if (parseNode.GetChildNode("recommendations") is { } nullNodeRecommendations && nullNodeRecommendations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recommendations = null;
+        }
+
         /// <summary>The actor_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActorId { get; set; }
+        public string? ActorId { get => _explicitNullValueActorId; set { _explicitNullValueActorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_id"); else _explicitNullProperties?.Remove("actor_id"); } }
+        private string? _explicitNullValueActorId = default!;
 #nullable restore
 #else
-        public string ActorId { get; set; }
+        public string ActorId { get => _explicitNullValueActorId; set { _explicitNullValueActorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_id"); else _explicitNullProperties?.Remove("actor_id"); } }
+        private string _explicitNullValueActorId = default!;
 #endif
         /// <summary>The actor_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActorName { get; set; }
+        public string? ActorName { get => _explicitNullValueActorName; set { _explicitNullValueActorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_name"); else _explicitNullProperties?.Remove("actor_name"); } }
+        private string? _explicitNullValueActorName = default!;
 #nullable restore
 #else
-        public string ActorName { get; set; }
+        public string ActorName { get => _explicitNullValueActorName; set { _explicitNullValueActorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_name"); else _explicitNullProperties?.Remove("actor_name"); } }
+        private string _explicitNullValueActorName = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_limit_scope_business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business? AdLimitScopeBusiness { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business? AdLimitScopeBusiness { get => _explicitNullValueAdLimitScopeBusiness; set { _explicitNullValueAdLimitScopeBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_limit_scope_business"); else _explicitNullProperties?.Remove("ad_limit_scope_business"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Business? _explicitNullValueAdLimitScopeBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business AdLimitScopeBusiness { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business AdLimitScopeBusiness { get => _explicitNullValueAdLimitScopeBusiness; set { _explicitNullValueAdLimitScopeBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_limit_scope_business"); else _explicitNullProperties?.Remove("ad_limit_scope_business"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Business _explicitNullValueAdLimitScopeBusiness = default!;
 #endif
         /// <summary>The ad_limit_scope_business_manager_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdLimitScopeBusinessManagerId { get; set; }
+        public string? AdLimitScopeBusinessManagerId { get => _explicitNullValueAdLimitScopeBusinessManagerId; set { _explicitNullValueAdLimitScopeBusinessManagerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_limit_scope_business_manager_id"); else _explicitNullProperties?.Remove("ad_limit_scope_business_manager_id"); } }
+        private string? _explicitNullValueAdLimitScopeBusinessManagerId = default!;
 #nullable restore
 #else
-        public string AdLimitScopeBusinessManagerId { get; set; }
+        public string AdLimitScopeBusinessManagerId { get => _explicitNullValueAdLimitScopeBusinessManagerId; set { _explicitNullValueAdLimitScopeBusinessManagerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_limit_scope_business_manager_id"); else _explicitNullProperties?.Remove("ad_limit_scope_business_manager_id"); } }
+        private string _explicitNullValueAdLimitScopeBusinessManagerId = default!;
 #endif
         /// <summary>The ad_limit_set_by_page_admin property</summary>
-        public long? AdLimitSetByPageAdmin { get; set; }
+        public long? AdLimitSetByPageAdmin { get => _explicitNullValueAdLimitSetByPageAdmin; set { _explicitNullValueAdLimitSetByPageAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_limit_set_by_page_admin"); else _explicitNullProperties?.Remove("ad_limit_set_by_page_admin"); } }
+        private long? _explicitNullValueAdLimitSetByPageAdmin = default!;
         /// <summary>The ads_running_or_in_review_count property</summary>
-        public long? AdsRunningOrInReviewCount { get; set; }
+        public long? AdsRunningOrInReviewCount { get => _explicitNullValueAdsRunningOrInReviewCount; set { _explicitNullValueAdsRunningOrInReviewCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ads_running_or_in_review_count"); else _explicitNullProperties?.Remove("ads_running_or_in_review_count"); } }
+        private long? _explicitNullValueAdsRunningOrInReviewCount = default!;
         /// <summary>The ads_running_or_in_review_count_subject_to_limit_set_by_page property</summary>
-        public long? AdsRunningOrInReviewCountSubjectToLimitSetByPage { get; set; }
+        public long? AdsRunningOrInReviewCountSubjectToLimitSetByPage { get => _explicitNullValueAdsRunningOrInReviewCountSubjectToLimitSetByPage; set { _explicitNullValueAdsRunningOrInReviewCountSubjectToLimitSetByPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ads_running_or_in_review_count_subject_to_limit_set_by_page"); else _explicitNullProperties?.Remove("ads_running_or_in_review_count_subject_to_limit_set_by_page"); } }
+        private long? _explicitNullValueAdsRunningOrInReviewCountSubjectToLimitSetByPage = default!;
         /// <summary>The current_account_ads_running_or_in_review_count property</summary>
-        public long? CurrentAccountAdsRunningOrInReviewCount { get; set; }
+        public long? CurrentAccountAdsRunningOrInReviewCount { get => _explicitNullValueCurrentAccountAdsRunningOrInReviewCount; set { _explicitNullValueCurrentAccountAdsRunningOrInReviewCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_account_ads_running_or_in_review_count"); else _explicitNullProperties?.Remove("current_account_ads_running_or_in_review_count"); } }
+        private long? _explicitNullValueCurrentAccountAdsRunningOrInReviewCount = default!;
         /// <summary>The future_limit_activation_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FutureLimitActivationDate { get; set; }
+        public string? FutureLimitActivationDate { get => _explicitNullValueFutureLimitActivationDate; set { _explicitNullValueFutureLimitActivationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_limit_activation_date"); else _explicitNullProperties?.Remove("future_limit_activation_date"); } }
+        private string? _explicitNullValueFutureLimitActivationDate = default!;
 #nullable restore
 #else
-        public string FutureLimitActivationDate { get; set; }
+        public string FutureLimitActivationDate { get => _explicitNullValueFutureLimitActivationDate; set { _explicitNullValueFutureLimitActivationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_limit_activation_date"); else _explicitNullProperties?.Remove("future_limit_activation_date"); } }
+        private string _explicitNullValueFutureLimitActivationDate = default!;
 #endif
         /// <summary>The future_limit_on_ads_running_or_in_review property</summary>
-        public long? FutureLimitOnAdsRunningOrInReview { get; set; }
+        public long? FutureLimitOnAdsRunningOrInReview { get => _explicitNullValueFutureLimitOnAdsRunningOrInReview; set { _explicitNullValueFutureLimitOnAdsRunningOrInReview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("future_limit_on_ads_running_or_in_review"); else _explicitNullProperties?.Remove("future_limit_on_ads_running_or_in_review"); } }
+        private long? _explicitNullValueFutureLimitOnAdsRunningOrInReview = default!;
         /// <summary>The limit_on_ads_running_or_in_review property</summary>
-        public long? LimitOnAdsRunningOrInReview { get; set; }
+        public long? LimitOnAdsRunningOrInReview { get => _explicitNullValueLimitOnAdsRunningOrInReview; set { _explicitNullValueLimitOnAdsRunningOrInReview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit_on_ads_running_or_in_review"); else _explicitNullProperties?.Remove("limit_on_ads_running_or_in_review"); } }
+        private long? _explicitNullValueLimitOnAdsRunningOrInReview = default!;
         /// <summary>The recommendations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty>? Recommendations { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty>? Recommendations { get => _explicitNullValueRecommendations; set { _explicitNullValueRecommendations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendations"); else _explicitNullProperties?.Remove("recommendations"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty>? _explicitNullValueRecommendations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty> Recommendations { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty> Recommendations { get => _explicitNullValueRecommendations; set { _explicitNullValueRecommendations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendations"); else _explicitNullProperties?.Remove("recommendations"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty> _explicitNullValueRecommendations = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolume"/> and sets the default values.
@@ -89,7 +126,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolume CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolume();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolume(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +169,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("future_limit_on_ads_running_or_in_review", FutureLimitOnAdsRunningOrInReview);
             writer.WriteLongValue("limit_on_ads_running_or_in_review", LimitOnAdsRunningOrInReview);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdVolumeRecommendationsItemProperty>("recommendations", Recommendations);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

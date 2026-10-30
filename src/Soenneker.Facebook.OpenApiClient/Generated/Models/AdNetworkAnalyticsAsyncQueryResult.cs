@@ -11,48 +11,70 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdNetworkAnalyticsAsyncQueryResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("omitted_results") is { } nullNodeOmittedResults && nullNodeOmittedResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OmittedResults = null;
+            if (parseNode.GetChildNode("query_id") is { } nullNodeQueryId && nullNodeQueryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryId = null;
+            if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty? Data { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty Data { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty _explicitNullValueData = default!;
 #endif
         /// <summary>The omitted_results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty>? OmittedResults { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty>? OmittedResults { get => _explicitNullValueOmittedResults; set { _explicitNullValueOmittedResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omitted_results"); else _explicitNullProperties?.Remove("omitted_results"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty>? _explicitNullValueOmittedResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty> OmittedResults { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty> OmittedResults { get => _explicitNullValueOmittedResults; set { _explicitNullValueOmittedResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omitted_results"); else _explicitNullProperties?.Remove("omitted_results"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty> _explicitNullValueOmittedResults = default!;
 #endif
         /// <summary>The query_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueryId { get; set; }
+        public string? QueryId { get => _explicitNullValueQueryId; set { _explicitNullValueQueryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_id"); else _explicitNullProperties?.Remove("query_id"); } }
+        private string? _explicitNullValueQueryId = default!;
 #nullable restore
 #else
-        public string QueryId { get; set; }
+        public string QueryId { get => _explicitNullValueQueryId; set { _explicitNullValueQueryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_id"); else _explicitNullProperties?.Remove("query_id"); } }
+        private string _explicitNullValueQueryId = default!;
 #endif
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty>? Results { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty> Results { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty> _explicitNullValueResults = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResult"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("query_id", QueryId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultResultsItemProperty>("results", Results);
             writer.WriteStringValue("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

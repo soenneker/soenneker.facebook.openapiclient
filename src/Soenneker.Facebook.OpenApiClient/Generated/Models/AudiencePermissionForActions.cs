@@ -11,19 +11,36 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AudiencePermissionForActions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("can_edit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
+            if (parseNode.GetChildNode("can_see_insight") is { } nullNodeCanSeeInsight && nullNodeCanSeeInsight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSeeInsight = null;
+            if (parseNode.GetChildNode("can_share") is { } nullNodeCanShare && nullNodeCanShare.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanShare = null;
+            if (parseNode.GetChildNode("subtype_supports_lookalike") is { } nullNodeSubtypeSupportsLookalike && nullNodeSubtypeSupportsLookalike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeSupportsLookalike = null;
+            if (parseNode.GetChildNode("supports_recipient_lookalike") is { } nullNodeSupportsRecipientLookalike && nullNodeSupportsRecipientLookalike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportsRecipientLookalike = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_edit property</summary>
-        public bool? CanEdit { get; set; }
+        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_edit"); else _explicitNullProperties?.Remove("can_edit"); } }
+        private bool? _explicitNullValueCanEdit = default!;
         /// <summary>The can_see_insight property</summary>
-        public bool? CanSeeInsight { get; set; }
+        public bool? CanSeeInsight { get => _explicitNullValueCanSeeInsight; set { _explicitNullValueCanSeeInsight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_see_insight"); else _explicitNullProperties?.Remove("can_see_insight"); } }
+        private bool? _explicitNullValueCanSeeInsight = default!;
         /// <summary>The can_share property</summary>
-        public bool? CanShare { get; set; }
+        public bool? CanShare { get => _explicitNullValueCanShare; set { _explicitNullValueCanShare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_share"); else _explicitNullProperties?.Remove("can_share"); } }
+        private bool? _explicitNullValueCanShare = default!;
         /// <summary>The subtype_supports_lookalike property</summary>
-        public bool? SubtypeSupportsLookalike { get; set; }
+        public bool? SubtypeSupportsLookalike { get => _explicitNullValueSubtypeSupportsLookalike; set { _explicitNullValueSubtypeSupportsLookalike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_supports_lookalike"); else _explicitNullProperties?.Remove("subtype_supports_lookalike"); } }
+        private bool? _explicitNullValueSubtypeSupportsLookalike = default!;
         /// <summary>The supports_recipient_lookalike property</summary>
-        public bool? SupportsRecipientLookalike { get; set; }
+        public bool? SupportsRecipientLookalike { get => _explicitNullValueSupportsRecipientLookalike; set { _explicitNullValueSupportsRecipientLookalike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supports_recipient_lookalike"); else _explicitNullProperties?.Remove("supports_recipient_lookalike"); } }
+        private bool? _explicitNullValueSupportsRecipientLookalike = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AudiencePermissionForActions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("can_share", CanShare);
             writer.WriteBoolValue("subtype_supports_lookalike", SubtypeSupportsLookalike);
             writer.WriteBoolValue("supports_recipient_lookalike", SupportsRecipientLookalike);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

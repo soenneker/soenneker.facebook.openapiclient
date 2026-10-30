@@ -11,48 +11,70 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAssetOnsiteDestinations : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_optimization") is { } nullNodeAutoOptimization && nullNodeAutoOptimization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoOptimization = null;
+            if (parseNode.GetChildNode("details_page_product_id") is { } nullNodeDetailsPageProductId && nullNodeDetailsPageProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailsPageProductId = null;
+            if (parseNode.GetChildNode("shop_collection_product_set_id") is { } nullNodeShopCollectionProductSetId && nullNodeShopCollectionProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShopCollectionProductSetId = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("storefront_shop_id") is { } nullNodeStorefrontShopId && nullNodeStorefrontShopId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorefrontShopId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_optimization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoOptimization { get; set; }
+        public string? AutoOptimization { get => _explicitNullValueAutoOptimization; set { _explicitNullValueAutoOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_optimization"); else _explicitNullProperties?.Remove("auto_optimization"); } }
+        private string? _explicitNullValueAutoOptimization = default!;
 #nullable restore
 #else
-        public string AutoOptimization { get; set; }
+        public string AutoOptimization { get => _explicitNullValueAutoOptimization; set { _explicitNullValueAutoOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_optimization"); else _explicitNullProperties?.Remove("auto_optimization"); } }
+        private string _explicitNullValueAutoOptimization = default!;
 #endif
         /// <summary>The details_page_product_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DetailsPageProductId { get; set; }
+        public string? DetailsPageProductId { get => _explicitNullValueDetailsPageProductId; set { _explicitNullValueDetailsPageProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_page_product_id"); else _explicitNullProperties?.Remove("details_page_product_id"); } }
+        private string? _explicitNullValueDetailsPageProductId = default!;
 #nullable restore
 #else
-        public string DetailsPageProductId { get; set; }
+        public string DetailsPageProductId { get => _explicitNullValueDetailsPageProductId; set { _explicitNullValueDetailsPageProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details_page_product_id"); else _explicitNullProperties?.Remove("details_page_product_id"); } }
+        private string _explicitNullValueDetailsPageProductId = default!;
 #endif
         /// <summary>The shop_collection_product_set_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShopCollectionProductSetId { get; set; }
+        public string? ShopCollectionProductSetId { get => _explicitNullValueShopCollectionProductSetId; set { _explicitNullValueShopCollectionProductSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shop_collection_product_set_id"); else _explicitNullProperties?.Remove("shop_collection_product_set_id"); } }
+        private string? _explicitNullValueShopCollectionProductSetId = default!;
 #nullable restore
 #else
-        public string ShopCollectionProductSetId { get; set; }
+        public string ShopCollectionProductSetId { get => _explicitNullValueShopCollectionProductSetId; set { _explicitNullValueShopCollectionProductSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shop_collection_product_set_id"); else _explicitNullProperties?.Remove("shop_collection_product_set_id"); } }
+        private string _explicitNullValueShopCollectionProductSetId = default!;
 #endif
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The storefront_shop_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StorefrontShopId { get; set; }
+        public string? StorefrontShopId { get => _explicitNullValueStorefrontShopId; set { _explicitNullValueStorefrontShopId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storefront_shop_id"); else _explicitNullProperties?.Remove("storefront_shop_id"); } }
+        private string? _explicitNullValueStorefrontShopId = default!;
 #nullable restore
 #else
-        public string StorefrontShopId { get; set; }
+        public string StorefrontShopId { get => _explicitNullValueStorefrontShopId; set { _explicitNullValueStorefrontShopId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storefront_shop_id"); else _explicitNullProperties?.Remove("storefront_shop_id"); } }
+        private string _explicitNullValueStorefrontShopId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAssetOnsiteDestinations"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAssetOnsiteDestinations CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAssetOnsiteDestinations();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAssetOnsiteDestinations(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("shop_collection_product_set_id", ShopCollectionProductSetId);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("storefront_shop_id", StorefrontShopId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

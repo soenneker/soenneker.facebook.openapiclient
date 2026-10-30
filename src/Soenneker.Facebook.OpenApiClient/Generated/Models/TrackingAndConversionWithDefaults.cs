@@ -11,40 +11,59 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TrackingAndConversionWithDefaults : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_conversion") is { } nullNodeCustomConversion && nullNodeCustomConversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomConversion = null;
+            if (parseNode.GetChildNode("custom_tracking") is { } nullNodeCustomTracking && nullNodeCustomTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomTracking = null;
+            if (parseNode.GetChildNode("default_conversion") is { } nullNodeDefaultConversion && nullNodeDefaultConversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultConversion = null;
+            if (parseNode.GetChildNode("default_tracking") is { } nullNodeDefaultTracking && nullNodeDefaultTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultTracking = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_conversion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty>? CustomConversion { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty>? CustomConversion { get => _explicitNullValueCustomConversion; set { _explicitNullValueCustomConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_conversion"); else _explicitNullProperties?.Remove("custom_conversion"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty>? _explicitNullValueCustomConversion = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty> CustomConversion { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty> CustomConversion { get => _explicitNullValueCustomConversion; set { _explicitNullValueCustomConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_conversion"); else _explicitNullProperties?.Remove("custom_conversion"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty> _explicitNullValueCustomConversion = default!;
 #endif
         /// <summary>The custom_tracking property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty>? CustomTracking { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty>? CustomTracking { get => _explicitNullValueCustomTracking; set { _explicitNullValueCustomTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_tracking"); else _explicitNullProperties?.Remove("custom_tracking"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty>? _explicitNullValueCustomTracking = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty> CustomTracking { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty> CustomTracking { get => _explicitNullValueCustomTracking; set { _explicitNullValueCustomTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_tracking"); else _explicitNullProperties?.Remove("custom_tracking"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty> _explicitNullValueCustomTracking = default!;
 #endif
         /// <summary>The default_conversion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty>? DefaultConversion { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty>? DefaultConversion { get => _explicitNullValueDefaultConversion; set { _explicitNullValueDefaultConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_conversion"); else _explicitNullProperties?.Remove("default_conversion"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty>? _explicitNullValueDefaultConversion = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty> DefaultConversion { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty> DefaultConversion { get => _explicitNullValueDefaultConversion; set { _explicitNullValueDefaultConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_conversion"); else _explicitNullProperties?.Remove("default_conversion"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty> _explicitNullValueDefaultConversion = default!;
 #endif
         /// <summary>The default_tracking property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty>? DefaultTracking { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty>? DefaultTracking { get => _explicitNullValueDefaultTracking; set { _explicitNullValueDefaultTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tracking"); else _explicitNullProperties?.Remove("default_tracking"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty>? _explicitNullValueDefaultTracking = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty> DefaultTracking { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty> DefaultTracking { get => _explicitNullValueDefaultTracking; set { _explicitNullValueDefaultTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_tracking"); else _explicitNullProperties?.Remove("default_tracking"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty> _explicitNullValueDefaultTracking = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaults"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaults();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaults(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty>("custom_tracking", CustomTracking);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultConversionItemProperty>("default_conversion", DefaultConversion);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsDefaultTrackingItemProperty>("default_tracking", DefaultTracking);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

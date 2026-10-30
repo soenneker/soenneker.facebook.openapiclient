@@ -11,112 +11,158 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CommerceOrderTransactionDetail : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("merchant_order_id") is { } nullNodeMerchantOrderId && nullNodeMerchantOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantOrderId = null;
+            if (parseNode.GetChildNode("net_payment_amount") is { } nullNodeNetPaymentAmount && nullNodeNetPaymentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetPaymentAmount = null;
+            if (parseNode.GetChildNode("order_created") is { } nullNodeOrderCreated && nullNodeOrderCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderCreated = null;
+            if (parseNode.GetChildNode("order_details") is { } nullNodeOrderDetails && nullNodeOrderDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderDetails = null;
+            if (parseNode.GetChildNode("order_id") is { } nullNodeOrderId && nullNodeOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderId = null;
+            if (parseNode.GetChildNode("payout_reference_id") is { } nullNodePayoutReferenceId && nullNodePayoutReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayoutReferenceId = null;
+            if (parseNode.GetChildNode("postal_code") is { } nullNodePostalCode && nullNodePostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalCode = null;
+            if (parseNode.GetChildNode("processing_fee") is { } nullNodeProcessingFee && nullNodeProcessingFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingFee = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("tax_rate") is { } nullNodeTaxRate && nullNodeTaxRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRate = null;
+            if (parseNode.GetChildNode("transaction_date") is { } nullNodeTransactionDate && nullNodeTransactionDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionDate = null;
+            if (parseNode.GetChildNode("transaction_type") is { } nullNodeTransactionType && nullNodeTransactionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionType = null;
+            if (parseNode.GetChildNode("transfer_id") is { } nullNodeTransferId && nullNodeTransferId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The merchant_order_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantOrderId { get; set; }
+        public string? MerchantOrderId { get => _explicitNullValueMerchantOrderId; set { _explicitNullValueMerchantOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_order_id"); else _explicitNullProperties?.Remove("merchant_order_id"); } }
+        private string? _explicitNullValueMerchantOrderId = default!;
 #nullable restore
 #else
-        public string MerchantOrderId { get; set; }
+        public string MerchantOrderId { get => _explicitNullValueMerchantOrderId; set { _explicitNullValueMerchantOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_order_id"); else _explicitNullProperties?.Remove("merchant_order_id"); } }
+        private string _explicitNullValueMerchantOrderId = default!;
 #endif
         /// <summary>The net_payment_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty? NetPaymentAmount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty? NetPaymentAmount { get => _explicitNullValueNetPaymentAmount; set { _explicitNullValueNetPaymentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_payment_amount"); else _explicitNullProperties?.Remove("net_payment_amount"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty? _explicitNullValueNetPaymentAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty NetPaymentAmount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty NetPaymentAmount { get => _explicitNullValueNetPaymentAmount; set { _explicitNullValueNetPaymentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_payment_amount"); else _explicitNullProperties?.Remove("net_payment_amount"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty _explicitNullValueNetPaymentAmount = default!;
 #endif
         /// <summary>The order_created property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderCreated { get; set; }
+        public string? OrderCreated { get => _explicitNullValueOrderCreated; set { _explicitNullValueOrderCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_created"); else _explicitNullProperties?.Remove("order_created"); } }
+        private string? _explicitNullValueOrderCreated = default!;
 #nullable restore
 #else
-        public string OrderCreated { get; set; }
+        public string OrderCreated { get => _explicitNullValueOrderCreated; set { _explicitNullValueOrderCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_created"); else _explicitNullProperties?.Remove("order_created"); } }
+        private string _explicitNullValueOrderCreated = default!;
 #endif
         /// <summary>The order_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrder? OrderDetails { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrder? OrderDetails { get => _explicitNullValueOrderDetails; set { _explicitNullValueOrderDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_details"); else _explicitNullProperties?.Remove("order_details"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrder? _explicitNullValueOrderDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrder OrderDetails { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrder OrderDetails { get => _explicitNullValueOrderDetails; set { _explicitNullValueOrderDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_details"); else _explicitNullProperties?.Remove("order_details"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrder _explicitNullValueOrderDetails = default!;
 #endif
         /// <summary>The order_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderId { get; set; }
+        public string? OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_id"); else _explicitNullProperties?.Remove("order_id"); } }
+        private string? _explicitNullValueOrderId = default!;
 #nullable restore
 #else
-        public string OrderId { get; set; }
+        public string OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_id"); else _explicitNullProperties?.Remove("order_id"); } }
+        private string _explicitNullValueOrderId = default!;
 #endif
         /// <summary>The payout_reference_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayoutReferenceId { get; set; }
+        public string? PayoutReferenceId { get => _explicitNullValuePayoutReferenceId; set { _explicitNullValuePayoutReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_reference_id"); else _explicitNullProperties?.Remove("payout_reference_id"); } }
+        private string? _explicitNullValuePayoutReferenceId = default!;
 #nullable restore
 #else
-        public string PayoutReferenceId { get; set; }
+        public string PayoutReferenceId { get => _explicitNullValuePayoutReferenceId; set { _explicitNullValuePayoutReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payout_reference_id"); else _explicitNullProperties?.Remove("payout_reference_id"); } }
+        private string _explicitNullValuePayoutReferenceId = default!;
 #endif
         /// <summary>The postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostalCode { get; set; }
+        public string? PostalCode { get => _explicitNullValuePostalCode; set { _explicitNullValuePostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code"); else _explicitNullProperties?.Remove("postal_code"); } }
+        private string? _explicitNullValuePostalCode = default!;
 #nullable restore
 #else
-        public string PostalCode { get; set; }
+        public string PostalCode { get => _explicitNullValuePostalCode; set { _explicitNullValuePostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postal_code"); else _explicitNullProperties?.Remove("postal_code"); } }
+        private string _explicitNullValuePostalCode = default!;
 #endif
         /// <summary>The processing_fee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailProcessingFeeProperty? ProcessingFee { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailProcessingFeeProperty? ProcessingFee { get => _explicitNullValueProcessingFee; set { _explicitNullValueProcessingFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_fee"); else _explicitNullProperties?.Remove("processing_fee"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailProcessingFeeProperty? _explicitNullValueProcessingFee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailProcessingFeeProperty ProcessingFee { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailProcessingFeeProperty ProcessingFee { get => _explicitNullValueProcessingFee; set { _explicitNullValueProcessingFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_fee"); else _explicitNullProperties?.Remove("processing_fee"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailProcessingFeeProperty _explicitNullValueProcessingFee = default!;
 #endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>The tax_rate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxRate { get; set; }
+        public string? TaxRate { get => _explicitNullValueTaxRate; set { _explicitNullValueTaxRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate"); else _explicitNullProperties?.Remove("tax_rate"); } }
+        private string? _explicitNullValueTaxRate = default!;
 #nullable restore
 #else
-        public string TaxRate { get; set; }
+        public string TaxRate { get => _explicitNullValueTaxRate; set { _explicitNullValueTaxRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_rate"); else _explicitNullProperties?.Remove("tax_rate"); } }
+        private string _explicitNullValueTaxRate = default!;
 #endif
         /// <summary>The transaction_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionDate { get; set; }
+        public string? TransactionDate { get => _explicitNullValueTransactionDate; set { _explicitNullValueTransactionDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_date"); else _explicitNullProperties?.Remove("transaction_date"); } }
+        private string? _explicitNullValueTransactionDate = default!;
 #nullable restore
 #else
-        public string TransactionDate { get; set; }
+        public string TransactionDate { get => _explicitNullValueTransactionDate; set { _explicitNullValueTransactionDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_date"); else _explicitNullProperties?.Remove("transaction_date"); } }
+        private string _explicitNullValueTransactionDate = default!;
 #endif
         /// <summary>The transaction_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionType { get; set; }
+        public string? TransactionType { get => _explicitNullValueTransactionType; set { _explicitNullValueTransactionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_type"); else _explicitNullProperties?.Remove("transaction_type"); } }
+        private string? _explicitNullValueTransactionType = default!;
 #nullable restore
 #else
-        public string TransactionType { get; set; }
+        public string TransactionType { get => _explicitNullValueTransactionType; set { _explicitNullValueTransactionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_type"); else _explicitNullProperties?.Remove("transaction_type"); } }
+        private string _explicitNullValueTransactionType = default!;
 #endif
         /// <summary>The transfer_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferId { get; set; }
+        public string? TransferId { get => _explicitNullValueTransferId; set { _explicitNullValueTransferId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_id"); else _explicitNullProperties?.Remove("transfer_id"); } }
+        private string? _explicitNullValueTransferId = default!;
 #nullable restore
 #else
-        public string TransferId { get; set; }
+        public string TransferId { get => _explicitNullValueTransferId; set { _explicitNullValueTransferId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transfer_id"); else _explicitNullProperties?.Remove("transfer_id"); } }
+        private string _explicitNullValueTransferId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetail"/> and sets the default values.
@@ -133,7 +179,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,6 +224,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("transaction_date", TransactionDate);
             writer.WriteStringValue("transaction_type", TransactionType);
             writer.WriteStringValue("transfer_id", TransferId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,26 +11,41 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CanvasCollectionThumbnail : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("element_child_index") is { } nullNodeElementChildIndex && nullNodeElementChildIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementChildIndex = null;
+            if (parseNode.GetChildNode("element_id") is { } nullNodeElementId && nullNodeElementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementId = null;
+            if (parseNode.GetChildNode("photo") is { } nullNodePhoto && nullNodePhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Photo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The element_child_index property</summary>
-        public long? ElementChildIndex { get; set; }
+        public long? ElementChildIndex { get => _explicitNullValueElementChildIndex; set { _explicitNullValueElementChildIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("element_child_index"); else _explicitNullProperties?.Remove("element_child_index"); } }
+        private long? _explicitNullValueElementChildIndex = default!;
         /// <summary>The element_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ElementId { get; set; }
+        public string? ElementId { get => _explicitNullValueElementId; set { _explicitNullValueElementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("element_id"); else _explicitNullProperties?.Remove("element_id"); } }
+        private string? _explicitNullValueElementId = default!;
 #nullable restore
 #else
-        public string ElementId { get; set; }
+        public string ElementId { get => _explicitNullValueElementId; set { _explicitNullValueElementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("element_id"); else _explicitNullProperties?.Remove("element_id"); } }
+        private string _explicitNullValueElementId = default!;
 #endif
         /// <summary>The photo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Photo? Photo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Photo? Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Photo? _explicitNullValuePhoto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Photo Photo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Photo Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Photo _explicitNullValuePhoto = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.CanvasCollectionThumbnail"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.CanvasCollectionThumbnail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.CanvasCollectionThumbnail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.CanvasCollectionThumbnail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("element_child_index", ElementChildIndex);
             writer.WriteStringValue("element_id", ElementId);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Photo>("photo", Photo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

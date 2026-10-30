@@ -11,31 +11,50 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessengerCallSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audio_enabled") is { } nullNodeAudioEnabled && nullNodeAudioEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioEnabled = null;
+            if (parseNode.GetChildNode("call_hours") is { } nullNodeCallHours && nullNodeCallHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallHours = null;
+            if (parseNode.GetChildNode("call_routing") is { } nullNodeCallRouting && nullNodeCallRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRouting = null;
+            if (parseNode.GetChildNode("icon_enabled") is { } nullNodeIconEnabled && nullNodeIconEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IconEnabled = null;
+            if (parseNode.GetChildNode("video_enabled") is { } nullNodeVideoEnabled && nullNodeVideoEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The audio_enabled property</summary>
-        public bool? AudioEnabled { get; set; }
+        public bool? AudioEnabled { get => _explicitNullValueAudioEnabled; set { _explicitNullValueAudioEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_enabled"); else _explicitNullProperties?.Remove("audio_enabled"); } }
+        private bool? _explicitNullValueAudioEnabled = default!;
         /// <summary>The call_hours property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty? CallHours { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty? CallHours { get => _explicitNullValueCallHours; set { _explicitNullValueCallHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_hours"); else _explicitNullProperties?.Remove("call_hours"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty? _explicitNullValueCallHours = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty CallHours { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty CallHours { get => _explicitNullValueCallHours; set { _explicitNullValueCallHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_hours"); else _explicitNullProperties?.Remove("call_hours"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty _explicitNullValueCallHours = default!;
 #endif
         /// <summary>The call_routing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty? CallRouting { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty? CallRouting { get => _explicitNullValueCallRouting; set { _explicitNullValueCallRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_routing"); else _explicitNullProperties?.Remove("call_routing"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty? _explicitNullValueCallRouting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty CallRouting { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty CallRouting { get => _explicitNullValueCallRouting; set { _explicitNullValueCallRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_routing"); else _explicitNullProperties?.Remove("call_routing"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty _explicitNullValueCallRouting = default!;
 #endif
         /// <summary>The icon_enabled property</summary>
-        public bool? IconEnabled { get; set; }
+        public bool? IconEnabled { get => _explicitNullValueIconEnabled; set { _explicitNullValueIconEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_enabled"); else _explicitNullProperties?.Remove("icon_enabled"); } }
+        private bool? _explicitNullValueIconEnabled = default!;
         /// <summary>The video_enabled property</summary>
-        public bool? VideoEnabled { get; set; }
+        public bool? VideoEnabled { get => _explicitNullValueVideoEnabled; set { _explicitNullValueVideoEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_enabled"); else _explicitNullProperties?.Remove("video_enabled"); } }
+        private bool? _explicitNullValueVideoEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettings"/> and sets the default values.
         /// </summary>
@@ -51,7 +70,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallRoutingProperty>("call_routing", CallRouting);
             writer.WriteBoolValue("icon_enabled", IconEnabled);
             writer.WriteBoolValue("video_enabled", VideoEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

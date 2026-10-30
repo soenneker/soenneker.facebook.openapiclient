@@ -11,41 +11,65 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdNlpConfigsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_version") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
+            if (parseNode.GetChildNode("custom_token") is { } nullNodeCustomToken && nullNodeCustomToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomToken = null;
+            if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("n_best") is { } nullNodeNBest && nullNodeNBest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NBest = null;
+            if (parseNode.GetChildNode("nlp_enabled") is { } nullNodeNlpEnabled && nullNodeNlpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NlpEnabled = null;
+            if (parseNode.GetChildNode("other_language_support") is { } nullNodeOtherLanguageSupport && nullNodeOtherLanguageSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherLanguageSupport = null;
+            if (parseNode.GetChildNode("verbose") is { } nullNodeVerbose && nullNodeVerbose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verbose = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiVersion { get; set; }
+        public string? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
+        private string? _explicitNullValueApiVersion = default!;
 #nullable restore
 #else
-        public string ApiVersion { get; set; }
+        public string ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
+        private string _explicitNullValueApiVersion = default!;
 #endif
         /// <summary>The custom_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomToken { get; set; }
+        public string? CustomToken { get => _explicitNullValueCustomToken; set { _explicitNullValueCustomToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_token"); else _explicitNullProperties?.Remove("custom_token"); } }
+        private string? _explicitNullValueCustomToken = default!;
 #nullable restore
 #else
-        public string CustomToken { get; set; }
+        public string CustomToken { get => _explicitNullValueCustomToken; set { _explicitNullValueCustomToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_token"); else _explicitNullProperties?.Remove("custom_token"); } }
+        private string _explicitNullValueCustomToken = default!;
 #endif
         /// <summary>The model property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam? Model { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam? _explicitNullValueModel = default!;
         /// <summary>The n_best property</summary>
-        public long? NBest { get; set; }
+        public long? NBest { get => _explicitNullValueNBest; set { _explicitNullValueNBest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("n_best"); else _explicitNullProperties?.Remove("n_best"); } }
+        private long? _explicitNullValueNBest = default!;
         /// <summary>The nlp_enabled property</summary>
-        public bool? NlpEnabled { get; set; }
+        public bool? NlpEnabled { get => _explicitNullValueNlpEnabled; set { _explicitNullValueNlpEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nlp_enabled"); else _explicitNullProperties?.Remove("nlp_enabled"); } }
+        private bool? _explicitNullValueNlpEnabled = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OtherLanguageSupport { get; set; }
+        public string? OtherLanguageSupport { get => _explicitNullValueOtherLanguageSupport; set { _explicitNullValueOtherLanguageSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_language_support"); else _explicitNullProperties?.Remove("other_language_support"); } }
+        private string? _explicitNullValueOtherLanguageSupport = default!;
 #nullable restore
 #else
-        public string OtherLanguageSupport { get; set; }
+        public string OtherLanguageSupport { get => _explicitNullValueOtherLanguageSupport; set { _explicitNullValueOtherLanguageSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_language_support"); else _explicitNullProperties?.Remove("other_language_support"); } }
+        private string _explicitNullValueOtherLanguageSupport = default!;
 #endif
         /// <summary>The verbose property</summary>
-        public bool? Verbose { get; set; }
+        public bool? Verbose { get => _explicitNullValueVerbose; set { _explicitNullValueVerbose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verbose"); else _explicitNullProperties?.Remove("verbose"); } }
+        private bool? _explicitNullValueVerbose = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdNlpConfigsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -61,7 +85,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdNlpConfigsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdNlpConfigsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdNlpConfigsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("nlp_enabled", NlpEnabled);
             writer.WriteStringValue("other_language_support", OtherLanguageSupport);
             writer.WriteBoolValue("verbose", Verbose);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

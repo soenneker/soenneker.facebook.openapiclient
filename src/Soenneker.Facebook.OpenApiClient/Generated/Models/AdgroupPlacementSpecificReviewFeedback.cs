@@ -11,304 +11,422 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdgroupPlacementSpecificReviewFeedback : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_admin") is { } nullNodeAccountAdmin && nullNodeAccountAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountAdmin = null;
+            if (parseNode.GetChildNode("ad") is { } nullNodeAd && nullNodeAd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ad = null;
+            if (parseNode.GetChildNode("ads_conversion_experiences") is { } nullNodeAdsConversionExperiences && nullNodeAdsConversionExperiences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdsConversionExperiences = null;
+            if (parseNode.GetChildNode("b2c") is { } nullNodeB2c && nullNodeB2c.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) B2c = null;
+            if (parseNode.GetChildNode("b2c_commerce_unified") is { } nullNodeB2cCommerceUnified && nullNodeB2cCommerceUnified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) B2cCommerceUnified = null;
+            if (parseNode.GetChildNode("bsg") is { } nullNodeBsg && nullNodeBsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bsg = null;
+            if (parseNode.GetChildNode("city_community") is { } nullNodeCityCommunity && nullNodeCityCommunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CityCommunity = null;
+            if (parseNode.GetChildNode("commerce") is { } nullNodeCommerce && nullNodeCommerce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Commerce = null;
+            if (parseNode.GetChildNode("compromise") is { } nullNodeCompromise && nullNodeCompromise.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Compromise = null;
+            if (parseNode.GetChildNode("daily_deals") is { } nullNodeDailyDeals && nullNodeDailyDeals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyDeals = null;
+            if (parseNode.GetChildNode("daily_deals_legacy") is { } nullNodeDailyDealsLegacy && nullNodeDailyDealsLegacy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyDealsLegacy = null;
+            if (parseNode.GetChildNode("dpa") is { } nullNodeDpa && nullNodeDpa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dpa = null;
+            if (parseNode.GetChildNode("dri_copyright") is { } nullNodeDriCopyright && nullNodeDriCopyright.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DriCopyright = null;
+            if (parseNode.GetChildNode("dri_counterfeit") is { } nullNodeDriCounterfeit && nullNodeDriCounterfeit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DriCounterfeit = null;
+            if (parseNode.GetChildNode("facebook") is { } nullNodeFacebook && nullNodeFacebook.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Facebook = null;
+            if (parseNode.GetChildNode("facebook_pages_live_shopping") is { } nullNodeFacebookPagesLiveShopping && nullNodeFacebookPagesLiveShopping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookPagesLiveShopping = null;
+            if (parseNode.GetChildNode("independent_work") is { } nullNodeIndependentWork && nullNodeIndependentWork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndependentWork = null;
+            if (parseNode.GetChildNode("instagram") is { } nullNodeInstagram && nullNodeInstagram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instagram = null;
+            if (parseNode.GetChildNode("instagram_shop") is { } nullNodeInstagramShop && nullNodeInstagramShop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramShop = null;
+            if (parseNode.GetChildNode("job_search") is { } nullNodeJobSearch && nullNodeJobSearch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobSearch = null;
+            if (parseNode.GetChildNode("lead_gen_honeypot") is { } nullNodeLeadGenHoneypot && nullNodeLeadGenHoneypot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadGenHoneypot = null;
+            if (parseNode.GetChildNode("marketplace") is { } nullNodeMarketplace && nullNodeMarketplace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Marketplace = null;
+            if (parseNode.GetChildNode("marketplace_home_rentals") is { } nullNodeMarketplaceHomeRentals && nullNodeMarketplaceHomeRentals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceHomeRentals = null;
+            if (parseNode.GetChildNode("marketplace_home_sales") is { } nullNodeMarketplaceHomeSales && nullNodeMarketplaceHomeSales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceHomeSales = null;
+            if (parseNode.GetChildNode("marketplace_motors") is { } nullNodeMarketplaceMotors && nullNodeMarketplaceMotors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceMotors = null;
+            if (parseNode.GetChildNode("marketplace_shops") is { } nullNodeMarketplaceShops && nullNodeMarketplaceShops.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceShops = null;
+            if (parseNode.GetChildNode("max_review_placements") is { } nullNodeMaxReviewPlacements && nullNodeMaxReviewPlacements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxReviewPlacements = null;
+            if (parseNode.GetChildNode("neighborhoods") is { } nullNodeNeighborhoods && nullNodeNeighborhoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Neighborhoods = null;
+            if (parseNode.GetChildNode("page_admin") is { } nullNodePageAdmin && nullNodePageAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageAdmin = null;
+            if (parseNode.GetChildNode("product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+            if (parseNode.GetChildNode("product_service") is { } nullNodeProductService && nullNodeProductService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductService = null;
+            if (parseNode.GetChildNode("profile") is { } nullNodeProfile && nullNodeProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Profile = null;
+            if (parseNode.GetChildNode("seller") is { } nullNodeSeller && nullNodeSeller.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Seller = null;
+            if (parseNode.GetChildNode("shops") is { } nullNodeShops && nullNodeShops.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shops = null;
+            if (parseNode.GetChildNode("traffic_quality") is { } nullNodeTrafficQuality && nullNodeTrafficQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficQuality = null;
+            if (parseNode.GetChildNode("unified_commerce_content") is { } nullNodeUnifiedCommerceContent && nullNodeUnifiedCommerceContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnifiedCommerceContent = null;
+            if (parseNode.GetChildNode("whatsapp") is { } nullNodeWhatsapp && nullNodeWhatsapp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Whatsapp = null;
+        }
+
         /// <summary>The account_admin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty? AccountAdmin { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty? AccountAdmin { get => _explicitNullValueAccountAdmin; set { _explicitNullValueAccountAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_admin"); else _explicitNullProperties?.Remove("account_admin"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty? _explicitNullValueAccountAdmin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty AccountAdmin { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty AccountAdmin { get => _explicitNullValueAccountAdmin; set { _explicitNullValueAccountAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_admin"); else _explicitNullProperties?.Remove("account_admin"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty _explicitNullValueAccountAdmin = default!;
 #endif
         /// <summary>The ad property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty? Ad { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty? Ad { get => _explicitNullValueAd; set { _explicitNullValueAd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad"); else _explicitNullProperties?.Remove("ad"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty? _explicitNullValueAd = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty Ad { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty Ad { get => _explicitNullValueAd; set { _explicitNullValueAd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad"); else _explicitNullProperties?.Remove("ad"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty _explicitNullValueAd = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ads_conversion_experiences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdsConversionExperiencesProperty? AdsConversionExperiences { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdsConversionExperiencesProperty? AdsConversionExperiences { get => _explicitNullValueAdsConversionExperiences; set { _explicitNullValueAdsConversionExperiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ads_conversion_experiences"); else _explicitNullProperties?.Remove("ads_conversion_experiences"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdsConversionExperiencesProperty? _explicitNullValueAdsConversionExperiences = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdsConversionExperiencesProperty AdsConversionExperiences { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdsConversionExperiencesProperty AdsConversionExperiences { get => _explicitNullValueAdsConversionExperiences; set { _explicitNullValueAdsConversionExperiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ads_conversion_experiences"); else _explicitNullProperties?.Remove("ads_conversion_experiences"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdsConversionExperiencesProperty _explicitNullValueAdsConversionExperiences = default!;
 #endif
         /// <summary>The b2c property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CProperty? B2c { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CProperty? B2c { get => _explicitNullValueB2c; set { _explicitNullValueB2c = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b2c"); else _explicitNullProperties?.Remove("b2c"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CProperty? _explicitNullValueB2c = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CProperty B2c { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CProperty B2c { get => _explicitNullValueB2c; set { _explicitNullValueB2c = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b2c"); else _explicitNullProperties?.Remove("b2c"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CProperty _explicitNullValueB2c = default!;
 #endif
         /// <summary>The b2c_commerce_unified property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CCommerceUnifiedProperty? B2cCommerceUnified { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CCommerceUnifiedProperty? B2cCommerceUnified { get => _explicitNullValueB2cCommerceUnified; set { _explicitNullValueB2cCommerceUnified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b2c_commerce_unified"); else _explicitNullProperties?.Remove("b2c_commerce_unified"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CCommerceUnifiedProperty? _explicitNullValueB2cCommerceUnified = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CCommerceUnifiedProperty B2cCommerceUnified { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CCommerceUnifiedProperty B2cCommerceUnified { get => _explicitNullValueB2cCommerceUnified; set { _explicitNullValueB2cCommerceUnified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b2c_commerce_unified"); else _explicitNullProperties?.Remove("b2c_commerce_unified"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackB2CCommerceUnifiedProperty _explicitNullValueB2cCommerceUnified = default!;
 #endif
         /// <summary>The bsg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackBsgProperty? Bsg { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackBsgProperty? Bsg { get => _explicitNullValueBsg; set { _explicitNullValueBsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bsg"); else _explicitNullProperties?.Remove("bsg"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackBsgProperty? _explicitNullValueBsg = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackBsgProperty Bsg { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackBsgProperty Bsg { get => _explicitNullValueBsg; set { _explicitNullValueBsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bsg"); else _explicitNullProperties?.Remove("bsg"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackBsgProperty _explicitNullValueBsg = default!;
 #endif
         /// <summary>The city_community property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCityCommunityProperty? CityCommunity { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCityCommunityProperty? CityCommunity { get => _explicitNullValueCityCommunity; set { _explicitNullValueCityCommunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city_community"); else _explicitNullProperties?.Remove("city_community"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCityCommunityProperty? _explicitNullValueCityCommunity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCityCommunityProperty CityCommunity { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCityCommunityProperty CityCommunity { get => _explicitNullValueCityCommunity; set { _explicitNullValueCityCommunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city_community"); else _explicitNullProperties?.Remove("city_community"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCityCommunityProperty _explicitNullValueCityCommunity = default!;
 #endif
         /// <summary>The commerce property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCommerceProperty? Commerce { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCommerceProperty? Commerce { get => _explicitNullValueCommerce; set { _explicitNullValueCommerce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commerce"); else _explicitNullProperties?.Remove("commerce"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCommerceProperty? _explicitNullValueCommerce = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCommerceProperty Commerce { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCommerceProperty Commerce { get => _explicitNullValueCommerce; set { _explicitNullValueCommerce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commerce"); else _explicitNullProperties?.Remove("commerce"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCommerceProperty _explicitNullValueCommerce = default!;
 #endif
         /// <summary>The compromise property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCompromiseProperty? Compromise { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCompromiseProperty? Compromise { get => _explicitNullValueCompromise; set { _explicitNullValueCompromise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compromise"); else _explicitNullProperties?.Remove("compromise"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCompromiseProperty? _explicitNullValueCompromise = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCompromiseProperty Compromise { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCompromiseProperty Compromise { get => _explicitNullValueCompromise; set { _explicitNullValueCompromise = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compromise"); else _explicitNullProperties?.Remove("compromise"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackCompromiseProperty _explicitNullValueCompromise = default!;
 #endif
         /// <summary>The daily_deals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsProperty? DailyDeals { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsProperty? DailyDeals { get => _explicitNullValueDailyDeals; set { _explicitNullValueDailyDeals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daily_deals"); else _explicitNullProperties?.Remove("daily_deals"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsProperty? _explicitNullValueDailyDeals = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsProperty DailyDeals { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsProperty DailyDeals { get => _explicitNullValueDailyDeals; set { _explicitNullValueDailyDeals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daily_deals"); else _explicitNullProperties?.Remove("daily_deals"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsProperty _explicitNullValueDailyDeals = default!;
 #endif
         /// <summary>The daily_deals_legacy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsLegacyProperty? DailyDealsLegacy { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsLegacyProperty? DailyDealsLegacy { get => _explicitNullValueDailyDealsLegacy; set { _explicitNullValueDailyDealsLegacy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daily_deals_legacy"); else _explicitNullProperties?.Remove("daily_deals_legacy"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsLegacyProperty? _explicitNullValueDailyDealsLegacy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsLegacyProperty DailyDealsLegacy { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsLegacyProperty DailyDealsLegacy { get => _explicitNullValueDailyDealsLegacy; set { _explicitNullValueDailyDealsLegacy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daily_deals_legacy"); else _explicitNullProperties?.Remove("daily_deals_legacy"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDailyDealsLegacyProperty _explicitNullValueDailyDealsLegacy = default!;
 #endif
         /// <summary>The dpa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDpaProperty? Dpa { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDpaProperty? Dpa { get => _explicitNullValueDpa; set { _explicitNullValueDpa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dpa"); else _explicitNullProperties?.Remove("dpa"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDpaProperty? _explicitNullValueDpa = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDpaProperty Dpa { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDpaProperty Dpa { get => _explicitNullValueDpa; set { _explicitNullValueDpa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dpa"); else _explicitNullProperties?.Remove("dpa"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDpaProperty _explicitNullValueDpa = default!;
 #endif
         /// <summary>The dri_copyright property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCopyrightProperty? DriCopyright { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCopyrightProperty? DriCopyright { get => _explicitNullValueDriCopyright; set { _explicitNullValueDriCopyright = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dri_copyright"); else _explicitNullProperties?.Remove("dri_copyright"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCopyrightProperty? _explicitNullValueDriCopyright = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCopyrightProperty DriCopyright { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCopyrightProperty DriCopyright { get => _explicitNullValueDriCopyright; set { _explicitNullValueDriCopyright = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dri_copyright"); else _explicitNullProperties?.Remove("dri_copyright"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCopyrightProperty _explicitNullValueDriCopyright = default!;
 #endif
         /// <summary>The dri_counterfeit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCounterfeitProperty? DriCounterfeit { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCounterfeitProperty? DriCounterfeit { get => _explicitNullValueDriCounterfeit; set { _explicitNullValueDriCounterfeit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dri_counterfeit"); else _explicitNullProperties?.Remove("dri_counterfeit"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCounterfeitProperty? _explicitNullValueDriCounterfeit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCounterfeitProperty DriCounterfeit { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCounterfeitProperty DriCounterfeit { get => _explicitNullValueDriCounterfeit; set { _explicitNullValueDriCounterfeit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dri_counterfeit"); else _explicitNullProperties?.Remove("dri_counterfeit"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackDriCounterfeitProperty _explicitNullValueDriCounterfeit = default!;
 #endif
         /// <summary>The facebook property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookProperty? Facebook { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookProperty? Facebook { get => _explicitNullValueFacebook; set { _explicitNullValueFacebook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook"); else _explicitNullProperties?.Remove("facebook"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookProperty? _explicitNullValueFacebook = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookProperty Facebook { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookProperty Facebook { get => _explicitNullValueFacebook; set { _explicitNullValueFacebook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook"); else _explicitNullProperties?.Remove("facebook"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookProperty _explicitNullValueFacebook = default!;
 #endif
         /// <summary>The facebook_pages_live_shopping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookPagesLiveShoppingProperty? FacebookPagesLiveShopping { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookPagesLiveShoppingProperty? FacebookPagesLiveShopping { get => _explicitNullValueFacebookPagesLiveShopping; set { _explicitNullValueFacebookPagesLiveShopping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_pages_live_shopping"); else _explicitNullProperties?.Remove("facebook_pages_live_shopping"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookPagesLiveShoppingProperty? _explicitNullValueFacebookPagesLiveShopping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookPagesLiveShoppingProperty FacebookPagesLiveShopping { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookPagesLiveShoppingProperty FacebookPagesLiveShopping { get => _explicitNullValueFacebookPagesLiveShopping; set { _explicitNullValueFacebookPagesLiveShopping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_pages_live_shopping"); else _explicitNullProperties?.Remove("facebook_pages_live_shopping"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackFacebookPagesLiveShoppingProperty _explicitNullValueFacebookPagesLiveShopping = default!;
 #endif
         /// <summary>The independent_work property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackIndependentWorkProperty? IndependentWork { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackIndependentWorkProperty? IndependentWork { get => _explicitNullValueIndependentWork; set { _explicitNullValueIndependentWork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("independent_work"); else _explicitNullProperties?.Remove("independent_work"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackIndependentWorkProperty? _explicitNullValueIndependentWork = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackIndependentWorkProperty IndependentWork { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackIndependentWorkProperty IndependentWork { get => _explicitNullValueIndependentWork; set { _explicitNullValueIndependentWork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("independent_work"); else _explicitNullProperties?.Remove("independent_work"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackIndependentWorkProperty _explicitNullValueIndependentWork = default!;
 #endif
         /// <summary>The instagram property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramProperty? Instagram { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramProperty? Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramProperty? _explicitNullValueInstagram = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramProperty Instagram { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramProperty Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramProperty _explicitNullValueInstagram = default!;
 #endif
         /// <summary>The instagram_shop property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramShopProperty? InstagramShop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramShopProperty? InstagramShop { get => _explicitNullValueInstagramShop; set { _explicitNullValueInstagramShop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_shop"); else _explicitNullProperties?.Remove("instagram_shop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramShopProperty? _explicitNullValueInstagramShop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramShopProperty InstagramShop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramShopProperty InstagramShop { get => _explicitNullValueInstagramShop; set { _explicitNullValueInstagramShop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_shop"); else _explicitNullProperties?.Remove("instagram_shop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackInstagramShopProperty _explicitNullValueInstagramShop = default!;
 #endif
         /// <summary>The job_search property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackJobSearchProperty? JobSearch { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackJobSearchProperty? JobSearch { get => _explicitNullValueJobSearch; set { _explicitNullValueJobSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_search"); else _explicitNullProperties?.Remove("job_search"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackJobSearchProperty? _explicitNullValueJobSearch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackJobSearchProperty JobSearch { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackJobSearchProperty JobSearch { get => _explicitNullValueJobSearch; set { _explicitNullValueJobSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_search"); else _explicitNullProperties?.Remove("job_search"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackJobSearchProperty _explicitNullValueJobSearch = default!;
 #endif
         /// <summary>The lead_gen_honeypot property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackLeadGenHoneypotProperty? LeadGenHoneypot { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackLeadGenHoneypotProperty? LeadGenHoneypot { get => _explicitNullValueLeadGenHoneypot; set { _explicitNullValueLeadGenHoneypot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_gen_honeypot"); else _explicitNullProperties?.Remove("lead_gen_honeypot"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackLeadGenHoneypotProperty? _explicitNullValueLeadGenHoneypot = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackLeadGenHoneypotProperty LeadGenHoneypot { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackLeadGenHoneypotProperty LeadGenHoneypot { get => _explicitNullValueLeadGenHoneypot; set { _explicitNullValueLeadGenHoneypot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_gen_honeypot"); else _explicitNullProperties?.Remove("lead_gen_honeypot"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackLeadGenHoneypotProperty _explicitNullValueLeadGenHoneypot = default!;
 #endif
         /// <summary>The marketplace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceProperty? Marketplace { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceProperty? Marketplace { get => _explicitNullValueMarketplace; set { _explicitNullValueMarketplace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace"); else _explicitNullProperties?.Remove("marketplace"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceProperty? _explicitNullValueMarketplace = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceProperty Marketplace { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceProperty Marketplace { get => _explicitNullValueMarketplace; set { _explicitNullValueMarketplace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace"); else _explicitNullProperties?.Remove("marketplace"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceProperty _explicitNullValueMarketplace = default!;
 #endif
         /// <summary>The marketplace_home_rentals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeRentalsProperty? MarketplaceHomeRentals { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeRentalsProperty? MarketplaceHomeRentals { get => _explicitNullValueMarketplaceHomeRentals; set { _explicitNullValueMarketplaceHomeRentals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_home_rentals"); else _explicitNullProperties?.Remove("marketplace_home_rentals"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeRentalsProperty? _explicitNullValueMarketplaceHomeRentals = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeRentalsProperty MarketplaceHomeRentals { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeRentalsProperty MarketplaceHomeRentals { get => _explicitNullValueMarketplaceHomeRentals; set { _explicitNullValueMarketplaceHomeRentals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_home_rentals"); else _explicitNullProperties?.Remove("marketplace_home_rentals"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeRentalsProperty _explicitNullValueMarketplaceHomeRentals = default!;
 #endif
         /// <summary>The marketplace_home_sales property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeSalesProperty? MarketplaceHomeSales { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeSalesProperty? MarketplaceHomeSales { get => _explicitNullValueMarketplaceHomeSales; set { _explicitNullValueMarketplaceHomeSales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_home_sales"); else _explicitNullProperties?.Remove("marketplace_home_sales"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeSalesProperty? _explicitNullValueMarketplaceHomeSales = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeSalesProperty MarketplaceHomeSales { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeSalesProperty MarketplaceHomeSales { get => _explicitNullValueMarketplaceHomeSales; set { _explicitNullValueMarketplaceHomeSales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_home_sales"); else _explicitNullProperties?.Remove("marketplace_home_sales"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceHomeSalesProperty _explicitNullValueMarketplaceHomeSales = default!;
 #endif
         /// <summary>The marketplace_motors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceMotorsProperty? MarketplaceMotors { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceMotorsProperty? MarketplaceMotors { get => _explicitNullValueMarketplaceMotors; set { _explicitNullValueMarketplaceMotors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_motors"); else _explicitNullProperties?.Remove("marketplace_motors"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceMotorsProperty? _explicitNullValueMarketplaceMotors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceMotorsProperty MarketplaceMotors { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceMotorsProperty MarketplaceMotors { get => _explicitNullValueMarketplaceMotors; set { _explicitNullValueMarketplaceMotors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_motors"); else _explicitNullProperties?.Remove("marketplace_motors"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceMotorsProperty _explicitNullValueMarketplaceMotors = default!;
 #endif
         /// <summary>The marketplace_shops property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceShopsProperty? MarketplaceShops { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceShopsProperty? MarketplaceShops { get => _explicitNullValueMarketplaceShops; set { _explicitNullValueMarketplaceShops = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_shops"); else _explicitNullProperties?.Remove("marketplace_shops"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceShopsProperty? _explicitNullValueMarketplaceShops = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceShopsProperty MarketplaceShops { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceShopsProperty MarketplaceShops { get => _explicitNullValueMarketplaceShops; set { _explicitNullValueMarketplaceShops = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_shops"); else _explicitNullProperties?.Remove("marketplace_shops"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMarketplaceShopsProperty _explicitNullValueMarketplaceShops = default!;
 #endif
         /// <summary>The max_review_placements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMaxReviewPlacementsProperty? MaxReviewPlacements { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMaxReviewPlacementsProperty? MaxReviewPlacements { get => _explicitNullValueMaxReviewPlacements; set { _explicitNullValueMaxReviewPlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_review_placements"); else _explicitNullProperties?.Remove("max_review_placements"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMaxReviewPlacementsProperty? _explicitNullValueMaxReviewPlacements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMaxReviewPlacementsProperty MaxReviewPlacements { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMaxReviewPlacementsProperty MaxReviewPlacements { get => _explicitNullValueMaxReviewPlacements; set { _explicitNullValueMaxReviewPlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_review_placements"); else _explicitNullProperties?.Remove("max_review_placements"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackMaxReviewPlacementsProperty _explicitNullValueMaxReviewPlacements = default!;
 #endif
         /// <summary>The neighborhoods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackNeighborhoodsProperty? Neighborhoods { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackNeighborhoodsProperty? Neighborhoods { get => _explicitNullValueNeighborhoods; set { _explicitNullValueNeighborhoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("neighborhoods"); else _explicitNullProperties?.Remove("neighborhoods"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackNeighborhoodsProperty? _explicitNullValueNeighborhoods = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackNeighborhoodsProperty Neighborhoods { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackNeighborhoodsProperty Neighborhoods { get => _explicitNullValueNeighborhoods; set { _explicitNullValueNeighborhoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("neighborhoods"); else _explicitNullProperties?.Remove("neighborhoods"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackNeighborhoodsProperty _explicitNullValueNeighborhoods = default!;
 #endif
         /// <summary>The page_admin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackPageAdminProperty? PageAdmin { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackPageAdminProperty? PageAdmin { get => _explicitNullValuePageAdmin; set { _explicitNullValuePageAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_admin"); else _explicitNullProperties?.Remove("page_admin"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackPageAdminProperty? _explicitNullValuePageAdmin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackPageAdminProperty PageAdmin { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackPageAdminProperty PageAdmin { get => _explicitNullValuePageAdmin; set { _explicitNullValuePageAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_admin"); else _explicitNullProperties?.Remove("page_admin"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackPageAdminProperty _explicitNullValuePageAdmin = default!;
 #endif
         /// <summary>The product property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductProperty? Product { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductProperty? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductProperty? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductProperty Product { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductProperty Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductProperty _explicitNullValueProduct = default!;
 #endif
         /// <summary>The product_service property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductServiceProperty? ProductService { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductServiceProperty? ProductService { get => _explicitNullValueProductService; set { _explicitNullValueProductService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_service"); else _explicitNullProperties?.Remove("product_service"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductServiceProperty? _explicitNullValueProductService = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductServiceProperty ProductService { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductServiceProperty ProductService { get => _explicitNullValueProductService; set { _explicitNullValueProductService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_service"); else _explicitNullProperties?.Remove("product_service"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProductServiceProperty _explicitNullValueProductService = default!;
 #endif
         /// <summary>The profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProfileProperty? Profile { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProfileProperty? Profile { get => _explicitNullValueProfile; set { _explicitNullValueProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile"); else _explicitNullProperties?.Remove("profile"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProfileProperty? _explicitNullValueProfile = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProfileProperty Profile { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProfileProperty Profile { get => _explicitNullValueProfile; set { _explicitNullValueProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile"); else _explicitNullProperties?.Remove("profile"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackProfileProperty _explicitNullValueProfile = default!;
 #endif
         /// <summary>The seller property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackSellerProperty? Seller { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackSellerProperty? Seller { get => _explicitNullValueSeller; set { _explicitNullValueSeller = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller"); else _explicitNullProperties?.Remove("seller"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackSellerProperty? _explicitNullValueSeller = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackSellerProperty Seller { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackSellerProperty Seller { get => _explicitNullValueSeller; set { _explicitNullValueSeller = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller"); else _explicitNullProperties?.Remove("seller"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackSellerProperty _explicitNullValueSeller = default!;
 #endif
         /// <summary>The shops property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackShopsProperty? Shops { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackShopsProperty? Shops { get => _explicitNullValueShops; set { _explicitNullValueShops = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shops"); else _explicitNullProperties?.Remove("shops"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackShopsProperty? _explicitNullValueShops = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackShopsProperty Shops { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackShopsProperty Shops { get => _explicitNullValueShops; set { _explicitNullValueShops = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shops"); else _explicitNullProperties?.Remove("shops"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackShopsProperty _explicitNullValueShops = default!;
 #endif
         /// <summary>The traffic_quality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty? TrafficQuality { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty? TrafficQuality { get => _explicitNullValueTrafficQuality; set { _explicitNullValueTrafficQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traffic_quality"); else _explicitNullProperties?.Remove("traffic_quality"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty? _explicitNullValueTrafficQuality = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty TrafficQuality { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty TrafficQuality { get => _explicitNullValueTrafficQuality; set { _explicitNullValueTrafficQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traffic_quality"); else _explicitNullProperties?.Remove("traffic_quality"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty _explicitNullValueTrafficQuality = default!;
 #endif
         /// <summary>The unified_commerce_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty? UnifiedCommerceContent { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty? UnifiedCommerceContent { get => _explicitNullValueUnifiedCommerceContent; set { _explicitNullValueUnifiedCommerceContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unified_commerce_content"); else _explicitNullProperties?.Remove("unified_commerce_content"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty? _explicitNullValueUnifiedCommerceContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty UnifiedCommerceContent { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty UnifiedCommerceContent { get => _explicitNullValueUnifiedCommerceContent; set { _explicitNullValueUnifiedCommerceContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unified_commerce_content"); else _explicitNullProperties?.Remove("unified_commerce_content"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty _explicitNullValueUnifiedCommerceContent = default!;
 #endif
         /// <summary>The whatsapp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty? Whatsapp { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty? Whatsapp { get => _explicitNullValueWhatsapp; set { _explicitNullValueWhatsapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp"); else _explicitNullProperties?.Remove("whatsapp"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty? _explicitNullValueWhatsapp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty Whatsapp { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty Whatsapp { get => _explicitNullValueWhatsapp; set { _explicitNullValueWhatsapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp"); else _explicitNullProperties?.Remove("whatsapp"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty _explicitNullValueWhatsapp = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback"/> and sets the default values.
@@ -325,7 +443,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -418,6 +536,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackTrafficQualityProperty>("traffic_quality", TrafficQuality);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackUnifiedCommerceContentProperty>("unified_commerce_content", UnifiedCommerceContent);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackWhatsappProperty>("whatsapp", Whatsapp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

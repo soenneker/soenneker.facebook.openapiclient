@@ -11,48 +11,75 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Recommendation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("has_rating") is { } nullNodeHasRating && nullNodeHasRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasRating = null;
+            if (parseNode.GetChildNode("has_review") is { } nullNodeHasReview && nullNodeHasReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasReview = null;
+            if (parseNode.GetChildNode("open_graph_story") is { } nullNodeOpenGraphStory && nullNodeOpenGraphStory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenGraphStory = null;
+            if (parseNode.GetChildNode("rating") is { } nullNodeRating && nullNodeRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rating = null;
+            if (parseNode.GetChildNode("recommendation_type") is { } nullNodeRecommendationType && nullNodeRecommendationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendationType = null;
+            if (parseNode.GetChildNode("reviewer") is { } nullNodeReviewer && nullNodeReviewer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reviewer = null;
+            if (parseNode.GetChildNode("review_text") is { } nullNodeReviewText && nullNodeReviewText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewText = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created_time property</summary>
-        public DateTimeOffset? CreatedTime { get; set; }
+        public DateTimeOffset? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        private DateTimeOffset? _explicitNullValueCreatedTime = default!;
         /// <summary>The has_rating property</summary>
-        public bool? HasRating { get; set; }
+        public bool? HasRating { get => _explicitNullValueHasRating; set { _explicitNullValueHasRating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_rating"); else _explicitNullProperties?.Remove("has_rating"); } }
+        private bool? _explicitNullValueHasRating = default!;
         /// <summary>The has_review property</summary>
-        public bool? HasReview { get; set; }
+        public bool? HasReview { get => _explicitNullValueHasReview; set { _explicitNullValueHasReview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_review"); else _explicitNullProperties?.Remove("has_review"); } }
+        private bool? _explicitNullValueHasReview = default!;
         /// <summary>The open_graph_story property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty? OpenGraphStory { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty? OpenGraphStory { get => _explicitNullValueOpenGraphStory; set { _explicitNullValueOpenGraphStory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_graph_story"); else _explicitNullProperties?.Remove("open_graph_story"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty? _explicitNullValueOpenGraphStory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty OpenGraphStory { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty OpenGraphStory { get => _explicitNullValueOpenGraphStory; set { _explicitNullValueOpenGraphStory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_graph_story"); else _explicitNullProperties?.Remove("open_graph_story"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty _explicitNullValueOpenGraphStory = default!;
 #endif
         /// <summary>The rating property</summary>
-        public long? Rating { get; set; }
+        public long? Rating { get => _explicitNullValueRating; set { _explicitNullValueRating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rating"); else _explicitNullProperties?.Remove("rating"); } }
+        private long? _explicitNullValueRating = default!;
         /// <summary>The recommendation_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecommendationType { get; set; }
+        public string? RecommendationType { get => _explicitNullValueRecommendationType; set { _explicitNullValueRecommendationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_type"); else _explicitNullProperties?.Remove("recommendation_type"); } }
+        private string? _explicitNullValueRecommendationType = default!;
 #nullable restore
 #else
-        public string RecommendationType { get; set; }
+        public string RecommendationType { get => _explicitNullValueRecommendationType; set { _explicitNullValueRecommendationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_type"); else _explicitNullProperties?.Remove("recommendation_type"); } }
+        private string _explicitNullValueRecommendationType = default!;
 #endif
         /// <summary>The reviewer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.User? Reviewer { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User? Reviewer { get => _explicitNullValueReviewer; set { _explicitNullValueReviewer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer"); else _explicitNullProperties?.Remove("reviewer"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.User? _explicitNullValueReviewer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.User Reviewer { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User Reviewer { get => _explicitNullValueReviewer; set { _explicitNullValueReviewer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer"); else _explicitNullProperties?.Remove("reviewer"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.User _explicitNullValueReviewer = default!;
 #endif
         /// <summary>The review_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReviewText { get; set; }
+        public string? ReviewText { get => _explicitNullValueReviewText; set { _explicitNullValueReviewText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_text"); else _explicitNullProperties?.Remove("review_text"); } }
+        private string? _explicitNullValueReviewText = default!;
 #nullable restore
 #else
-        public string ReviewText { get; set; }
+        public string ReviewText { get => _explicitNullValueReviewText; set { _explicitNullValueReviewText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_text"); else _explicitNullProperties?.Remove("review_text"); } }
+        private string _explicitNullValueReviewText = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.Recommendation"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.Recommendation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.Recommendation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.Recommendation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("recommendation_type", RecommendationType);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.User>("reviewer", Reviewer);
             writer.WriteStringValue("review_text", ReviewText);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

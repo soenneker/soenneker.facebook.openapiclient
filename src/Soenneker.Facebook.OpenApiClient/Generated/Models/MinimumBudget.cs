@@ -11,25 +11,43 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MinimumBudget : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("min_daily_budget_high_freq") is { } nullNodeMinDailyBudgetHighFreq && nullNodeMinDailyBudgetHighFreq.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinDailyBudgetHighFreq = null;
+            if (parseNode.GetChildNode("min_daily_budget_imp") is { } nullNodeMinDailyBudgetImp && nullNodeMinDailyBudgetImp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinDailyBudgetImp = null;
+            if (parseNode.GetChildNode("min_daily_budget_low_freq") is { } nullNodeMinDailyBudgetLowFreq && nullNodeMinDailyBudgetLowFreq.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinDailyBudgetLowFreq = null;
+            if (parseNode.GetChildNode("min_daily_budget_video_views") is { } nullNodeMinDailyBudgetVideoViews && nullNodeMinDailyBudgetVideoViews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinDailyBudgetVideoViews = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The min_daily_budget_high_freq property</summary>
-        public long? MinDailyBudgetHighFreq { get; set; }
+        public long? MinDailyBudgetHighFreq { get => _explicitNullValueMinDailyBudgetHighFreq; set { _explicitNullValueMinDailyBudgetHighFreq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_daily_budget_high_freq"); else _explicitNullProperties?.Remove("min_daily_budget_high_freq"); } }
+        private long? _explicitNullValueMinDailyBudgetHighFreq = default!;
         /// <summary>The min_daily_budget_imp property</summary>
-        public long? MinDailyBudgetImp { get; set; }
+        public long? MinDailyBudgetImp { get => _explicitNullValueMinDailyBudgetImp; set { _explicitNullValueMinDailyBudgetImp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_daily_budget_imp"); else _explicitNullProperties?.Remove("min_daily_budget_imp"); } }
+        private long? _explicitNullValueMinDailyBudgetImp = default!;
         /// <summary>The min_daily_budget_low_freq property</summary>
-        public long? MinDailyBudgetLowFreq { get; set; }
+        public long? MinDailyBudgetLowFreq { get => _explicitNullValueMinDailyBudgetLowFreq; set { _explicitNullValueMinDailyBudgetLowFreq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_daily_budget_low_freq"); else _explicitNullProperties?.Remove("min_daily_budget_low_freq"); } }
+        private long? _explicitNullValueMinDailyBudgetLowFreq = default!;
         /// <summary>The min_daily_budget_video_views property</summary>
-        public long? MinDailyBudgetVideoViews { get; set; }
+        public long? MinDailyBudgetVideoViews { get => _explicitNullValueMinDailyBudgetVideoViews; set { _explicitNullValueMinDailyBudgetVideoViews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_daily_budget_video_views"); else _explicitNullProperties?.Remove("min_daily_budget_video_views"); } }
+        private long? _explicitNullValueMinDailyBudgetVideoViews = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MinimumBudget"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.MinimumBudget CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.MinimumBudget();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.MinimumBudget(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("min_daily_budget_imp", MinDailyBudgetImp);
             writer.WriteLongValue("min_daily_budget_low_freq", MinDailyBudgetLowFreq);
             writer.WriteLongValue("min_daily_budget_video_views", MinDailyBudgetVideoViews);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

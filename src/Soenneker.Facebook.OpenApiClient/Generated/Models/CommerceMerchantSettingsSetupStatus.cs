@@ -11,56 +11,81 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CommerceMerchantSettingsSetupStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deals_setup") is { } nullNodeDealsSetup && nullNodeDealsSetup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealsSetup = null;
+            if (parseNode.GetChildNode("marketplace_approval_status") is { } nullNodeMarketplaceApprovalStatus && nullNodeMarketplaceApprovalStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceApprovalStatus = null;
+            if (parseNode.GetChildNode("marketplace_approval_status_details") is { } nullNodeMarketplaceApprovalStatusDetails && nullNodeMarketplaceApprovalStatusDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceApprovalStatusDetails = null;
+            if (parseNode.GetChildNode("payment_setup") is { } nullNodePaymentSetup && nullNodePaymentSetup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentSetup = null;
+            if (parseNode.GetChildNode("review_status") is { } nullNodeReviewStatus && nullNodeReviewStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewStatus = null;
+            if (parseNode.GetChildNode("shop_setup") is { } nullNodeShopSetup && nullNodeShopSetup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShopSetup = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The deals_setup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DealsSetup { get; set; }
+        public string? DealsSetup { get => _explicitNullValueDealsSetup; set { _explicitNullValueDealsSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deals_setup"); else _explicitNullProperties?.Remove("deals_setup"); } }
+        private string? _explicitNullValueDealsSetup = default!;
 #nullable restore
 #else
-        public string DealsSetup { get; set; }
+        public string DealsSetup { get => _explicitNullValueDealsSetup; set { _explicitNullValueDealsSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deals_setup"); else _explicitNullProperties?.Remove("deals_setup"); } }
+        private string _explicitNullValueDealsSetup = default!;
 #endif
         /// <summary>The marketplace_approval_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarketplaceApprovalStatus { get; set; }
+        public string? MarketplaceApprovalStatus { get => _explicitNullValueMarketplaceApprovalStatus; set { _explicitNullValueMarketplaceApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_approval_status"); else _explicitNullProperties?.Remove("marketplace_approval_status"); } }
+        private string? _explicitNullValueMarketplaceApprovalStatus = default!;
 #nullable restore
 #else
-        public string MarketplaceApprovalStatus { get; set; }
+        public string MarketplaceApprovalStatus { get => _explicitNullValueMarketplaceApprovalStatus; set { _explicitNullValueMarketplaceApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_approval_status"); else _explicitNullProperties?.Remove("marketplace_approval_status"); } }
+        private string _explicitNullValueMarketplaceApprovalStatus = default!;
 #endif
         /// <summary>The marketplace_approval_status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusMarketplaceApprovalStatusDetailsProperty? MarketplaceApprovalStatusDetails { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusMarketplaceApprovalStatusDetailsProperty? MarketplaceApprovalStatusDetails { get => _explicitNullValueMarketplaceApprovalStatusDetails; set { _explicitNullValueMarketplaceApprovalStatusDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_approval_status_details"); else _explicitNullProperties?.Remove("marketplace_approval_status_details"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusMarketplaceApprovalStatusDetailsProperty? _explicitNullValueMarketplaceApprovalStatusDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusMarketplaceApprovalStatusDetailsProperty MarketplaceApprovalStatusDetails { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusMarketplaceApprovalStatusDetailsProperty MarketplaceApprovalStatusDetails { get => _explicitNullValueMarketplaceApprovalStatusDetails; set { _explicitNullValueMarketplaceApprovalStatusDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplace_approval_status_details"); else _explicitNullProperties?.Remove("marketplace_approval_status_details"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusMarketplaceApprovalStatusDetailsProperty _explicitNullValueMarketplaceApprovalStatusDetails = default!;
 #endif
         /// <summary>The payment_setup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentSetup { get; set; }
+        public string? PaymentSetup { get => _explicitNullValuePaymentSetup; set { _explicitNullValuePaymentSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_setup"); else _explicitNullProperties?.Remove("payment_setup"); } }
+        private string? _explicitNullValuePaymentSetup = default!;
 #nullable restore
 #else
-        public string PaymentSetup { get; set; }
+        public string PaymentSetup { get => _explicitNullValuePaymentSetup; set { _explicitNullValuePaymentSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_setup"); else _explicitNullProperties?.Remove("payment_setup"); } }
+        private string _explicitNullValuePaymentSetup = default!;
 #endif
         /// <summary>The review_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty? ReviewStatus { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty? ReviewStatus { get => _explicitNullValueReviewStatus; set { _explicitNullValueReviewStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_status"); else _explicitNullProperties?.Remove("review_status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty? _explicitNullValueReviewStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty ReviewStatus { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty ReviewStatus { get => _explicitNullValueReviewStatus; set { _explicitNullValueReviewStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_status"); else _explicitNullProperties?.Remove("review_status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty _explicitNullValueReviewStatus = default!;
 #endif
         /// <summary>The shop_setup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShopSetup { get; set; }
+        public string? ShopSetup { get => _explicitNullValueShopSetup; set { _explicitNullValueShopSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shop_setup"); else _explicitNullProperties?.Remove("shop_setup"); } }
+        private string? _explicitNullValueShopSetup = default!;
 #nullable restore
 #else
-        public string ShopSetup { get; set; }
+        public string ShopSetup { get => _explicitNullValueShopSetup; set { _explicitNullValueShopSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shop_setup"); else _explicitNullProperties?.Remove("shop_setup"); } }
+        private string _explicitNullValueShopSetup = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatus"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("payment_setup", PaymentSetup);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettingsSetupStatusReviewStatusProperty>("review_status", ReviewStatus);
             writer.WriteStringValue("shop_setup", ShopSetup);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

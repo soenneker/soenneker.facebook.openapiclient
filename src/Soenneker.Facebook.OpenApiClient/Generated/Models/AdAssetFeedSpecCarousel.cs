@@ -11,29 +11,46 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAssetFeedSpecCarousel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adlabels") is { } nullNodeAdlabels && nullNodeAdlabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Adlabels = null;
+            if (parseNode.GetChildNode("child_attachments") is { } nullNodeChildAttachments && nullNodeChildAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildAttachments = null;
+            if (parseNode.GetChildNode("multi_share_end_card") is { } nullNodeMultiShareEndCard && nullNodeMultiShareEndCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiShareEndCard = null;
+            if (parseNode.GetChildNode("multi_share_optimized") is { } nullNodeMultiShareOptimized && nullNodeMultiShareOptimized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiShareOptimized = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The adlabels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecAssetLabel>? Adlabels { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecAssetLabel>? Adlabels { get => _explicitNullValueAdlabels; set { _explicitNullValueAdlabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adlabels"); else _explicitNullProperties?.Remove("adlabels"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecAssetLabel>? _explicitNullValueAdlabels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecAssetLabel> Adlabels { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecAssetLabel> Adlabels { get => _explicitNullValueAdlabels; set { _explicitNullValueAdlabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adlabels"); else _explicitNullProperties?.Remove("adlabels"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecAssetLabel> _explicitNullValueAdlabels = default!;
 #endif
         /// <summary>The child_attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment>? ChildAttachments { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment>? ChildAttachments { get => _explicitNullValueChildAttachments; set { _explicitNullValueChildAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("child_attachments"); else _explicitNullProperties?.Remove("child_attachments"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment>? _explicitNullValueChildAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment> ChildAttachments { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment> ChildAttachments { get => _explicitNullValueChildAttachments; set { _explicitNullValueChildAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("child_attachments"); else _explicitNullProperties?.Remove("child_attachments"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment> _explicitNullValueChildAttachments = default!;
 #endif
         /// <summary>The multi_share_end_card property</summary>
-        public bool? MultiShareEndCard { get; set; }
+        public bool? MultiShareEndCard { get => _explicitNullValueMultiShareEndCard; set { _explicitNullValueMultiShareEndCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_share_end_card"); else _explicitNullProperties?.Remove("multi_share_end_card"); } }
+        private bool? _explicitNullValueMultiShareEndCard = default!;
         /// <summary>The multi_share_optimized property</summary>
-        public bool? MultiShareOptimized { get; set; }
+        public bool? MultiShareOptimized { get => _explicitNullValueMultiShareOptimized; set { _explicitNullValueMultiShareOptimized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_share_optimized"); else _explicitNullProperties?.Remove("multi_share_optimized"); } }
+        private bool? _explicitNullValueMultiShareOptimized = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarousel"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarousel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarousel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarousel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedSpecCarouselChildAttachment>("child_attachments", ChildAttachments);
             writer.WriteBoolValue("multi_share_end_card", MultiShareEndCard);
             writer.WriteBoolValue("multi_share_optimized", MultiShareOptimized);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

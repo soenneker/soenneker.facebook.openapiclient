@@ -11,61 +11,95 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductCatalogDiagnosticGroup : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("affected_channels") is { } nullNodeAffectedChannels && nullNodeAffectedChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffectedChannels = null;
+            if (parseNode.GetChildNode("affected_entity") is { } nullNodeAffectedEntity && nullNodeAffectedEntity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffectedEntity = null;
+            if (parseNode.GetChildNode("affected_features") is { } nullNodeAffectedFeatures && nullNodeAffectedFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffectedFeatures = null;
+            if (parseNode.GetChildNode("diagnostics") is { } nullNodeDiagnostics && nullNodeDiagnostics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Diagnostics = null;
+            if (parseNode.GetChildNode("error_code") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("number_of_affected_entities") is { } nullNodeNumberOfAffectedEntities && nullNodeNumberOfAffectedEntities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfAffectedEntities = null;
+            if (parseNode.GetChildNode("number_of_affected_items") is { } nullNodeNumberOfAffectedItems && nullNodeNumberOfAffectedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfAffectedItems = null;
+            if (parseNode.GetChildNode("severity") is { } nullNodeSeverity && nullNodeSeverity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Severity = null;
+            if (parseNode.GetChildNode("subtitle") is { } nullNodeSubtitle && nullNodeSubtitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtitle = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The affected_channels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AffectedChannels { get; set; }
+        public List<string>? AffectedChannels { get => _explicitNullValueAffectedChannels; set { _explicitNullValueAffectedChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affected_channels"); else _explicitNullProperties?.Remove("affected_channels"); } }
+        private List<string>? _explicitNullValueAffectedChannels = default!;
 #nullable restore
 #else
-        public List<string> AffectedChannels { get; set; }
+        public List<string> AffectedChannels { get => _explicitNullValueAffectedChannels; set { _explicitNullValueAffectedChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affected_channels"); else _explicitNullProperties?.Remove("affected_channels"); } }
+        private List<string> _explicitNullValueAffectedChannels = default!;
 #endif
         /// <summary>The affected_entity property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedEntity? AffectedEntity { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedEntity? AffectedEntity { get => _explicitNullValueAffectedEntity; set { _explicitNullValueAffectedEntity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affected_entity"); else _explicitNullProperties?.Remove("affected_entity"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedEntity? _explicitNullValueAffectedEntity = default!;
         /// <summary>The affected_features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedFeatures?>? AffectedFeatures { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedFeatures?>? AffectedFeatures { get => _explicitNullValueAffectedFeatures; set { _explicitNullValueAffectedFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affected_features"); else _explicitNullProperties?.Remove("affected_features"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedFeatures?>? _explicitNullValueAffectedFeatures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedFeatures?> AffectedFeatures { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedFeatures?> AffectedFeatures { get => _explicitNullValueAffectedFeatures; set { _explicitNullValueAffectedFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affected_features"); else _explicitNullProperties?.Remove("affected_features"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupAffectedFeatures?> _explicitNullValueAffectedFeatures = default!;
 #endif
         /// <summary>The diagnostics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupDiagnosticsItemProperty>? Diagnostics { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupDiagnosticsItemProperty>? Diagnostics { get => _explicitNullValueDiagnostics; set { _explicitNullValueDiagnostics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diagnostics"); else _explicitNullProperties?.Remove("diagnostics"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupDiagnosticsItemProperty>? _explicitNullValueDiagnostics = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupDiagnosticsItemProperty> Diagnostics { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupDiagnosticsItemProperty> Diagnostics { get => _explicitNullValueDiagnostics; set { _explicitNullValueDiagnostics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diagnostics"); else _explicitNullProperties?.Remove("diagnostics"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupDiagnosticsItemProperty> _explicitNullValueDiagnostics = default!;
 #endif
         /// <summary>The error_code property</summary>
-        public long? ErrorCode { get; set; }
+        public long? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_code"); else _explicitNullProperties?.Remove("error_code"); } }
+        private long? _explicitNullValueErrorCode = default!;
         /// <summary>The number_of_affected_entities property</summary>
-        public long? NumberOfAffectedEntities { get; set; }
+        public long? NumberOfAffectedEntities { get => _explicitNullValueNumberOfAffectedEntities; set { _explicitNullValueNumberOfAffectedEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_affected_entities"); else _explicitNullProperties?.Remove("number_of_affected_entities"); } }
+        private long? _explicitNullValueNumberOfAffectedEntities = default!;
         /// <summary>The number_of_affected_items property</summary>
-        public long? NumberOfAffectedItems { get; set; }
+        public long? NumberOfAffectedItems { get => _explicitNullValueNumberOfAffectedItems; set { _explicitNullValueNumberOfAffectedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_affected_items"); else _explicitNullProperties?.Remove("number_of_affected_items"); } }
+        private long? _explicitNullValueNumberOfAffectedItems = default!;
         /// <summary>The severity property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupSeverity? Severity { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupSeverity? Severity { get => _explicitNullValueSeverity; set { _explicitNullValueSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severity"); else _explicitNullProperties?.Remove("severity"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupSeverity? _explicitNullValueSeverity = default!;
         /// <summary>The subtitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subtitle { get; set; }
+        public string? Subtitle { get => _explicitNullValueSubtitle; set { _explicitNullValueSubtitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtitle"); else _explicitNullProperties?.Remove("subtitle"); } }
+        private string? _explicitNullValueSubtitle = default!;
 #nullable restore
 #else
-        public string Subtitle { get; set; }
+        public string Subtitle { get => _explicitNullValueSubtitle; set { _explicitNullValueSubtitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtitle"); else _explicitNullProperties?.Remove("subtitle"); } }
+        private string _explicitNullValueSubtitle = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupType? Type { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroup"/> and sets the default values.
         /// </summary>
@@ -81,7 +115,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroup CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroup();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroup(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +156,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("subtitle", Subtitle);
             writer.WriteStringValue("title", Title);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogDiagnosticGroupType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

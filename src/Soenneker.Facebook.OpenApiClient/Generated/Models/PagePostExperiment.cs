@@ -11,101 +11,150 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PagePostExperiment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_resolve_settings") is { } nullNodeAutoResolveSettings && nullNodeAutoResolveSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoResolveSettings = null;
+            if (parseNode.GetChildNode("control_video_id") is { } nullNodeControlVideoId && nullNodeControlVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlVideoId = null;
+            if (parseNode.GetChildNode("creation_time") is { } nullNodeCreationTime && nullNodeCreationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationTime = null;
+            if (parseNode.GetChildNode("creator") is { } nullNodeCreator && nullNodeCreator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Creator = null;
+            if (parseNode.GetChildNode("declared_winning_time") is { } nullNodeDeclaredWinningTime && nullNodeDeclaredWinningTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclaredWinningTime = null;
+            if (parseNode.GetChildNode("declared_winning_video_id") is { } nullNodeDeclaredWinningVideoId && nullNodeDeclaredWinningVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclaredWinningVideoId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("experiment_video_ids") is { } nullNodeExperimentVideoIds && nullNodeExperimentVideoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperimentVideoIds = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("insight_snapshots") is { } nullNodeInsightSnapshots && nullNodeInsightSnapshots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsightSnapshots = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("optimization_goal") is { } nullNodeOptimizationGoal && nullNodeOptimizationGoal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizationGoal = null;
+            if (parseNode.GetChildNode("publish_status") is { } nullNodePublishStatus && nullNodePublishStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishStatus = null;
+            if (parseNode.GetChildNode("publish_time") is { } nullNodePublishTime && nullNodePublishTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishTime = null;
+            if (parseNode.GetChildNode("scheduled_experiment_timestamp") is { } nullNodeScheduledExperimentTimestamp && nullNodeScheduledExperimentTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledExperimentTimestamp = null;
+            if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_resolve_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentAutoResolveSettingsProperty? AutoResolveSettings { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentAutoResolveSettingsProperty? AutoResolveSettings { get => _explicitNullValueAutoResolveSettings; set { _explicitNullValueAutoResolveSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_resolve_settings"); else _explicitNullProperties?.Remove("auto_resolve_settings"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentAutoResolveSettingsProperty? _explicitNullValueAutoResolveSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentAutoResolveSettingsProperty AutoResolveSettings { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentAutoResolveSettingsProperty AutoResolveSettings { get => _explicitNullValueAutoResolveSettings; set { _explicitNullValueAutoResolveSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_resolve_settings"); else _explicitNullProperties?.Remove("auto_resolve_settings"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentAutoResolveSettingsProperty _explicitNullValueAutoResolveSettings = default!;
 #endif
         /// <summary>The control_video_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlVideoId { get; set; }
+        public string? ControlVideoId { get => _explicitNullValueControlVideoId; set { _explicitNullValueControlVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("control_video_id"); else _explicitNullProperties?.Remove("control_video_id"); } }
+        private string? _explicitNullValueControlVideoId = default!;
 #nullable restore
 #else
-        public string ControlVideoId { get; set; }
+        public string ControlVideoId { get => _explicitNullValueControlVideoId; set { _explicitNullValueControlVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("control_video_id"); else _explicitNullProperties?.Remove("control_video_id"); } }
+        private string _explicitNullValueControlVideoId = default!;
 #endif
         /// <summary>The creation_time property</summary>
-        public DateTimeOffset? CreationTime { get; set; }
+        public DateTimeOffset? CreationTime { get => _explicitNullValueCreationTime; set { _explicitNullValueCreationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_time"); else _explicitNullProperties?.Remove("creation_time"); } }
+        private DateTimeOffset? _explicitNullValueCreationTime = default!;
         /// <summary>The creator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.User? Creator { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User? Creator { get => _explicitNullValueCreator; set { _explicitNullValueCreator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator"); else _explicitNullProperties?.Remove("creator"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.User? _explicitNullValueCreator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.User Creator { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User Creator { get => _explicitNullValueCreator; set { _explicitNullValueCreator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator"); else _explicitNullProperties?.Remove("creator"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.User _explicitNullValueCreator = default!;
 #endif
         /// <summary>The declared_winning_time property</summary>
-        public DateTimeOffset? DeclaredWinningTime { get; set; }
+        public DateTimeOffset? DeclaredWinningTime { get => _explicitNullValueDeclaredWinningTime; set { _explicitNullValueDeclaredWinningTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declared_winning_time"); else _explicitNullProperties?.Remove("declared_winning_time"); } }
+        private DateTimeOffset? _explicitNullValueDeclaredWinningTime = default!;
         /// <summary>The declared_winning_video_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeclaredWinningVideoId { get; set; }
+        public string? DeclaredWinningVideoId { get => _explicitNullValueDeclaredWinningVideoId; set { _explicitNullValueDeclaredWinningVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declared_winning_video_id"); else _explicitNullProperties?.Remove("declared_winning_video_id"); } }
+        private string? _explicitNullValueDeclaredWinningVideoId = default!;
 #nullable restore
 #else
-        public string DeclaredWinningVideoId { get; set; }
+        public string DeclaredWinningVideoId { get => _explicitNullValueDeclaredWinningVideoId; set { _explicitNullValueDeclaredWinningVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declared_winning_video_id"); else _explicitNullProperties?.Remove("declared_winning_video_id"); } }
+        private string _explicitNullValueDeclaredWinningVideoId = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The experiment_video_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExperimentVideoIds { get; set; }
+        public List<string>? ExperimentVideoIds { get => _explicitNullValueExperimentVideoIds; set { _explicitNullValueExperimentVideoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_video_ids"); else _explicitNullProperties?.Remove("experiment_video_ids"); } }
+        private List<string>? _explicitNullValueExperimentVideoIds = default!;
 #nullable restore
 #else
-        public List<string> ExperimentVideoIds { get; set; }
+        public List<string> ExperimentVideoIds { get => _explicitNullValueExperimentVideoIds; set { _explicitNullValueExperimentVideoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_video_ids"); else _explicitNullProperties?.Remove("experiment_video_ids"); } }
+        private List<string> _explicitNullValueExperimentVideoIds = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The insight_snapshots property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentInsightSnapshotsItemProperty>? InsightSnapshots { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentInsightSnapshotsItemProperty>? InsightSnapshots { get => _explicitNullValueInsightSnapshots; set { _explicitNullValueInsightSnapshots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insight_snapshots"); else _explicitNullProperties?.Remove("insight_snapshots"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentInsightSnapshotsItemProperty>? _explicitNullValueInsightSnapshots = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentInsightSnapshotsItemProperty> InsightSnapshots { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentInsightSnapshotsItemProperty> InsightSnapshots { get => _explicitNullValueInsightSnapshots; set { _explicitNullValueInsightSnapshots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insight_snapshots"); else _explicitNullProperties?.Remove("insight_snapshots"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperimentInsightSnapshotsItemProperty> _explicitNullValueInsightSnapshots = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The optimization_goal property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PageabTestsOptimizationGoalEnumParam? OptimizationGoal { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PageabTestsOptimizationGoalEnumParam? OptimizationGoal { get => _explicitNullValueOptimizationGoal; set { _explicitNullValueOptimizationGoal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optimization_goal"); else _explicitNullProperties?.Remove("optimization_goal"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PageabTestsOptimizationGoalEnumParam? _explicitNullValueOptimizationGoal = default!;
         /// <summary>The publish_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublishStatus { get; set; }
+        public string? PublishStatus { get => _explicitNullValuePublishStatus; set { _explicitNullValuePublishStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publish_status"); else _explicitNullProperties?.Remove("publish_status"); } }
+        private string? _explicitNullValuePublishStatus = default!;
 #nullable restore
 #else
-        public string PublishStatus { get; set; }
+        public string PublishStatus { get => _explicitNullValuePublishStatus; set { _explicitNullValuePublishStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publish_status"); else _explicitNullProperties?.Remove("publish_status"); } }
+        private string _explicitNullValuePublishStatus = default!;
 #endif
         /// <summary>The publish_time property</summary>
-        public DateTimeOffset? PublishTime { get; set; }
+        public DateTimeOffset? PublishTime { get => _explicitNullValuePublishTime; set { _explicitNullValuePublishTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publish_time"); else _explicitNullProperties?.Remove("publish_time"); } }
+        private DateTimeOffset? _explicitNullValuePublishTime = default!;
         /// <summary>The scheduled_experiment_timestamp property</summary>
-        public DateTimeOffset? ScheduledExperimentTimestamp { get; set; }
+        public DateTimeOffset? ScheduledExperimentTimestamp { get => _explicitNullValueScheduledExperimentTimestamp; set { _explicitNullValueScheduledExperimentTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduled_experiment_timestamp"); else _explicitNullProperties?.Remove("scheduled_experiment_timestamp"); } }
+        private DateTimeOffset? _explicitNullValueScheduledExperimentTimestamp = default!;
         /// <summary>The updated_time property</summary>
-        public DateTimeOffset? UpdatedTime { get; set; }
+        public DateTimeOffset? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperiment"/> and sets the default values.
         /// </summary>
@@ -121,7 +170,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperiment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperiment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PagePostExperiment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -172,6 +221,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("publish_time", PublishTime);
             writer.WriteDateTimeOffsetValue("scheduled_experiment_timestamp", ScheduledExperimentTimestamp);
             writer.WriteDateTimeOffsetValue("updated_time", UpdatedTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

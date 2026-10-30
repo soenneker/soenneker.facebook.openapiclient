@@ -11,72 +11,103 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PartnerAccountLinking : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adaccount") is { } nullNodeAdaccount && nullNodeAdaccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Adaccount = null;
+            if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
+            if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
+            if (parseNode.GetChildNode("externalidentifier") is { } nullNodeExternalidentifier && nullNodeExternalidentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Externalidentifier = null;
+            if (parseNode.GetChildNode("externalidentifieruri") is { } nullNodeExternalidentifieruri && nullNodeExternalidentifieruri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Externalidentifieruri = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("partnername") is { } nullNodePartnername && nullNodePartnername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Partnername = null;
+            if (parseNode.GetChildNode("pixel") is { } nullNodePixel && nullNodePixel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pixel = null;
+        }
+
         /// <summary>The adaccount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccount? Adaccount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccount? Adaccount { get => _explicitNullValueAdaccount; set { _explicitNullValueAdaccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adaccount"); else _explicitNullProperties?.Remove("adaccount"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccount? _explicitNullValueAdaccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccount Adaccount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccount Adaccount { get => _explicitNullValueAdaccount; set { _explicitNullValueAdaccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adaccount"); else _explicitNullProperties?.Remove("adaccount"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccount _explicitNullValueAdaccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Application? App { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Application? _explicitNullValueApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Application App { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Application _explicitNullValueApp = default!;
 #endif
         /// <summary>The business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business? Business { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business? Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Business? _explicitNullValueBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business Business { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Business _explicitNullValueBusiness = default!;
 #endif
         /// <summary>The externalidentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Externalidentifier { get; set; }
+        public string? Externalidentifier { get => _explicitNullValueExternalidentifier; set { _explicitNullValueExternalidentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalidentifier"); else _explicitNullProperties?.Remove("externalidentifier"); } }
+        private string? _explicitNullValueExternalidentifier = default!;
 #nullable restore
 #else
-        public string Externalidentifier { get; set; }
+        public string Externalidentifier { get => _explicitNullValueExternalidentifier; set { _explicitNullValueExternalidentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalidentifier"); else _explicitNullProperties?.Remove("externalidentifier"); } }
+        private string _explicitNullValueExternalidentifier = default!;
 #endif
         /// <summary>The externalidentifieruri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Externalidentifieruri { get; set; }
+        public string? Externalidentifieruri { get => _explicitNullValueExternalidentifieruri; set { _explicitNullValueExternalidentifieruri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalidentifieruri"); else _explicitNullProperties?.Remove("externalidentifieruri"); } }
+        private string? _explicitNullValueExternalidentifieruri = default!;
 #nullable restore
 #else
-        public string Externalidentifieruri { get; set; }
+        public string Externalidentifieruri { get => _explicitNullValueExternalidentifieruri; set { _explicitNullValueExternalidentifieruri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalidentifieruri"); else _explicitNullProperties?.Remove("externalidentifieruri"); } }
+        private string _explicitNullValueExternalidentifieruri = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The partnername property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Partnername { get; set; }
+        public string? Partnername { get => _explicitNullValuePartnername; set { _explicitNullValuePartnername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partnername"); else _explicitNullProperties?.Remove("partnername"); } }
+        private string? _explicitNullValuePartnername = default!;
 #nullable restore
 #else
-        public string Partnername { get; set; }
+        public string Partnername { get => _explicitNullValuePartnername; set { _explicitNullValuePartnername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partnername"); else _explicitNullProperties?.Remove("partnername"); } }
+        private string _explicitNullValuePartnername = default!;
 #endif
         /// <summary>The pixel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pixel { get; set; }
+        public string? Pixel { get => _explicitNullValuePixel; set { _explicitNullValuePixel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pixel"); else _explicitNullProperties?.Remove("pixel"); } }
+        private string? _explicitNullValuePixel = default!;
 #nullable restore
 #else
-        public string Pixel { get; set; }
+        public string Pixel { get => _explicitNullValuePixel; set { _explicitNullValuePixel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pixel"); else _explicitNullProperties?.Remove("pixel"); } }
+        private string _explicitNullValuePixel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PartnerAccountLinking"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PartnerAccountLinking CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PartnerAccountLinking();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PartnerAccountLinking(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("partnername", Partnername);
             writer.WriteStringValue("pixel", Pixel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

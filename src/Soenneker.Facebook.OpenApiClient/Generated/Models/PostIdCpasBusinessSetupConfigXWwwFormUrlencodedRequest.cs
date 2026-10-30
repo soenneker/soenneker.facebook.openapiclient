@@ -11,34 +11,52 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdCpasBusinessSetupConfigXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accepted_collab_ads_tos") is { } nullNodeAcceptedCollabAdsTos && nullNodeAcceptedCollabAdsTos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedCollabAdsTos = null;
+            if (parseNode.GetChildNode("ad_accounts") is { } nullNodeAdAccounts && nullNodeAdAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccounts = null;
+            if (parseNode.GetChildNode("business_capabilities_status") is { } nullNodeBusinessCapabilitiesStatus && nullNodeBusinessCapabilitiesStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessCapabilitiesStatus = null;
+            if (parseNode.GetChildNode("capabilities_compliance_status") is { } nullNodeCapabilitiesComplianceStatus && nullNodeCapabilitiesComplianceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CapabilitiesComplianceStatus = null;
+        }
+
         /// <summary>The accepted_collab_ads_tos property</summary>
-        public bool? AcceptedCollabAdsTos { get; set; }
+        public bool? AcceptedCollabAdsTos { get => _explicitNullValueAcceptedCollabAdsTos; set { _explicitNullValueAcceptedCollabAdsTos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted_collab_ads_tos"); else _explicitNullProperties?.Remove("accepted_collab_ads_tos"); } }
+        private bool? _explicitNullValueAcceptedCollabAdsTos = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdAccounts { get; set; }
+        public string? AdAccounts { get => _explicitNullValueAdAccounts; set { _explicitNullValueAdAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_accounts"); else _explicitNullProperties?.Remove("ad_accounts"); } }
+        private string? _explicitNullValueAdAccounts = default!;
 #nullable restore
 #else
-        public string AdAccounts { get; set; }
+        public string AdAccounts { get => _explicitNullValueAdAccounts; set { _explicitNullValueAdAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_accounts"); else _explicitNullProperties?.Remove("ad_accounts"); } }
+        private string _explicitNullValueAdAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessCapabilitiesStatus { get; set; }
+        public string? BusinessCapabilitiesStatus { get => _explicitNullValueBusinessCapabilitiesStatus; set { _explicitNullValueBusinessCapabilitiesStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_capabilities_status"); else _explicitNullProperties?.Remove("business_capabilities_status"); } }
+        private string? _explicitNullValueBusinessCapabilitiesStatus = default!;
 #nullable restore
 #else
-        public string BusinessCapabilitiesStatus { get; set; }
+        public string BusinessCapabilitiesStatus { get => _explicitNullValueBusinessCapabilitiesStatus; set { _explicitNullValueBusinessCapabilitiesStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_capabilities_status"); else _explicitNullProperties?.Remove("business_capabilities_status"); } }
+        private string _explicitNullValueBusinessCapabilitiesStatus = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CapabilitiesComplianceStatus { get; set; }
+        public string? CapabilitiesComplianceStatus { get => _explicitNullValueCapabilitiesComplianceStatus; set { _explicitNullValueCapabilitiesComplianceStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities_compliance_status"); else _explicitNullProperties?.Remove("capabilities_compliance_status"); } }
+        private string? _explicitNullValueCapabilitiesComplianceStatus = default!;
 #nullable restore
 #else
-        public string CapabilitiesComplianceStatus { get; set; }
+        public string CapabilitiesComplianceStatus { get => _explicitNullValueCapabilitiesComplianceStatus; set { _explicitNullValueCapabilitiesComplianceStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities_compliance_status"); else _explicitNullProperties?.Remove("capabilities_compliance_status"); } }
+        private string _explicitNullValueCapabilitiesComplianceStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasBusinessSetupConfigXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasBusinessSetupConfigXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasBusinessSetupConfigXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasBusinessSetupConfigXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("ad_accounts", AdAccounts);
             writer.WriteStringValue("business_capabilities_status", BusinessCapabilitiesStatus);
             writer.WriteStringValue("capabilities_compliance_status", CapabilitiesComplianceStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

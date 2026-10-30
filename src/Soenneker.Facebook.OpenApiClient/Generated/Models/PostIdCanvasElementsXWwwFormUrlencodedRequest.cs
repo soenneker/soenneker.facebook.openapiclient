@@ -11,112 +11,158 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdCanvasElementsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canvas_button") is { } nullNodeCanvasButton && nullNodeCanvasButton.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasButton = null;
+            if (parseNode.GetChildNode("canvas_carousel") is { } nullNodeCanvasCarousel && nullNodeCanvasCarousel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasCarousel = null;
+            if (parseNode.GetChildNode("canvas_existing_post") is { } nullNodeCanvasExistingPost && nullNodeCanvasExistingPost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasExistingPost = null;
+            if (parseNode.GetChildNode("canvas_footer") is { } nullNodeCanvasFooter && nullNodeCanvasFooter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasFooter = null;
+            if (parseNode.GetChildNode("canvas_header") is { } nullNodeCanvasHeader && nullNodeCanvasHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasHeader = null;
+            if (parseNode.GetChildNode("canvas_lead_form") is { } nullNodeCanvasLeadForm && nullNodeCanvasLeadForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasLeadForm = null;
+            if (parseNode.GetChildNode("canvas_photo") is { } nullNodeCanvasPhoto && nullNodeCanvasPhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasPhoto = null;
+            if (parseNode.GetChildNode("canvas_product_list") is { } nullNodeCanvasProductList && nullNodeCanvasProductList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasProductList = null;
+            if (parseNode.GetChildNode("canvas_product_set") is { } nullNodeCanvasProductSet && nullNodeCanvasProductSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasProductSet = null;
+            if (parseNode.GetChildNode("canvas_store_locator") is { } nullNodeCanvasStoreLocator && nullNodeCanvasStoreLocator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasStoreLocator = null;
+            if (parseNode.GetChildNode("canvas_template_video") is { } nullNodeCanvasTemplateVideo && nullNodeCanvasTemplateVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasTemplateVideo = null;
+            if (parseNode.GetChildNode("canvas_text") is { } nullNodeCanvasText && nullNodeCanvasText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasText = null;
+            if (parseNode.GetChildNode("canvas_video") is { } nullNodeCanvasVideo && nullNodeCanvasVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanvasVideo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasButton { get; set; }
+        public string? CanvasButton { get => _explicitNullValueCanvasButton; set { _explicitNullValueCanvasButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_button"); else _explicitNullProperties?.Remove("canvas_button"); } }
+        private string? _explicitNullValueCanvasButton = default!;
 #nullable restore
 #else
-        public string CanvasButton { get; set; }
+        public string CanvasButton { get => _explicitNullValueCanvasButton; set { _explicitNullValueCanvasButton = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_button"); else _explicitNullProperties?.Remove("canvas_button"); } }
+        private string _explicitNullValueCanvasButton = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasCarousel { get; set; }
+        public string? CanvasCarousel { get => _explicitNullValueCanvasCarousel; set { _explicitNullValueCanvasCarousel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_carousel"); else _explicitNullProperties?.Remove("canvas_carousel"); } }
+        private string? _explicitNullValueCanvasCarousel = default!;
 #nullable restore
 #else
-        public string CanvasCarousel { get; set; }
+        public string CanvasCarousel { get => _explicitNullValueCanvasCarousel; set { _explicitNullValueCanvasCarousel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_carousel"); else _explicitNullProperties?.Remove("canvas_carousel"); } }
+        private string _explicitNullValueCanvasCarousel = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasExistingPost { get; set; }
+        public string? CanvasExistingPost { get => _explicitNullValueCanvasExistingPost; set { _explicitNullValueCanvasExistingPost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_existing_post"); else _explicitNullProperties?.Remove("canvas_existing_post"); } }
+        private string? _explicitNullValueCanvasExistingPost = default!;
 #nullable restore
 #else
-        public string CanvasExistingPost { get; set; }
+        public string CanvasExistingPost { get => _explicitNullValueCanvasExistingPost; set { _explicitNullValueCanvasExistingPost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_existing_post"); else _explicitNullProperties?.Remove("canvas_existing_post"); } }
+        private string _explicitNullValueCanvasExistingPost = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasFooter { get; set; }
+        public string? CanvasFooter { get => _explicitNullValueCanvasFooter; set { _explicitNullValueCanvasFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_footer"); else _explicitNullProperties?.Remove("canvas_footer"); } }
+        private string? _explicitNullValueCanvasFooter = default!;
 #nullable restore
 #else
-        public string CanvasFooter { get; set; }
+        public string CanvasFooter { get => _explicitNullValueCanvasFooter; set { _explicitNullValueCanvasFooter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_footer"); else _explicitNullProperties?.Remove("canvas_footer"); } }
+        private string _explicitNullValueCanvasFooter = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasHeader { get; set; }
+        public string? CanvasHeader { get => _explicitNullValueCanvasHeader; set { _explicitNullValueCanvasHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_header"); else _explicitNullProperties?.Remove("canvas_header"); } }
+        private string? _explicitNullValueCanvasHeader = default!;
 #nullable restore
 #else
-        public string CanvasHeader { get; set; }
+        public string CanvasHeader { get => _explicitNullValueCanvasHeader; set { _explicitNullValueCanvasHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_header"); else _explicitNullProperties?.Remove("canvas_header"); } }
+        private string _explicitNullValueCanvasHeader = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasLeadForm { get; set; }
+        public string? CanvasLeadForm { get => _explicitNullValueCanvasLeadForm; set { _explicitNullValueCanvasLeadForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_lead_form"); else _explicitNullProperties?.Remove("canvas_lead_form"); } }
+        private string? _explicitNullValueCanvasLeadForm = default!;
 #nullable restore
 #else
-        public string CanvasLeadForm { get; set; }
+        public string CanvasLeadForm { get => _explicitNullValueCanvasLeadForm; set { _explicitNullValueCanvasLeadForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_lead_form"); else _explicitNullProperties?.Remove("canvas_lead_form"); } }
+        private string _explicitNullValueCanvasLeadForm = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasPhoto { get; set; }
+        public string? CanvasPhoto { get => _explicitNullValueCanvasPhoto; set { _explicitNullValueCanvasPhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_photo"); else _explicitNullProperties?.Remove("canvas_photo"); } }
+        private string? _explicitNullValueCanvasPhoto = default!;
 #nullable restore
 #else
-        public string CanvasPhoto { get; set; }
+        public string CanvasPhoto { get => _explicitNullValueCanvasPhoto; set { _explicitNullValueCanvasPhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_photo"); else _explicitNullProperties?.Remove("canvas_photo"); } }
+        private string _explicitNullValueCanvasPhoto = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasProductList { get; set; }
+        public string? CanvasProductList { get => _explicitNullValueCanvasProductList; set { _explicitNullValueCanvasProductList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_product_list"); else _explicitNullProperties?.Remove("canvas_product_list"); } }
+        private string? _explicitNullValueCanvasProductList = default!;
 #nullable restore
 #else
-        public string CanvasProductList { get; set; }
+        public string CanvasProductList { get => _explicitNullValueCanvasProductList; set { _explicitNullValueCanvasProductList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_product_list"); else _explicitNullProperties?.Remove("canvas_product_list"); } }
+        private string _explicitNullValueCanvasProductList = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasProductSet { get; set; }
+        public string? CanvasProductSet { get => _explicitNullValueCanvasProductSet; set { _explicitNullValueCanvasProductSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_product_set"); else _explicitNullProperties?.Remove("canvas_product_set"); } }
+        private string? _explicitNullValueCanvasProductSet = default!;
 #nullable restore
 #else
-        public string CanvasProductSet { get; set; }
+        public string CanvasProductSet { get => _explicitNullValueCanvasProductSet; set { _explicitNullValueCanvasProductSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_product_set"); else _explicitNullProperties?.Remove("canvas_product_set"); } }
+        private string _explicitNullValueCanvasProductSet = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasStoreLocator { get; set; }
+        public string? CanvasStoreLocator { get => _explicitNullValueCanvasStoreLocator; set { _explicitNullValueCanvasStoreLocator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_store_locator"); else _explicitNullProperties?.Remove("canvas_store_locator"); } }
+        private string? _explicitNullValueCanvasStoreLocator = default!;
 #nullable restore
 #else
-        public string CanvasStoreLocator { get; set; }
+        public string CanvasStoreLocator { get => _explicitNullValueCanvasStoreLocator; set { _explicitNullValueCanvasStoreLocator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_store_locator"); else _explicitNullProperties?.Remove("canvas_store_locator"); } }
+        private string _explicitNullValueCanvasStoreLocator = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasTemplateVideo { get; set; }
+        public string? CanvasTemplateVideo { get => _explicitNullValueCanvasTemplateVideo; set { _explicitNullValueCanvasTemplateVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_template_video"); else _explicitNullProperties?.Remove("canvas_template_video"); } }
+        private string? _explicitNullValueCanvasTemplateVideo = default!;
 #nullable restore
 #else
-        public string CanvasTemplateVideo { get; set; }
+        public string CanvasTemplateVideo { get => _explicitNullValueCanvasTemplateVideo; set { _explicitNullValueCanvasTemplateVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_template_video"); else _explicitNullProperties?.Remove("canvas_template_video"); } }
+        private string _explicitNullValueCanvasTemplateVideo = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasText { get; set; }
+        public string? CanvasText { get => _explicitNullValueCanvasText; set { _explicitNullValueCanvasText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_text"); else _explicitNullProperties?.Remove("canvas_text"); } }
+        private string? _explicitNullValueCanvasText = default!;
 #nullable restore
 #else
-        public string CanvasText { get; set; }
+        public string CanvasText { get => _explicitNullValueCanvasText; set { _explicitNullValueCanvasText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_text"); else _explicitNullProperties?.Remove("canvas_text"); } }
+        private string _explicitNullValueCanvasText = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanvasVideo { get; set; }
+        public string? CanvasVideo { get => _explicitNullValueCanvasVideo; set { _explicitNullValueCanvasVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_video"); else _explicitNullProperties?.Remove("canvas_video"); } }
+        private string? _explicitNullValueCanvasVideo = default!;
 #nullable restore
 #else
-        public string CanvasVideo { get; set; }
+        public string CanvasVideo { get => _explicitNullValueCanvasVideo; set { _explicitNullValueCanvasVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canvas_video"); else _explicitNullProperties?.Remove("canvas_video"); } }
+        private string _explicitNullValueCanvasVideo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCanvasElementsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -133,7 +179,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdCanvasElementsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCanvasElementsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCanvasElementsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,6 +224,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("canvas_template_video", CanvasTemplateVideo);
             writer.WriteStringValue("canvas_text", CanvasText);
             writer.WriteStringValue("canvas_video", CanvasVideo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

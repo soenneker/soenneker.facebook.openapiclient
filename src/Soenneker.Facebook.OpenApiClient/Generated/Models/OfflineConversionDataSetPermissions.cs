@@ -11,17 +11,32 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OfflineConversionDataSetPermissions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("can_edit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
+            if (parseNode.GetChildNode("can_edit_or_upload") is { } nullNodeCanEditOrUpload && nullNodeCanEditOrUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEditOrUpload = null;
+            if (parseNode.GetChildNode("can_upload") is { } nullNodeCanUpload && nullNodeCanUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanUpload = null;
+            if (parseNode.GetChildNode("should_block_vanilla_business_employee_access") is { } nullNodeShouldBlockVanillaBusinessEmployeeAccess && nullNodeShouldBlockVanillaBusinessEmployeeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldBlockVanillaBusinessEmployeeAccess = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The can_edit property</summary>
-        public bool? CanEdit { get; set; }
+        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_edit"); else _explicitNullProperties?.Remove("can_edit"); } }
+        private bool? _explicitNullValueCanEdit = default!;
         /// <summary>The can_edit_or_upload property</summary>
-        public bool? CanEditOrUpload { get; set; }
+        public bool? CanEditOrUpload { get => _explicitNullValueCanEditOrUpload; set { _explicitNullValueCanEditOrUpload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_edit_or_upload"); else _explicitNullProperties?.Remove("can_edit_or_upload"); } }
+        private bool? _explicitNullValueCanEditOrUpload = default!;
         /// <summary>The can_upload property</summary>
-        public bool? CanUpload { get; set; }
+        public bool? CanUpload { get => _explicitNullValueCanUpload; set { _explicitNullValueCanUpload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_upload"); else _explicitNullProperties?.Remove("can_upload"); } }
+        private bool? _explicitNullValueCanUpload = default!;
         /// <summary>The should_block_vanilla_business_employee_access property</summary>
-        public bool? ShouldBlockVanillaBusinessEmployeeAccess { get; set; }
+        public bool? ShouldBlockVanillaBusinessEmployeeAccess { get => _explicitNullValueShouldBlockVanillaBusinessEmployeeAccess; set { _explicitNullValueShouldBlockVanillaBusinessEmployeeAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("should_block_vanilla_business_employee_access"); else _explicitNullProperties?.Remove("should_block_vanilla_business_employee_access"); } }
+        private bool? _explicitNullValueShouldBlockVanillaBusinessEmployeeAccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetPermissions"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetPermissions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetPermissions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetPermissions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("can_edit_or_upload", CanEditOrUpload);
             writer.WriteBoolValue("can_upload", CanUpload);
             writer.WriteBoolValue("should_block_vanilla_business_employee_access", ShouldBlockVanillaBusinessEmployeeAccess);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

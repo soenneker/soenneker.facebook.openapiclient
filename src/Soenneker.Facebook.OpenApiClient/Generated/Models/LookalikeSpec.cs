@@ -11,90 +11,134 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LookalikeSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("is_created_by_recommended_dfca") is { } nullNodeIsCreatedByRecommendedDfca && nullNodeIsCreatedByRecommendedDfca.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCreatedByRecommendedDfca = null;
+            if (parseNode.GetChildNode("is_financial_service") is { } nullNodeIsFinancialService && nullNodeIsFinancialService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFinancialService = null;
+            if (parseNode.GetChildNode("is_parent_lal") is { } nullNodeIsParentLal && nullNodeIsParentLal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsParentLal = null;
+            if (parseNode.GetChildNode("origin") is { } nullNodeOrigin && nullNodeOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origin = null;
+            if (parseNode.GetChildNode("origin_event_name") is { } nullNodeOriginEventName && nullNodeOriginEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginEventName = null;
+            if (parseNode.GetChildNode("origin_event_source_name") is { } nullNodeOriginEventSourceName && nullNodeOriginEventSourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginEventSourceName = null;
+            if (parseNode.GetChildNode("origin_event_source_type") is { } nullNodeOriginEventSourceType && nullNodeOriginEventSourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginEventSourceType = null;
+            if (parseNode.GetChildNode("product_set_name") is { } nullNodeProductSetName && nullNodeProductSetName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSetName = null;
+            if (parseNode.GetChildNode("ratio") is { } nullNodeRatio && nullNodeRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ratio = null;
+            if (parseNode.GetChildNode("starting_ratio") is { } nullNodeStartingRatio && nullNodeStartingRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingRatio = null;
+            if (parseNode.GetChildNode("target_countries") is { } nullNodeTargetCountries && nullNodeTargetCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetCountries = null;
+            if (parseNode.GetChildNode("target_country_names") is { } nullNodeTargetCountryNames && nullNodeTargetCountryNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetCountryNames = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get; set; }
+        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public string Country { get; set; }
+        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>The is_created_by_recommended_dfca property</summary>
-        public bool? IsCreatedByRecommendedDfca { get; set; }
+        public bool? IsCreatedByRecommendedDfca { get => _explicitNullValueIsCreatedByRecommendedDfca; set { _explicitNullValueIsCreatedByRecommendedDfca = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_created_by_recommended_dfca"); else _explicitNullProperties?.Remove("is_created_by_recommended_dfca"); } }
+        private bool? _explicitNullValueIsCreatedByRecommendedDfca = default!;
         /// <summary>The is_financial_service property</summary>
-        public bool? IsFinancialService { get; set; }
+        public bool? IsFinancialService { get => _explicitNullValueIsFinancialService; set { _explicitNullValueIsFinancialService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_financial_service"); else _explicitNullProperties?.Remove("is_financial_service"); } }
+        private bool? _explicitNullValueIsFinancialService = default!;
         /// <summary>The is_parent_lal property</summary>
-        public bool? IsParentLal { get; set; }
+        public bool? IsParentLal { get => _explicitNullValueIsParentLal; set { _explicitNullValueIsParentLal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_parent_lal"); else _explicitNullProperties?.Remove("is_parent_lal"); } }
+        private bool? _explicitNullValueIsParentLal = default!;
         /// <summary>The origin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecOriginItemProperty>? Origin { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecOriginItemProperty>? Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecOriginItemProperty>? _explicitNullValueOrigin = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecOriginItemProperty> Origin { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecOriginItemProperty> Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpecOriginItemProperty> _explicitNullValueOrigin = default!;
 #endif
         /// <summary>The origin_event_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginEventName { get; set; }
+        public string? OriginEventName { get => _explicitNullValueOriginEventName; set { _explicitNullValueOriginEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_event_name"); else _explicitNullProperties?.Remove("origin_event_name"); } }
+        private string? _explicitNullValueOriginEventName = default!;
 #nullable restore
 #else
-        public string OriginEventName { get; set; }
+        public string OriginEventName { get => _explicitNullValueOriginEventName; set { _explicitNullValueOriginEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_event_name"); else _explicitNullProperties?.Remove("origin_event_name"); } }
+        private string _explicitNullValueOriginEventName = default!;
 #endif
         /// <summary>The origin_event_source_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginEventSourceName { get; set; }
+        public string? OriginEventSourceName { get => _explicitNullValueOriginEventSourceName; set { _explicitNullValueOriginEventSourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_event_source_name"); else _explicitNullProperties?.Remove("origin_event_source_name"); } }
+        private string? _explicitNullValueOriginEventSourceName = default!;
 #nullable restore
 #else
-        public string OriginEventSourceName { get; set; }
+        public string OriginEventSourceName { get => _explicitNullValueOriginEventSourceName; set { _explicitNullValueOriginEventSourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_event_source_name"); else _explicitNullProperties?.Remove("origin_event_source_name"); } }
+        private string _explicitNullValueOriginEventSourceName = default!;
 #endif
         /// <summary>The origin_event_source_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginEventSourceType { get; set; }
+        public string? OriginEventSourceType { get => _explicitNullValueOriginEventSourceType; set { _explicitNullValueOriginEventSourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_event_source_type"); else _explicitNullProperties?.Remove("origin_event_source_type"); } }
+        private string? _explicitNullValueOriginEventSourceType = default!;
 #nullable restore
 #else
-        public string OriginEventSourceType { get; set; }
+        public string OriginEventSourceType { get => _explicitNullValueOriginEventSourceType; set { _explicitNullValueOriginEventSourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_event_source_type"); else _explicitNullProperties?.Remove("origin_event_source_type"); } }
+        private string _explicitNullValueOriginEventSourceType = default!;
 #endif
         /// <summary>The product_set_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductSetName { get; set; }
+        public string? ProductSetName { get => _explicitNullValueProductSetName; set { _explicitNullValueProductSetName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_name"); else _explicitNullProperties?.Remove("product_set_name"); } }
+        private string? _explicitNullValueProductSetName = default!;
 #nullable restore
 #else
-        public string ProductSetName { get; set; }
+        public string ProductSetName { get => _explicitNullValueProductSetName; set { _explicitNullValueProductSetName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_name"); else _explicitNullProperties?.Remove("product_set_name"); } }
+        private string _explicitNullValueProductSetName = default!;
 #endif
         /// <summary>The ratio property</summary>
-        public float? Ratio { get; set; }
+        public float? Ratio { get => _explicitNullValueRatio; set { _explicitNullValueRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratio"); else _explicitNullProperties?.Remove("ratio"); } }
+        private float? _explicitNullValueRatio = default!;
         /// <summary>The starting_ratio property</summary>
-        public float? StartingRatio { get; set; }
+        public float? StartingRatio { get => _explicitNullValueStartingRatio; set { _explicitNullValueStartingRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starting_ratio"); else _explicitNullProperties?.Remove("starting_ratio"); } }
+        private float? _explicitNullValueStartingRatio = default!;
         /// <summary>The target_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TargetCountries { get; set; }
+        public List<string>? TargetCountries { get => _explicitNullValueTargetCountries; set { _explicitNullValueTargetCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_countries"); else _explicitNullProperties?.Remove("target_countries"); } }
+        private List<string>? _explicitNullValueTargetCountries = default!;
 #nullable restore
 #else
-        public List<string> TargetCountries { get; set; }
+        public List<string> TargetCountries { get => _explicitNullValueTargetCountries; set { _explicitNullValueTargetCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_countries"); else _explicitNullProperties?.Remove("target_countries"); } }
+        private List<string> _explicitNullValueTargetCountries = default!;
 #endif
         /// <summary>The target_country_names property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? TargetCountryNames { get; set; }
+        public UntypedNode? TargetCountryNames { get => _explicitNullValueTargetCountryNames; set { _explicitNullValueTargetCountryNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_country_names"); else _explicitNullProperties?.Remove("target_country_names"); } }
+        private UntypedNode? _explicitNullValueTargetCountryNames = default!;
 #nullable restore
 #else
-        public UntypedNode TargetCountryNames { get; set; }
+        public UntypedNode TargetCountryNames { get => _explicitNullValueTargetCountryNames; set { _explicitNullValueTargetCountryNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_country_names"); else _explicitNullProperties?.Remove("target_country_names"); } }
+        private UntypedNode _explicitNullValueTargetCountryNames = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpec"/> and sets the default values.
@@ -111,7 +155,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LookalikeSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -158,6 +202,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("target_countries", TargetCountries);
             writer.WriteObjectValue<UntypedNode>("target_country_names", TargetCountryNames);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

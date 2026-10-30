@@ -11,88 +11,130 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdVideoCopyrightsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attribution_id") is { } nullNodeAttributionId && nullNodeAttributionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionId = null;
+            if (parseNode.GetChildNode("content_category") is { } nullNodeContentCategory && nullNodeContentCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentCategory = null;
+            if (parseNode.GetChildNode("copyright_content_id") is { } nullNodeCopyrightContentId && nullNodeCopyrightContentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CopyrightContentId = null;
+            if (parseNode.GetChildNode("excluded_ownership_countries") is { } nullNodeExcludedOwnershipCountries && nullNodeExcludedOwnershipCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedOwnershipCountries = null;
+            if (parseNode.GetChildNode("excluded_ownership_segments") is { } nullNodeExcludedOwnershipSegments && nullNodeExcludedOwnershipSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedOwnershipSegments = null;
+            if (parseNode.GetChildNode("is_reference_disabled") is { } nullNodeIsReferenceDisabled && nullNodeIsReferenceDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReferenceDisabled = null;
+            if (parseNode.GetChildNode("is_reference_video") is { } nullNodeIsReferenceVideo && nullNodeIsReferenceVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReferenceVideo = null;
+            if (parseNode.GetChildNode("monitoring_type") is { } nullNodeMonitoringType && nullNodeMonitoringType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonitoringType = null;
+            if (parseNode.GetChildNode("ownership_countries") is { } nullNodeOwnershipCountries && nullNodeOwnershipCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipCountries = null;
+            if (parseNode.GetChildNode("rule_id") is { } nullNodeRuleId && nullNodeRuleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleId = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("whitelisted_ids") is { } nullNodeWhitelistedIds && nullNodeWhitelistedIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelistedIds = null;
+            if (parseNode.GetChildNode("whitelisted_ig_user_ids") is { } nullNodeWhitelistedIgUserIds && nullNodeWhitelistedIgUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelistedIgUserIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attribution_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AttributionId { get; set; }
+        public string? AttributionId { get => _explicitNullValueAttributionId; set { _explicitNullValueAttributionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id"); else _explicitNullProperties?.Remove("attribution_id"); } }
+        private string? _explicitNullValueAttributionId = default!;
 #nullable restore
 #else
-        public string AttributionId { get; set; }
+        public string AttributionId { get => _explicitNullValueAttributionId; set { _explicitNullValueAttributionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id"); else _explicitNullProperties?.Remove("attribution_id"); } }
+        private string _explicitNullValueAttributionId = default!;
 #endif
         /// <summary>The content_category property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagevideoCopyrightsContentCategoryEnumParam? ContentCategory { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagevideoCopyrightsContentCategoryEnumParam? ContentCategory { get => _explicitNullValueContentCategory; set { _explicitNullValueContentCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_category"); else _explicitNullProperties?.Remove("content_category"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagevideoCopyrightsContentCategoryEnumParam? _explicitNullValueContentCategory = default!;
         /// <summary>The copyright_content_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CopyrightContentId { get; set; }
+        public string? CopyrightContentId { get => _explicitNullValueCopyrightContentId; set { _explicitNullValueCopyrightContentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyright_content_id"); else _explicitNullProperties?.Remove("copyright_content_id"); } }
+        private string? _explicitNullValueCopyrightContentId = default!;
 #nullable restore
 #else
-        public string CopyrightContentId { get; set; }
+        public string CopyrightContentId { get => _explicitNullValueCopyrightContentId; set { _explicitNullValueCopyrightContentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyright_content_id"); else _explicitNullProperties?.Remove("copyright_content_id"); } }
+        private string _explicitNullValueCopyrightContentId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExcludedOwnershipCountries { get; set; }
+        public string? ExcludedOwnershipCountries { get => _explicitNullValueExcludedOwnershipCountries; set { _explicitNullValueExcludedOwnershipCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_ownership_countries"); else _explicitNullProperties?.Remove("excluded_ownership_countries"); } }
+        private string? _explicitNullValueExcludedOwnershipCountries = default!;
 #nullable restore
 #else
-        public string ExcludedOwnershipCountries { get; set; }
+        public string ExcludedOwnershipCountries { get => _explicitNullValueExcludedOwnershipCountries; set { _explicitNullValueExcludedOwnershipCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_ownership_countries"); else _explicitNullProperties?.Remove("excluded_ownership_countries"); } }
+        private string _explicitNullValueExcludedOwnershipCountries = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExcludedOwnershipSegments { get; set; }
+        public string? ExcludedOwnershipSegments { get => _explicitNullValueExcludedOwnershipSegments; set { _explicitNullValueExcludedOwnershipSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_ownership_segments"); else _explicitNullProperties?.Remove("excluded_ownership_segments"); } }
+        private string? _explicitNullValueExcludedOwnershipSegments = default!;
 #nullable restore
 #else
-        public string ExcludedOwnershipSegments { get; set; }
+        public string ExcludedOwnershipSegments { get => _explicitNullValueExcludedOwnershipSegments; set { _explicitNullValueExcludedOwnershipSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_ownership_segments"); else _explicitNullProperties?.Remove("excluded_ownership_segments"); } }
+        private string _explicitNullValueExcludedOwnershipSegments = default!;
 #endif
         /// <summary>The is_reference_disabled property</summary>
-        public bool? IsReferenceDisabled { get; set; }
+        public bool? IsReferenceDisabled { get => _explicitNullValueIsReferenceDisabled; set { _explicitNullValueIsReferenceDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_reference_disabled"); else _explicitNullProperties?.Remove("is_reference_disabled"); } }
+        private bool? _explicitNullValueIsReferenceDisabled = default!;
         /// <summary>The is_reference_video property</summary>
-        public bool? IsReferenceVideo { get; set; }
+        public bool? IsReferenceVideo { get => _explicitNullValueIsReferenceVideo; set { _explicitNullValueIsReferenceVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_reference_video"); else _explicitNullProperties?.Remove("is_reference_video"); } }
+        private bool? _explicitNullValueIsReferenceVideo = default!;
         /// <summary>The monitoring_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagevideoCopyrightsMonitoringTypeEnumParam? MonitoringType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagevideoCopyrightsMonitoringTypeEnumParam? MonitoringType { get => _explicitNullValueMonitoringType; set { _explicitNullValueMonitoringType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monitoring_type"); else _explicitNullProperties?.Remove("monitoring_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagevideoCopyrightsMonitoringTypeEnumParam? _explicitNullValueMonitoringType = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnershipCountries { get; set; }
+        public string? OwnershipCountries { get => _explicitNullValueOwnershipCountries; set { _explicitNullValueOwnershipCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_countries"); else _explicitNullProperties?.Remove("ownership_countries"); } }
+        private string? _explicitNullValueOwnershipCountries = default!;
 #nullable restore
 #else
-        public string OwnershipCountries { get; set; }
+        public string OwnershipCountries { get => _explicitNullValueOwnershipCountries; set { _explicitNullValueOwnershipCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_countries"); else _explicitNullProperties?.Remove("ownership_countries"); } }
+        private string _explicitNullValueOwnershipCountries = default!;
 #endif
         /// <summary>The rule_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleId { get; set; }
+        public string? RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_id"); else _explicitNullProperties?.Remove("rule_id"); } }
+        private string? _explicitNullValueRuleId = default!;
 #nullable restore
 #else
-        public string RuleId { get; set; }
+        public string RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_id"); else _explicitNullProperties?.Remove("rule_id"); } }
+        private string _explicitNullValueRuleId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tags { get; set; }
+        public string? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private string? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public string Tags { get; set; }
+        public string Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private string _explicitNullValueTags = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhitelistedIds { get; set; }
+        public string? WhitelistedIds { get => _explicitNullValueWhitelistedIds; set { _explicitNullValueWhitelistedIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_ids"); else _explicitNullProperties?.Remove("whitelisted_ids"); } }
+        private string? _explicitNullValueWhitelistedIds = default!;
 #nullable restore
 #else
-        public string WhitelistedIds { get; set; }
+        public string WhitelistedIds { get => _explicitNullValueWhitelistedIds; set { _explicitNullValueWhitelistedIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_ids"); else _explicitNullProperties?.Remove("whitelisted_ids"); } }
+        private string _explicitNullValueWhitelistedIds = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhitelistedIgUserIds { get; set; }
+        public string? WhitelistedIgUserIds { get => _explicitNullValueWhitelistedIgUserIds; set { _explicitNullValueWhitelistedIgUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_ig_user_ids"); else _explicitNullProperties?.Remove("whitelisted_ig_user_ids"); } }
+        private string? _explicitNullValueWhitelistedIgUserIds = default!;
 #nullable restore
 #else
-        public string WhitelistedIgUserIds { get; set; }
+        public string WhitelistedIgUserIds { get => _explicitNullValueWhitelistedIgUserIds; set { _explicitNullValueWhitelistedIgUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_ig_user_ids"); else _explicitNullProperties?.Remove("whitelisted_ig_user_ids"); } }
+        private string _explicitNullValueWhitelistedIgUserIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdVideoCopyrightsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -109,7 +151,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdVideoCopyrightsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdVideoCopyrightsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdVideoCopyrightsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -154,6 +196,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("tags", Tags);
             writer.WriteStringValue("whitelisted_ids", WhitelistedIds);
             writer.WriteStringValue("whitelisted_ig_user_ids", WhitelistedIgUserIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

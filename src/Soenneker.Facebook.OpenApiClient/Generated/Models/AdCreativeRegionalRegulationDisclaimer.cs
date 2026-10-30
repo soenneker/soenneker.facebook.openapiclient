@@ -11,48 +11,70 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeRegionalRegulationDisclaimer : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("australia_finserv") is { } nullNodeAustraliaFinserv && nullNodeAustraliaFinserv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AustraliaFinserv = null;
+            if (parseNode.GetChildNode("india_finserv") is { } nullNodeIndiaFinserv && nullNodeIndiaFinserv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndiaFinserv = null;
+            if (parseNode.GetChildNode("singapore_universal") is { } nullNodeSingaporeUniversal && nullNodeSingaporeUniversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingaporeUniversal = null;
+            if (parseNode.GetChildNode("taiwan_finserv") is { } nullNodeTaiwanFinserv && nullNodeTaiwanFinserv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaiwanFinserv = null;
+            if (parseNode.GetChildNode("taiwan_universal") is { } nullNodeTaiwanUniversal && nullNodeTaiwanUniversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaiwanUniversal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The australia_finserv property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerAustraliaFinservProperty? AustraliaFinserv { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerAustraliaFinservProperty? AustraliaFinserv { get => _explicitNullValueAustraliaFinserv; set { _explicitNullValueAustraliaFinserv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("australia_finserv"); else _explicitNullProperties?.Remove("australia_finserv"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerAustraliaFinservProperty? _explicitNullValueAustraliaFinserv = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerAustraliaFinservProperty AustraliaFinserv { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerAustraliaFinservProperty AustraliaFinserv { get => _explicitNullValueAustraliaFinserv; set { _explicitNullValueAustraliaFinserv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("australia_finserv"); else _explicitNullProperties?.Remove("australia_finserv"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerAustraliaFinservProperty _explicitNullValueAustraliaFinserv = default!;
 #endif
         /// <summary>The india_finserv property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerIndiaFinservProperty? IndiaFinserv { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerIndiaFinservProperty? IndiaFinserv { get => _explicitNullValueIndiaFinserv; set { _explicitNullValueIndiaFinserv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india_finserv"); else _explicitNullProperties?.Remove("india_finserv"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerIndiaFinservProperty? _explicitNullValueIndiaFinserv = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerIndiaFinservProperty IndiaFinserv { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerIndiaFinservProperty IndiaFinserv { get => _explicitNullValueIndiaFinserv; set { _explicitNullValueIndiaFinserv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india_finserv"); else _explicitNullProperties?.Remove("india_finserv"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerIndiaFinservProperty _explicitNullValueIndiaFinserv = default!;
 #endif
         /// <summary>The singapore_universal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty? SingaporeUniversal { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty? SingaporeUniversal { get => _explicitNullValueSingaporeUniversal; set { _explicitNullValueSingaporeUniversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singapore_universal"); else _explicitNullProperties?.Remove("singapore_universal"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty? _explicitNullValueSingaporeUniversal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty SingaporeUniversal { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty SingaporeUniversal { get => _explicitNullValueSingaporeUniversal; set { _explicitNullValueSingaporeUniversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singapore_universal"); else _explicitNullProperties?.Remove("singapore_universal"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty _explicitNullValueSingaporeUniversal = default!;
 #endif
         /// <summary>The taiwan_finserv property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty? TaiwanFinserv { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty? TaiwanFinserv { get => _explicitNullValueTaiwanFinserv; set { _explicitNullValueTaiwanFinserv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_finserv"); else _explicitNullProperties?.Remove("taiwan_finserv"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty? _explicitNullValueTaiwanFinserv = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty TaiwanFinserv { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty TaiwanFinserv { get => _explicitNullValueTaiwanFinserv; set { _explicitNullValueTaiwanFinserv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_finserv"); else _explicitNullProperties?.Remove("taiwan_finserv"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty _explicitNullValueTaiwanFinserv = default!;
 #endif
         /// <summary>The taiwan_universal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty? TaiwanUniversal { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty? TaiwanUniversal { get => _explicitNullValueTaiwanUniversal; set { _explicitNullValueTaiwanUniversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_universal"); else _explicitNullProperties?.Remove("taiwan_universal"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty? _explicitNullValueTaiwanUniversal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty TaiwanUniversal { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty TaiwanUniversal { get => _explicitNullValueTaiwanUniversal; set { _explicitNullValueTaiwanUniversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_universal"); else _explicitNullProperties?.Remove("taiwan_universal"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty _explicitNullValueTaiwanUniversal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerSingaporeUniversalProperty>("singapore_universal", SingaporeUniversal);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanFinservProperty>("taiwan_finserv", TaiwanFinserv);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimerTaiwanUniversalProperty>("taiwan_universal", TaiwanUniversal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

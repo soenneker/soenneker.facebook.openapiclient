@@ -11,38 +11,60 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAssetFeedAdditionalData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("automated_product_tags") is { } nullNodeAutomatedProductTags && nullNodeAutomatedProductTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomatedProductTags = null;
+            if (parseNode.GetChildNode("brand_page_id") is { } nullNodeBrandPageId && nullNodeBrandPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandPageId = null;
+            if (parseNode.GetChildNode("is_click_to_message") is { } nullNodeIsClickToMessage && nullNodeIsClickToMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsClickToMessage = null;
+            if (parseNode.GetChildNode("multi_share_end_card") is { } nullNodeMultiShareEndCard && nullNodeMultiShareEndCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiShareEndCard = null;
+            if (parseNode.GetChildNode("page_welcome_message") is { } nullNodePageWelcomeMessage && nullNodePageWelcomeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageWelcomeMessage = null;
+            if (parseNode.GetChildNode("partner_app_welcome_message_flow_id") is { } nullNodePartnerAppWelcomeMessageFlowId && nullNodePartnerAppWelcomeMessageFlowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerAppWelcomeMessageFlowId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The automated_product_tags property</summary>
-        public bool? AutomatedProductTags { get; set; }
+        public bool? AutomatedProductTags { get => _explicitNullValueAutomatedProductTags; set { _explicitNullValueAutomatedProductTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automated_product_tags"); else _explicitNullProperties?.Remove("automated_product_tags"); } }
+        private bool? _explicitNullValueAutomatedProductTags = default!;
         /// <summary>The brand_page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandPageId { get; set; }
+        public string? BrandPageId { get => _explicitNullValueBrandPageId; set { _explicitNullValueBrandPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_page_id"); else _explicitNullProperties?.Remove("brand_page_id"); } }
+        private string? _explicitNullValueBrandPageId = default!;
 #nullable restore
 #else
-        public string BrandPageId { get; set; }
+        public string BrandPageId { get => _explicitNullValueBrandPageId; set { _explicitNullValueBrandPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_page_id"); else _explicitNullProperties?.Remove("brand_page_id"); } }
+        private string _explicitNullValueBrandPageId = default!;
 #endif
         /// <summary>The is_click_to_message property</summary>
-        public bool? IsClickToMessage { get; set; }
+        public bool? IsClickToMessage { get => _explicitNullValueIsClickToMessage; set { _explicitNullValueIsClickToMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_click_to_message"); else _explicitNullProperties?.Remove("is_click_to_message"); } }
+        private bool? _explicitNullValueIsClickToMessage = default!;
         /// <summary>The multi_share_end_card property</summary>
-        public bool? MultiShareEndCard { get; set; }
+        public bool? MultiShareEndCard { get => _explicitNullValueMultiShareEndCard; set { _explicitNullValueMultiShareEndCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_share_end_card"); else _explicitNullProperties?.Remove("multi_share_end_card"); } }
+        private bool? _explicitNullValueMultiShareEndCard = default!;
         /// <summary>The page_welcome_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageWelcomeMessage { get; set; }
+        public string? PageWelcomeMessage { get => _explicitNullValuePageWelcomeMessage; set { _explicitNullValuePageWelcomeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_welcome_message"); else _explicitNullProperties?.Remove("page_welcome_message"); } }
+        private string? _explicitNullValuePageWelcomeMessage = default!;
 #nullable restore
 #else
-        public string PageWelcomeMessage { get; set; }
+        public string PageWelcomeMessage { get => _explicitNullValuePageWelcomeMessage; set { _explicitNullValuePageWelcomeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_welcome_message"); else _explicitNullProperties?.Remove("page_welcome_message"); } }
+        private string _explicitNullValuePageWelcomeMessage = default!;
 #endif
         /// <summary>The partner_app_welcome_message_flow_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerAppWelcomeMessageFlowId { get; set; }
+        public string? PartnerAppWelcomeMessageFlowId { get => _explicitNullValuePartnerAppWelcomeMessageFlowId; set { _explicitNullValuePartnerAppWelcomeMessageFlowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_welcome_message_flow_id"); else _explicitNullProperties?.Remove("partner_app_welcome_message_flow_id"); } }
+        private string? _explicitNullValuePartnerAppWelcomeMessageFlowId = default!;
 #nullable restore
 #else
-        public string PartnerAppWelcomeMessageFlowId { get; set; }
+        public string PartnerAppWelcomeMessageFlowId { get => _explicitNullValuePartnerAppWelcomeMessageFlowId; set { _explicitNullValuePartnerAppWelcomeMessageFlowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_welcome_message_flow_id"); else _explicitNullProperties?.Remove("partner_app_welcome_message_flow_id"); } }
+        private string _explicitNullValuePartnerAppWelcomeMessageFlowId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedAdditionalData"/> and sets the default values.
@@ -59,7 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedAdditionalData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedAdditionalData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAssetFeedAdditionalData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("multi_share_end_card", MultiShareEndCard);
             writer.WriteStringValue("page_welcome_message", PageWelcomeMessage);
             writer.WriteStringValue("partner_app_welcome_message_flow_id", PartnerAppWelcomeMessageFlowId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

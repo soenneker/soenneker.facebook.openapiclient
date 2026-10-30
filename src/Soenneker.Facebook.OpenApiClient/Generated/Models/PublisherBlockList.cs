@@ -11,70 +11,104 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PublisherBlockList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("app_publishers") is { } nullNodeAppPublishers && nullNodeAppPublishers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppPublishers = null;
+            if (parseNode.GetChildNode("business_owner_id") is { } nullNodeBusinessOwnerId && nullNodeBusinessOwnerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessOwnerId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_auto_blocking_on") is { } nullNodeIsAutoBlockingOn && nullNodeIsAutoBlockingOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAutoBlockingOn = null;
+            if (parseNode.GetChildNode("is_eligible_at_campaign_level") is { } nullNodeIsEligibleAtCampaignLevel && nullNodeIsEligibleAtCampaignLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEligibleAtCampaignLevel = null;
+            if (parseNode.GetChildNode("last_update_time") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
+            if (parseNode.GetChildNode("last_update_user") is { } nullNodeLastUpdateUser && nullNodeLastUpdateUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateUser = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("owner_ad_account_id") is { } nullNodeOwnerAdAccountId && nullNodeOwnerAdAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerAdAccountId = null;
+            if (parseNode.GetChildNode("web_publishers") is { } nullNodeWebPublishers && nullNodeWebPublishers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebPublishers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app_publishers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AppPublisher>? AppPublishers { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AppPublisher>? AppPublishers { get => _explicitNullValueAppPublishers; set { _explicitNullValueAppPublishers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_publishers"); else _explicitNullProperties?.Remove("app_publishers"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AppPublisher>? _explicitNullValueAppPublishers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AppPublisher> AppPublishers { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AppPublisher> AppPublishers { get => _explicitNullValueAppPublishers; set { _explicitNullValueAppPublishers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_publishers"); else _explicitNullProperties?.Remove("app_publishers"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AppPublisher> _explicitNullValueAppPublishers = default!;
 #endif
         /// <summary>The business_owner_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessOwnerId { get; set; }
+        public string? BusinessOwnerId { get => _explicitNullValueBusinessOwnerId; set { _explicitNullValueBusinessOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_owner_id"); else _explicitNullProperties?.Remove("business_owner_id"); } }
+        private string? _explicitNullValueBusinessOwnerId = default!;
 #nullable restore
 #else
-        public string BusinessOwnerId { get; set; }
+        public string BusinessOwnerId { get => _explicitNullValueBusinessOwnerId; set { _explicitNullValueBusinessOwnerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_owner_id"); else _explicitNullProperties?.Remove("business_owner_id"); } }
+        private string _explicitNullValueBusinessOwnerId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_auto_blocking_on property</summary>
-        public bool? IsAutoBlockingOn { get; set; }
+        public bool? IsAutoBlockingOn { get => _explicitNullValueIsAutoBlockingOn; set { _explicitNullValueIsAutoBlockingOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_auto_blocking_on"); else _explicitNullProperties?.Remove("is_auto_blocking_on"); } }
+        private bool? _explicitNullValueIsAutoBlockingOn = default!;
         /// <summary>The is_eligible_at_campaign_level property</summary>
-        public bool? IsEligibleAtCampaignLevel { get; set; }
+        public bool? IsEligibleAtCampaignLevel { get => _explicitNullValueIsEligibleAtCampaignLevel; set { _explicitNullValueIsEligibleAtCampaignLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eligible_at_campaign_level"); else _explicitNullProperties?.Remove("is_eligible_at_campaign_level"); } }
+        private bool? _explicitNullValueIsEligibleAtCampaignLevel = default!;
         /// <summary>The last_update_time property</summary>
-        public DateTimeOffset? LastUpdateTime { get; set; }
+        public DateTimeOffset? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
+        private DateTimeOffset? _explicitNullValueLastUpdateTime = default!;
         /// <summary>The last_update_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastUpdateUser { get; set; }
+        public string? LastUpdateUser { get => _explicitNullValueLastUpdateUser; set { _explicitNullValueLastUpdateUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_user"); else _explicitNullProperties?.Remove("last_update_user"); } }
+        private string? _explicitNullValueLastUpdateUser = default!;
 #nullable restore
 #else
-        public string LastUpdateUser { get; set; }
+        public string LastUpdateUser { get => _explicitNullValueLastUpdateUser; set { _explicitNullValueLastUpdateUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_user"); else _explicitNullProperties?.Remove("last_update_user"); } }
+        private string _explicitNullValueLastUpdateUser = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The owner_ad_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerAdAccountId { get; set; }
+        public string? OwnerAdAccountId { get => _explicitNullValueOwnerAdAccountId; set { _explicitNullValueOwnerAdAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_ad_account_id"); else _explicitNullProperties?.Remove("owner_ad_account_id"); } }
+        private string? _explicitNullValueOwnerAdAccountId = default!;
 #nullable restore
 #else
-        public string OwnerAdAccountId { get; set; }
+        public string OwnerAdAccountId { get => _explicitNullValueOwnerAdAccountId; set { _explicitNullValueOwnerAdAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_ad_account_id"); else _explicitNullProperties?.Remove("owner_ad_account_id"); } }
+        private string _explicitNullValueOwnerAdAccountId = default!;
 #endif
         /// <summary>The web_publishers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher>? WebPublishers { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher>? WebPublishers { get => _explicitNullValueWebPublishers; set { _explicitNullValueWebPublishers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_publishers"); else _explicitNullProperties?.Remove("web_publishers"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher>? _explicitNullValueWebPublishers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher> WebPublishers { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher> WebPublishers { get => _explicitNullValueWebPublishers; set { _explicitNullValueWebPublishers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_publishers"); else _explicitNullProperties?.Remove("web_publishers"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher> _explicitNullValueWebPublishers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PublisherBlockList"/> and sets the default values.
@@ -91,7 +125,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PublisherBlockList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PublisherBlockList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PublisherBlockList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +164,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("owner_ad_account_id", OwnerAdAccountId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.WebPublisher>("web_publishers", WebPublishers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

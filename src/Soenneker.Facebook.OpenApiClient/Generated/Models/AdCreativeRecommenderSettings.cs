@@ -11,24 +11,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeRecommenderSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("preferred_events") is { } nullNodePreferredEvents && nullNodePreferredEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredEvents = null;
+            if (parseNode.GetChildNode("product_sales_channel") is { } nullNodeProductSalesChannel && nullNodeProductSalesChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSalesChannel = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The preferred_events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PreferredEvents { get; set; }
+        public List<string>? PreferredEvents { get => _explicitNullValuePreferredEvents; set { _explicitNullValuePreferredEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_events"); else _explicitNullProperties?.Remove("preferred_events"); } }
+        private List<string>? _explicitNullValuePreferredEvents = default!;
 #nullable restore
 #else
-        public List<string> PreferredEvents { get; set; }
+        public List<string> PreferredEvents { get => _explicitNullValuePreferredEvents; set { _explicitNullValuePreferredEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_events"); else _explicitNullProperties?.Remove("preferred_events"); } }
+        private List<string> _explicitNullValuePreferredEvents = default!;
 #endif
         /// <summary>The product_sales_channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductSalesChannel { get; set; }
+        public string? ProductSalesChannel { get => _explicitNullValueProductSalesChannel; set { _explicitNullValueProductSalesChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_sales_channel"); else _explicitNullProperties?.Remove("product_sales_channel"); } }
+        private string? _explicitNullValueProductSalesChannel = default!;
 #nullable restore
 #else
-        public string ProductSalesChannel { get; set; }
+        public string ProductSalesChannel { get => _explicitNullValueProductSalesChannel; set { _explicitNullValueProductSalesChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_sales_channel"); else _explicitNullProperties?.Remove("product_sales_channel"); } }
+        private string _explicitNullValueProductSalesChannel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRecommenderSettings"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRecommenderSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRecommenderSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRecommenderSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_events", PreferredEvents);
             writer.WriteStringValue("product_sales_channel", ProductSalesChannel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

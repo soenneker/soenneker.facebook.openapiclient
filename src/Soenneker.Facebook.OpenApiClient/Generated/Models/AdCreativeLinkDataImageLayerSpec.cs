@@ -11,67 +11,107 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeLinkDataImageLayerSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blending_mode") is { } nullNodeBlendingMode && nullNodeBlendingMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlendingMode = null;
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("frame_auto_show_enroll_status") is { } nullNodeFrameAutoShowEnrollStatus && nullNodeFrameAutoShowEnrollStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FrameAutoShowEnrollStatus = null;
+            if (parseNode.GetChildNode("frame_image_hash") is { } nullNodeFrameImageHash && nullNodeFrameImageHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FrameImageHash = null;
+            if (parseNode.GetChildNode("frame_source") is { } nullNodeFrameSource && nullNodeFrameSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FrameSource = null;
+            if (parseNode.GetChildNode("image_source") is { } nullNodeImageSource && nullNodeImageSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageSource = null;
+            if (parseNode.GetChildNode("layer_type") is { } nullNodeLayerType && nullNodeLayerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayerType = null;
+            if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
+            if (parseNode.GetChildNode("overlay_position") is { } nullNodeOverlayPosition && nullNodeOverlayPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlayPosition = null;
+            if (parseNode.GetChildNode("overlay_shape") is { } nullNodeOverlayShape && nullNodeOverlayShape.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlayShape = null;
+            if (parseNode.GetChildNode("scale") is { } nullNodeScale && nullNodeScale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scale = null;
+            if (parseNode.GetChildNode("shape_color") is { } nullNodeShapeColor && nullNodeShapeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShapeColor = null;
+            if (parseNode.GetChildNode("text_color") is { } nullNodeTextColor && nullNodeTextColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextColor = null;
+            if (parseNode.GetChildNode("text_font") is { } nullNodeTextFont && nullNodeTextFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFont = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blending_mode property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecBlendingMode? BlendingMode { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecBlendingMode? BlendingMode { get => _explicitNullValueBlendingMode; set { _explicitNullValueBlendingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blending_mode"); else _explicitNullProperties?.Remove("blending_mode"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecBlendingMode? _explicitNullValueBlendingMode = default!;
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty? Content { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty Content { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty _explicitNullValueContent = default!;
 #endif
         /// <summary>The frame_auto_show_enroll_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FrameAutoShowEnrollStatus { get; set; }
+        public string? FrameAutoShowEnrollStatus { get => _explicitNullValueFrameAutoShowEnrollStatus; set { _explicitNullValueFrameAutoShowEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frame_auto_show_enroll_status"); else _explicitNullProperties?.Remove("frame_auto_show_enroll_status"); } }
+        private string? _explicitNullValueFrameAutoShowEnrollStatus = default!;
 #nullable restore
 #else
-        public string FrameAutoShowEnrollStatus { get; set; }
+        public string FrameAutoShowEnrollStatus { get => _explicitNullValueFrameAutoShowEnrollStatus; set { _explicitNullValueFrameAutoShowEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frame_auto_show_enroll_status"); else _explicitNullProperties?.Remove("frame_auto_show_enroll_status"); } }
+        private string _explicitNullValueFrameAutoShowEnrollStatus = default!;
 #endif
         /// <summary>The frame_image_hash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FrameImageHash { get; set; }
+        public string? FrameImageHash { get => _explicitNullValueFrameImageHash; set { _explicitNullValueFrameImageHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frame_image_hash"); else _explicitNullProperties?.Remove("frame_image_hash"); } }
+        private string? _explicitNullValueFrameImageHash = default!;
 #nullable restore
 #else
-        public string FrameImageHash { get; set; }
+        public string FrameImageHash { get => _explicitNullValueFrameImageHash; set { _explicitNullValueFrameImageHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frame_image_hash"); else _explicitNullProperties?.Remove("frame_image_hash"); } }
+        private string _explicitNullValueFrameImageHash = default!;
 #endif
         /// <summary>The frame_source property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecFrameSource? FrameSource { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecFrameSource? FrameSource { get => _explicitNullValueFrameSource; set { _explicitNullValueFrameSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frame_source"); else _explicitNullProperties?.Remove("frame_source"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecFrameSource? _explicitNullValueFrameSource = default!;
         /// <summary>The image_source property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecImageSource? ImageSource { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecImageSource? ImageSource { get => _explicitNullValueImageSource; set { _explicitNullValueImageSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_source"); else _explicitNullProperties?.Remove("image_source"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecImageSource? _explicitNullValueImageSource = default!;
         /// <summary>The layer_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecLayerType? LayerType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecLayerType? LayerType { get => _explicitNullValueLayerType; set { _explicitNullValueLayerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layer_type"); else _explicitNullProperties?.Remove("layer_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecLayerType? _explicitNullValueLayerType = default!;
         /// <summary>The opacity property</summary>
-        public long? Opacity { get; set; }
+        public long? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        private long? _explicitNullValueOpacity = default!;
         /// <summary>The overlay_position property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecOverlayPosition? OverlayPosition { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecOverlayPosition? OverlayPosition { get => _explicitNullValueOverlayPosition; set { _explicitNullValueOverlayPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlay_position"); else _explicitNullProperties?.Remove("overlay_position"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecOverlayPosition? _explicitNullValueOverlayPosition = default!;
         /// <summary>The overlay_shape property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecOverlayShape? OverlayShape { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecOverlayShape? OverlayShape { get => _explicitNullValueOverlayShape; set { _explicitNullValueOverlayShape = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlay_shape"); else _explicitNullProperties?.Remove("overlay_shape"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecOverlayShape? _explicitNullValueOverlayShape = default!;
         /// <summary>The scale property</summary>
-        public long? Scale { get; set; }
+        public long? Scale { get => _explicitNullValueScale; set { _explicitNullValueScale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scale"); else _explicitNullProperties?.Remove("scale"); } }
+        private long? _explicitNullValueScale = default!;
         /// <summary>The shape_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShapeColor { get; set; }
+        public string? ShapeColor { get => _explicitNullValueShapeColor; set { _explicitNullValueShapeColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shape_color"); else _explicitNullProperties?.Remove("shape_color"); } }
+        private string? _explicitNullValueShapeColor = default!;
 #nullable restore
 #else
-        public string ShapeColor { get; set; }
+        public string ShapeColor { get => _explicitNullValueShapeColor; set { _explicitNullValueShapeColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shape_color"); else _explicitNullProperties?.Remove("shape_color"); } }
+        private string _explicitNullValueShapeColor = default!;
 #endif
         /// <summary>The text_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextColor { get; set; }
+        public string? TextColor { get => _explicitNullValueTextColor; set { _explicitNullValueTextColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color"); else _explicitNullProperties?.Remove("text_color"); } }
+        private string? _explicitNullValueTextColor = default!;
 #nullable restore
 #else
-        public string TextColor { get; set; }
+        public string TextColor { get => _explicitNullValueTextColor; set { _explicitNullValueTextColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color"); else _explicitNullProperties?.Remove("text_color"); } }
+        private string _explicitNullValueTextColor = default!;
 #endif
         /// <summary>The text_font property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecTextFont? TextFont { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecTextFont? TextFont { get => _explicitNullValueTextFont; set { _explicitNullValueTextFont = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_font"); else _explicitNullProperties?.Remove("text_font"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecTextFont? _explicitNullValueTextFont = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpec"/> and sets the default values.
         /// </summary>
@@ -87,7 +127,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -134,6 +174,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("shape_color", ShapeColor);
             writer.WriteStringValue("text_color", TextColor);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecTextFont>("text_font", TextFont);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

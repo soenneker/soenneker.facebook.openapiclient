@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "B5C0DC467D1B468F10A6351FA180DF5320D9F250571FF9C4EF858F4767745922AB9852217DDAC34CF08DD8B48554C887C655012CAD182575185557089D2B5B97",
-  "descriptionLocation": "../../../temp_63b2c64aa4184f1bab993fa422d6b516/openapi.fixed.json",
+  "descriptionHash": "DC5DC21E5356F5DDADB168F3910473BA48509EF2BE288A17F96AFB809933A130B37C2089097CA9C274183982D41640B97697A6C512A1F976517A09564AB4983B",
+  "descriptionLocation": "../../../temp_aa9f54b926924adcab49b946f92c1829/openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "FacebookOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Facebook.OpenApiClient",

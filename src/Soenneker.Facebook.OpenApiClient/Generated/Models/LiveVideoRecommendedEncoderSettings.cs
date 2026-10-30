@@ -11,32 +11,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LiveVideoRecommendedEncoderSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audio_codec_settings") is { } nullNodeAudioCodecSettings && nullNodeAudioCodecSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioCodecSettings = null;
+            if (parseNode.GetChildNode("streaming_protocol") is { } nullNodeStreamingProtocol && nullNodeStreamingProtocol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreamingProtocol = null;
+            if (parseNode.GetChildNode("video_codec_settings") is { } nullNodeVideoCodecSettings && nullNodeVideoCodecSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodecSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The audio_codec_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty? AudioCodecSettings { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty? AudioCodecSettings { get => _explicitNullValueAudioCodecSettings; set { _explicitNullValueAudioCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_codec_settings"); else _explicitNullProperties?.Remove("audio_codec_settings"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty? _explicitNullValueAudioCodecSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty AudioCodecSettings { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty AudioCodecSettings { get => _explicitNullValueAudioCodecSettings; set { _explicitNullValueAudioCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_codec_settings"); else _explicitNullProperties?.Remove("audio_codec_settings"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty _explicitNullValueAudioCodecSettings = default!;
 #endif
         /// <summary>The streaming_protocol property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreamingProtocol { get; set; }
+        public string? StreamingProtocol { get => _explicitNullValueStreamingProtocol; set { _explicitNullValueStreamingProtocol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("streaming_protocol"); else _explicitNullProperties?.Remove("streaming_protocol"); } }
+        private string? _explicitNullValueStreamingProtocol = default!;
 #nullable restore
 #else
-        public string StreamingProtocol { get; set; }
+        public string StreamingProtocol { get => _explicitNullValueStreamingProtocol; set { _explicitNullValueStreamingProtocol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("streaming_protocol"); else _explicitNullProperties?.Remove("streaming_protocol"); } }
+        private string _explicitNullValueStreamingProtocol = default!;
 #endif
         /// <summary>The video_codec_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty? VideoCodecSettings { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty? VideoCodecSettings { get => _explicitNullValueVideoCodecSettings; set { _explicitNullValueVideoCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_codec_settings"); else _explicitNullProperties?.Remove("video_codec_settings"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty? _explicitNullValueVideoCodecSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty VideoCodecSettings { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty VideoCodecSettings { get => _explicitNullValueVideoCodecSettings; set { _explicitNullValueVideoCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_codec_settings"); else _explicitNullProperties?.Remove("video_codec_settings"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty _explicitNullValueVideoCodecSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty>("audio_codec_settings", AudioCodecSettings);
             writer.WriteStringValue("streaming_protocol", StreamingProtocol);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty>("video_codec_settings", VideoCodecSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

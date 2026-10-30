@@ -11,23 +11,39 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdBudgetSchedulesXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("budget_value") is { } nullNodeBudgetValue && nullNodeBudgetValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValue = null;
+            if (parseNode.GetChildNode("budget_value_type") is { } nullNodeBudgetValueType && nullNodeBudgetValueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValueType = null;
+            if (parseNode.GetChildNode("time_end") is { } nullNodeTimeEnd && nullNodeTimeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeEnd = null;
+            if (parseNode.GetChildNode("time_start") is { } nullNodeTimeStart && nullNodeTimeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeStart = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The budget_value property</summary>
-        public long? BudgetValue { get; set; }
+        public long? BudgetValue { get => _explicitNullValueBudgetValue; set { _explicitNullValueBudgetValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value"); else _explicitNullProperties?.Remove("budget_value"); } }
+        private long? _explicitNullValueBudgetValue = default!;
         /// <summary>The budget_value_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BudgetValueType { get; set; }
+        public string? BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
+        private string? _explicitNullValueBudgetValueType = default!;
 #nullable restore
 #else
-        public string BudgetValueType { get; set; }
+        public string BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
+        private string _explicitNullValueBudgetValueType = default!;
 #endif
         /// <summary>The time_end property</summary>
-        public long? TimeEnd { get; set; }
+        public long? TimeEnd { get => _explicitNullValueTimeEnd; set { _explicitNullValueTimeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_end"); else _explicitNullProperties?.Remove("time_end"); } }
+        private long? _explicitNullValueTimeEnd = default!;
         /// <summary>The time_start property</summary>
-        public long? TimeStart { get; set; }
+        public long? TimeStart { get => _explicitNullValueTimeStart; set { _explicitNullValueTimeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_start"); else _explicitNullProperties?.Remove("time_start"); } }
+        private long? _explicitNullValueTimeStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdBudgetSchedulesXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdBudgetSchedulesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdBudgetSchedulesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdBudgetSchedulesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("budget_value_type", BudgetValueType);
             writer.WriteLongValue("time_end", TimeEnd);
             writer.WriteLongValue("time_start", TimeStart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

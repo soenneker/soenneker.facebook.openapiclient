@@ -11,58 +11,85 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdManagedPartnerBusinessSetupXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active_ad_account_id") is { } nullNodeActiveAdAccountId && nullNodeActiveAdAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveAdAccountId = null;
+            if (parseNode.GetChildNode("active_page_id") is { } nullNodeActivePageId && nullNodeActivePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivePageId = null;
+            if (parseNode.GetChildNode("partner_facebook_page_url") is { } nullNodePartnerFacebookPageUrl && nullNodePartnerFacebookPageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerFacebookPageUrl = null;
+            if (parseNode.GetChildNode("partner_registration_countries") is { } nullNodePartnerRegistrationCountries && nullNodePartnerRegistrationCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerRegistrationCountries = null;
+            if (parseNode.GetChildNode("seller_email_address") is { } nullNodeSellerEmailAddress && nullNodeSellerEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerEmailAddress = null;
+            if (parseNode.GetChildNode("seller_external_website_url") is { } nullNodeSellerExternalWebsiteUrl && nullNodeSellerExternalWebsiteUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerExternalWebsiteUrl = null;
+            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+        }
+
         /// <summary>The active_ad_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActiveAdAccountId { get; set; }
+        public string? ActiveAdAccountId { get => _explicitNullValueActiveAdAccountId; set { _explicitNullValueActiveAdAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_ad_account_id"); else _explicitNullProperties?.Remove("active_ad_account_id"); } }
+        private string? _explicitNullValueActiveAdAccountId = default!;
 #nullable restore
 #else
-        public string ActiveAdAccountId { get; set; }
+        public string ActiveAdAccountId { get => _explicitNullValueActiveAdAccountId; set { _explicitNullValueActiveAdAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_ad_account_id"); else _explicitNullProperties?.Remove("active_ad_account_id"); } }
+        private string _explicitNullValueActiveAdAccountId = default!;
 #endif
         /// <summary>The active_page_id property</summary>
-        public long? ActivePageId { get; set; }
+        public long? ActivePageId { get => _explicitNullValueActivePageId; set { _explicitNullValueActivePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_page_id"); else _explicitNullProperties?.Remove("active_page_id"); } }
+        private long? _explicitNullValueActivePageId = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The partner_facebook_page_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerFacebookPageUrl { get; set; }
+        public string? PartnerFacebookPageUrl { get => _explicitNullValuePartnerFacebookPageUrl; set { _explicitNullValuePartnerFacebookPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_facebook_page_url"); else _explicitNullProperties?.Remove("partner_facebook_page_url"); } }
+        private string? _explicitNullValuePartnerFacebookPageUrl = default!;
 #nullable restore
 #else
-        public string PartnerFacebookPageUrl { get; set; }
+        public string PartnerFacebookPageUrl { get => _explicitNullValuePartnerFacebookPageUrl; set { _explicitNullValuePartnerFacebookPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_facebook_page_url"); else _explicitNullProperties?.Remove("partner_facebook_page_url"); } }
+        private string _explicitNullValuePartnerFacebookPageUrl = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerRegistrationCountries { get; set; }
+        public string? PartnerRegistrationCountries { get => _explicitNullValuePartnerRegistrationCountries; set { _explicitNullValuePartnerRegistrationCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_registration_countries"); else _explicitNullProperties?.Remove("partner_registration_countries"); } }
+        private string? _explicitNullValuePartnerRegistrationCountries = default!;
 #nullable restore
 #else
-        public string PartnerRegistrationCountries { get; set; }
+        public string PartnerRegistrationCountries { get => _explicitNullValuePartnerRegistrationCountries; set { _explicitNullValuePartnerRegistrationCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_registration_countries"); else _explicitNullProperties?.Remove("partner_registration_countries"); } }
+        private string _explicitNullValuePartnerRegistrationCountries = default!;
 #endif
         /// <summary>The seller_email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SellerEmailAddress { get; set; }
+        public string? SellerEmailAddress { get => _explicitNullValueSellerEmailAddress; set { _explicitNullValueSellerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_email_address"); else _explicitNullProperties?.Remove("seller_email_address"); } }
+        private string? _explicitNullValueSellerEmailAddress = default!;
 #nullable restore
 #else
-        public string SellerEmailAddress { get; set; }
+        public string SellerEmailAddress { get => _explicitNullValueSellerEmailAddress; set { _explicitNullValueSellerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_email_address"); else _explicitNullProperties?.Remove("seller_email_address"); } }
+        private string _explicitNullValueSellerEmailAddress = default!;
 #endif
         /// <summary>The seller_external_website_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SellerExternalWebsiteUrl { get; set; }
+        public string? SellerExternalWebsiteUrl { get => _explicitNullValueSellerExternalWebsiteUrl; set { _explicitNullValueSellerExternalWebsiteUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_external_website_url"); else _explicitNullProperties?.Remove("seller_external_website_url"); } }
+        private string? _explicitNullValueSellerExternalWebsiteUrl = default!;
 #nullable restore
 #else
-        public string SellerExternalWebsiteUrl { get; set; }
+        public string SellerExternalWebsiteUrl { get => _explicitNullValueSellerExternalWebsiteUrl; set { _explicitNullValueSellerExternalWebsiteUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_external_website_url"); else _explicitNullProperties?.Remove("seller_external_website_url"); } }
+        private string _explicitNullValueSellerExternalWebsiteUrl = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Template { get; set; }
+        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private string? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public string Template { get; set; }
+        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private string _explicitNullValueTemplate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdManagedPartnerBusinessSetupXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdManagedPartnerBusinessSetupXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdManagedPartnerBusinessSetupXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdManagedPartnerBusinessSetupXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("seller_email_address", SellerEmailAddress);
             writer.WriteStringValue("seller_external_website_url", SellerExternalWebsiteUrl);
             writer.WriteStringValue("template", Template);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

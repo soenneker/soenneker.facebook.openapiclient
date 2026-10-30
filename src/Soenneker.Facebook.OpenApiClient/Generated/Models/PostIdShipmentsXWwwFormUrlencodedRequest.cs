@@ -11,82 +11,118 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdShipmentsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("external_redemption_link") is { } nullNodeExternalRedemptionLink && nullNodeExternalRedemptionLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalRedemptionLink = null;
+            if (parseNode.GetChildNode("external_shipment_id") is { } nullNodeExternalShipmentId && nullNodeExternalShipmentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalShipmentId = null;
+            if (parseNode.GetChildNode("fulfillment") is { } nullNodeFulfillment && nullNodeFulfillment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fulfillment = null;
+            if (parseNode.GetChildNode("idempotency_key") is { } nullNodeIdempotencyKey && nullNodeIdempotencyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdempotencyKey = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("merchant_order_reference") is { } nullNodeMerchantOrderReference && nullNodeMerchantOrderReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantOrderReference = null;
+            if (parseNode.GetChildNode("shipment_origin_postal_code") is { } nullNodeShipmentOriginPostalCode && nullNodeShipmentOriginPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentOriginPostalCode = null;
+            if (parseNode.GetChildNode("shipping_tax_details") is { } nullNodeShippingTaxDetails && nullNodeShippingTaxDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingTaxDetails = null;
+            if (parseNode.GetChildNode("should_use_default_fulfillment_location") is { } nullNodeShouldUseDefaultFulfillmentLocation && nullNodeShouldUseDefaultFulfillmentLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldUseDefaultFulfillmentLocation = null;
+            if (parseNode.GetChildNode("tracking_info") is { } nullNodeTrackingInfo && nullNodeTrackingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingInfo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The external_redemption_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalRedemptionLink { get; set; }
+        public string? ExternalRedemptionLink { get => _explicitNullValueExternalRedemptionLink; set { _explicitNullValueExternalRedemptionLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_redemption_link"); else _explicitNullProperties?.Remove("external_redemption_link"); } }
+        private string? _explicitNullValueExternalRedemptionLink = default!;
 #nullable restore
 #else
-        public string ExternalRedemptionLink { get; set; }
+        public string ExternalRedemptionLink { get => _explicitNullValueExternalRedemptionLink; set { _explicitNullValueExternalRedemptionLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_redemption_link"); else _explicitNullProperties?.Remove("external_redemption_link"); } }
+        private string _explicitNullValueExternalRedemptionLink = default!;
 #endif
         /// <summary>The external_shipment_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalShipmentId { get; set; }
+        public string? ExternalShipmentId { get => _explicitNullValueExternalShipmentId; set { _explicitNullValueExternalShipmentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_shipment_id"); else _explicitNullProperties?.Remove("external_shipment_id"); } }
+        private string? _explicitNullValueExternalShipmentId = default!;
 #nullable restore
 #else
-        public string ExternalShipmentId { get; set; }
+        public string ExternalShipmentId { get => _explicitNullValueExternalShipmentId; set { _explicitNullValueExternalShipmentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_shipment_id"); else _explicitNullProperties?.Remove("external_shipment_id"); } }
+        private string _explicitNullValueExternalShipmentId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fulfillment { get; set; }
+        public string? Fulfillment { get => _explicitNullValueFulfillment; set { _explicitNullValueFulfillment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment"); else _explicitNullProperties?.Remove("fulfillment"); } }
+        private string? _explicitNullValueFulfillment = default!;
 #nullable restore
 #else
-        public string Fulfillment { get; set; }
+        public string Fulfillment { get => _explicitNullValueFulfillment; set { _explicitNullValueFulfillment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment"); else _explicitNullProperties?.Remove("fulfillment"); } }
+        private string _explicitNullValueFulfillment = default!;
 #endif
         /// <summary>The idempotency_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdempotencyKey { get; set; }
+        public string? IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idempotency_key"); else _explicitNullProperties?.Remove("idempotency_key"); } }
+        private string? _explicitNullValueIdempotencyKey = default!;
 #nullable restore
 #else
-        public string IdempotencyKey { get; set; }
+        public string IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idempotency_key"); else _explicitNullProperties?.Remove("idempotency_key"); } }
+        private string _explicitNullValueIdempotencyKey = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Items { get; set; }
+        public string? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private string? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public string Items { get; set; }
+        public string Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private string _explicitNullValueItems = default!;
 #endif
         /// <summary>The merchant_order_reference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantOrderReference { get; set; }
+        public string? MerchantOrderReference { get => _explicitNullValueMerchantOrderReference; set { _explicitNullValueMerchantOrderReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_order_reference"); else _explicitNullProperties?.Remove("merchant_order_reference"); } }
+        private string? _explicitNullValueMerchantOrderReference = default!;
 #nullable restore
 #else
-        public string MerchantOrderReference { get; set; }
+        public string MerchantOrderReference { get => _explicitNullValueMerchantOrderReference; set { _explicitNullValueMerchantOrderReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_order_reference"); else _explicitNullProperties?.Remove("merchant_order_reference"); } }
+        private string _explicitNullValueMerchantOrderReference = default!;
 #endif
         /// <summary>The shipment_origin_postal_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentOriginPostalCode { get; set; }
+        public string? ShipmentOriginPostalCode { get => _explicitNullValueShipmentOriginPostalCode; set { _explicitNullValueShipmentOriginPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment_origin_postal_code"); else _explicitNullProperties?.Remove("shipment_origin_postal_code"); } }
+        private string? _explicitNullValueShipmentOriginPostalCode = default!;
 #nullable restore
 #else
-        public string ShipmentOriginPostalCode { get; set; }
+        public string ShipmentOriginPostalCode { get => _explicitNullValueShipmentOriginPostalCode; set { _explicitNullValueShipmentOriginPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment_origin_postal_code"); else _explicitNullProperties?.Remove("shipment_origin_postal_code"); } }
+        private string _explicitNullValueShipmentOriginPostalCode = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingTaxDetails { get; set; }
+        public string? ShippingTaxDetails { get => _explicitNullValueShippingTaxDetails; set { _explicitNullValueShippingTaxDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_tax_details"); else _explicitNullProperties?.Remove("shipping_tax_details"); } }
+        private string? _explicitNullValueShippingTaxDetails = default!;
 #nullable restore
 #else
-        public string ShippingTaxDetails { get; set; }
+        public string ShippingTaxDetails { get => _explicitNullValueShippingTaxDetails; set { _explicitNullValueShippingTaxDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipping_tax_details"); else _explicitNullProperties?.Remove("shipping_tax_details"); } }
+        private string _explicitNullValueShippingTaxDetails = default!;
 #endif
         /// <summary>The should_use_default_fulfillment_location property</summary>
-        public bool? ShouldUseDefaultFulfillmentLocation { get; set; }
+        public bool? ShouldUseDefaultFulfillmentLocation { get => _explicitNullValueShouldUseDefaultFulfillmentLocation; set { _explicitNullValueShouldUseDefaultFulfillmentLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("should_use_default_fulfillment_location"); else _explicitNullProperties?.Remove("should_use_default_fulfillment_location"); } }
+        private bool? _explicitNullValueShouldUseDefaultFulfillmentLocation = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingInfo { get; set; }
+        public string? TrackingInfo { get => _explicitNullValueTrackingInfo; set { _explicitNullValueTrackingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_info"); else _explicitNullProperties?.Remove("tracking_info"); } }
+        private string? _explicitNullValueTrackingInfo = default!;
 #nullable restore
 #else
-        public string TrackingInfo { get; set; }
+        public string TrackingInfo { get => _explicitNullValueTrackingInfo; set { _explicitNullValueTrackingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_info"); else _explicitNullProperties?.Remove("tracking_info"); } }
+        private string _explicitNullValueTrackingInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdShipmentsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -103,7 +139,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdShipmentsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdShipmentsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdShipmentsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -142,6 +178,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("shipping_tax_details", ShippingTaxDetails);
             writer.WriteBoolValue("should_use_default_fulfillment_location", ShouldUseDefaultFulfillmentLocation);
             writer.WriteStringValue("tracking_info", TrackingInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

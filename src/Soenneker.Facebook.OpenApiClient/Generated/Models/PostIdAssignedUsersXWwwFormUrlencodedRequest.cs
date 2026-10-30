@@ -11,51 +11,75 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdAssignedUsersXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adaccount_tasks") is { } nullNodeAdaccountTasks && nullNodeAdaccountTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdaccountTasks = null;
+            if (parseNode.GetChildNode("offline_conversion_data_set_tasks") is { } nullNodeOfflineConversionDataSetTasks && nullNodeOfflineConversionDataSetTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfflineConversionDataSetTasks = null;
+            if (parseNode.GetChildNode("page_tasks") is { } nullNodePageTasks && nullNodePageTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageTasks = null;
+            if (parseNode.GetChildNode("pixel_tasks") is { } nullNodePixelTasks && nullNodePixelTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PixelTasks = null;
+            if (parseNode.GetChildNode("tasks") is { } nullNodeTasks && nullNodeTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tasks = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdaccountTasks { get; set; }
+        public string? AdaccountTasks { get => _explicitNullValueAdaccountTasks; set { _explicitNullValueAdaccountTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adaccount_tasks"); else _explicitNullProperties?.Remove("adaccount_tasks"); } }
+        private string? _explicitNullValueAdaccountTasks = default!;
 #nullable restore
 #else
-        public string AdaccountTasks { get; set; }
+        public string AdaccountTasks { get => _explicitNullValueAdaccountTasks; set { _explicitNullValueAdaccountTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adaccount_tasks"); else _explicitNullProperties?.Remove("adaccount_tasks"); } }
+        private string _explicitNullValueAdaccountTasks = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OfflineConversionDataSetTasks { get; set; }
+        public string? OfflineConversionDataSetTasks { get => _explicitNullValueOfflineConversionDataSetTasks; set { _explicitNullValueOfflineConversionDataSetTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline_conversion_data_set_tasks"); else _explicitNullProperties?.Remove("offline_conversion_data_set_tasks"); } }
+        private string? _explicitNullValueOfflineConversionDataSetTasks = default!;
 #nullable restore
 #else
-        public string OfflineConversionDataSetTasks { get; set; }
+        public string OfflineConversionDataSetTasks { get => _explicitNullValueOfflineConversionDataSetTasks; set { _explicitNullValueOfflineConversionDataSetTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offline_conversion_data_set_tasks"); else _explicitNullProperties?.Remove("offline_conversion_data_set_tasks"); } }
+        private string _explicitNullValueOfflineConversionDataSetTasks = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageTasks { get; set; }
+        public string? PageTasks { get => _explicitNullValuePageTasks; set { _explicitNullValuePageTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_tasks"); else _explicitNullProperties?.Remove("page_tasks"); } }
+        private string? _explicitNullValuePageTasks = default!;
 #nullable restore
 #else
-        public string PageTasks { get; set; }
+        public string PageTasks { get => _explicitNullValuePageTasks; set { _explicitNullValuePageTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_tasks"); else _explicitNullProperties?.Remove("page_tasks"); } }
+        private string _explicitNullValuePageTasks = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PixelTasks { get; set; }
+        public string? PixelTasks { get => _explicitNullValuePixelTasks; set { _explicitNullValuePixelTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pixel_tasks"); else _explicitNullProperties?.Remove("pixel_tasks"); } }
+        private string? _explicitNullValuePixelTasks = default!;
 #nullable restore
 #else
-        public string PixelTasks { get; set; }
+        public string PixelTasks { get => _explicitNullValuePixelTasks; set { _explicitNullValuePixelTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pixel_tasks"); else _explicitNullProperties?.Remove("pixel_tasks"); } }
+        private string _explicitNullValuePixelTasks = default!;
 #endif
         /// <summary>The tasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tasks { get; set; }
+        public string? Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
+        private string? _explicitNullValueTasks = default!;
 #nullable restore
 #else
-        public string Tasks { get; set; }
+        public string Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
+        private string _explicitNullValueTasks = default!;
 #endif
         /// <summary>The user property</summary>
-        public long? User { get; set; }
+        public long? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private long? _explicitNullValueUser = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAssignedUsersXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +95,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdAssignedUsersXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdAssignedUsersXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdAssignedUsersXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("pixel_tasks", PixelTasks);
             writer.WriteStringValue("tasks", Tasks);
             writer.WriteLongValue("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

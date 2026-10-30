@@ -11,24 +11,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdMigrateFlowsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("source_flow_names") is { } nullNodeSourceFlowNames && nullNodeSourceFlowNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFlowNames = null;
+            if (parseNode.GetChildNode("source_waba_id") is { } nullNodeSourceWabaId && nullNodeSourceWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceWabaId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceFlowNames { get; set; }
+        public string? SourceFlowNames { get => _explicitNullValueSourceFlowNames; set { _explicitNullValueSourceFlowNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_names"); else _explicitNullProperties?.Remove("source_flow_names"); } }
+        private string? _explicitNullValueSourceFlowNames = default!;
 #nullable restore
 #else
-        public string SourceFlowNames { get; set; }
+        public string SourceFlowNames { get => _explicitNullValueSourceFlowNames; set { _explicitNullValueSourceFlowNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_names"); else _explicitNullProperties?.Remove("source_flow_names"); } }
+        private string _explicitNullValueSourceFlowNames = default!;
 #endif
         /// <summary>The source_waba_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceWabaId { get; set; }
+        public string? SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
+        private string? _explicitNullValueSourceWabaId = default!;
 #nullable restore
 #else
-        public string SourceWabaId { get; set; }
+        public string SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
+        private string _explicitNullValueSourceWabaId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdMigrateFlowsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdMigrateFlowsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdMigrateFlowsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdMigrateFlowsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("source_flow_names", SourceFlowNames);
             writer.WriteStringValue("source_waba_id", SourceWabaId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

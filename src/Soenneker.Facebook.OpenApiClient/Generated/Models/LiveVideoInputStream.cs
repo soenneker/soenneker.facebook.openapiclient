@@ -11,66 +11,96 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LiveVideoInputStream : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dash_ingest_url") is { } nullNodeDashIngestUrl && nullNodeDashIngestUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DashIngestUrl = null;
+            if (parseNode.GetChildNode("dash_preview_url") is { } nullNodeDashPreviewUrl && nullNodeDashPreviewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DashPreviewUrl = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_master") is { } nullNodeIsMaster && nullNodeIsMaster.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMaster = null;
+            if (parseNode.GetChildNode("secure_stream_url") is { } nullNodeSecureStreamUrl && nullNodeSecureStreamUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecureStreamUrl = null;
+            if (parseNode.GetChildNode("stream_health") is { } nullNodeStreamHealth && nullNodeStreamHealth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreamHealth = null;
+            if (parseNode.GetChildNode("stream_id") is { } nullNodeStreamId && nullNodeStreamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreamId = null;
+            if (parseNode.GetChildNode("stream_url") is { } nullNodeStreamUrl && nullNodeStreamUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreamUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dash_ingest_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DashIngestUrl { get; set; }
+        public string? DashIngestUrl { get => _explicitNullValueDashIngestUrl; set { _explicitNullValueDashIngestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dash_ingest_url"); else _explicitNullProperties?.Remove("dash_ingest_url"); } }
+        private string? _explicitNullValueDashIngestUrl = default!;
 #nullable restore
 #else
-        public string DashIngestUrl { get; set; }
+        public string DashIngestUrl { get => _explicitNullValueDashIngestUrl; set { _explicitNullValueDashIngestUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dash_ingest_url"); else _explicitNullProperties?.Remove("dash_ingest_url"); } }
+        private string _explicitNullValueDashIngestUrl = default!;
 #endif
         /// <summary>The dash_preview_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DashPreviewUrl { get; set; }
+        public string? DashPreviewUrl { get => _explicitNullValueDashPreviewUrl; set { _explicitNullValueDashPreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dash_preview_url"); else _explicitNullProperties?.Remove("dash_preview_url"); } }
+        private string? _explicitNullValueDashPreviewUrl = default!;
 #nullable restore
 #else
-        public string DashPreviewUrl { get; set; }
+        public string DashPreviewUrl { get => _explicitNullValueDashPreviewUrl; set { _explicitNullValueDashPreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dash_preview_url"); else _explicitNullProperties?.Remove("dash_preview_url"); } }
+        private string _explicitNullValueDashPreviewUrl = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_master property</summary>
-        public bool? IsMaster { get; set; }
+        public bool? IsMaster { get => _explicitNullValueIsMaster; set { _explicitNullValueIsMaster = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_master"); else _explicitNullProperties?.Remove("is_master"); } }
+        private bool? _explicitNullValueIsMaster = default!;
         /// <summary>The secure_stream_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecureStreamUrl { get; set; }
+        public string? SecureStreamUrl { get => _explicitNullValueSecureStreamUrl; set { _explicitNullValueSecureStreamUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secure_stream_url"); else _explicitNullProperties?.Remove("secure_stream_url"); } }
+        private string? _explicitNullValueSecureStreamUrl = default!;
 #nullable restore
 #else
-        public string SecureStreamUrl { get; set; }
+        public string SecureStreamUrl { get => _explicitNullValueSecureStreamUrl; set { _explicitNullValueSecureStreamUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secure_stream_url"); else _explicitNullProperties?.Remove("secure_stream_url"); } }
+        private string _explicitNullValueSecureStreamUrl = default!;
 #endif
         /// <summary>The stream_health property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty? StreamHealth { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty? StreamHealth { get => _explicitNullValueStreamHealth; set { _explicitNullValueStreamHealth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream_health"); else _explicitNullProperties?.Remove("stream_health"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty? _explicitNullValueStreamHealth = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty StreamHealth { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty StreamHealth { get => _explicitNullValueStreamHealth; set { _explicitNullValueStreamHealth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream_health"); else _explicitNullProperties?.Remove("stream_health"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty _explicitNullValueStreamHealth = default!;
 #endif
         /// <summary>The stream_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreamId { get; set; }
+        public string? StreamId { get => _explicitNullValueStreamId; set { _explicitNullValueStreamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream_id"); else _explicitNullProperties?.Remove("stream_id"); } }
+        private string? _explicitNullValueStreamId = default!;
 #nullable restore
 #else
-        public string StreamId { get; set; }
+        public string StreamId { get => _explicitNullValueStreamId; set { _explicitNullValueStreamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream_id"); else _explicitNullProperties?.Remove("stream_id"); } }
+        private string _explicitNullValueStreamId = default!;
 #endif
         /// <summary>The stream_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreamUrl { get; set; }
+        public string? StreamUrl { get => _explicitNullValueStreamUrl; set { _explicitNullValueStreamUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream_url"); else _explicitNullProperties?.Remove("stream_url"); } }
+        private string? _explicitNullValueStreamUrl = default!;
 #nullable restore
 #else
-        public string StreamUrl { get; set; }
+        public string StreamUrl { get => _explicitNullValueStreamUrl; set { _explicitNullValueStreamUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream_url"); else _explicitNullProperties?.Remove("stream_url"); } }
+        private string _explicitNullValueStreamUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStream"/> and sets the default values.
@@ -87,7 +117,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStream CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStream();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStream(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoInputStreamStreamHealthProperty>("stream_health", StreamHealth);
             writer.WriteStringValue("stream_id", StreamId);
             writer.WriteStringValue("stream_url", StreamUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

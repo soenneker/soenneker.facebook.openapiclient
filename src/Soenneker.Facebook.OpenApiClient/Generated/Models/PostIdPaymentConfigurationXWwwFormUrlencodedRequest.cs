@@ -11,58 +11,85 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdPaymentConfigurationXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("configuration_name") is { } nullNodeConfigurationName && nullNodeConfigurationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationName = null;
+            if (parseNode.GetChildNode("data_endpoint_url") is { } nullNodeDataEndpointUrl && nullNodeDataEndpointUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataEndpointUrl = null;
+            if (parseNode.GetChildNode("merchant_category_code") is { } nullNodeMerchantCategoryCode && nullNodeMerchantCategoryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantCategoryCode = null;
+            if (parseNode.GetChildNode("merchant_vpa") is { } nullNodeMerchantVpa && nullNodeMerchantVpa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantVpa = null;
+            if (parseNode.GetChildNode("provider_name") is { } nullNodeProviderName && nullNodeProviderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderName = null;
+            if (parseNode.GetChildNode("purpose_code") is { } nullNodePurposeCode && nullNodePurposeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurposeCode = null;
+            if (parseNode.GetChildNode("redirect_url") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The configuration_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigurationName { get; set; }
+        public string? ConfigurationName { get => _explicitNullValueConfigurationName; set { _explicitNullValueConfigurationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration_name"); else _explicitNullProperties?.Remove("configuration_name"); } }
+        private string? _explicitNullValueConfigurationName = default!;
 #nullable restore
 #else
-        public string ConfigurationName { get; set; }
+        public string ConfigurationName { get => _explicitNullValueConfigurationName; set { _explicitNullValueConfigurationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration_name"); else _explicitNullProperties?.Remove("configuration_name"); } }
+        private string _explicitNullValueConfigurationName = default!;
 #endif
         /// <summary>The data_endpoint_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataEndpointUrl { get; set; }
+        public string? DataEndpointUrl { get => _explicitNullValueDataEndpointUrl; set { _explicitNullValueDataEndpointUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_endpoint_url"); else _explicitNullProperties?.Remove("data_endpoint_url"); } }
+        private string? _explicitNullValueDataEndpointUrl = default!;
 #nullable restore
 #else
-        public string DataEndpointUrl { get; set; }
+        public string DataEndpointUrl { get => _explicitNullValueDataEndpointUrl; set { _explicitNullValueDataEndpointUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_endpoint_url"); else _explicitNullProperties?.Remove("data_endpoint_url"); } }
+        private string _explicitNullValueDataEndpointUrl = default!;
 #endif
         /// <summary>The merchant_category_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantCategoryCode { get; set; }
+        public string? MerchantCategoryCode { get => _explicitNullValueMerchantCategoryCode; set { _explicitNullValueMerchantCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_category_code"); else _explicitNullProperties?.Remove("merchant_category_code"); } }
+        private string? _explicitNullValueMerchantCategoryCode = default!;
 #nullable restore
 #else
-        public string MerchantCategoryCode { get; set; }
+        public string MerchantCategoryCode { get => _explicitNullValueMerchantCategoryCode; set { _explicitNullValueMerchantCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_category_code"); else _explicitNullProperties?.Remove("merchant_category_code"); } }
+        private string _explicitNullValueMerchantCategoryCode = default!;
 #endif
         /// <summary>The merchant_vpa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MerchantVpa { get; set; }
+        public string? MerchantVpa { get => _explicitNullValueMerchantVpa; set { _explicitNullValueMerchantVpa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_vpa"); else _explicitNullProperties?.Remove("merchant_vpa"); } }
+        private string? _explicitNullValueMerchantVpa = default!;
 #nullable restore
 #else
-        public string MerchantVpa { get; set; }
+        public string MerchantVpa { get => _explicitNullValueMerchantVpa; set { _explicitNullValueMerchantVpa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_vpa"); else _explicitNullProperties?.Remove("merchant_vpa"); } }
+        private string _explicitNullValueMerchantVpa = default!;
 #endif
         /// <summary>The provider_name property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpaymentConfigurationProviderNameEnumParam? ProviderName { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpaymentConfigurationProviderNameEnumParam? ProviderName { get => _explicitNullValueProviderName; set { _explicitNullValueProviderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_name"); else _explicitNullProperties?.Remove("provider_name"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpaymentConfigurationProviderNameEnumParam? _explicitNullValueProviderName = default!;
         /// <summary>The purpose_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurposeCode { get; set; }
+        public string? PurposeCode { get => _explicitNullValuePurposeCode; set { _explicitNullValuePurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purpose_code"); else _explicitNullProperties?.Remove("purpose_code"); } }
+        private string? _explicitNullValuePurposeCode = default!;
 #nullable restore
 #else
-        public string PurposeCode { get; set; }
+        public string PurposeCode { get => _explicitNullValuePurposeCode; set { _explicitNullValuePurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purpose_code"); else _explicitNullProperties?.Remove("purpose_code"); } }
+        private string _explicitNullValuePurposeCode = default!;
 #endif
         /// <summary>The redirect_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get; set; }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_url"); else _explicitNullProperties?.Remove("redirect_url"); } }
+        private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get; set; }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_url"); else _explicitNullProperties?.Remove("redirect_url"); } }
+        private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdPaymentConfigurationXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdPaymentConfigurationXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdPaymentConfigurationXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdPaymentConfigurationXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountpaymentConfigurationProviderNameEnumParam>("provider_name", ProviderName);
             writer.WriteStringValue("purpose_code", PurposeCode);
             writer.WriteStringValue("redirect_url", RedirectUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,40 +11,59 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdKeywords : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("brands") is { } nullNodeBrands && nullNodeBrands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brands = null;
+            if (parseNode.GetChildNode("product_categories") is { } nullNodeProductCategories && nullNodeProductCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCategories = null;
+            if (parseNode.GetChildNode("product_names") is { } nullNodeProductNames && nullNodeProductNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNames = null;
+            if (parseNode.GetChildNode("search_terms") is { } nullNodeSearchTerms && nullNodeSearchTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchTerms = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The brands property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Brands { get; set; }
+        public List<string>? Brands { get => _explicitNullValueBrands; set { _explicitNullValueBrands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands"); else _explicitNullProperties?.Remove("brands"); } }
+        private List<string>? _explicitNullValueBrands = default!;
 #nullable restore
 #else
-        public List<string> Brands { get; set; }
+        public List<string> Brands { get => _explicitNullValueBrands; set { _explicitNullValueBrands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands"); else _explicitNullProperties?.Remove("brands"); } }
+        private List<string> _explicitNullValueBrands = default!;
 #endif
         /// <summary>The product_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProductCategories { get; set; }
+        public List<string>? ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
+        private List<string>? _explicitNullValueProductCategories = default!;
 #nullable restore
 #else
-        public List<string> ProductCategories { get; set; }
+        public List<string> ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
+        private List<string> _explicitNullValueProductCategories = default!;
 #endif
         /// <summary>The product_names property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProductNames { get; set; }
+        public List<string>? ProductNames { get => _explicitNullValueProductNames; set { _explicitNullValueProductNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_names"); else _explicitNullProperties?.Remove("product_names"); } }
+        private List<string>? _explicitNullValueProductNames = default!;
 #nullable restore
 #else
-        public List<string> ProductNames { get; set; }
+        public List<string> ProductNames { get => _explicitNullValueProductNames; set { _explicitNullValueProductNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_names"); else _explicitNullProperties?.Remove("product_names"); } }
+        private List<string> _explicitNullValueProductNames = default!;
 #endif
         /// <summary>The search_terms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SearchTerms { get; set; }
+        public List<string>? SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_terms"); else _explicitNullProperties?.Remove("search_terms"); } }
+        private List<string>? _explicitNullValueSearchTerms = default!;
 #nullable restore
 #else
-        public List<string> SearchTerms { get; set; }
+        public List<string> SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_terms"); else _explicitNullProperties?.Remove("search_terms"); } }
+        private List<string> _explicitNullValueSearchTerms = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdKeywords"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdKeywords CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdKeywords();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdKeywords(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("product_categories", ProductCategories);
             writer.WriteCollectionOfPrimitiveValues<string>("product_names", ProductNames);
             writer.WriteCollectionOfPrimitiveValues<string>("search_terms", SearchTerms);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

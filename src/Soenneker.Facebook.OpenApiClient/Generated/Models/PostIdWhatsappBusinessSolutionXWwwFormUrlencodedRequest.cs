@@ -11,40 +11,59 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdWhatsappBusinessSolutionXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("owner_permissions") is { } nullNodeOwnerPermissions && nullNodeOwnerPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerPermissions = null;
+            if (parseNode.GetChildNode("partner_app_id") is { } nullNodePartnerAppId && nullNodePartnerAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerAppId = null;
+            if (parseNode.GetChildNode("partner_permissions") is { } nullNodePartnerPermissions && nullNodePartnerPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerPermissions = null;
+            if (parseNode.GetChildNode("solution_name") is { } nullNodeSolutionName && nullNodeSolutionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SolutionName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerPermissions { get; set; }
+        public string? OwnerPermissions { get => _explicitNullValueOwnerPermissions; set { _explicitNullValueOwnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_permissions"); else _explicitNullProperties?.Remove("owner_permissions"); } }
+        private string? _explicitNullValueOwnerPermissions = default!;
 #nullable restore
 #else
-        public string OwnerPermissions { get; set; }
+        public string OwnerPermissions { get => _explicitNullValueOwnerPermissions; set { _explicitNullValueOwnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_permissions"); else _explicitNullProperties?.Remove("owner_permissions"); } }
+        private string _explicitNullValueOwnerPermissions = default!;
 #endif
         /// <summary>The partner_app_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerAppId { get; set; }
+        public string? PartnerAppId { get => _explicitNullValuePartnerAppId; set { _explicitNullValuePartnerAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_id"); else _explicitNullProperties?.Remove("partner_app_id"); } }
+        private string? _explicitNullValuePartnerAppId = default!;
 #nullable restore
 #else
-        public string PartnerAppId { get; set; }
+        public string PartnerAppId { get => _explicitNullValuePartnerAppId; set { _explicitNullValuePartnerAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_id"); else _explicitNullProperties?.Remove("partner_app_id"); } }
+        private string _explicitNullValuePartnerAppId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerPermissions { get; set; }
+        public string? PartnerPermissions { get => _explicitNullValuePartnerPermissions; set { _explicitNullValuePartnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_permissions"); else _explicitNullProperties?.Remove("partner_permissions"); } }
+        private string? _explicitNullValuePartnerPermissions = default!;
 #nullable restore
 #else
-        public string PartnerPermissions { get; set; }
+        public string PartnerPermissions { get => _explicitNullValuePartnerPermissions; set { _explicitNullValuePartnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_permissions"); else _explicitNullProperties?.Remove("partner_permissions"); } }
+        private string _explicitNullValuePartnerPermissions = default!;
 #endif
         /// <summary>The solution_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SolutionName { get; set; }
+        public string? SolutionName { get => _explicitNullValueSolutionName; set { _explicitNullValueSolutionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_name"); else _explicitNullProperties?.Remove("solution_name"); } }
+        private string? _explicitNullValueSolutionName = default!;
 #nullable restore
 #else
-        public string SolutionName { get; set; }
+        public string SolutionName { get => _explicitNullValueSolutionName; set { _explicitNullValueSolutionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_name"); else _explicitNullProperties?.Remove("solution_name"); } }
+        private string _explicitNullValueSolutionName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdWhatsappBusinessSolutionXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdWhatsappBusinessSolutionXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdWhatsappBusinessSolutionXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdWhatsappBusinessSolutionXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("partner_app_id", PartnerAppId);
             writer.WriteStringValue("partner_permissions", PartnerPermissions);
             writer.WriteStringValue("solution_name", SolutionName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

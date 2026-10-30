@@ -11,21 +11,35 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAccountIosFourteenCampaignLimits : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("campaign_group_limit") is { } nullNodeCampaignGroupLimit && nullNodeCampaignGroupLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignGroupLimit = null;
+            if (parseNode.GetChildNode("campaign_group_limits_details") is { } nullNodeCampaignGroupLimitsDetails && nullNodeCampaignGroupLimitsDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignGroupLimitsDetails = null;
+            if (parseNode.GetChildNode("campaign_limit") is { } nullNodeCampaignLimit && nullNodeCampaignLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The campaign_group_limit property</summary>
-        public long? CampaignGroupLimit { get; set; }
+        public long? CampaignGroupLimit { get => _explicitNullValueCampaignGroupLimit; set { _explicitNullValueCampaignGroupLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_group_limit"); else _explicitNullProperties?.Remove("campaign_group_limit"); } }
+        private long? _explicitNullValueCampaignGroupLimit = default!;
         /// <summary>The campaign_group_limits_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty>? CampaignGroupLimitsDetails { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty>? CampaignGroupLimitsDetails { get => _explicitNullValueCampaignGroupLimitsDetails; set { _explicitNullValueCampaignGroupLimitsDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_group_limits_details"); else _explicitNullProperties?.Remove("campaign_group_limits_details"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty>? _explicitNullValueCampaignGroupLimitsDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty> CampaignGroupLimitsDetails { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty> CampaignGroupLimitsDetails { get => _explicitNullValueCampaignGroupLimitsDetails; set { _explicitNullValueCampaignGroupLimitsDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_group_limits_details"); else _explicitNullProperties?.Remove("campaign_group_limits_details"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty> _explicitNullValueCampaignGroupLimitsDetails = default!;
 #endif
         /// <summary>The campaign_limit property</summary>
-        public long? CampaignLimit { get; set; }
+        public long? CampaignLimit { get => _explicitNullValueCampaignLimit; set { _explicitNullValueCampaignLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_limit"); else _explicitNullProperties?.Remove("campaign_limit"); } }
+        private long? _explicitNullValueCampaignLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimits"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimits();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimits(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("campaign_group_limit", CampaignGroupLimit);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountIosFourteenCampaignLimitsCampaignGroupLimitsDetailsItemProperty>("campaign_group_limits_details", CampaignGroupLimitsDetails);
             writer.WriteLongValue("campaign_limit", CampaignLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

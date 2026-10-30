@@ -11,64 +11,92 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessengerAdsPartialAutomatedStepList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fblead_form") is { } nullNodeFbleadForm && nullNodeFbleadForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbleadForm = null;
+            if (parseNode.GetChildNode("first_step_id") is { } nullNodeFirstStepId && nullNodeFirstStepId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstStepId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("privacy_url") is { } nullNodePrivacyUrl && nullNodePrivacyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyUrl = null;
+            if (parseNode.GetChildNode("reminder_text") is { } nullNodeReminderText && nullNodeReminderText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderText = null;
+            if (parseNode.GetChildNode("stop_question_message") is { } nullNodeStopQuestionMessage && nullNodeStopQuestionMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopQuestionMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fblead_form property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm? FbleadForm { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm? FbleadForm { get => _explicitNullValueFbleadForm; set { _explicitNullValueFbleadForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fblead_form"); else _explicitNullProperties?.Remove("fblead_form"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm? _explicitNullValueFbleadForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm FbleadForm { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm FbleadForm { get => _explicitNullValueFbleadForm; set { _explicitNullValueFbleadForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fblead_form"); else _explicitNullProperties?.Remove("fblead_form"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm _explicitNullValueFbleadForm = default!;
 #endif
         /// <summary>The first_step_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstStepId { get; set; }
+        public string? FirstStepId { get => _explicitNullValueFirstStepId; set { _explicitNullValueFirstStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_step_id"); else _explicitNullProperties?.Remove("first_step_id"); } }
+        private string? _explicitNullValueFirstStepId = default!;
 #nullable restore
 #else
-        public string FirstStepId { get; set; }
+        public string FirstStepId { get => _explicitNullValueFirstStepId; set { _explicitNullValueFirstStepId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_step_id"); else _explicitNullProperties?.Remove("first_step_id"); } }
+        private string _explicitNullValueFirstStepId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Page? Page { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Page? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Page? _explicitNullValuePage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Page Page { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Page Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Page _explicitNullValuePage = default!;
 #endif
         /// <summary>The privacy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyUrl { get; set; }
+        public string? PrivacyUrl { get => _explicitNullValuePrivacyUrl; set { _explicitNullValuePrivacyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_url"); else _explicitNullProperties?.Remove("privacy_url"); } }
+        private string? _explicitNullValuePrivacyUrl = default!;
 #nullable restore
 #else
-        public string PrivacyUrl { get; set; }
+        public string PrivacyUrl { get => _explicitNullValuePrivacyUrl; set { _explicitNullValuePrivacyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_url"); else _explicitNullProperties?.Remove("privacy_url"); } }
+        private string _explicitNullValuePrivacyUrl = default!;
 #endif
         /// <summary>The reminder_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReminderText { get; set; }
+        public string? ReminderText { get => _explicitNullValueReminderText; set { _explicitNullValueReminderText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminder_text"); else _explicitNullProperties?.Remove("reminder_text"); } }
+        private string? _explicitNullValueReminderText = default!;
 #nullable restore
 #else
-        public string ReminderText { get; set; }
+        public string ReminderText { get => _explicitNullValueReminderText; set { _explicitNullValueReminderText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminder_text"); else _explicitNullProperties?.Remove("reminder_text"); } }
+        private string _explicitNullValueReminderText = default!;
 #endif
         /// <summary>The stop_question_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StopQuestionMessage { get; set; }
+        public string? StopQuestionMessage { get => _explicitNullValueStopQuestionMessage; set { _explicitNullValueStopQuestionMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stop_question_message"); else _explicitNullProperties?.Remove("stop_question_message"); } }
+        private string? _explicitNullValueStopQuestionMessage = default!;
 #nullable restore
 #else
-        public string StopQuestionMessage { get; set; }
+        public string StopQuestionMessage { get => _explicitNullValueStopQuestionMessage; set { _explicitNullValueStopQuestionMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stop_question_message"); else _explicitNullProperties?.Remove("stop_question_message"); } }
+        private string _explicitNullValueStopQuestionMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MessengerAdsPartialAutomatedStepList"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.MessengerAdsPartialAutomatedStepList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.MessengerAdsPartialAutomatedStepList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.MessengerAdsPartialAutomatedStepList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("privacy_url", PrivacyUrl);
             writer.WriteStringValue("reminder_text", ReminderText);
             writer.WriteStringValue("stop_question_message", StopQuestionMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

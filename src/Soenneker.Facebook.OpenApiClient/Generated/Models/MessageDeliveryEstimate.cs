@@ -11,32 +11,58 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessageDeliveryEstimate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("estimate_cost") is { } nullNodeEstimateCost && nullNodeEstimateCost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateCost = null;
+            if (parseNode.GetChildNode("estimate_cost_lower_bound") is { } nullNodeEstimateCostLowerBound && nullNodeEstimateCostLowerBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateCostLowerBound = null;
+            if (parseNode.GetChildNode("estimate_cost_upper_bound") is { } nullNodeEstimateCostUpperBound && nullNodeEstimateCostUpperBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateCostUpperBound = null;
+            if (parseNode.GetChildNode("estimate_coverage_lower_bound") is { } nullNodeEstimateCoverageLowerBound && nullNodeEstimateCoverageLowerBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateCoverageLowerBound = null;
+            if (parseNode.GetChildNode("estimate_coverage_upper_bound") is { } nullNodeEstimateCoverageUpperBound && nullNodeEstimateCoverageUpperBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateCoverageUpperBound = null;
+            if (parseNode.GetChildNode("estimate_delivery") is { } nullNodeEstimateDelivery && nullNodeEstimateDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateDelivery = null;
+            if (parseNode.GetChildNode("estimate_delivery_lower_bound") is { } nullNodeEstimateDeliveryLowerBound && nullNodeEstimateDeliveryLowerBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateDeliveryLowerBound = null;
+            if (parseNode.GetChildNode("estimate_delivery_upper_bound") is { } nullNodeEstimateDeliveryUpperBound && nullNodeEstimateDeliveryUpperBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateDeliveryUpperBound = null;
+            if (parseNode.GetChildNode("estimate_status") is { } nullNodeEstimateStatus && nullNodeEstimateStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The estimate_cost property</summary>
-        public float? EstimateCost { get; set; }
+        public float? EstimateCost { get => _explicitNullValueEstimateCost; set { _explicitNullValueEstimateCost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_cost"); else _explicitNullProperties?.Remove("estimate_cost"); } }
+        private float? _explicitNullValueEstimateCost = default!;
         /// <summary>The estimate_cost_lower_bound property</summary>
-        public float? EstimateCostLowerBound { get; set; }
+        public float? EstimateCostLowerBound { get => _explicitNullValueEstimateCostLowerBound; set { _explicitNullValueEstimateCostLowerBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_cost_lower_bound"); else _explicitNullProperties?.Remove("estimate_cost_lower_bound"); } }
+        private float? _explicitNullValueEstimateCostLowerBound = default!;
         /// <summary>The estimate_cost_upper_bound property</summary>
-        public float? EstimateCostUpperBound { get; set; }
+        public float? EstimateCostUpperBound { get => _explicitNullValueEstimateCostUpperBound; set { _explicitNullValueEstimateCostUpperBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_cost_upper_bound"); else _explicitNullProperties?.Remove("estimate_cost_upper_bound"); } }
+        private float? _explicitNullValueEstimateCostUpperBound = default!;
         /// <summary>The estimate_coverage_lower_bound property</summary>
-        public long? EstimateCoverageLowerBound { get; set; }
+        public long? EstimateCoverageLowerBound { get => _explicitNullValueEstimateCoverageLowerBound; set { _explicitNullValueEstimateCoverageLowerBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_coverage_lower_bound"); else _explicitNullProperties?.Remove("estimate_coverage_lower_bound"); } }
+        private long? _explicitNullValueEstimateCoverageLowerBound = default!;
         /// <summary>The estimate_coverage_upper_bound property</summary>
-        public long? EstimateCoverageUpperBound { get; set; }
+        public long? EstimateCoverageUpperBound { get => _explicitNullValueEstimateCoverageUpperBound; set { _explicitNullValueEstimateCoverageUpperBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_coverage_upper_bound"); else _explicitNullProperties?.Remove("estimate_coverage_upper_bound"); } }
+        private long? _explicitNullValueEstimateCoverageUpperBound = default!;
         /// <summary>The estimate_delivery property</summary>
-        public long? EstimateDelivery { get; set; }
+        public long? EstimateDelivery { get => _explicitNullValueEstimateDelivery; set { _explicitNullValueEstimateDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_delivery"); else _explicitNullProperties?.Remove("estimate_delivery"); } }
+        private long? _explicitNullValueEstimateDelivery = default!;
         /// <summary>The estimate_delivery_lower_bound property</summary>
-        public long? EstimateDeliveryLowerBound { get; set; }
+        public long? EstimateDeliveryLowerBound { get => _explicitNullValueEstimateDeliveryLowerBound; set { _explicitNullValueEstimateDeliveryLowerBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_delivery_lower_bound"); else _explicitNullProperties?.Remove("estimate_delivery_lower_bound"); } }
+        private long? _explicitNullValueEstimateDeliveryLowerBound = default!;
         /// <summary>The estimate_delivery_upper_bound property</summary>
-        public long? EstimateDeliveryUpperBound { get; set; }
+        public long? EstimateDeliveryUpperBound { get => _explicitNullValueEstimateDeliveryUpperBound; set { _explicitNullValueEstimateDeliveryUpperBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_delivery_upper_bound"); else _explicitNullProperties?.Remove("estimate_delivery_upper_bound"); } }
+        private long? _explicitNullValueEstimateDeliveryUpperBound = default!;
         /// <summary>The estimate_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EstimateStatus { get; set; }
+        public string? EstimateStatus { get => _explicitNullValueEstimateStatus; set { _explicitNullValueEstimateStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_status"); else _explicitNullProperties?.Remove("estimate_status"); } }
+        private string? _explicitNullValueEstimateStatus = default!;
 #nullable restore
 #else
-        public string EstimateStatus { get; set; }
+        public string EstimateStatus { get => _explicitNullValueEstimateStatus; set { _explicitNullValueEstimateStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_status"); else _explicitNullProperties?.Remove("estimate_status"); } }
+        private string _explicitNullValueEstimateStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MessageDeliveryEstimate"/> and sets the default values.
@@ -53,7 +79,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.MessageDeliveryEstimate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.MessageDeliveryEstimate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.MessageDeliveryEstimate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +116,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("estimate_delivery_lower_bound", EstimateDeliveryLowerBound);
             writer.WriteLongValue("estimate_delivery_upper_bound", EstimateDeliveryUpperBound);
             writer.WriteStringValue("estimate_status", EstimateStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

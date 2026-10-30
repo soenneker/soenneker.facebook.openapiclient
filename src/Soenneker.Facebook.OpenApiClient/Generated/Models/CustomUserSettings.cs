@@ -11,24 +11,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomUserSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("page_level_persistent_menu") is { } nullNodePageLevelPersistentMenu && nullNodePageLevelPersistentMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageLevelPersistentMenu = null;
+            if (parseNode.GetChildNode("user_level_persistent_menu") is { } nullNodeUserLevelPersistentMenu && nullNodeUserLevelPersistentMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelPersistentMenu = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The page_level_persistent_menu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>? PageLevelPersistentMenu { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>? PageLevelPersistentMenu { get => _explicitNullValuePageLevelPersistentMenu; set { _explicitNullValuePageLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_level_persistent_menu"); else _explicitNullProperties?.Remove("page_level_persistent_menu"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>? _explicitNullValuePageLevelPersistentMenu = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty> PageLevelPersistentMenu { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty> PageLevelPersistentMenu { get => _explicitNullValuePageLevelPersistentMenu; set { _explicitNullValuePageLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_level_persistent_menu"); else _explicitNullProperties?.Remove("page_level_persistent_menu"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty> _explicitNullValuePageLevelPersistentMenu = default!;
 #endif
         /// <summary>The user_level_persistent_menu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>? UserLevelPersistentMenu { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>? UserLevelPersistentMenu { get => _explicitNullValueUserLevelPersistentMenu; set { _explicitNullValueUserLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_level_persistent_menu"); else _explicitNullProperties?.Remove("user_level_persistent_menu"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>? _explicitNullValueUserLevelPersistentMenu = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty> UserLevelPersistentMenu { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty> UserLevelPersistentMenu { get => _explicitNullValueUserLevelPersistentMenu; set { _explicitNullValueUserLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_level_persistent_menu"); else _explicitNullProperties?.Remove("user_level_persistent_menu"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty> _explicitNullValueUserLevelPersistentMenu = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettings"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>("page_level_persistent_menu", PageLevelPersistentMenu);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>("user_level_persistent_menu", UserLevelPersistentMenu);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,54 +11,82 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdMarketplacePartnerSignalsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conversion_type") is { } nullNodeConversionType && nullNodeConversionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionType = null;
+            if (parseNode.GetChildNode("event_id") is { } nullNodeEventId && nullNodeEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventId = null;
+            if (parseNode.GetChildNode("event_name") is { } nullNodeEventName && nullNodeEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventName = null;
+            if (parseNode.GetChildNode("event_source_url") is { } nullNodeEventSourceUrl && nullNodeEventSourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventSourceUrl = null;
+            if (parseNode.GetChildNode("event_time") is { } nullNodeEventTime && nullNodeEventTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTime = null;
+            if (parseNode.GetChildNode("offer_data") is { } nullNodeOfferData && nullNodeOfferData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferData = null;
+            if (parseNode.GetChildNode("order_data") is { } nullNodeOrderData && nullNodeOrderData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderData = null;
+            if (parseNode.GetChildNode("user_data") is { } nullNodeUserData && nullNodeUserData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The conversion_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsConversionTypeEnumParam? ConversionType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsConversionTypeEnumParam? ConversionType { get => _explicitNullValueConversionType; set { _explicitNullValueConversionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion_type"); else _explicitNullProperties?.Remove("conversion_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsConversionTypeEnumParam? _explicitNullValueConversionType = default!;
         /// <summary>The event_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventId { get; set; }
+        public string? EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
+        private string? _explicitNullValueEventId = default!;
 #nullable restore
 #else
-        public string EventId { get; set; }
+        public string EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
+        private string _explicitNullValueEventId = default!;
 #endif
         /// <summary>The event_name property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsEventNameEnumParam? EventName { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsEventNameEnumParam? EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsEventNameEnumParam? _explicitNullValueEventName = default!;
         /// <summary>The event_source_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventSourceUrl { get; set; }
+        public string? EventSourceUrl { get => _explicitNullValueEventSourceUrl; set { _explicitNullValueEventSourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_source_url"); else _explicitNullProperties?.Remove("event_source_url"); } }
+        private string? _explicitNullValueEventSourceUrl = default!;
 #nullable restore
 #else
-        public string EventSourceUrl { get; set; }
+        public string EventSourceUrl { get => _explicitNullValueEventSourceUrl; set { _explicitNullValueEventSourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_source_url"); else _explicitNullProperties?.Remove("event_source_url"); } }
+        private string _explicitNullValueEventSourceUrl = default!;
 #endif
         /// <summary>The event_time property</summary>
-        public DateTimeOffset? EventTime { get; set; }
+        public DateTimeOffset? EventTime { get => _explicitNullValueEventTime; set { _explicitNullValueEventTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_time"); else _explicitNullProperties?.Remove("event_time"); } }
+        private DateTimeOffset? _explicitNullValueEventTime = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OfferData { get; set; }
+        public string? OfferData { get => _explicitNullValueOfferData; set { _explicitNullValueOfferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_data"); else _explicitNullProperties?.Remove("offer_data"); } }
+        private string? _explicitNullValueOfferData = default!;
 #nullable restore
 #else
-        public string OfferData { get; set; }
+        public string OfferData { get => _explicitNullValueOfferData; set { _explicitNullValueOfferData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offer_data"); else _explicitNullProperties?.Remove("offer_data"); } }
+        private string _explicitNullValueOfferData = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderData { get; set; }
+        public string? OrderData { get => _explicitNullValueOrderData; set { _explicitNullValueOrderData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_data"); else _explicitNullProperties?.Remove("order_data"); } }
+        private string? _explicitNullValueOrderData = default!;
 #nullable restore
 #else
-        public string OrderData { get; set; }
+        public string OrderData { get => _explicitNullValueOrderData; set { _explicitNullValueOrderData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_data"); else _explicitNullProperties?.Remove("order_data"); } }
+        private string _explicitNullValueOrderData = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserData { get; set; }
+        public string? UserData { get => _explicitNullValueUserData; set { _explicitNullValueUserData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_data"); else _explicitNullProperties?.Remove("user_data"); } }
+        private string? _explicitNullValueUserData = default!;
 #nullable restore
 #else
-        public string UserData { get; set; }
+        public string UserData { get => _explicitNullValueUserData; set { _explicitNullValueUserData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_data"); else _explicitNullProperties?.Remove("user_data"); } }
+        private string _explicitNullValueUserData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdMarketplacePartnerSignalsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -75,7 +103,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdMarketplacePartnerSignalsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdMarketplacePartnerSignalsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdMarketplacePartnerSignalsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +138,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("offer_data", OfferData);
             writer.WriteStringValue("order_data", OrderData);
             writer.WriteStringValue("user_data", UserData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

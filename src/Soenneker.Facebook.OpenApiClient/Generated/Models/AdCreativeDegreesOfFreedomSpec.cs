@@ -11,72 +11,103 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeDegreesOfFreedomSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ad_handle_type") is { } nullNodeAdHandleType && nullNodeAdHandleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdHandleType = null;
+            if (parseNode.GetChildNode("creative_features_spec") is { } nullNodeCreativeFeaturesSpec && nullNodeCreativeFeaturesSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeFeaturesSpec = null;
+            if (parseNode.GetChildNode("degrees_of_freedom_type") is { } nullNodeDegreesOfFreedomType && nullNodeDegreesOfFreedomType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DegreesOfFreedomType = null;
+            if (parseNode.GetChildNode("image_transformation_types") is { } nullNodeImageTransformationTypes && nullNodeImageTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageTransformationTypes = null;
+            if (parseNode.GetChildNode("multi_media_transformation_type") is { } nullNodeMultiMediaTransformationType && nullNodeMultiMediaTransformationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiMediaTransformationType = null;
+            if (parseNode.GetChildNode("stories_transformation_types") is { } nullNodeStoriesTransformationTypes && nullNodeStoriesTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoriesTransformationTypes = null;
+            if (parseNode.GetChildNode("text_transformation_types") is { } nullNodeTextTransformationTypes && nullNodeTextTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextTransformationTypes = null;
+            if (parseNode.GetChildNode("video_transformation_types") is { } nullNodeVideoTransformationTypes && nullNodeVideoTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoTransformationTypes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_handle_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdHandleType { get; set; }
+        public string? AdHandleType { get => _explicitNullValueAdHandleType; set { _explicitNullValueAdHandleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_handle_type"); else _explicitNullProperties?.Remove("ad_handle_type"); } }
+        private string? _explicitNullValueAdHandleType = default!;
 #nullable restore
 #else
-        public string AdHandleType { get; set; }
+        public string AdHandleType { get => _explicitNullValueAdHandleType; set { _explicitNullValueAdHandleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_handle_type"); else _explicitNullProperties?.Remove("ad_handle_type"); } }
+        private string _explicitNullValueAdHandleType = default!;
 #endif
         /// <summary>The creative_features_spec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec? CreativeFeaturesSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec? CreativeFeaturesSpec { get => _explicitNullValueCreativeFeaturesSpec; set { _explicitNullValueCreativeFeaturesSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_features_spec"); else _explicitNullProperties?.Remove("creative_features_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec? _explicitNullValueCreativeFeaturesSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec CreativeFeaturesSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec CreativeFeaturesSpec { get => _explicitNullValueCreativeFeaturesSpec; set { _explicitNullValueCreativeFeaturesSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_features_spec"); else _explicitNullProperties?.Remove("creative_features_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec _explicitNullValueCreativeFeaturesSpec = default!;
 #endif
         /// <summary>The degrees_of_freedom_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DegreesOfFreedomType { get; set; }
+        public string? DegreesOfFreedomType { get => _explicitNullValueDegreesOfFreedomType; set { _explicitNullValueDegreesOfFreedomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("degrees_of_freedom_type"); else _explicitNullProperties?.Remove("degrees_of_freedom_type"); } }
+        private string? _explicitNullValueDegreesOfFreedomType = default!;
 #nullable restore
 #else
-        public string DegreesOfFreedomType { get; set; }
+        public string DegreesOfFreedomType { get => _explicitNullValueDegreesOfFreedomType; set { _explicitNullValueDegreesOfFreedomType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("degrees_of_freedom_type"); else _explicitNullProperties?.Remove("degrees_of_freedom_type"); } }
+        private string _explicitNullValueDegreesOfFreedomType = default!;
 #endif
         /// <summary>The image_transformation_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ImageTransformationTypes { get; set; }
+        public List<string>? ImageTransformationTypes { get => _explicitNullValueImageTransformationTypes; set { _explicitNullValueImageTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_transformation_types"); else _explicitNullProperties?.Remove("image_transformation_types"); } }
+        private List<string>? _explicitNullValueImageTransformationTypes = default!;
 #nullable restore
 #else
-        public List<string> ImageTransformationTypes { get; set; }
+        public List<string> ImageTransformationTypes { get => _explicitNullValueImageTransformationTypes; set { _explicitNullValueImageTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_transformation_types"); else _explicitNullProperties?.Remove("image_transformation_types"); } }
+        private List<string> _explicitNullValueImageTransformationTypes = default!;
 #endif
         /// <summary>The multi_media_transformation_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MultiMediaTransformationType { get; set; }
+        public string? MultiMediaTransformationType { get => _explicitNullValueMultiMediaTransformationType; set { _explicitNullValueMultiMediaTransformationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_media_transformation_type"); else _explicitNullProperties?.Remove("multi_media_transformation_type"); } }
+        private string? _explicitNullValueMultiMediaTransformationType = default!;
 #nullable restore
 #else
-        public string MultiMediaTransformationType { get; set; }
+        public string MultiMediaTransformationType { get => _explicitNullValueMultiMediaTransformationType; set { _explicitNullValueMultiMediaTransformationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_media_transformation_type"); else _explicitNullProperties?.Remove("multi_media_transformation_type"); } }
+        private string _explicitNullValueMultiMediaTransformationType = default!;
 #endif
         /// <summary>The stories_transformation_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? StoriesTransformationTypes { get; set; }
+        public List<string>? StoriesTransformationTypes { get => _explicitNullValueStoriesTransformationTypes; set { _explicitNullValueStoriesTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stories_transformation_types"); else _explicitNullProperties?.Remove("stories_transformation_types"); } }
+        private List<string>? _explicitNullValueStoriesTransformationTypes = default!;
 #nullable restore
 #else
-        public List<string> StoriesTransformationTypes { get; set; }
+        public List<string> StoriesTransformationTypes { get => _explicitNullValueStoriesTransformationTypes; set { _explicitNullValueStoriesTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stories_transformation_types"); else _explicitNullProperties?.Remove("stories_transformation_types"); } }
+        private List<string> _explicitNullValueStoriesTransformationTypes = default!;
 #endif
         /// <summary>The text_transformation_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TextTransformationTypes { get; set; }
+        public List<string>? TextTransformationTypes { get => _explicitNullValueTextTransformationTypes; set { _explicitNullValueTextTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_transformation_types"); else _explicitNullProperties?.Remove("text_transformation_types"); } }
+        private List<string>? _explicitNullValueTextTransformationTypes = default!;
 #nullable restore
 #else
-        public List<string> TextTransformationTypes { get; set; }
+        public List<string> TextTransformationTypes { get => _explicitNullValueTextTransformationTypes; set { _explicitNullValueTextTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_transformation_types"); else _explicitNullProperties?.Remove("text_transformation_types"); } }
+        private List<string> _explicitNullValueTextTransformationTypes = default!;
 #endif
         /// <summary>The video_transformation_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? VideoTransformationTypes { get; set; }
+        public List<string>? VideoTransformationTypes { get => _explicitNullValueVideoTransformationTypes; set { _explicitNullValueVideoTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_transformation_types"); else _explicitNullProperties?.Remove("video_transformation_types"); } }
+        private List<string>? _explicitNullValueVideoTransformationTypes = default!;
 #nullable restore
 #else
-        public List<string> VideoTransformationTypes { get; set; }
+        public List<string> VideoTransformationTypes { get => _explicitNullValueVideoTransformationTypes; set { _explicitNullValueVideoTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_transformation_types"); else _explicitNullProperties?.Remove("video_transformation_types"); } }
+        private List<string> _explicitNullValueVideoTransformationTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDegreesOfFreedomSpec"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDegreesOfFreedomSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDegreesOfFreedomSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDegreesOfFreedomSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("stories_transformation_types", StoriesTransformationTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("text_transformation_types", TextTransformationTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("video_transformation_types", VideoTransformationTypes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

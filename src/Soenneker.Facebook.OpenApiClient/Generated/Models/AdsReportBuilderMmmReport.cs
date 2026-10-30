@@ -11,61 +11,90 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdsReportBuilderMmmReport : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("async_status") is { } nullNodeAsyncStatus && nullNodeAsyncStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AsyncStatus = null;
+            if (parseNode.GetChildNode("export_format") is { } nullNodeExportFormat && nullNodeExportFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportFormat = null;
+            if (parseNode.GetChildNode("export_name") is { } nullNodeExportName && nullNodeExportName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportName = null;
+            if (parseNode.GetChildNode("export_type") is { } nullNodeExportType && nullNodeExportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportType = null;
+            if (parseNode.GetChildNode("has_seen") is { } nullNodeHasSeen && nullNodeHasSeen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasSeen = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("mmm_status") is { } nullNodeMmmStatus && nullNodeMmmStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MmmStatus = null;
+            if (parseNode.GetChildNode("time_start") is { } nullNodeTimeStart && nullNodeTimeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeStart = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The async_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AsyncStatus { get; set; }
+        public string? AsyncStatus { get => _explicitNullValueAsyncStatus; set { _explicitNullValueAsyncStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async_status"); else _explicitNullProperties?.Remove("async_status"); } }
+        private string? _explicitNullValueAsyncStatus = default!;
 #nullable restore
 #else
-        public string AsyncStatus { get; set; }
+        public string AsyncStatus { get => _explicitNullValueAsyncStatus; set { _explicitNullValueAsyncStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async_status"); else _explicitNullProperties?.Remove("async_status"); } }
+        private string _explicitNullValueAsyncStatus = default!;
 #endif
         /// <summary>The export_format property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportFormat { get; set; }
+        public string? ExportFormat { get => _explicitNullValueExportFormat; set { _explicitNullValueExportFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_format"); else _explicitNullProperties?.Remove("export_format"); } }
+        private string? _explicitNullValueExportFormat = default!;
 #nullable restore
 #else
-        public string ExportFormat { get; set; }
+        public string ExportFormat { get => _explicitNullValueExportFormat; set { _explicitNullValueExportFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_format"); else _explicitNullProperties?.Remove("export_format"); } }
+        private string _explicitNullValueExportFormat = default!;
 #endif
         /// <summary>The export_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportName { get; set; }
+        public string? ExportName { get => _explicitNullValueExportName; set { _explicitNullValueExportName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_name"); else _explicitNullProperties?.Remove("export_name"); } }
+        private string? _explicitNullValueExportName = default!;
 #nullable restore
 #else
-        public string ExportName { get; set; }
+        public string ExportName { get => _explicitNullValueExportName; set { _explicitNullValueExportName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_name"); else _explicitNullProperties?.Remove("export_name"); } }
+        private string _explicitNullValueExportName = default!;
 #endif
         /// <summary>The export_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportType { get; set; }
+        public string? ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_type"); else _explicitNullProperties?.Remove("export_type"); } }
+        private string? _explicitNullValueExportType = default!;
 #nullable restore
 #else
-        public string ExportType { get; set; }
+        public string ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_type"); else _explicitNullProperties?.Remove("export_type"); } }
+        private string _explicitNullValueExportType = default!;
 #endif
         /// <summary>The has_seen property</summary>
-        public bool? HasSeen { get; set; }
+        public bool? HasSeen { get => _explicitNullValueHasSeen; set { _explicitNullValueHasSeen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_seen"); else _explicitNullProperties?.Remove("has_seen"); } }
+        private bool? _explicitNullValueHasSeen = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The mmm_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MmmStatus { get; set; }
+        public string? MmmStatus { get => _explicitNullValueMmmStatus; set { _explicitNullValueMmmStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mmm_status"); else _explicitNullProperties?.Remove("mmm_status"); } }
+        private string? _explicitNullValueMmmStatus = default!;
 #nullable restore
 #else
-        public string MmmStatus { get; set; }
+        public string MmmStatus { get => _explicitNullValueMmmStatus; set { _explicitNullValueMmmStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mmm_status"); else _explicitNullProperties?.Remove("mmm_status"); } }
+        private string _explicitNullValueMmmStatus = default!;
 #endif
         /// <summary>The time_start property</summary>
-        public DateTimeOffset? TimeStart { get; set; }
+        public DateTimeOffset? TimeStart { get => _explicitNullValueTimeStart; set { _explicitNullValueTimeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_start"); else _explicitNullProperties?.Remove("time_start"); } }
+        private DateTimeOffset? _explicitNullValueTimeStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReport"/> and sets the default values.
         /// </summary>
@@ -81,7 +110,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +145,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("mmm_status", MmmStatus);
             writer.WriteDateTimeOffsetValue("time_start", TimeStart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

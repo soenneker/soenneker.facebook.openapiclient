@@ -11,57 +11,87 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAccountAdRulesHistory : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("evaluation_spec") is { } nullNodeEvaluationSpec && nullNodeEvaluationSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluationSpec = null;
+            if (parseNode.GetChildNode("exception_code") is { } nullNodeExceptionCode && nullNodeExceptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCode = null;
+            if (parseNode.GetChildNode("exception_message") is { } nullNodeExceptionMessage && nullNodeExceptionMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionMessage = null;
+            if (parseNode.GetChildNode("execution_spec") is { } nullNodeExecutionSpec && nullNodeExecutionSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionSpec = null;
+            if (parseNode.GetChildNode("is_manual") is { } nullNodeIsManual && nullNodeIsManual.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsManual = null;
+            if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
+            if (parseNode.GetChildNode("rule_id") is { } nullNodeRuleId && nullNodeRuleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleId = null;
+            if (parseNode.GetChildNode("schedule_spec") is { } nullNodeScheduleSpec && nullNodeScheduleSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleSpec = null;
+            if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The evaluation_spec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleEvaluationSpec? EvaluationSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleEvaluationSpec? EvaluationSpec { get => _explicitNullValueEvaluationSpec; set { _explicitNullValueEvaluationSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluation_spec"); else _explicitNullProperties?.Remove("evaluation_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleEvaluationSpec? _explicitNullValueEvaluationSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleEvaluationSpec EvaluationSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleEvaluationSpec EvaluationSpec { get => _explicitNullValueEvaluationSpec; set { _explicitNullValueEvaluationSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluation_spec"); else _explicitNullProperties?.Remove("evaluation_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleEvaluationSpec _explicitNullValueEvaluationSpec = default!;
 #endif
         /// <summary>The exception_code property</summary>
-        public long? ExceptionCode { get; set; }
+        public long? ExceptionCode { get => _explicitNullValueExceptionCode; set { _explicitNullValueExceptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_code"); else _explicitNullProperties?.Remove("exception_code"); } }
+        private long? _explicitNullValueExceptionCode = default!;
         /// <summary>The exception_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionMessage { get; set; }
+        public string? ExceptionMessage { get => _explicitNullValueExceptionMessage; set { _explicitNullValueExceptionMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_message"); else _explicitNullProperties?.Remove("exception_message"); } }
+        private string? _explicitNullValueExceptionMessage = default!;
 #nullable restore
 #else
-        public string ExceptionMessage { get; set; }
+        public string ExceptionMessage { get => _explicitNullValueExceptionMessage; set { _explicitNullValueExceptionMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_message"); else _explicitNullProperties?.Remove("exception_message"); } }
+        private string _explicitNullValueExceptionMessage = default!;
 #endif
         /// <summary>The execution_spec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec? ExecutionSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec? ExecutionSpec { get => _explicitNullValueExecutionSpec; set { _explicitNullValueExecutionSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_spec"); else _explicitNullProperties?.Remove("execution_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec? _explicitNullValueExecutionSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec ExecutionSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec ExecutionSpec { get => _explicitNullValueExecutionSpec; set { _explicitNullValueExecutionSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_spec"); else _explicitNullProperties?.Remove("execution_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec _explicitNullValueExecutionSpec = default!;
 #endif
         /// <summary>The is_manual property</summary>
-        public bool? IsManual { get; set; }
+        public bool? IsManual { get => _explicitNullValueIsManual; set { _explicitNullValueIsManual = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_manual"); else _explicitNullProperties?.Remove("is_manual"); } }
+        private bool? _explicitNullValueIsManual = default!;
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleHistoryResult>? Results { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleHistoryResult>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleHistoryResult>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleHistoryResult> Results { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleHistoryResult> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleHistoryResult> _explicitNullValueResults = default!;
 #endif
         /// <summary>The rule_id property</summary>
-        public long? RuleId { get; set; }
+        public long? RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_id"); else _explicitNullProperties?.Remove("rule_id"); } }
+        private long? _explicitNullValueRuleId = default!;
         /// <summary>The schedule_spec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec? ScheduleSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec? ScheduleSpec { get => _explicitNullValueScheduleSpec; set { _explicitNullValueScheduleSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_spec"); else _explicitNullProperties?.Remove("schedule_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec? _explicitNullValueScheduleSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec ScheduleSpec { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec ScheduleSpec { get => _explicitNullValueScheduleSpec; set { _explicitNullValueScheduleSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_spec"); else _explicitNullProperties?.Remove("schedule_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec _explicitNullValueScheduleSpec = default!;
 #endif
         /// <summary>The timestamp property</summary>
-        public DateTimeOffset? Timestamp { get; set; }
+        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        private DateTimeOffset? _explicitNullValueTimestamp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdRulesHistory"/> and sets the default values.
         /// </summary>
@@ -77,7 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdRulesHistory CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdRulesHistory();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountAdRulesHistory(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("rule_id", RuleId);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleScheduleSpec>("schedule_spec", ScheduleSpec);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

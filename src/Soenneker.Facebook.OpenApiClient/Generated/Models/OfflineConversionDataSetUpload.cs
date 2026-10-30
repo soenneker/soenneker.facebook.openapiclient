@@ -11,55 +11,93 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OfflineConversionDataSetUpload : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_calls") is { } nullNodeApiCalls && nullNodeApiCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiCalls = null;
+            if (parseNode.GetChildNode("creation_time") is { } nullNodeCreationTime && nullNodeCreationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationTime = null;
+            if (parseNode.GetChildNode("duplicate_entries") is { } nullNodeDuplicateEntries && nullNodeDuplicateEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuplicateEntries = null;
+            if (parseNode.GetChildNode("event_stats") is { } nullNodeEventStats && nullNodeEventStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventStats = null;
+            if (parseNode.GetChildNode("event_time_max") is { } nullNodeEventTimeMax && nullNodeEventTimeMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTimeMax = null;
+            if (parseNode.GetChildNode("event_time_min") is { } nullNodeEventTimeMin && nullNodeEventTimeMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTimeMin = null;
+            if (parseNode.GetChildNode("first_upload_time") is { } nullNodeFirstUploadTime && nullNodeFirstUploadTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstUploadTime = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_excluded_for_lift") is { } nullNodeIsExcludedForLift && nullNodeIsExcludedForLift.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExcludedForLift = null;
+            if (parseNode.GetChildNode("last_upload_time") is { } nullNodeLastUploadTime && nullNodeLastUploadTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUploadTime = null;
+            if (parseNode.GetChildNode("matched_entries") is { } nullNodeMatchedEntries && nullNodeMatchedEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedEntries = null;
+            if (parseNode.GetChildNode("match_rate_approx") is { } nullNodeMatchRateApprox && nullNodeMatchRateApprox.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchRateApprox = null;
+            if (parseNode.GetChildNode("upload_tag") is { } nullNodeUploadTag && nullNodeUploadTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadTag = null;
+            if (parseNode.GetChildNode("valid_entries") is { } nullNodeValidEntries && nullNodeValidEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidEntries = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The api_calls property</summary>
-        public long? ApiCalls { get; set; }
+        public long? ApiCalls { get => _explicitNullValueApiCalls; set { _explicitNullValueApiCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_calls"); else _explicitNullProperties?.Remove("api_calls"); } }
+        private long? _explicitNullValueApiCalls = default!;
         /// <summary>The creation_time property</summary>
-        public long? CreationTime { get; set; }
+        public long? CreationTime { get => _explicitNullValueCreationTime; set { _explicitNullValueCreationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_time"); else _explicitNullProperties?.Remove("creation_time"); } }
+        private long? _explicitNullValueCreationTime = default!;
         /// <summary>The duplicate_entries property</summary>
-        public long? DuplicateEntries { get; set; }
+        public long? DuplicateEntries { get => _explicitNullValueDuplicateEntries; set { _explicitNullValueDuplicateEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duplicate_entries"); else _explicitNullProperties?.Remove("duplicate_entries"); } }
+        private long? _explicitNullValueDuplicateEntries = default!;
         /// <summary>The event_stats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventStats { get; set; }
+        public string? EventStats { get => _explicitNullValueEventStats; set { _explicitNullValueEventStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_stats"); else _explicitNullProperties?.Remove("event_stats"); } }
+        private string? _explicitNullValueEventStats = default!;
 #nullable restore
 #else
-        public string EventStats { get; set; }
+        public string EventStats { get => _explicitNullValueEventStats; set { _explicitNullValueEventStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_stats"); else _explicitNullProperties?.Remove("event_stats"); } }
+        private string _explicitNullValueEventStats = default!;
 #endif
         /// <summary>The event_time_max property</summary>
-        public long? EventTimeMax { get; set; }
+        public long? EventTimeMax { get => _explicitNullValueEventTimeMax; set { _explicitNullValueEventTimeMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_time_max"); else _explicitNullProperties?.Remove("event_time_max"); } }
+        private long? _explicitNullValueEventTimeMax = default!;
         /// <summary>The event_time_min property</summary>
-        public long? EventTimeMin { get; set; }
+        public long? EventTimeMin { get => _explicitNullValueEventTimeMin; set { _explicitNullValueEventTimeMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_time_min"); else _explicitNullProperties?.Remove("event_time_min"); } }
+        private long? _explicitNullValueEventTimeMin = default!;
         /// <summary>The first_upload_time property</summary>
-        public long? FirstUploadTime { get; set; }
+        public long? FirstUploadTime { get => _explicitNullValueFirstUploadTime; set { _explicitNullValueFirstUploadTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_upload_time"); else _explicitNullProperties?.Remove("first_upload_time"); } }
+        private long? _explicitNullValueFirstUploadTime = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_excluded_for_lift property</summary>
-        public bool? IsExcludedForLift { get; set; }
+        public bool? IsExcludedForLift { get => _explicitNullValueIsExcludedForLift; set { _explicitNullValueIsExcludedForLift = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_excluded_for_lift"); else _explicitNullProperties?.Remove("is_excluded_for_lift"); } }
+        private bool? _explicitNullValueIsExcludedForLift = default!;
         /// <summary>The last_upload_time property</summary>
-        public long? LastUploadTime { get; set; }
+        public long? LastUploadTime { get => _explicitNullValueLastUploadTime; set { _explicitNullValueLastUploadTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_upload_time"); else _explicitNullProperties?.Remove("last_upload_time"); } }
+        private long? _explicitNullValueLastUploadTime = default!;
         /// <summary>The matched_entries property</summary>
-        public long? MatchedEntries { get; set; }
+        public long? MatchedEntries { get => _explicitNullValueMatchedEntries; set { _explicitNullValueMatchedEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_entries"); else _explicitNullProperties?.Remove("matched_entries"); } }
+        private long? _explicitNullValueMatchedEntries = default!;
         /// <summary>The match_rate_approx property</summary>
-        public long? MatchRateApprox { get; set; }
+        public long? MatchRateApprox { get => _explicitNullValueMatchRateApprox; set { _explicitNullValueMatchRateApprox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("match_rate_approx"); else _explicitNullProperties?.Remove("match_rate_approx"); } }
+        private long? _explicitNullValueMatchRateApprox = default!;
         /// <summary>The upload_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadTag { get; set; }
+        public string? UploadTag { get => _explicitNullValueUploadTag; set { _explicitNullValueUploadTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_tag"); else _explicitNullProperties?.Remove("upload_tag"); } }
+        private string? _explicitNullValueUploadTag = default!;
 #nullable restore
 #else
-        public string UploadTag { get; set; }
+        public string UploadTag { get => _explicitNullValueUploadTag; set { _explicitNullValueUploadTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_tag"); else _explicitNullProperties?.Remove("upload_tag"); } }
+        private string _explicitNullValueUploadTag = default!;
 #endif
         /// <summary>The valid_entries property</summary>
-        public long? ValidEntries { get; set; }
+        public long? ValidEntries { get => _explicitNullValueValidEntries; set { _explicitNullValueValidEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid_entries"); else _explicitNullProperties?.Remove("valid_entries"); } }
+        private long? _explicitNullValueValidEntries = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetUpload"/> and sets the default values.
         /// </summary>
@@ -75,7 +113,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetUpload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetUpload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetUpload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +160,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("match_rate_approx", MatchRateApprox);
             writer.WriteStringValue("upload_tag", UploadTag);
             writer.WriteLongValue("valid_entries", ValidEntries);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

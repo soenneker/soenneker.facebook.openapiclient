@@ -11,24 +11,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeFeatureDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customizations") is { } nullNodeCustomizations && nullNodeCustomizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Customizations = null;
+            if (parseNode.GetChildNode("enroll_status") is { } nullNodeEnrollStatus && nullNodeEnrollStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations? Customizations { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations? Customizations { get => _explicitNullValueCustomizations; set { _explicitNullValueCustomizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customizations"); else _explicitNullProperties?.Remove("customizations"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations? _explicitNullValueCustomizations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations Customizations { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations Customizations { get => _explicitNullValueCustomizations; set { _explicitNullValueCustomizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customizations"); else _explicitNullProperties?.Remove("customizations"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations _explicitNullValueCustomizations = default!;
 #endif
         /// <summary>The enroll_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnrollStatus { get; set; }
+        public string? EnrollStatus { get => _explicitNullValueEnrollStatus; set { _explicitNullValueEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enroll_status"); else _explicitNullProperties?.Remove("enroll_status"); } }
+        private string? _explicitNullValueEnrollStatus = default!;
 #nullable restore
 #else
-        public string EnrollStatus { get; set; }
+        public string EnrollStatus { get => _explicitNullValueEnrollStatus; set { _explicitNullValueEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enroll_status"); else _explicitNullProperties?.Remove("enroll_status"); } }
+        private string _explicitNullValueEnrollStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureCustomizations>("customizations", Customizations);
             writer.WriteStringValue("enroll_status", EnrollStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

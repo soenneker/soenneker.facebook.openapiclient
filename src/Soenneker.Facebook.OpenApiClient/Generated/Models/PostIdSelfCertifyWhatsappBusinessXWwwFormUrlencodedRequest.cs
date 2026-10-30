@@ -11,69 +11,101 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdSelfCertifyWhatsappBusinessXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("average_monthly_revenue_spend_with_partner") is { } nullNodeAverageMonthlyRevenueSpendWithPartner && nullNodeAverageMonthlyRevenueSpendWithPartner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageMonthlyRevenueSpendWithPartner = null;
+            if (parseNode.GetChildNode("business_documents") is { } nullNodeBusinessDocuments && nullNodeBusinessDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDocuments = null;
+            if (parseNode.GetChildNode("business_vertical") is { } nullNodeBusinessVertical && nullNodeBusinessVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessVertical = null;
+            if (parseNode.GetChildNode("end_business_address") is { } nullNodeEndBusinessAddress && nullNodeEndBusinessAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBusinessAddress = null;
+            if (parseNode.GetChildNode("end_business_id") is { } nullNodeEndBusinessId && nullNodeEndBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBusinessId = null;
+            if (parseNode.GetChildNode("end_business_legal_name") is { } nullNodeEndBusinessLegalName && nullNodeEndBusinessLegalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBusinessLegalName = null;
+            if (parseNode.GetChildNode("end_business_trade_names") is { } nullNodeEndBusinessTradeNames && nullNodeEndBusinessTradeNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBusinessTradeNames = null;
+            if (parseNode.GetChildNode("end_business_website") is { } nullNodeEndBusinessWebsite && nullNodeEndBusinessWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndBusinessWebsite = null;
+            if (parseNode.GetChildNode("num_billing_cycles_with_partner") is { } nullNodeNumBillingCyclesWithPartner && nullNodeNumBillingCyclesWithPartner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumBillingCyclesWithPartner = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AverageMonthlyRevenueSpendWithPartner { get; set; }
+        public string? AverageMonthlyRevenueSpendWithPartner { get => _explicitNullValueAverageMonthlyRevenueSpendWithPartner; set { _explicitNullValueAverageMonthlyRevenueSpendWithPartner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("average_monthly_revenue_spend_with_partner"); else _explicitNullProperties?.Remove("average_monthly_revenue_spend_with_partner"); } }
+        private string? _explicitNullValueAverageMonthlyRevenueSpendWithPartner = default!;
 #nullable restore
 #else
-        public string AverageMonthlyRevenueSpendWithPartner { get; set; }
+        public string AverageMonthlyRevenueSpendWithPartner { get => _explicitNullValueAverageMonthlyRevenueSpendWithPartner; set { _explicitNullValueAverageMonthlyRevenueSpendWithPartner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("average_monthly_revenue_spend_with_partner"); else _explicitNullProperties?.Remove("average_monthly_revenue_spend_with_partner"); } }
+        private string _explicitNullValueAverageMonthlyRevenueSpendWithPartner = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessDocuments { get; set; }
+        public string? BusinessDocuments { get => _explicitNullValueBusinessDocuments; set { _explicitNullValueBusinessDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_documents"); else _explicitNullProperties?.Remove("business_documents"); } }
+        private string? _explicitNullValueBusinessDocuments = default!;
 #nullable restore
 #else
-        public string BusinessDocuments { get; set; }
+        public string BusinessDocuments { get => _explicitNullValueBusinessDocuments; set { _explicitNullValueBusinessDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_documents"); else _explicitNullProperties?.Remove("business_documents"); } }
+        private string _explicitNullValueBusinessDocuments = default!;
 #endif
         /// <summary>The business_vertical property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessselfCertifyWhatsappBusinessBusinessVerticalEnumParam? BusinessVertical { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessselfCertifyWhatsappBusinessBusinessVerticalEnumParam? BusinessVertical { get => _explicitNullValueBusinessVertical; set { _explicitNullValueBusinessVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_vertical"); else _explicitNullProperties?.Remove("business_vertical"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.BusinessselfCertifyWhatsappBusinessBusinessVerticalEnumParam? _explicitNullValueBusinessVertical = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndBusinessAddress { get; set; }
+        public string? EndBusinessAddress { get => _explicitNullValueEndBusinessAddress; set { _explicitNullValueEndBusinessAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_address"); else _explicitNullProperties?.Remove("end_business_address"); } }
+        private string? _explicitNullValueEndBusinessAddress = default!;
 #nullable restore
 #else
-        public string EndBusinessAddress { get; set; }
+        public string EndBusinessAddress { get => _explicitNullValueEndBusinessAddress; set { _explicitNullValueEndBusinessAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_address"); else _explicitNullProperties?.Remove("end_business_address"); } }
+        private string _explicitNullValueEndBusinessAddress = default!;
 #endif
         /// <summary>The end_business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndBusinessId { get; set; }
+        public string? EndBusinessId { get => _explicitNullValueEndBusinessId; set { _explicitNullValueEndBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_id"); else _explicitNullProperties?.Remove("end_business_id"); } }
+        private string? _explicitNullValueEndBusinessId = default!;
 #nullable restore
 #else
-        public string EndBusinessId { get; set; }
+        public string EndBusinessId { get => _explicitNullValueEndBusinessId; set { _explicitNullValueEndBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_id"); else _explicitNullProperties?.Remove("end_business_id"); } }
+        private string _explicitNullValueEndBusinessId = default!;
 #endif
         /// <summary>The end_business_legal_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndBusinessLegalName { get; set; }
+        public string? EndBusinessLegalName { get => _explicitNullValueEndBusinessLegalName; set { _explicitNullValueEndBusinessLegalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_legal_name"); else _explicitNullProperties?.Remove("end_business_legal_name"); } }
+        private string? _explicitNullValueEndBusinessLegalName = default!;
 #nullable restore
 #else
-        public string EndBusinessLegalName { get; set; }
+        public string EndBusinessLegalName { get => _explicitNullValueEndBusinessLegalName; set { _explicitNullValueEndBusinessLegalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_legal_name"); else _explicitNullProperties?.Remove("end_business_legal_name"); } }
+        private string _explicitNullValueEndBusinessLegalName = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndBusinessTradeNames { get; set; }
+        public string? EndBusinessTradeNames { get => _explicitNullValueEndBusinessTradeNames; set { _explicitNullValueEndBusinessTradeNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_trade_names"); else _explicitNullProperties?.Remove("end_business_trade_names"); } }
+        private string? _explicitNullValueEndBusinessTradeNames = default!;
 #nullable restore
 #else
-        public string EndBusinessTradeNames { get; set; }
+        public string EndBusinessTradeNames { get => _explicitNullValueEndBusinessTradeNames; set { _explicitNullValueEndBusinessTradeNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_trade_names"); else _explicitNullProperties?.Remove("end_business_trade_names"); } }
+        private string _explicitNullValueEndBusinessTradeNames = default!;
 #endif
         /// <summary>The end_business_website property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndBusinessWebsite { get; set; }
+        public string? EndBusinessWebsite { get => _explicitNullValueEndBusinessWebsite; set { _explicitNullValueEndBusinessWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_website"); else _explicitNullProperties?.Remove("end_business_website"); } }
+        private string? _explicitNullValueEndBusinessWebsite = default!;
 #nullable restore
 #else
-        public string EndBusinessWebsite { get; set; }
+        public string EndBusinessWebsite { get => _explicitNullValueEndBusinessWebsite; set { _explicitNullValueEndBusinessWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_business_website"); else _explicitNullProperties?.Remove("end_business_website"); } }
+        private string _explicitNullValueEndBusinessWebsite = default!;
 #endif
         /// <summary>The num_billing_cycles_with_partner property</summary>
-        public long? NumBillingCyclesWithPartner { get; set; }
+        public long? NumBillingCyclesWithPartner { get => _explicitNullValueNumBillingCyclesWithPartner; set { _explicitNullValueNumBillingCyclesWithPartner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_billing_cycles_with_partner"); else _explicitNullProperties?.Remove("num_billing_cycles_with_partner"); } }
+        private long? _explicitNullValueNumBillingCyclesWithPartner = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdSelfCertifyWhatsappBusinessXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -89,7 +121,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdSelfCertifyWhatsappBusinessXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdSelfCertifyWhatsappBusinessXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdSelfCertifyWhatsappBusinessXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -126,6 +158,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("end_business_trade_names", EndBusinessTradeNames);
             writer.WriteStringValue("end_business_website", EndBusinessWebsite);
             writer.WriteLongValue("num_billing_cycles_with_partner", NumBillingCyclesWithPartner);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

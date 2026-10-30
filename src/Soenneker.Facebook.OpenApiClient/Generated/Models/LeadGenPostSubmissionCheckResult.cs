@@ -11,32 +11,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LeadGenPostSubmissionCheckResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_call_result") is { } nullNodeApiCallResult && nullNodeApiCallResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiCallResult = null;
+            if (parseNode.GetChildNode("api_error_message") is { } nullNodeApiErrorMessage && nullNodeApiErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiErrorMessage = null;
+            if (parseNode.GetChildNode("shown_thank_you_page") is { } nullNodeShownThankYouPage && nullNodeShownThankYouPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShownThankYouPage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The api_call_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiCallResult { get; set; }
+        public string? ApiCallResult { get => _explicitNullValueApiCallResult; set { _explicitNullValueApiCallResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_call_result"); else _explicitNullProperties?.Remove("api_call_result"); } }
+        private string? _explicitNullValueApiCallResult = default!;
 #nullable restore
 #else
-        public string ApiCallResult { get; set; }
+        public string ApiCallResult { get => _explicitNullValueApiCallResult; set { _explicitNullValueApiCallResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_call_result"); else _explicitNullProperties?.Remove("api_call_result"); } }
+        private string _explicitNullValueApiCallResult = default!;
 #endif
         /// <summary>The api_error_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiErrorMessage { get; set; }
+        public string? ApiErrorMessage { get => _explicitNullValueApiErrorMessage; set { _explicitNullValueApiErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error_message"); else _explicitNullProperties?.Remove("api_error_message"); } }
+        private string? _explicitNullValueApiErrorMessage = default!;
 #nullable restore
 #else
-        public string ApiErrorMessage { get; set; }
+        public string ApiErrorMessage { get => _explicitNullValueApiErrorMessage; set { _explicitNullValueApiErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error_message"); else _explicitNullProperties?.Remove("api_error_message"); } }
+        private string _explicitNullValueApiErrorMessage = default!;
 #endif
         /// <summary>The shown_thank_you_page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShownThankYouPage { get; set; }
+        public string? ShownThankYouPage { get => _explicitNullValueShownThankYouPage; set { _explicitNullValueShownThankYouPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shown_thank_you_page"); else _explicitNullProperties?.Remove("shown_thank_you_page"); } }
+        private string? _explicitNullValueShownThankYouPage = default!;
 #nullable restore
 #else
-        public string ShownThankYouPage { get; set; }
+        public string ShownThankYouPage { get => _explicitNullValueShownThankYouPage; set { _explicitNullValueShownThankYouPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shown_thank_you_page"); else _explicitNullProperties?.Remove("shown_thank_you_page"); } }
+        private string _explicitNullValueShownThankYouPage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LeadGenPostSubmissionCheckResult"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LeadGenPostSubmissionCheckResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LeadGenPostSubmissionCheckResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LeadGenPostSubmissionCheckResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("api_call_result", ApiCallResult);
             writer.WriteStringValue("api_error_message", ApiErrorMessage);
             writer.WriteStringValue("shown_thank_you_page", ShownThankYouPage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

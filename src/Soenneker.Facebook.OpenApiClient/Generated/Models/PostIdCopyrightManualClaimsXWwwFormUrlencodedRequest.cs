@@ -11,46 +11,71 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdCopyrightManualClaimsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("action_reason") is { } nullNodeActionReason && nullNodeActionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionReason = null;
+            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+            if (parseNode.GetChildNode("match_content_type") is { } nullNodeMatchContentType && nullNodeMatchContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchContentType = null;
+            if (parseNode.GetChildNode("matched_asset_id") is { } nullNodeMatchedAssetId && nullNodeMatchedAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedAssetId = null;
+            if (parseNode.GetChildNode("reference_asset_id") is { } nullNodeReferenceAssetId && nullNodeReferenceAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceAssetId = null;
+            if (parseNode.GetChildNode("selected_segments") is { } nullNodeSelectedSegments && nullNodeSelectedSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedSegments = null;
+        }
+
         /// <summary>The action property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam? Action { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam? _explicitNullValueAction = default!;
         /// <summary>The action_reason property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam? ActionReason { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam? ActionReason { get => _explicitNullValueActionReason; set { _explicitNullValueActionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_reason"); else _explicitNullProperties?.Remove("action_reason"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam? _explicitNullValueActionReason = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Countries { get; set; }
+        public string? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        private string? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public string Countries { get; set; }
+        public string Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        private string _explicitNullValueCountries = default!;
 #endif
         /// <summary>The match_content_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam? MatchContentType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam? MatchContentType { get => _explicitNullValueMatchContentType; set { _explicitNullValueMatchContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("match_content_type"); else _explicitNullProperties?.Remove("match_content_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam? _explicitNullValueMatchContentType = default!;
         /// <summary>The matched_asset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MatchedAssetId { get; set; }
+        public string? MatchedAssetId { get => _explicitNullValueMatchedAssetId; set { _explicitNullValueMatchedAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_asset_id"); else _explicitNullProperties?.Remove("matched_asset_id"); } }
+        private string? _explicitNullValueMatchedAssetId = default!;
 #nullable restore
 #else
-        public string MatchedAssetId { get; set; }
+        public string MatchedAssetId { get => _explicitNullValueMatchedAssetId; set { _explicitNullValueMatchedAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_asset_id"); else _explicitNullProperties?.Remove("matched_asset_id"); } }
+        private string _explicitNullValueMatchedAssetId = default!;
 #endif
         /// <summary>The reference_asset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceAssetId { get; set; }
+        public string? ReferenceAssetId { get => _explicitNullValueReferenceAssetId; set { _explicitNullValueReferenceAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_asset_id"); else _explicitNullProperties?.Remove("reference_asset_id"); } }
+        private string? _explicitNullValueReferenceAssetId = default!;
 #nullable restore
 #else
-        public string ReferenceAssetId { get; set; }
+        public string ReferenceAssetId { get => _explicitNullValueReferenceAssetId; set { _explicitNullValueReferenceAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_asset_id"); else _explicitNullProperties?.Remove("reference_asset_id"); } }
+        private string _explicitNullValueReferenceAssetId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectedSegments { get; set; }
+        public string? SelectedSegments { get => _explicitNullValueSelectedSegments; set { _explicitNullValueSelectedSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_segments"); else _explicitNullProperties?.Remove("selected_segments"); } }
+        private string? _explicitNullValueSelectedSegments = default!;
 #nullable restore
 #else
-        public string SelectedSegments { get; set; }
+        public string SelectedSegments { get => _explicitNullValueSelectedSegments; set { _explicitNullValueSelectedSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_segments"); else _explicitNullProperties?.Remove("selected_segments"); } }
+        private string _explicitNullValueSelectedSegments = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopyrightManualClaimsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -67,7 +92,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopyrightManualClaimsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopyrightManualClaimsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopyrightManualClaimsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +125,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("matched_asset_id", MatchedAssetId);
             writer.WriteStringValue("reference_asset_id", ReferenceAssetId);
             writer.WriteStringValue("selected_segments", SelectedSegments);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

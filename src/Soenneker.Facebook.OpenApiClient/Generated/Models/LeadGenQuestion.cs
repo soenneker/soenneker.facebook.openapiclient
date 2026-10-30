@@ -11,80 +11,114 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LeadGenQuestion : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conditional_questions_choices") is { } nullNodeConditionalQuestionsChoices && nullNodeConditionalQuestionsChoices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalQuestionsChoices = null;
+            if (parseNode.GetChildNode("conditional_questions_group_id") is { } nullNodeConditionalQuestionsGroupId && nullNodeConditionalQuestionsGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalQuestionsGroupId = null;
+            if (parseNode.GetChildNode("dependent_conditional_questions") is { } nullNodeDependentConditionalQuestions && nullNodeDependentConditionalQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DependentConditionalQuestions = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inline_context") is { } nullNodeInlineContext && nullNodeInlineContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InlineContext = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The conditional_questions_choices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices>? ConditionalQuestionsChoices { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices>? ConditionalQuestionsChoices { get => _explicitNullValueConditionalQuestionsChoices; set { _explicitNullValueConditionalQuestionsChoices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditional_questions_choices"); else _explicitNullProperties?.Remove("conditional_questions_choices"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices>? _explicitNullValueConditionalQuestionsChoices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices> ConditionalQuestionsChoices { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices> ConditionalQuestionsChoices { get => _explicitNullValueConditionalQuestionsChoices; set { _explicitNullValueConditionalQuestionsChoices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditional_questions_choices"); else _explicitNullProperties?.Remove("conditional_questions_choices"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices> _explicitNullValueConditionalQuestionsChoices = default!;
 #endif
         /// <summary>The conditional_questions_group_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConditionalQuestionsGroupId { get; set; }
+        public string? ConditionalQuestionsGroupId { get => _explicitNullValueConditionalQuestionsGroupId; set { _explicitNullValueConditionalQuestionsGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditional_questions_group_id"); else _explicitNullProperties?.Remove("conditional_questions_group_id"); } }
+        private string? _explicitNullValueConditionalQuestionsGroupId = default!;
 #nullable restore
 #else
-        public string ConditionalQuestionsGroupId { get; set; }
+        public string ConditionalQuestionsGroupId { get => _explicitNullValueConditionalQuestionsGroupId; set { _explicitNullValueConditionalQuestionsGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditional_questions_group_id"); else _explicitNullProperties?.Remove("conditional_questions_group_id"); } }
+        private string _explicitNullValueConditionalQuestionsGroupId = default!;
 #endif
         /// <summary>The dependent_conditional_questions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupQuestions>? DependentConditionalQuestions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupQuestions>? DependentConditionalQuestions { get => _explicitNullValueDependentConditionalQuestions; set { _explicitNullValueDependentConditionalQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependent_conditional_questions"); else _explicitNullProperties?.Remove("dependent_conditional_questions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupQuestions>? _explicitNullValueDependentConditionalQuestions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupQuestions> DependentConditionalQuestions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupQuestions> DependentConditionalQuestions { get => _explicitNullValueDependentConditionalQuestions; set { _explicitNullValueDependentConditionalQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependent_conditional_questions"); else _explicitNullProperties?.Remove("dependent_conditional_questions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupQuestions> _explicitNullValueDependentConditionalQuestions = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inline_context property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InlineContext { get; set; }
+        public string? InlineContext { get => _explicitNullValueInlineContext; set { _explicitNullValueInlineContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inline_context"); else _explicitNullProperties?.Remove("inline_context"); } }
+        private string? _explicitNullValueInlineContext = default!;
 #nullable restore
 #else
-        public string InlineContext { get; set; }
+        public string InlineContext { get => _explicitNullValueInlineContext; set { _explicitNullValueInlineContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inline_context"); else _explicitNullProperties?.Remove("inline_context"); } }
+        private string _explicitNullValueInlineContext = default!;
 #endif
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get; set; }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption>? Options { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption> Options { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption> _explicitNullValueOptions = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion"/> and sets the default values.
@@ -101,7 +135,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +172,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestionOption>("options", Options);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

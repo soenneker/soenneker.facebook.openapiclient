@@ -11,28 +11,45 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LiveVideoTargeting : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("age_max") is { } nullNodeAgeMax && nullNodeAgeMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMax = null;
+            if (parseNode.GetChildNode("age_min") is { } nullNodeAgeMin && nullNodeAgeMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMin = null;
+            if (parseNode.GetChildNode("excluded_countries") is { } nullNodeExcludedCountries && nullNodeExcludedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedCountries = null;
+            if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The age_max property</summary>
-        public long? AgeMax { get; set; }
+        public long? AgeMax { get => _explicitNullValueAgeMax; set { _explicitNullValueAgeMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_max"); else _explicitNullProperties?.Remove("age_max"); } }
+        private long? _explicitNullValueAgeMax = default!;
         /// <summary>The age_min property</summary>
-        public long? AgeMin { get; set; }
+        public long? AgeMin { get => _explicitNullValueAgeMin; set { _explicitNullValueAgeMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_min"); else _explicitNullProperties?.Remove("age_min"); } }
+        private long? _explicitNullValueAgeMin = default!;
         /// <summary>The excluded_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExcludedCountries { get; set; }
+        public List<string>? ExcludedCountries { get => _explicitNullValueExcludedCountries; set { _explicitNullValueExcludedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_countries"); else _explicitNullProperties?.Remove("excluded_countries"); } }
+        private List<string>? _explicitNullValueExcludedCountries = default!;
 #nullable restore
 #else
-        public List<string> ExcludedCountries { get; set; }
+        public List<string> ExcludedCountries { get => _explicitNullValueExcludedCountries; set { _explicitNullValueExcludedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded_countries"); else _explicitNullProperties?.Remove("excluded_countries"); } }
+        private List<string> _explicitNullValueExcludedCountries = default!;
 #endif
         /// <summary>The geo_locations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation? GeoLocations { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation? _explicitNullValueGeoLocations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation GeoLocations { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation _explicitNullValueGeoLocations = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("age_min", AgeMin);
             writer.WriteCollectionOfPrimitiveValues<string>("excluded_countries", ExcludedCountries);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation>("geo_locations", GeoLocations);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,36 +11,56 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdExternalDonationsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount_received") is { } nullNodeAmountReceived && nullNodeAmountReceived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountReceived = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("donation_id_hash") is { } nullNodeDonationIdHash && nullNodeDonationIdHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DonationIdHash = null;
+            if (parseNode.GetChildNode("donation_time") is { } nullNodeDonationTime && nullNodeDonationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DonationTime = null;
+            if (parseNode.GetChildNode("donor_id_hash") is { } nullNodeDonorIdHash && nullNodeDonorIdHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DonorIdHash = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount_received property</summary>
-        public long? AmountReceived { get; set; }
+        public long? AmountReceived { get => _explicitNullValueAmountReceived; set { _explicitNullValueAmountReceived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_received"); else _explicitNullProperties?.Remove("amount_received"); } }
+        private long? _explicitNullValueAmountReceived = default!;
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The donation_id_hash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DonationIdHash { get; set; }
+        public string? DonationIdHash { get => _explicitNullValueDonationIdHash; set { _explicitNullValueDonationIdHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("donation_id_hash"); else _explicitNullProperties?.Remove("donation_id_hash"); } }
+        private string? _explicitNullValueDonationIdHash = default!;
 #nullable restore
 #else
-        public string DonationIdHash { get; set; }
+        public string DonationIdHash { get => _explicitNullValueDonationIdHash; set { _explicitNullValueDonationIdHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("donation_id_hash"); else _explicitNullProperties?.Remove("donation_id_hash"); } }
+        private string _explicitNullValueDonationIdHash = default!;
 #endif
         /// <summary>The donation_time property</summary>
-        public long? DonationTime { get; set; }
+        public long? DonationTime { get => _explicitNullValueDonationTime; set { _explicitNullValueDonationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("donation_time"); else _explicitNullProperties?.Remove("donation_time"); } }
+        private long? _explicitNullValueDonationTime = default!;
         /// <summary>The donor_id_hash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DonorIdHash { get; set; }
+        public string? DonorIdHash { get => _explicitNullValueDonorIdHash; set { _explicitNullValueDonorIdHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("donor_id_hash"); else _explicitNullProperties?.Remove("donor_id_hash"); } }
+        private string? _explicitNullValueDonorIdHash = default!;
 #nullable restore
 #else
-        public string DonorIdHash { get; set; }
+        public string DonorIdHash { get => _explicitNullValueDonorIdHash; set { _explicitNullValueDonorIdHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("donor_id_hash"); else _explicitNullProperties?.Remove("donor_id_hash"); } }
+        private string _explicitNullValueDonorIdHash = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdExternalDonationsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdExternalDonationsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdExternalDonationsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdExternalDonationsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("donation_id_hash", DonationIdHash);
             writer.WriteLongValue("donation_time", DonationTime);
             writer.WriteStringValue("donor_id_hash", DonorIdHash);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

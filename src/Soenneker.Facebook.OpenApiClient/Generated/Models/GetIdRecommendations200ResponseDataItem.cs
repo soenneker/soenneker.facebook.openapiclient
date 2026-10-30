@@ -11,40 +11,59 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetIdRecommendations200ResponseDataItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("paging") is { } nullNodePaging && nullNodePaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paging = null;
+            if (parseNode.GetChildNode("recommendations") is { } nullNodeRecommendations && nullNodeRecommendations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recommendations = null;
+            if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemDataItem>? Data { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemDataItem> Data { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging? Paging { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging? _explicitNullValuePaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging Paging { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging _explicitNullValuePaging = default!;
 #endif
         /// <summary>The recommendations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem>? Recommendations { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem>? Recommendations { get => _explicitNullValueRecommendations; set { _explicitNullValueRecommendations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendations"); else _explicitNullProperties?.Remove("recommendations"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem>? _explicitNullValueRecommendations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem> Recommendations { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem> Recommendations { get => _explicitNullValueRecommendations; set { _explicitNullValueRecommendations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendations"); else _explicitNullProperties?.Remove("recommendations"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem> _explicitNullValueRecommendations = default!;
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary? Summary { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary Summary { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary _explicitNullValueSummary = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItem"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemPaging>("paging", Paging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemRecommendationsItem>("recommendations", Recommendations);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdRecommendations200ResponseDataItemSummary>("summary", Summary);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

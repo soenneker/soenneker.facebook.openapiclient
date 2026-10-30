@@ -11,124 +11,177 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeSiteLinksSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("is_defaulting_eligible") is { } nullNodeIsDefaultingEligible && nullNodeIsDefaultingEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDefaultingEligible = null;
+            if (parseNode.GetChildNode("is_site_link_sticky") is { } nullNodeIsSiteLinkSticky && nullNodeIsSiteLinkSticky.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSiteLinkSticky = null;
+            if (parseNode.GetChildNode("site_link_classification") is { } nullNodeSiteLinkClassification && nullNodeSiteLinkClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkClassification = null;
+            if (parseNode.GetChildNode("site_link_extra_metadata") is { } nullNodeSiteLinkExtraMetadata && nullNodeSiteLinkExtraMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkExtraMetadata = null;
+            if (parseNode.GetChildNode("site_link_hash") is { } nullNodeSiteLinkHash && nullNodeSiteLinkHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkHash = null;
+            if (parseNode.GetChildNode("site_link_id") is { } nullNodeSiteLinkId && nullNodeSiteLinkId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkId = null;
+            if (parseNode.GetChildNode("site_link_image_hash") is { } nullNodeSiteLinkImageHash && nullNodeSiteLinkImageHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkImageHash = null;
+            if (parseNode.GetChildNode("site_link_image_url") is { } nullNodeSiteLinkImageUrl && nullNodeSiteLinkImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkImageUrl = null;
+            if (parseNode.GetChildNode("site_link_language") is { } nullNodeSiteLinkLanguage && nullNodeSiteLinkLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkLanguage = null;
+            if (parseNode.GetChildNode("site_link_original_url") is { } nullNodeSiteLinkOriginalUrl && nullNodeSiteLinkOriginalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkOriginalUrl = null;
+            if (parseNode.GetChildNode("site_link_recommendation_type") is { } nullNodeSiteLinkRecommendationType && nullNodeSiteLinkRecommendationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkRecommendationType = null;
+            if (parseNode.GetChildNode("site_link_title") is { } nullNodeSiteLinkTitle && nullNodeSiteLinkTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkTitle = null;
+            if (parseNode.GetChildNode("site_link_url") is { } nullNodeSiteLinkUrl && nullNodeSiteLinkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkUrl = null;
+            if (parseNode.GetChildNode("site_link_url_anchor") is { } nullNodeSiteLinkUrlAnchor && nullNodeSiteLinkUrlAnchor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkUrlAnchor = null;
+            if (parseNode.GetChildNode("site_link_url_recommender_type") is { } nullNodeSiteLinkUrlRecommenderType && nullNodeSiteLinkUrlRecommenderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkUrlRecommenderType = null;
+            if (parseNode.GetChildNode("site_link_website_data_source") is { } nullNodeSiteLinkWebsiteDataSource && nullNodeSiteLinkWebsiteDataSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinkWebsiteDataSource = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_defaulting_eligible property</summary>
-        public bool? IsDefaultingEligible { get; set; }
+        public bool? IsDefaultingEligible { get => _explicitNullValueIsDefaultingEligible; set { _explicitNullValueIsDefaultingEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_defaulting_eligible"); else _explicitNullProperties?.Remove("is_defaulting_eligible"); } }
+        private bool? _explicitNullValueIsDefaultingEligible = default!;
         /// <summary>The is_site_link_sticky property</summary>
-        public bool? IsSiteLinkSticky { get; set; }
+        public bool? IsSiteLinkSticky { get => _explicitNullValueIsSiteLinkSticky; set { _explicitNullValueIsSiteLinkSticky = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_site_link_sticky"); else _explicitNullProperties?.Remove("is_site_link_sticky"); } }
+        private bool? _explicitNullValueIsSiteLinkSticky = default!;
         /// <summary>The site_link_classification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkClassification { get; set; }
+        public string? SiteLinkClassification { get => _explicitNullValueSiteLinkClassification; set { _explicitNullValueSiteLinkClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_classification"); else _explicitNullProperties?.Remove("site_link_classification"); } }
+        private string? _explicitNullValueSiteLinkClassification = default!;
 #nullable restore
 #else
-        public string SiteLinkClassification { get; set; }
+        public string SiteLinkClassification { get => _explicitNullValueSiteLinkClassification; set { _explicitNullValueSiteLinkClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_classification"); else _explicitNullProperties?.Remove("site_link_classification"); } }
+        private string _explicitNullValueSiteLinkClassification = default!;
 #endif
         /// <summary>The site_link_extra_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkExtraMetadata { get; set; }
+        public string? SiteLinkExtraMetadata { get => _explicitNullValueSiteLinkExtraMetadata; set { _explicitNullValueSiteLinkExtraMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_extra_metadata"); else _explicitNullProperties?.Remove("site_link_extra_metadata"); } }
+        private string? _explicitNullValueSiteLinkExtraMetadata = default!;
 #nullable restore
 #else
-        public string SiteLinkExtraMetadata { get; set; }
+        public string SiteLinkExtraMetadata { get => _explicitNullValueSiteLinkExtraMetadata; set { _explicitNullValueSiteLinkExtraMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_extra_metadata"); else _explicitNullProperties?.Remove("site_link_extra_metadata"); } }
+        private string _explicitNullValueSiteLinkExtraMetadata = default!;
 #endif
         /// <summary>The site_link_hash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkHash { get; set; }
+        public string? SiteLinkHash { get => _explicitNullValueSiteLinkHash; set { _explicitNullValueSiteLinkHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_hash"); else _explicitNullProperties?.Remove("site_link_hash"); } }
+        private string? _explicitNullValueSiteLinkHash = default!;
 #nullable restore
 #else
-        public string SiteLinkHash { get; set; }
+        public string SiteLinkHash { get => _explicitNullValueSiteLinkHash; set { _explicitNullValueSiteLinkHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_hash"); else _explicitNullProperties?.Remove("site_link_hash"); } }
+        private string _explicitNullValueSiteLinkHash = default!;
 #endif
         /// <summary>The site_link_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkId { get; set; }
+        public string? SiteLinkId { get => _explicitNullValueSiteLinkId; set { _explicitNullValueSiteLinkId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_id"); else _explicitNullProperties?.Remove("site_link_id"); } }
+        private string? _explicitNullValueSiteLinkId = default!;
 #nullable restore
 #else
-        public string SiteLinkId { get; set; }
+        public string SiteLinkId { get => _explicitNullValueSiteLinkId; set { _explicitNullValueSiteLinkId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_id"); else _explicitNullProperties?.Remove("site_link_id"); } }
+        private string _explicitNullValueSiteLinkId = default!;
 #endif
         /// <summary>The site_link_image_hash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkImageHash { get; set; }
+        public string? SiteLinkImageHash { get => _explicitNullValueSiteLinkImageHash; set { _explicitNullValueSiteLinkImageHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_image_hash"); else _explicitNullProperties?.Remove("site_link_image_hash"); } }
+        private string? _explicitNullValueSiteLinkImageHash = default!;
 #nullable restore
 #else
-        public string SiteLinkImageHash { get; set; }
+        public string SiteLinkImageHash { get => _explicitNullValueSiteLinkImageHash; set { _explicitNullValueSiteLinkImageHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_image_hash"); else _explicitNullProperties?.Remove("site_link_image_hash"); } }
+        private string _explicitNullValueSiteLinkImageHash = default!;
 #endif
         /// <summary>The site_link_image_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkImageUrl { get; set; }
+        public string? SiteLinkImageUrl { get => _explicitNullValueSiteLinkImageUrl; set { _explicitNullValueSiteLinkImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_image_url"); else _explicitNullProperties?.Remove("site_link_image_url"); } }
+        private string? _explicitNullValueSiteLinkImageUrl = default!;
 #nullable restore
 #else
-        public string SiteLinkImageUrl { get; set; }
+        public string SiteLinkImageUrl { get => _explicitNullValueSiteLinkImageUrl; set { _explicitNullValueSiteLinkImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_image_url"); else _explicitNullProperties?.Remove("site_link_image_url"); } }
+        private string _explicitNullValueSiteLinkImageUrl = default!;
 #endif
         /// <summary>The site_link_language property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkLanguage { get; set; }
+        public string? SiteLinkLanguage { get => _explicitNullValueSiteLinkLanguage; set { _explicitNullValueSiteLinkLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_language"); else _explicitNullProperties?.Remove("site_link_language"); } }
+        private string? _explicitNullValueSiteLinkLanguage = default!;
 #nullable restore
 #else
-        public string SiteLinkLanguage { get; set; }
+        public string SiteLinkLanguage { get => _explicitNullValueSiteLinkLanguage; set { _explicitNullValueSiteLinkLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_language"); else _explicitNullProperties?.Remove("site_link_language"); } }
+        private string _explicitNullValueSiteLinkLanguage = default!;
 #endif
         /// <summary>The site_link_original_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkOriginalUrl { get; set; }
+        public string? SiteLinkOriginalUrl { get => _explicitNullValueSiteLinkOriginalUrl; set { _explicitNullValueSiteLinkOriginalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_original_url"); else _explicitNullProperties?.Remove("site_link_original_url"); } }
+        private string? _explicitNullValueSiteLinkOriginalUrl = default!;
 #nullable restore
 #else
-        public string SiteLinkOriginalUrl { get; set; }
+        public string SiteLinkOriginalUrl { get => _explicitNullValueSiteLinkOriginalUrl; set { _explicitNullValueSiteLinkOriginalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_original_url"); else _explicitNullProperties?.Remove("site_link_original_url"); } }
+        private string _explicitNullValueSiteLinkOriginalUrl = default!;
 #endif
         /// <summary>The site_link_recommendation_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkRecommendationType { get; set; }
+        public string? SiteLinkRecommendationType { get => _explicitNullValueSiteLinkRecommendationType; set { _explicitNullValueSiteLinkRecommendationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_recommendation_type"); else _explicitNullProperties?.Remove("site_link_recommendation_type"); } }
+        private string? _explicitNullValueSiteLinkRecommendationType = default!;
 #nullable restore
 #else
-        public string SiteLinkRecommendationType { get; set; }
+        public string SiteLinkRecommendationType { get => _explicitNullValueSiteLinkRecommendationType; set { _explicitNullValueSiteLinkRecommendationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_recommendation_type"); else _explicitNullProperties?.Remove("site_link_recommendation_type"); } }
+        private string _explicitNullValueSiteLinkRecommendationType = default!;
 #endif
         /// <summary>The site_link_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkTitle { get; set; }
+        public string? SiteLinkTitle { get => _explicitNullValueSiteLinkTitle; set { _explicitNullValueSiteLinkTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_title"); else _explicitNullProperties?.Remove("site_link_title"); } }
+        private string? _explicitNullValueSiteLinkTitle = default!;
 #nullable restore
 #else
-        public string SiteLinkTitle { get; set; }
+        public string SiteLinkTitle { get => _explicitNullValueSiteLinkTitle; set { _explicitNullValueSiteLinkTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_title"); else _explicitNullProperties?.Remove("site_link_title"); } }
+        private string _explicitNullValueSiteLinkTitle = default!;
 #endif
         /// <summary>The site_link_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkUrl { get; set; }
+        public string? SiteLinkUrl { get => _explicitNullValueSiteLinkUrl; set { _explicitNullValueSiteLinkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_url"); else _explicitNullProperties?.Remove("site_link_url"); } }
+        private string? _explicitNullValueSiteLinkUrl = default!;
 #nullable restore
 #else
-        public string SiteLinkUrl { get; set; }
+        public string SiteLinkUrl { get => _explicitNullValueSiteLinkUrl; set { _explicitNullValueSiteLinkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_url"); else _explicitNullProperties?.Remove("site_link_url"); } }
+        private string _explicitNullValueSiteLinkUrl = default!;
 #endif
         /// <summary>The site_link_url_anchor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkUrlAnchor { get; set; }
+        public string? SiteLinkUrlAnchor { get => _explicitNullValueSiteLinkUrlAnchor; set { _explicitNullValueSiteLinkUrlAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_url_anchor"); else _explicitNullProperties?.Remove("site_link_url_anchor"); } }
+        private string? _explicitNullValueSiteLinkUrlAnchor = default!;
 #nullable restore
 #else
-        public string SiteLinkUrlAnchor { get; set; }
+        public string SiteLinkUrlAnchor { get => _explicitNullValueSiteLinkUrlAnchor; set { _explicitNullValueSiteLinkUrlAnchor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_url_anchor"); else _explicitNullProperties?.Remove("site_link_url_anchor"); } }
+        private string _explicitNullValueSiteLinkUrlAnchor = default!;
 #endif
         /// <summary>The site_link_url_recommender_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkUrlRecommenderType { get; set; }
+        public string? SiteLinkUrlRecommenderType { get => _explicitNullValueSiteLinkUrlRecommenderType; set { _explicitNullValueSiteLinkUrlRecommenderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_url_recommender_type"); else _explicitNullProperties?.Remove("site_link_url_recommender_type"); } }
+        private string? _explicitNullValueSiteLinkUrlRecommenderType = default!;
 #nullable restore
 #else
-        public string SiteLinkUrlRecommenderType { get; set; }
+        public string SiteLinkUrlRecommenderType { get => _explicitNullValueSiteLinkUrlRecommenderType; set { _explicitNullValueSiteLinkUrlRecommenderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_url_recommender_type"); else _explicitNullProperties?.Remove("site_link_url_recommender_type"); } }
+        private string _explicitNullValueSiteLinkUrlRecommenderType = default!;
 #endif
         /// <summary>The site_link_website_data_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteLinkWebsiteDataSource { get; set; }
+        public string? SiteLinkWebsiteDataSource { get => _explicitNullValueSiteLinkWebsiteDataSource; set { _explicitNullValueSiteLinkWebsiteDataSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_website_data_source"); else _explicitNullProperties?.Remove("site_link_website_data_source"); } }
+        private string? _explicitNullValueSiteLinkWebsiteDataSource = default!;
 #nullable restore
 #else
-        public string SiteLinkWebsiteDataSource { get; set; }
+        public string SiteLinkWebsiteDataSource { get => _explicitNullValueSiteLinkWebsiteDataSource; set { _explicitNullValueSiteLinkWebsiteDataSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_link_website_data_source"); else _explicitNullProperties?.Remove("site_link_website_data_source"); } }
+        private string _explicitNullValueSiteLinkWebsiteDataSource = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec"/> and sets the default values.
@@ -145,7 +198,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -196,6 +249,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("site_link_url_anchor", SiteLinkUrlAnchor);
             writer.WriteStringValue("site_link_url_recommender_type", SiteLinkUrlRecommenderType);
             writer.WriteStringValue("site_link_website_data_source", SiteLinkWebsiteDataSource);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

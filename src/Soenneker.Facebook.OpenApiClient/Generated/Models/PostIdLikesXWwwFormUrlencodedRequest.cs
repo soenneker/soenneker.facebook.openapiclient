@@ -11,42 +11,63 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdLikesXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attribution_id_v2") is { } nullNodeAttributionIdV2 && nullNodeAttributionIdV2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionIdV2 = null;
+            if (parseNode.GetChildNode("feedback_source") is { } nullNodeFeedbackSource && nullNodeFeedbackSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedbackSource = null;
+            if (parseNode.GetChildNode("nectar_module") is { } nullNodeNectarModule && nullNodeNectarModule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NectarModule = null;
+            if (parseNode.GetChildNode("notify") is { } nullNodeNotify && nullNodeNotify.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notify = null;
+            if (parseNode.GetChildNode("tracking") is { } nullNodeTracking && nullNodeTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tracking = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attribution_id_v2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AttributionIdV2 { get; set; }
+        public string? AttributionIdV2 { get => _explicitNullValueAttributionIdV2; set { _explicitNullValueAttributionIdV2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id_v2"); else _explicitNullProperties?.Remove("attribution_id_v2"); } }
+        private string? _explicitNullValueAttributionIdV2 = default!;
 #nullable restore
 #else
-        public string AttributionIdV2 { get; set; }
+        public string AttributionIdV2 { get => _explicitNullValueAttributionIdV2; set { _explicitNullValueAttributionIdV2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id_v2"); else _explicitNullProperties?.Remove("attribution_id_v2"); } }
+        private string _explicitNullValueAttributionIdV2 = default!;
 #endif
         /// <summary>The feedback_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FeedbackSource { get; set; }
+        public string? FeedbackSource { get => _explicitNullValueFeedbackSource; set { _explicitNullValueFeedbackSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback_source"); else _explicitNullProperties?.Remove("feedback_source"); } }
+        private string? _explicitNullValueFeedbackSource = default!;
 #nullable restore
 #else
-        public string FeedbackSource { get; set; }
+        public string FeedbackSource { get => _explicitNullValueFeedbackSource; set { _explicitNullValueFeedbackSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback_source"); else _explicitNullProperties?.Remove("feedback_source"); } }
+        private string _explicitNullValueFeedbackSource = default!;
 #endif
         /// <summary>The nectar_module property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NectarModule { get; set; }
+        public string? NectarModule { get => _explicitNullValueNectarModule; set { _explicitNullValueNectarModule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nectar_module"); else _explicitNullProperties?.Remove("nectar_module"); } }
+        private string? _explicitNullValueNectarModule = default!;
 #nullable restore
 #else
-        public string NectarModule { get; set; }
+        public string NectarModule { get => _explicitNullValueNectarModule; set { _explicitNullValueNectarModule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nectar_module"); else _explicitNullProperties?.Remove("nectar_module"); } }
+        private string _explicitNullValueNectarModule = default!;
 #endif
         /// <summary>The notify property</summary>
-        public bool? Notify { get; set; }
+        public bool? Notify { get => _explicitNullValueNotify; set { _explicitNullValueNotify = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify"); else _explicitNullProperties?.Remove("notify"); } }
+        private bool? _explicitNullValueNotify = default!;
         /// <summary>The tracking property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tracking { get; set; }
+        public string? Tracking { get => _explicitNullValueTracking; set { _explicitNullValueTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking"); else _explicitNullProperties?.Remove("tracking"); } }
+        private string? _explicitNullValueTracking = default!;
 #nullable restore
 #else
-        public string Tracking { get; set; }
+        public string Tracking { get => _explicitNullValueTracking; set { _explicitNullValueTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking"); else _explicitNullProperties?.Remove("tracking"); } }
+        private string _explicitNullValueTracking = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdLikesXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdLikesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdLikesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdLikesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("nectar_module", NectarModule);
             writer.WriteBoolValue("notify", Notify);
             writer.WriteStringValue("tracking", Tracking);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

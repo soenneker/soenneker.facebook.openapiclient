@@ -11,35 +11,53 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdAdPlacePageSetsAsyncXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("location_types") is { } nullNodeLocationTypes && nullNodeLocationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationTypes = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent_page") is { } nullNodeParentPage && nullNodeParentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentPage = null;
+            if (parseNode.GetChildNode("targeted_area_type") is { } nullNodeTargetedAreaType && nullNodeTargetedAreaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetedAreaType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationTypes { get; set; }
+        public string? LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
+        private string? _explicitNullValueLocationTypes = default!;
 #nullable restore
 #else
-        public string LocationTypes { get; set; }
+        public string LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
+        private string _explicitNullValueLocationTypes = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The parent_page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentPage { get; set; }
+        public string? ParentPage { get => _explicitNullValueParentPage; set { _explicitNullValueParentPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_page"); else _explicitNullProperties?.Remove("parent_page"); } }
+        private string? _explicitNullValueParentPage = default!;
 #nullable restore
 #else
-        public string ParentPage { get; set; }
+        public string ParentPage { get => _explicitNullValueParentPage; set { _explicitNullValueParentPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_page"); else _explicitNullProperties?.Remove("parent_page"); } }
+        private string _explicitNullValueParentPage = default!;
 #endif
         /// <summary>The targeted_area_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam? TargetedAreaType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam? TargetedAreaType { get => _explicitNullValueTargetedAreaType; set { _explicitNullValueTargetedAreaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targeted_area_type"); else _explicitNullProperties?.Remove("targeted_area_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam? _explicitNullValueTargetedAreaType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAdPlacePageSetsAsyncXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdAdPlacePageSetsAsyncXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdAdPlacePageSetsAsyncXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdAdPlacePageSetsAsyncXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parent_page", ParentPage);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam>("targeted_area_type", TargetedAreaType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

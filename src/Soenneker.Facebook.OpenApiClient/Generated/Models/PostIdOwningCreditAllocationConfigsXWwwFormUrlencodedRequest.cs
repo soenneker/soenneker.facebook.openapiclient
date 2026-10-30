@@ -11,31 +11,50 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdOwningCreditAllocationConfigsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("liability_type") is { } nullNodeLiabilityType && nullNodeLiabilityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiabilityType = null;
+            if (parseNode.GetChildNode("partition_type") is { } nullNodePartitionType && nullNodePartitionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartitionType = null;
+            if (parseNode.GetChildNode("receiving_business_id") is { } nullNodeReceivingBusinessId && nullNodeReceivingBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivingBusinessId = null;
+            if (parseNode.GetChildNode("send_bill_to") is { } nullNodeSendBillTo && nullNodeSendBillTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBillTo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Amount { get; set; }
+        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private string? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public string Amount { get; set; }
+        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private string _explicitNullValueAmount = default!;
 #endif
         /// <summary>The liability_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsLiabilityTypeEnumParam? LiabilityType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsLiabilityTypeEnumParam? LiabilityType { get => _explicitNullValueLiabilityType; set { _explicitNullValueLiabilityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liability_type"); else _explicitNullProperties?.Remove("liability_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsLiabilityTypeEnumParam? _explicitNullValueLiabilityType = default!;
         /// <summary>The partition_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsPartitionTypeEnumParam? PartitionType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsPartitionTypeEnumParam? PartitionType { get => _explicitNullValuePartitionType; set { _explicitNullValuePartitionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partition_type"); else _explicitNullProperties?.Remove("partition_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsPartitionTypeEnumParam? _explicitNullValuePartitionType = default!;
         /// <summary>The receiving_business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceivingBusinessId { get; set; }
+        public string? ReceivingBusinessId { get => _explicitNullValueReceivingBusinessId; set { _explicitNullValueReceivingBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiving_business_id"); else _explicitNullProperties?.Remove("receiving_business_id"); } }
+        private string? _explicitNullValueReceivingBusinessId = default!;
 #nullable restore
 #else
-        public string ReceivingBusinessId { get; set; }
+        public string ReceivingBusinessId { get => _explicitNullValueReceivingBusinessId; set { _explicitNullValueReceivingBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiving_business_id"); else _explicitNullProperties?.Remove("receiving_business_id"); } }
+        private string _explicitNullValueReceivingBusinessId = default!;
 #endif
         /// <summary>The send_bill_to property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam? SendBillTo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam? SendBillTo { get => _explicitNullValueSendBillTo; set { _explicitNullValueSendBillTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_bill_to"); else _explicitNullProperties?.Remove("send_bill_to"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam? _explicitNullValueSendBillTo = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdOwningCreditAllocationConfigsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -51,7 +70,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdOwningCreditAllocationConfigsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdOwningCreditAllocationConfigsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdOwningCreditAllocationConfigsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsPartitionTypeEnumParam>("partition_type", PartitionType);
             writer.WriteStringValue("receiving_business_id", ReceivingBusinessId);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam>("send_bill_to", SendBillTo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

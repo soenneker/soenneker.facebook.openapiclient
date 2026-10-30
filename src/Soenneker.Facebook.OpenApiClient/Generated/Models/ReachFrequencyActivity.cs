@@ -11,32 +11,53 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ReachFrequencyActivity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("campaign_active") is { } nullNodeCampaignActive && nullNodeCampaignActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignActive = null;
+            if (parseNode.GetChildNode("campaign_started") is { } nullNodeCampaignStarted && nullNodeCampaignStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignStarted = null;
+            if (parseNode.GetChildNode("creative_uploaded") is { } nullNodeCreativeUploaded && nullNodeCreativeUploaded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeUploaded = null;
+            if (parseNode.GetChildNode("io_approved") is { } nullNodeIoApproved && nullNodeIoApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IoApproved = null;
+            if (parseNode.GetChildNode("sf_link") is { } nullNodeSfLink && nullNodeSfLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SfLink = null;
+        }
+
         /// <summary>The account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get; set; }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get; set; }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The campaign_active property</summary>
-        public bool? CampaignActive { get; set; }
+        public bool? CampaignActive { get => _explicitNullValueCampaignActive; set { _explicitNullValueCampaignActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_active"); else _explicitNullProperties?.Remove("campaign_active"); } }
+        private bool? _explicitNullValueCampaignActive = default!;
         /// <summary>The campaign_started property</summary>
-        public bool? CampaignStarted { get; set; }
+        public bool? CampaignStarted { get => _explicitNullValueCampaignStarted; set { _explicitNullValueCampaignStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_started"); else _explicitNullProperties?.Remove("campaign_started"); } }
+        private bool? _explicitNullValueCampaignStarted = default!;
         /// <summary>The creative_uploaded property</summary>
-        public bool? CreativeUploaded { get; set; }
+        public bool? CreativeUploaded { get => _explicitNullValueCreativeUploaded; set { _explicitNullValueCreativeUploaded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_uploaded"); else _explicitNullProperties?.Remove("creative_uploaded"); } }
+        private bool? _explicitNullValueCreativeUploaded = default!;
         /// <summary>The io_approved property</summary>
-        public bool? IoApproved { get; set; }
+        public bool? IoApproved { get => _explicitNullValueIoApproved; set { _explicitNullValueIoApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("io_approved"); else _explicitNullProperties?.Remove("io_approved"); } }
+        private bool? _explicitNullValueIoApproved = default!;
         /// <summary>The sf_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SfLink { get; set; }
+        public string? SfLink { get => _explicitNullValueSfLink; set { _explicitNullValueSfLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sf_link"); else _explicitNullProperties?.Remove("sf_link"); } }
+        private string? _explicitNullValueSfLink = default!;
 #nullable restore
 #else
-        public string SfLink { get; set; }
+        public string SfLink { get => _explicitNullValueSfLink; set { _explicitNullValueSfLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sf_link"); else _explicitNullProperties?.Remove("sf_link"); } }
+        private string _explicitNullValueSfLink = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity"/> and sets the default values.
@@ -53,7 +74,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +105,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("creative_uploaded", CreativeUploaded);
             writer.WriteBoolValue("io_approved", IoApproved);
             writer.WriteStringValue("sf_link", SfLink);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

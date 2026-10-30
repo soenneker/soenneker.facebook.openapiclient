@@ -11,48 +11,70 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdsReportBuilderMmmReportScheduler : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ad_account_ids") is { } nullNodeAdAccountIds && nullNodeAdAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountIds = null;
+            if (parseNode.GetChildNode("filtering") is { } nullNodeFiltering && nullNodeFiltering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filtering = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("report_name") is { } nullNodeReportName && nullNodeReportName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportName = null;
+            if (parseNode.GetChildNode("schedule_frequency") is { } nullNodeScheduleFrequency && nullNodeScheduleFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleFrequency = null;
+        }
+
         /// <summary>The ad_account_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdAccountIds { get; set; }
+        public List<string>? AdAccountIds { get => _explicitNullValueAdAccountIds; set { _explicitNullValueAdAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_ids"); else _explicitNullProperties?.Remove("ad_account_ids"); } }
+        private List<string>? _explicitNullValueAdAccountIds = default!;
 #nullable restore
 #else
-        public List<string> AdAccountIds { get; set; }
+        public List<string> AdAccountIds { get => _explicitNullValueAdAccountIds; set { _explicitNullValueAdAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_ids"); else _explicitNullProperties?.Remove("ad_account_ids"); } }
+        private List<string> _explicitNullValueAdAccountIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The filtering property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportSchedulerFilteringItemProperty>? Filtering { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportSchedulerFilteringItemProperty>? Filtering { get => _explicitNullValueFiltering; set { _explicitNullValueFiltering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filtering"); else _explicitNullProperties?.Remove("filtering"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportSchedulerFilteringItemProperty>? _explicitNullValueFiltering = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportSchedulerFilteringItemProperty> Filtering { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportSchedulerFilteringItemProperty> Filtering { get => _explicitNullValueFiltering; set { _explicitNullValueFiltering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filtering"); else _explicitNullProperties?.Remove("filtering"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportSchedulerFilteringItemProperty> _explicitNullValueFiltering = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The report_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportName { get; set; }
+        public string? ReportName { get => _explicitNullValueReportName; set { _explicitNullValueReportName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_name"); else _explicitNullProperties?.Remove("report_name"); } }
+        private string? _explicitNullValueReportName = default!;
 #nullable restore
 #else
-        public string ReportName { get; set; }
+        public string ReportName { get => _explicitNullValueReportName; set { _explicitNullValueReportName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_name"); else _explicitNullProperties?.Remove("report_name"); } }
+        private string _explicitNullValueReportName = default!;
 #endif
         /// <summary>The schedule_frequency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleFrequency { get; set; }
+        public string? ScheduleFrequency { get => _explicitNullValueScheduleFrequency; set { _explicitNullValueScheduleFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_frequency"); else _explicitNullProperties?.Remove("schedule_frequency"); } }
+        private string? _explicitNullValueScheduleFrequency = default!;
 #nullable restore
 #else
-        public string ScheduleFrequency { get; set; }
+        public string ScheduleFrequency { get => _explicitNullValueScheduleFrequency; set { _explicitNullValueScheduleFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_frequency"); else _explicitNullProperties?.Remove("schedule_frequency"); } }
+        private string _explicitNullValueScheduleFrequency = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportScheduler"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportScheduler CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportScheduler();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdsReportBuilderMmmReportScheduler(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("report_name", ReportName);
             writer.WriteStringValue("schedule_frequency", ScheduleFrequency);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

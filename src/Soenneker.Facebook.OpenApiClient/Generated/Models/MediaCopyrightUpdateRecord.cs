@@ -11,58 +11,85 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MediaCopyrightUpdateRecord : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action_types") is { } nullNodeActionTypes && nullNodeActionTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionTypes = null;
+            if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
+            if (parseNode.GetChildNode("actor_type") is { } nullNodeActorType && nullNodeActorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorType = null;
+            if (parseNode.GetChildNode("creation_time") is { } nullNodeCreationTime && nullNodeCreationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationTime = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("ownership_countries") is { } nullNodeOwnershipCountries && nullNodeOwnershipCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipCountries = null;
+            if (parseNode.GetChildNode("whitelisted_accounts") is { } nullNodeWhitelistedAccounts && nullNodeWhitelistedAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelistedAccounts = null;
+        }
+
         /// <summary>The action_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ActionTypes { get; set; }
+        public List<string>? ActionTypes { get => _explicitNullValueActionTypes; set { _explicitNullValueActionTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_types"); else _explicitNullProperties?.Remove("action_types"); } }
+        private List<string>? _explicitNullValueActionTypes = default!;
 #nullable restore
 #else
-        public List<string> ActionTypes { get; set; }
+        public List<string> ActionTypes { get => _explicitNullValueActionTypes; set { _explicitNullValueActionTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_types"); else _explicitNullProperties?.Remove("action_types"); } }
+        private List<string> _explicitNullValueActionTypes = default!;
 #endif
         /// <summary>The actor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.User? Actor { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.User? _explicitNullValueActor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.User Actor { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.User _explicitNullValueActor = default!;
 #endif
         /// <summary>The actor_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActorType { get; set; }
+        public string? ActorType { get => _explicitNullValueActorType; set { _explicitNullValueActorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_type"); else _explicitNullProperties?.Remove("actor_type"); } }
+        private string? _explicitNullValueActorType = default!;
 #nullable restore
 #else
-        public string ActorType { get; set; }
+        public string ActorType { get => _explicitNullValueActorType; set { _explicitNullValueActorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor_type"); else _explicitNullProperties?.Remove("actor_type"); } }
+        private string _explicitNullValueActorType = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The creation_time property</summary>
-        public DateTimeOffset? CreationTime { get; set; }
+        public DateTimeOffset? CreationTime { get => _explicitNullValueCreationTime; set { _explicitNullValueCreationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_time"); else _explicitNullProperties?.Remove("creation_time"); } }
+        private DateTimeOffset? _explicitNullValueCreationTime = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The ownership_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty>? OwnershipCountries { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty>? OwnershipCountries { get => _explicitNullValueOwnershipCountries; set { _explicitNullValueOwnershipCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_countries"); else _explicitNullProperties?.Remove("ownership_countries"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty>? _explicitNullValueOwnershipCountries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty> OwnershipCountries { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty> OwnershipCountries { get => _explicitNullValueOwnershipCountries; set { _explicitNullValueOwnershipCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_countries"); else _explicitNullProperties?.Remove("ownership_countries"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty> _explicitNullValueOwnershipCountries = default!;
 #endif
         /// <summary>The whitelisted_accounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty>? WhitelistedAccounts { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty>? WhitelistedAccounts { get => _explicitNullValueWhitelistedAccounts; set { _explicitNullValueWhitelistedAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_accounts"); else _explicitNullProperties?.Remove("whitelisted_accounts"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty>? _explicitNullValueWhitelistedAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty> WhitelistedAccounts { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty> WhitelistedAccounts { get => _explicitNullValueWhitelistedAccounts; set { _explicitNullValueWhitelistedAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelisted_accounts"); else _explicitNullProperties?.Remove("whitelisted_accounts"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty> _explicitNullValueWhitelistedAccounts = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecord"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecord CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecord();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecord(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordOwnershipCountriesItemProperty>("ownership_countries", OwnershipCountries);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.MediaCopyrightUpdateRecordWhitelistedAccountsItemProperty>("whitelisted_accounts", WhitelistedAccounts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

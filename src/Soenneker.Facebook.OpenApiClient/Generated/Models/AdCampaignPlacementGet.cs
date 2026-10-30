@@ -11,80 +11,114 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCampaignPlacementGet : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("effective_audience_network_positions") is { } nullNodeEffectiveAudienceNetworkPositions && nullNodeEffectiveAudienceNetworkPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveAudienceNetworkPositions = null;
+            if (parseNode.GetChildNode("effective_device_platforms") is { } nullNodeEffectiveDevicePlatforms && nullNodeEffectiveDevicePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveDevicePlatforms = null;
+            if (parseNode.GetChildNode("effective_facebook_positions") is { } nullNodeEffectiveFacebookPositions && nullNodeEffectiveFacebookPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveFacebookPositions = null;
+            if (parseNode.GetChildNode("effective_instagram_positions") is { } nullNodeEffectiveInstagramPositions && nullNodeEffectiveInstagramPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveInstagramPositions = null;
+            if (parseNode.GetChildNode("effective_messenger_positions") is { } nullNodeEffectiveMessengerPositions && nullNodeEffectiveMessengerPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveMessengerPositions = null;
+            if (parseNode.GetChildNode("effective_oculus_positions") is { } nullNodeEffectiveOculusPositions && nullNodeEffectiveOculusPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectiveOculusPositions = null;
+            if (parseNode.GetChildNode("effective_publisher_platforms") is { } nullNodeEffectivePublisherPlatforms && nullNodeEffectivePublisherPlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EffectivePublisherPlatforms = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("recommendations") is { } nullNodeRecommendations && nullNodeRecommendations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recommendations = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The effective_audience_network_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveAudienceNetworkPositions?>? EffectiveAudienceNetworkPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveAudienceNetworkPositions?>? EffectiveAudienceNetworkPositions { get => _explicitNullValueEffectiveAudienceNetworkPositions; set { _explicitNullValueEffectiveAudienceNetworkPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_audience_network_positions"); else _explicitNullProperties?.Remove("effective_audience_network_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveAudienceNetworkPositions?>? _explicitNullValueEffectiveAudienceNetworkPositions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveAudienceNetworkPositions?> EffectiveAudienceNetworkPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveAudienceNetworkPositions?> EffectiveAudienceNetworkPositions { get => _explicitNullValueEffectiveAudienceNetworkPositions; set { _explicitNullValueEffectiveAudienceNetworkPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_audience_network_positions"); else _explicitNullProperties?.Remove("effective_audience_network_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveAudienceNetworkPositions?> _explicitNullValueEffectiveAudienceNetworkPositions = default!;
 #endif
         /// <summary>The effective_device_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveDevicePlatforms?>? EffectiveDevicePlatforms { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveDevicePlatforms?>? EffectiveDevicePlatforms { get => _explicitNullValueEffectiveDevicePlatforms; set { _explicitNullValueEffectiveDevicePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_device_platforms"); else _explicitNullProperties?.Remove("effective_device_platforms"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveDevicePlatforms?>? _explicitNullValueEffectiveDevicePlatforms = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveDevicePlatforms?> EffectiveDevicePlatforms { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveDevicePlatforms?> EffectiveDevicePlatforms { get => _explicitNullValueEffectiveDevicePlatforms; set { _explicitNullValueEffectiveDevicePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_device_platforms"); else _explicitNullProperties?.Remove("effective_device_platforms"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveDevicePlatforms?> _explicitNullValueEffectiveDevicePlatforms = default!;
 #endif
         /// <summary>The effective_facebook_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveFacebookPositions?>? EffectiveFacebookPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveFacebookPositions?>? EffectiveFacebookPositions { get => _explicitNullValueEffectiveFacebookPositions; set { _explicitNullValueEffectiveFacebookPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_facebook_positions"); else _explicitNullProperties?.Remove("effective_facebook_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveFacebookPositions?>? _explicitNullValueEffectiveFacebookPositions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveFacebookPositions?> EffectiveFacebookPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveFacebookPositions?> EffectiveFacebookPositions { get => _explicitNullValueEffectiveFacebookPositions; set { _explicitNullValueEffectiveFacebookPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_facebook_positions"); else _explicitNullProperties?.Remove("effective_facebook_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveFacebookPositions?> _explicitNullValueEffectiveFacebookPositions = default!;
 #endif
         /// <summary>The effective_instagram_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveInstagramPositions?>? EffectiveInstagramPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveInstagramPositions?>? EffectiveInstagramPositions { get => _explicitNullValueEffectiveInstagramPositions; set { _explicitNullValueEffectiveInstagramPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_instagram_positions"); else _explicitNullProperties?.Remove("effective_instagram_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveInstagramPositions?>? _explicitNullValueEffectiveInstagramPositions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveInstagramPositions?> EffectiveInstagramPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveInstagramPositions?> EffectiveInstagramPositions { get => _explicitNullValueEffectiveInstagramPositions; set { _explicitNullValueEffectiveInstagramPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_instagram_positions"); else _explicitNullProperties?.Remove("effective_instagram_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveInstagramPositions?> _explicitNullValueEffectiveInstagramPositions = default!;
 #endif
         /// <summary>The effective_messenger_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveMessengerPositions?>? EffectiveMessengerPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveMessengerPositions?>? EffectiveMessengerPositions { get => _explicitNullValueEffectiveMessengerPositions; set { _explicitNullValueEffectiveMessengerPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_messenger_positions"); else _explicitNullProperties?.Remove("effective_messenger_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveMessengerPositions?>? _explicitNullValueEffectiveMessengerPositions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveMessengerPositions?> EffectiveMessengerPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveMessengerPositions?> EffectiveMessengerPositions { get => _explicitNullValueEffectiveMessengerPositions; set { _explicitNullValueEffectiveMessengerPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_messenger_positions"); else _explicitNullProperties?.Remove("effective_messenger_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveMessengerPositions?> _explicitNullValueEffectiveMessengerPositions = default!;
 #endif
         /// <summary>The effective_oculus_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveOculusPositions?>? EffectiveOculusPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveOculusPositions?>? EffectiveOculusPositions { get => _explicitNullValueEffectiveOculusPositions; set { _explicitNullValueEffectiveOculusPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_oculus_positions"); else _explicitNullProperties?.Remove("effective_oculus_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveOculusPositions?>? _explicitNullValueEffectiveOculusPositions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveOculusPositions?> EffectiveOculusPositions { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveOculusPositions?> EffectiveOculusPositions { get => _explicitNullValueEffectiveOculusPositions; set { _explicitNullValueEffectiveOculusPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_oculus_positions"); else _explicitNullProperties?.Remove("effective_oculus_positions"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectiveOculusPositions?> _explicitNullValueEffectiveOculusPositions = default!;
 #endif
         /// <summary>The effective_publisher_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms?>? EffectivePublisherPlatforms { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms?>? EffectivePublisherPlatforms { get => _explicitNullValueEffectivePublisherPlatforms; set { _explicitNullValueEffectivePublisherPlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_publisher_platforms"); else _explicitNullProperties?.Remove("effective_publisher_platforms"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms?>? _explicitNullValueEffectivePublisherPlatforms = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms?> EffectivePublisherPlatforms { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms?> EffectivePublisherPlatforms { get => _explicitNullValueEffectivePublisherPlatforms; set { _explicitNullValueEffectivePublisherPlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_publisher_platforms"); else _explicitNullProperties?.Remove("effective_publisher_platforms"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms?> _explicitNullValueEffectivePublisherPlatforms = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty Metadata { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The recommendations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty>? Recommendations { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty>? Recommendations { get => _explicitNullValueRecommendations; set { _explicitNullValueRecommendations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendations"); else _explicitNullProperties?.Remove("recommendations"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty>? _explicitNullValueRecommendations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty> Recommendations { get; set; }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty> Recommendations { get => _explicitNullValueRecommendations; set { _explicitNullValueRecommendations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendations"); else _explicitNullProperties?.Remove("recommendations"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty> _explicitNullValueRecommendations = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGet"/> and sets the default values.
@@ -101,7 +135,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGet CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGet();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGet(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +172,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetEffectivePublisherPlatforms>("effective_publisher_platforms", EffectivePublisherPlatforms);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCampaignPlacementGetRecommendationsItemProperty>("recommendations", Recommendations);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

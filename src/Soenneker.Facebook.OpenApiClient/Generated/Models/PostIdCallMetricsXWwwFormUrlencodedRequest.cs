@@ -11,50 +11,79 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdCallMetricsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audio_stats") is { } nullNodeAudioStats && nullNodeAudioStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioStats = null;
+            if (parseNode.GetChildNode("call_ended_time") is { } nullNodeCallEndedTime && nullNodeCallEndedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallEndedTime = null;
+            if (parseNode.GetChildNode("call_id") is { } nullNodeCallId && nullNodeCallId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallId = null;
+            if (parseNode.GetChildNode("end_call_reason") is { } nullNodeEndCallReason && nullNodeEndCallReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCallReason = null;
+            if (parseNode.GetChildNode("end_call_subreason") is { } nullNodeEndCallSubreason && nullNodeEndCallSubreason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCallSubreason = null;
+            if (parseNode.GetChildNode("first_audio_packet_received_time") is { } nullNodeFirstAudioPacketReceivedTime && nullNodeFirstAudioPacketReceivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstAudioPacketReceivedTime = null;
+            if (parseNode.GetChildNode("first_video_packet_received_time") is { } nullNodeFirstVideoPacketReceivedTime && nullNodeFirstVideoPacketReceivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstVideoPacketReceivedTime = null;
+            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+            if (parseNode.GetChildNode("video_stats") is { } nullNodeVideoStats && nullNodeVideoStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoStats = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudioStats { get; set; }
+        public string? AudioStats { get => _explicitNullValueAudioStats; set { _explicitNullValueAudioStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_stats"); else _explicitNullProperties?.Remove("audio_stats"); } }
+        private string? _explicitNullValueAudioStats = default!;
 #nullable restore
 #else
-        public string AudioStats { get; set; }
+        public string AudioStats { get => _explicitNullValueAudioStats; set { _explicitNullValueAudioStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_stats"); else _explicitNullProperties?.Remove("audio_stats"); } }
+        private string _explicitNullValueAudioStats = default!;
 #endif
         /// <summary>The call_ended_time property</summary>
-        public DateTimeOffset? CallEndedTime { get; set; }
+        public DateTimeOffset? CallEndedTime { get => _explicitNullValueCallEndedTime; set { _explicitNullValueCallEndedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_ended_time"); else _explicitNullProperties?.Remove("call_ended_time"); } }
+        private DateTimeOffset? _explicitNullValueCallEndedTime = default!;
         /// <summary>The call_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallId { get; set; }
+        public string? CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_id"); else _explicitNullProperties?.Remove("call_id"); } }
+        private string? _explicitNullValueCallId = default!;
 #nullable restore
 #else
-        public string CallId { get; set; }
+        public string CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_id"); else _explicitNullProperties?.Remove("call_id"); } }
+        private string _explicitNullValueCallId = default!;
 #endif
         /// <summary>The end_call_reason property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam? EndCallReason { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam? EndCallReason { get => _explicitNullValueEndCallReason; set { _explicitNullValueEndCallReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_reason"); else _explicitNullProperties?.Remove("end_call_reason"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam? _explicitNullValueEndCallReason = default!;
         /// <summary>The end_call_subreason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndCallSubreason { get; set; }
+        public string? EndCallSubreason { get => _explicitNullValueEndCallSubreason; set { _explicitNullValueEndCallSubreason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_subreason"); else _explicitNullProperties?.Remove("end_call_subreason"); } }
+        private string? _explicitNullValueEndCallSubreason = default!;
 #nullable restore
 #else
-        public string EndCallSubreason { get; set; }
+        public string EndCallSubreason { get => _explicitNullValueEndCallSubreason; set { _explicitNullValueEndCallSubreason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_subreason"); else _explicitNullProperties?.Remove("end_call_subreason"); } }
+        private string _explicitNullValueEndCallSubreason = default!;
 #endif
         /// <summary>The first_audio_packet_received_time property</summary>
-        public DateTimeOffset? FirstAudioPacketReceivedTime { get; set; }
+        public DateTimeOffset? FirstAudioPacketReceivedTime { get => _explicitNullValueFirstAudioPacketReceivedTime; set { _explicitNullValueFirstAudioPacketReceivedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_audio_packet_received_time"); else _explicitNullProperties?.Remove("first_audio_packet_received_time"); } }
+        private DateTimeOffset? _explicitNullValueFirstAudioPacketReceivedTime = default!;
         /// <summary>The first_video_packet_received_time property</summary>
-        public DateTimeOffset? FirstVideoPacketReceivedTime { get; set; }
+        public DateTimeOffset? FirstVideoPacketReceivedTime { get => _explicitNullValueFirstVideoPacketReceivedTime; set { _explicitNullValueFirstVideoPacketReceivedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_video_packet_received_time"); else _explicitNullProperties?.Remove("first_video_packet_received_time"); } }
+        private DateTimeOffset? _explicitNullValueFirstVideoPacketReceivedTime = default!;
         /// <summary>The platform property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam? Platform { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam? _explicitNullValuePlatform = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoStats { get; set; }
+        public string? VideoStats { get => _explicitNullValueVideoStats; set { _explicitNullValueVideoStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_stats"); else _explicitNullProperties?.Remove("video_stats"); } }
+        private string? _explicitNullValueVideoStats = default!;
 #nullable restore
 #else
-        public string VideoStats { get; set; }
+        public string VideoStats { get => _explicitNullValueVideoStats; set { _explicitNullValueVideoStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_stats"); else _explicitNullProperties?.Remove("video_stats"); } }
+        private string _explicitNullValueVideoStats = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCallMetricsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -71,7 +100,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdCallMetricsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCallMetricsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCallMetricsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("first_video_packet_received_time", FirstVideoPacketReceivedTime);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam>("platform", Platform);
             writer.WriteStringValue("video_stats", VideoStats);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

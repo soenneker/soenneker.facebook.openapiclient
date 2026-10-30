@@ -11,32 +11,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeFacebookBrandedContent : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("shared_to_sponsor_status") is { } nullNodeSharedToSponsorStatus && nullNodeSharedToSponsorStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedToSponsorStatus = null;
+            if (parseNode.GetChildNode("sponsor_page_id") is { } nullNodeSponsorPageId && nullNodeSponsorPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsorPageId = null;
+            if (parseNode.GetChildNode("sponsor_relationship") is { } nullNodeSponsorRelationship && nullNodeSponsorRelationship.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsorRelationship = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The shared_to_sponsor_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SharedToSponsorStatus { get; set; }
+        public string? SharedToSponsorStatus { get => _explicitNullValueSharedToSponsorStatus; set { _explicitNullValueSharedToSponsorStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_to_sponsor_status"); else _explicitNullProperties?.Remove("shared_to_sponsor_status"); } }
+        private string? _explicitNullValueSharedToSponsorStatus = default!;
 #nullable restore
 #else
-        public string SharedToSponsorStatus { get; set; }
+        public string SharedToSponsorStatus { get => _explicitNullValueSharedToSponsorStatus; set { _explicitNullValueSharedToSponsorStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_to_sponsor_status"); else _explicitNullProperties?.Remove("shared_to_sponsor_status"); } }
+        private string _explicitNullValueSharedToSponsorStatus = default!;
 #endif
         /// <summary>The sponsor_page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SponsorPageId { get; set; }
+        public string? SponsorPageId { get => _explicitNullValueSponsorPageId; set { _explicitNullValueSponsorPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_page_id"); else _explicitNullProperties?.Remove("sponsor_page_id"); } }
+        private string? _explicitNullValueSponsorPageId = default!;
 #nullable restore
 #else
-        public string SponsorPageId { get; set; }
+        public string SponsorPageId { get => _explicitNullValueSponsorPageId; set { _explicitNullValueSponsorPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_page_id"); else _explicitNullProperties?.Remove("sponsor_page_id"); } }
+        private string _explicitNullValueSponsorPageId = default!;
 #endif
         /// <summary>The sponsor_relationship property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SponsorRelationship { get; set; }
+        public string? SponsorRelationship { get => _explicitNullValueSponsorRelationship; set { _explicitNullValueSponsorRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_relationship"); else _explicitNullProperties?.Remove("sponsor_relationship"); } }
+        private string? _explicitNullValueSponsorRelationship = default!;
 #nullable restore
 #else
-        public string SponsorRelationship { get; set; }
+        public string SponsorRelationship { get => _explicitNullValueSponsorRelationship; set { _explicitNullValueSponsorRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_relationship"); else _explicitNullProperties?.Remove("sponsor_relationship"); } }
+        private string _explicitNullValueSponsorRelationship = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFacebookBrandedContent"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFacebookBrandedContent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFacebookBrandedContent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFacebookBrandedContent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("shared_to_sponsor_status", SharedToSponsorStatus);
             writer.WriteStringValue("sponsor_page_id", SponsorPageId);
             writer.WriteStringValue("sponsor_relationship", SponsorRelationship);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

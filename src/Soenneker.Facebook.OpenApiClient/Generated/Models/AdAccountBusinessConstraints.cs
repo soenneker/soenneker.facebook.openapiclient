@@ -11,45 +11,68 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAccountBusinessConstraints : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audience_controls") is { } nullNodeAudienceControls && nullNodeAudienceControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceControls = null;
+            if (parseNode.GetChildNode("campaigns_with_error") is { } nullNodeCampaignsWithError && nullNodeCampaignsWithError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignsWithError = null;
+            if (parseNode.GetChildNode("is_age_restriction_enabled") is { } nullNodeIsAgeRestrictionEnabled && nullNodeIsAgeRestrictionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAgeRestrictionEnabled = null;
+            if (parseNode.GetChildNode("placement_controls") is { } nullNodePlacementControls && nullNodePlacementControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControls = null;
+            if (parseNode.GetChildNode("placement_controls_per_objective") is { } nullNodePlacementControlsPerObjective && nullNodePlacementControlsPerObjective.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControlsPerObjective = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The audience_controls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty? AudienceControls { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty? AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty? _explicitNullValueAudienceControls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty AudienceControls { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty _explicitNullValueAudienceControls = default!;
 #endif
         /// <summary>The campaigns_with_error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CampaignsWithError { get; set; }
+        public List<string>? CampaignsWithError { get => _explicitNullValueCampaignsWithError; set { _explicitNullValueCampaignsWithError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaigns_with_error"); else _explicitNullProperties?.Remove("campaigns_with_error"); } }
+        private List<string>? _explicitNullValueCampaignsWithError = default!;
 #nullable restore
 #else
-        public List<string> CampaignsWithError { get; set; }
+        public List<string> CampaignsWithError { get => _explicitNullValueCampaignsWithError; set { _explicitNullValueCampaignsWithError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaigns_with_error"); else _explicitNullProperties?.Remove("campaigns_with_error"); } }
+        private List<string> _explicitNullValueCampaignsWithError = default!;
 #endif
         /// <summary>The is_age_restriction_enabled property</summary>
-        public bool? IsAgeRestrictionEnabled { get; set; }
+        public bool? IsAgeRestrictionEnabled { get => _explicitNullValueIsAgeRestrictionEnabled; set { _explicitNullValueIsAgeRestrictionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_age_restriction_enabled"); else _explicitNullProperties?.Remove("is_age_restriction_enabled"); } }
+        private bool? _explicitNullValueIsAgeRestrictionEnabled = default!;
         /// <summary>The placement_controls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty? PlacementControls { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty? PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty? _explicitNullValuePlacementControls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty PlacementControls { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty _explicitNullValuePlacementControls = default!;
 #endif
         /// <summary>The placement_controls_per_objective property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty? PlacementControlsPerObjective { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty? PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty? _explicitNullValuePlacementControlsPerObjective = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty PlacementControlsPerObjective { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty _explicitNullValuePlacementControlsPerObjective = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsStatus? Status { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraints"/> and sets the default values.
         /// </summary>
@@ -65,7 +88,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraints CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraints();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraints(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty>("placement_controls", PlacementControls);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty>("placement_controls_per_objective", PlacementControlsPerObjective);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

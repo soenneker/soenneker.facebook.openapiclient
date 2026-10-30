@@ -11,680 +11,939 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeFeaturesSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adapt_to_placement") is { } nullNodeAdaptToPlacement && nullNodeAdaptToPlacement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdaptToPlacement = null;
+            if (parseNode.GetChildNode("add_text_overlay") is { } nullNodeAddTextOverlay && nullNodeAddTextOverlay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddTextOverlay = null;
+            if (parseNode.GetChildNode("ads_with_benefits") is { } nullNodeAdsWithBenefits && nullNodeAdsWithBenefits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdsWithBenefits = null;
+            if (parseNode.GetChildNode("advantage_plus_creative") is { } nullNodeAdvantagePlusCreative && nullNodeAdvantagePlusCreative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantagePlusCreative = null;
+            if (parseNode.GetChildNode("app_highlights") is { } nullNodeAppHighlights && nullNodeAppHighlights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHighlights = null;
+            if (parseNode.GetChildNode("audio") is { } nullNodeAudio && nullNodeAudio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Audio = null;
+            if (parseNode.GetChildNode("auto_promotion_tag") is { } nullNodeAutoPromotionTag && nullNodeAutoPromotionTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoPromotionTag = null;
+            if (parseNode.GetChildNode("biz_ai") is { } nullNodeBizAi && nullNodeBizAi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BizAi = null;
+            if (parseNode.GetChildNode("carousel_to_video") is { } nullNodeCarouselToVideo && nullNodeCarouselToVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarouselToVideo = null;
+            if (parseNode.GetChildNode("catalog_feed_tag") is { } nullNodeCatalogFeedTag && nullNodeCatalogFeedTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogFeedTag = null;
+            if (parseNode.GetChildNode("creative_stickers") is { } nullNodeCreativeStickers && nullNodeCreativeStickers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeStickers = null;
+            if (parseNode.GetChildNode("customize_product_recommendation") is { } nullNodeCustomizeProductRecommendation && nullNodeCustomizeProductRecommendation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomizeProductRecommendation = null;
+            if (parseNode.GetChildNode("cv_transformation") is { } nullNodeCvTransformation && nullNodeCvTransformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CvTransformation = null;
+            if (parseNode.GetChildNode("description_automation") is { } nullNodeDescriptionAutomation && nullNodeDescriptionAutomation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionAutomation = null;
+            if (parseNode.GetChildNode("dha_optimization") is { } nullNodeDhaOptimization && nullNodeDhaOptimization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DhaOptimization = null;
+            if (parseNode.GetChildNode("dynamic_cta_text") is { } nullNodeDynamicCtaText && nullNodeDynamicCtaText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicCtaText = null;
+            if (parseNode.GetChildNode("dynamic_partner_content") is { } nullNodeDynamicPartnerContent && nullNodeDynamicPartnerContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicPartnerContent = null;
+            if (parseNode.GetChildNode("enable_ncs_testimonials") is { } nullNodeEnableNcsTestimonials && nullNodeEnableNcsTestimonials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableNcsTestimonials = null;
+            if (parseNode.GetChildNode("enhance_cta") is { } nullNodeEnhanceCta && nullNodeEnhanceCta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnhanceCta = null;
+            if (parseNode.GetChildNode("fb_feed_tag") is { } nullNodeFbFeedTag && nullNodeFbFeedTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbFeedTag = null;
+            if (parseNode.GetChildNode("fb_reels_tag") is { } nullNodeFbReelsTag && nullNodeFbReelsTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbReelsTag = null;
+            if (parseNode.GetChildNode("fb_story_tag") is { } nullNodeFbStoryTag && nullNodeFbStoryTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbStoryTag = null;
+            if (parseNode.GetChildNode("feed_caption_optimization") is { } nullNodeFeedCaptionOptimization && nullNodeFeedCaptionOptimization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedCaptionOptimization = null;
+            if (parseNode.GetChildNode("generate_cta") is { } nullNodeGenerateCta && nullNodeGenerateCta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerateCta = null;
+            if (parseNode.GetChildNode("hide_price") is { } nullNodeHidePrice && nullNodeHidePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HidePrice = null;
+            if (parseNode.GetChildNode("hyperlink_formatting") is { } nullNodeHyperlinkFormatting && nullNodeHyperlinkFormatting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HyperlinkFormatting = null;
+            if (parseNode.GetChildNode("ig_feed_tag") is { } nullNodeIgFeedTag && nullNodeIgFeedTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgFeedTag = null;
+            if (parseNode.GetChildNode("ig_glados_feed") is { } nullNodeIgGladosFeed && nullNodeIgGladosFeed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgGladosFeed = null;
+            if (parseNode.GetChildNode("ig_reels_tag") is { } nullNodeIgReelsTag && nullNodeIgReelsTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgReelsTag = null;
+            if (parseNode.GetChildNode("ig_stream_tag") is { } nullNodeIgStreamTag && nullNodeIgStreamTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgStreamTag = null;
+            if (parseNode.GetChildNode("ig_video_native_subtitle") is { } nullNodeIgVideoNativeSubtitle && nullNodeIgVideoNativeSubtitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgVideoNativeSubtitle = null;
+            if (parseNode.GetChildNode("image_animation") is { } nullNodeImageAnimation && nullNodeImageAnimation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageAnimation = null;
+            if (parseNode.GetChildNode("image_auto_crop") is { } nullNodeImageAutoCrop && nullNodeImageAutoCrop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageAutoCrop = null;
+            if (parseNode.GetChildNode("image_background_gen") is { } nullNodeImageBackgroundGen && nullNodeImageBackgroundGen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageBackgroundGen = null;
+            if (parseNode.GetChildNode("image_banner") is { } nullNodeImageBanner && nullNodeImageBanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageBanner = null;
+            if (parseNode.GetChildNode("image_brightness_and_contrast") is { } nullNodeImageBrightnessAndContrast && nullNodeImageBrightnessAndContrast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageBrightnessAndContrast = null;
+            if (parseNode.GetChildNode("image_end_card") is { } nullNodeImageEndCard && nullNodeImageEndCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageEndCard = null;
+            if (parseNode.GetChildNode("image_enhancement") is { } nullNodeImageEnhancement && nullNodeImageEnhancement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageEnhancement = null;
+            if (parseNode.GetChildNode("image_templates") is { } nullNodeImageTemplates && nullNodeImageTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageTemplates = null;
+            if (parseNode.GetChildNode("image_text_translation") is { } nullNodeImageTextTranslation && nullNodeImageTextTranslation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageTextTranslation = null;
+            if (parseNode.GetChildNode("image_touchups") is { } nullNodeImageTouchups && nullNodeImageTouchups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageTouchups = null;
+            if (parseNode.GetChildNode("image_uncrop") is { } nullNodeImageUncrop && nullNodeImageUncrop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUncrop = null;
+            if (parseNode.GetChildNode("inline_comment") is { } nullNodeInlineComment && nullNodeInlineComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InlineComment = null;
+            if (parseNode.GetChildNode("local_store_extension") is { } nullNodeLocalStoreExtension && nullNodeLocalStoreExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalStoreExtension = null;
+            if (parseNode.GetChildNode("media_liquidity_animated_image") is { } nullNodeMediaLiquidityAnimatedImage && nullNodeMediaLiquidityAnimatedImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaLiquidityAnimatedImage = null;
+            if (parseNode.GetChildNode("media_order") is { } nullNodeMediaOrder && nullNodeMediaOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaOrder = null;
+            if (parseNode.GetChildNode("media_type_automation") is { } nullNodeMediaTypeAutomation && nullNodeMediaTypeAutomation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaTypeAutomation = null;
+            if (parseNode.GetChildNode("multi_creative_post_carousel") is { } nullNodeMultiCreativePostCarousel && nullNodeMultiCreativePostCarousel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiCreativePostCarousel = null;
+            if (parseNode.GetChildNode("multi_photo_to_video") is { } nullNodeMultiPhotoToVideo && nullNodeMultiPhotoToVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiPhotoToVideo = null;
+            if (parseNode.GetChildNode("music_generation") is { } nullNodeMusicGeneration && nullNodeMusicGeneration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MusicGeneration = null;
+            if (parseNode.GetChildNode("pac_genai_recomposition") is { } nullNodePacGenaiRecomposition && nullNodePacGenaiRecomposition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacGenaiRecomposition = null;
+            if (parseNode.GetChildNode("pac_recomposition") is { } nullNodePacRecomposition && nullNodePacRecomposition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacRecomposition = null;
+            if (parseNode.GetChildNode("pac_relaxation") is { } nullNodePacRelaxation && nullNodePacRelaxation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PacRelaxation = null;
+            if (parseNode.GetChildNode("product_browsing") is { } nullNodeProductBrowsing && nullNodeProductBrowsing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductBrowsing = null;
+            if (parseNode.GetChildNode("product_extensions") is { } nullNodeProductExtensions && nullNodeProductExtensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductExtensions = null;
+            if (parseNode.GetChildNode("product_metadata_automation") is { } nullNodeProductMetadataAutomation && nullNodeProductMetadataAutomation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductMetadataAutomation = null;
+            if (parseNode.GetChildNode("product_tags") is { } nullNodeProductTags && nullNodeProductTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductTags = null;
+            if (parseNode.GetChildNode("profile_card") is { } nullNodeProfileCard && nullNodeProfileCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileCard = null;
+            if (parseNode.GetChildNode("profile_extension") is { } nullNodeProfileExtension && nullNodeProfileExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileExtension = null;
+            if (parseNode.GetChildNode("replace_media_text") is { } nullNodeReplaceMediaText && nullNodeReplaceMediaText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplaceMediaText = null;
+            if (parseNode.GetChildNode("reveal_details_over_time") is { } nullNodeRevealDetailsOverTime && nullNodeRevealDetailsOverTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RevealDetailsOverTime = null;
+            if (parseNode.GetChildNode("show_destination_blurbs") is { } nullNodeShowDestinationBlurbs && nullNodeShowDestinationBlurbs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowDestinationBlurbs = null;
+            if (parseNode.GetChildNode("show_summary") is { } nullNodeShowSummary && nullNodeShowSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowSummary = null;
+            if (parseNode.GetChildNode("site_extensions") is { } nullNodeSiteExtensions && nullNodeSiteExtensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteExtensions = null;
+            if (parseNode.GetChildNode("standard_enhancements") is { } nullNodeStandardEnhancements && nullNodeStandardEnhancements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEnhancements = null;
+            if (parseNode.GetChildNode("standard_enhancements_catalog") is { } nullNodeStandardEnhancementsCatalog && nullNodeStandardEnhancementsCatalog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEnhancementsCatalog = null;
+            if (parseNode.GetChildNode("text_extraction_for_headline") is { } nullNodeTextExtractionForHeadline && nullNodeTextExtractionForHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextExtractionForHeadline = null;
+            if (parseNode.GetChildNode("text_extraction_for_tap_target") is { } nullNodeTextExtractionForTapTarget && nullNodeTextExtractionForTapTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextExtractionForTapTarget = null;
+            if (parseNode.GetChildNode("text_formatting_optimization") is { } nullNodeTextFormattingOptimization && nullNodeTextFormattingOptimization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFormattingOptimization = null;
+            if (parseNode.GetChildNode("text_generation") is { } nullNodeTextGeneration && nullNodeTextGeneration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextGeneration = null;
+            if (parseNode.GetChildNode("text_optimizations") is { } nullNodeTextOptimizations && nullNodeTextOptimizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextOptimizations = null;
+            if (parseNode.GetChildNode("text_overlay_translation") is { } nullNodeTextOverlayTranslation && nullNodeTextOverlayTranslation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextOverlayTranslation = null;
+            if (parseNode.GetChildNode("text_translation") is { } nullNodeTextTranslation && nullNodeTextTranslation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextTranslation = null;
+            if (parseNode.GetChildNode("translate_voiceover") is { } nullNodeTranslateVoiceover && nullNodeTranslateVoiceover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslateVoiceover = null;
+            if (parseNode.GetChildNode("video_auto_crop") is { } nullNodeVideoAutoCrop && nullNodeVideoAutoCrop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoAutoCrop = null;
+            if (parseNode.GetChildNode("video_filtering") is { } nullNodeVideoFiltering && nullNodeVideoFiltering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoFiltering = null;
+            if (parseNode.GetChildNode("video_highlight") is { } nullNodeVideoHighlight && nullNodeVideoHighlight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoHighlight = null;
+            if (parseNode.GetChildNode("video_highlights") is { } nullNodeVideoHighlights && nullNodeVideoHighlights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoHighlights = null;
+            if (parseNode.GetChildNode("video_to_image") is { } nullNodeVideoToImage && nullNodeVideoToImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoToImage = null;
+            if (parseNode.GetChildNode("video_uncrop") is { } nullNodeVideoUncrop && nullNodeVideoUncrop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoUncrop = null;
+            if (parseNode.GetChildNode("video_uncrop_9x16_to_9x18") is { } nullNodeVideoUncrop9x16To9x18 && nullNodeVideoUncrop9x16To9x18.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoUncrop9x16To9x18 = null;
+            if (parseNode.GetChildNode("video_voiceover") is { } nullNodeVideoVoiceover && nullNodeVideoVoiceover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoVoiceover = null;
+            if (parseNode.GetChildNode("wa_mm_image_filtering") is { } nullNodeWaMmImageFiltering && nullNodeWaMmImageFiltering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaMmImageFiltering = null;
+            if (parseNode.GetChildNode("wa_mm_text_truncation_length") is { } nullNodeWaMmTextTruncationLength && nullNodeWaMmTextTruncationLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaMmTextTruncationLength = null;
+        }
+
         /// <summary>The adapt_to_placement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AdaptToPlacement { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AdaptToPlacement { get => _explicitNullValueAdaptToPlacement; set { _explicitNullValueAdaptToPlacement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adapt_to_placement"); else _explicitNullProperties?.Remove("adapt_to_placement"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAdaptToPlacement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AdaptToPlacement { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AdaptToPlacement { get => _explicitNullValueAdaptToPlacement; set { _explicitNullValueAdaptToPlacement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adapt_to_placement"); else _explicitNullProperties?.Remove("adapt_to_placement"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAdaptToPlacement = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The add_text_overlay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AddTextOverlay { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AddTextOverlay { get => _explicitNullValueAddTextOverlay; set { _explicitNullValueAddTextOverlay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_text_overlay"); else _explicitNullProperties?.Remove("add_text_overlay"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAddTextOverlay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AddTextOverlay { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AddTextOverlay { get => _explicitNullValueAddTextOverlay; set { _explicitNullValueAddTextOverlay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_text_overlay"); else _explicitNullProperties?.Remove("add_text_overlay"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAddTextOverlay = default!;
 #endif
         /// <summary>The ads_with_benefits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AdsWithBenefits { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AdsWithBenefits { get => _explicitNullValueAdsWithBenefits; set { _explicitNullValueAdsWithBenefits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ads_with_benefits"); else _explicitNullProperties?.Remove("ads_with_benefits"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAdsWithBenefits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AdsWithBenefits { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AdsWithBenefits { get => _explicitNullValueAdsWithBenefits; set { _explicitNullValueAdsWithBenefits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ads_with_benefits"); else _explicitNullProperties?.Remove("ads_with_benefits"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAdsWithBenefits = default!;
 #endif
         /// <summary>The advantage_plus_creative property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AdvantagePlusCreative { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AdvantagePlusCreative { get => _explicitNullValueAdvantagePlusCreative; set { _explicitNullValueAdvantagePlusCreative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_plus_creative"); else _explicitNullProperties?.Remove("advantage_plus_creative"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAdvantagePlusCreative = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AdvantagePlusCreative { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AdvantagePlusCreative { get => _explicitNullValueAdvantagePlusCreative; set { _explicitNullValueAdvantagePlusCreative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_plus_creative"); else _explicitNullProperties?.Remove("advantage_plus_creative"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAdvantagePlusCreative = default!;
 #endif
         /// <summary>The app_highlights property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AppHighlights { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AppHighlights { get => _explicitNullValueAppHighlights; set { _explicitNullValueAppHighlights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_highlights"); else _explicitNullProperties?.Remove("app_highlights"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAppHighlights = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AppHighlights { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AppHighlights { get => _explicitNullValueAppHighlights; set { _explicitNullValueAppHighlights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_highlights"); else _explicitNullProperties?.Remove("app_highlights"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAppHighlights = default!;
 #endif
         /// <summary>The audio property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? Audio { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? Audio { get => _explicitNullValueAudio; set { _explicitNullValueAudio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio"); else _explicitNullProperties?.Remove("audio"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAudio = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails Audio { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails Audio { get => _explicitNullValueAudio; set { _explicitNullValueAudio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio"); else _explicitNullProperties?.Remove("audio"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAudio = default!;
 #endif
         /// <summary>The auto_promotion_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AutoPromotionTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? AutoPromotionTag { get => _explicitNullValueAutoPromotionTag; set { _explicitNullValueAutoPromotionTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_promotion_tag"); else _explicitNullProperties?.Remove("auto_promotion_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueAutoPromotionTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AutoPromotionTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails AutoPromotionTag { get => _explicitNullValueAutoPromotionTag; set { _explicitNullValueAutoPromotionTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_promotion_tag"); else _explicitNullProperties?.Remove("auto_promotion_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueAutoPromotionTag = default!;
 #endif
         /// <summary>The biz_ai property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? BizAi { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? BizAi { get => _explicitNullValueBizAi; set { _explicitNullValueBizAi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biz_ai"); else _explicitNullProperties?.Remove("biz_ai"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueBizAi = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails BizAi { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails BizAi { get => _explicitNullValueBizAi; set { _explicitNullValueBizAi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biz_ai"); else _explicitNullProperties?.Remove("biz_ai"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueBizAi = default!;
 #endif
         /// <summary>The carousel_to_video property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CarouselToVideo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CarouselToVideo { get => _explicitNullValueCarouselToVideo; set { _explicitNullValueCarouselToVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carousel_to_video"); else _explicitNullProperties?.Remove("carousel_to_video"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueCarouselToVideo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CarouselToVideo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CarouselToVideo { get => _explicitNullValueCarouselToVideo; set { _explicitNullValueCarouselToVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carousel_to_video"); else _explicitNullProperties?.Remove("carousel_to_video"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueCarouselToVideo = default!;
 #endif
         /// <summary>The catalog_feed_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CatalogFeedTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CatalogFeedTag { get => _explicitNullValueCatalogFeedTag; set { _explicitNullValueCatalogFeedTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_feed_tag"); else _explicitNullProperties?.Remove("catalog_feed_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueCatalogFeedTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CatalogFeedTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CatalogFeedTag { get => _explicitNullValueCatalogFeedTag; set { _explicitNullValueCatalogFeedTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_feed_tag"); else _explicitNullProperties?.Remove("catalog_feed_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueCatalogFeedTag = default!;
 #endif
         /// <summary>The creative_stickers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CreativeStickers { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CreativeStickers { get => _explicitNullValueCreativeStickers; set { _explicitNullValueCreativeStickers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_stickers"); else _explicitNullProperties?.Remove("creative_stickers"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueCreativeStickers = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CreativeStickers { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CreativeStickers { get => _explicitNullValueCreativeStickers; set { _explicitNullValueCreativeStickers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_stickers"); else _explicitNullProperties?.Remove("creative_stickers"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueCreativeStickers = default!;
 #endif
         /// <summary>The customize_product_recommendation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CustomizeProductRecommendation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CustomizeProductRecommendation { get => _explicitNullValueCustomizeProductRecommendation; set { _explicitNullValueCustomizeProductRecommendation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customize_product_recommendation"); else _explicitNullProperties?.Remove("customize_product_recommendation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueCustomizeProductRecommendation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CustomizeProductRecommendation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CustomizeProductRecommendation { get => _explicitNullValueCustomizeProductRecommendation; set { _explicitNullValueCustomizeProductRecommendation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customize_product_recommendation"); else _explicitNullProperties?.Remove("customize_product_recommendation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueCustomizeProductRecommendation = default!;
 #endif
         /// <summary>The cv_transformation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CvTransformation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? CvTransformation { get => _explicitNullValueCvTransformation; set { _explicitNullValueCvTransformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cv_transformation"); else _explicitNullProperties?.Remove("cv_transformation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueCvTransformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CvTransformation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails CvTransformation { get => _explicitNullValueCvTransformation; set { _explicitNullValueCvTransformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cv_transformation"); else _explicitNullProperties?.Remove("cv_transformation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueCvTransformation = default!;
 #endif
         /// <summary>The description_automation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DescriptionAutomation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DescriptionAutomation { get => _explicitNullValueDescriptionAutomation; set { _explicitNullValueDescriptionAutomation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_automation"); else _explicitNullProperties?.Remove("description_automation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueDescriptionAutomation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DescriptionAutomation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DescriptionAutomation { get => _explicitNullValueDescriptionAutomation; set { _explicitNullValueDescriptionAutomation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_automation"); else _explicitNullProperties?.Remove("description_automation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueDescriptionAutomation = default!;
 #endif
         /// <summary>The dha_optimization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DhaOptimization { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DhaOptimization { get => _explicitNullValueDhaOptimization; set { _explicitNullValueDhaOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dha_optimization"); else _explicitNullProperties?.Remove("dha_optimization"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueDhaOptimization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DhaOptimization { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DhaOptimization { get => _explicitNullValueDhaOptimization; set { _explicitNullValueDhaOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dha_optimization"); else _explicitNullProperties?.Remove("dha_optimization"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueDhaOptimization = default!;
 #endif
         /// <summary>The dynamic_cta_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DynamicCtaText { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DynamicCtaText { get => _explicitNullValueDynamicCtaText; set { _explicitNullValueDynamicCtaText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_cta_text"); else _explicitNullProperties?.Remove("dynamic_cta_text"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueDynamicCtaText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DynamicCtaText { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DynamicCtaText { get => _explicitNullValueDynamicCtaText; set { _explicitNullValueDynamicCtaText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_cta_text"); else _explicitNullProperties?.Remove("dynamic_cta_text"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueDynamicCtaText = default!;
 #endif
         /// <summary>The dynamic_partner_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DynamicPartnerContent { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? DynamicPartnerContent { get => _explicitNullValueDynamicPartnerContent; set { _explicitNullValueDynamicPartnerContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_partner_content"); else _explicitNullProperties?.Remove("dynamic_partner_content"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueDynamicPartnerContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DynamicPartnerContent { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails DynamicPartnerContent { get => _explicitNullValueDynamicPartnerContent; set { _explicitNullValueDynamicPartnerContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_partner_content"); else _explicitNullProperties?.Remove("dynamic_partner_content"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueDynamicPartnerContent = default!;
 #endif
         /// <summary>The enable_ncs_testimonials property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? EnableNcsTestimonials { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? EnableNcsTestimonials { get => _explicitNullValueEnableNcsTestimonials; set { _explicitNullValueEnableNcsTestimonials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ncs_testimonials"); else _explicitNullProperties?.Remove("enable_ncs_testimonials"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueEnableNcsTestimonials = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails EnableNcsTestimonials { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails EnableNcsTestimonials { get => _explicitNullValueEnableNcsTestimonials; set { _explicitNullValueEnableNcsTestimonials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ncs_testimonials"); else _explicitNullProperties?.Remove("enable_ncs_testimonials"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueEnableNcsTestimonials = default!;
 #endif
         /// <summary>The enhance_cta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? EnhanceCta { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? EnhanceCta { get => _explicitNullValueEnhanceCta; set { _explicitNullValueEnhanceCta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enhance_cta"); else _explicitNullProperties?.Remove("enhance_cta"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueEnhanceCta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails EnhanceCta { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails EnhanceCta { get => _explicitNullValueEnhanceCta; set { _explicitNullValueEnhanceCta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enhance_cta"); else _explicitNullProperties?.Remove("enhance_cta"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueEnhanceCta = default!;
 #endif
         /// <summary>The fb_feed_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FbFeedTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FbFeedTag { get => _explicitNullValueFbFeedTag; set { _explicitNullValueFbFeedTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_feed_tag"); else _explicitNullProperties?.Remove("fb_feed_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueFbFeedTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FbFeedTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FbFeedTag { get => _explicitNullValueFbFeedTag; set { _explicitNullValueFbFeedTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_feed_tag"); else _explicitNullProperties?.Remove("fb_feed_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueFbFeedTag = default!;
 #endif
         /// <summary>The fb_reels_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FbReelsTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FbReelsTag { get => _explicitNullValueFbReelsTag; set { _explicitNullValueFbReelsTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_reels_tag"); else _explicitNullProperties?.Remove("fb_reels_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueFbReelsTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FbReelsTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FbReelsTag { get => _explicitNullValueFbReelsTag; set { _explicitNullValueFbReelsTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_reels_tag"); else _explicitNullProperties?.Remove("fb_reels_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueFbReelsTag = default!;
 #endif
         /// <summary>The fb_story_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FbStoryTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FbStoryTag { get => _explicitNullValueFbStoryTag; set { _explicitNullValueFbStoryTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_story_tag"); else _explicitNullProperties?.Remove("fb_story_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueFbStoryTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FbStoryTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FbStoryTag { get => _explicitNullValueFbStoryTag; set { _explicitNullValueFbStoryTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_story_tag"); else _explicitNullProperties?.Remove("fb_story_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueFbStoryTag = default!;
 #endif
         /// <summary>The feed_caption_optimization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FeedCaptionOptimization { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? FeedCaptionOptimization { get => _explicitNullValueFeedCaptionOptimization; set { _explicitNullValueFeedCaptionOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_caption_optimization"); else _explicitNullProperties?.Remove("feed_caption_optimization"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueFeedCaptionOptimization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FeedCaptionOptimization { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails FeedCaptionOptimization { get => _explicitNullValueFeedCaptionOptimization; set { _explicitNullValueFeedCaptionOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_caption_optimization"); else _explicitNullProperties?.Remove("feed_caption_optimization"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueFeedCaptionOptimization = default!;
 #endif
         /// <summary>The generate_cta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? GenerateCta { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? GenerateCta { get => _explicitNullValueGenerateCta; set { _explicitNullValueGenerateCta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generate_cta"); else _explicitNullProperties?.Remove("generate_cta"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueGenerateCta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails GenerateCta { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails GenerateCta { get => _explicitNullValueGenerateCta; set { _explicitNullValueGenerateCta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generate_cta"); else _explicitNullProperties?.Remove("generate_cta"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueGenerateCta = default!;
 #endif
         /// <summary>The hide_price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? HidePrice { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? HidePrice { get => _explicitNullValueHidePrice; set { _explicitNullValueHidePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_price"); else _explicitNullProperties?.Remove("hide_price"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueHidePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails HidePrice { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails HidePrice { get => _explicitNullValueHidePrice; set { _explicitNullValueHidePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_price"); else _explicitNullProperties?.Remove("hide_price"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueHidePrice = default!;
 #endif
         /// <summary>The hyperlink_formatting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? HyperlinkFormatting { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? HyperlinkFormatting { get => _explicitNullValueHyperlinkFormatting; set { _explicitNullValueHyperlinkFormatting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hyperlink_formatting"); else _explicitNullProperties?.Remove("hyperlink_formatting"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueHyperlinkFormatting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails HyperlinkFormatting { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails HyperlinkFormatting { get => _explicitNullValueHyperlinkFormatting; set { _explicitNullValueHyperlinkFormatting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hyperlink_formatting"); else _explicitNullProperties?.Remove("hyperlink_formatting"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueHyperlinkFormatting = default!;
 #endif
         /// <summary>The ig_feed_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgFeedTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgFeedTag { get => _explicitNullValueIgFeedTag; set { _explicitNullValueIgFeedTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_feed_tag"); else _explicitNullProperties?.Remove("ig_feed_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueIgFeedTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgFeedTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgFeedTag { get => _explicitNullValueIgFeedTag; set { _explicitNullValueIgFeedTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_feed_tag"); else _explicitNullProperties?.Remove("ig_feed_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueIgFeedTag = default!;
 #endif
         /// <summary>The ig_glados_feed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgGladosFeed { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgGladosFeed { get => _explicitNullValueIgGladosFeed; set { _explicitNullValueIgGladosFeed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_glados_feed"); else _explicitNullProperties?.Remove("ig_glados_feed"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueIgGladosFeed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgGladosFeed { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgGladosFeed { get => _explicitNullValueIgGladosFeed; set { _explicitNullValueIgGladosFeed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_glados_feed"); else _explicitNullProperties?.Remove("ig_glados_feed"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueIgGladosFeed = default!;
 #endif
         /// <summary>The ig_reels_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgReelsTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgReelsTag { get => _explicitNullValueIgReelsTag; set { _explicitNullValueIgReelsTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_reels_tag"); else _explicitNullProperties?.Remove("ig_reels_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueIgReelsTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgReelsTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgReelsTag { get => _explicitNullValueIgReelsTag; set { _explicitNullValueIgReelsTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_reels_tag"); else _explicitNullProperties?.Remove("ig_reels_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueIgReelsTag = default!;
 #endif
         /// <summary>The ig_stream_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgStreamTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgStreamTag { get => _explicitNullValueIgStreamTag; set { _explicitNullValueIgStreamTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_stream_tag"); else _explicitNullProperties?.Remove("ig_stream_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueIgStreamTag = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgStreamTag { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgStreamTag { get => _explicitNullValueIgStreamTag; set { _explicitNullValueIgStreamTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_stream_tag"); else _explicitNullProperties?.Remove("ig_stream_tag"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueIgStreamTag = default!;
 #endif
         /// <summary>The ig_video_native_subtitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgVideoNativeSubtitle { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? IgVideoNativeSubtitle { get => _explicitNullValueIgVideoNativeSubtitle; set { _explicitNullValueIgVideoNativeSubtitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_video_native_subtitle"); else _explicitNullProperties?.Remove("ig_video_native_subtitle"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueIgVideoNativeSubtitle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgVideoNativeSubtitle { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails IgVideoNativeSubtitle { get => _explicitNullValueIgVideoNativeSubtitle; set { _explicitNullValueIgVideoNativeSubtitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_video_native_subtitle"); else _explicitNullProperties?.Remove("ig_video_native_subtitle"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueIgVideoNativeSubtitle = default!;
 #endif
         /// <summary>The image_animation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageAnimation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageAnimation { get => _explicitNullValueImageAnimation; set { _explicitNullValueImageAnimation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_animation"); else _explicitNullProperties?.Remove("image_animation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageAnimation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageAnimation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageAnimation { get => _explicitNullValueImageAnimation; set { _explicitNullValueImageAnimation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_animation"); else _explicitNullProperties?.Remove("image_animation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageAnimation = default!;
 #endif
         /// <summary>The image_auto_crop property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageAutoCrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageAutoCrop { get => _explicitNullValueImageAutoCrop; set { _explicitNullValueImageAutoCrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_auto_crop"); else _explicitNullProperties?.Remove("image_auto_crop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageAutoCrop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageAutoCrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageAutoCrop { get => _explicitNullValueImageAutoCrop; set { _explicitNullValueImageAutoCrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_auto_crop"); else _explicitNullProperties?.Remove("image_auto_crop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageAutoCrop = default!;
 #endif
         /// <summary>The image_background_gen property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageBackgroundGen { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageBackgroundGen { get => _explicitNullValueImageBackgroundGen; set { _explicitNullValueImageBackgroundGen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_background_gen"); else _explicitNullProperties?.Remove("image_background_gen"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageBackgroundGen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageBackgroundGen { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageBackgroundGen { get => _explicitNullValueImageBackgroundGen; set { _explicitNullValueImageBackgroundGen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_background_gen"); else _explicitNullProperties?.Remove("image_background_gen"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageBackgroundGen = default!;
 #endif
         /// <summary>The image_banner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageBanner { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageBanner { get => _explicitNullValueImageBanner; set { _explicitNullValueImageBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_banner"); else _explicitNullProperties?.Remove("image_banner"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageBanner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageBanner { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageBanner { get => _explicitNullValueImageBanner; set { _explicitNullValueImageBanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_banner"); else _explicitNullProperties?.Remove("image_banner"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageBanner = default!;
 #endif
         /// <summary>The image_brightness_and_contrast property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageBrightnessAndContrast { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageBrightnessAndContrast { get => _explicitNullValueImageBrightnessAndContrast; set { _explicitNullValueImageBrightnessAndContrast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_brightness_and_contrast"); else _explicitNullProperties?.Remove("image_brightness_and_contrast"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageBrightnessAndContrast = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageBrightnessAndContrast { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageBrightnessAndContrast { get => _explicitNullValueImageBrightnessAndContrast; set { _explicitNullValueImageBrightnessAndContrast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_brightness_and_contrast"); else _explicitNullProperties?.Remove("image_brightness_and_contrast"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageBrightnessAndContrast = default!;
 #endif
         /// <summary>The image_end_card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageEndCard { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageEndCard { get => _explicitNullValueImageEndCard; set { _explicitNullValueImageEndCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_end_card"); else _explicitNullProperties?.Remove("image_end_card"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageEndCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageEndCard { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageEndCard { get => _explicitNullValueImageEndCard; set { _explicitNullValueImageEndCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_end_card"); else _explicitNullProperties?.Remove("image_end_card"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageEndCard = default!;
 #endif
         /// <summary>The image_enhancement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageEnhancement { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageEnhancement { get => _explicitNullValueImageEnhancement; set { _explicitNullValueImageEnhancement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_enhancement"); else _explicitNullProperties?.Remove("image_enhancement"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageEnhancement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageEnhancement { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageEnhancement { get => _explicitNullValueImageEnhancement; set { _explicitNullValueImageEnhancement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_enhancement"); else _explicitNullProperties?.Remove("image_enhancement"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageEnhancement = default!;
 #endif
         /// <summary>The image_templates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageTemplates { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageTemplates { get => _explicitNullValueImageTemplates; set { _explicitNullValueImageTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_templates"); else _explicitNullProperties?.Remove("image_templates"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageTemplates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageTemplates { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageTemplates { get => _explicitNullValueImageTemplates; set { _explicitNullValueImageTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_templates"); else _explicitNullProperties?.Remove("image_templates"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageTemplates = default!;
 #endif
         /// <summary>The image_text_translation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageTextTranslation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageTextTranslation { get => _explicitNullValueImageTextTranslation; set { _explicitNullValueImageTextTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_text_translation"); else _explicitNullProperties?.Remove("image_text_translation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageTextTranslation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageTextTranslation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageTextTranslation { get => _explicitNullValueImageTextTranslation; set { _explicitNullValueImageTextTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_text_translation"); else _explicitNullProperties?.Remove("image_text_translation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageTextTranslation = default!;
 #endif
         /// <summary>The image_touchups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageTouchups { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageTouchups { get => _explicitNullValueImageTouchups; set { _explicitNullValueImageTouchups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_touchups"); else _explicitNullProperties?.Remove("image_touchups"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageTouchups = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageTouchups { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageTouchups { get => _explicitNullValueImageTouchups; set { _explicitNullValueImageTouchups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_touchups"); else _explicitNullProperties?.Remove("image_touchups"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageTouchups = default!;
 #endif
         /// <summary>The image_uncrop property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageUncrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ImageUncrop { get => _explicitNullValueImageUncrop; set { _explicitNullValueImageUncrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_uncrop"); else _explicitNullProperties?.Remove("image_uncrop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueImageUncrop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageUncrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ImageUncrop { get => _explicitNullValueImageUncrop; set { _explicitNullValueImageUncrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_uncrop"); else _explicitNullProperties?.Remove("image_uncrop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueImageUncrop = default!;
 #endif
         /// <summary>The inline_comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? InlineComment { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? InlineComment { get => _explicitNullValueInlineComment; set { _explicitNullValueInlineComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inline_comment"); else _explicitNullProperties?.Remove("inline_comment"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueInlineComment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails InlineComment { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails InlineComment { get => _explicitNullValueInlineComment; set { _explicitNullValueInlineComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inline_comment"); else _explicitNullProperties?.Remove("inline_comment"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueInlineComment = default!;
 #endif
         /// <summary>The local_store_extension property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? LocalStoreExtension { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? LocalStoreExtension { get => _explicitNullValueLocalStoreExtension; set { _explicitNullValueLocalStoreExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_store_extension"); else _explicitNullProperties?.Remove("local_store_extension"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueLocalStoreExtension = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails LocalStoreExtension { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails LocalStoreExtension { get => _explicitNullValueLocalStoreExtension; set { _explicitNullValueLocalStoreExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_store_extension"); else _explicitNullProperties?.Remove("local_store_extension"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueLocalStoreExtension = default!;
 #endif
         /// <summary>The media_liquidity_animated_image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MediaLiquidityAnimatedImage { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MediaLiquidityAnimatedImage { get => _explicitNullValueMediaLiquidityAnimatedImage; set { _explicitNullValueMediaLiquidityAnimatedImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_liquidity_animated_image"); else _explicitNullProperties?.Remove("media_liquidity_animated_image"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueMediaLiquidityAnimatedImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MediaLiquidityAnimatedImage { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MediaLiquidityAnimatedImage { get => _explicitNullValueMediaLiquidityAnimatedImage; set { _explicitNullValueMediaLiquidityAnimatedImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_liquidity_animated_image"); else _explicitNullProperties?.Remove("media_liquidity_animated_image"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueMediaLiquidityAnimatedImage = default!;
 #endif
         /// <summary>The media_order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MediaOrder { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MediaOrder { get => _explicitNullValueMediaOrder; set { _explicitNullValueMediaOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_order"); else _explicitNullProperties?.Remove("media_order"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueMediaOrder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MediaOrder { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MediaOrder { get => _explicitNullValueMediaOrder; set { _explicitNullValueMediaOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_order"); else _explicitNullProperties?.Remove("media_order"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueMediaOrder = default!;
 #endif
         /// <summary>The media_type_automation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MediaTypeAutomation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MediaTypeAutomation { get => _explicitNullValueMediaTypeAutomation; set { _explicitNullValueMediaTypeAutomation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type_automation"); else _explicitNullProperties?.Remove("media_type_automation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueMediaTypeAutomation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MediaTypeAutomation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MediaTypeAutomation { get => _explicitNullValueMediaTypeAutomation; set { _explicitNullValueMediaTypeAutomation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type_automation"); else _explicitNullProperties?.Remove("media_type_automation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueMediaTypeAutomation = default!;
 #endif
         /// <summary>The multi_creative_post_carousel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MultiCreativePostCarousel { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MultiCreativePostCarousel { get => _explicitNullValueMultiCreativePostCarousel; set { _explicitNullValueMultiCreativePostCarousel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_creative_post_carousel"); else _explicitNullProperties?.Remove("multi_creative_post_carousel"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueMultiCreativePostCarousel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MultiCreativePostCarousel { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MultiCreativePostCarousel { get => _explicitNullValueMultiCreativePostCarousel; set { _explicitNullValueMultiCreativePostCarousel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_creative_post_carousel"); else _explicitNullProperties?.Remove("multi_creative_post_carousel"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueMultiCreativePostCarousel = default!;
 #endif
         /// <summary>The multi_photo_to_video property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MultiPhotoToVideo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MultiPhotoToVideo { get => _explicitNullValueMultiPhotoToVideo; set { _explicitNullValueMultiPhotoToVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_photo_to_video"); else _explicitNullProperties?.Remove("multi_photo_to_video"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueMultiPhotoToVideo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MultiPhotoToVideo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MultiPhotoToVideo { get => _explicitNullValueMultiPhotoToVideo; set { _explicitNullValueMultiPhotoToVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multi_photo_to_video"); else _explicitNullProperties?.Remove("multi_photo_to_video"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueMultiPhotoToVideo = default!;
 #endif
         /// <summary>The music_generation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MusicGeneration { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? MusicGeneration { get => _explicitNullValueMusicGeneration; set { _explicitNullValueMusicGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("music_generation"); else _explicitNullProperties?.Remove("music_generation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueMusicGeneration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MusicGeneration { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails MusicGeneration { get => _explicitNullValueMusicGeneration; set { _explicitNullValueMusicGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("music_generation"); else _explicitNullProperties?.Remove("music_generation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueMusicGeneration = default!;
 #endif
         /// <summary>The pac_genai_recomposition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? PacGenaiRecomposition { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? PacGenaiRecomposition { get => _explicitNullValuePacGenaiRecomposition; set { _explicitNullValuePacGenaiRecomposition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pac_genai_recomposition"); else _explicitNullProperties?.Remove("pac_genai_recomposition"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValuePacGenaiRecomposition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails PacGenaiRecomposition { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails PacGenaiRecomposition { get => _explicitNullValuePacGenaiRecomposition; set { _explicitNullValuePacGenaiRecomposition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pac_genai_recomposition"); else _explicitNullProperties?.Remove("pac_genai_recomposition"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValuePacGenaiRecomposition = default!;
 #endif
         /// <summary>The pac_recomposition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? PacRecomposition { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? PacRecomposition { get => _explicitNullValuePacRecomposition; set { _explicitNullValuePacRecomposition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pac_recomposition"); else _explicitNullProperties?.Remove("pac_recomposition"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValuePacRecomposition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails PacRecomposition { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails PacRecomposition { get => _explicitNullValuePacRecomposition; set { _explicitNullValuePacRecomposition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pac_recomposition"); else _explicitNullProperties?.Remove("pac_recomposition"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValuePacRecomposition = default!;
 #endif
         /// <summary>The pac_relaxation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? PacRelaxation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? PacRelaxation { get => _explicitNullValuePacRelaxation; set { _explicitNullValuePacRelaxation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pac_relaxation"); else _explicitNullProperties?.Remove("pac_relaxation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValuePacRelaxation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails PacRelaxation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails PacRelaxation { get => _explicitNullValuePacRelaxation; set { _explicitNullValuePacRelaxation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pac_relaxation"); else _explicitNullProperties?.Remove("pac_relaxation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValuePacRelaxation = default!;
 #endif
         /// <summary>The product_browsing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductBrowsing { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductBrowsing { get => _explicitNullValueProductBrowsing; set { _explicitNullValueProductBrowsing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_browsing"); else _explicitNullProperties?.Remove("product_browsing"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueProductBrowsing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductBrowsing { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductBrowsing { get => _explicitNullValueProductBrowsing; set { _explicitNullValueProductBrowsing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_browsing"); else _explicitNullProperties?.Remove("product_browsing"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueProductBrowsing = default!;
 #endif
         /// <summary>The product_extensions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductExtensions { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductExtensions { get => _explicitNullValueProductExtensions; set { _explicitNullValueProductExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_extensions"); else _explicitNullProperties?.Remove("product_extensions"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueProductExtensions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductExtensions { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductExtensions { get => _explicitNullValueProductExtensions; set { _explicitNullValueProductExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_extensions"); else _explicitNullProperties?.Remove("product_extensions"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueProductExtensions = default!;
 #endif
         /// <summary>The product_metadata_automation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductMetadataAutomation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductMetadataAutomation { get => _explicitNullValueProductMetadataAutomation; set { _explicitNullValueProductMetadataAutomation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_metadata_automation"); else _explicitNullProperties?.Remove("product_metadata_automation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueProductMetadataAutomation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductMetadataAutomation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductMetadataAutomation { get => _explicitNullValueProductMetadataAutomation; set { _explicitNullValueProductMetadataAutomation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_metadata_automation"); else _explicitNullProperties?.Remove("product_metadata_automation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueProductMetadataAutomation = default!;
 #endif
         /// <summary>The product_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductTags { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProductTags { get => _explicitNullValueProductTags; set { _explicitNullValueProductTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_tags"); else _explicitNullProperties?.Remove("product_tags"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueProductTags = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductTags { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProductTags { get => _explicitNullValueProductTags; set { _explicitNullValueProductTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_tags"); else _explicitNullProperties?.Remove("product_tags"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueProductTags = default!;
 #endif
         /// <summary>The profile_card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProfileCard { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProfileCard { get => _explicitNullValueProfileCard; set { _explicitNullValueProfileCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_card"); else _explicitNullProperties?.Remove("profile_card"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueProfileCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProfileCard { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProfileCard { get => _explicitNullValueProfileCard; set { _explicitNullValueProfileCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_card"); else _explicitNullProperties?.Remove("profile_card"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueProfileCard = default!;
 #endif
         /// <summary>The profile_extension property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProfileExtension { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ProfileExtension { get => _explicitNullValueProfileExtension; set { _explicitNullValueProfileExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_extension"); else _explicitNullProperties?.Remove("profile_extension"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueProfileExtension = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProfileExtension { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ProfileExtension { get => _explicitNullValueProfileExtension; set { _explicitNullValueProfileExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_extension"); else _explicitNullProperties?.Remove("profile_extension"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueProfileExtension = default!;
 #endif
         /// <summary>The replace_media_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ReplaceMediaText { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ReplaceMediaText { get => _explicitNullValueReplaceMediaText; set { _explicitNullValueReplaceMediaText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replace_media_text"); else _explicitNullProperties?.Remove("replace_media_text"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueReplaceMediaText = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ReplaceMediaText { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ReplaceMediaText { get => _explicitNullValueReplaceMediaText; set { _explicitNullValueReplaceMediaText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replace_media_text"); else _explicitNullProperties?.Remove("replace_media_text"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueReplaceMediaText = default!;
 #endif
         /// <summary>The reveal_details_over_time property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? RevealDetailsOverTime { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? RevealDetailsOverTime { get => _explicitNullValueRevealDetailsOverTime; set { _explicitNullValueRevealDetailsOverTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reveal_details_over_time"); else _explicitNullProperties?.Remove("reveal_details_over_time"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueRevealDetailsOverTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails RevealDetailsOverTime { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails RevealDetailsOverTime { get => _explicitNullValueRevealDetailsOverTime; set { _explicitNullValueRevealDetailsOverTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reveal_details_over_time"); else _explicitNullProperties?.Remove("reveal_details_over_time"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueRevealDetailsOverTime = default!;
 #endif
         /// <summary>The show_destination_blurbs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ShowDestinationBlurbs { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ShowDestinationBlurbs { get => _explicitNullValueShowDestinationBlurbs; set { _explicitNullValueShowDestinationBlurbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_destination_blurbs"); else _explicitNullProperties?.Remove("show_destination_blurbs"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueShowDestinationBlurbs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ShowDestinationBlurbs { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ShowDestinationBlurbs { get => _explicitNullValueShowDestinationBlurbs; set { _explicitNullValueShowDestinationBlurbs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_destination_blurbs"); else _explicitNullProperties?.Remove("show_destination_blurbs"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueShowDestinationBlurbs = default!;
 #endif
         /// <summary>The show_summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ShowSummary { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? ShowSummary { get => _explicitNullValueShowSummary; set { _explicitNullValueShowSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_summary"); else _explicitNullProperties?.Remove("show_summary"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueShowSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ShowSummary { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails ShowSummary { get => _explicitNullValueShowSummary; set { _explicitNullValueShowSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_summary"); else _explicitNullProperties?.Remove("show_summary"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueShowSummary = default!;
 #endif
         /// <summary>The site_extensions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? SiteExtensions { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? SiteExtensions { get => _explicitNullValueSiteExtensions; set { _explicitNullValueSiteExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_extensions"); else _explicitNullProperties?.Remove("site_extensions"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueSiteExtensions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails SiteExtensions { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails SiteExtensions { get => _explicitNullValueSiteExtensions; set { _explicitNullValueSiteExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_extensions"); else _explicitNullProperties?.Remove("site_extensions"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueSiteExtensions = default!;
 #endif
         /// <summary>The standard_enhancements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? StandardEnhancements { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? StandardEnhancements { get => _explicitNullValueStandardEnhancements; set { _explicitNullValueStandardEnhancements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_enhancements"); else _explicitNullProperties?.Remove("standard_enhancements"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueStandardEnhancements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails StandardEnhancements { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails StandardEnhancements { get => _explicitNullValueStandardEnhancements; set { _explicitNullValueStandardEnhancements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_enhancements"); else _explicitNullProperties?.Remove("standard_enhancements"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueStandardEnhancements = default!;
 #endif
         /// <summary>The standard_enhancements_catalog property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? StandardEnhancementsCatalog { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? StandardEnhancementsCatalog { get => _explicitNullValueStandardEnhancementsCatalog; set { _explicitNullValueStandardEnhancementsCatalog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_enhancements_catalog"); else _explicitNullProperties?.Remove("standard_enhancements_catalog"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueStandardEnhancementsCatalog = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails StandardEnhancementsCatalog { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails StandardEnhancementsCatalog { get => _explicitNullValueStandardEnhancementsCatalog; set { _explicitNullValueStandardEnhancementsCatalog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standard_enhancements_catalog"); else _explicitNullProperties?.Remove("standard_enhancements_catalog"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueStandardEnhancementsCatalog = default!;
 #endif
         /// <summary>The text_extraction_for_headline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextExtractionForHeadline { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextExtractionForHeadline { get => _explicitNullValueTextExtractionForHeadline; set { _explicitNullValueTextExtractionForHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_extraction_for_headline"); else _explicitNullProperties?.Remove("text_extraction_for_headline"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextExtractionForHeadline = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextExtractionForHeadline { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextExtractionForHeadline { get => _explicitNullValueTextExtractionForHeadline; set { _explicitNullValueTextExtractionForHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_extraction_for_headline"); else _explicitNullProperties?.Remove("text_extraction_for_headline"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextExtractionForHeadline = default!;
 #endif
         /// <summary>The text_extraction_for_tap_target property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextExtractionForTapTarget { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextExtractionForTapTarget { get => _explicitNullValueTextExtractionForTapTarget; set { _explicitNullValueTextExtractionForTapTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_extraction_for_tap_target"); else _explicitNullProperties?.Remove("text_extraction_for_tap_target"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextExtractionForTapTarget = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextExtractionForTapTarget { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextExtractionForTapTarget { get => _explicitNullValueTextExtractionForTapTarget; set { _explicitNullValueTextExtractionForTapTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_extraction_for_tap_target"); else _explicitNullProperties?.Remove("text_extraction_for_tap_target"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextExtractionForTapTarget = default!;
 #endif
         /// <summary>The text_formatting_optimization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextFormattingOptimization { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextFormattingOptimization { get => _explicitNullValueTextFormattingOptimization; set { _explicitNullValueTextFormattingOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_formatting_optimization"); else _explicitNullProperties?.Remove("text_formatting_optimization"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextFormattingOptimization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextFormattingOptimization { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextFormattingOptimization { get => _explicitNullValueTextFormattingOptimization; set { _explicitNullValueTextFormattingOptimization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_formatting_optimization"); else _explicitNullProperties?.Remove("text_formatting_optimization"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextFormattingOptimization = default!;
 #endif
         /// <summary>The text_generation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextGeneration { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextGeneration { get => _explicitNullValueTextGeneration; set { _explicitNullValueTextGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_generation"); else _explicitNullProperties?.Remove("text_generation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextGeneration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextGeneration { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextGeneration { get => _explicitNullValueTextGeneration; set { _explicitNullValueTextGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_generation"); else _explicitNullProperties?.Remove("text_generation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextGeneration = default!;
 #endif
         /// <summary>The text_optimizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextOptimizations { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextOptimizations { get => _explicitNullValueTextOptimizations; set { _explicitNullValueTextOptimizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_optimizations"); else _explicitNullProperties?.Remove("text_optimizations"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextOptimizations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextOptimizations { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextOptimizations { get => _explicitNullValueTextOptimizations; set { _explicitNullValueTextOptimizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_optimizations"); else _explicitNullProperties?.Remove("text_optimizations"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextOptimizations = default!;
 #endif
         /// <summary>The text_overlay_translation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextOverlayTranslation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextOverlayTranslation { get => _explicitNullValueTextOverlayTranslation; set { _explicitNullValueTextOverlayTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_overlay_translation"); else _explicitNullProperties?.Remove("text_overlay_translation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextOverlayTranslation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextOverlayTranslation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextOverlayTranslation { get => _explicitNullValueTextOverlayTranslation; set { _explicitNullValueTextOverlayTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_overlay_translation"); else _explicitNullProperties?.Remove("text_overlay_translation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextOverlayTranslation = default!;
 #endif
         /// <summary>The text_translation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextTranslation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TextTranslation { get => _explicitNullValueTextTranslation; set { _explicitNullValueTextTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_translation"); else _explicitNullProperties?.Remove("text_translation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTextTranslation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextTranslation { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TextTranslation { get => _explicitNullValueTextTranslation; set { _explicitNullValueTextTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_translation"); else _explicitNullProperties?.Remove("text_translation"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTextTranslation = default!;
 #endif
         /// <summary>The translate_voiceover property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TranslateVoiceover { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? TranslateVoiceover { get => _explicitNullValueTranslateVoiceover; set { _explicitNullValueTranslateVoiceover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translate_voiceover"); else _explicitNullProperties?.Remove("translate_voiceover"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueTranslateVoiceover = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TranslateVoiceover { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails TranslateVoiceover { get => _explicitNullValueTranslateVoiceover; set { _explicitNullValueTranslateVoiceover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translate_voiceover"); else _explicitNullProperties?.Remove("translate_voiceover"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueTranslateVoiceover = default!;
 #endif
         /// <summary>The video_auto_crop property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoAutoCrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoAutoCrop { get => _explicitNullValueVideoAutoCrop; set { _explicitNullValueVideoAutoCrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_auto_crop"); else _explicitNullProperties?.Remove("video_auto_crop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoAutoCrop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoAutoCrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoAutoCrop { get => _explicitNullValueVideoAutoCrop; set { _explicitNullValueVideoAutoCrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_auto_crop"); else _explicitNullProperties?.Remove("video_auto_crop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoAutoCrop = default!;
 #endif
         /// <summary>The video_filtering property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoFiltering { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoFiltering { get => _explicitNullValueVideoFiltering; set { _explicitNullValueVideoFiltering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_filtering"); else _explicitNullProperties?.Remove("video_filtering"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoFiltering = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoFiltering { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoFiltering { get => _explicitNullValueVideoFiltering; set { _explicitNullValueVideoFiltering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_filtering"); else _explicitNullProperties?.Remove("video_filtering"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoFiltering = default!;
 #endif
         /// <summary>The video_highlight property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoHighlight { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoHighlight { get => _explicitNullValueVideoHighlight; set { _explicitNullValueVideoHighlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_highlight"); else _explicitNullProperties?.Remove("video_highlight"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoHighlight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoHighlight { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoHighlight { get => _explicitNullValueVideoHighlight; set { _explicitNullValueVideoHighlight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_highlight"); else _explicitNullProperties?.Remove("video_highlight"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoHighlight = default!;
 #endif
         /// <summary>The video_highlights property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoHighlights { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoHighlights { get => _explicitNullValueVideoHighlights; set { _explicitNullValueVideoHighlights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_highlights"); else _explicitNullProperties?.Remove("video_highlights"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoHighlights = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoHighlights { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoHighlights { get => _explicitNullValueVideoHighlights; set { _explicitNullValueVideoHighlights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_highlights"); else _explicitNullProperties?.Remove("video_highlights"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoHighlights = default!;
 #endif
         /// <summary>The video_to_image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoToImage { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoToImage { get => _explicitNullValueVideoToImage; set { _explicitNullValueVideoToImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_to_image"); else _explicitNullProperties?.Remove("video_to_image"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoToImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoToImage { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoToImage { get => _explicitNullValueVideoToImage; set { _explicitNullValueVideoToImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_to_image"); else _explicitNullProperties?.Remove("video_to_image"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoToImage = default!;
 #endif
         /// <summary>The video_uncrop property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoUncrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoUncrop { get => _explicitNullValueVideoUncrop; set { _explicitNullValueVideoUncrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_uncrop"); else _explicitNullProperties?.Remove("video_uncrop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoUncrop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoUncrop { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoUncrop { get => _explicitNullValueVideoUncrop; set { _explicitNullValueVideoUncrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_uncrop"); else _explicitNullProperties?.Remove("video_uncrop"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoUncrop = default!;
 #endif
         /// <summary>The video_uncrop_9x16_to_9x18 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoUncrop9x16To9x18 { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoUncrop9x16To9x18 { get => _explicitNullValueVideoUncrop9x16To9x18; set { _explicitNullValueVideoUncrop9x16To9x18 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_uncrop_9x16_to_9x18"); else _explicitNullProperties?.Remove("video_uncrop_9x16_to_9x18"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoUncrop9x16To9x18 = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoUncrop9x16To9x18 { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoUncrop9x16To9x18 { get => _explicitNullValueVideoUncrop9x16To9x18; set { _explicitNullValueVideoUncrop9x16To9x18 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_uncrop_9x16_to_9x18"); else _explicitNullProperties?.Remove("video_uncrop_9x16_to_9x18"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoUncrop9x16To9x18 = default!;
 #endif
         /// <summary>The video_voiceover property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoVoiceover { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? VideoVoiceover { get => _explicitNullValueVideoVoiceover; set { _explicitNullValueVideoVoiceover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_voiceover"); else _explicitNullProperties?.Remove("video_voiceover"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueVideoVoiceover = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoVoiceover { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails VideoVoiceover { get => _explicitNullValueVideoVoiceover; set { _explicitNullValueVideoVoiceover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_voiceover"); else _explicitNullProperties?.Remove("video_voiceover"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueVideoVoiceover = default!;
 #endif
         /// <summary>The wa_mm_image_filtering property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? WaMmImageFiltering { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? WaMmImageFiltering { get => _explicitNullValueWaMmImageFiltering; set { _explicitNullValueWaMmImageFiltering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wa_mm_image_filtering"); else _explicitNullProperties?.Remove("wa_mm_image_filtering"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueWaMmImageFiltering = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails WaMmImageFiltering { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails WaMmImageFiltering { get => _explicitNullValueWaMmImageFiltering; set { _explicitNullValueWaMmImageFiltering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wa_mm_image_filtering"); else _explicitNullProperties?.Remove("wa_mm_image_filtering"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueWaMmImageFiltering = default!;
 #endif
         /// <summary>The wa_mm_text_truncation_length property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? WaMmTextTruncationLength { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? WaMmTextTruncationLength { get => _explicitNullValueWaMmTextTruncationLength; set { _explicitNullValueWaMmTextTruncationLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wa_mm_text_truncation_length"); else _explicitNullProperties?.Remove("wa_mm_text_truncation_length"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails? _explicitNullValueWaMmTextTruncationLength = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails WaMmTextTruncationLength { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails WaMmTextTruncationLength { get => _explicitNullValueWaMmTextTruncationLength; set { _explicitNullValueWaMmTextTruncationLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wa_mm_text_truncation_length"); else _explicitNullProperties?.Remove("wa_mm_text_truncation_length"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails _explicitNullValueWaMmTextTruncationLength = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec"/> and sets the default values.
@@ -701,7 +960,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeaturesSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -888,6 +1147,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails>("video_voiceover", VideoVoiceover);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails>("wa_mm_image_filtering", WaMmImageFiltering);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails>("wa_mm_text_truncation_length", WaMmTextTruncationLength);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

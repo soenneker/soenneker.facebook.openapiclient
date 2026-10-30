@@ -11,31 +11,55 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeLinkDataImageOverlaySpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_text_type") is { } nullNodeCustomTextType && nullNodeCustomTextType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomTextType = null;
+            if (parseNode.GetChildNode("float_with_margin") is { } nullNodeFloatWithMargin && nullNodeFloatWithMargin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FloatWithMargin = null;
+            if (parseNode.GetChildNode("overlay_template") is { } nullNodeOverlayTemplate && nullNodeOverlayTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlayTemplate = null;
+            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+            if (parseNode.GetChildNode("text_font") is { } nullNodeTextFont && nullNodeTextFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextFont = null;
+            if (parseNode.GetChildNode("text_template_tags") is { } nullNodeTextTemplateTags && nullNodeTextTemplateTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextTemplateTags = null;
+            if (parseNode.GetChildNode("text_type") is { } nullNodeTextType && nullNodeTextType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextType = null;
+            if (parseNode.GetChildNode("theme_color") is { } nullNodeThemeColor && nullNodeThemeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThemeColor = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_text_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecCustomTextType? CustomTextType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecCustomTextType? CustomTextType { get => _explicitNullValueCustomTextType; set { _explicitNullValueCustomTextType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_text_type"); else _explicitNullProperties?.Remove("custom_text_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecCustomTextType? _explicitNullValueCustomTextType = default!;
         /// <summary>The float_with_margin property</summary>
-        public bool? FloatWithMargin { get; set; }
+        public bool? FloatWithMargin { get => _explicitNullValueFloatWithMargin; set { _explicitNullValueFloatWithMargin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("float_with_margin"); else _explicitNullProperties?.Remove("float_with_margin"); } }
+        private bool? _explicitNullValueFloatWithMargin = default!;
         /// <summary>The overlay_template property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecOverlayTemplate? OverlayTemplate { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecOverlayTemplate? OverlayTemplate { get => _explicitNullValueOverlayTemplate; set { _explicitNullValueOverlayTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlay_template"); else _explicitNullProperties?.Remove("overlay_template"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecOverlayTemplate? _explicitNullValueOverlayTemplate = default!;
         /// <summary>The position property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecPosition? Position { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecPosition? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecPosition? _explicitNullValuePosition = default!;
         /// <summary>The text_font property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextFont? TextFont { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextFont? TextFont { get => _explicitNullValueTextFont; set { _explicitNullValueTextFont = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_font"); else _explicitNullProperties?.Remove("text_font"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextFont? _explicitNullValueTextFont = default!;
         /// <summary>The text_template_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TextTemplateTags { get; set; }
+        public List<string>? TextTemplateTags { get => _explicitNullValueTextTemplateTags; set { _explicitNullValueTextTemplateTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_template_tags"); else _explicitNullProperties?.Remove("text_template_tags"); } }
+        private List<string>? _explicitNullValueTextTemplateTags = default!;
 #nullable restore
 #else
-        public List<string> TextTemplateTags { get; set; }
+        public List<string> TextTemplateTags { get => _explicitNullValueTextTemplateTags; set { _explicitNullValueTextTemplateTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_template_tags"); else _explicitNullProperties?.Remove("text_template_tags"); } }
+        private List<string> _explicitNullValueTextTemplateTags = default!;
 #endif
         /// <summary>The text_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextType? TextType { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextType? TextType { get => _explicitNullValueTextType; set { _explicitNullValueTextType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_type"); else _explicitNullProperties?.Remove("text_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextType? _explicitNullValueTextType = default!;
         /// <summary>The theme_color property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecThemeColor? ThemeColor { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecThemeColor? ThemeColor { get => _explicitNullValueThemeColor; set { _explicitNullValueThemeColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme_color"); else _explicitNullProperties?.Remove("theme_color"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecThemeColor? _explicitNullValueThemeColor = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpec"/> and sets the default values.
         /// </summary>
@@ -51,7 +75,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +110,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("text_template_tags", TextTemplateTags);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecTextType>("text_type", TextType);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecThemeColor>("theme_color", ThemeColor);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

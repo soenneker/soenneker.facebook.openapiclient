@@ -11,201 +11,290 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WhatsAppBusinessAccount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_review_status") is { } nullNodeAccountReviewStatus && nullNodeAccountReviewStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountReviewStatus = null;
+            if (parseNode.GetChildNode("analytics") is { } nullNodeAnalytics && nullNodeAnalytics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Analytics = null;
+            if (parseNode.GetChildNode("auth_international_rate_eligibility") is { } nullNodeAuthInternationalRateEligibility && nullNodeAuthInternationalRateEligibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthInternationalRateEligibility = null;
+            if (parseNode.GetChildNode("business_verification_status") is { } nullNodeBusinessVerificationStatus && nullNodeBusinessVerificationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessVerificationStatus = null;
+            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("creation_time") is { } nullNodeCreationTime && nullNodeCreationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationTime = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("disable_marketing_messages_on_cloud_api") is { } nullNodeDisableMarketingMessagesOnCloudApi && nullNodeDisableMarketingMessagesOnCloudApi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableMarketingMessagesOnCloudApi = null;
+            if (parseNode.GetChildNode("health_status") is { } nullNodeHealthStatus && nullNodeHealthStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HealthStatus = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_enabled_for_insights") is { } nullNodeIsEnabledForInsights && nullNodeIsEnabledForInsights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabledForInsights = null;
+            if (parseNode.GetChildNode("is_shared_with_partners") is { } nullNodeIsSharedWithPartners && nullNodeIsSharedWithPartners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSharedWithPartners = null;
+            if (parseNode.GetChildNode("linked_commerce_account") is { } nullNodeLinkedCommerceAccount && nullNodeLinkedCommerceAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedCommerceAccount = null;
+            if (parseNode.GetChildNode("marketing_messages_ad_account") is { } nullNodeMarketingMessagesAdAccount && nullNodeMarketingMessagesAdAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketingMessagesAdAccount = null;
+            if (parseNode.GetChildNode("marketing_messages_lite_api_status") is { } nullNodeMarketingMessagesLiteApiStatus && nullNodeMarketingMessagesLiteApiStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketingMessagesLiteApiStatus = null;
+            if (parseNode.GetChildNode("marketing_messages_onboarding_status") is { } nullNodeMarketingMessagesOnboardingStatus && nullNodeMarketingMessagesOnboardingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketingMessagesOnboardingStatus = null;
+            if (parseNode.GetChildNode("message_template_namespace") is { } nullNodeMessageTemplateNamespace && nullNodeMessageTemplateNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageTemplateNamespace = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("on_behalf_of_business_info") is { } nullNodeOnBehalfOfBusinessInfo && nullNodeOnBehalfOfBusinessInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnBehalfOfBusinessInfo = null;
+            if (parseNode.GetChildNode("owner_business") is { } nullNodeOwnerBusiness && nullNodeOwnerBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerBusiness = null;
+            if (parseNode.GetChildNode("owner_business_info") is { } nullNodeOwnerBusinessInfo && nullNodeOwnerBusinessInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerBusinessInfo = null;
+            if (parseNode.GetChildNode("ownership_type") is { } nullNodeOwnershipType && nullNodeOwnershipType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnershipType = null;
+            if (parseNode.GetChildNode("primary_business_location") is { } nullNodePrimaryBusinessLocation && nullNodePrimaryBusinessLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryBusinessLocation = null;
+            if (parseNode.GetChildNode("primary_funding_id") is { } nullNodePrimaryFundingId && nullNodePrimaryFundingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryFundingId = null;
+            if (parseNode.GetChildNode("purchase_order_number") is { } nullNodePurchaseOrderNumber && nullNodePurchaseOrderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseOrderNumber = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("template_auto_archival_enabled") is { } nullNodeTemplateAutoArchivalEnabled && nullNodeTemplateAutoArchivalEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateAutoArchivalEnabled = null;
+            if (parseNode.GetChildNode("timezone_id") is { } nullNodeTimezoneId && nullNodeTimezoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneId = null;
+            if (parseNode.GetChildNode("whatsapp_business_manager_messaging_limit") is { } nullNodeWhatsappBusinessManagerMessagingLimit && nullNodeWhatsappBusinessManagerMessagingLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappBusinessManagerMessagingLimit = null;
+            if (parseNode.GetChildNode("whatsapp_manager_marketing_messages_max_price_enroll_status") is { } nullNodeWhatsappManagerMarketingMessagesMaxPriceEnrollStatus && nullNodeWhatsappManagerMarketingMessagesMaxPriceEnrollStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappManagerMarketingMessagesMaxPriceEnrollStatus = null;
+        }
+
         /// <summary>The account_review_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountReviewStatus { get; set; }
+        public string? AccountReviewStatus { get => _explicitNullValueAccountReviewStatus; set { _explicitNullValueAccountReviewStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_review_status"); else _explicitNullProperties?.Remove("account_review_status"); } }
+        private string? _explicitNullValueAccountReviewStatus = default!;
 #nullable restore
 #else
-        public string AccountReviewStatus { get; set; }
+        public string AccountReviewStatus { get => _explicitNullValueAccountReviewStatus; set { _explicitNullValueAccountReviewStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_review_status"); else _explicitNullProperties?.Remove("account_review_status"); } }
+        private string _explicitNullValueAccountReviewStatus = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The analytics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAnalyticsProperty? Analytics { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAnalyticsProperty? Analytics { get => _explicitNullValueAnalytics; set { _explicitNullValueAnalytics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("analytics"); else _explicitNullProperties?.Remove("analytics"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAnalyticsProperty? _explicitNullValueAnalytics = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAnalyticsProperty Analytics { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAnalyticsProperty Analytics { get => _explicitNullValueAnalytics; set { _explicitNullValueAnalytics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("analytics"); else _explicitNullProperties?.Remove("analytics"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAnalyticsProperty _explicitNullValueAnalytics = default!;
 #endif
         /// <summary>The auth_international_rate_eligibility property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAuthInternationalRateEligibilityProperty? AuthInternationalRateEligibility { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAuthInternationalRateEligibilityProperty? AuthInternationalRateEligibility { get => _explicitNullValueAuthInternationalRateEligibility; set { _explicitNullValueAuthInternationalRateEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_international_rate_eligibility"); else _explicitNullProperties?.Remove("auth_international_rate_eligibility"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAuthInternationalRateEligibilityProperty? _explicitNullValueAuthInternationalRateEligibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAuthInternationalRateEligibilityProperty AuthInternationalRateEligibility { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAuthInternationalRateEligibilityProperty AuthInternationalRateEligibility { get => _explicitNullValueAuthInternationalRateEligibility; set { _explicitNullValueAuthInternationalRateEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_international_rate_eligibility"); else _explicitNullProperties?.Remove("auth_international_rate_eligibility"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountAuthInternationalRateEligibilityProperty _explicitNullValueAuthInternationalRateEligibility = default!;
 #endif
         /// <summary>The business_verification_status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountBusinessVerificationStatus? BusinessVerificationStatus { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountBusinessVerificationStatus? BusinessVerificationStatus { get => _explicitNullValueBusinessVerificationStatus; set { _explicitNullValueBusinessVerificationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_verification_status"); else _explicitNullProperties?.Remove("business_verification_status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountBusinessVerificationStatus? _explicitNullValueBusinessVerificationStatus = default!;
         /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get; set; }
+        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public string Country { get; set; }
+        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>The creation_time property</summary>
-        public long? CreationTime { get; set; }
+        public long? CreationTime { get => _explicitNullValueCreationTime; set { _explicitNullValueCreationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_time"); else _explicitNullProperties?.Remove("creation_time"); } }
+        private long? _explicitNullValueCreationTime = default!;
         /// <summary>The currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The disable_marketing_messages_on_cloud_api property</summary>
-        public bool? DisableMarketingMessagesOnCloudApi { get; set; }
+        public bool? DisableMarketingMessagesOnCloudApi { get => _explicitNullValueDisableMarketingMessagesOnCloudApi; set { _explicitNullValueDisableMarketingMessagesOnCloudApi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_marketing_messages_on_cloud_api"); else _explicitNullProperties?.Remove("disable_marketing_messages_on_cloud_api"); } }
+        private bool? _explicitNullValueDisableMarketingMessagesOnCloudApi = default!;
         /// <summary>The health_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusForMessageSend? HealthStatus { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusForMessageSend? HealthStatus { get => _explicitNullValueHealthStatus; set { _explicitNullValueHealthStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health_status"); else _explicitNullProperties?.Remove("health_status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusForMessageSend? _explicitNullValueHealthStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusForMessageSend HealthStatus { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusForMessageSend HealthStatus { get => _explicitNullValueHealthStatus; set { _explicitNullValueHealthStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health_status"); else _explicitNullProperties?.Remove("health_status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusForMessageSend _explicitNullValueHealthStatus = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_enabled_for_insights property</summary>
-        public bool? IsEnabledForInsights { get; set; }
+        public bool? IsEnabledForInsights { get => _explicitNullValueIsEnabledForInsights; set { _explicitNullValueIsEnabledForInsights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_enabled_for_insights"); else _explicitNullProperties?.Remove("is_enabled_for_insights"); } }
+        private bool? _explicitNullValueIsEnabledForInsights = default!;
         /// <summary>The is_shared_with_partners property</summary>
-        public bool? IsSharedWithPartners { get; set; }
+        public bool? IsSharedWithPartners { get => _explicitNullValueIsSharedWithPartners; set { _explicitNullValueIsSharedWithPartners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_shared_with_partners"); else _explicitNullProperties?.Remove("is_shared_with_partners"); } }
+        private bool? _explicitNullValueIsSharedWithPartners = default!;
         /// <summary>The linked_commerce_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettings? LinkedCommerceAccount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettings? LinkedCommerceAccount { get => _explicitNullValueLinkedCommerceAccount; set { _explicitNullValueLinkedCommerceAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_commerce_account"); else _explicitNullProperties?.Remove("linked_commerce_account"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettings? _explicitNullValueLinkedCommerceAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettings LinkedCommerceAccount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettings LinkedCommerceAccount { get => _explicitNullValueLinkedCommerceAccount; set { _explicitNullValueLinkedCommerceAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_commerce_account"); else _explicitNullProperties?.Remove("linked_commerce_account"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.CommerceMerchantSettings _explicitNullValueLinkedCommerceAccount = default!;
 #endif
         /// <summary>The marketing_messages_ad_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountMarketingMessagesAdAccountProperty? MarketingMessagesAdAccount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountMarketingMessagesAdAccountProperty? MarketingMessagesAdAccount { get => _explicitNullValueMarketingMessagesAdAccount; set { _explicitNullValueMarketingMessagesAdAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_messages_ad_account"); else _explicitNullProperties?.Remove("marketing_messages_ad_account"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountMarketingMessagesAdAccountProperty? _explicitNullValueMarketingMessagesAdAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountMarketingMessagesAdAccountProperty MarketingMessagesAdAccount { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountMarketingMessagesAdAccountProperty MarketingMessagesAdAccount { get => _explicitNullValueMarketingMessagesAdAccount; set { _explicitNullValueMarketingMessagesAdAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_messages_ad_account"); else _explicitNullProperties?.Remove("marketing_messages_ad_account"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountMarketingMessagesAdAccountProperty _explicitNullValueMarketingMessagesAdAccount = default!;
 #endif
         /// <summary>The marketing_messages_lite_api_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarketingMessagesLiteApiStatus { get; set; }
+        public string? MarketingMessagesLiteApiStatus { get => _explicitNullValueMarketingMessagesLiteApiStatus; set { _explicitNullValueMarketingMessagesLiteApiStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_messages_lite_api_status"); else _explicitNullProperties?.Remove("marketing_messages_lite_api_status"); } }
+        private string? _explicitNullValueMarketingMessagesLiteApiStatus = default!;
 #nullable restore
 #else
-        public string MarketingMessagesLiteApiStatus { get; set; }
+        public string MarketingMessagesLiteApiStatus { get => _explicitNullValueMarketingMessagesLiteApiStatus; set { _explicitNullValueMarketingMessagesLiteApiStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_messages_lite_api_status"); else _explicitNullProperties?.Remove("marketing_messages_lite_api_status"); } }
+        private string _explicitNullValueMarketingMessagesLiteApiStatus = default!;
 #endif
         /// <summary>The marketing_messages_onboarding_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarketingMessagesOnboardingStatus { get; set; }
+        public string? MarketingMessagesOnboardingStatus { get => _explicitNullValueMarketingMessagesOnboardingStatus; set { _explicitNullValueMarketingMessagesOnboardingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_messages_onboarding_status"); else _explicitNullProperties?.Remove("marketing_messages_onboarding_status"); } }
+        private string? _explicitNullValueMarketingMessagesOnboardingStatus = default!;
 #nullable restore
 #else
-        public string MarketingMessagesOnboardingStatus { get; set; }
+        public string MarketingMessagesOnboardingStatus { get => _explicitNullValueMarketingMessagesOnboardingStatus; set { _explicitNullValueMarketingMessagesOnboardingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketing_messages_onboarding_status"); else _explicitNullProperties?.Remove("marketing_messages_onboarding_status"); } }
+        private string _explicitNullValueMarketingMessagesOnboardingStatus = default!;
 #endif
         /// <summary>The message_template_namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageTemplateNamespace { get; set; }
+        public string? MessageTemplateNamespace { get => _explicitNullValueMessageTemplateNamespace; set { _explicitNullValueMessageTemplateNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_template_namespace"); else _explicitNullProperties?.Remove("message_template_namespace"); } }
+        private string? _explicitNullValueMessageTemplateNamespace = default!;
 #nullable restore
 #else
-        public string MessageTemplateNamespace { get; set; }
+        public string MessageTemplateNamespace { get => _explicitNullValueMessageTemplateNamespace; set { _explicitNullValueMessageTemplateNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_template_namespace"); else _explicitNullProperties?.Remove("message_template_namespace"); } }
+        private string _explicitNullValueMessageTemplateNamespace = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The on_behalf_of_business_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOnBehalfOfBusinessInfoProperty? OnBehalfOfBusinessInfo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOnBehalfOfBusinessInfoProperty? OnBehalfOfBusinessInfo { get => _explicitNullValueOnBehalfOfBusinessInfo; set { _explicitNullValueOnBehalfOfBusinessInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of_business_info"); else _explicitNullProperties?.Remove("on_behalf_of_business_info"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOnBehalfOfBusinessInfoProperty? _explicitNullValueOnBehalfOfBusinessInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOnBehalfOfBusinessInfoProperty OnBehalfOfBusinessInfo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOnBehalfOfBusinessInfoProperty OnBehalfOfBusinessInfo { get => _explicitNullValueOnBehalfOfBusinessInfo; set { _explicitNullValueOnBehalfOfBusinessInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("on_behalf_of_business_info"); else _explicitNullProperties?.Remove("on_behalf_of_business_info"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOnBehalfOfBusinessInfoProperty _explicitNullValueOnBehalfOfBusinessInfo = default!;
 #endif
         /// <summary>The owner_business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business? OwnerBusiness { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business? OwnerBusiness { get => _explicitNullValueOwnerBusiness; set { _explicitNullValueOwnerBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business"); else _explicitNullProperties?.Remove("owner_business"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Business? _explicitNullValueOwnerBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business OwnerBusiness { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business OwnerBusiness { get => _explicitNullValueOwnerBusiness; set { _explicitNullValueOwnerBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business"); else _explicitNullProperties?.Remove("owner_business"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.Business _explicitNullValueOwnerBusiness = default!;
 #endif
         /// <summary>The owner_business_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOwnerBusinessInfoProperty? OwnerBusinessInfo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOwnerBusinessInfoProperty? OwnerBusinessInfo { get => _explicitNullValueOwnerBusinessInfo; set { _explicitNullValueOwnerBusinessInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business_info"); else _explicitNullProperties?.Remove("owner_business_info"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOwnerBusinessInfoProperty? _explicitNullValueOwnerBusinessInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOwnerBusinessInfoProperty OwnerBusinessInfo { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOwnerBusinessInfoProperty OwnerBusinessInfo { get => _explicitNullValueOwnerBusinessInfo; set { _explicitNullValueOwnerBusinessInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business_info"); else _explicitNullProperties?.Remove("owner_business_info"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountOwnerBusinessInfoProperty _explicitNullValueOwnerBusinessInfo = default!;
 #endif
         /// <summary>The ownership_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnershipType { get; set; }
+        public string? OwnershipType { get => _explicitNullValueOwnershipType; set { _explicitNullValueOwnershipType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_type"); else _explicitNullProperties?.Remove("ownership_type"); } }
+        private string? _explicitNullValueOwnershipType = default!;
 #nullable restore
 #else
-        public string OwnershipType { get; set; }
+        public string OwnershipType { get => _explicitNullValueOwnershipType; set { _explicitNullValueOwnershipType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownership_type"); else _explicitNullProperties?.Remove("ownership_type"); } }
+        private string _explicitNullValueOwnershipType = default!;
 #endif
         /// <summary>The primary_business_location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryBusinessLocation { get; set; }
+        public string? PrimaryBusinessLocation { get => _explicitNullValuePrimaryBusinessLocation; set { _explicitNullValuePrimaryBusinessLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_business_location"); else _explicitNullProperties?.Remove("primary_business_location"); } }
+        private string? _explicitNullValuePrimaryBusinessLocation = default!;
 #nullable restore
 #else
-        public string PrimaryBusinessLocation { get; set; }
+        public string PrimaryBusinessLocation { get => _explicitNullValuePrimaryBusinessLocation; set { _explicitNullValuePrimaryBusinessLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_business_location"); else _explicitNullProperties?.Remove("primary_business_location"); } }
+        private string _explicitNullValuePrimaryBusinessLocation = default!;
 #endif
         /// <summary>The primary_funding_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryFundingId { get; set; }
+        public string? PrimaryFundingId { get => _explicitNullValuePrimaryFundingId; set { _explicitNullValuePrimaryFundingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_funding_id"); else _explicitNullProperties?.Remove("primary_funding_id"); } }
+        private string? _explicitNullValuePrimaryFundingId = default!;
 #nullable restore
 #else
-        public string PrimaryFundingId { get; set; }
+        public string PrimaryFundingId { get => _explicitNullValuePrimaryFundingId; set { _explicitNullValuePrimaryFundingId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_funding_id"); else _explicitNullProperties?.Remove("primary_funding_id"); } }
+        private string _explicitNullValuePrimaryFundingId = default!;
 #endif
         /// <summary>The purchase_order_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseOrderNumber { get; set; }
+        public string? PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_order_number"); else _explicitNullProperties?.Remove("purchase_order_number"); } }
+        private string? _explicitNullValuePurchaseOrderNumber = default!;
 #nullable restore
 #else
-        public string PurchaseOrderNumber { get; set; }
+        public string PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_order_number"); else _explicitNullProperties?.Remove("purchase_order_number"); } }
+        private string _explicitNullValuePurchaseOrderNumber = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>The template_auto_archival_enabled property</summary>
-        public bool? TemplateAutoArchivalEnabled { get; set; }
+        public bool? TemplateAutoArchivalEnabled { get => _explicitNullValueTemplateAutoArchivalEnabled; set { _explicitNullValueTemplateAutoArchivalEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_auto_archival_enabled"); else _explicitNullProperties?.Remove("template_auto_archival_enabled"); } }
+        private bool? _explicitNullValueTemplateAutoArchivalEnabled = default!;
         /// <summary>The timezone_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneId { get; set; }
+        public string? TimezoneId { get => _explicitNullValueTimezoneId; set { _explicitNullValueTimezoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone_id"); else _explicitNullProperties?.Remove("timezone_id"); } }
+        private string? _explicitNullValueTimezoneId = default!;
 #nullable restore
 #else
-        public string TimezoneId { get; set; }
+        public string TimezoneId { get => _explicitNullValueTimezoneId; set { _explicitNullValueTimezoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone_id"); else _explicitNullProperties?.Remove("timezone_id"); } }
+        private string _explicitNullValueTimezoneId = default!;
 #endif
         /// <summary>The whatsapp_business_manager_messaging_limit property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountWhatsappBusinessManagerMessagingLimit? WhatsappBusinessManagerMessagingLimit { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountWhatsappBusinessManagerMessagingLimit? WhatsappBusinessManagerMessagingLimit { get => _explicitNullValueWhatsappBusinessManagerMessagingLimit; set { _explicitNullValueWhatsappBusinessManagerMessagingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_business_manager_messaging_limit"); else _explicitNullProperties?.Remove("whatsapp_business_manager_messaging_limit"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountWhatsappBusinessManagerMessagingLimit? _explicitNullValueWhatsappBusinessManagerMessagingLimit = default!;
         /// <summary>The whatsapp_manager_marketing_messages_max_price_enroll_status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountWhatsappManagerMarketingMessagesMaxPriceEnrollStatus? WhatsappManagerMarketingMessagesMaxPriceEnrollStatus { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountWhatsappManagerMarketingMessagesMaxPriceEnrollStatus? WhatsappManagerMarketingMessagesMaxPriceEnrollStatus { get => _explicitNullValueWhatsappManagerMarketingMessagesMaxPriceEnrollStatus; set { _explicitNullValueWhatsappManagerMarketingMessagesMaxPriceEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_manager_marketing_messages_max_price_enroll_status"); else _explicitNullProperties?.Remove("whatsapp_manager_marketing_messages_max_price_enroll_status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountWhatsappManagerMarketingMessagesMaxPriceEnrollStatus? _explicitNullValueWhatsappManagerMarketingMessagesMaxPriceEnrollStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccount"/> and sets the default values.
         /// </summary>
@@ -221,7 +310,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccount();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccount(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -300,6 +389,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("timezone_id", TimezoneId);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessAccountWhatsappBusinessManagerMessagingLimit>("whatsapp_business_manager_messaging_limit", WhatsappBusinessManagerMessagingLimit);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountWhatsappManagerMarketingMessagesMaxPriceEnrollStatus>("whatsapp_manager_marketing_messages_max_price_enroll_status", WhatsappManagerMarketingMessagesMaxPriceEnrollStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

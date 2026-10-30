@@ -11,104 +11,147 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ChatPlugin : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alignment") is { } nullNodeAlignment && nullNodeAlignment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alignment = null;
+            if (parseNode.GetChildNode("desktop_bottom_spacing") is { } nullNodeDesktopBottomSpacing && nullNodeDesktopBottomSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DesktopBottomSpacing = null;
+            if (parseNode.GetChildNode("desktop_side_spacing") is { } nullNodeDesktopSideSpacing && nullNodeDesktopSideSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DesktopSideSpacing = null;
+            if (parseNode.GetChildNode("entry_point_icon") is { } nullNodeEntryPointIcon && nullNodeEntryPointIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntryPointIcon = null;
+            if (parseNode.GetChildNode("entry_point_label") is { } nullNodeEntryPointLabel && nullNodeEntryPointLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntryPointLabel = null;
+            if (parseNode.GetChildNode("greeting_dialog_display") is { } nullNodeGreetingDialogDisplay && nullNodeGreetingDialogDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GreetingDialogDisplay = null;
+            if (parseNode.GetChildNode("guest_chat_mode") is { } nullNodeGuestChatMode && nullNodeGuestChatMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuestChatMode = null;
+            if (parseNode.GetChildNode("mobile_bottom_spacing") is { } nullNodeMobileBottomSpacing && nullNodeMobileBottomSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobileBottomSpacing = null;
+            if (parseNode.GetChildNode("mobile_chat_display") is { } nullNodeMobileChatDisplay && nullNodeMobileChatDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobileChatDisplay = null;
+            if (parseNode.GetChildNode("mobile_side_spacing") is { } nullNodeMobileSideSpacing && nullNodeMobileSideSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobileSideSpacing = null;
+            if (parseNode.GetChildNode("theme_color") is { } nullNodeThemeColor && nullNodeThemeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThemeColor = null;
+            if (parseNode.GetChildNode("welcome_screen_greeting") is { } nullNodeWelcomeScreenGreeting && nullNodeWelcomeScreenGreeting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeScreenGreeting = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alignment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Alignment { get; set; }
+        public string? Alignment { get => _explicitNullValueAlignment; set { _explicitNullValueAlignment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alignment"); else _explicitNullProperties?.Remove("alignment"); } }
+        private string? _explicitNullValueAlignment = default!;
 #nullable restore
 #else
-        public string Alignment { get; set; }
+        public string Alignment { get => _explicitNullValueAlignment; set { _explicitNullValueAlignment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alignment"); else _explicitNullProperties?.Remove("alignment"); } }
+        private string _explicitNullValueAlignment = default!;
 #endif
         /// <summary>The desktop_bottom_spacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DesktopBottomSpacing { get; set; }
+        public string? DesktopBottomSpacing { get => _explicitNullValueDesktopBottomSpacing; set { _explicitNullValueDesktopBottomSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desktop_bottom_spacing"); else _explicitNullProperties?.Remove("desktop_bottom_spacing"); } }
+        private string? _explicitNullValueDesktopBottomSpacing = default!;
 #nullable restore
 #else
-        public string DesktopBottomSpacing { get; set; }
+        public string DesktopBottomSpacing { get => _explicitNullValueDesktopBottomSpacing; set { _explicitNullValueDesktopBottomSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desktop_bottom_spacing"); else _explicitNullProperties?.Remove("desktop_bottom_spacing"); } }
+        private string _explicitNullValueDesktopBottomSpacing = default!;
 #endif
         /// <summary>The desktop_side_spacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DesktopSideSpacing { get; set; }
+        public string? DesktopSideSpacing { get => _explicitNullValueDesktopSideSpacing; set { _explicitNullValueDesktopSideSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desktop_side_spacing"); else _explicitNullProperties?.Remove("desktop_side_spacing"); } }
+        private string? _explicitNullValueDesktopSideSpacing = default!;
 #nullable restore
 #else
-        public string DesktopSideSpacing { get; set; }
+        public string DesktopSideSpacing { get => _explicitNullValueDesktopSideSpacing; set { _explicitNullValueDesktopSideSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desktop_side_spacing"); else _explicitNullProperties?.Remove("desktop_side_spacing"); } }
+        private string _explicitNullValueDesktopSideSpacing = default!;
 #endif
         /// <summary>The entry_point_icon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntryPointIcon { get; set; }
+        public string? EntryPointIcon { get => _explicitNullValueEntryPointIcon; set { _explicitNullValueEntryPointIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entry_point_icon"); else _explicitNullProperties?.Remove("entry_point_icon"); } }
+        private string? _explicitNullValueEntryPointIcon = default!;
 #nullable restore
 #else
-        public string EntryPointIcon { get; set; }
+        public string EntryPointIcon { get => _explicitNullValueEntryPointIcon; set { _explicitNullValueEntryPointIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entry_point_icon"); else _explicitNullProperties?.Remove("entry_point_icon"); } }
+        private string _explicitNullValueEntryPointIcon = default!;
 #endif
         /// <summary>The entry_point_label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntryPointLabel { get; set; }
+        public string? EntryPointLabel { get => _explicitNullValueEntryPointLabel; set { _explicitNullValueEntryPointLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entry_point_label"); else _explicitNullProperties?.Remove("entry_point_label"); } }
+        private string? _explicitNullValueEntryPointLabel = default!;
 #nullable restore
 #else
-        public string EntryPointLabel { get; set; }
+        public string EntryPointLabel { get => _explicitNullValueEntryPointLabel; set { _explicitNullValueEntryPointLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entry_point_label"); else _explicitNullProperties?.Remove("entry_point_label"); } }
+        private string _explicitNullValueEntryPointLabel = default!;
 #endif
         /// <summary>The greeting_dialog_display property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GreetingDialogDisplay { get; set; }
+        public string? GreetingDialogDisplay { get => _explicitNullValueGreetingDialogDisplay; set { _explicitNullValueGreetingDialogDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("greeting_dialog_display"); else _explicitNullProperties?.Remove("greeting_dialog_display"); } }
+        private string? _explicitNullValueGreetingDialogDisplay = default!;
 #nullable restore
 #else
-        public string GreetingDialogDisplay { get; set; }
+        public string GreetingDialogDisplay { get => _explicitNullValueGreetingDialogDisplay; set { _explicitNullValueGreetingDialogDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("greeting_dialog_display"); else _explicitNullProperties?.Remove("greeting_dialog_display"); } }
+        private string _explicitNullValueGreetingDialogDisplay = default!;
 #endif
         /// <summary>The guest_chat_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuestChatMode { get; set; }
+        public string? GuestChatMode { get => _explicitNullValueGuestChatMode; set { _explicitNullValueGuestChatMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guest_chat_mode"); else _explicitNullProperties?.Remove("guest_chat_mode"); } }
+        private string? _explicitNullValueGuestChatMode = default!;
 #nullable restore
 #else
-        public string GuestChatMode { get; set; }
+        public string GuestChatMode { get => _explicitNullValueGuestChatMode; set { _explicitNullValueGuestChatMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guest_chat_mode"); else _explicitNullProperties?.Remove("guest_chat_mode"); } }
+        private string _explicitNullValueGuestChatMode = default!;
 #endif
         /// <summary>The mobile_bottom_spacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MobileBottomSpacing { get; set; }
+        public string? MobileBottomSpacing { get => _explicitNullValueMobileBottomSpacing; set { _explicitNullValueMobileBottomSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_bottom_spacing"); else _explicitNullProperties?.Remove("mobile_bottom_spacing"); } }
+        private string? _explicitNullValueMobileBottomSpacing = default!;
 #nullable restore
 #else
-        public string MobileBottomSpacing { get; set; }
+        public string MobileBottomSpacing { get => _explicitNullValueMobileBottomSpacing; set { _explicitNullValueMobileBottomSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_bottom_spacing"); else _explicitNullProperties?.Remove("mobile_bottom_spacing"); } }
+        private string _explicitNullValueMobileBottomSpacing = default!;
 #endif
         /// <summary>The mobile_chat_display property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MobileChatDisplay { get; set; }
+        public string? MobileChatDisplay { get => _explicitNullValueMobileChatDisplay; set { _explicitNullValueMobileChatDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_chat_display"); else _explicitNullProperties?.Remove("mobile_chat_display"); } }
+        private string? _explicitNullValueMobileChatDisplay = default!;
 #nullable restore
 #else
-        public string MobileChatDisplay { get; set; }
+        public string MobileChatDisplay { get => _explicitNullValueMobileChatDisplay; set { _explicitNullValueMobileChatDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_chat_display"); else _explicitNullProperties?.Remove("mobile_chat_display"); } }
+        private string _explicitNullValueMobileChatDisplay = default!;
 #endif
         /// <summary>The mobile_side_spacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MobileSideSpacing { get; set; }
+        public string? MobileSideSpacing { get => _explicitNullValueMobileSideSpacing; set { _explicitNullValueMobileSideSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_side_spacing"); else _explicitNullProperties?.Remove("mobile_side_spacing"); } }
+        private string? _explicitNullValueMobileSideSpacing = default!;
 #nullable restore
 #else
-        public string MobileSideSpacing { get; set; }
+        public string MobileSideSpacing { get => _explicitNullValueMobileSideSpacing; set { _explicitNullValueMobileSideSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_side_spacing"); else _explicitNullProperties?.Remove("mobile_side_spacing"); } }
+        private string _explicitNullValueMobileSideSpacing = default!;
 #endif
         /// <summary>The theme_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThemeColor { get; set; }
+        public string? ThemeColor { get => _explicitNullValueThemeColor; set { _explicitNullValueThemeColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme_color"); else _explicitNullProperties?.Remove("theme_color"); } }
+        private string? _explicitNullValueThemeColor = default!;
 #nullable restore
 #else
-        public string ThemeColor { get; set; }
+        public string ThemeColor { get => _explicitNullValueThemeColor; set { _explicitNullValueThemeColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme_color"); else _explicitNullProperties?.Remove("theme_color"); } }
+        private string _explicitNullValueThemeColor = default!;
 #endif
         /// <summary>The welcome_screen_greeting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WelcomeScreenGreeting { get; set; }
+        public string? WelcomeScreenGreeting { get => _explicitNullValueWelcomeScreenGreeting; set { _explicitNullValueWelcomeScreenGreeting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_screen_greeting"); else _explicitNullProperties?.Remove("welcome_screen_greeting"); } }
+        private string? _explicitNullValueWelcomeScreenGreeting = default!;
 #nullable restore
 #else
-        public string WelcomeScreenGreeting { get; set; }
+        public string WelcomeScreenGreeting { get => _explicitNullValueWelcomeScreenGreeting; set { _explicitNullValueWelcomeScreenGreeting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_screen_greeting"); else _explicitNullProperties?.Remove("welcome_screen_greeting"); } }
+        private string _explicitNullValueWelcomeScreenGreeting = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.ChatPlugin"/> and sets the default values.
@@ -125,7 +168,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.ChatPlugin CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.ChatPlugin();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.ChatPlugin(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -168,6 +211,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("mobile_side_spacing", MobileSideSpacing);
             writer.WriteStringValue("theme_color", ThemeColor);
             writer.WriteStringValue("welcome_screen_greeting", WelcomeScreenGreeting);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

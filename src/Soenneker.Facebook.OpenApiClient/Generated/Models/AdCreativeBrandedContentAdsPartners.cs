@@ -11,42 +11,63 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeBrandedContentAdsPartners : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fb_page_id") is { } nullNodeFbPageId && nullNodeFbPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbPageId = null;
+            if (parseNode.GetChildNode("has_create_ads_access") is { } nullNodeHasCreateAdsAccess && nullNodeHasCreateAdsAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCreateAdsAccess = null;
+            if (parseNode.GetChildNode("identity_type") is { } nullNodeIdentityType && nullNodeIdentityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityType = null;
+            if (parseNode.GetChildNode("ig_asset_id") is { } nullNodeIgAssetId && nullNodeIgAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgAssetId = null;
+            if (parseNode.GetChildNode("ig_user_id") is { } nullNodeIgUserId && nullNodeIgUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fb_page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FbPageId { get; set; }
+        public string? FbPageId { get => _explicitNullValueFbPageId; set { _explicitNullValueFbPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_page_id"); else _explicitNullProperties?.Remove("fb_page_id"); } }
+        private string? _explicitNullValueFbPageId = default!;
 #nullable restore
 #else
-        public string FbPageId { get; set; }
+        public string FbPageId { get => _explicitNullValueFbPageId; set { _explicitNullValueFbPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_page_id"); else _explicitNullProperties?.Remove("fb_page_id"); } }
+        private string _explicitNullValueFbPageId = default!;
 #endif
         /// <summary>The has_create_ads_access property</summary>
-        public bool? HasCreateAdsAccess { get; set; }
+        public bool? HasCreateAdsAccess { get => _explicitNullValueHasCreateAdsAccess; set { _explicitNullValueHasCreateAdsAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_create_ads_access"); else _explicitNullProperties?.Remove("has_create_ads_access"); } }
+        private bool? _explicitNullValueHasCreateAdsAccess = default!;
         /// <summary>The identity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdentityType { get; set; }
+        public string? IdentityType { get => _explicitNullValueIdentityType; set { _explicitNullValueIdentityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_type"); else _explicitNullProperties?.Remove("identity_type"); } }
+        private string? _explicitNullValueIdentityType = default!;
 #nullable restore
 #else
-        public string IdentityType { get; set; }
+        public string IdentityType { get => _explicitNullValueIdentityType; set { _explicitNullValueIdentityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_type"); else _explicitNullProperties?.Remove("identity_type"); } }
+        private string _explicitNullValueIdentityType = default!;
 #endif
         /// <summary>The ig_asset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgAssetId { get; set; }
+        public string? IgAssetId { get => _explicitNullValueIgAssetId; set { _explicitNullValueIgAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_asset_id"); else _explicitNullProperties?.Remove("ig_asset_id"); } }
+        private string? _explicitNullValueIgAssetId = default!;
 #nullable restore
 #else
-        public string IgAssetId { get; set; }
+        public string IgAssetId { get => _explicitNullValueIgAssetId; set { _explicitNullValueIgAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_asset_id"); else _explicitNullProperties?.Remove("ig_asset_id"); } }
+        private string _explicitNullValueIgAssetId = default!;
 #endif
         /// <summary>The ig_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgUserId { get; set; }
+        public string? IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
+        private string? _explicitNullValueIgUserId = default!;
 #nullable restore
 #else
-        public string IgUserId { get; set; }
+        public string IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
+        private string _explicitNullValueIgUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeBrandedContentAdsPartners"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeBrandedContentAdsPartners CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeBrandedContentAdsPartners();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeBrandedContentAdsPartners(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("identity_type", IdentityType);
             writer.WriteStringValue("ig_asset_id", IgAssetId);
             writer.WriteStringValue("ig_user_id", IgUserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

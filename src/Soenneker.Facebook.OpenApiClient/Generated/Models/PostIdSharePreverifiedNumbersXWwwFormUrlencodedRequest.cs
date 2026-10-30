@@ -11,24 +11,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdSharePreverifiedNumbersXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("partner_business_id") is { } nullNodePartnerBusinessId && nullNodePartnerBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerBusinessId = null;
+            if (parseNode.GetChildNode("preverified_id") is { } nullNodePreverifiedId && nullNodePreverifiedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreverifiedId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The partner_business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerBusinessId { get; set; }
+        public string? PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
+        private string? _explicitNullValuePartnerBusinessId = default!;
 #nullable restore
 #else
-        public string PartnerBusinessId { get; set; }
+        public string PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
+        private string _explicitNullValuePartnerBusinessId = default!;
 #endif
         /// <summary>The preverified_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreverifiedId { get; set; }
+        public string? PreverifiedId { get => _explicitNullValuePreverifiedId; set { _explicitNullValuePreverifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preverified_id"); else _explicitNullProperties?.Remove("preverified_id"); } }
+        private string? _explicitNullValuePreverifiedId = default!;
 #nullable restore
 #else
-        public string PreverifiedId { get; set; }
+        public string PreverifiedId { get => _explicitNullValuePreverifiedId; set { _explicitNullValuePreverifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preverified_id"); else _explicitNullProperties?.Remove("preverified_id"); } }
+        private string _explicitNullValuePreverifiedId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdSharePreverifiedNumbersXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdSharePreverifiedNumbersXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdSharePreverifiedNumbersXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdSharePreverifiedNumbersXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("partner_business_id", PartnerBusinessId);
             writer.WriteStringValue("preverified_id", PreverifiedId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

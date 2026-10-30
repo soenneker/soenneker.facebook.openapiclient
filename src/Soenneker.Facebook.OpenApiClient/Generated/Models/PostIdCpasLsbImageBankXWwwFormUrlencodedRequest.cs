@@ -11,20 +11,34 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdCpasLsbImageBankXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ad_group_id") is { } nullNodeAdGroupId && nullNodeAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupId = null;
+            if (parseNode.GetChildNode("agency_business_id") is { } nullNodeAgencyBusinessId && nullNodeAgencyBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgencyBusinessId = null;
+            if (parseNode.GetChildNode("backup_image_urls") is { } nullNodeBackupImageUrls && nullNodeBackupImageUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackupImageUrls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_group_id property</summary>
-        public long? AdGroupId { get; set; }
+        public long? AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_group_id"); else _explicitNullProperties?.Remove("ad_group_id"); } }
+        private long? _explicitNullValueAdGroupId = default!;
         /// <summary>The agency_business_id property</summary>
-        public long? AgencyBusinessId { get; set; }
+        public long? AgencyBusinessId { get => _explicitNullValueAgencyBusinessId; set { _explicitNullValueAgencyBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agency_business_id"); else _explicitNullProperties?.Remove("agency_business_id"); } }
+        private long? _explicitNullValueAgencyBusinessId = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BackupImageUrls { get; set; }
+        public string? BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
+        private string? _explicitNullValueBackupImageUrls = default!;
 #nullable restore
 #else
-        public string BackupImageUrls { get; set; }
+        public string BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
+        private string _explicitNullValueBackupImageUrls = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasLsbImageBankXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasLsbImageBankXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasLsbImageBankXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCpasLsbImageBankXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("ad_group_id", AdGroupId);
             writer.WriteLongValue("agency_business_id", AgencyBusinessId);
             writer.WriteStringValue("backup_image_urls", BackupImageUrls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

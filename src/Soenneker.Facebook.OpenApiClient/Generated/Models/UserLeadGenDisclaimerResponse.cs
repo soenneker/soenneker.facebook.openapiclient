@@ -11,24 +11,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UserLeadGenDisclaimerResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checkbox_key") is { } nullNodeCheckboxKey && nullNodeCheckboxKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckboxKey = null;
+            if (parseNode.GetChildNode("is_checked") is { } nullNodeIsChecked && nullNodeIsChecked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsChecked = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkbox_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckboxKey { get; set; }
+        public string? CheckboxKey { get => _explicitNullValueCheckboxKey; set { _explicitNullValueCheckboxKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_key"); else _explicitNullProperties?.Remove("checkbox_key"); } }
+        private string? _explicitNullValueCheckboxKey = default!;
 #nullable restore
 #else
-        public string CheckboxKey { get; set; }
+        public string CheckboxKey { get => _explicitNullValueCheckboxKey; set { _explicitNullValueCheckboxKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_key"); else _explicitNullProperties?.Remove("checkbox_key"); } }
+        private string _explicitNullValueCheckboxKey = default!;
 #endif
         /// <summary>The is_checked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsChecked { get; set; }
+        public string? IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
+        private string? _explicitNullValueIsChecked = default!;
 #nullable restore
 #else
-        public string IsChecked { get; set; }
+        public string IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
+        private string _explicitNullValueIsChecked = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.UserLeadGenDisclaimerResponse"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.UserLeadGenDisclaimerResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.UserLeadGenDisclaimerResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.UserLeadGenDisclaimerResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checkbox_key", CheckboxKey);
             writer.WriteStringValue("is_checked", IsChecked);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

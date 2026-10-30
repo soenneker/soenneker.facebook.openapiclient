@@ -11,66 +11,101 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdCopiesXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adset_id") is { } nullNodeAdsetId && nullNodeAdsetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdsetId = null;
+            if (parseNode.GetChildNode("campaign_id") is { } nullNodeCampaignId && nullNodeCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignId = null;
+            if (parseNode.GetChildNode("create_dco_adset") is { } nullNodeCreateDcoAdset && nullNodeCreateDcoAdset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateDcoAdset = null;
+            if (parseNode.GetChildNode("creative_parameters") is { } nullNodeCreativeParameters && nullNodeCreativeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeParameters = null;
+            if (parseNode.GetChildNode("deep_copy") is { } nullNodeDeepCopy && nullNodeDeepCopy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeepCopy = null;
+            if (parseNode.GetChildNode("end_time") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("migrate_to_advantage_plus") is { } nullNodeMigrateToAdvantagePlus && nullNodeMigrateToAdvantagePlus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigrateToAdvantagePlus = null;
+            if (parseNode.GetChildNode("parameter_overrides") is { } nullNodeParameterOverrides && nullNodeParameterOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParameterOverrides = null;
+            if (parseNode.GetChildNode("rename_options") is { } nullNodeRenameOptions && nullNodeRenameOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RenameOptions = null;
+            if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("status_option") is { } nullNodeStatusOption && nullNodeStatusOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusOption = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The adset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdsetId { get; set; }
+        public string? AdsetId { get => _explicitNullValueAdsetId; set { _explicitNullValueAdsetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adset_id"); else _explicitNullProperties?.Remove("adset_id"); } }
+        private string? _explicitNullValueAdsetId = default!;
 #nullable restore
 #else
-        public string AdsetId { get; set; }
+        public string AdsetId { get => _explicitNullValueAdsetId; set { _explicitNullValueAdsetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adset_id"); else _explicitNullProperties?.Remove("adset_id"); } }
+        private string _explicitNullValueAdsetId = default!;
 #endif
         /// <summary>The campaign_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CampaignId { get; set; }
+        public string? CampaignId { get => _explicitNullValueCampaignId; set { _explicitNullValueCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_id"); else _explicitNullProperties?.Remove("campaign_id"); } }
+        private string? _explicitNullValueCampaignId = default!;
 #nullable restore
 #else
-        public string CampaignId { get; set; }
+        public string CampaignId { get => _explicitNullValueCampaignId; set { _explicitNullValueCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_id"); else _explicitNullProperties?.Remove("campaign_id"); } }
+        private string _explicitNullValueCampaignId = default!;
 #endif
         /// <summary>The create_dco_adset property</summary>
-        public bool? CreateDcoAdset { get; set; }
+        public bool? CreateDcoAdset { get => _explicitNullValueCreateDcoAdset; set { _explicitNullValueCreateDcoAdset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_dco_adset"); else _explicitNullProperties?.Remove("create_dco_adset"); } }
+        private bool? _explicitNullValueCreateDcoAdset = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreativeParameters { get; set; }
+        public string? CreativeParameters { get => _explicitNullValueCreativeParameters; set { _explicitNullValueCreativeParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_parameters"); else _explicitNullProperties?.Remove("creative_parameters"); } }
+        private string? _explicitNullValueCreativeParameters = default!;
 #nullable restore
 #else
-        public string CreativeParameters { get; set; }
+        public string CreativeParameters { get => _explicitNullValueCreativeParameters; set { _explicitNullValueCreativeParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_parameters"); else _explicitNullProperties?.Remove("creative_parameters"); } }
+        private string _explicitNullValueCreativeParameters = default!;
 #endif
         /// <summary>The deep_copy property</summary>
-        public bool? DeepCopy { get; set; }
+        public bool? DeepCopy { get => _explicitNullValueDeepCopy; set { _explicitNullValueDeepCopy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deep_copy"); else _explicitNullProperties?.Remove("deep_copy"); } }
+        private bool? _explicitNullValueDeepCopy = default!;
         /// <summary>The end_time property</summary>
-        public DateTimeOffset? EndTime { get; set; }
+        public DateTimeOffset? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_time"); else _explicitNullProperties?.Remove("end_time"); } }
+        private DateTimeOffset? _explicitNullValueEndTime = default!;
         /// <summary>The migrate_to_advantage_plus property</summary>
-        public bool? MigrateToAdvantagePlus { get; set; }
+        public bool? MigrateToAdvantagePlus { get => _explicitNullValueMigrateToAdvantagePlus; set { _explicitNullValueMigrateToAdvantagePlus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migrate_to_advantage_plus"); else _explicitNullProperties?.Remove("migrate_to_advantage_plus"); } }
+        private bool? _explicitNullValueMigrateToAdvantagePlus = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParameterOverrides { get; set; }
+        public string? ParameterOverrides { get => _explicitNullValueParameterOverrides; set { _explicitNullValueParameterOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameter_overrides"); else _explicitNullProperties?.Remove("parameter_overrides"); } }
+        private string? _explicitNullValueParameterOverrides = default!;
 #nullable restore
 #else
-        public string ParameterOverrides { get; set; }
+        public string ParameterOverrides { get => _explicitNullValueParameterOverrides; set { _explicitNullValueParameterOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameter_overrides"); else _explicitNullProperties?.Remove("parameter_overrides"); } }
+        private string _explicitNullValueParameterOverrides = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RenameOptions { get; set; }
+        public string? RenameOptions { get => _explicitNullValueRenameOptions; set { _explicitNullValueRenameOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rename_options"); else _explicitNullProperties?.Remove("rename_options"); } }
+        private string? _explicitNullValueRenameOptions = default!;
 #nullable restore
 #else
-        public string RenameOptions { get; set; }
+        public string RenameOptions { get => _explicitNullValueRenameOptions; set { _explicitNullValueRenameOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rename_options"); else _explicitNullProperties?.Remove("rename_options"); } }
+        private string _explicitNullValueRenameOptions = default!;
 #endif
         /// <summary>The start_time property</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
+        private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>The status_option property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusOption { get; set; }
+        public string? StatusOption { get => _explicitNullValueStatusOption; set { _explicitNullValueStatusOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_option"); else _explicitNullProperties?.Remove("status_option"); } }
+        private string? _explicitNullValueStatusOption = default!;
 #nullable restore
 #else
-        public string StatusOption { get; set; }
+        public string StatusOption { get => _explicitNullValueStatusOption; set { _explicitNullValueStatusOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_option"); else _explicitNullProperties?.Remove("status_option"); } }
+        private string _explicitNullValueStatusOption = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopiesXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -87,7 +122,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopiesXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopiesXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdCopiesXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +163,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("rename_options", RenameOptions);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);
             writer.WriteStringValue("status_option", StatusOption);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

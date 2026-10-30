@@ -11,32 +11,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdAccountControlsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audience_controls") is { } nullNodeAudienceControls && nullNodeAudienceControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceControls = null;
+            if (parseNode.GetChildNode("placement_controls") is { } nullNodePlacementControls && nullNodePlacementControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControls = null;
+            if (parseNode.GetChildNode("placement_controls_per_objective") is { } nullNodePlacementControlsPerObjective && nullNodePlacementControlsPerObjective.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControlsPerObjective = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudienceControls { get; set; }
+        public string? AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
+        private string? _explicitNullValueAudienceControls = default!;
 #nullable restore
 #else
-        public string AudienceControls { get; set; }
+        public string AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
+        private string _explicitNullValueAudienceControls = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlacementControls { get; set; }
+        public string? PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
+        private string? _explicitNullValuePlacementControls = default!;
 #nullable restore
 #else
-        public string PlacementControls { get; set; }
+        public string PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
+        private string _explicitNullValuePlacementControls = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlacementControlsPerObjective { get; set; }
+        public string? PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
+        private string? _explicitNullValuePlacementControlsPerObjective = default!;
 #nullable restore
 #else
-        public string PlacementControlsPerObjective { get; set; }
+        public string PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
+        private string _explicitNullValuePlacementControlsPerObjective = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountControlsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountControlsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountControlsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.PostIdAccountControlsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("audience_controls", AudienceControls);
             writer.WriteStringValue("placement_controls", PlacementControls);
             writer.WriteStringValue("placement_controls_per_objective", PlacementControlsPerObjective);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,72 +11,103 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdsImageCrops : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("400x150") is { } nullNodeFourZeroZerox150 && nullNodeFourZeroZerox150.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FourZeroZerox150 = null;
+            if (parseNode.GetChildNode("400x500") is { } nullNodeFourZeroZerox500 && nullNodeFourZeroZerox500.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FourZeroZerox500 = null;
+            if (parseNode.GetChildNode("90x160") is { } nullNodeNineZerox160 && nullNodeNineZerox160.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NineZerox160 = null;
+            if (parseNode.GetChildNode("191x100") is { } nullNodeOneNineOnex100 && nullNodeOneNineOnex100.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneNineOnex100 = null;
+            if (parseNode.GetChildNode("100x100") is { } nullNodeOneZeroZerox100 && nullNodeOneZeroZerox100.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneZeroZerox100 = null;
+            if (parseNode.GetChildNode("100x72") is { } nullNodeOneZeroZerox72 && nullNodeOneZeroZerox72.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneZeroZerox72 = null;
+            if (parseNode.GetChildNode("600x360") is { } nullNodeSixZeroZerox360 && nullNodeSixZeroZerox360.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixZeroZerox360 = null;
+            if (parseNode.GetChildNode("300x400") is { } nullNodeThreeZeroZerox400 && nullNodeThreeZeroZerox400.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeZeroZerox400 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The FourZeroZerox150 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FourZeroZerox150 { get; set; }
+        public UntypedNode? FourZeroZerox150 { get => _explicitNullValueFourZeroZerox150; set { _explicitNullValueFourZeroZerox150 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("400x150"); else _explicitNullProperties?.Remove("400x150"); } }
+        private UntypedNode? _explicitNullValueFourZeroZerox150 = default!;
 #nullable restore
 #else
-        public UntypedNode FourZeroZerox150 { get; set; }
+        public UntypedNode FourZeroZerox150 { get => _explicitNullValueFourZeroZerox150; set { _explicitNullValueFourZeroZerox150 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("400x150"); else _explicitNullProperties?.Remove("400x150"); } }
+        private UntypedNode _explicitNullValueFourZeroZerox150 = default!;
 #endif
         /// <summary>The FourZeroZerox500 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FourZeroZerox500 { get; set; }
+        public UntypedNode? FourZeroZerox500 { get => _explicitNullValueFourZeroZerox500; set { _explicitNullValueFourZeroZerox500 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("400x500"); else _explicitNullProperties?.Remove("400x500"); } }
+        private UntypedNode? _explicitNullValueFourZeroZerox500 = default!;
 #nullable restore
 #else
-        public UntypedNode FourZeroZerox500 { get; set; }
+        public UntypedNode FourZeroZerox500 { get => _explicitNullValueFourZeroZerox500; set { _explicitNullValueFourZeroZerox500 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("400x500"); else _explicitNullProperties?.Remove("400x500"); } }
+        private UntypedNode _explicitNullValueFourZeroZerox500 = default!;
 #endif
         /// <summary>The NineZerox160 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? NineZerox160 { get; set; }
+        public UntypedNode? NineZerox160 { get => _explicitNullValueNineZerox160; set { _explicitNullValueNineZerox160 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("90x160"); else _explicitNullProperties?.Remove("90x160"); } }
+        private UntypedNode? _explicitNullValueNineZerox160 = default!;
 #nullable restore
 #else
-        public UntypedNode NineZerox160 { get; set; }
+        public UntypedNode NineZerox160 { get => _explicitNullValueNineZerox160; set { _explicitNullValueNineZerox160 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("90x160"); else _explicitNullProperties?.Remove("90x160"); } }
+        private UntypedNode _explicitNullValueNineZerox160 = default!;
 #endif
         /// <summary>The OneNineOnex100 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OneNineOnex100 { get; set; }
+        public UntypedNode? OneNineOnex100 { get => _explicitNullValueOneNineOnex100; set { _explicitNullValueOneNineOnex100 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("191x100"); else _explicitNullProperties?.Remove("191x100"); } }
+        private UntypedNode? _explicitNullValueOneNineOnex100 = default!;
 #nullable restore
 #else
-        public UntypedNode OneNineOnex100 { get; set; }
+        public UntypedNode OneNineOnex100 { get => _explicitNullValueOneNineOnex100; set { _explicitNullValueOneNineOnex100 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("191x100"); else _explicitNullProperties?.Remove("191x100"); } }
+        private UntypedNode _explicitNullValueOneNineOnex100 = default!;
 #endif
         /// <summary>The OneZeroZerox100 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OneZeroZerox100 { get; set; }
+        public UntypedNode? OneZeroZerox100 { get => _explicitNullValueOneZeroZerox100; set { _explicitNullValueOneZeroZerox100 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("100x100"); else _explicitNullProperties?.Remove("100x100"); } }
+        private UntypedNode? _explicitNullValueOneZeroZerox100 = default!;
 #nullable restore
 #else
-        public UntypedNode OneZeroZerox100 { get; set; }
+        public UntypedNode OneZeroZerox100 { get => _explicitNullValueOneZeroZerox100; set { _explicitNullValueOneZeroZerox100 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("100x100"); else _explicitNullProperties?.Remove("100x100"); } }
+        private UntypedNode _explicitNullValueOneZeroZerox100 = default!;
 #endif
         /// <summary>The OneZeroZerox72 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? OneZeroZerox72 { get; set; }
+        public UntypedNode? OneZeroZerox72 { get => _explicitNullValueOneZeroZerox72; set { _explicitNullValueOneZeroZerox72 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("100x72"); else _explicitNullProperties?.Remove("100x72"); } }
+        private UntypedNode? _explicitNullValueOneZeroZerox72 = default!;
 #nullable restore
 #else
-        public UntypedNode OneZeroZerox72 { get; set; }
+        public UntypedNode OneZeroZerox72 { get => _explicitNullValueOneZeroZerox72; set { _explicitNullValueOneZeroZerox72 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("100x72"); else _explicitNullProperties?.Remove("100x72"); } }
+        private UntypedNode _explicitNullValueOneZeroZerox72 = default!;
 #endif
         /// <summary>The SixZeroZerox360 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SixZeroZerox360 { get; set; }
+        public UntypedNode? SixZeroZerox360 { get => _explicitNullValueSixZeroZerox360; set { _explicitNullValueSixZeroZerox360 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("600x360"); else _explicitNullProperties?.Remove("600x360"); } }
+        private UntypedNode? _explicitNullValueSixZeroZerox360 = default!;
 #nullable restore
 #else
-        public UntypedNode SixZeroZerox360 { get; set; }
+        public UntypedNode SixZeroZerox360 { get => _explicitNullValueSixZeroZerox360; set { _explicitNullValueSixZeroZerox360 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("600x360"); else _explicitNullProperties?.Remove("600x360"); } }
+        private UntypedNode _explicitNullValueSixZeroZerox360 = default!;
 #endif
         /// <summary>The ThreeZeroZerox400 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ThreeZeroZerox400 { get; set; }
+        public UntypedNode? ThreeZeroZerox400 { get => _explicitNullValueThreeZeroZerox400; set { _explicitNullValueThreeZeroZerox400 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("300x400"); else _explicitNullProperties?.Remove("300x400"); } }
+        private UntypedNode? _explicitNullValueThreeZeroZerox400 = default!;
 #nullable restore
 #else
-        public UntypedNode ThreeZeroZerox400 { get; set; }
+        public UntypedNode ThreeZeroZerox400 { get => _explicitNullValueThreeZeroZerox400; set { _explicitNullValueThreeZeroZerox400 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("300x400"); else _explicitNullProperties?.Remove("300x400"); } }
+        private UntypedNode _explicitNullValueThreeZeroZerox400 = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdsImageCrops(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("100x72", OneZeroZerox72);
             writer.WriteObjectValue<UntypedNode>("600x360", SixZeroZerox360);
             writer.WriteObjectValue<UntypedNode>("300x400", ThreeZeroZerox400);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

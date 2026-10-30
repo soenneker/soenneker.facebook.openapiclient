@@ -11,32 +11,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCreativeDestinationSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destination_type") is { } nullNodeDestinationType && nullNodeDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationType = null;
+            if (parseNode.GetChildNode("native_commerce_experience") is { } nullNodeNativeCommerceExperience && nullNodeNativeCommerceExperience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NativeCommerceExperience = null;
+            if (parseNode.GetChildNode("website") is { } nullNodeWebsite && nullNodeWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Website = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The destination_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationType { get; set; }
+        public string? DestinationType { get => _explicitNullValueDestinationType; set { _explicitNullValueDestinationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_type"); else _explicitNullProperties?.Remove("destination_type"); } }
+        private string? _explicitNullValueDestinationType = default!;
 #nullable restore
 #else
-        public string DestinationType { get; set; }
+        public string DestinationType { get => _explicitNullValueDestinationType; set { _explicitNullValueDestinationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_type"); else _explicitNullProperties?.Remove("destination_type"); } }
+        private string _explicitNullValueDestinationType = default!;
 #endif
         /// <summary>The native_commerce_experience property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty? NativeCommerceExperience { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty? NativeCommerceExperience { get => _explicitNullValueNativeCommerceExperience; set { _explicitNullValueNativeCommerceExperience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_commerce_experience"); else _explicitNullProperties?.Remove("native_commerce_experience"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty? _explicitNullValueNativeCommerceExperience = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty NativeCommerceExperience { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty NativeCommerceExperience { get => _explicitNullValueNativeCommerceExperience; set { _explicitNullValueNativeCommerceExperience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("native_commerce_experience"); else _explicitNullProperties?.Remove("native_commerce_experience"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty _explicitNullValueNativeCommerceExperience = default!;
 #endif
         /// <summary>The website property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty? Website { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty? Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty? _explicitNullValueWebsite = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty Website { get; set; }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty _explicitNullValueWebsite = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpec"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public static global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("destination_type", DestinationType);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecNativeCommerceExperienceProperty>("native_commerce_experience", NativeCommerceExperience);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeDestinationSpecWebsiteProperty>("website", Website);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
