@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("thread_owner") is { } nullNodeThreadOwner && nullNodeThreadOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadOwner = null;
+            if (parseNode.GetChildNode("thread_owner") is null) { _explicitNullValueThreadOwner = default!; _explicitNullProperties?.Remove("thread_owner"); }
+            else if (parseNode.GetChildNode("thread_owner") is { } nullNodeThreadOwner && nullNodeThreadOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadOwner = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The thread_owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.PageThreadOwnerThreadOwnerProperty? ThreadOwner { get => _explicitNullValueThreadOwner; set { _explicitNullValueThreadOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_owner"); else _explicitNullProperties?.Remove("thread_owner"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PageThreadOwnerThreadOwnerProperty? ThreadOwner { get => _explicitNullValueThreadOwner; set { _explicitNullValueThreadOwner = value; AdditionalData?.Remove("thread_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_owner"); else _explicitNullProperties?.Remove("thread_owner"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PageThreadOwnerThreadOwnerProperty? _explicitNullValueThreadOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.PageThreadOwnerThreadOwnerProperty ThreadOwner { get => _explicitNullValueThreadOwner; set { _explicitNullValueThreadOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_owner"); else _explicitNullProperties?.Remove("thread_owner"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PageThreadOwnerThreadOwnerProperty ThreadOwner { get => _explicitNullValueThreadOwner; set { _explicitNullValueThreadOwner = value; AdditionalData?.Remove("thread_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_owner"); else _explicitNullProperties?.Remove("thread_owner"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PageThreadOwnerThreadOwnerProperty _explicitNullValueThreadOwner = default!;
 #endif
         /// <summary>

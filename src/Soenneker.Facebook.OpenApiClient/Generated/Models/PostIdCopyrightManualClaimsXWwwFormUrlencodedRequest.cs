@@ -17,64 +17,71 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("action_reason") is { } nullNodeActionReason && nullNodeActionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionReason = null;
-            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
-            if (parseNode.GetChildNode("match_content_type") is { } nullNodeMatchContentType && nullNodeMatchContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchContentType = null;
-            if (parseNode.GetChildNode("matched_asset_id") is { } nullNodeMatchedAssetId && nullNodeMatchedAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedAssetId = null;
-            if (parseNode.GetChildNode("reference_asset_id") is { } nullNodeReferenceAssetId && nullNodeReferenceAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceAssetId = null;
-            if (parseNode.GetChildNode("selected_segments") is { } nullNodeSelectedSegments && nullNodeSelectedSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedSegments = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("action_reason") is null) { _explicitNullValueActionReason = default!; _explicitNullProperties?.Remove("action_reason"); }
+            else if (parseNode.GetChildNode("action_reason") is { } nullNodeActionReason && nullNodeActionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionReason = null;
+            if (parseNode.GetChildNode("countries") is null) { _explicitNullValueCountries = default!; _explicitNullProperties?.Remove("countries"); }
+            else if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+            if (parseNode.GetChildNode("match_content_type") is null) { _explicitNullValueMatchContentType = default!; _explicitNullProperties?.Remove("match_content_type"); }
+            else if (parseNode.GetChildNode("match_content_type") is { } nullNodeMatchContentType && nullNodeMatchContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchContentType = null;
+            if (parseNode.GetChildNode("matched_asset_id") is null) { _explicitNullValueMatchedAssetId = default!; _explicitNullProperties?.Remove("matched_asset_id"); }
+            else if (parseNode.GetChildNode("matched_asset_id") is { } nullNodeMatchedAssetId && nullNodeMatchedAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedAssetId = null;
+            if (parseNode.GetChildNode("reference_asset_id") is null) { _explicitNullValueReferenceAssetId = default!; _explicitNullProperties?.Remove("reference_asset_id"); }
+            else if (parseNode.GetChildNode("reference_asset_id") is { } nullNodeReferenceAssetId && nullNodeReferenceAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceAssetId = null;
+            if (parseNode.GetChildNode("selected_segments") is null) { _explicitNullValueSelectedSegments = default!; _explicitNullProperties?.Remove("selected_segments"); }
+            else if (parseNode.GetChildNode("selected_segments") is { } nullNodeSelectedSegments && nullNodeSelectedSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedSegments = null;
         }
 
         /// <summary>The action property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam? _explicitNullValueAction = default!;
         /// <summary>The action_reason property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam? ActionReason { get => _explicitNullValueActionReason; set { _explicitNullValueActionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_reason"); else _explicitNullProperties?.Remove("action_reason"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam? ActionReason { get => _explicitNullValueActionReason; set { _explicitNullValueActionReason = value; AdditionalData?.Remove("action_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action_reason"); else _explicitNullProperties?.Remove("action_reason"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam? _explicitNullValueActionReason = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public string? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private string? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public string Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public string Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private string _explicitNullValueCountries = default!;
 #endif
         /// <summary>The match_content_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam? MatchContentType { get => _explicitNullValueMatchContentType; set { _explicitNullValueMatchContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("match_content_type"); else _explicitNullProperties?.Remove("match_content_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam? MatchContentType { get => _explicitNullValueMatchContentType; set { _explicitNullValueMatchContentType = value; AdditionalData?.Remove("match_content_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("match_content_type"); else _explicitNullProperties?.Remove("match_content_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam? _explicitNullValueMatchContentType = default!;
         /// <summary>The matched_asset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MatchedAssetId { get => _explicitNullValueMatchedAssetId; set { _explicitNullValueMatchedAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_asset_id"); else _explicitNullProperties?.Remove("matched_asset_id"); } }
+        public string? MatchedAssetId { get => _explicitNullValueMatchedAssetId; set { _explicitNullValueMatchedAssetId = value; AdditionalData?.Remove("matched_asset_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_asset_id"); else _explicitNullProperties?.Remove("matched_asset_id"); } }
         private string? _explicitNullValueMatchedAssetId = default!;
 #nullable restore
 #else
-        public string MatchedAssetId { get => _explicitNullValueMatchedAssetId; set { _explicitNullValueMatchedAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_asset_id"); else _explicitNullProperties?.Remove("matched_asset_id"); } }
+        public string MatchedAssetId { get => _explicitNullValueMatchedAssetId; set { _explicitNullValueMatchedAssetId = value; AdditionalData?.Remove("matched_asset_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matched_asset_id"); else _explicitNullProperties?.Remove("matched_asset_id"); } }
         private string _explicitNullValueMatchedAssetId = default!;
 #endif
         /// <summary>The reference_asset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceAssetId { get => _explicitNullValueReferenceAssetId; set { _explicitNullValueReferenceAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_asset_id"); else _explicitNullProperties?.Remove("reference_asset_id"); } }
+        public string? ReferenceAssetId { get => _explicitNullValueReferenceAssetId; set { _explicitNullValueReferenceAssetId = value; AdditionalData?.Remove("reference_asset_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_asset_id"); else _explicitNullProperties?.Remove("reference_asset_id"); } }
         private string? _explicitNullValueReferenceAssetId = default!;
 #nullable restore
 #else
-        public string ReferenceAssetId { get => _explicitNullValueReferenceAssetId; set { _explicitNullValueReferenceAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_asset_id"); else _explicitNullProperties?.Remove("reference_asset_id"); } }
+        public string ReferenceAssetId { get => _explicitNullValueReferenceAssetId; set { _explicitNullValueReferenceAssetId = value; AdditionalData?.Remove("reference_asset_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_asset_id"); else _explicitNullProperties?.Remove("reference_asset_id"); } }
         private string _explicitNullValueReferenceAssetId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectedSegments { get => _explicitNullValueSelectedSegments; set { _explicitNullValueSelectedSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_segments"); else _explicitNullProperties?.Remove("selected_segments"); } }
+        public string? SelectedSegments { get => _explicitNullValueSelectedSegments; set { _explicitNullValueSelectedSegments = value; AdditionalData?.Remove("selected_segments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_segments"); else _explicitNullProperties?.Remove("selected_segments"); } }
         private string? _explicitNullValueSelectedSegments = default!;
 #nullable restore
 #else
-        public string SelectedSegments { get => _explicitNullValueSelectedSegments; set { _explicitNullValueSelectedSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_segments"); else _explicitNullProperties?.Remove("selected_segments"); } }
+        public string SelectedSegments { get => _explicitNullValueSelectedSegments; set { _explicitNullValueSelectedSegments = value; AdditionalData?.Remove("selected_segments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_segments"); else _explicitNullProperties?.Remove("selected_segments"); } }
         private string _explicitNullValueSelectedSegments = default!;
 #endif
         /// <summary>
@@ -102,10 +109,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam>(); } },
-                { "action_reason", n => { ActionReason = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam>(); } },
+                { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
+                { "action_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsActionReasonEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActionReason = default; _explicitNullProperties?.Remove("action_reason"); AdditionalData["action_reason"] = unknown; } else { ActionReason = parsed; AdditionalData.Remove("action_reason"); } } },
                 { "countries", n => { Countries = n.GetStringValue(); } },
-                { "match_content_type", n => { MatchContentType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam>(); } },
+                { "match_content_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecopyrightManualClaimsMatchContentTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMatchContentType = default; _explicitNullProperties?.Remove("match_content_type"); AdditionalData["match_content_type"] = unknown; } else { MatchContentType = parsed; AdditionalData.Remove("match_content_type"); } } },
                 { "matched_asset_id", n => { MatchedAssetId = n.GetStringValue(); } },
                 { "reference_asset_id", n => { ReferenceAssetId = n.GetStringValue(); } },
                 { "selected_segments", n => { SelectedSegments = n.GetStringValue(); } },

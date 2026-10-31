@@ -17,15 +17,24 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("budget") is { } nullNodeBudget && nullNodeBudget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Budget = null;
-            if (parseNode.GetChildNode("conversion") is { } nullNodeConversion && nullNodeConversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conversion = null;
-            if (parseNode.GetChildNode("cpm") is { } nullNodeCpm && nullNodeCpm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cpm = null;
-            if (parseNode.GetChildNode("impression") is { } nullNodeImpression && nullNodeImpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impression = null;
-            if (parseNode.GetChildNode("interpolated_reach") is { } nullNodeInterpolatedReach && nullNodeInterpolatedReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterpolatedReach = null;
-            if (parseNode.GetChildNode("num_points") is { } nullNodeNumPoints && nullNodeNumPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumPoints = null;
-            if (parseNode.GetChildNode("raw_impression") is { } nullNodeRawImpression && nullNodeRawImpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawImpression = null;
-            if (parseNode.GetChildNode("raw_reach") is { } nullNodeRawReach && nullNodeRawReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawReach = null;
-            if (parseNode.GetChildNode("reach") is { } nullNodeReach && nullNodeReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reach = null;
+            if (parseNode.GetChildNode("budget") is null) { _explicitNullValueBudget = default!; _explicitNullProperties?.Remove("budget"); }
+            else if (parseNode.GetChildNode("budget") is { } nullNodeBudget && nullNodeBudget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Budget = null;
+            if (parseNode.GetChildNode("conversion") is null) { _explicitNullValueConversion = default!; _explicitNullProperties?.Remove("conversion"); }
+            else if (parseNode.GetChildNode("conversion") is { } nullNodeConversion && nullNodeConversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conversion = null;
+            if (parseNode.GetChildNode("cpm") is null) { _explicitNullValueCpm = default!; _explicitNullProperties?.Remove("cpm"); }
+            else if (parseNode.GetChildNode("cpm") is { } nullNodeCpm && nullNodeCpm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cpm = null;
+            if (parseNode.GetChildNode("impression") is null) { _explicitNullValueImpression = default!; _explicitNullProperties?.Remove("impression"); }
+            else if (parseNode.GetChildNode("impression") is { } nullNodeImpression && nullNodeImpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impression = null;
+            if (parseNode.GetChildNode("interpolated_reach") is null) { _explicitNullValueInterpolatedReach = default!; _explicitNullProperties?.Remove("interpolated_reach"); }
+            else if (parseNode.GetChildNode("interpolated_reach") is { } nullNodeInterpolatedReach && nullNodeInterpolatedReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterpolatedReach = null;
+            if (parseNode.GetChildNode("num_points") is null) { _explicitNullValueNumPoints = default!; _explicitNullProperties?.Remove("num_points"); }
+            else if (parseNode.GetChildNode("num_points") is { } nullNodeNumPoints && nullNodeNumPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumPoints = null;
+            if (parseNode.GetChildNode("raw_impression") is null) { _explicitNullValueRawImpression = default!; _explicitNullProperties?.Remove("raw_impression"); }
+            else if (parseNode.GetChildNode("raw_impression") is { } nullNodeRawImpression && nullNodeRawImpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawImpression = null;
+            if (parseNode.GetChildNode("raw_reach") is null) { _explicitNullValueRawReach = default!; _explicitNullProperties?.Remove("raw_reach"); }
+            else if (parseNode.GetChildNode("raw_reach") is { } nullNodeRawReach && nullNodeRawReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RawReach = null;
+            if (parseNode.GetChildNode("reach") is null) { _explicitNullValueReach = default!; _explicitNullProperties?.Remove("reach"); }
+            else if (parseNode.GetChildNode("reach") is { } nullNodeReach && nullNodeReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reach = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,77 +42,77 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The budget property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Budget { get => _explicitNullValueBudget; set { _explicitNullValueBudget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget"); else _explicitNullProperties?.Remove("budget"); } }
+        public List<long?>? Budget { get => _explicitNullValueBudget; set { _explicitNullValueBudget = value; AdditionalData?.Remove("budget"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget"); else _explicitNullProperties?.Remove("budget"); } }
         private List<long?>? _explicitNullValueBudget = default!;
 #nullable restore
 #else
-        public List<long?> Budget { get => _explicitNullValueBudget; set { _explicitNullValueBudget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget"); else _explicitNullProperties?.Remove("budget"); } }
+        public List<long?> Budget { get => _explicitNullValueBudget; set { _explicitNullValueBudget = value; AdditionalData?.Remove("budget"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget"); else _explicitNullProperties?.Remove("budget"); } }
         private List<long?> _explicitNullValueBudget = default!;
 #endif
         /// <summary>The conversion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Conversion { get => _explicitNullValueConversion; set { _explicitNullValueConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion"); else _explicitNullProperties?.Remove("conversion"); } }
+        public List<long?>? Conversion { get => _explicitNullValueConversion; set { _explicitNullValueConversion = value; AdditionalData?.Remove("conversion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion"); else _explicitNullProperties?.Remove("conversion"); } }
         private List<long?>? _explicitNullValueConversion = default!;
 #nullable restore
 #else
-        public List<long?> Conversion { get => _explicitNullValueConversion; set { _explicitNullValueConversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion"); else _explicitNullProperties?.Remove("conversion"); } }
+        public List<long?> Conversion { get => _explicitNullValueConversion; set { _explicitNullValueConversion = value; AdditionalData?.Remove("conversion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversion"); else _explicitNullProperties?.Remove("conversion"); } }
         private List<long?> _explicitNullValueConversion = default!;
 #endif
         /// <summary>The cpm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Cpm { get => _explicitNullValueCpm; set { _explicitNullValueCpm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpm"); else _explicitNullProperties?.Remove("cpm"); } }
+        public List<long?>? Cpm { get => _explicitNullValueCpm; set { _explicitNullValueCpm = value; AdditionalData?.Remove("cpm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpm"); else _explicitNullProperties?.Remove("cpm"); } }
         private List<long?>? _explicitNullValueCpm = default!;
 #nullable restore
 #else
-        public List<long?> Cpm { get => _explicitNullValueCpm; set { _explicitNullValueCpm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpm"); else _explicitNullProperties?.Remove("cpm"); } }
+        public List<long?> Cpm { get => _explicitNullValueCpm; set { _explicitNullValueCpm = value; AdditionalData?.Remove("cpm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpm"); else _explicitNullProperties?.Remove("cpm"); } }
         private List<long?> _explicitNullValueCpm = default!;
 #endif
         /// <summary>The impression property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Impression { get => _explicitNullValueImpression; set { _explicitNullValueImpression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impression"); else _explicitNullProperties?.Remove("impression"); } }
+        public List<long?>? Impression { get => _explicitNullValueImpression; set { _explicitNullValueImpression = value; AdditionalData?.Remove("impression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impression"); else _explicitNullProperties?.Remove("impression"); } }
         private List<long?>? _explicitNullValueImpression = default!;
 #nullable restore
 #else
-        public List<long?> Impression { get => _explicitNullValueImpression; set { _explicitNullValueImpression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impression"); else _explicitNullProperties?.Remove("impression"); } }
+        public List<long?> Impression { get => _explicitNullValueImpression; set { _explicitNullValueImpression = value; AdditionalData?.Remove("impression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impression"); else _explicitNullProperties?.Remove("impression"); } }
         private List<long?> _explicitNullValueImpression = default!;
 #endif
         /// <summary>The interpolated_reach property</summary>
-        public float? InterpolatedReach { get => _explicitNullValueInterpolatedReach; set { _explicitNullValueInterpolatedReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interpolated_reach"); else _explicitNullProperties?.Remove("interpolated_reach"); } }
+        public float? InterpolatedReach { get => _explicitNullValueInterpolatedReach; set { _explicitNullValueInterpolatedReach = value; AdditionalData?.Remove("interpolated_reach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interpolated_reach"); else _explicitNullProperties?.Remove("interpolated_reach"); } }
         private float? _explicitNullValueInterpolatedReach = default!;
         /// <summary>The num_points property</summary>
-        public long? NumPoints { get => _explicitNullValueNumPoints; set { _explicitNullValueNumPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_points"); else _explicitNullProperties?.Remove("num_points"); } }
+        public long? NumPoints { get => _explicitNullValueNumPoints; set { _explicitNullValueNumPoints = value; AdditionalData?.Remove("num_points"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_points"); else _explicitNullProperties?.Remove("num_points"); } }
         private long? _explicitNullValueNumPoints = default!;
         /// <summary>The raw_impression property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? RawImpression { get => _explicitNullValueRawImpression; set { _explicitNullValueRawImpression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_impression"); else _explicitNullProperties?.Remove("raw_impression"); } }
+        public List<long?>? RawImpression { get => _explicitNullValueRawImpression; set { _explicitNullValueRawImpression = value; AdditionalData?.Remove("raw_impression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_impression"); else _explicitNullProperties?.Remove("raw_impression"); } }
         private List<long?>? _explicitNullValueRawImpression = default!;
 #nullable restore
 #else
-        public List<long?> RawImpression { get => _explicitNullValueRawImpression; set { _explicitNullValueRawImpression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_impression"); else _explicitNullProperties?.Remove("raw_impression"); } }
+        public List<long?> RawImpression { get => _explicitNullValueRawImpression; set { _explicitNullValueRawImpression = value; AdditionalData?.Remove("raw_impression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_impression"); else _explicitNullProperties?.Remove("raw_impression"); } }
         private List<long?> _explicitNullValueRawImpression = default!;
 #endif
         /// <summary>The raw_reach property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? RawReach { get => _explicitNullValueRawReach; set { _explicitNullValueRawReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_reach"); else _explicitNullProperties?.Remove("raw_reach"); } }
+        public List<long?>? RawReach { get => _explicitNullValueRawReach; set { _explicitNullValueRawReach = value; AdditionalData?.Remove("raw_reach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_reach"); else _explicitNullProperties?.Remove("raw_reach"); } }
         private List<long?>? _explicitNullValueRawReach = default!;
 #nullable restore
 #else
-        public List<long?> RawReach { get => _explicitNullValueRawReach; set { _explicitNullValueRawReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_reach"); else _explicitNullProperties?.Remove("raw_reach"); } }
+        public List<long?> RawReach { get => _explicitNullValueRawReach; set { _explicitNullValueRawReach = value; AdditionalData?.Remove("raw_reach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_reach"); else _explicitNullProperties?.Remove("raw_reach"); } }
         private List<long?> _explicitNullValueRawReach = default!;
 #endif
         /// <summary>The reach property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Reach { get => _explicitNullValueReach; set { _explicitNullValueReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reach"); else _explicitNullProperties?.Remove("reach"); } }
+        public List<long?>? Reach { get => _explicitNullValueReach; set { _explicitNullValueReach = value; AdditionalData?.Remove("reach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reach"); else _explicitNullProperties?.Remove("reach"); } }
         private List<long?>? _explicitNullValueReach = default!;
 #nullable restore
 #else
-        public List<long?> Reach { get => _explicitNullValueReach; set { _explicitNullValueReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reach"); else _explicitNullProperties?.Remove("reach"); } }
+        public List<long?> Reach { get => _explicitNullValueReach; set { _explicitNullValueReach = value; AdditionalData?.Remove("reach"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reach"); else _explicitNullProperties?.Remove("reach"); } }
         private List<long?> _explicitNullValueReach = default!;
 #endif
         /// <summary>

@@ -17,23 +17,30 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
-            if (parseNode.GetChildNode("evaluation_spec") is { } nullNodeEvaluationSpec && nullNodeEvaluationSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluationSpec = null;
-            if (parseNode.GetChildNode("execution_spec") is { } nullNodeExecutionSpec && nullNodeExecutionSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionSpec = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("schedule_spec") is { } nullNodeScheduleSpec && nullNodeScheduleSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleSpec = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("ui_creation_source") is { } nullNodeUiCreationSource && nullNodeUiCreationSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiCreationSource = null;
+            if (parseNode.GetChildNode("account_id") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("account_id"); }
+            else if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("evaluation_spec") is null) { _explicitNullValueEvaluationSpec = default!; _explicitNullProperties?.Remove("evaluation_spec"); }
+            else if (parseNode.GetChildNode("evaluation_spec") is { } nullNodeEvaluationSpec && nullNodeEvaluationSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluationSpec = null;
+            if (parseNode.GetChildNode("execution_spec") is null) { _explicitNullValueExecutionSpec = default!; _explicitNullProperties?.Remove("execution_spec"); }
+            else if (parseNode.GetChildNode("execution_spec") is { } nullNodeExecutionSpec && nullNodeExecutionSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionSpec = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("schedule_spec") is null) { _explicitNullValueScheduleSpec = default!; _explicitNullProperties?.Remove("schedule_spec"); }
+            else if (parseNode.GetChildNode("schedule_spec") is { } nullNodeScheduleSpec && nullNodeScheduleSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleSpec = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("ui_creation_source") is null) { _explicitNullValueUiCreationSource = default!; _explicitNullProperties?.Remove("ui_creation_source"); }
+            else if (parseNode.GetChildNode("ui_creation_source") is { } nullNodeUiCreationSource && nullNodeUiCreationSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiCreationSource = null;
         }
 
         /// <summary>The account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -41,48 +48,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EvaluationSpec { get => _explicitNullValueEvaluationSpec; set { _explicitNullValueEvaluationSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluation_spec"); else _explicitNullProperties?.Remove("evaluation_spec"); } }
+        public string? EvaluationSpec { get => _explicitNullValueEvaluationSpec; set { _explicitNullValueEvaluationSpec = value; AdditionalData?.Remove("evaluation_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluation_spec"); else _explicitNullProperties?.Remove("evaluation_spec"); } }
         private string? _explicitNullValueEvaluationSpec = default!;
 #nullable restore
 #else
-        public string EvaluationSpec { get => _explicitNullValueEvaluationSpec; set { _explicitNullValueEvaluationSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluation_spec"); else _explicitNullProperties?.Remove("evaluation_spec"); } }
+        public string EvaluationSpec { get => _explicitNullValueEvaluationSpec; set { _explicitNullValueEvaluationSpec = value; AdditionalData?.Remove("evaluation_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluation_spec"); else _explicitNullProperties?.Remove("evaluation_spec"); } }
         private string _explicitNullValueEvaluationSpec = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExecutionSpec { get => _explicitNullValueExecutionSpec; set { _explicitNullValueExecutionSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_spec"); else _explicitNullProperties?.Remove("execution_spec"); } }
+        public string? ExecutionSpec { get => _explicitNullValueExecutionSpec; set { _explicitNullValueExecutionSpec = value; AdditionalData?.Remove("execution_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_spec"); else _explicitNullProperties?.Remove("execution_spec"); } }
         private string? _explicitNullValueExecutionSpec = default!;
 #nullable restore
 #else
-        public string ExecutionSpec { get => _explicitNullValueExecutionSpec; set { _explicitNullValueExecutionSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_spec"); else _explicitNullProperties?.Remove("execution_spec"); } }
+        public string ExecutionSpec { get => _explicitNullValueExecutionSpec; set { _explicitNullValueExecutionSpec = value; AdditionalData?.Remove("execution_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_spec"); else _explicitNullProperties?.Remove("execution_spec"); } }
         private string _explicitNullValueExecutionSpec = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleSpec { get => _explicitNullValueScheduleSpec; set { _explicitNullValueScheduleSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_spec"); else _explicitNullProperties?.Remove("schedule_spec"); } }
+        public string? ScheduleSpec { get => _explicitNullValueScheduleSpec; set { _explicitNullValueScheduleSpec = value; AdditionalData?.Remove("schedule_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_spec"); else _explicitNullProperties?.Remove("schedule_spec"); } }
         private string? _explicitNullValueScheduleSpec = default!;
 #nullable restore
 #else
-        public string ScheduleSpec { get => _explicitNullValueScheduleSpec; set { _explicitNullValueScheduleSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_spec"); else _explicitNullProperties?.Remove("schedule_spec"); } }
+        public string ScheduleSpec { get => _explicitNullValueScheduleSpec; set { _explicitNullValueScheduleSpec = value; AdditionalData?.Remove("schedule_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule_spec"); else _explicitNullProperties?.Remove("schedule_spec"); } }
         private string _explicitNullValueScheduleSpec = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam? _explicitNullValueStatus = default!;
         /// <summary>The ui_creation_source property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam? UiCreationSource { get => _explicitNullValueUiCreationSource; set { _explicitNullValueUiCreationSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_creation_source"); else _explicitNullProperties?.Remove("ui_creation_source"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam? UiCreationSource { get => _explicitNullValueUiCreationSource; set { _explicitNullValueUiCreationSource = value; AdditionalData?.Remove("ui_creation_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ui_creation_source"); else _explicitNullProperties?.Remove("ui_creation_source"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam? _explicitNullValueUiCreationSource = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAdrulesLibraryXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -114,8 +121,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "execution_spec", n => { ExecutionSpec = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "schedule_spec", n => { ScheduleSpec = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam>(); } },
-                { "ui_creation_source", n => { UiCreationSource = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "ui_creation_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUiCreationSource = default; _explicitNullProperties?.Remove("ui_creation_source"); AdditionalData["ui_creation_source"] = unknown; } else { UiCreationSource = parsed; AdditionalData.Remove("ui_creation_source"); } } },
             };
         }
         /// <summary>

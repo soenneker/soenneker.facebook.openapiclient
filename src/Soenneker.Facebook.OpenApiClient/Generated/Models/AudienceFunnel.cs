@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audience_type_param_name") is { } nullNodeAudienceTypeParamName && nullNodeAudienceTypeParamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceTypeParamName = null;
-            if (parseNode.GetChildNode("audience_type_param_tags") is { } nullNodeAudienceTypeParamTags && nullNodeAudienceTypeParamTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceTypeParamTags = null;
-            if (parseNode.GetChildNode("custom_audience_groups_info") is { } nullNodeCustomAudienceGroupsInfo && nullNodeCustomAudienceGroupsInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudienceGroupsInfo = null;
+            if (parseNode.GetChildNode("audience_type_param_name") is null) { _explicitNullValueAudienceTypeParamName = default!; _explicitNullProperties?.Remove("audience_type_param_name"); }
+            else if (parseNode.GetChildNode("audience_type_param_name") is { } nullNodeAudienceTypeParamName && nullNodeAudienceTypeParamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceTypeParamName = null;
+            if (parseNode.GetChildNode("audience_type_param_tags") is null) { _explicitNullValueAudienceTypeParamTags = default!; _explicitNullProperties?.Remove("audience_type_param_tags"); }
+            else if (parseNode.GetChildNode("audience_type_param_tags") is { } nullNodeAudienceTypeParamTags && nullNodeAudienceTypeParamTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceTypeParamTags = null;
+            if (parseNode.GetChildNode("custom_audience_groups_info") is null) { _explicitNullValueCustomAudienceGroupsInfo = default!; _explicitNullProperties?.Remove("custom_audience_groups_info"); }
+            else if (parseNode.GetChildNode("custom_audience_groups_info") is { } nullNodeCustomAudienceGroupsInfo && nullNodeCustomAudienceGroupsInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudienceGroupsInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The audience_type_param_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
+        public string? AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; AdditionalData?.Remove("audience_type_param_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
         private string? _explicitNullValueAudienceTypeParamName = default!;
 #nullable restore
 #else
-        public string AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
+        public string AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; AdditionalData?.Remove("audience_type_param_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
         private string _explicitNullValueAudienceTypeParamName = default!;
 #endif
         /// <summary>The audience_type_param_tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelAudienceTypeParamTagsItemProperty>? AudienceTypeParamTags { get => _explicitNullValueAudienceTypeParamTags; set { _explicitNullValueAudienceTypeParamTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_tags"); else _explicitNullProperties?.Remove("audience_type_param_tags"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelAudienceTypeParamTagsItemProperty>? AudienceTypeParamTags { get => _explicitNullValueAudienceTypeParamTags; set { _explicitNullValueAudienceTypeParamTags = value; AdditionalData?.Remove("audience_type_param_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_tags"); else _explicitNullProperties?.Remove("audience_type_param_tags"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelAudienceTypeParamTagsItemProperty>? _explicitNullValueAudienceTypeParamTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelAudienceTypeParamTagsItemProperty> AudienceTypeParamTags { get => _explicitNullValueAudienceTypeParamTags; set { _explicitNullValueAudienceTypeParamTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_tags"); else _explicitNullProperties?.Remove("audience_type_param_tags"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelAudienceTypeParamTagsItemProperty> AudienceTypeParamTags { get => _explicitNullValueAudienceTypeParamTags; set { _explicitNullValueAudienceTypeParamTags = value; AdditionalData?.Remove("audience_type_param_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_tags"); else _explicitNullProperties?.Remove("audience_type_param_tags"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelAudienceTypeParamTagsItemProperty> _explicitNullValueAudienceTypeParamTags = default!;
 #endif
         /// <summary>The custom_audience_groups_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelCustomAudienceGroupsInfoItemProperty>? CustomAudienceGroupsInfo { get => _explicitNullValueCustomAudienceGroupsInfo; set { _explicitNullValueCustomAudienceGroupsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_groups_info"); else _explicitNullProperties?.Remove("custom_audience_groups_info"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelCustomAudienceGroupsInfoItemProperty>? CustomAudienceGroupsInfo { get => _explicitNullValueCustomAudienceGroupsInfo; set { _explicitNullValueCustomAudienceGroupsInfo = value; AdditionalData?.Remove("custom_audience_groups_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_groups_info"); else _explicitNullProperties?.Remove("custom_audience_groups_info"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelCustomAudienceGroupsInfoItemProperty>? _explicitNullValueCustomAudienceGroupsInfo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelCustomAudienceGroupsInfoItemProperty> CustomAudienceGroupsInfo { get => _explicitNullValueCustomAudienceGroupsInfo; set { _explicitNullValueCustomAudienceGroupsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_groups_info"); else _explicitNullProperties?.Remove("custom_audience_groups_info"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelCustomAudienceGroupsInfoItemProperty> CustomAudienceGroupsInfo { get => _explicitNullValueCustomAudienceGroupsInfo; set { _explicitNullValueCustomAudienceGroupsInfo = value; AdditionalData?.Remove("custom_audience_groups_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_groups_info"); else _explicitNullProperties?.Remove("custom_audience_groups_info"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AudienceFunnelCustomAudienceGroupsInfoItemProperty> _explicitNullValueCustomAudienceGroupsInfo = default!;
 #endif
         /// <summary>

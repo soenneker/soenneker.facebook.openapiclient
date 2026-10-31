@@ -17,12 +17,18 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
-            if (parseNode.GetChildNode("enabled_collab_terms") is { } nullNodeEnabledCollabTerms && nullNodeEnabledCollabTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledCollabTerms = null;
-            if (parseNode.GetChildNode("permitted_roles") is { } nullNodePermittedRoles && nullNodePermittedRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermittedRoles = null;
-            if (parseNode.GetChildNode("permitted_tasks") is { } nullNodePermittedTasks && nullNodePermittedTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermittedTasks = null;
-            if (parseNode.GetChildNode("skip_defaults") is { } nullNodeSkipDefaults && nullNodeSkipDefaults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipDefaults = null;
-            if (parseNode.GetChildNode("utm_settings") is { } nullNodeUtmSettings && nullNodeUtmSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmSettings = null;
+            if (parseNode.GetChildNode("business") is null) { _explicitNullValueBusiness = default!; _explicitNullProperties?.Remove("business"); }
+            else if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
+            if (parseNode.GetChildNode("enabled_collab_terms") is null) { _explicitNullValueEnabledCollabTerms = default!; _explicitNullProperties?.Remove("enabled_collab_terms"); }
+            else if (parseNode.GetChildNode("enabled_collab_terms") is { } nullNodeEnabledCollabTerms && nullNodeEnabledCollabTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledCollabTerms = null;
+            if (parseNode.GetChildNode("permitted_roles") is null) { _explicitNullValuePermittedRoles = default!; _explicitNullProperties?.Remove("permitted_roles"); }
+            else if (parseNode.GetChildNode("permitted_roles") is { } nullNodePermittedRoles && nullNodePermittedRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermittedRoles = null;
+            if (parseNode.GetChildNode("permitted_tasks") is null) { _explicitNullValuePermittedTasks = default!; _explicitNullProperties?.Remove("permitted_tasks"); }
+            else if (parseNode.GetChildNode("permitted_tasks") is { } nullNodePermittedTasks && nullNodePermittedTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermittedTasks = null;
+            if (parseNode.GetChildNode("skip_defaults") is null) { _explicitNullValueSkipDefaults = default!; _explicitNullProperties?.Remove("skip_defaults"); }
+            else if (parseNode.GetChildNode("skip_defaults") is { } nullNodeSkipDefaults && nullNodeSkipDefaults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipDefaults = null;
+            if (parseNode.GetChildNode("utm_settings") is null) { _explicitNullValueUtmSettings = default!; _explicitNullProperties?.Remove("utm_settings"); }
+            else if (parseNode.GetChildNode("utm_settings") is { } nullNodeUtmSettings && nullNodeUtmSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        public string? Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; AdditionalData?.Remove("business"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
         private string? _explicitNullValueBusiness = default!;
 #nullable restore
 #else
-        public string Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        public string Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; AdditionalData?.Remove("business"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
         private string _explicitNullValueBusiness = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnabledCollabTerms { get => _explicitNullValueEnabledCollabTerms; set { _explicitNullValueEnabledCollabTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_collab_terms"); else _explicitNullProperties?.Remove("enabled_collab_terms"); } }
+        public string? EnabledCollabTerms { get => _explicitNullValueEnabledCollabTerms; set { _explicitNullValueEnabledCollabTerms = value; AdditionalData?.Remove("enabled_collab_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_collab_terms"); else _explicitNullProperties?.Remove("enabled_collab_terms"); } }
         private string? _explicitNullValueEnabledCollabTerms = default!;
 #nullable restore
 #else
-        public string EnabledCollabTerms { get => _explicitNullValueEnabledCollabTerms; set { _explicitNullValueEnabledCollabTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_collab_terms"); else _explicitNullProperties?.Remove("enabled_collab_terms"); } }
+        public string EnabledCollabTerms { get => _explicitNullValueEnabledCollabTerms; set { _explicitNullValueEnabledCollabTerms = value; AdditionalData?.Remove("enabled_collab_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_collab_terms"); else _explicitNullProperties?.Remove("enabled_collab_terms"); } }
         private string _explicitNullValueEnabledCollabTerms = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PermittedRoles { get => _explicitNullValuePermittedRoles; set { _explicitNullValuePermittedRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_roles"); else _explicitNullProperties?.Remove("permitted_roles"); } }
+        public string? PermittedRoles { get => _explicitNullValuePermittedRoles; set { _explicitNullValuePermittedRoles = value; AdditionalData?.Remove("permitted_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_roles"); else _explicitNullProperties?.Remove("permitted_roles"); } }
         private string? _explicitNullValuePermittedRoles = default!;
 #nullable restore
 #else
-        public string PermittedRoles { get => _explicitNullValuePermittedRoles; set { _explicitNullValuePermittedRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_roles"); else _explicitNullProperties?.Remove("permitted_roles"); } }
+        public string PermittedRoles { get => _explicitNullValuePermittedRoles; set { _explicitNullValuePermittedRoles = value; AdditionalData?.Remove("permitted_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_roles"); else _explicitNullProperties?.Remove("permitted_roles"); } }
         private string _explicitNullValuePermittedRoles = default!;
 #endif
         /// <summary>The permitted_tasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PermittedTasks { get => _explicitNullValuePermittedTasks; set { _explicitNullValuePermittedTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_tasks"); else _explicitNullProperties?.Remove("permitted_tasks"); } }
+        public string? PermittedTasks { get => _explicitNullValuePermittedTasks; set { _explicitNullValuePermittedTasks = value; AdditionalData?.Remove("permitted_tasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_tasks"); else _explicitNullProperties?.Remove("permitted_tasks"); } }
         private string? _explicitNullValuePermittedTasks = default!;
 #nullable restore
 #else
-        public string PermittedTasks { get => _explicitNullValuePermittedTasks; set { _explicitNullValuePermittedTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_tasks"); else _explicitNullProperties?.Remove("permitted_tasks"); } }
+        public string PermittedTasks { get => _explicitNullValuePermittedTasks; set { _explicitNullValuePermittedTasks = value; AdditionalData?.Remove("permitted_tasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_tasks"); else _explicitNullProperties?.Remove("permitted_tasks"); } }
         private string _explicitNullValuePermittedTasks = default!;
 #endif
         /// <summary>The skip_defaults property</summary>
-        public bool? SkipDefaults { get => _explicitNullValueSkipDefaults; set { _explicitNullValueSkipDefaults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_defaults"); else _explicitNullProperties?.Remove("skip_defaults"); } }
+        public bool? SkipDefaults { get => _explicitNullValueSkipDefaults; set { _explicitNullValueSkipDefaults = value; AdditionalData?.Remove("skip_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_defaults"); else _explicitNullProperties?.Remove("skip_defaults"); } }
         private bool? _explicitNullValueSkipDefaults = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UtmSettings { get => _explicitNullValueUtmSettings; set { _explicitNullValueUtmSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_settings"); else _explicitNullProperties?.Remove("utm_settings"); } }
+        public string? UtmSettings { get => _explicitNullValueUtmSettings; set { _explicitNullValueUtmSettings = value; AdditionalData?.Remove("utm_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_settings"); else _explicitNullProperties?.Remove("utm_settings"); } }
         private string? _explicitNullValueUtmSettings = default!;
 #nullable restore
 #else
-        public string UtmSettings { get => _explicitNullValueUtmSettings; set { _explicitNullValueUtmSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_settings"); else _explicitNullProperties?.Remove("utm_settings"); } }
+        public string UtmSettings { get => _explicitNullValueUtmSettings; set { _explicitNullValueUtmSettings = value; AdditionalData?.Remove("utm_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_settings"); else _explicitNullProperties?.Remove("utm_settings"); } }
         private string _explicitNullValueUtmSettings = default!;
 #endif
         /// <summary>

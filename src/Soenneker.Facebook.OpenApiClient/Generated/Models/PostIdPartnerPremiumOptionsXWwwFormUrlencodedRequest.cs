@@ -17,12 +17,18 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("catalog_segment_id") is { } nullNodeCatalogSegmentId && nullNodeCatalogSegmentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentId = null;
-            if (parseNode.GetChildNode("enable_basket_insight") is { } nullNodeEnableBasketInsight && nullNodeEnableBasketInsight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableBasketInsight = null;
-            if (parseNode.GetChildNode("enable_extended_audience_retargeting") is { } nullNodeEnableExtendedAudienceRetargeting && nullNodeEnableExtendedAudienceRetargeting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableExtendedAudienceRetargeting = null;
-            if (parseNode.GetChildNode("partner_business_id") is { } nullNodePartnerBusinessId && nullNodePartnerBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerBusinessId = null;
-            if (parseNode.GetChildNode("retailer_custom_audience_config") is { } nullNodeRetailerCustomAudienceConfig && nullNodeRetailerCustomAudienceConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetailerCustomAudienceConfig = null;
-            if (parseNode.GetChildNode("vendor_id") is { } nullNodeVendorId && nullNodeVendorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorId = null;
+            if (parseNode.GetChildNode("catalog_segment_id") is null) { _explicitNullValueCatalogSegmentId = default!; _explicitNullProperties?.Remove("catalog_segment_id"); }
+            else if (parseNode.GetChildNode("catalog_segment_id") is { } nullNodeCatalogSegmentId && nullNodeCatalogSegmentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentId = null;
+            if (parseNode.GetChildNode("enable_basket_insight") is null) { _explicitNullValueEnableBasketInsight = default!; _explicitNullProperties?.Remove("enable_basket_insight"); }
+            else if (parseNode.GetChildNode("enable_basket_insight") is { } nullNodeEnableBasketInsight && nullNodeEnableBasketInsight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableBasketInsight = null;
+            if (parseNode.GetChildNode("enable_extended_audience_retargeting") is null) { _explicitNullValueEnableExtendedAudienceRetargeting = default!; _explicitNullProperties?.Remove("enable_extended_audience_retargeting"); }
+            else if (parseNode.GetChildNode("enable_extended_audience_retargeting") is { } nullNodeEnableExtendedAudienceRetargeting && nullNodeEnableExtendedAudienceRetargeting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableExtendedAudienceRetargeting = null;
+            if (parseNode.GetChildNode("partner_business_id") is null) { _explicitNullValuePartnerBusinessId = default!; _explicitNullProperties?.Remove("partner_business_id"); }
+            else if (parseNode.GetChildNode("partner_business_id") is { } nullNodePartnerBusinessId && nullNodePartnerBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerBusinessId = null;
+            if (parseNode.GetChildNode("retailer_custom_audience_config") is null) { _explicitNullValueRetailerCustomAudienceConfig = default!; _explicitNullProperties?.Remove("retailer_custom_audience_config"); }
+            else if (parseNode.GetChildNode("retailer_custom_audience_config") is { } nullNodeRetailerCustomAudienceConfig && nullNodeRetailerCustomAudienceConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetailerCustomAudienceConfig = null;
+            if (parseNode.GetChildNode("vendor_id") is null) { _explicitNullValueVendorId = default!; _explicitNullProperties?.Remove("vendor_id"); }
+            else if (parseNode.GetChildNode("vendor_id") is { } nullNodeVendorId && nullNodeVendorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The catalog_segment_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CatalogSegmentId { get => _explicitNullValueCatalogSegmentId; set { _explicitNullValueCatalogSegmentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_id"); else _explicitNullProperties?.Remove("catalog_segment_id"); } }
+        public string? CatalogSegmentId { get => _explicitNullValueCatalogSegmentId; set { _explicitNullValueCatalogSegmentId = value; AdditionalData?.Remove("catalog_segment_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_id"); else _explicitNullProperties?.Remove("catalog_segment_id"); } }
         private string? _explicitNullValueCatalogSegmentId = default!;
 #nullable restore
 #else
-        public string CatalogSegmentId { get => _explicitNullValueCatalogSegmentId; set { _explicitNullValueCatalogSegmentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_id"); else _explicitNullProperties?.Remove("catalog_segment_id"); } }
+        public string CatalogSegmentId { get => _explicitNullValueCatalogSegmentId; set { _explicitNullValueCatalogSegmentId = value; AdditionalData?.Remove("catalog_segment_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_id"); else _explicitNullProperties?.Remove("catalog_segment_id"); } }
         private string _explicitNullValueCatalogSegmentId = default!;
 #endif
         /// <summary>The enable_basket_insight property</summary>
-        public bool? EnableBasketInsight { get => _explicitNullValueEnableBasketInsight; set { _explicitNullValueEnableBasketInsight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_basket_insight"); else _explicitNullProperties?.Remove("enable_basket_insight"); } }
+        public bool? EnableBasketInsight { get => _explicitNullValueEnableBasketInsight; set { _explicitNullValueEnableBasketInsight = value; AdditionalData?.Remove("enable_basket_insight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_basket_insight"); else _explicitNullProperties?.Remove("enable_basket_insight"); } }
         private bool? _explicitNullValueEnableBasketInsight = default!;
         /// <summary>The enable_extended_audience_retargeting property</summary>
-        public bool? EnableExtendedAudienceRetargeting { get => _explicitNullValueEnableExtendedAudienceRetargeting; set { _explicitNullValueEnableExtendedAudienceRetargeting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_extended_audience_retargeting"); else _explicitNullProperties?.Remove("enable_extended_audience_retargeting"); } }
+        public bool? EnableExtendedAudienceRetargeting { get => _explicitNullValueEnableExtendedAudienceRetargeting; set { _explicitNullValueEnableExtendedAudienceRetargeting = value; AdditionalData?.Remove("enable_extended_audience_retargeting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_extended_audience_retargeting"); else _explicitNullProperties?.Remove("enable_extended_audience_retargeting"); } }
         private bool? _explicitNullValueEnableExtendedAudienceRetargeting = default!;
         /// <summary>The partner_business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
+        public string? PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; AdditionalData?.Remove("partner_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
         private string? _explicitNullValuePartnerBusinessId = default!;
 #nullable restore
 #else
-        public string PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
+        public string PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; AdditionalData?.Remove("partner_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
         private string _explicitNullValuePartnerBusinessId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RetailerCustomAudienceConfig { get => _explicitNullValueRetailerCustomAudienceConfig; set { _explicitNullValueRetailerCustomAudienceConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_custom_audience_config"); else _explicitNullProperties?.Remove("retailer_custom_audience_config"); } }
+        public string? RetailerCustomAudienceConfig { get => _explicitNullValueRetailerCustomAudienceConfig; set { _explicitNullValueRetailerCustomAudienceConfig = value; AdditionalData?.Remove("retailer_custom_audience_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_custom_audience_config"); else _explicitNullProperties?.Remove("retailer_custom_audience_config"); } }
         private string? _explicitNullValueRetailerCustomAudienceConfig = default!;
 #nullable restore
 #else
-        public string RetailerCustomAudienceConfig { get => _explicitNullValueRetailerCustomAudienceConfig; set { _explicitNullValueRetailerCustomAudienceConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_custom_audience_config"); else _explicitNullProperties?.Remove("retailer_custom_audience_config"); } }
+        public string RetailerCustomAudienceConfig { get => _explicitNullValueRetailerCustomAudienceConfig; set { _explicitNullValueRetailerCustomAudienceConfig = value; AdditionalData?.Remove("retailer_custom_audience_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_custom_audience_config"); else _explicitNullProperties?.Remove("retailer_custom_audience_config"); } }
         private string _explicitNullValueRetailerCustomAudienceConfig = default!;
 #endif
         /// <summary>The vendor_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VendorId { get => _explicitNullValueVendorId; set { _explicitNullValueVendorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_id"); else _explicitNullProperties?.Remove("vendor_id"); } }
+        public string? VendorId { get => _explicitNullValueVendorId; set { _explicitNullValueVendorId = value; AdditionalData?.Remove("vendor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_id"); else _explicitNullProperties?.Remove("vendor_id"); } }
         private string? _explicitNullValueVendorId = default!;
 #nullable restore
 #else
-        public string VendorId { get => _explicitNullValueVendorId; set { _explicitNullValueVendorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_id"); else _explicitNullProperties?.Remove("vendor_id"); } }
+        public string VendorId { get => _explicitNullValueVendorId; set { _explicitNullValueVendorId = value; AdditionalData?.Remove("vendor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vendor_id"); else _explicitNullProperties?.Remove("vendor_id"); } }
         private string _explicitNullValueVendorId = default!;
 #endif
         /// <summary>

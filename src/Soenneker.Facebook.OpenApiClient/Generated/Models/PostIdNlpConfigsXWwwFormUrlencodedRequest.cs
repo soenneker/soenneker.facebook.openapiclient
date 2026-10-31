@@ -17,13 +17,20 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("api_version") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
-            if (parseNode.GetChildNode("custom_token") is { } nullNodeCustomToken && nullNodeCustomToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomToken = null;
-            if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
-            if (parseNode.GetChildNode("n_best") is { } nullNodeNBest && nullNodeNBest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NBest = null;
-            if (parseNode.GetChildNode("nlp_enabled") is { } nullNodeNlpEnabled && nullNodeNlpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NlpEnabled = null;
-            if (parseNode.GetChildNode("other_language_support") is { } nullNodeOtherLanguageSupport && nullNodeOtherLanguageSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherLanguageSupport = null;
-            if (parseNode.GetChildNode("verbose") is { } nullNodeVerbose && nullNodeVerbose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verbose = null;
+            if (parseNode.GetChildNode("api_version") is null) { _explicitNullValueApiVersion = default!; _explicitNullProperties?.Remove("api_version"); }
+            else if (parseNode.GetChildNode("api_version") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
+            if (parseNode.GetChildNode("custom_token") is null) { _explicitNullValueCustomToken = default!; _explicitNullProperties?.Remove("custom_token"); }
+            else if (parseNode.GetChildNode("custom_token") is { } nullNodeCustomToken && nullNodeCustomToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomToken = null;
+            if (parseNode.GetChildNode("model") is null) { _explicitNullValueModel = default!; _explicitNullProperties?.Remove("model"); }
+            else if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("n_best") is null) { _explicitNullValueNBest = default!; _explicitNullProperties?.Remove("n_best"); }
+            else if (parseNode.GetChildNode("n_best") is { } nullNodeNBest && nullNodeNBest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NBest = null;
+            if (parseNode.GetChildNode("nlp_enabled") is null) { _explicitNullValueNlpEnabled = default!; _explicitNullProperties?.Remove("nlp_enabled"); }
+            else if (parseNode.GetChildNode("nlp_enabled") is { } nullNodeNlpEnabled && nullNodeNlpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NlpEnabled = null;
+            if (parseNode.GetChildNode("other_language_support") is null) { _explicitNullValueOtherLanguageSupport = default!; _explicitNullProperties?.Remove("other_language_support"); }
+            else if (parseNode.GetChildNode("other_language_support") is { } nullNodeOtherLanguageSupport && nullNodeOtherLanguageSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherLanguageSupport = null;
+            if (parseNode.GetChildNode("verbose") is null) { _explicitNullValueVerbose = default!; _explicitNullProperties?.Remove("verbose"); }
+            else if (parseNode.GetChildNode("verbose") is { } nullNodeVerbose && nullNodeVerbose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verbose = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,44 +38,44 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
+        public string? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; AdditionalData?.Remove("api_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
         private string? _explicitNullValueApiVersion = default!;
 #nullable restore
 #else
-        public string ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
+        public string ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; AdditionalData?.Remove("api_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_version"); else _explicitNullProperties?.Remove("api_version"); } }
         private string _explicitNullValueApiVersion = default!;
 #endif
         /// <summary>The custom_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomToken { get => _explicitNullValueCustomToken; set { _explicitNullValueCustomToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_token"); else _explicitNullProperties?.Remove("custom_token"); } }
+        public string? CustomToken { get => _explicitNullValueCustomToken; set { _explicitNullValueCustomToken = value; AdditionalData?.Remove("custom_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_token"); else _explicitNullProperties?.Remove("custom_token"); } }
         private string? _explicitNullValueCustomToken = default!;
 #nullable restore
 #else
-        public string CustomToken { get => _explicitNullValueCustomToken; set { _explicitNullValueCustomToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_token"); else _explicitNullProperties?.Remove("custom_token"); } }
+        public string CustomToken { get => _explicitNullValueCustomToken; set { _explicitNullValueCustomToken = value; AdditionalData?.Remove("custom_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_token"); else _explicitNullProperties?.Remove("custom_token"); } }
         private string _explicitNullValueCustomToken = default!;
 #endif
         /// <summary>The model property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; AdditionalData?.Remove("model"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam? _explicitNullValueModel = default!;
         /// <summary>The n_best property</summary>
-        public long? NBest { get => _explicitNullValueNBest; set { _explicitNullValueNBest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("n_best"); else _explicitNullProperties?.Remove("n_best"); } }
+        public long? NBest { get => _explicitNullValueNBest; set { _explicitNullValueNBest = value; AdditionalData?.Remove("n_best"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("n_best"); else _explicitNullProperties?.Remove("n_best"); } }
         private long? _explicitNullValueNBest = default!;
         /// <summary>The nlp_enabled property</summary>
-        public bool? NlpEnabled { get => _explicitNullValueNlpEnabled; set { _explicitNullValueNlpEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nlp_enabled"); else _explicitNullProperties?.Remove("nlp_enabled"); } }
+        public bool? NlpEnabled { get => _explicitNullValueNlpEnabled; set { _explicitNullValueNlpEnabled = value; AdditionalData?.Remove("nlp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nlp_enabled"); else _explicitNullProperties?.Remove("nlp_enabled"); } }
         private bool? _explicitNullValueNlpEnabled = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OtherLanguageSupport { get => _explicitNullValueOtherLanguageSupport; set { _explicitNullValueOtherLanguageSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_language_support"); else _explicitNullProperties?.Remove("other_language_support"); } }
+        public string? OtherLanguageSupport { get => _explicitNullValueOtherLanguageSupport; set { _explicitNullValueOtherLanguageSupport = value; AdditionalData?.Remove("other_language_support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_language_support"); else _explicitNullProperties?.Remove("other_language_support"); } }
         private string? _explicitNullValueOtherLanguageSupport = default!;
 #nullable restore
 #else
-        public string OtherLanguageSupport { get => _explicitNullValueOtherLanguageSupport; set { _explicitNullValueOtherLanguageSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_language_support"); else _explicitNullProperties?.Remove("other_language_support"); } }
+        public string OtherLanguageSupport { get => _explicitNullValueOtherLanguageSupport; set { _explicitNullValueOtherLanguageSupport = value; AdditionalData?.Remove("other_language_support"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_language_support"); else _explicitNullProperties?.Remove("other_language_support"); } }
         private string _explicitNullValueOtherLanguageSupport = default!;
 #endif
         /// <summary>The verbose property</summary>
-        public bool? Verbose { get => _explicitNullValueVerbose; set { _explicitNullValueVerbose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verbose"); else _explicitNullProperties?.Remove("verbose"); } }
+        public bool? Verbose { get => _explicitNullValueVerbose; set { _explicitNullValueVerbose = value; AdditionalData?.Remove("verbose"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verbose"); else _explicitNullProperties?.Remove("verbose"); } }
         private bool? _explicitNullValueVerbose = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdNlpConfigsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -97,7 +104,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "custom_token", n => { CustomToken = n.GetStringValue(); } },
-                { "model", n => { Model = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam>(); } },
+                { "model", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagenlpConfigsModelEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueModel = default; _explicitNullProperties?.Remove("model"); AdditionalData["model"] = unknown; } else { Model = parsed; AdditionalData.Remove("model"); } } },
                 { "n_best", n => { NBest = n.GetLongValue(); } },
                 { "nlp_enabled", n => { NlpEnabled = n.GetBoolValue(); } },
                 { "other_language_support", n => { OtherLanguageSupport = n.GetStringValue(); } },

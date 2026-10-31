@@ -17,13 +17,20 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("client_business_id") is { } nullNodeClientBusinessId && nullNodeClientBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientBusinessId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("rejection_reasons") is { } nullNodeRejectionReasons && nullNodeRejectionReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReasons = null;
-            if (parseNode.GetChildNode("submitted_info") is { } nullNodeSubmittedInfo && nullNodeSubmittedInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmittedInfo = null;
-            if (parseNode.GetChildNode("submitted_time") is { } nullNodeSubmittedTime && nullNodeSubmittedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmittedTime = null;
-            if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
-            if (parseNode.GetChildNode("verification_status") is { } nullNodeVerificationStatus && nullNodeVerificationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationStatus = null;
+            if (parseNode.GetChildNode("client_business_id") is null) { _explicitNullValueClientBusinessId = default!; _explicitNullProperties?.Remove("client_business_id"); }
+            else if (parseNode.GetChildNode("client_business_id") is { } nullNodeClientBusinessId && nullNodeClientBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientBusinessId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("rejection_reasons") is null) { _explicitNullValueRejectionReasons = default!; _explicitNullProperties?.Remove("rejection_reasons"); }
+            else if (parseNode.GetChildNode("rejection_reasons") is { } nullNodeRejectionReasons && nullNodeRejectionReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReasons = null;
+            if (parseNode.GetChildNode("submitted_info") is null) { _explicitNullValueSubmittedInfo = default!; _explicitNullProperties?.Remove("submitted_info"); }
+            else if (parseNode.GetChildNode("submitted_info") is { } nullNodeSubmittedInfo && nullNodeSubmittedInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmittedInfo = null;
+            if (parseNode.GetChildNode("submitted_time") is null) { _explicitNullValueSubmittedTime = default!; _explicitNullProperties?.Remove("submitted_time"); }
+            else if (parseNode.GetChildNode("submitted_time") is { } nullNodeSubmittedTime && nullNodeSubmittedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmittedTime = null;
+            if (parseNode.GetChildNode("update_time") is null) { _explicitNullValueUpdateTime = default!; _explicitNullProperties?.Remove("update_time"); }
+            else if (parseNode.GetChildNode("update_time") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
+            if (parseNode.GetChildNode("verification_status") is null) { _explicitNullValueVerificationStatus = default!; _explicitNullProperties?.Remove("verification_status"); }
+            else if (parseNode.GetChildNode("verification_status") is { } nullNodeVerificationStatus && nullNodeVerificationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,51 +38,51 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The client_business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientBusinessId { get => _explicitNullValueClientBusinessId; set { _explicitNullValueClientBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_business_id"); else _explicitNullProperties?.Remove("client_business_id"); } }
+        public string? ClientBusinessId { get => _explicitNullValueClientBusinessId; set { _explicitNullValueClientBusinessId = value; AdditionalData?.Remove("client_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_business_id"); else _explicitNullProperties?.Remove("client_business_id"); } }
         private string? _explicitNullValueClientBusinessId = default!;
 #nullable restore
 #else
-        public string ClientBusinessId { get => _explicitNullValueClientBusinessId; set { _explicitNullValueClientBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_business_id"); else _explicitNullProperties?.Remove("client_business_id"); } }
+        public string ClientBusinessId { get => _explicitNullValueClientBusinessId; set { _explicitNullValueClientBusinessId = value; AdditionalData?.Remove("client_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_business_id"); else _explicitNullProperties?.Remove("client_business_id"); } }
         private string _explicitNullValueClientBusinessId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The rejection_reasons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionRejectionReasons?>? RejectionReasons { get => _explicitNullValueRejectionReasons; set { _explicitNullValueRejectionReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reasons"); else _explicitNullProperties?.Remove("rejection_reasons"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionRejectionReasons?>? RejectionReasons { get => _explicitNullValueRejectionReasons; set { _explicitNullValueRejectionReasons = value; AdditionalData?.Remove("rejection_reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reasons"); else _explicitNullProperties?.Remove("rejection_reasons"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionRejectionReasons?>? _explicitNullValueRejectionReasons = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionRejectionReasons?> RejectionReasons { get => _explicitNullValueRejectionReasons; set { _explicitNullValueRejectionReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reasons"); else _explicitNullProperties?.Remove("rejection_reasons"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionRejectionReasons?> RejectionReasons { get => _explicitNullValueRejectionReasons; set { _explicitNullValueRejectionReasons = value; AdditionalData?.Remove("rejection_reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reasons"); else _explicitNullProperties?.Remove("rejection_reasons"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionRejectionReasons?> _explicitNullValueRejectionReasons = default!;
 #endif
         /// <summary>The submitted_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty? SubmittedInfo { get => _explicitNullValueSubmittedInfo; set { _explicitNullValueSubmittedInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submitted_info"); else _explicitNullProperties?.Remove("submitted_info"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty? SubmittedInfo { get => _explicitNullValueSubmittedInfo; set { _explicitNullValueSubmittedInfo = value; AdditionalData?.Remove("submitted_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submitted_info"); else _explicitNullProperties?.Remove("submitted_info"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty? _explicitNullValueSubmittedInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty SubmittedInfo { get => _explicitNullValueSubmittedInfo; set { _explicitNullValueSubmittedInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submitted_info"); else _explicitNullProperties?.Remove("submitted_info"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty SubmittedInfo { get => _explicitNullValueSubmittedInfo; set { _explicitNullValueSubmittedInfo = value; AdditionalData?.Remove("submitted_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submitted_info"); else _explicitNullProperties?.Remove("submitted_info"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty _explicitNullValueSubmittedInfo = default!;
 #endif
         /// <summary>The submitted_time property</summary>
-        public DateTimeOffset? SubmittedTime { get => _explicitNullValueSubmittedTime; set { _explicitNullValueSubmittedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submitted_time"); else _explicitNullProperties?.Remove("submitted_time"); } }
+        public DateTimeOffset? SubmittedTime { get => _explicitNullValueSubmittedTime; set { _explicitNullValueSubmittedTime = value; AdditionalData?.Remove("submitted_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submitted_time"); else _explicitNullProperties?.Remove("submitted_time"); } }
         private DateTimeOffset? _explicitNullValueSubmittedTime = default!;
         /// <summary>The update_time property</summary>
-        public DateTimeOffset? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
+        public DateTimeOffset? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; AdditionalData?.Remove("update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_time"); else _explicitNullProperties?.Remove("update_time"); } }
         private DateTimeOffset? _explicitNullValueUpdateTime = default!;
         /// <summary>The verification_status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionVerificationStatus? VerificationStatus { get => _explicitNullValueVerificationStatus; set { _explicitNullValueVerificationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_status"); else _explicitNullProperties?.Remove("verification_status"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionVerificationStatus? VerificationStatus { get => _explicitNullValueVerificationStatus; set { _explicitNullValueVerificationStatus = value; AdditionalData?.Remove("verification_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_status"); else _explicitNullProperties?.Remove("verification_status"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionVerificationStatus? _explicitNullValueVerificationStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmission"/> and sets the default values.
@@ -108,7 +115,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "submitted_info", n => { SubmittedInfo = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty>(global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionSubmittedInfoProperty.CreateFromDiscriminatorValue); } },
                 { "submitted_time", n => { SubmittedTime = n.GetDateTimeOffsetValue(); } },
                 { "update_time", n => { UpdateTime = n.GetDateTimeOffsetValue(); } },
-                { "verification_status", n => { VerificationStatus = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionVerificationStatus>(); } },
+                { "verification_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPartnerClientVerificationSubmissionVerificationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVerificationStatus = default; _explicitNullProperties?.Remove("verification_status"); AdditionalData["verification_status"] = unknown; } else { VerificationStatus = parsed; AdditionalData.Remove("verification_status"); } } },
             };
         }
         /// <summary>

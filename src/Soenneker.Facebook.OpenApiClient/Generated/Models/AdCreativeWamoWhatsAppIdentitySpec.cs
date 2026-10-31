@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("wamo_whatsapp_identity_id") is { } nullNodeWamoWhatsappIdentityId && nullNodeWamoWhatsappIdentityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WamoWhatsappIdentityId = null;
-            if (parseNode.GetChildNode("whatsapp_phone_number") is { } nullNodeWhatsappPhoneNumber && nullNodeWhatsappPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappPhoneNumber = null;
+            if (parseNode.GetChildNode("wamo_whatsapp_identity_id") is null) { _explicitNullValueWamoWhatsappIdentityId = default!; _explicitNullProperties?.Remove("wamo_whatsapp_identity_id"); }
+            else if (parseNode.GetChildNode("wamo_whatsapp_identity_id") is { } nullNodeWamoWhatsappIdentityId && nullNodeWamoWhatsappIdentityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WamoWhatsappIdentityId = null;
+            if (parseNode.GetChildNode("whatsapp_phone_number") is null) { _explicitNullValueWhatsappPhoneNumber = default!; _explicitNullProperties?.Remove("whatsapp_phone_number"); }
+            else if (parseNode.GetChildNode("whatsapp_phone_number") is { } nullNodeWhatsappPhoneNumber && nullNodeWhatsappPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappPhoneNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The wamo_whatsapp_identity_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WamoWhatsappIdentityId { get => _explicitNullValueWamoWhatsappIdentityId; set { _explicitNullValueWamoWhatsappIdentityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wamo_whatsapp_identity_id"); else _explicitNullProperties?.Remove("wamo_whatsapp_identity_id"); } }
+        public string? WamoWhatsappIdentityId { get => _explicitNullValueWamoWhatsappIdentityId; set { _explicitNullValueWamoWhatsappIdentityId = value; AdditionalData?.Remove("wamo_whatsapp_identity_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wamo_whatsapp_identity_id"); else _explicitNullProperties?.Remove("wamo_whatsapp_identity_id"); } }
         private string? _explicitNullValueWamoWhatsappIdentityId = default!;
 #nullable restore
 #else
-        public string WamoWhatsappIdentityId { get => _explicitNullValueWamoWhatsappIdentityId; set { _explicitNullValueWamoWhatsappIdentityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wamo_whatsapp_identity_id"); else _explicitNullProperties?.Remove("wamo_whatsapp_identity_id"); } }
+        public string WamoWhatsappIdentityId { get => _explicitNullValueWamoWhatsappIdentityId; set { _explicitNullValueWamoWhatsappIdentityId = value; AdditionalData?.Remove("wamo_whatsapp_identity_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wamo_whatsapp_identity_id"); else _explicitNullProperties?.Remove("wamo_whatsapp_identity_id"); } }
         private string _explicitNullValueWamoWhatsappIdentityId = default!;
 #endif
         /// <summary>The whatsapp_phone_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhatsappPhoneNumber { get => _explicitNullValueWhatsappPhoneNumber; set { _explicitNullValueWhatsappPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_phone_number"); else _explicitNullProperties?.Remove("whatsapp_phone_number"); } }
+        public string? WhatsappPhoneNumber { get => _explicitNullValueWhatsappPhoneNumber; set { _explicitNullValueWhatsappPhoneNumber = value; AdditionalData?.Remove("whatsapp_phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_phone_number"); else _explicitNullProperties?.Remove("whatsapp_phone_number"); } }
         private string? _explicitNullValueWhatsappPhoneNumber = default!;
 #nullable restore
 #else
-        public string WhatsappPhoneNumber { get => _explicitNullValueWhatsappPhoneNumber; set { _explicitNullValueWhatsappPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_phone_number"); else _explicitNullProperties?.Remove("whatsapp_phone_number"); } }
+        public string WhatsappPhoneNumber { get => _explicitNullValueWhatsappPhoneNumber; set { _explicitNullValueWhatsappPhoneNumber = value; AdditionalData?.Remove("whatsapp_phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_phone_number"); else _explicitNullProperties?.Remove("whatsapp_phone_number"); } }
         private string _explicitNullValueWhatsappPhoneNumber = default!;
 #endif
         /// <summary>

@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customized_token") is { } nullNodeCustomizedToken && nullNodeCustomizedToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomizedToken = null;
-            if (parseNode.GetChildNode("next_question_choices") is { } nullNodeNextQuestionChoices && nullNodeNextQuestionChoices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextQuestionChoices = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("customized_token") is null) { _explicitNullValueCustomizedToken = default!; _explicitNullProperties?.Remove("customized_token"); }
+            else if (parseNode.GetChildNode("customized_token") is { } nullNodeCustomizedToken && nullNodeCustomizedToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomizedToken = null;
+            if (parseNode.GetChildNode("next_question_choices") is null) { _explicitNullValueNextQuestionChoices = default!; _explicitNullProperties?.Remove("next_question_choices"); }
+            else if (parseNode.GetChildNode("next_question_choices") is { } nullNodeNextQuestionChoices && nullNodeNextQuestionChoices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextQuestionChoices = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The customized_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomizedToken { get => _explicitNullValueCustomizedToken; set { _explicitNullValueCustomizedToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customized_token"); else _explicitNullProperties?.Remove("customized_token"); } }
+        public string? CustomizedToken { get => _explicitNullValueCustomizedToken; set { _explicitNullValueCustomizedToken = value; AdditionalData?.Remove("customized_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customized_token"); else _explicitNullProperties?.Remove("customized_token"); } }
         private string? _explicitNullValueCustomizedToken = default!;
 #nullable restore
 #else
-        public string CustomizedToken { get => _explicitNullValueCustomizedToken; set { _explicitNullValueCustomizedToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customized_token"); else _explicitNullProperties?.Remove("customized_token"); } }
+        public string CustomizedToken { get => _explicitNullValueCustomizedToken; set { _explicitNullValueCustomizedToken = value; AdditionalData?.Remove("customized_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customized_token"); else _explicitNullProperties?.Remove("customized_token"); } }
         private string _explicitNullValueCustomizedToken = default!;
 #endif
         /// <summary>The next_question_choices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices>? NextQuestionChoices { get => _explicitNullValueNextQuestionChoices; set { _explicitNullValueNextQuestionChoices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_question_choices"); else _explicitNullProperties?.Remove("next_question_choices"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices>? NextQuestionChoices { get => _explicitNullValueNextQuestionChoices; set { _explicitNullValueNextQuestionChoices = value; AdditionalData?.Remove("next_question_choices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_question_choices"); else _explicitNullProperties?.Remove("next_question_choices"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices>? _explicitNullValueNextQuestionChoices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices> NextQuestionChoices { get => _explicitNullValueNextQuestionChoices; set { _explicitNullValueNextQuestionChoices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_question_choices"); else _explicitNullProperties?.Remove("next_question_choices"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices> NextQuestionChoices { get => _explicitNullValueNextQuestionChoices; set { _explicitNullValueNextQuestionChoices = value; AdditionalData?.Remove("next_question_choices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_question_choices"); else _explicitNullProperties?.Remove("next_question_choices"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenConditionalQuestionsGroupChoices> _explicitNullValueNextQuestionChoices = default!;
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
         /// <summary>

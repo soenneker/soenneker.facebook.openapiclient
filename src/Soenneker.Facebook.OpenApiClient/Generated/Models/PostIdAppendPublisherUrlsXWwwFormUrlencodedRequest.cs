@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("publisher_urls") is { } nullNodePublisherUrls && nullNodePublisherUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublisherUrls = null;
+            if (parseNode.GetChildNode("publisher_urls") is null) { _explicitNullValuePublisherUrls = default!; _explicitNullProperties?.Remove("publisher_urls"); }
+            else if (parseNode.GetChildNode("publisher_urls") is { } nullNodePublisherUrls && nullNodePublisherUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublisherUrls = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublisherUrls { get => _explicitNullValuePublisherUrls; set { _explicitNullValuePublisherUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_urls"); else _explicitNullProperties?.Remove("publisher_urls"); } }
+        public string? PublisherUrls { get => _explicitNullValuePublisherUrls; set { _explicitNullValuePublisherUrls = value; AdditionalData?.Remove("publisher_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_urls"); else _explicitNullProperties?.Remove("publisher_urls"); } }
         private string? _explicitNullValuePublisherUrls = default!;
 #nullable restore
 #else
-        public string PublisherUrls { get => _explicitNullValuePublisherUrls; set { _explicitNullValuePublisherUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_urls"); else _explicitNullProperties?.Remove("publisher_urls"); } }
+        public string PublisherUrls { get => _explicitNullValuePublisherUrls; set { _explicitNullValuePublisherUrls = value; AdditionalData?.Remove("publisher_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_urls"); else _explicitNullProperties?.Remove("publisher_urls"); } }
         private string _explicitNullValuePublisherUrls = default!;
 #endif
         /// <summary>

@@ -17,23 +17,25 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("code_method") is { } nullNodeCodeMethod && nullNodeCodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeMethod = null;
-            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("code_method") is null) { _explicitNullValueCodeMethod = default!; _explicitNullProperties?.Remove("code_method"); }
+            else if (parseNode.GetChildNode("code_method") is { } nullNodeCodeMethod && nullNodeCodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeMethod = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code_method property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinesspreverifiedphonenumberrequestCodeCodeMethodEnumParam? CodeMethod { get => _explicitNullValueCodeMethod; set { _explicitNullValueCodeMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_method"); else _explicitNullProperties?.Remove("code_method"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinesspreverifiedphonenumberrequestCodeCodeMethodEnumParam? CodeMethod { get => _explicitNullValueCodeMethod; set { _explicitNullValueCodeMethod = value; AdditionalData?.Remove("code_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_method"); else _explicitNullProperties?.Remove("code_method"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinesspreverifiedphonenumberrequestCodeCodeMethodEnumParam? _explicitNullValueCodeMethod = default!;
         /// <summary>The language property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
         private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
         private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code_method", n => { CodeMethod = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinesspreverifiedphonenumberrequestCodeCodeMethodEnumParam>(); } },
+                { "code_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinesspreverifiedphonenumberrequestCodeCodeMethodEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCodeMethod = default; _explicitNullProperties?.Remove("code_method"); AdditionalData["code_method"] = unknown; } else { CodeMethod = parsed; AdditionalData.Remove("code_method"); } } },
                 { "language", n => { Language = n.GetStringValue(); } },
             };
         }

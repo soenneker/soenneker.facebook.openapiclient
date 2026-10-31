@@ -10462,26 +10462,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "anyOf": [
-                    {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/AdcampaigncopiesEffectiveStatusEnumParam"
-                      }
-                    },
-                    {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/AdcampaigngroupcopiesEffectiveStatusEnumParam"
-                      }
-                    }
-                  ]
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -11277,9 +11261,6 @@
                     },
                     {
                       "type": "string"
-                    },
-                    {
-                      "$ref": "#/components/schemas/IguserexportforcaminsightsTimeRangeEnumParam"
                     }
                   ]
                 }
@@ -109861,6 +109842,10 @@
           "modelAsString": false,
           "values": [
             {
+              "value": "",
+              "name": "EnumValue"
+            },
+            {
               "value": "approved",
               "name": "Approved"
             },
@@ -157556,6 +157541,10 @@
           "modelAsString": false,
           "values": [
             {
+              "value": "",
+              "name": "EnumValue"
+            },
+            {
               "value": "MSA",
               "name": "Msa"
             }
@@ -157594,7 +157583,17 @@
           "Advertiser",
           "Agency"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "FlightoverrideDetailsTypeEnumParam": {
         "enum": [

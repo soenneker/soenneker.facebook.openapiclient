@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("execution_options") is { } nullNodeExecutionOptions && nullNodeExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionOptions = null;
-            if (parseNode.GetChildNode("execution_type") is { } nullNodeExecutionType && nullNodeExecutionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionType = null;
-            if (parseNode.GetChildNode("is_once_off") is { } nullNodeIsOnceOff && nullNodeIsOnceOff.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOnceOff = null;
+            if (parseNode.GetChildNode("execution_options") is null) { _explicitNullValueExecutionOptions = default!; _explicitNullProperties?.Remove("execution_options"); }
+            else if (parseNode.GetChildNode("execution_options") is { } nullNodeExecutionOptions && nullNodeExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionOptions = null;
+            if (parseNode.GetChildNode("execution_type") is null) { _explicitNullValueExecutionType = default!; _explicitNullProperties?.Remove("execution_type"); }
+            else if (parseNode.GetChildNode("execution_type") is { } nullNodeExecutionType && nullNodeExecutionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionType = null;
+            if (parseNode.GetChildNode("is_once_off") is null) { _explicitNullValueIsOnceOff = default!; _explicitNullProperties?.Remove("is_once_off"); }
+            else if (parseNode.GetChildNode("is_once_off") is { } nullNodeIsOnceOff && nullNodeIsOnceOff.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOnceOff = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The execution_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions>? ExecutionOptions { get => _explicitNullValueExecutionOptions; set { _explicitNullValueExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_options"); else _explicitNullProperties?.Remove("execution_options"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions>? ExecutionOptions { get => _explicitNullValueExecutionOptions; set { _explicitNullValueExecutionOptions = value; AdditionalData?.Remove("execution_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_options"); else _explicitNullProperties?.Remove("execution_options"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions>? _explicitNullValueExecutionOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions> ExecutionOptions { get => _explicitNullValueExecutionOptions; set { _explicitNullValueExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_options"); else _explicitNullProperties?.Remove("execution_options"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions> ExecutionOptions { get => _explicitNullValueExecutionOptions; set { _explicitNullValueExecutionOptions = value; AdditionalData?.Remove("execution_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_options"); else _explicitNullProperties?.Remove("execution_options"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions> _explicitNullValueExecutionOptions = default!;
 #endif
         /// <summary>The execution_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpecExecutionType? ExecutionType { get => _explicitNullValueExecutionType; set { _explicitNullValueExecutionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_type"); else _explicitNullProperties?.Remove("execution_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpecExecutionType? ExecutionType { get => _explicitNullValueExecutionType; set { _explicitNullValueExecutionType = value; AdditionalData?.Remove("execution_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_type"); else _explicitNullProperties?.Remove("execution_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpecExecutionType? _explicitNullValueExecutionType = default!;
         /// <summary>The is_once_off property</summary>
-        public bool? IsOnceOff { get => _explicitNullValueIsOnceOff; set { _explicitNullValueIsOnceOff = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_once_off"); else _explicitNullProperties?.Remove("is_once_off"); } }
+        public bool? IsOnceOff { get => _explicitNullValueIsOnceOff; set { _explicitNullValueIsOnceOff = value; AdditionalData?.Remove("is_once_off"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_once_off"); else _explicitNullProperties?.Remove("is_once_off"); } }
         private bool? _explicitNullValueIsOnceOff = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpec"/> and sets the default values.
@@ -66,7 +69,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "execution_options", n => { ExecutionOptions = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions>(global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionOptions.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "execution_type", n => { ExecutionType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpecExecutionType>(); } },
+                { "execution_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdRuleExecutionSpecExecutionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExecutionType = default; _explicitNullProperties?.Remove("execution_type"); AdditionalData["execution_type"] = unknown; } else { ExecutionType = parsed; AdditionalData.Remove("execution_type"); } } },
                 { "is_once_off", n => { IsOnceOff = n.GetBoolValue(); } },
             };
         }

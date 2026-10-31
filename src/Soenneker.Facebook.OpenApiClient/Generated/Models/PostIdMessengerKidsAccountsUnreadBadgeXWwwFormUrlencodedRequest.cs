@@ -17,13 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("proxied_app_id") is { } nullNodeProxiedAppId && nullNodeProxiedAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxiedAppId = null;
+            if (parseNode.GetChildNode("proxied_app_id") is null) { _explicitNullValueProxiedAppId = default!; _explicitNullProperties?.Remove("proxied_app_id"); }
+            else if (parseNode.GetChildNode("proxied_app_id") is { } nullNodeProxiedAppId && nullNodeProxiedAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxiedAppId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The proxied_app_id property</summary>
-        public long? ProxiedAppId { get => _explicitNullValueProxiedAppId; set { _explicitNullValueProxiedAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proxied_app_id"); else _explicitNullProperties?.Remove("proxied_app_id"); } }
+        public long? ProxiedAppId { get => _explicitNullValueProxiedAppId; set { _explicitNullValueProxiedAppId = value; AdditionalData?.Remove("proxied_app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proxied_app_id"); else _explicitNullProperties?.Remove("proxied_app_id"); } }
         private long? _explicitNullValueProxiedAppId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdMessengerKidsAccountsUnreadBadgeXWwwFormUrlencodedRequest"/> and sets the default values.

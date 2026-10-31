@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_disclaimer_responses") is { } nullNodeCustomDisclaimerResponses && nullNodeCustomDisclaimerResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomDisclaimerResponses = null;
-            if (parseNode.GetChildNode("field_data") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
+            if (parseNode.GetChildNode("custom_disclaimer_responses") is null) { _explicitNullValueCustomDisclaimerResponses = default!; _explicitNullProperties?.Remove("custom_disclaimer_responses"); }
+            else if (parseNode.GetChildNode("custom_disclaimer_responses") is { } nullNodeCustomDisclaimerResponses && nullNodeCustomDisclaimerResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomDisclaimerResponses = null;
+            if (parseNode.GetChildNode("field_data") is null) { _explicitNullValueFieldData = default!; _explicitNullProperties?.Remove("field_data"); }
+            else if (parseNode.GetChildNode("field_data") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomDisclaimerResponses { get => _explicitNullValueCustomDisclaimerResponses; set { _explicitNullValueCustomDisclaimerResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_disclaimer_responses"); else _explicitNullProperties?.Remove("custom_disclaimer_responses"); } }
+        public string? CustomDisclaimerResponses { get => _explicitNullValueCustomDisclaimerResponses; set { _explicitNullValueCustomDisclaimerResponses = value; AdditionalData?.Remove("custom_disclaimer_responses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_disclaimer_responses"); else _explicitNullProperties?.Remove("custom_disclaimer_responses"); } }
         private string? _explicitNullValueCustomDisclaimerResponses = default!;
 #nullable restore
 #else
-        public string CustomDisclaimerResponses { get => _explicitNullValueCustomDisclaimerResponses; set { _explicitNullValueCustomDisclaimerResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_disclaimer_responses"); else _explicitNullProperties?.Remove("custom_disclaimer_responses"); } }
+        public string CustomDisclaimerResponses { get => _explicitNullValueCustomDisclaimerResponses; set { _explicitNullValueCustomDisclaimerResponses = value; AdditionalData?.Remove("custom_disclaimer_responses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_disclaimer_responses"); else _explicitNullProperties?.Remove("custom_disclaimer_responses"); } }
         private string _explicitNullValueCustomDisclaimerResponses = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_data"); else _explicitNullProperties?.Remove("field_data"); } }
+        public string? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; AdditionalData?.Remove("field_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_data"); else _explicitNullProperties?.Remove("field_data"); } }
         private string? _explicitNullValueFieldData = default!;
 #nullable restore
 #else
-        public string FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_data"); else _explicitNullProperties?.Remove("field_data"); } }
+        public string FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; AdditionalData?.Remove("field_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_data"); else _explicitNullProperties?.Remove("field_data"); } }
         private string _explicitNullValueFieldData = default!;
 #endif
         /// <summary>

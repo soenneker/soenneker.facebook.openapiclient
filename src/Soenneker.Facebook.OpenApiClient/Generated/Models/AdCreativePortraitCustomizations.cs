@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carousel_delivery_mode") is { } nullNodeCarouselDeliveryMode && nullNodeCarouselDeliveryMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarouselDeliveryMode = null;
-            if (parseNode.GetChildNode("specifications") is { } nullNodeSpecifications && nullNodeSpecifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Specifications = null;
+            if (parseNode.GetChildNode("carousel_delivery_mode") is null) { _explicitNullValueCarouselDeliveryMode = default!; _explicitNullProperties?.Remove("carousel_delivery_mode"); }
+            else if (parseNode.GetChildNode("carousel_delivery_mode") is { } nullNodeCarouselDeliveryMode && nullNodeCarouselDeliveryMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarouselDeliveryMode = null;
+            if (parseNode.GetChildNode("specifications") is null) { _explicitNullValueSpecifications = default!; _explicitNullProperties?.Remove("specifications"); }
+            else if (parseNode.GetChildNode("specifications") is { } nullNodeSpecifications && nullNodeSpecifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Specifications = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The carousel_delivery_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarouselDeliveryMode { get => _explicitNullValueCarouselDeliveryMode; set { _explicitNullValueCarouselDeliveryMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carousel_delivery_mode"); else _explicitNullProperties?.Remove("carousel_delivery_mode"); } }
+        public string? CarouselDeliveryMode { get => _explicitNullValueCarouselDeliveryMode; set { _explicitNullValueCarouselDeliveryMode = value; AdditionalData?.Remove("carousel_delivery_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carousel_delivery_mode"); else _explicitNullProperties?.Remove("carousel_delivery_mode"); } }
         private string? _explicitNullValueCarouselDeliveryMode = default!;
 #nullable restore
 #else
-        public string CarouselDeliveryMode { get => _explicitNullValueCarouselDeliveryMode; set { _explicitNullValueCarouselDeliveryMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carousel_delivery_mode"); else _explicitNullProperties?.Remove("carousel_delivery_mode"); } }
+        public string CarouselDeliveryMode { get => _explicitNullValueCarouselDeliveryMode; set { _explicitNullValueCarouselDeliveryMode = value; AdditionalData?.Remove("carousel_delivery_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carousel_delivery_mode"); else _explicitNullProperties?.Remove("carousel_delivery_mode"); } }
         private string _explicitNullValueCarouselDeliveryMode = default!;
 #endif
         /// <summary>The specifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativePortraitCustomizationsSpecificationsItemProperty>? Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativePortraitCustomizationsSpecificationsItemProperty>? Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; AdditionalData?.Remove("specifications"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativePortraitCustomizationsSpecificationsItemProperty>? _explicitNullValueSpecifications = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativePortraitCustomizationsSpecificationsItemProperty> Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativePortraitCustomizationsSpecificationsItemProperty> Specifications { get => _explicitNullValueSpecifications; set { _explicitNullValueSpecifications = value; AdditionalData?.Remove("specifications"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specifications"); else _explicitNullProperties?.Remove("specifications"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativePortraitCustomizationsSpecificationsItemProperty> _explicitNullValueSpecifications = default!;
 #endif
         /// <summary>

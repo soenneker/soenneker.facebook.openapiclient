@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("page_level_persistent_menu") is { } nullNodePageLevelPersistentMenu && nullNodePageLevelPersistentMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageLevelPersistentMenu = null;
-            if (parseNode.GetChildNode("user_level_persistent_menu") is { } nullNodeUserLevelPersistentMenu && nullNodeUserLevelPersistentMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelPersistentMenu = null;
+            if (parseNode.GetChildNode("page_level_persistent_menu") is null) { _explicitNullValuePageLevelPersistentMenu = default!; _explicitNullProperties?.Remove("page_level_persistent_menu"); }
+            else if (parseNode.GetChildNode("page_level_persistent_menu") is { } nullNodePageLevelPersistentMenu && nullNodePageLevelPersistentMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageLevelPersistentMenu = null;
+            if (parseNode.GetChildNode("user_level_persistent_menu") is null) { _explicitNullValueUserLevelPersistentMenu = default!; _explicitNullProperties?.Remove("user_level_persistent_menu"); }
+            else if (parseNode.GetChildNode("user_level_persistent_menu") is { } nullNodeUserLevelPersistentMenu && nullNodeUserLevelPersistentMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelPersistentMenu = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The page_level_persistent_menu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>? PageLevelPersistentMenu { get => _explicitNullValuePageLevelPersistentMenu; set { _explicitNullValuePageLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_level_persistent_menu"); else _explicitNullProperties?.Remove("page_level_persistent_menu"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>? PageLevelPersistentMenu { get => _explicitNullValuePageLevelPersistentMenu; set { _explicitNullValuePageLevelPersistentMenu = value; AdditionalData?.Remove("page_level_persistent_menu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_level_persistent_menu"); else _explicitNullProperties?.Remove("page_level_persistent_menu"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty>? _explicitNullValuePageLevelPersistentMenu = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty> PageLevelPersistentMenu { get => _explicitNullValuePageLevelPersistentMenu; set { _explicitNullValuePageLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_level_persistent_menu"); else _explicitNullProperties?.Remove("page_level_persistent_menu"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty> PageLevelPersistentMenu { get => _explicitNullValuePageLevelPersistentMenu; set { _explicitNullValuePageLevelPersistentMenu = value; AdditionalData?.Remove("page_level_persistent_menu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_level_persistent_menu"); else _explicitNullProperties?.Remove("page_level_persistent_menu"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsPageLevelPersistentMenuItemProperty> _explicitNullValuePageLevelPersistentMenu = default!;
 #endif
         /// <summary>The user_level_persistent_menu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>? UserLevelPersistentMenu { get => _explicitNullValueUserLevelPersistentMenu; set { _explicitNullValueUserLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_level_persistent_menu"); else _explicitNullProperties?.Remove("user_level_persistent_menu"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>? UserLevelPersistentMenu { get => _explicitNullValueUserLevelPersistentMenu; set { _explicitNullValueUserLevelPersistentMenu = value; AdditionalData?.Remove("user_level_persistent_menu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_level_persistent_menu"); else _explicitNullProperties?.Remove("user_level_persistent_menu"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty>? _explicitNullValueUserLevelPersistentMenu = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty> UserLevelPersistentMenu { get => _explicitNullValueUserLevelPersistentMenu; set { _explicitNullValueUserLevelPersistentMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_level_persistent_menu"); else _explicitNullProperties?.Remove("user_level_persistent_menu"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty> UserLevelPersistentMenu { get => _explicitNullValueUserLevelPersistentMenu; set { _explicitNullValueUserLevelPersistentMenu = value; AdditionalData?.Remove("user_level_persistent_menu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_level_persistent_menu"); else _explicitNullProperties?.Remove("user_level_persistent_menu"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomUserSettingsUserLevelPersistentMenuItemProperty> _explicitNullValueUserLevelPersistentMenu = default!;
 #endif
         /// <summary>

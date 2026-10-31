@@ -17,56 +17,61 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ad_placements_validation_only") is { } nullNodeAdPlacementsValidationOnly && nullNodeAdPlacementsValidationOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdPlacementsValidationOnly = null;
-            if (parseNode.GetChildNode("bytes") is { } nullNodeBytes && nullNodeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bytes = null;
-            if (parseNode.GetChildNode("creative_folder_id") is { } nullNodeCreativeFolderId && nullNodeCreativeFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeFolderId = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("validation_ad_placements") is { } nullNodeValidationAdPlacements && nullNodeValidationAdPlacements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationAdPlacements = null;
+            if (parseNode.GetChildNode("ad_placements_validation_only") is null) { _explicitNullValueAdPlacementsValidationOnly = default!; _explicitNullProperties?.Remove("ad_placements_validation_only"); }
+            else if (parseNode.GetChildNode("ad_placements_validation_only") is { } nullNodeAdPlacementsValidationOnly && nullNodeAdPlacementsValidationOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdPlacementsValidationOnly = null;
+            if (parseNode.GetChildNode("bytes") is null) { _explicitNullValueBytes = default!; _explicitNullProperties?.Remove("bytes"); }
+            else if (parseNode.GetChildNode("bytes") is { } nullNodeBytes && nullNodeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bytes = null;
+            if (parseNode.GetChildNode("creative_folder_id") is null) { _explicitNullValueCreativeFolderId = default!; _explicitNullProperties?.Remove("creative_folder_id"); }
+            else if (parseNode.GetChildNode("creative_folder_id") is { } nullNodeCreativeFolderId && nullNodeCreativeFolderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeFolderId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("validation_ad_placements") is null) { _explicitNullValueValidationAdPlacements = default!; _explicitNullProperties?.Remove("validation_ad_placements"); }
+            else if (parseNode.GetChildNode("validation_ad_placements") is { } nullNodeValidationAdPlacements && nullNodeValidationAdPlacements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationAdPlacements = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_placements_validation_only property</summary>
-        public bool? AdPlacementsValidationOnly { get => _explicitNullValueAdPlacementsValidationOnly; set { _explicitNullValueAdPlacementsValidationOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_placements_validation_only"); else _explicitNullProperties?.Remove("ad_placements_validation_only"); } }
+        public bool? AdPlacementsValidationOnly { get => _explicitNullValueAdPlacementsValidationOnly; set { _explicitNullValueAdPlacementsValidationOnly = value; AdditionalData?.Remove("ad_placements_validation_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_placements_validation_only"); else _explicitNullProperties?.Remove("ad_placements_validation_only"); } }
         private bool? _explicitNullValueAdPlacementsValidationOnly = default!;
         /// <summary>The bytes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bytes { get => _explicitNullValueBytes; set { _explicitNullValueBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytes"); else _explicitNullProperties?.Remove("bytes"); } }
+        public string? Bytes { get => _explicitNullValueBytes; set { _explicitNullValueBytes = value; AdditionalData?.Remove("bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytes"); else _explicitNullProperties?.Remove("bytes"); } }
         private string? _explicitNullValueBytes = default!;
 #nullable restore
 #else
-        public string Bytes { get => _explicitNullValueBytes; set { _explicitNullValueBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytes"); else _explicitNullProperties?.Remove("bytes"); } }
+        public string Bytes { get => _explicitNullValueBytes; set { _explicitNullValueBytes = value; AdditionalData?.Remove("bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytes"); else _explicitNullProperties?.Remove("bytes"); } }
         private string _explicitNullValueBytes = default!;
 #endif
         /// <summary>The creative_folder_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreativeFolderId { get => _explicitNullValueCreativeFolderId; set { _explicitNullValueCreativeFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_folder_id"); else _explicitNullProperties?.Remove("creative_folder_id"); } }
+        public string? CreativeFolderId { get => _explicitNullValueCreativeFolderId; set { _explicitNullValueCreativeFolderId = value; AdditionalData?.Remove("creative_folder_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_folder_id"); else _explicitNullProperties?.Remove("creative_folder_id"); } }
         private string? _explicitNullValueCreativeFolderId = default!;
 #nullable restore
 #else
-        public string CreativeFolderId { get => _explicitNullValueCreativeFolderId; set { _explicitNullValueCreativeFolderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_folder_id"); else _explicitNullProperties?.Remove("creative_folder_id"); } }
+        public string CreativeFolderId { get => _explicitNullValueCreativeFolderId; set { _explicitNullValueCreativeFolderId = value; AdditionalData?.Remove("creative_folder_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_folder_id"); else _explicitNullProperties?.Remove("creative_folder_id"); } }
         private string _explicitNullValueCreativeFolderId = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidationAdPlacements { get => _explicitNullValueValidationAdPlacements; set { _explicitNullValueValidationAdPlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_ad_placements"); else _explicitNullProperties?.Remove("validation_ad_placements"); } }
+        public string? ValidationAdPlacements { get => _explicitNullValueValidationAdPlacements; set { _explicitNullValueValidationAdPlacements = value; AdditionalData?.Remove("validation_ad_placements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_ad_placements"); else _explicitNullProperties?.Remove("validation_ad_placements"); } }
         private string? _explicitNullValueValidationAdPlacements = default!;
 #nullable restore
 #else
-        public string ValidationAdPlacements { get => _explicitNullValueValidationAdPlacements; set { _explicitNullValueValidationAdPlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_ad_placements"); else _explicitNullProperties?.Remove("validation_ad_placements"); } }
+        public string ValidationAdPlacements { get => _explicitNullValueValidationAdPlacements; set { _explicitNullValueValidationAdPlacements = value; AdditionalData?.Remove("validation_ad_placements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_ad_placements"); else _explicitNullProperties?.Remove("validation_ad_placements"); } }
         private string _explicitNullValueValidationAdPlacements = default!;
 #endif
         /// <summary>

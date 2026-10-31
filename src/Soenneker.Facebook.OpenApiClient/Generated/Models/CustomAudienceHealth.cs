@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("health") is { } nullNodeHealth && nullNodeHealth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Health = null;
+            if (parseNode.GetChildNode("health") is null) { _explicitNullValueHealth = default!; _explicitNullProperties?.Remove("health"); }
+            else if (parseNode.GetChildNode("health") is { } nullNodeHealth && nullNodeHealth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Health = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The health property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceHealthHealthItemProperty>? Health { get => _explicitNullValueHealth; set { _explicitNullValueHealth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health"); else _explicitNullProperties?.Remove("health"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceHealthHealthItemProperty>? Health { get => _explicitNullValueHealth; set { _explicitNullValueHealth = value; AdditionalData?.Remove("health"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health"); else _explicitNullProperties?.Remove("health"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceHealthHealthItemProperty>? _explicitNullValueHealth = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceHealthHealthItemProperty> Health { get => _explicitNullValueHealth; set { _explicitNullValueHealth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health"); else _explicitNullProperties?.Remove("health"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceHealthHealthItemProperty> Health { get => _explicitNullValueHealth; set { _explicitNullValueHealth = value; AdditionalData?.Remove("health"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health"); else _explicitNullProperties?.Remove("health"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceHealthHealthItemProperty> _explicitNullValueHealth = default!;
 #endif
         /// <summary>

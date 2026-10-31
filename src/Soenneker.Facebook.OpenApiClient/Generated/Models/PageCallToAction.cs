@@ -17,25 +17,44 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("android_app") is { } nullNodeAndroidApp && nullNodeAndroidApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidApp = null;
-            if (parseNode.GetChildNode("android_deeplink") is { } nullNodeAndroidDeeplink && nullNodeAndroidDeeplink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidDeeplink = null;
-            if (parseNode.GetChildNode("android_destination_type") is { } nullNodeAndroidDestinationType && nullNodeAndroidDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidDestinationType = null;
-            if (parseNode.GetChildNode("android_package_name") is { } nullNodeAndroidPackageName && nullNodeAndroidPackageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidPackageName = null;
-            if (parseNode.GetChildNode("android_url") is { } nullNodeAndroidUrl && nullNodeAndroidUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidUrl = null;
-            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("intl_number_with_plus") is { } nullNodeIntlNumberWithPlus && nullNodeIntlNumberWithPlus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntlNumberWithPlus = null;
-            if (parseNode.GetChildNode("iphone_app") is { } nullNodeIphoneApp && nullNodeIphoneApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneApp = null;
-            if (parseNode.GetChildNode("iphone_deeplink") is { } nullNodeIphoneDeeplink && nullNodeIphoneDeeplink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneDeeplink = null;
-            if (parseNode.GetChildNode("iphone_destination_type") is { } nullNodeIphoneDestinationType && nullNodeIphoneDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneDestinationType = null;
-            if (parseNode.GetChildNode("iphone_url") is { } nullNodeIphoneUrl && nullNodeIphoneUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneUrl = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
-            if (parseNode.GetChildNode("web_destination_type") is { } nullNodeWebDestinationType && nullNodeWebDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebDestinationType = null;
-            if (parseNode.GetChildNode("web_url") is { } nullNodeWebUrl && nullNodeWebUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebUrl = null;
+            if (parseNode.GetChildNode("android_app") is null) { _explicitNullValueAndroidApp = default!; _explicitNullProperties?.Remove("android_app"); }
+            else if (parseNode.GetChildNode("android_app") is { } nullNodeAndroidApp && nullNodeAndroidApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidApp = null;
+            if (parseNode.GetChildNode("android_deeplink") is null) { _explicitNullValueAndroidDeeplink = default!; _explicitNullProperties?.Remove("android_deeplink"); }
+            else if (parseNode.GetChildNode("android_deeplink") is { } nullNodeAndroidDeeplink && nullNodeAndroidDeeplink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidDeeplink = null;
+            if (parseNode.GetChildNode("android_destination_type") is null) { _explicitNullValueAndroidDestinationType = default!; _explicitNullProperties?.Remove("android_destination_type"); }
+            else if (parseNode.GetChildNode("android_destination_type") is { } nullNodeAndroidDestinationType && nullNodeAndroidDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidDestinationType = null;
+            if (parseNode.GetChildNode("android_package_name") is null) { _explicitNullValueAndroidPackageName = default!; _explicitNullProperties?.Remove("android_package_name"); }
+            else if (parseNode.GetChildNode("android_package_name") is { } nullNodeAndroidPackageName && nullNodeAndroidPackageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidPackageName = null;
+            if (parseNode.GetChildNode("android_url") is null) { _explicitNullValueAndroidUrl = default!; _explicitNullProperties?.Remove("android_url"); }
+            else if (parseNode.GetChildNode("android_url") is { } nullNodeAndroidUrl && nullNodeAndroidUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidUrl = null;
+            if (parseNode.GetChildNode("created_time") is null) { _explicitNullValueCreatedTime = default!; _explicitNullProperties?.Remove("created_time"); }
+            else if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("from") is null) { _explicitNullValueFrom = default!; _explicitNullProperties?.Remove("from"); }
+            else if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("intl_number_with_plus") is null) { _explicitNullValueIntlNumberWithPlus = default!; _explicitNullProperties?.Remove("intl_number_with_plus"); }
+            else if (parseNode.GetChildNode("intl_number_with_plus") is { } nullNodeIntlNumberWithPlus && nullNodeIntlNumberWithPlus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntlNumberWithPlus = null;
+            if (parseNode.GetChildNode("iphone_app") is null) { _explicitNullValueIphoneApp = default!; _explicitNullProperties?.Remove("iphone_app"); }
+            else if (parseNode.GetChildNode("iphone_app") is { } nullNodeIphoneApp && nullNodeIphoneApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneApp = null;
+            if (parseNode.GetChildNode("iphone_deeplink") is null) { _explicitNullValueIphoneDeeplink = default!; _explicitNullProperties?.Remove("iphone_deeplink"); }
+            else if (parseNode.GetChildNode("iphone_deeplink") is { } nullNodeIphoneDeeplink && nullNodeIphoneDeeplink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneDeeplink = null;
+            if (parseNode.GetChildNode("iphone_destination_type") is null) { _explicitNullValueIphoneDestinationType = default!; _explicitNullProperties?.Remove("iphone_destination_type"); }
+            else if (parseNode.GetChildNode("iphone_destination_type") is { } nullNodeIphoneDestinationType && nullNodeIphoneDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneDestinationType = null;
+            if (parseNode.GetChildNode("iphone_url") is null) { _explicitNullValueIphoneUrl = default!; _explicitNullProperties?.Remove("iphone_url"); }
+            else if (parseNode.GetChildNode("iphone_url") is { } nullNodeIphoneUrl && nullNodeIphoneUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneUrl = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("updated_time") is null) { _explicitNullValueUpdatedTime = default!; _explicitNullProperties?.Remove("updated_time"); }
+            else if (parseNode.GetChildNode("updated_time") is { } nullNodeUpdatedTime && nullNodeUpdatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTime = null;
+            if (parseNode.GetChildNode("web_destination_type") is null) { _explicitNullValueWebDestinationType = default!; _explicitNullProperties?.Remove("web_destination_type"); }
+            else if (parseNode.GetChildNode("web_destination_type") is { } nullNodeWebDestinationType && nullNodeWebDestinationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebDestinationType = null;
+            if (parseNode.GetChildNode("web_url") is null) { _explicitNullValueWebUrl = default!; _explicitNullProperties?.Remove("web_url"); }
+            else if (parseNode.GetChildNode("web_url") is { } nullNodeWebUrl && nullNodeWebUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,149 +62,149 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The android_app property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Application? AndroidApp { get => _explicitNullValueAndroidApp; set { _explicitNullValueAndroidApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_app"); else _explicitNullProperties?.Remove("android_app"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application? AndroidApp { get => _explicitNullValueAndroidApp; set { _explicitNullValueAndroidApp = value; AdditionalData?.Remove("android_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_app"); else _explicitNullProperties?.Remove("android_app"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Application? _explicitNullValueAndroidApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Application AndroidApp { get => _explicitNullValueAndroidApp; set { _explicitNullValueAndroidApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_app"); else _explicitNullProperties?.Remove("android_app"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application AndroidApp { get => _explicitNullValueAndroidApp; set { _explicitNullValueAndroidApp = value; AdditionalData?.Remove("android_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_app"); else _explicitNullProperties?.Remove("android_app"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Application _explicitNullValueAndroidApp = default!;
 #endif
         /// <summary>The android_deeplink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AndroidDeeplink { get => _explicitNullValueAndroidDeeplink; set { _explicitNullValueAndroidDeeplink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_deeplink"); else _explicitNullProperties?.Remove("android_deeplink"); } }
+        public string? AndroidDeeplink { get => _explicitNullValueAndroidDeeplink; set { _explicitNullValueAndroidDeeplink = value; AdditionalData?.Remove("android_deeplink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_deeplink"); else _explicitNullProperties?.Remove("android_deeplink"); } }
         private string? _explicitNullValueAndroidDeeplink = default!;
 #nullable restore
 #else
-        public string AndroidDeeplink { get => _explicitNullValueAndroidDeeplink; set { _explicitNullValueAndroidDeeplink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_deeplink"); else _explicitNullProperties?.Remove("android_deeplink"); } }
+        public string AndroidDeeplink { get => _explicitNullValueAndroidDeeplink; set { _explicitNullValueAndroidDeeplink = value; AdditionalData?.Remove("android_deeplink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_deeplink"); else _explicitNullProperties?.Remove("android_deeplink"); } }
         private string _explicitNullValueAndroidDeeplink = default!;
 #endif
         /// <summary>The android_destination_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionAndroidDestinationType? AndroidDestinationType { get => _explicitNullValueAndroidDestinationType; set { _explicitNullValueAndroidDestinationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_destination_type"); else _explicitNullProperties?.Remove("android_destination_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionAndroidDestinationType? AndroidDestinationType { get => _explicitNullValueAndroidDestinationType; set { _explicitNullValueAndroidDestinationType = value; AdditionalData?.Remove("android_destination_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_destination_type"); else _explicitNullProperties?.Remove("android_destination_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionAndroidDestinationType? _explicitNullValueAndroidDestinationType = default!;
         /// <summary>The android_package_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AndroidPackageName { get => _explicitNullValueAndroidPackageName; set { _explicitNullValueAndroidPackageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_package_name"); else _explicitNullProperties?.Remove("android_package_name"); } }
+        public string? AndroidPackageName { get => _explicitNullValueAndroidPackageName; set { _explicitNullValueAndroidPackageName = value; AdditionalData?.Remove("android_package_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_package_name"); else _explicitNullProperties?.Remove("android_package_name"); } }
         private string? _explicitNullValueAndroidPackageName = default!;
 #nullable restore
 #else
-        public string AndroidPackageName { get => _explicitNullValueAndroidPackageName; set { _explicitNullValueAndroidPackageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_package_name"); else _explicitNullProperties?.Remove("android_package_name"); } }
+        public string AndroidPackageName { get => _explicitNullValueAndroidPackageName; set { _explicitNullValueAndroidPackageName = value; AdditionalData?.Remove("android_package_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_package_name"); else _explicitNullProperties?.Remove("android_package_name"); } }
         private string _explicitNullValueAndroidPackageName = default!;
 #endif
         /// <summary>The android_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
+        public string? AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; AdditionalData?.Remove("android_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
         private string? _explicitNullValueAndroidUrl = default!;
 #nullable restore
 #else
-        public string AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
+        public string AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; AdditionalData?.Remove("android_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
         private string _explicitNullValueAndroidUrl = default!;
 #endif
         /// <summary>The created_time property</summary>
-        public DateTimeOffset? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public DateTimeOffset? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private DateTimeOffset? _explicitNullValueCreatedTime = default!;
         /// <summary>The email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Page? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Page? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Page? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Page From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Page From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Page _explicitNullValueFrom = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The intl_number_with_plus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntlNumberWithPlus { get => _explicitNullValueIntlNumberWithPlus; set { _explicitNullValueIntlNumberWithPlus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intl_number_with_plus"); else _explicitNullProperties?.Remove("intl_number_with_plus"); } }
+        public string? IntlNumberWithPlus { get => _explicitNullValueIntlNumberWithPlus; set { _explicitNullValueIntlNumberWithPlus = value; AdditionalData?.Remove("intl_number_with_plus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intl_number_with_plus"); else _explicitNullProperties?.Remove("intl_number_with_plus"); } }
         private string? _explicitNullValueIntlNumberWithPlus = default!;
 #nullable restore
 #else
-        public string IntlNumberWithPlus { get => _explicitNullValueIntlNumberWithPlus; set { _explicitNullValueIntlNumberWithPlus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intl_number_with_plus"); else _explicitNullProperties?.Remove("intl_number_with_plus"); } }
+        public string IntlNumberWithPlus { get => _explicitNullValueIntlNumberWithPlus; set { _explicitNullValueIntlNumberWithPlus = value; AdditionalData?.Remove("intl_number_with_plus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intl_number_with_plus"); else _explicitNullProperties?.Remove("intl_number_with_plus"); } }
         private string _explicitNullValueIntlNumberWithPlus = default!;
 #endif
         /// <summary>The iphone_app property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Application? IphoneApp { get => _explicitNullValueIphoneApp; set { _explicitNullValueIphoneApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_app"); else _explicitNullProperties?.Remove("iphone_app"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application? IphoneApp { get => _explicitNullValueIphoneApp; set { _explicitNullValueIphoneApp = value; AdditionalData?.Remove("iphone_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_app"); else _explicitNullProperties?.Remove("iphone_app"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Application? _explicitNullValueIphoneApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Application IphoneApp { get => _explicitNullValueIphoneApp; set { _explicitNullValueIphoneApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_app"); else _explicitNullProperties?.Remove("iphone_app"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Application IphoneApp { get => _explicitNullValueIphoneApp; set { _explicitNullValueIphoneApp = value; AdditionalData?.Remove("iphone_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_app"); else _explicitNullProperties?.Remove("iphone_app"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Application _explicitNullValueIphoneApp = default!;
 #endif
         /// <summary>The iphone_deeplink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IphoneDeeplink { get => _explicitNullValueIphoneDeeplink; set { _explicitNullValueIphoneDeeplink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_deeplink"); else _explicitNullProperties?.Remove("iphone_deeplink"); } }
+        public string? IphoneDeeplink { get => _explicitNullValueIphoneDeeplink; set { _explicitNullValueIphoneDeeplink = value; AdditionalData?.Remove("iphone_deeplink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_deeplink"); else _explicitNullProperties?.Remove("iphone_deeplink"); } }
         private string? _explicitNullValueIphoneDeeplink = default!;
 #nullable restore
 #else
-        public string IphoneDeeplink { get => _explicitNullValueIphoneDeeplink; set { _explicitNullValueIphoneDeeplink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_deeplink"); else _explicitNullProperties?.Remove("iphone_deeplink"); } }
+        public string IphoneDeeplink { get => _explicitNullValueIphoneDeeplink; set { _explicitNullValueIphoneDeeplink = value; AdditionalData?.Remove("iphone_deeplink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_deeplink"); else _explicitNullProperties?.Remove("iphone_deeplink"); } }
         private string _explicitNullValueIphoneDeeplink = default!;
 #endif
         /// <summary>The iphone_destination_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType? IphoneDestinationType { get => _explicitNullValueIphoneDestinationType; set { _explicitNullValueIphoneDestinationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_destination_type"); else _explicitNullProperties?.Remove("iphone_destination_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType? IphoneDestinationType { get => _explicitNullValueIphoneDestinationType; set { _explicitNullValueIphoneDestinationType = value; AdditionalData?.Remove("iphone_destination_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_destination_type"); else _explicitNullProperties?.Remove("iphone_destination_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType? _explicitNullValueIphoneDestinationType = default!;
         /// <summary>The iphone_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IphoneUrl { get => _explicitNullValueIphoneUrl; set { _explicitNullValueIphoneUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_url"); else _explicitNullProperties?.Remove("iphone_url"); } }
+        public string? IphoneUrl { get => _explicitNullValueIphoneUrl; set { _explicitNullValueIphoneUrl = value; AdditionalData?.Remove("iphone_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_url"); else _explicitNullProperties?.Remove("iphone_url"); } }
         private string? _explicitNullValueIphoneUrl = default!;
 #nullable restore
 #else
-        public string IphoneUrl { get => _explicitNullValueIphoneUrl; set { _explicitNullValueIphoneUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_url"); else _explicitNullProperties?.Remove("iphone_url"); } }
+        public string IphoneUrl { get => _explicitNullValueIphoneUrl; set { _explicitNullValueIphoneUrl = value; AdditionalData?.Remove("iphone_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone_url"); else _explicitNullProperties?.Remove("iphone_url"); } }
         private string _explicitNullValueIphoneUrl = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionType? _explicitNullValueType = default!;
         /// <summary>The updated_time property</summary>
-        public DateTimeOffset? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
+        public DateTimeOffset? UpdatedTime { get => _explicitNullValueUpdatedTime; set { _explicitNullValueUpdatedTime = value; AdditionalData?.Remove("updated_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_time"); else _explicitNullProperties?.Remove("updated_time"); } }
         private DateTimeOffset? _explicitNullValueUpdatedTime = default!;
         /// <summary>The web_destination_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionWebDestinationType? WebDestinationType { get => _explicitNullValueWebDestinationType; set { _explicitNullValueWebDestinationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_destination_type"); else _explicitNullProperties?.Remove("web_destination_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionWebDestinationType? WebDestinationType { get => _explicitNullValueWebDestinationType; set { _explicitNullValueWebDestinationType = value; AdditionalData?.Remove("web_destination_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_destination_type"); else _explicitNullProperties?.Remove("web_destination_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionWebDestinationType? _explicitNullValueWebDestinationType = default!;
         /// <summary>The web_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
+        public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
         private string? _explicitNullValueWebUrl = default!;
 #nullable restore
 #else
-        public string WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
+        public string WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
         private string _explicitNullValueWebUrl = default!;
 #endif
         /// <summary>
@@ -215,7 +234,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "android_app", n => { AndroidApp = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Application>(global::Soenneker.Facebook.OpenApiClient.Models.Application.CreateFromDiscriminatorValue); } },
                 { "android_deeplink", n => { AndroidDeeplink = n.GetStringValue(); } },
-                { "android_destination_type", n => { AndroidDestinationType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionAndroidDestinationType>(); } },
+                { "android_destination_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionAndroidDestinationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAndroidDestinationType = default; _explicitNullProperties?.Remove("android_destination_type"); AdditionalData["android_destination_type"] = unknown; } else { AndroidDestinationType = parsed; AdditionalData.Remove("android_destination_type"); } } },
                 { "android_package_name", n => { AndroidPackageName = n.GetStringValue(); } },
                 { "android_url", n => { AndroidUrl = n.GetStringValue(); } },
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
@@ -225,12 +244,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "intl_number_with_plus", n => { IntlNumberWithPlus = n.GetStringValue(); } },
                 { "iphone_app", n => { IphoneApp = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Application>(global::Soenneker.Facebook.OpenApiClient.Models.Application.CreateFromDiscriminatorValue); } },
                 { "iphone_deeplink", n => { IphoneDeeplink = n.GetStringValue(); } },
-                { "iphone_destination_type", n => { IphoneDestinationType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType>(); } },
+                { "iphone_destination_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIphoneDestinationType = default; _explicitNullProperties?.Remove("iphone_destination_type"); AdditionalData["iphone_destination_type"] = unknown; } else { IphoneDestinationType = parsed; AdditionalData.Remove("iphone_destination_type"); } } },
                 { "iphone_url", n => { IphoneUrl = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "updated_time", n => { UpdatedTime = n.GetDateTimeOffsetValue(); } },
-                { "web_destination_type", n => { WebDestinationType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionWebDestinationType>(); } },
+                { "web_destination_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionWebDestinationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWebDestinationType = default; _explicitNullProperties?.Remove("web_destination_type"); AdditionalData["web_destination_type"] = unknown; } else { WebDestinationType = parsed; AdditionalData.Remove("web_destination_type"); } } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
             };
         }

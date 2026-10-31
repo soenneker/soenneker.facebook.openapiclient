@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mappings") is { } nullNodeMappings && nullNodeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mappings = null;
-            if (parseNode.GetChildNode("mutation_method") is { } nullNodeMutationMethod && nullNodeMutationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MutationMethod = null;
-            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
-            if (parseNode.GetChildNode("post_method") is { } nullNodePostMethod && nullNodePostMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostMethod = null;
+            if (parseNode.GetChildNode("mappings") is null) { _explicitNullValueMappings = default!; _explicitNullProperties?.Remove("mappings"); }
+            else if (parseNode.GetChildNode("mappings") is { } nullNodeMappings && nullNodeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mappings = null;
+            if (parseNode.GetChildNode("mutation_method") is null) { _explicitNullValueMutationMethod = default!; _explicitNullProperties?.Remove("mutation_method"); }
+            else if (parseNode.GetChildNode("mutation_method") is { } nullNodeMutationMethod && nullNodeMutationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MutationMethod = null;
+            if (parseNode.GetChildNode("platform") is null) { _explicitNullValuePlatform = default!; _explicitNullProperties?.Remove("platform"); }
+            else if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+            if (parseNode.GetChildNode("post_method") is null) { _explicitNullValuePostMethod = default!; _explicitNullProperties?.Remove("post_method"); }
+            else if (parseNode.GetChildNode("post_method") is { } nullNodePostMethod && nullNodePostMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostMethod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,21 +32,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
+        public string? Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; AdditionalData?.Remove("mappings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
         private string? _explicitNullValueMappings = default!;
 #nullable restore
 #else
-        public string Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
+        public string Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; AdditionalData?.Remove("mappings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
         private string _explicitNullValueMappings = default!;
 #endif
         /// <summary>The mutation_method property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsMutationMethodEnumParam? MutationMethod { get => _explicitNullValueMutationMethod; set { _explicitNullValueMutationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mutation_method"); else _explicitNullProperties?.Remove("mutation_method"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsMutationMethodEnumParam? MutationMethod { get => _explicitNullValueMutationMethod; set { _explicitNullValueMutationMethod = value; AdditionalData?.Remove("mutation_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mutation_method"); else _explicitNullProperties?.Remove("mutation_method"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsMutationMethodEnumParam? _explicitNullValueMutationMethod = default!;
         /// <summary>The platform property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; AdditionalData?.Remove("platform"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPlatformEnumParam? _explicitNullValuePlatform = default!;
         /// <summary>The post_method property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPostMethodEnumParam? PostMethod { get => _explicitNullValuePostMethod; set { _explicitNullValuePostMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_method"); else _explicitNullProperties?.Remove("post_method"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPostMethodEnumParam? PostMethod { get => _explicitNullValuePostMethod; set { _explicitNullValuePostMethod = value; AdditionalData?.Remove("post_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_method"); else _explicitNullProperties?.Remove("post_method"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPostMethodEnumParam? _explicitNullValuePostMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdCodelessEventMappingsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -70,9 +74,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "mappings", n => { Mappings = n.GetStringValue(); } },
-                { "mutation_method", n => { MutationMethod = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsMutationMethodEnumParam>(); } },
-                { "platform", n => { Platform = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPlatformEnumParam>(); } },
-                { "post_method", n => { PostMethod = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPostMethodEnumParam>(); } },
+                { "mutation_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsMutationMethodEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMutationMethod = default; _explicitNullProperties?.Remove("mutation_method"); AdditionalData["mutation_method"] = unknown; } else { MutationMethod = parsed; AdditionalData.Remove("mutation_method"); } } },
+                { "platform", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPlatformEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePlatform = default; _explicitNullProperties?.Remove("platform"); AdditionalData["platform"] = unknown; } else { Platform = parsed; AdditionalData.Remove("platform"); } } },
+                { "post_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationcodelessEventMappingsPostMethodEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePostMethod = default; _explicitNullProperties?.Remove("post_method"); AdditionalData["post_method"] = unknown; } else { PostMethod = parsed; AdditionalData.Remove("post_method"); } } },
             };
         }
         /// <summary>

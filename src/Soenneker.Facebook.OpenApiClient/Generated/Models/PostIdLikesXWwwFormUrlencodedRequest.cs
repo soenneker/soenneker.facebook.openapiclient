@@ -17,11 +17,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attribution_id_v2") is { } nullNodeAttributionIdV2 && nullNodeAttributionIdV2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionIdV2 = null;
-            if (parseNode.GetChildNode("feedback_source") is { } nullNodeFeedbackSource && nullNodeFeedbackSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedbackSource = null;
-            if (parseNode.GetChildNode("nectar_module") is { } nullNodeNectarModule && nullNodeNectarModule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NectarModule = null;
-            if (parseNode.GetChildNode("notify") is { } nullNodeNotify && nullNodeNotify.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notify = null;
-            if (parseNode.GetChildNode("tracking") is { } nullNodeTracking && nullNodeTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tracking = null;
+            if (parseNode.GetChildNode("attribution_id_v2") is null) { _explicitNullValueAttributionIdV2 = default!; _explicitNullProperties?.Remove("attribution_id_v2"); }
+            else if (parseNode.GetChildNode("attribution_id_v2") is { } nullNodeAttributionIdV2 && nullNodeAttributionIdV2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionIdV2 = null;
+            if (parseNode.GetChildNode("feedback_source") is null) { _explicitNullValueFeedbackSource = default!; _explicitNullProperties?.Remove("feedback_source"); }
+            else if (parseNode.GetChildNode("feedback_source") is { } nullNodeFeedbackSource && nullNodeFeedbackSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedbackSource = null;
+            if (parseNode.GetChildNode("nectar_module") is null) { _explicitNullValueNectarModule = default!; _explicitNullProperties?.Remove("nectar_module"); }
+            else if (parseNode.GetChildNode("nectar_module") is { } nullNodeNectarModule && nullNodeNectarModule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NectarModule = null;
+            if (parseNode.GetChildNode("notify") is null) { _explicitNullValueNotify = default!; _explicitNullProperties?.Remove("notify"); }
+            else if (parseNode.GetChildNode("notify") is { } nullNodeNotify && nullNodeNotify.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notify = null;
+            if (parseNode.GetChildNode("tracking") is null) { _explicitNullValueTracking = default!; _explicitNullProperties?.Remove("tracking"); }
+            else if (parseNode.GetChildNode("tracking") is { } nullNodeTracking && nullNodeTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tracking = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The attribution_id_v2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AttributionIdV2 { get => _explicitNullValueAttributionIdV2; set { _explicitNullValueAttributionIdV2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id_v2"); else _explicitNullProperties?.Remove("attribution_id_v2"); } }
+        public string? AttributionIdV2 { get => _explicitNullValueAttributionIdV2; set { _explicitNullValueAttributionIdV2 = value; AdditionalData?.Remove("attribution_id_v2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id_v2"); else _explicitNullProperties?.Remove("attribution_id_v2"); } }
         private string? _explicitNullValueAttributionIdV2 = default!;
 #nullable restore
 #else
-        public string AttributionIdV2 { get => _explicitNullValueAttributionIdV2; set { _explicitNullValueAttributionIdV2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id_v2"); else _explicitNullProperties?.Remove("attribution_id_v2"); } }
+        public string AttributionIdV2 { get => _explicitNullValueAttributionIdV2; set { _explicitNullValueAttributionIdV2 = value; AdditionalData?.Remove("attribution_id_v2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_id_v2"); else _explicitNullProperties?.Remove("attribution_id_v2"); } }
         private string _explicitNullValueAttributionIdV2 = default!;
 #endif
         /// <summary>The feedback_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FeedbackSource { get => _explicitNullValueFeedbackSource; set { _explicitNullValueFeedbackSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback_source"); else _explicitNullProperties?.Remove("feedback_source"); } }
+        public string? FeedbackSource { get => _explicitNullValueFeedbackSource; set { _explicitNullValueFeedbackSource = value; AdditionalData?.Remove("feedback_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback_source"); else _explicitNullProperties?.Remove("feedback_source"); } }
         private string? _explicitNullValueFeedbackSource = default!;
 #nullable restore
 #else
-        public string FeedbackSource { get => _explicitNullValueFeedbackSource; set { _explicitNullValueFeedbackSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback_source"); else _explicitNullProperties?.Remove("feedback_source"); } }
+        public string FeedbackSource { get => _explicitNullValueFeedbackSource; set { _explicitNullValueFeedbackSource = value; AdditionalData?.Remove("feedback_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback_source"); else _explicitNullProperties?.Remove("feedback_source"); } }
         private string _explicitNullValueFeedbackSource = default!;
 #endif
         /// <summary>The nectar_module property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NectarModule { get => _explicitNullValueNectarModule; set { _explicitNullValueNectarModule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nectar_module"); else _explicitNullProperties?.Remove("nectar_module"); } }
+        public string? NectarModule { get => _explicitNullValueNectarModule; set { _explicitNullValueNectarModule = value; AdditionalData?.Remove("nectar_module"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nectar_module"); else _explicitNullProperties?.Remove("nectar_module"); } }
         private string? _explicitNullValueNectarModule = default!;
 #nullable restore
 #else
-        public string NectarModule { get => _explicitNullValueNectarModule; set { _explicitNullValueNectarModule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nectar_module"); else _explicitNullProperties?.Remove("nectar_module"); } }
+        public string NectarModule { get => _explicitNullValueNectarModule; set { _explicitNullValueNectarModule = value; AdditionalData?.Remove("nectar_module"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nectar_module"); else _explicitNullProperties?.Remove("nectar_module"); } }
         private string _explicitNullValueNectarModule = default!;
 #endif
         /// <summary>The notify property</summary>
-        public bool? Notify { get => _explicitNullValueNotify; set { _explicitNullValueNotify = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify"); else _explicitNullProperties?.Remove("notify"); } }
+        public bool? Notify { get => _explicitNullValueNotify; set { _explicitNullValueNotify = value; AdditionalData?.Remove("notify"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify"); else _explicitNullProperties?.Remove("notify"); } }
         private bool? _explicitNullValueNotify = default!;
         /// <summary>The tracking property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tracking { get => _explicitNullValueTracking; set { _explicitNullValueTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking"); else _explicitNullProperties?.Remove("tracking"); } }
+        public string? Tracking { get => _explicitNullValueTracking; set { _explicitNullValueTracking = value; AdditionalData?.Remove("tracking"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking"); else _explicitNullProperties?.Remove("tracking"); } }
         private string? _explicitNullValueTracking = default!;
 #nullable restore
 #else
-        public string Tracking { get => _explicitNullValueTracking; set { _explicitNullValueTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking"); else _explicitNullProperties?.Remove("tracking"); } }
+        public string Tracking { get => _explicitNullValueTracking; set { _explicitNullValueTracking = value; AdditionalData?.Remove("tracking"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking"); else _explicitNullProperties?.Remove("tracking"); } }
         private string _explicitNullValueTracking = default!;
 #endif
         /// <summary>

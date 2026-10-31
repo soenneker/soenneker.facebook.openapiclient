@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("upload_schedule") is { } nullNodeUploadSchedule && nullNodeUploadSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadSchedule = null;
+            if (parseNode.GetChildNode("upload_schedule") is null) { _explicitNullValueUploadSchedule = default!; _explicitNullProperties?.Remove("upload_schedule"); }
+            else if (parseNode.GetChildNode("upload_schedule") is { } nullNodeUploadSchedule && nullNodeUploadSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadSchedule = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The upload_schedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadSchedule { get => _explicitNullValueUploadSchedule; set { _explicitNullValueUploadSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_schedule"); else _explicitNullProperties?.Remove("upload_schedule"); } }
+        public string? UploadSchedule { get => _explicitNullValueUploadSchedule; set { _explicitNullValueUploadSchedule = value; AdditionalData?.Remove("upload_schedule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_schedule"); else _explicitNullProperties?.Remove("upload_schedule"); } }
         private string? _explicitNullValueUploadSchedule = default!;
 #nullable restore
 #else
-        public string UploadSchedule { get => _explicitNullValueUploadSchedule; set { _explicitNullValueUploadSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_schedule"); else _explicitNullProperties?.Remove("upload_schedule"); } }
+        public string UploadSchedule { get => _explicitNullValueUploadSchedule; set { _explicitNullValueUploadSchedule = value; AdditionalData?.Remove("upload_schedule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload_schedule"); else _explicitNullProperties?.Remove("upload_schedule"); } }
         private string _explicitNullValueUploadSchedule = default!;
 #endif
         /// <summary>

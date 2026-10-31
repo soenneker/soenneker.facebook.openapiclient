@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aem_conversions") is { } nullNodeAemConversions && nullNodeAemConversions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AemConversions = null;
+            if (parseNode.GetChildNode("aem_conversions") is null) { _explicitNullValueAemConversions = default!; _explicitNullProperties?.Remove("aem_conversions"); }
+            else if (parseNode.GetChildNode("aem_conversions") is { } nullNodeAemConversions && nullNodeAemConversions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AemConversions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AemConversions { get => _explicitNullValueAemConversions; set { _explicitNullValueAemConversions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aem_conversions"); else _explicitNullProperties?.Remove("aem_conversions"); } }
+        public string? AemConversions { get => _explicitNullValueAemConversions; set { _explicitNullValueAemConversions = value; AdditionalData?.Remove("aem_conversions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aem_conversions"); else _explicitNullProperties?.Remove("aem_conversions"); } }
         private string? _explicitNullValueAemConversions = default!;
 #nullable restore
 #else
-        public string AemConversions { get => _explicitNullValueAemConversions; set { _explicitNullValueAemConversions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aem_conversions"); else _explicitNullProperties?.Remove("aem_conversions"); } }
+        public string AemConversions { get => _explicitNullValueAemConversions; set { _explicitNullValueAemConversions = value; AdditionalData?.Remove("aem_conversions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aem_conversions"); else _explicitNullProperties?.Remove("aem_conversions"); } }
         private string _explicitNullValueAemConversions = default!;
 #endif
         /// <summary>

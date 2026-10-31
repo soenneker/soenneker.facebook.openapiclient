@@ -17,68 +17,76 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
-            if (parseNode.GetChildNode("has_rating") is { } nullNodeHasRating && nullNodeHasRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasRating = null;
-            if (parseNode.GetChildNode("has_review") is { } nullNodeHasReview && nullNodeHasReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasReview = null;
-            if (parseNode.GetChildNode("open_graph_story") is { } nullNodeOpenGraphStory && nullNodeOpenGraphStory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenGraphStory = null;
-            if (parseNode.GetChildNode("rating") is { } nullNodeRating && nullNodeRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rating = null;
-            if (parseNode.GetChildNode("recommendation_type") is { } nullNodeRecommendationType && nullNodeRecommendationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendationType = null;
-            if (parseNode.GetChildNode("reviewer") is { } nullNodeReviewer && nullNodeReviewer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reviewer = null;
-            if (parseNode.GetChildNode("review_text") is { } nullNodeReviewText && nullNodeReviewText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewText = null;
+            if (parseNode.GetChildNode("created_time") is null) { _explicitNullValueCreatedTime = default!; _explicitNullProperties?.Remove("created_time"); }
+            else if (parseNode.GetChildNode("created_time") is { } nullNodeCreatedTime && nullNodeCreatedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedTime = null;
+            if (parseNode.GetChildNode("has_rating") is null) { _explicitNullValueHasRating = default!; _explicitNullProperties?.Remove("has_rating"); }
+            else if (parseNode.GetChildNode("has_rating") is { } nullNodeHasRating && nullNodeHasRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasRating = null;
+            if (parseNode.GetChildNode("has_review") is null) { _explicitNullValueHasReview = default!; _explicitNullProperties?.Remove("has_review"); }
+            else if (parseNode.GetChildNode("has_review") is { } nullNodeHasReview && nullNodeHasReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasReview = null;
+            if (parseNode.GetChildNode("open_graph_story") is null) { _explicitNullValueOpenGraphStory = default!; _explicitNullProperties?.Remove("open_graph_story"); }
+            else if (parseNode.GetChildNode("open_graph_story") is { } nullNodeOpenGraphStory && nullNodeOpenGraphStory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenGraphStory = null;
+            if (parseNode.GetChildNode("rating") is null) { _explicitNullValueRating = default!; _explicitNullProperties?.Remove("rating"); }
+            else if (parseNode.GetChildNode("rating") is { } nullNodeRating && nullNodeRating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rating = null;
+            if (parseNode.GetChildNode("recommendation_type") is null) { _explicitNullValueRecommendationType = default!; _explicitNullProperties?.Remove("recommendation_type"); }
+            else if (parseNode.GetChildNode("recommendation_type") is { } nullNodeRecommendationType && nullNodeRecommendationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendationType = null;
+            if (parseNode.GetChildNode("reviewer") is null) { _explicitNullValueReviewer = default!; _explicitNullProperties?.Remove("reviewer"); }
+            else if (parseNode.GetChildNode("reviewer") is { } nullNodeReviewer && nullNodeReviewer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reviewer = null;
+            if (parseNode.GetChildNode("review_text") is null) { _explicitNullValueReviewText = default!; _explicitNullProperties?.Remove("review_text"); }
+            else if (parseNode.GetChildNode("review_text") is { } nullNodeReviewText && nullNodeReviewText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewText = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The created_time property</summary>
-        public DateTimeOffset? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
+        public DateTimeOffset? CreatedTime { get => _explicitNullValueCreatedTime; set { _explicitNullValueCreatedTime = value; AdditionalData?.Remove("created_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_time"); else _explicitNullProperties?.Remove("created_time"); } }
         private DateTimeOffset? _explicitNullValueCreatedTime = default!;
         /// <summary>The has_rating property</summary>
-        public bool? HasRating { get => _explicitNullValueHasRating; set { _explicitNullValueHasRating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_rating"); else _explicitNullProperties?.Remove("has_rating"); } }
+        public bool? HasRating { get => _explicitNullValueHasRating; set { _explicitNullValueHasRating = value; AdditionalData?.Remove("has_rating"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_rating"); else _explicitNullProperties?.Remove("has_rating"); } }
         private bool? _explicitNullValueHasRating = default!;
         /// <summary>The has_review property</summary>
-        public bool? HasReview { get => _explicitNullValueHasReview; set { _explicitNullValueHasReview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_review"); else _explicitNullProperties?.Remove("has_review"); } }
+        public bool? HasReview { get => _explicitNullValueHasReview; set { _explicitNullValueHasReview = value; AdditionalData?.Remove("has_review"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_review"); else _explicitNullProperties?.Remove("has_review"); } }
         private bool? _explicitNullValueHasReview = default!;
         /// <summary>The open_graph_story property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty? OpenGraphStory { get => _explicitNullValueOpenGraphStory; set { _explicitNullValueOpenGraphStory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_graph_story"); else _explicitNullProperties?.Remove("open_graph_story"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty? OpenGraphStory { get => _explicitNullValueOpenGraphStory; set { _explicitNullValueOpenGraphStory = value; AdditionalData?.Remove("open_graph_story"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_graph_story"); else _explicitNullProperties?.Remove("open_graph_story"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty? _explicitNullValueOpenGraphStory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty OpenGraphStory { get => _explicitNullValueOpenGraphStory; set { _explicitNullValueOpenGraphStory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_graph_story"); else _explicitNullProperties?.Remove("open_graph_story"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty OpenGraphStory { get => _explicitNullValueOpenGraphStory; set { _explicitNullValueOpenGraphStory = value; AdditionalData?.Remove("open_graph_story"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("open_graph_story"); else _explicitNullProperties?.Remove("open_graph_story"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.RecommendationOpenGraphStoryProperty _explicitNullValueOpenGraphStory = default!;
 #endif
         /// <summary>The rating property</summary>
-        public long? Rating { get => _explicitNullValueRating; set { _explicitNullValueRating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rating"); else _explicitNullProperties?.Remove("rating"); } }
+        public long? Rating { get => _explicitNullValueRating; set { _explicitNullValueRating = value; AdditionalData?.Remove("rating"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rating"); else _explicitNullProperties?.Remove("rating"); } }
         private long? _explicitNullValueRating = default!;
         /// <summary>The recommendation_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecommendationType { get => _explicitNullValueRecommendationType; set { _explicitNullValueRecommendationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_type"); else _explicitNullProperties?.Remove("recommendation_type"); } }
+        public string? RecommendationType { get => _explicitNullValueRecommendationType; set { _explicitNullValueRecommendationType = value; AdditionalData?.Remove("recommendation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_type"); else _explicitNullProperties?.Remove("recommendation_type"); } }
         private string? _explicitNullValueRecommendationType = default!;
 #nullable restore
 #else
-        public string RecommendationType { get => _explicitNullValueRecommendationType; set { _explicitNullValueRecommendationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_type"); else _explicitNullProperties?.Remove("recommendation_type"); } }
+        public string RecommendationType { get => _explicitNullValueRecommendationType; set { _explicitNullValueRecommendationType = value; AdditionalData?.Remove("recommendation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_type"); else _explicitNullProperties?.Remove("recommendation_type"); } }
         private string _explicitNullValueRecommendationType = default!;
 #endif
         /// <summary>The reviewer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.User? Reviewer { get => _explicitNullValueReviewer; set { _explicitNullValueReviewer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer"); else _explicitNullProperties?.Remove("reviewer"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User? Reviewer { get => _explicitNullValueReviewer; set { _explicitNullValueReviewer = value; AdditionalData?.Remove("reviewer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer"); else _explicitNullProperties?.Remove("reviewer"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.User? _explicitNullValueReviewer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.User Reviewer { get => _explicitNullValueReviewer; set { _explicitNullValueReviewer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer"); else _explicitNullProperties?.Remove("reviewer"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.User Reviewer { get => _explicitNullValueReviewer; set { _explicitNullValueReviewer = value; AdditionalData?.Remove("reviewer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer"); else _explicitNullProperties?.Remove("reviewer"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.User _explicitNullValueReviewer = default!;
 #endif
         /// <summary>The review_text property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReviewText { get => _explicitNullValueReviewText; set { _explicitNullValueReviewText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_text"); else _explicitNullProperties?.Remove("review_text"); } }
+        public string? ReviewText { get => _explicitNullValueReviewText; set { _explicitNullValueReviewText = value; AdditionalData?.Remove("review_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_text"); else _explicitNullProperties?.Remove("review_text"); } }
         private string? _explicitNullValueReviewText = default!;
 #nullable restore
 #else
-        public string ReviewText { get => _explicitNullValueReviewText; set { _explicitNullValueReviewText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_text"); else _explicitNullProperties?.Remove("review_text"); } }
+        public string ReviewText { get => _explicitNullValueReviewText; set { _explicitNullValueReviewText = value; AdditionalData?.Remove("review_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_text"); else _explicitNullProperties?.Remove("review_text"); } }
         private string _explicitNullValueReviewText = default!;
 #endif
         /// <summary>

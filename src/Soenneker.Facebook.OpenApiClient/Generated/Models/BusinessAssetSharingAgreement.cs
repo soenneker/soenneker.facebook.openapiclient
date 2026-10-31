@@ -17,12 +17,18 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("initiator") is { } nullNodeInitiator && nullNodeInitiator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Initiator = null;
-            if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
-            if (parseNode.GetChildNode("relationship_type") is { } nullNodeRelationshipType && nullNodeRelationshipType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelationshipType = null;
-            if (parseNode.GetChildNode("request_status") is { } nullNodeRequestStatus && nullNodeRequestStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestStatus = null;
-            if (parseNode.GetChildNode("request_type") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("initiator") is null) { _explicitNullValueInitiator = default!; _explicitNullProperties?.Remove("initiator"); }
+            else if (parseNode.GetChildNode("initiator") is { } nullNodeInitiator && nullNodeInitiator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Initiator = null;
+            if (parseNode.GetChildNode("recipient") is null) { _explicitNullValueRecipient = default!; _explicitNullProperties?.Remove("recipient"); }
+            else if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
+            if (parseNode.GetChildNode("relationship_type") is null) { _explicitNullValueRelationshipType = default!; _explicitNullProperties?.Remove("relationship_type"); }
+            else if (parseNode.GetChildNode("relationship_type") is { } nullNodeRelationshipType && nullNodeRelationshipType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelationshipType = null;
+            if (parseNode.GetChildNode("request_status") is null) { _explicitNullValueRequestStatus = default!; _explicitNullProperties?.Remove("request_status"); }
+            else if (parseNode.GetChildNode("request_status") is { } nullNodeRequestStatus && nullNodeRequestStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestStatus = null;
+            if (parseNode.GetChildNode("request_type") is null) { _explicitNullValueRequestType = default!; _explicitNullProperties?.Remove("request_type"); }
+            else if (parseNode.GetChildNode("request_type") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The initiator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business? Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business? Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; AdditionalData?.Remove("initiator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Business? _explicitNullValueInitiator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; AdditionalData?.Remove("initiator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Business _explicitNullValueInitiator = default!;
 #endif
         /// <summary>The recipient property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Business? _explicitNullValueRecipient = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Business Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Business Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Business _explicitNullValueRecipient = default!;
 #endif
         /// <summary>The relationship_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RelationshipType { get => _explicitNullValueRelationshipType; set { _explicitNullValueRelationshipType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship_type"); else _explicitNullProperties?.Remove("relationship_type"); } }
+        public List<string>? RelationshipType { get => _explicitNullValueRelationshipType; set { _explicitNullValueRelationshipType = value; AdditionalData?.Remove("relationship_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship_type"); else _explicitNullProperties?.Remove("relationship_type"); } }
         private List<string>? _explicitNullValueRelationshipType = default!;
 #nullable restore
 #else
-        public List<string> RelationshipType { get => _explicitNullValueRelationshipType; set { _explicitNullValueRelationshipType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship_type"); else _explicitNullProperties?.Remove("relationship_type"); } }
+        public List<string> RelationshipType { get => _explicitNullValueRelationshipType; set { _explicitNullValueRelationshipType = value; AdditionalData?.Remove("relationship_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship_type"); else _explicitNullProperties?.Remove("relationship_type"); } }
         private List<string> _explicitNullValueRelationshipType = default!;
 #endif
         /// <summary>The request_status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessinitiatedAudienceSharingRequestsRequestStatusEnumParam? RequestStatus { get => _explicitNullValueRequestStatus; set { _explicitNullValueRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_status"); else _explicitNullProperties?.Remove("request_status"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessinitiatedAudienceSharingRequestsRequestStatusEnumParam? RequestStatus { get => _explicitNullValueRequestStatus; set { _explicitNullValueRequestStatus = value; AdditionalData?.Remove("request_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_status"); else _explicitNullProperties?.Remove("request_status"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.BusinessinitiatedAudienceSharingRequestsRequestStatusEnumParam? _explicitNullValueRequestStatus = default!;
         /// <summary>The request_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
+        public string? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; AdditionalData?.Remove("request_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
         private string? _explicitNullValueRequestType = default!;
 #nullable restore
 #else
-        public string RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
+        public string RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; AdditionalData?.Remove("request_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_type"); else _explicitNullProperties?.Remove("request_type"); } }
         private string _explicitNullValueRequestType = default!;
 #endif
         /// <summary>
@@ -109,7 +115,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "initiator", n => { Initiator = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Business>(global::Soenneker.Facebook.OpenApiClient.Models.Business.CreateFromDiscriminatorValue); } },
                 { "recipient", n => { Recipient = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Business>(global::Soenneker.Facebook.OpenApiClient.Models.Business.CreateFromDiscriminatorValue); } },
                 { "relationship_type", n => { RelationshipType = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "request_status", n => { RequestStatus = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessinitiatedAudienceSharingRequestsRequestStatusEnumParam>(); } },
+                { "request_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessinitiatedAudienceSharingRequestsRequestStatusEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequestStatus = default; _explicitNullProperties?.Remove("request_status"); AdditionalData["request_status"] = unknown; } else { RequestStatus = parsed; AdditionalData.Remove("request_status"); } } },
                 { "request_type", n => { RequestType = n.GetStringValue(); } },
             };
         }

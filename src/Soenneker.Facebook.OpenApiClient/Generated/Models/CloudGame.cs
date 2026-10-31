@@ -17,15 +17,24 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
-            if (parseNode.GetChildNode("playable_ad_file_size") is { } nullNodePlayableAdFileSize && nullNodePlayableAdFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdFileSize = null;
-            if (parseNode.GetChildNode("playable_ad_orientation") is { } nullNodePlayableAdOrientation && nullNodePlayableAdOrientation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdOrientation = null;
-            if (parseNode.GetChildNode("playable_ad_package_name") is { } nullNodePlayableAdPackageName && nullNodePlayableAdPackageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdPackageName = null;
-            if (parseNode.GetChildNode("playable_ad_reject_reason") is { } nullNodePlayableAdRejectReason && nullNodePlayableAdRejectReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdRejectReason = null;
-            if (parseNode.GetChildNode("playable_ad_status") is { } nullNodePlayableAdStatus && nullNodePlayableAdStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdStatus = null;
-            if (parseNode.GetChildNode("playable_ad_upload_time") is { } nullNodePlayableAdUploadTime && nullNodePlayableAdUploadTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdUploadTime = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("owner") is null) { _explicitNullValueOwner = default!; _explicitNullProperties?.Remove("owner"); }
+            else if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("playable_ad_file_size") is null) { _explicitNullValuePlayableAdFileSize = default!; _explicitNullProperties?.Remove("playable_ad_file_size"); }
+            else if (parseNode.GetChildNode("playable_ad_file_size") is { } nullNodePlayableAdFileSize && nullNodePlayableAdFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdFileSize = null;
+            if (parseNode.GetChildNode("playable_ad_orientation") is null) { _explicitNullValuePlayableAdOrientation = default!; _explicitNullProperties?.Remove("playable_ad_orientation"); }
+            else if (parseNode.GetChildNode("playable_ad_orientation") is { } nullNodePlayableAdOrientation && nullNodePlayableAdOrientation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdOrientation = null;
+            if (parseNode.GetChildNode("playable_ad_package_name") is null) { _explicitNullValuePlayableAdPackageName = default!; _explicitNullProperties?.Remove("playable_ad_package_name"); }
+            else if (parseNode.GetChildNode("playable_ad_package_name") is { } nullNodePlayableAdPackageName && nullNodePlayableAdPackageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdPackageName = null;
+            if (parseNode.GetChildNode("playable_ad_reject_reason") is null) { _explicitNullValuePlayableAdRejectReason = default!; _explicitNullProperties?.Remove("playable_ad_reject_reason"); }
+            else if (parseNode.GetChildNode("playable_ad_reject_reason") is { } nullNodePlayableAdRejectReason && nullNodePlayableAdRejectReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdRejectReason = null;
+            if (parseNode.GetChildNode("playable_ad_status") is null) { _explicitNullValuePlayableAdStatus = default!; _explicitNullProperties?.Remove("playable_ad_status"); }
+            else if (parseNode.GetChildNode("playable_ad_status") is { } nullNodePlayableAdStatus && nullNodePlayableAdStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdStatus = null;
+            if (parseNode.GetChildNode("playable_ad_upload_time") is null) { _explicitNullValuePlayableAdUploadTime = default!; _explicitNullProperties?.Remove("playable_ad_upload_time"); }
+            else if (parseNode.GetChildNode("playable_ad_upload_time") is { } nullNodePlayableAdUploadTime && nullNodePlayableAdUploadTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayableAdUploadTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,78 +42,78 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.Profile? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Profile? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Profile? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.Profile Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.Profile Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Profile _explicitNullValueOwner = default!;
 #endif
         /// <summary>The playable_ad_file_size property</summary>
-        public long? PlayableAdFileSize { get => _explicitNullValuePlayableAdFileSize; set { _explicitNullValuePlayableAdFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_file_size"); else _explicitNullProperties?.Remove("playable_ad_file_size"); } }
+        public long? PlayableAdFileSize { get => _explicitNullValuePlayableAdFileSize; set { _explicitNullValuePlayableAdFileSize = value; AdditionalData?.Remove("playable_ad_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_file_size"); else _explicitNullProperties?.Remove("playable_ad_file_size"); } }
         private long? _explicitNullValuePlayableAdFileSize = default!;
         /// <summary>The playable_ad_orientation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlayableAdOrientation { get => _explicitNullValuePlayableAdOrientation; set { _explicitNullValuePlayableAdOrientation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_orientation"); else _explicitNullProperties?.Remove("playable_ad_orientation"); } }
+        public string? PlayableAdOrientation { get => _explicitNullValuePlayableAdOrientation; set { _explicitNullValuePlayableAdOrientation = value; AdditionalData?.Remove("playable_ad_orientation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_orientation"); else _explicitNullProperties?.Remove("playable_ad_orientation"); } }
         private string? _explicitNullValuePlayableAdOrientation = default!;
 #nullable restore
 #else
-        public string PlayableAdOrientation { get => _explicitNullValuePlayableAdOrientation; set { _explicitNullValuePlayableAdOrientation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_orientation"); else _explicitNullProperties?.Remove("playable_ad_orientation"); } }
+        public string PlayableAdOrientation { get => _explicitNullValuePlayableAdOrientation; set { _explicitNullValuePlayableAdOrientation = value; AdditionalData?.Remove("playable_ad_orientation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_orientation"); else _explicitNullProperties?.Remove("playable_ad_orientation"); } }
         private string _explicitNullValuePlayableAdOrientation = default!;
 #endif
         /// <summary>The playable_ad_package_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlayableAdPackageName { get => _explicitNullValuePlayableAdPackageName; set { _explicitNullValuePlayableAdPackageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_package_name"); else _explicitNullProperties?.Remove("playable_ad_package_name"); } }
+        public string? PlayableAdPackageName { get => _explicitNullValuePlayableAdPackageName; set { _explicitNullValuePlayableAdPackageName = value; AdditionalData?.Remove("playable_ad_package_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_package_name"); else _explicitNullProperties?.Remove("playable_ad_package_name"); } }
         private string? _explicitNullValuePlayableAdPackageName = default!;
 #nullable restore
 #else
-        public string PlayableAdPackageName { get => _explicitNullValuePlayableAdPackageName; set { _explicitNullValuePlayableAdPackageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_package_name"); else _explicitNullProperties?.Remove("playable_ad_package_name"); } }
+        public string PlayableAdPackageName { get => _explicitNullValuePlayableAdPackageName; set { _explicitNullValuePlayableAdPackageName = value; AdditionalData?.Remove("playable_ad_package_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_package_name"); else _explicitNullProperties?.Remove("playable_ad_package_name"); } }
         private string _explicitNullValuePlayableAdPackageName = default!;
 #endif
         /// <summary>The playable_ad_reject_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlayableAdRejectReason { get => _explicitNullValuePlayableAdRejectReason; set { _explicitNullValuePlayableAdRejectReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_reject_reason"); else _explicitNullProperties?.Remove("playable_ad_reject_reason"); } }
+        public string? PlayableAdRejectReason { get => _explicitNullValuePlayableAdRejectReason; set { _explicitNullValuePlayableAdRejectReason = value; AdditionalData?.Remove("playable_ad_reject_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_reject_reason"); else _explicitNullProperties?.Remove("playable_ad_reject_reason"); } }
         private string? _explicitNullValuePlayableAdRejectReason = default!;
 #nullable restore
 #else
-        public string PlayableAdRejectReason { get => _explicitNullValuePlayableAdRejectReason; set { _explicitNullValuePlayableAdRejectReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_reject_reason"); else _explicitNullProperties?.Remove("playable_ad_reject_reason"); } }
+        public string PlayableAdRejectReason { get => _explicitNullValuePlayableAdRejectReason; set { _explicitNullValuePlayableAdRejectReason = value; AdditionalData?.Remove("playable_ad_reject_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_reject_reason"); else _explicitNullProperties?.Remove("playable_ad_reject_reason"); } }
         private string _explicitNullValuePlayableAdRejectReason = default!;
 #endif
         /// <summary>The playable_ad_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlayableAdStatus { get => _explicitNullValuePlayableAdStatus; set { _explicitNullValuePlayableAdStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_status"); else _explicitNullProperties?.Remove("playable_ad_status"); } }
+        public string? PlayableAdStatus { get => _explicitNullValuePlayableAdStatus; set { _explicitNullValuePlayableAdStatus = value; AdditionalData?.Remove("playable_ad_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_status"); else _explicitNullProperties?.Remove("playable_ad_status"); } }
         private string? _explicitNullValuePlayableAdStatus = default!;
 #nullable restore
 #else
-        public string PlayableAdStatus { get => _explicitNullValuePlayableAdStatus; set { _explicitNullValuePlayableAdStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_status"); else _explicitNullProperties?.Remove("playable_ad_status"); } }
+        public string PlayableAdStatus { get => _explicitNullValuePlayableAdStatus; set { _explicitNullValuePlayableAdStatus = value; AdditionalData?.Remove("playable_ad_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_status"); else _explicitNullProperties?.Remove("playable_ad_status"); } }
         private string _explicitNullValuePlayableAdStatus = default!;
 #endif
         /// <summary>The playable_ad_upload_time property</summary>
-        public DateTimeOffset? PlayableAdUploadTime { get => _explicitNullValuePlayableAdUploadTime; set { _explicitNullValuePlayableAdUploadTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_upload_time"); else _explicitNullProperties?.Remove("playable_ad_upload_time"); } }
+        public DateTimeOffset? PlayableAdUploadTime { get => _explicitNullValuePlayableAdUploadTime; set { _explicitNullValuePlayableAdUploadTime = value; AdditionalData?.Remove("playable_ad_upload_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playable_ad_upload_time"); else _explicitNullProperties?.Remove("playable_ad_upload_time"); } }
         private DateTimeOffset? _explicitNullValuePlayableAdUploadTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.CloudGame"/> and sets the default values.

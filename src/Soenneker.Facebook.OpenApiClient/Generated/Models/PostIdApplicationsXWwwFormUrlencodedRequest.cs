@@ -17,13 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("business_app") is { } nullNodeBusinessApp && nullNodeBusinessApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessApp = null;
+            if (parseNode.GetChildNode("business_app") is null) { _explicitNullValueBusinessApp = default!; _explicitNullProperties?.Remove("business_app"); }
+            else if (parseNode.GetChildNode("business_app") is { } nullNodeBusinessApp && nullNodeBusinessApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessApp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The business_app property</summary>
-        public long? BusinessApp { get => _explicitNullValueBusinessApp; set { _explicitNullValueBusinessApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_app"); else _explicitNullProperties?.Remove("business_app"); } }
+        public long? BusinessApp { get => _explicitNullValueBusinessApp; set { _explicitNullValueBusinessApp = value; AdditionalData?.Remove("business_app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_app"); else _explicitNullProperties?.Remove("business_app"); } }
         private long? _explicitNullValueBusinessApp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdApplicationsXWwwFormUrlencodedRequest"/> and sets the default values.

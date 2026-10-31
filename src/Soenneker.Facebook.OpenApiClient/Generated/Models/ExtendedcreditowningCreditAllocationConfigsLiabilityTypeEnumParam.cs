@@ -8,6 +8,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     public enum ExtendedcreditowningCreditAllocationConfigsLiabilityTypeEnumParam
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "MSA")]
         #pragma warning disable CS1591
         Msa,

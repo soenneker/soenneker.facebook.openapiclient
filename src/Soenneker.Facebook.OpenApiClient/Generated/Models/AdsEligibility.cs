@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("live_shopping") is { } nullNodeLiveShopping && nullNodeLiveShopping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveShopping = null;
+            if (parseNode.GetChildNode("live_shopping") is null) { _explicitNullValueLiveShopping = default!; _explicitNullProperties?.Remove("live_shopping"); }
+            else if (parseNode.GetChildNode("live_shopping") is { } nullNodeLiveShopping && nullNodeLiveShopping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveShopping = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The live_shopping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdsEligibilityLiveShoppingProperty? LiveShopping { get => _explicitNullValueLiveShopping; set { _explicitNullValueLiveShopping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_shopping"); else _explicitNullProperties?.Remove("live_shopping"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdsEligibilityLiveShoppingProperty? LiveShopping { get => _explicitNullValueLiveShopping; set { _explicitNullValueLiveShopping = value; AdditionalData?.Remove("live_shopping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_shopping"); else _explicitNullProperties?.Remove("live_shopping"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdsEligibilityLiveShoppingProperty? _explicitNullValueLiveShopping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdsEligibilityLiveShoppingProperty LiveShopping { get => _explicitNullValueLiveShopping; set { _explicitNullValueLiveShopping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_shopping"); else _explicitNullProperties?.Remove("live_shopping"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdsEligibilityLiveShoppingProperty LiveShopping { get => _explicitNullValueLiveShopping; set { _explicitNullValueLiveShopping = value; AdditionalData?.Remove("live_shopping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_shopping"); else _explicitNullProperties?.Remove("live_shopping"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdsEligibilityLiveShoppingProperty _explicitNullValueLiveShopping = default!;
 #endif
         /// <summary>

@@ -17,43 +17,48 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audio_enabled") is { } nullNodeAudioEnabled && nullNodeAudioEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioEnabled = null;
-            if (parseNode.GetChildNode("call_hours") is { } nullNodeCallHours && nullNodeCallHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallHours = null;
-            if (parseNode.GetChildNode("call_routing") is { } nullNodeCallRouting && nullNodeCallRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRouting = null;
-            if (parseNode.GetChildNode("icon_enabled") is { } nullNodeIconEnabled && nullNodeIconEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IconEnabled = null;
-            if (parseNode.GetChildNode("video_enabled") is { } nullNodeVideoEnabled && nullNodeVideoEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoEnabled = null;
+            if (parseNode.GetChildNode("audio_enabled") is null) { _explicitNullValueAudioEnabled = default!; _explicitNullProperties?.Remove("audio_enabled"); }
+            else if (parseNode.GetChildNode("audio_enabled") is { } nullNodeAudioEnabled && nullNodeAudioEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioEnabled = null;
+            if (parseNode.GetChildNode("call_hours") is null) { _explicitNullValueCallHours = default!; _explicitNullProperties?.Remove("call_hours"); }
+            else if (parseNode.GetChildNode("call_hours") is { } nullNodeCallHours && nullNodeCallHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallHours = null;
+            if (parseNode.GetChildNode("call_routing") is null) { _explicitNullValueCallRouting = default!; _explicitNullProperties?.Remove("call_routing"); }
+            else if (parseNode.GetChildNode("call_routing") is { } nullNodeCallRouting && nullNodeCallRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRouting = null;
+            if (parseNode.GetChildNode("icon_enabled") is null) { _explicitNullValueIconEnabled = default!; _explicitNullProperties?.Remove("icon_enabled"); }
+            else if (parseNode.GetChildNode("icon_enabled") is { } nullNodeIconEnabled && nullNodeIconEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IconEnabled = null;
+            if (parseNode.GetChildNode("video_enabled") is null) { _explicitNullValueVideoEnabled = default!; _explicitNullProperties?.Remove("video_enabled"); }
+            else if (parseNode.GetChildNode("video_enabled") is { } nullNodeVideoEnabled && nullNodeVideoEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoEnabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The audio_enabled property</summary>
-        public bool? AudioEnabled { get => _explicitNullValueAudioEnabled; set { _explicitNullValueAudioEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_enabled"); else _explicitNullProperties?.Remove("audio_enabled"); } }
+        public bool? AudioEnabled { get => _explicitNullValueAudioEnabled; set { _explicitNullValueAudioEnabled = value; AdditionalData?.Remove("audio_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_enabled"); else _explicitNullProperties?.Remove("audio_enabled"); } }
         private bool? _explicitNullValueAudioEnabled = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallHours { get => _explicitNullValueCallHours; set { _explicitNullValueCallHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_hours"); else _explicitNullProperties?.Remove("call_hours"); } }
+        public string? CallHours { get => _explicitNullValueCallHours; set { _explicitNullValueCallHours = value; AdditionalData?.Remove("call_hours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_hours"); else _explicitNullProperties?.Remove("call_hours"); } }
         private string? _explicitNullValueCallHours = default!;
 #nullable restore
 #else
-        public string CallHours { get => _explicitNullValueCallHours; set { _explicitNullValueCallHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_hours"); else _explicitNullProperties?.Remove("call_hours"); } }
+        public string CallHours { get => _explicitNullValueCallHours; set { _explicitNullValueCallHours = value; AdditionalData?.Remove("call_hours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_hours"); else _explicitNullProperties?.Remove("call_hours"); } }
         private string _explicitNullValueCallHours = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallRouting { get => _explicitNullValueCallRouting; set { _explicitNullValueCallRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_routing"); else _explicitNullProperties?.Remove("call_routing"); } }
+        public string? CallRouting { get => _explicitNullValueCallRouting; set { _explicitNullValueCallRouting = value; AdditionalData?.Remove("call_routing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_routing"); else _explicitNullProperties?.Remove("call_routing"); } }
         private string? _explicitNullValueCallRouting = default!;
 #nullable restore
 #else
-        public string CallRouting { get => _explicitNullValueCallRouting; set { _explicitNullValueCallRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_routing"); else _explicitNullProperties?.Remove("call_routing"); } }
+        public string CallRouting { get => _explicitNullValueCallRouting; set { _explicitNullValueCallRouting = value; AdditionalData?.Remove("call_routing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_routing"); else _explicitNullProperties?.Remove("call_routing"); } }
         private string _explicitNullValueCallRouting = default!;
 #endif
         /// <summary>The icon_enabled property</summary>
-        public bool? IconEnabled { get => _explicitNullValueIconEnabled; set { _explicitNullValueIconEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_enabled"); else _explicitNullProperties?.Remove("icon_enabled"); } }
+        public bool? IconEnabled { get => _explicitNullValueIconEnabled; set { _explicitNullValueIconEnabled = value; AdditionalData?.Remove("icon_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_enabled"); else _explicitNullProperties?.Remove("icon_enabled"); } }
         private bool? _explicitNullValueIconEnabled = default!;
         /// <summary>The video_enabled property</summary>
-        public bool? VideoEnabled { get => _explicitNullValueVideoEnabled; set { _explicitNullValueVideoEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_enabled"); else _explicitNullProperties?.Remove("video_enabled"); } }
+        public bool? VideoEnabled { get => _explicitNullValueVideoEnabled; set { _explicitNullValueVideoEnabled = value; AdditionalData?.Remove("video_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_enabled"); else _explicitNullProperties?.Remove("video_enabled"); } }
         private bool? _explicitNullValueVideoEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdMessengerCallSettingsXWwwFormUrlencodedRequest"/> and sets the default values.

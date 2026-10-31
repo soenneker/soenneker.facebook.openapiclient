@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ecpms") is { } nullNodeEcpms && nullNodeEcpms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ecpms = null;
-            if (parseNode.GetChildNode("query_ids") is { } nullNodeQueryIds && nullNodeQueryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryIds = null;
-            if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
-            if (parseNode.GetChildNode("sync_api") is { } nullNodeSyncApi && nullNodeSyncApi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncApi = null;
+            if (parseNode.GetChildNode("ecpms") is null) { _explicitNullValueEcpms = default!; _explicitNullProperties?.Remove("ecpms"); }
+            else if (parseNode.GetChildNode("ecpms") is { } nullNodeEcpms && nullNodeEcpms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ecpms = null;
+            if (parseNode.GetChildNode("query_ids") is null) { _explicitNullValueQueryIds = default!; _explicitNullProperties?.Remove("query_ids"); }
+            else if (parseNode.GetChildNode("query_ids") is { } nullNodeQueryIds && nullNodeQueryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryIds = null;
+            if (parseNode.GetChildNode("request_id") is null) { _explicitNullValueRequestId = default!; _explicitNullProperties?.Remove("request_id"); }
+            else if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("sync_api") is null) { _explicitNullValueSyncApi = default!; _explicitNullProperties?.Remove("sync_api"); }
+            else if (parseNode.GetChildNode("sync_api") is { } nullNodeSyncApi && nullNodeSyncApi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncApi = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ecpms { get => _explicitNullValueEcpms; set { _explicitNullValueEcpms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecpms"); else _explicitNullProperties?.Remove("ecpms"); } }
+        public string? Ecpms { get => _explicitNullValueEcpms; set { _explicitNullValueEcpms = value; AdditionalData?.Remove("ecpms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecpms"); else _explicitNullProperties?.Remove("ecpms"); } }
         private string? _explicitNullValueEcpms = default!;
 #nullable restore
 #else
-        public string Ecpms { get => _explicitNullValueEcpms; set { _explicitNullValueEcpms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecpms"); else _explicitNullProperties?.Remove("ecpms"); } }
+        public string Ecpms { get => _explicitNullValueEcpms; set { _explicitNullValueEcpms = value; AdditionalData?.Remove("ecpms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecpms"); else _explicitNullProperties?.Remove("ecpms"); } }
         private string _explicitNullValueEcpms = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueryIds { get => _explicitNullValueQueryIds; set { _explicitNullValueQueryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_ids"); else _explicitNullProperties?.Remove("query_ids"); } }
+        public string? QueryIds { get => _explicitNullValueQueryIds; set { _explicitNullValueQueryIds = value; AdditionalData?.Remove("query_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_ids"); else _explicitNullProperties?.Remove("query_ids"); } }
         private string? _explicitNullValueQueryIds = default!;
 #nullable restore
 #else
-        public string QueryIds { get => _explicitNullValueQueryIds; set { _explicitNullValueQueryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_ids"); else _explicitNullProperties?.Remove("query_ids"); } }
+        public string QueryIds { get => _explicitNullValueQueryIds; set { _explicitNullValueQueryIds = value; AdditionalData?.Remove("query_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query_ids"); else _explicitNullProperties?.Remove("query_ids"); } }
         private string _explicitNullValueQueryIds = default!;
 #endif
         /// <summary>The request_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The sync_api property</summary>
-        public bool? SyncApi { get => _explicitNullValueSyncApi; set { _explicitNullValueSyncApi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_api"); else _explicitNullProperties?.Remove("sync_api"); } }
+        public bool? SyncApi { get => _explicitNullValueSyncApi; set { _explicitNullValueSyncApi = value; AdditionalData?.Remove("sync_api"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_api"); else _explicitNullProperties?.Remove("sync_api"); } }
         private bool? _explicitNullValueSyncApi = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAggregateRevenueXWwwFormUrlencodedRequest"/> and sets the default values.

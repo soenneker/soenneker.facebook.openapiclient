@@ -17,21 +17,24 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("estimate_ready") is { } nullNodeEstimateReady && nullNodeEstimateReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateReady = null;
-            if (parseNode.GetChildNode("users_lower_bound") is { } nullNodeUsersLowerBound && nullNodeUsersLowerBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersLowerBound = null;
-            if (parseNode.GetChildNode("users_upper_bound") is { } nullNodeUsersUpperBound && nullNodeUsersUpperBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersUpperBound = null;
+            if (parseNode.GetChildNode("estimate_ready") is null) { _explicitNullValueEstimateReady = default!; _explicitNullProperties?.Remove("estimate_ready"); }
+            else if (parseNode.GetChildNode("estimate_ready") is { } nullNodeEstimateReady && nullNodeEstimateReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateReady = null;
+            if (parseNode.GetChildNode("users_lower_bound") is null) { _explicitNullValueUsersLowerBound = default!; _explicitNullProperties?.Remove("users_lower_bound"); }
+            else if (parseNode.GetChildNode("users_lower_bound") is { } nullNodeUsersLowerBound && nullNodeUsersLowerBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersLowerBound = null;
+            if (parseNode.GetChildNode("users_upper_bound") is null) { _explicitNullValueUsersUpperBound = default!; _explicitNullProperties?.Remove("users_upper_bound"); }
+            else if (parseNode.GetChildNode("users_upper_bound") is { } nullNodeUsersUpperBound && nullNodeUsersUpperBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsersUpperBound = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The estimate_ready property</summary>
-        public bool? EstimateReady { get => _explicitNullValueEstimateReady; set { _explicitNullValueEstimateReady = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_ready"); else _explicitNullProperties?.Remove("estimate_ready"); } }
+        public bool? EstimateReady { get => _explicitNullValueEstimateReady; set { _explicitNullValueEstimateReady = value; AdditionalData?.Remove("estimate_ready"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate_ready"); else _explicitNullProperties?.Remove("estimate_ready"); } }
         private bool? _explicitNullValueEstimateReady = default!;
         /// <summary>The users_lower_bound property</summary>
-        public long? UsersLowerBound { get => _explicitNullValueUsersLowerBound; set { _explicitNullValueUsersLowerBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_lower_bound"); else _explicitNullProperties?.Remove("users_lower_bound"); } }
+        public long? UsersLowerBound { get => _explicitNullValueUsersLowerBound; set { _explicitNullValueUsersLowerBound = value; AdditionalData?.Remove("users_lower_bound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_lower_bound"); else _explicitNullProperties?.Remove("users_lower_bound"); } }
         private long? _explicitNullValueUsersLowerBound = default!;
         /// <summary>The users_upper_bound property</summary>
-        public long? UsersUpperBound { get => _explicitNullValueUsersUpperBound; set { _explicitNullValueUsersUpperBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_upper_bound"); else _explicitNullProperties?.Remove("users_upper_bound"); } }
+        public long? UsersUpperBound { get => _explicitNullValueUsersUpperBound; set { _explicitNullValueUsersUpperBound = value; AdditionalData?.Remove("users_upper_bound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_upper_bound"); else _explicitNullProperties?.Remove("users_upper_bound"); } }
         private long? _explicitNullValueUsersUpperBound = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAccountReachEstimate"/> and sets the default values.

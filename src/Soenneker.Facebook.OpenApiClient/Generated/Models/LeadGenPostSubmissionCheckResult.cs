@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("api_call_result") is { } nullNodeApiCallResult && nullNodeApiCallResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiCallResult = null;
-            if (parseNode.GetChildNode("api_error_message") is { } nullNodeApiErrorMessage && nullNodeApiErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiErrorMessage = null;
-            if (parseNode.GetChildNode("shown_thank_you_page") is { } nullNodeShownThankYouPage && nullNodeShownThankYouPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShownThankYouPage = null;
+            if (parseNode.GetChildNode("api_call_result") is null) { _explicitNullValueApiCallResult = default!; _explicitNullProperties?.Remove("api_call_result"); }
+            else if (parseNode.GetChildNode("api_call_result") is { } nullNodeApiCallResult && nullNodeApiCallResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiCallResult = null;
+            if (parseNode.GetChildNode("api_error_message") is null) { _explicitNullValueApiErrorMessage = default!; _explicitNullProperties?.Remove("api_error_message"); }
+            else if (parseNode.GetChildNode("api_error_message") is { } nullNodeApiErrorMessage && nullNodeApiErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiErrorMessage = null;
+            if (parseNode.GetChildNode("shown_thank_you_page") is null) { _explicitNullValueShownThankYouPage = default!; _explicitNullProperties?.Remove("shown_thank_you_page"); }
+            else if (parseNode.GetChildNode("shown_thank_you_page") is { } nullNodeShownThankYouPage && nullNodeShownThankYouPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShownThankYouPage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The api_call_result property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiCallResult { get => _explicitNullValueApiCallResult; set { _explicitNullValueApiCallResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_call_result"); else _explicitNullProperties?.Remove("api_call_result"); } }
+        public string? ApiCallResult { get => _explicitNullValueApiCallResult; set { _explicitNullValueApiCallResult = value; AdditionalData?.Remove("api_call_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_call_result"); else _explicitNullProperties?.Remove("api_call_result"); } }
         private string? _explicitNullValueApiCallResult = default!;
 #nullable restore
 #else
-        public string ApiCallResult { get => _explicitNullValueApiCallResult; set { _explicitNullValueApiCallResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_call_result"); else _explicitNullProperties?.Remove("api_call_result"); } }
+        public string ApiCallResult { get => _explicitNullValueApiCallResult; set { _explicitNullValueApiCallResult = value; AdditionalData?.Remove("api_call_result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_call_result"); else _explicitNullProperties?.Remove("api_call_result"); } }
         private string _explicitNullValueApiCallResult = default!;
 #endif
         /// <summary>The api_error_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiErrorMessage { get => _explicitNullValueApiErrorMessage; set { _explicitNullValueApiErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error_message"); else _explicitNullProperties?.Remove("api_error_message"); } }
+        public string? ApiErrorMessage { get => _explicitNullValueApiErrorMessage; set { _explicitNullValueApiErrorMessage = value; AdditionalData?.Remove("api_error_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error_message"); else _explicitNullProperties?.Remove("api_error_message"); } }
         private string? _explicitNullValueApiErrorMessage = default!;
 #nullable restore
 #else
-        public string ApiErrorMessage { get => _explicitNullValueApiErrorMessage; set { _explicitNullValueApiErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error_message"); else _explicitNullProperties?.Remove("api_error_message"); } }
+        public string ApiErrorMessage { get => _explicitNullValueApiErrorMessage; set { _explicitNullValueApiErrorMessage = value; AdditionalData?.Remove("api_error_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_error_message"); else _explicitNullProperties?.Remove("api_error_message"); } }
         private string _explicitNullValueApiErrorMessage = default!;
 #endif
         /// <summary>The shown_thank_you_page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShownThankYouPage { get => _explicitNullValueShownThankYouPage; set { _explicitNullValueShownThankYouPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shown_thank_you_page"); else _explicitNullProperties?.Remove("shown_thank_you_page"); } }
+        public string? ShownThankYouPage { get => _explicitNullValueShownThankYouPage; set { _explicitNullValueShownThankYouPage = value; AdditionalData?.Remove("shown_thank_you_page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shown_thank_you_page"); else _explicitNullProperties?.Remove("shown_thank_you_page"); } }
         private string? _explicitNullValueShownThankYouPage = default!;
 #nullable restore
 #else
-        public string ShownThankYouPage { get => _explicitNullValueShownThankYouPage; set { _explicitNullValueShownThankYouPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shown_thank_you_page"); else _explicitNullProperties?.Remove("shown_thank_you_page"); } }
+        public string ShownThankYouPage { get => _explicitNullValueShownThankYouPage; set { _explicitNullValueShownThankYouPage = value; AdditionalData?.Remove("shown_thank_you_page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shown_thank_you_page"); else _explicitNullProperties?.Remove("shown_thank_you_page"); } }
         private string _explicitNullValueShownThankYouPage = default!;
 #endif
         /// <summary>

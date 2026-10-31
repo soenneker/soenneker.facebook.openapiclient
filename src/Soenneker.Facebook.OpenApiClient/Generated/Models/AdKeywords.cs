@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("brands") is { } nullNodeBrands && nullNodeBrands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brands = null;
-            if (parseNode.GetChildNode("product_categories") is { } nullNodeProductCategories && nullNodeProductCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCategories = null;
-            if (parseNode.GetChildNode("product_names") is { } nullNodeProductNames && nullNodeProductNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNames = null;
-            if (parseNode.GetChildNode("search_terms") is { } nullNodeSearchTerms && nullNodeSearchTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchTerms = null;
+            if (parseNode.GetChildNode("brands") is null) { _explicitNullValueBrands = default!; _explicitNullProperties?.Remove("brands"); }
+            else if (parseNode.GetChildNode("brands") is { } nullNodeBrands && nullNodeBrands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brands = null;
+            if (parseNode.GetChildNode("product_categories") is null) { _explicitNullValueProductCategories = default!; _explicitNullProperties?.Remove("product_categories"); }
+            else if (parseNode.GetChildNode("product_categories") is { } nullNodeProductCategories && nullNodeProductCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCategories = null;
+            if (parseNode.GetChildNode("product_names") is null) { _explicitNullValueProductNames = default!; _explicitNullProperties?.Remove("product_names"); }
+            else if (parseNode.GetChildNode("product_names") is { } nullNodeProductNames && nullNodeProductNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNames = null;
+            if (parseNode.GetChildNode("search_terms") is null) { _explicitNullValueSearchTerms = default!; _explicitNullProperties?.Remove("search_terms"); }
+            else if (parseNode.GetChildNode("search_terms") is { } nullNodeSearchTerms && nullNodeSearchTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchTerms = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The brands property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Brands { get => _explicitNullValueBrands; set { _explicitNullValueBrands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands"); else _explicitNullProperties?.Remove("brands"); } }
+        public List<string>? Brands { get => _explicitNullValueBrands; set { _explicitNullValueBrands = value; AdditionalData?.Remove("brands"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands"); else _explicitNullProperties?.Remove("brands"); } }
         private List<string>? _explicitNullValueBrands = default!;
 #nullable restore
 #else
-        public List<string> Brands { get => _explicitNullValueBrands; set { _explicitNullValueBrands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands"); else _explicitNullProperties?.Remove("brands"); } }
+        public List<string> Brands { get => _explicitNullValueBrands; set { _explicitNullValueBrands = value; AdditionalData?.Remove("brands"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brands"); else _explicitNullProperties?.Remove("brands"); } }
         private List<string> _explicitNullValueBrands = default!;
 #endif
         /// <summary>The product_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
+        public List<string>? ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; AdditionalData?.Remove("product_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
         private List<string>? _explicitNullValueProductCategories = default!;
 #nullable restore
 #else
-        public List<string> ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
+        public List<string> ProductCategories { get => _explicitNullValueProductCategories; set { _explicitNullValueProductCategories = value; AdditionalData?.Remove("product_categories"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_categories"); else _explicitNullProperties?.Remove("product_categories"); } }
         private List<string> _explicitNullValueProductCategories = default!;
 #endif
         /// <summary>The product_names property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProductNames { get => _explicitNullValueProductNames; set { _explicitNullValueProductNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_names"); else _explicitNullProperties?.Remove("product_names"); } }
+        public List<string>? ProductNames { get => _explicitNullValueProductNames; set { _explicitNullValueProductNames = value; AdditionalData?.Remove("product_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_names"); else _explicitNullProperties?.Remove("product_names"); } }
         private List<string>? _explicitNullValueProductNames = default!;
 #nullable restore
 #else
-        public List<string> ProductNames { get => _explicitNullValueProductNames; set { _explicitNullValueProductNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_names"); else _explicitNullProperties?.Remove("product_names"); } }
+        public List<string> ProductNames { get => _explicitNullValueProductNames; set { _explicitNullValueProductNames = value; AdditionalData?.Remove("product_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_names"); else _explicitNullProperties?.Remove("product_names"); } }
         private List<string> _explicitNullValueProductNames = default!;
 #endif
         /// <summary>The search_terms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_terms"); else _explicitNullProperties?.Remove("search_terms"); } }
+        public List<string>? SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; AdditionalData?.Remove("search_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_terms"); else _explicitNullProperties?.Remove("search_terms"); } }
         private List<string>? _explicitNullValueSearchTerms = default!;
 #nullable restore
 #else
-        public List<string> SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_terms"); else _explicitNullProperties?.Remove("search_terms"); } }
+        public List<string> SearchTerms { get => _explicitNullValueSearchTerms; set { _explicitNullValueSearchTerms = value; AdditionalData?.Remove("search_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_terms"); else _explicitNullProperties?.Remove("search_terms"); } }
         private List<string> _explicitNullValueSearchTerms = default!;
 #endif
         /// <summary>

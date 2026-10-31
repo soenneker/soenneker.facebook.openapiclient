@@ -17,12 +17,18 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_info") is { } nullNodeAdditionalInfo && nullNodeAdditionalInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalInfo = null;
-            if (parseNode.GetChildNode("can_receive_call_sip") is { } nullNodeCanReceiveCallSip && nullNodeCanReceiveCallSip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanReceiveCallSip = null;
-            if (parseNode.GetChildNode("can_send_message") is { } nullNodeCanSendMessage && nullNodeCanSendMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSendMessage = null;
-            if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("additional_info") is null) { _explicitNullValueAdditionalInfo = default!; _explicitNullProperties?.Remove("additional_info"); }
+            else if (parseNode.GetChildNode("additional_info") is { } nullNodeAdditionalInfo && nullNodeAdditionalInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalInfo = null;
+            if (parseNode.GetChildNode("can_receive_call_sip") is null) { _explicitNullValueCanReceiveCallSip = default!; _explicitNullProperties?.Remove("can_receive_call_sip"); }
+            else if (parseNode.GetChildNode("can_receive_call_sip") is { } nullNodeCanReceiveCallSip && nullNodeCanReceiveCallSip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanReceiveCallSip = null;
+            if (parseNode.GetChildNode("can_send_message") is null) { _explicitNullValueCanSendMessage = default!; _explicitNullProperties?.Remove("can_send_message"); }
+            else if (parseNode.GetChildNode("can_send_message") is { } nullNodeCanSendMessage && nullNodeCanSendMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSendMessage = null;
+            if (parseNode.GetChildNode("entity_type") is null) { _explicitNullValueEntityType = default!; _explicitNullProperties?.Remove("entity_type"); }
+            else if (parseNode.GetChildNode("entity_type") is { } nullNodeEntityType && nullNodeEntityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityType = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The additional_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
+        public List<string>? AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; AdditionalData?.Remove("additional_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
         private List<string>? _explicitNullValueAdditionalInfo = default!;
 #nullable restore
 #else
-        public List<string> AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
+        public List<string> AdditionalInfo { get => _explicitNullValueAdditionalInfo; set { _explicitNullValueAdditionalInfo = value; AdditionalData?.Remove("additional_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_info"); else _explicitNullProperties?.Remove("additional_info"); } }
         private List<string> _explicitNullValueAdditionalInfo = default!;
 #endif
         /// <summary>The can_receive_call_sip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanReceiveCallSip { get => _explicitNullValueCanReceiveCallSip; set { _explicitNullValueCanReceiveCallSip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_receive_call_sip"); else _explicitNullProperties?.Remove("can_receive_call_sip"); } }
+        public string? CanReceiveCallSip { get => _explicitNullValueCanReceiveCallSip; set { _explicitNullValueCanReceiveCallSip = value; AdditionalData?.Remove("can_receive_call_sip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_receive_call_sip"); else _explicitNullProperties?.Remove("can_receive_call_sip"); } }
         private string? _explicitNullValueCanReceiveCallSip = default!;
 #nullable restore
 #else
-        public string CanReceiveCallSip { get => _explicitNullValueCanReceiveCallSip; set { _explicitNullValueCanReceiveCallSip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_receive_call_sip"); else _explicitNullProperties?.Remove("can_receive_call_sip"); } }
+        public string CanReceiveCallSip { get => _explicitNullValueCanReceiveCallSip; set { _explicitNullValueCanReceiveCallSip = value; AdditionalData?.Remove("can_receive_call_sip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_receive_call_sip"); else _explicitNullProperties?.Remove("can_receive_call_sip"); } }
         private string _explicitNullValueCanReceiveCallSip = default!;
 #endif
         /// <summary>The can_send_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
+        public string? CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; AdditionalData?.Remove("can_send_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
         private string? _explicitNullValueCanSendMessage = default!;
 #nullable restore
 #else
-        public string CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
+        public string CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; AdditionalData?.Remove("can_send_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
         private string _explicitNullValueCanSendMessage = default!;
 #endif
         /// <summary>The entity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public string? EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private string? _explicitNullValueEntityType = default!;
 #nullable restore
 #else
-        public string EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
+        public string EntityType { get => _explicitNullValueEntityType; set { _explicitNullValueEntityType = value; AdditionalData?.Remove("entity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entity_type"); else _explicitNullProperties?.Remove("entity_type"); } }
         private string _explicitNullValueEntityType = default!;
 #endif
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusErrorsItemProperty>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusErrorsItemProperty>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusErrorsItemProperty>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusErrorsItemProperty> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusErrorsItemProperty> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatusErrorsItemProperty> _explicitNullValueErrors = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>

@@ -17,38 +17,42 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ad_id") is { } nullNodeAdId && nullNodeAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdId = null;
-            if (parseNode.GetChildNode("ineligibility_reason") is { } nullNodeIneligibilityReason && nullNodeIneligibilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibilityReason = null;
-            if (parseNode.GetChildNode("is_eligible") is { } nullNodeIsEligible && nullNodeIsEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEligible = null;
-            if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
+            if (parseNode.GetChildNode("ad_id") is null) { _explicitNullValueAdId = default!; _explicitNullProperties?.Remove("ad_id"); }
+            else if (parseNode.GetChildNode("ad_id") is { } nullNodeAdId && nullNodeAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdId = null;
+            if (parseNode.GetChildNode("ineligibility_reason") is null) { _explicitNullValueIneligibilityReason = default!; _explicitNullProperties?.Remove("ineligibility_reason"); }
+            else if (parseNode.GetChildNode("ineligibility_reason") is { } nullNodeIneligibilityReason && nullNodeIneligibilityReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IneligibilityReason = null;
+            if (parseNode.GetChildNode("is_eligible") is null) { _explicitNullValueIsEligible = default!; _explicitNullProperties?.Remove("is_eligible"); }
+            else if (parseNode.GetChildNode("is_eligible") is { } nullNodeIsEligible && nullNodeIsEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEligible = null;
+            if (parseNode.GetChildNode("results") is null) { _explicitNullValueResults = default!; _explicitNullProperties?.Remove("results"); }
+            else if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_id property</summary>
-        public long? AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_id"); else _explicitNullProperties?.Remove("ad_id"); } }
+        public long? AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; AdditionalData?.Remove("ad_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_id"); else _explicitNullProperties?.Remove("ad_id"); } }
         private long? _explicitNullValueAdId = default!;
         /// <summary>The ineligibility_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IneligibilityReason { get => _explicitNullValueIneligibilityReason; set { _explicitNullValueIneligibilityReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligibility_reason"); else _explicitNullProperties?.Remove("ineligibility_reason"); } }
+        public string? IneligibilityReason { get => _explicitNullValueIneligibilityReason; set { _explicitNullValueIneligibilityReason = value; AdditionalData?.Remove("ineligibility_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligibility_reason"); else _explicitNullProperties?.Remove("ineligibility_reason"); } }
         private string? _explicitNullValueIneligibilityReason = default!;
 #nullable restore
 #else
-        public string IneligibilityReason { get => _explicitNullValueIneligibilityReason; set { _explicitNullValueIneligibilityReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligibility_reason"); else _explicitNullProperties?.Remove("ineligibility_reason"); } }
+        public string IneligibilityReason { get => _explicitNullValueIneligibilityReason; set { _explicitNullValueIneligibilityReason = value; AdditionalData?.Remove("ineligibility_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ineligibility_reason"); else _explicitNullProperties?.Remove("ineligibility_reason"); } }
         private string _explicitNullValueIneligibilityReason = default!;
 #endif
         /// <summary>The is_eligible property</summary>
-        public bool? IsEligible { get => _explicitNullValueIsEligible; set { _explicitNullValueIsEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eligible"); else _explicitNullProperties?.Remove("is_eligible"); } }
+        public bool? IsEligible { get => _explicitNullValueIsEligible; set { _explicitNullValueIsEligible = value; AdditionalData?.Remove("is_eligible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eligible"); else _explicitNullProperties?.Remove("is_eligible"); } }
         private bool? _explicitNullValueIsEligible = default!;
         /// <summary>The results property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIntegrityAppealsAdsEligibility200ResponseResultsItem>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIntegrityAppealsAdsEligibility200ResponseResultsItem>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIntegrityAppealsAdsEligibility200ResponseResultsItem>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIntegrityAppealsAdsEligibility200ResponseResultsItem> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIntegrityAppealsAdsEligibility200ResponseResultsItem> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIntegrityAppealsAdsEligibility200ResponseResultsItem> _explicitNullValueResults = default!;
 #endif
         /// <summary>

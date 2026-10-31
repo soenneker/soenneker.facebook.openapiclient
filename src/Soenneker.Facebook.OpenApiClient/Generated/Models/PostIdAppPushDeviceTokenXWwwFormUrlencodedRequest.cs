@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("device_id") is { } nullNodeDeviceId && nullNodeDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceId = null;
-            if (parseNode.GetChildNode("device_token") is { } nullNodeDeviceToken && nullNodeDeviceToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceToken = null;
-            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+            if (parseNode.GetChildNode("device_id") is null) { _explicitNullValueDeviceId = default!; _explicitNullProperties?.Remove("device_id"); }
+            else if (parseNode.GetChildNode("device_id") is { } nullNodeDeviceId && nullNodeDeviceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceId = null;
+            if (parseNode.GetChildNode("device_token") is null) { _explicitNullValueDeviceToken = default!; _explicitNullProperties?.Remove("device_token"); }
+            else if (parseNode.GetChildNode("device_token") is { } nullNodeDeviceToken && nullNodeDeviceToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceToken = null;
+            if (parseNode.GetChildNode("platform") is null) { _explicitNullValuePlatform = default!; _explicitNullProperties?.Remove("platform"); }
+            else if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The device_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceId { get => _explicitNullValueDeviceId; set { _explicitNullValueDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_id"); else _explicitNullProperties?.Remove("device_id"); } }
+        public string? DeviceId { get => _explicitNullValueDeviceId; set { _explicitNullValueDeviceId = value; AdditionalData?.Remove("device_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_id"); else _explicitNullProperties?.Remove("device_id"); } }
         private string? _explicitNullValueDeviceId = default!;
 #nullable restore
 #else
-        public string DeviceId { get => _explicitNullValueDeviceId; set { _explicitNullValueDeviceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_id"); else _explicitNullProperties?.Remove("device_id"); } }
+        public string DeviceId { get => _explicitNullValueDeviceId; set { _explicitNullValueDeviceId = value; AdditionalData?.Remove("device_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_id"); else _explicitNullProperties?.Remove("device_id"); } }
         private string _explicitNullValueDeviceId = default!;
 #endif
         /// <summary>The device_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
+        public string? DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; AdditionalData?.Remove("device_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
         private string? _explicitNullValueDeviceToken = default!;
 #nullable restore
 #else
-        public string DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
+        public string DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; AdditionalData?.Remove("device_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
         private string _explicitNullValueDeviceToken = default!;
 #endif
         /// <summary>The platform property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationappPushDeviceTokenPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationappPushDeviceTokenPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; AdditionalData?.Remove("platform"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.ApplicationappPushDeviceTokenPlatformEnumParam? _explicitNullValuePlatform = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAppPushDeviceTokenXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "device_id", n => { DeviceId = n.GetStringValue(); } },
                 { "device_token", n => { DeviceToken = n.GetStringValue(); } },
-                { "platform", n => { Platform = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationappPushDeviceTokenPlatformEnumParam>(); } },
+                { "platform", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationappPushDeviceTokenPlatformEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePlatform = default; _explicitNullProperties?.Remove("platform"); AdditionalData["platform"] = unknown; } else { Platform = parsed; AdditionalData.Remove("platform"); } } },
             };
         }
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checkbox_key") is { } nullNodeCheckboxKey && nullNodeCheckboxKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckboxKey = null;
-            if (parseNode.GetChildNode("is_checked") is { } nullNodeIsChecked && nullNodeIsChecked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsChecked = null;
+            if (parseNode.GetChildNode("checkbox_key") is null) { _explicitNullValueCheckboxKey = default!; _explicitNullProperties?.Remove("checkbox_key"); }
+            else if (parseNode.GetChildNode("checkbox_key") is { } nullNodeCheckboxKey && nullNodeCheckboxKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckboxKey = null;
+            if (parseNode.GetChildNode("is_checked") is null) { _explicitNullValueIsChecked = default!; _explicitNullProperties?.Remove("is_checked"); }
+            else if (parseNode.GetChildNode("is_checked") is { } nullNodeIsChecked && nullNodeIsChecked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsChecked = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The checkbox_key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckboxKey { get => _explicitNullValueCheckboxKey; set { _explicitNullValueCheckboxKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_key"); else _explicitNullProperties?.Remove("checkbox_key"); } }
+        public string? CheckboxKey { get => _explicitNullValueCheckboxKey; set { _explicitNullValueCheckboxKey = value; AdditionalData?.Remove("checkbox_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_key"); else _explicitNullProperties?.Remove("checkbox_key"); } }
         private string? _explicitNullValueCheckboxKey = default!;
 #nullable restore
 #else
-        public string CheckboxKey { get => _explicitNullValueCheckboxKey; set { _explicitNullValueCheckboxKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_key"); else _explicitNullProperties?.Remove("checkbox_key"); } }
+        public string CheckboxKey { get => _explicitNullValueCheckboxKey; set { _explicitNullValueCheckboxKey = value; AdditionalData?.Remove("checkbox_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkbox_key"); else _explicitNullProperties?.Remove("checkbox_key"); } }
         private string _explicitNullValueCheckboxKey = default!;
 #endif
         /// <summary>The is_checked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
+        public string? IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; AdditionalData?.Remove("is_checked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
         private string? _explicitNullValueIsChecked = default!;
 #nullable restore
 #else
-        public string IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
+        public string IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; AdditionalData?.Remove("is_checked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
         private string _explicitNullValueIsChecked = default!;
 #endif
         /// <summary>

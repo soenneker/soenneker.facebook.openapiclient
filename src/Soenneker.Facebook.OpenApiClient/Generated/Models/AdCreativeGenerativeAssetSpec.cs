@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("transparency_metadata") is { } nullNodeTransparencyMetadata && nullNodeTransparencyMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransparencyMetadata = null;
+            if (parseNode.GetChildNode("transparency_metadata") is null) { _explicitNullValueTransparencyMetadata = default!; _explicitNullProperties?.Remove("transparency_metadata"); }
+            else if (parseNode.GetChildNode("transparency_metadata") is { } nullNodeTransparencyMetadata && nullNodeTransparencyMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransparencyMetadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The transparency_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeGenerativeAssetSpecTransparencyMetadataProperty? TransparencyMetadata { get => _explicitNullValueTransparencyMetadata; set { _explicitNullValueTransparencyMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transparency_metadata"); else _explicitNullProperties?.Remove("transparency_metadata"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeGenerativeAssetSpecTransparencyMetadataProperty? TransparencyMetadata { get => _explicitNullValueTransparencyMetadata; set { _explicitNullValueTransparencyMetadata = value; AdditionalData?.Remove("transparency_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transparency_metadata"); else _explicitNullProperties?.Remove("transparency_metadata"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeGenerativeAssetSpecTransparencyMetadataProperty? _explicitNullValueTransparencyMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeGenerativeAssetSpecTransparencyMetadataProperty TransparencyMetadata { get => _explicitNullValueTransparencyMetadata; set { _explicitNullValueTransparencyMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transparency_metadata"); else _explicitNullProperties?.Remove("transparency_metadata"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeGenerativeAssetSpecTransparencyMetadataProperty TransparencyMetadata { get => _explicitNullValueTransparencyMetadata; set { _explicitNullValueTransparencyMetadata = value; AdditionalData?.Remove("transparency_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transparency_metadata"); else _explicitNullProperties?.Remove("transparency_metadata"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeGenerativeAssetSpecTransparencyMetadataProperty _explicitNullValueTransparencyMetadata = default!;
 #endif
         /// <summary>

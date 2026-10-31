@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
-            if (parseNode.GetChildNode("web") is { } nullNodeWeb && nullNodeWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Web = null;
+            if (parseNode.GetChildNode("app") is null) { _explicitNullValueApp = default!; _explicitNullProperties?.Remove("app"); }
+            else if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
+            if (parseNode.GetChildNode("web") is null) { _explicitNullValueWeb = default!; _explicitNullProperties?.Remove("web"); }
+            else if (parseNode.GetChildNode("web") is { } nullNodeWeb && nullNodeWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Web = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The app property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecAppProperty? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecAppProperty? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; AdditionalData?.Remove("app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecAppProperty? _explicitNullValueApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecAppProperty App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecAppProperty App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; AdditionalData?.Remove("app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecAppProperty _explicitNullValueApp = default!;
 #endif
         /// <summary>The web property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecWebProperty? Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecWebProperty? Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; AdditionalData?.Remove("web"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecWebProperty? _explicitNullValueWeb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecWebProperty Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecWebProperty Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; AdditionalData?.Remove("web"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeOmnichannelLinkSpecWebProperty _explicitNullValueWeb = default!;
 #endif
         /// <summary>

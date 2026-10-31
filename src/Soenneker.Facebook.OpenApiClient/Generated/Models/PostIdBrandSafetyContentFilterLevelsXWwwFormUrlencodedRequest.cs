@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("brand_safety_content_filter_levels") is { } nullNodeBrandSafetyContentFilterLevels && nullNodeBrandSafetyContentFilterLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandSafetyContentFilterLevels = null;
-            if (parseNode.GetChildNode("business_id") is { } nullNodeBusinessId && nullNodeBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessId = null;
+            if (parseNode.GetChildNode("brand_safety_content_filter_levels") is null) { _explicitNullValueBrandSafetyContentFilterLevels = default!; _explicitNullProperties?.Remove("brand_safety_content_filter_levels"); }
+            else if (parseNode.GetChildNode("brand_safety_content_filter_levels") is { } nullNodeBrandSafetyContentFilterLevels && nullNodeBrandSafetyContentFilterLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandSafetyContentFilterLevels = null;
+            if (parseNode.GetChildNode("business_id") is null) { _explicitNullValueBusinessId = default!; _explicitNullProperties?.Remove("business_id"); }
+            else if (parseNode.GetChildNode("business_id") is { } nullNodeBusinessId && nullNodeBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrandSafetyContentFilterLevels { get => _explicitNullValueBrandSafetyContentFilterLevels; set { _explicitNullValueBrandSafetyContentFilterLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_content_filter_levels"); else _explicitNullProperties?.Remove("brand_safety_content_filter_levels"); } }
+        public string? BrandSafetyContentFilterLevels { get => _explicitNullValueBrandSafetyContentFilterLevels; set { _explicitNullValueBrandSafetyContentFilterLevels = value; AdditionalData?.Remove("brand_safety_content_filter_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_content_filter_levels"); else _explicitNullProperties?.Remove("brand_safety_content_filter_levels"); } }
         private string? _explicitNullValueBrandSafetyContentFilterLevels = default!;
 #nullable restore
 #else
-        public string BrandSafetyContentFilterLevels { get => _explicitNullValueBrandSafetyContentFilterLevels; set { _explicitNullValueBrandSafetyContentFilterLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_content_filter_levels"); else _explicitNullProperties?.Remove("brand_safety_content_filter_levels"); } }
+        public string BrandSafetyContentFilterLevels { get => _explicitNullValueBrandSafetyContentFilterLevels; set { _explicitNullValueBrandSafetyContentFilterLevels = value; AdditionalData?.Remove("brand_safety_content_filter_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_content_filter_levels"); else _explicitNullProperties?.Remove("brand_safety_content_filter_levels"); } }
         private string _explicitNullValueBrandSafetyContentFilterLevels = default!;
 #endif
         /// <summary>The business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessId { get => _explicitNullValueBusinessId; set { _explicitNullValueBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_id"); else _explicitNullProperties?.Remove("business_id"); } }
+        public string? BusinessId { get => _explicitNullValueBusinessId; set { _explicitNullValueBusinessId = value; AdditionalData?.Remove("business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_id"); else _explicitNullProperties?.Remove("business_id"); } }
         private string? _explicitNullValueBusinessId = default!;
 #nullable restore
 #else
-        public string BusinessId { get => _explicitNullValueBusinessId; set { _explicitNullValueBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_id"); else _explicitNullProperties?.Remove("business_id"); } }
+        public string BusinessId { get => _explicitNullValueBusinessId; set { _explicitNullValueBusinessId = value; AdditionalData?.Remove("business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_id"); else _explicitNullProperties?.Remove("business_id"); } }
         private string _explicitNullValueBusinessId = default!;
 #endif
         /// <summary>

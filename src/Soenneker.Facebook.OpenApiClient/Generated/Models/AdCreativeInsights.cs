@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aesthetics") is { } nullNodeAesthetics && nullNodeAesthetics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aesthetics = null;
+            if (parseNode.GetChildNode("aesthetics") is null) { _explicitNullValueAesthetics = default!; _explicitNullProperties?.Remove("aesthetics"); }
+            else if (parseNode.GetChildNode("aesthetics") is { } nullNodeAesthetics && nullNodeAesthetics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aesthetics = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The aesthetics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeInsightsAestheticsItemProperty>? Aesthetics { get => _explicitNullValueAesthetics; set { _explicitNullValueAesthetics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aesthetics"); else _explicitNullProperties?.Remove("aesthetics"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeInsightsAestheticsItemProperty>? Aesthetics { get => _explicitNullValueAesthetics; set { _explicitNullValueAesthetics = value; AdditionalData?.Remove("aesthetics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aesthetics"); else _explicitNullProperties?.Remove("aesthetics"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeInsightsAestheticsItemProperty>? _explicitNullValueAesthetics = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeInsightsAestheticsItemProperty> Aesthetics { get => _explicitNullValueAesthetics; set { _explicitNullValueAesthetics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aesthetics"); else _explicitNullProperties?.Remove("aesthetics"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeInsightsAestheticsItemProperty> Aesthetics { get => _explicitNullValueAesthetics; set { _explicitNullValueAesthetics = value; AdditionalData?.Remove("aesthetics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aesthetics"); else _explicitNullProperties?.Remove("aesthetics"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeInsightsAestheticsItemProperty> _explicitNullValueAesthetics = default!;
 #endif
         /// <summary>

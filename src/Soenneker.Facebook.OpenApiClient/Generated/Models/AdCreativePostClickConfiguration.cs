@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("post_click_item_description") is { } nullNodePostClickItemDescription && nullNodePostClickItemDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostClickItemDescription = null;
-            if (parseNode.GetChildNode("post_click_item_headline") is { } nullNodePostClickItemHeadline && nullNodePostClickItemHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostClickItemHeadline = null;
+            if (parseNode.GetChildNode("post_click_item_description") is null) { _explicitNullValuePostClickItemDescription = default!; _explicitNullProperties?.Remove("post_click_item_description"); }
+            else if (parseNode.GetChildNode("post_click_item_description") is { } nullNodePostClickItemDescription && nullNodePostClickItemDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostClickItemDescription = null;
+            if (parseNode.GetChildNode("post_click_item_headline") is null) { _explicitNullValuePostClickItemHeadline = default!; _explicitNullProperties?.Remove("post_click_item_headline"); }
+            else if (parseNode.GetChildNode("post_click_item_headline") is { } nullNodePostClickItemHeadline && nullNodePostClickItemHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostClickItemHeadline = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The post_click_item_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostClickItemDescription { get => _explicitNullValuePostClickItemDescription; set { _explicitNullValuePostClickItemDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_description"); else _explicitNullProperties?.Remove("post_click_item_description"); } }
+        public string? PostClickItemDescription { get => _explicitNullValuePostClickItemDescription; set { _explicitNullValuePostClickItemDescription = value; AdditionalData?.Remove("post_click_item_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_description"); else _explicitNullProperties?.Remove("post_click_item_description"); } }
         private string? _explicitNullValuePostClickItemDescription = default!;
 #nullable restore
 #else
-        public string PostClickItemDescription { get => _explicitNullValuePostClickItemDescription; set { _explicitNullValuePostClickItemDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_description"); else _explicitNullProperties?.Remove("post_click_item_description"); } }
+        public string PostClickItemDescription { get => _explicitNullValuePostClickItemDescription; set { _explicitNullValuePostClickItemDescription = value; AdditionalData?.Remove("post_click_item_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_description"); else _explicitNullProperties?.Remove("post_click_item_description"); } }
         private string _explicitNullValuePostClickItemDescription = default!;
 #endif
         /// <summary>The post_click_item_headline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostClickItemHeadline { get => _explicitNullValuePostClickItemHeadline; set { _explicitNullValuePostClickItemHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_headline"); else _explicitNullProperties?.Remove("post_click_item_headline"); } }
+        public string? PostClickItemHeadline { get => _explicitNullValuePostClickItemHeadline; set { _explicitNullValuePostClickItemHeadline = value; AdditionalData?.Remove("post_click_item_headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_headline"); else _explicitNullProperties?.Remove("post_click_item_headline"); } }
         private string? _explicitNullValuePostClickItemHeadline = default!;
 #nullable restore
 #else
-        public string PostClickItemHeadline { get => _explicitNullValuePostClickItemHeadline; set { _explicitNullValuePostClickItemHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_headline"); else _explicitNullProperties?.Remove("post_click_item_headline"); } }
+        public string PostClickItemHeadline { get => _explicitNullValuePostClickItemHeadline; set { _explicitNullValuePostClickItemHeadline = value; AdditionalData?.Remove("post_click_item_headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_click_item_headline"); else _explicitNullProperties?.Remove("post_click_item_headline"); } }
         private string _explicitNullValuePostClickItemHeadline = default!;
 #endif
         /// <summary>

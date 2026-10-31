@@ -17,115 +17,126 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("age_max") is { } nullNodeAgeMax && nullNodeAgeMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMax = null;
-            if (parseNode.GetChildNode("age_min") is { } nullNodeAgeMin && nullNodeAgeMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMin = null;
-            if (parseNode.GetChildNode("audience_network_positions") is { } nullNodeAudienceNetworkPositions && nullNodeAudienceNetworkPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceNetworkPositions = null;
-            if (parseNode.GetChildNode("device_platforms") is { } nullNodeDevicePlatforms && nullNodeDevicePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevicePlatforms = null;
-            if (parseNode.GetChildNode("facebook_positions") is { } nullNodeFacebookPositions && nullNodeFacebookPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookPositions = null;
-            if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
-            if (parseNode.GetChildNode("instagram_positions") is { } nullNodeInstagramPositions && nullNodeInstagramPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramPositions = null;
-            if (parseNode.GetChildNode("locales") is { } nullNodeLocales && nullNodeLocales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locales = null;
-            if (parseNode.GetChildNode("messenger_positions") is { } nullNodeMessengerPositions && nullNodeMessengerPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessengerPositions = null;
-            if (parseNode.GetChildNode("publisher_platforms") is { } nullNodePublisherPlatforms && nullNodePublisherPlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublisherPlatforms = null;
-            if (parseNode.GetChildNode("threads_positions") is { } nullNodeThreadsPositions && nullNodeThreadsPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsPositions = null;
+            if (parseNode.GetChildNode("age_max") is null) { _explicitNullValueAgeMax = default!; _explicitNullProperties?.Remove("age_max"); }
+            else if (parseNode.GetChildNode("age_max") is { } nullNodeAgeMax && nullNodeAgeMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMax = null;
+            if (parseNode.GetChildNode("age_min") is null) { _explicitNullValueAgeMin = default!; _explicitNullProperties?.Remove("age_min"); }
+            else if (parseNode.GetChildNode("age_min") is { } nullNodeAgeMin && nullNodeAgeMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMin = null;
+            if (parseNode.GetChildNode("audience_network_positions") is null) { _explicitNullValueAudienceNetworkPositions = default!; _explicitNullProperties?.Remove("audience_network_positions"); }
+            else if (parseNode.GetChildNode("audience_network_positions") is { } nullNodeAudienceNetworkPositions && nullNodeAudienceNetworkPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceNetworkPositions = null;
+            if (parseNode.GetChildNode("device_platforms") is null) { _explicitNullValueDevicePlatforms = default!; _explicitNullProperties?.Remove("device_platforms"); }
+            else if (parseNode.GetChildNode("device_platforms") is { } nullNodeDevicePlatforms && nullNodeDevicePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevicePlatforms = null;
+            if (parseNode.GetChildNode("facebook_positions") is null) { _explicitNullValueFacebookPositions = default!; _explicitNullProperties?.Remove("facebook_positions"); }
+            else if (parseNode.GetChildNode("facebook_positions") is { } nullNodeFacebookPositions && nullNodeFacebookPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookPositions = null;
+            if (parseNode.GetChildNode("geo_locations") is null) { _explicitNullValueGeoLocations = default!; _explicitNullProperties?.Remove("geo_locations"); }
+            else if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
+            if (parseNode.GetChildNode("instagram_positions") is null) { _explicitNullValueInstagramPositions = default!; _explicitNullProperties?.Remove("instagram_positions"); }
+            else if (parseNode.GetChildNode("instagram_positions") is { } nullNodeInstagramPositions && nullNodeInstagramPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramPositions = null;
+            if (parseNode.GetChildNode("locales") is null) { _explicitNullValueLocales = default!; _explicitNullProperties?.Remove("locales"); }
+            else if (parseNode.GetChildNode("locales") is { } nullNodeLocales && nullNodeLocales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locales = null;
+            if (parseNode.GetChildNode("messenger_positions") is null) { _explicitNullValueMessengerPositions = default!; _explicitNullProperties?.Remove("messenger_positions"); }
+            else if (parseNode.GetChildNode("messenger_positions") is { } nullNodeMessengerPositions && nullNodeMessengerPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessengerPositions = null;
+            if (parseNode.GetChildNode("publisher_platforms") is null) { _explicitNullValuePublisherPlatforms = default!; _explicitNullProperties?.Remove("publisher_platforms"); }
+            else if (parseNode.GetChildNode("publisher_platforms") is { } nullNodePublisherPlatforms && nullNodePublisherPlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublisherPlatforms = null;
+            if (parseNode.GetChildNode("threads_positions") is null) { _explicitNullValueThreadsPositions = default!; _explicitNullProperties?.Remove("threads_positions"); }
+            else if (parseNode.GetChildNode("threads_positions") is { } nullNodeThreadsPositions && nullNodeThreadsPositions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsPositions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The age_max property</summary>
-        public long? AgeMax { get => _explicitNullValueAgeMax; set { _explicitNullValueAgeMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_max"); else _explicitNullProperties?.Remove("age_max"); } }
+        public long? AgeMax { get => _explicitNullValueAgeMax; set { _explicitNullValueAgeMax = value; AdditionalData?.Remove("age_max"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_max"); else _explicitNullProperties?.Remove("age_max"); } }
         private long? _explicitNullValueAgeMax = default!;
         /// <summary>The age_min property</summary>
-        public long? AgeMin { get => _explicitNullValueAgeMin; set { _explicitNullValueAgeMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_min"); else _explicitNullProperties?.Remove("age_min"); } }
+        public long? AgeMin { get => _explicitNullValueAgeMin; set { _explicitNullValueAgeMin = value; AdditionalData?.Remove("age_min"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_min"); else _explicitNullProperties?.Remove("age_min"); } }
         private long? _explicitNullValueAgeMin = default!;
         /// <summary>The audience_network_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AudienceNetworkPositions { get => _explicitNullValueAudienceNetworkPositions; set { _explicitNullValueAudienceNetworkPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_network_positions"); else _explicitNullProperties?.Remove("audience_network_positions"); } }
+        public List<string>? AudienceNetworkPositions { get => _explicitNullValueAudienceNetworkPositions; set { _explicitNullValueAudienceNetworkPositions = value; AdditionalData?.Remove("audience_network_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_network_positions"); else _explicitNullProperties?.Remove("audience_network_positions"); } }
         private List<string>? _explicitNullValueAudienceNetworkPositions = default!;
 #nullable restore
 #else
-        public List<string> AudienceNetworkPositions { get => _explicitNullValueAudienceNetworkPositions; set { _explicitNullValueAudienceNetworkPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_network_positions"); else _explicitNullProperties?.Remove("audience_network_positions"); } }
+        public List<string> AudienceNetworkPositions { get => _explicitNullValueAudienceNetworkPositions; set { _explicitNullValueAudienceNetworkPositions = value; AdditionalData?.Remove("audience_network_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_network_positions"); else _explicitNullProperties?.Remove("audience_network_positions"); } }
         private List<string> _explicitNullValueAudienceNetworkPositions = default!;
 #endif
         /// <summary>The device_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetCustomizationRuleCustomizationSpecDevicePlatforms?>? DevicePlatforms { get => _explicitNullValueDevicePlatforms; set { _explicitNullValueDevicePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_platforms"); else _explicitNullProperties?.Remove("device_platforms"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetCustomizationRuleCustomizationSpecDevicePlatforms?>? DevicePlatforms { get => _explicitNullValueDevicePlatforms; set { _explicitNullValueDevicePlatforms = value; AdditionalData?.Remove("device_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_platforms"); else _explicitNullProperties?.Remove("device_platforms"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetCustomizationRuleCustomizationSpecDevicePlatforms?>? _explicitNullValueDevicePlatforms = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetCustomizationRuleCustomizationSpecDevicePlatforms?> DevicePlatforms { get => _explicitNullValueDevicePlatforms; set { _explicitNullValueDevicePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_platforms"); else _explicitNullProperties?.Remove("device_platforms"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetCustomizationRuleCustomizationSpecDevicePlatforms?> DevicePlatforms { get => _explicitNullValueDevicePlatforms; set { _explicitNullValueDevicePlatforms = value; AdditionalData?.Remove("device_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_platforms"); else _explicitNullProperties?.Remove("device_platforms"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdAssetCustomizationRuleCustomizationSpecDevicePlatforms?> _explicitNullValueDevicePlatforms = default!;
 #endif
         /// <summary>The facebook_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FacebookPositions { get => _explicitNullValueFacebookPositions; set { _explicitNullValueFacebookPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_positions"); else _explicitNullProperties?.Remove("facebook_positions"); } }
+        public List<string>? FacebookPositions { get => _explicitNullValueFacebookPositions; set { _explicitNullValueFacebookPositions = value; AdditionalData?.Remove("facebook_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_positions"); else _explicitNullProperties?.Remove("facebook_positions"); } }
         private List<string>? _explicitNullValueFacebookPositions = default!;
 #nullable restore
 #else
-        public List<string> FacebookPositions { get => _explicitNullValueFacebookPositions; set { _explicitNullValueFacebookPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_positions"); else _explicitNullProperties?.Remove("facebook_positions"); } }
+        public List<string> FacebookPositions { get => _explicitNullValueFacebookPositions; set { _explicitNullValueFacebookPositions = value; AdditionalData?.Remove("facebook_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_positions"); else _explicitNullProperties?.Remove("facebook_positions"); } }
         private List<string> _explicitNullValueFacebookPositions = default!;
 #endif
         /// <summary>The geo_locations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; AdditionalData?.Remove("geo_locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation? _explicitNullValueGeoLocations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; AdditionalData?.Remove("geo_locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.TargetingGeoLocation _explicitNullValueGeoLocations = default!;
 #endif
         /// <summary>The instagram_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InstagramPositions { get => _explicitNullValueInstagramPositions; set { _explicitNullValueInstagramPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_positions"); else _explicitNullProperties?.Remove("instagram_positions"); } }
+        public List<string>? InstagramPositions { get => _explicitNullValueInstagramPositions; set { _explicitNullValueInstagramPositions = value; AdditionalData?.Remove("instagram_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_positions"); else _explicitNullProperties?.Remove("instagram_positions"); } }
         private List<string>? _explicitNullValueInstagramPositions = default!;
 #nullable restore
 #else
-        public List<string> InstagramPositions { get => _explicitNullValueInstagramPositions; set { _explicitNullValueInstagramPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_positions"); else _explicitNullProperties?.Remove("instagram_positions"); } }
+        public List<string> InstagramPositions { get => _explicitNullValueInstagramPositions; set { _explicitNullValueInstagramPositions = value; AdditionalData?.Remove("instagram_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_positions"); else _explicitNullProperties?.Remove("instagram_positions"); } }
         private List<string> _explicitNullValueInstagramPositions = default!;
 #endif
         /// <summary>The locales property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
+        public List<long?>? Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; AdditionalData?.Remove("locales"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
         private List<long?>? _explicitNullValueLocales = default!;
 #nullable restore
 #else
-        public List<long?> Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
+        public List<long?> Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; AdditionalData?.Remove("locales"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
         private List<long?> _explicitNullValueLocales = default!;
 #endif
         /// <summary>The messenger_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MessengerPositions { get => _explicitNullValueMessengerPositions; set { _explicitNullValueMessengerPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_positions"); else _explicitNullProperties?.Remove("messenger_positions"); } }
+        public List<string>? MessengerPositions { get => _explicitNullValueMessengerPositions; set { _explicitNullValueMessengerPositions = value; AdditionalData?.Remove("messenger_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_positions"); else _explicitNullProperties?.Remove("messenger_positions"); } }
         private List<string>? _explicitNullValueMessengerPositions = default!;
 #nullable restore
 #else
-        public List<string> MessengerPositions { get => _explicitNullValueMessengerPositions; set { _explicitNullValueMessengerPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_positions"); else _explicitNullProperties?.Remove("messenger_positions"); } }
+        public List<string> MessengerPositions { get => _explicitNullValueMessengerPositions; set { _explicitNullValueMessengerPositions = value; AdditionalData?.Remove("messenger_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_positions"); else _explicitNullProperties?.Remove("messenger_positions"); } }
         private List<string> _explicitNullValueMessengerPositions = default!;
 #endif
         /// <summary>The publisher_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PublisherPlatforms { get => _explicitNullValuePublisherPlatforms; set { _explicitNullValuePublisherPlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_platforms"); else _explicitNullProperties?.Remove("publisher_platforms"); } }
+        public List<string>? PublisherPlatforms { get => _explicitNullValuePublisherPlatforms; set { _explicitNullValuePublisherPlatforms = value; AdditionalData?.Remove("publisher_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_platforms"); else _explicitNullProperties?.Remove("publisher_platforms"); } }
         private List<string>? _explicitNullValuePublisherPlatforms = default!;
 #nullable restore
 #else
-        public List<string> PublisherPlatforms { get => _explicitNullValuePublisherPlatforms; set { _explicitNullValuePublisherPlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_platforms"); else _explicitNullProperties?.Remove("publisher_platforms"); } }
+        public List<string> PublisherPlatforms { get => _explicitNullValuePublisherPlatforms; set { _explicitNullValuePublisherPlatforms = value; AdditionalData?.Remove("publisher_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publisher_platforms"); else _explicitNullProperties?.Remove("publisher_platforms"); } }
         private List<string> _explicitNullValuePublisherPlatforms = default!;
 #endif
         /// <summary>The threads_positions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ThreadsPositions { get => _explicitNullValueThreadsPositions; set { _explicitNullValueThreadsPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_positions"); else _explicitNullProperties?.Remove("threads_positions"); } }
+        public List<string>? ThreadsPositions { get => _explicitNullValueThreadsPositions; set { _explicitNullValueThreadsPositions = value; AdditionalData?.Remove("threads_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_positions"); else _explicitNullProperties?.Remove("threads_positions"); } }
         private List<string>? _explicitNullValueThreadsPositions = default!;
 #nullable restore
 #else
-        public List<string> ThreadsPositions { get => _explicitNullValueThreadsPositions; set { _explicitNullValueThreadsPositions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_positions"); else _explicitNullProperties?.Remove("threads_positions"); } }
+        public List<string> ThreadsPositions { get => _explicitNullValueThreadsPositions; set { _explicitNullValueThreadsPositions = value; AdditionalData?.Remove("threads_positions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_positions"); else _explicitNullProperties?.Remove("threads_positions"); } }
         private List<string> _explicitNullValueThreadsPositions = default!;
 #endif
         /// <summary>

@@ -17,13 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("num_lift_studies") is { } nullNodeNumLiftStudies && nullNodeNumLiftStudies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumLiftStudies = null;
+            if (parseNode.GetChildNode("num_lift_studies") is null) { _explicitNullValueNumLiftStudies = default!; _explicitNullProperties?.Remove("num_lift_studies"); }
+            else if (parseNode.GetChildNode("num_lift_studies") is { } nullNodeNumLiftStudies && nullNodeNumLiftStudies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumLiftStudies = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The num_lift_studies property</summary>
-        public long? NumLiftStudies { get => _explicitNullValueNumLiftStudies; set { _explicitNullValueNumLiftStudies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_lift_studies"); else _explicitNullProperties?.Remove("num_lift_studies"); } }
+        public long? NumLiftStudies { get => _explicitNullValueNumLiftStudies; set { _explicitNullValueNumLiftStudies = value; AdditionalData?.Remove("num_lift_studies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_lift_studies"); else _explicitNullProperties?.Remove("num_lift_studies"); } }
         private long? _explicitNullValueNumLiftStudies = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.OfflineConversionDataSetUsage"/> and sets the default values.

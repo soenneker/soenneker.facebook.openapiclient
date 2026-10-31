@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assoc_data") is { } nullNodeAssocData && nullNodeAssocData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssocData = null;
+            if (parseNode.GetChildNode("assoc_data") is null) { _explicitNullValueAssocData = default!; _explicitNullProperties?.Remove("assoc_data"); }
+            else if (parseNode.GetChildNode("assoc_data") is { } nullNodeAssocData && nullNodeAssocData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssocData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssocData { get => _explicitNullValueAssocData; set { _explicitNullValueAssocData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assoc_data"); else _explicitNullProperties?.Remove("assoc_data"); } }
+        public string? AssocData { get => _explicitNullValueAssocData; set { _explicitNullValueAssocData = value; AdditionalData?.Remove("assoc_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assoc_data"); else _explicitNullProperties?.Remove("assoc_data"); } }
         private string? _explicitNullValueAssocData = default!;
 #nullable restore
 #else
-        public string AssocData { get => _explicitNullValueAssocData; set { _explicitNullValueAssocData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assoc_data"); else _explicitNullProperties?.Remove("assoc_data"); } }
+        public string AssocData { get => _explicitNullValueAssocData; set { _explicitNullValueAssocData = value; AdditionalData?.Remove("assoc_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assoc_data"); else _explicitNullProperties?.Remove("assoc_data"); } }
         private string _explicitNullValueAssocData = default!;
 #endif
         /// <summary>

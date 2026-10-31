@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("global") is { } nullNodeGlobal && nullNodeGlobal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Global = null;
-            if (parseNode.GetChildNode("placement_specific") is { } nullNodePlacementSpecific && nullNodePlacementSpecific.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementSpecific = null;
+            if (parseNode.GetChildNode("global") is null) { _explicitNullValueGlobal = default!; _explicitNullProperties?.Remove("global"); }
+            else if (parseNode.GetChildNode("global") is { } nullNodeGlobal && nullNodeGlobal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Global = null;
+            if (parseNode.GetChildNode("placement_specific") is null) { _explicitNullValuePlacementSpecific = default!; _explicitNullProperties?.Remove("placement_specific"); }
+            else if (parseNode.GetChildNode("placement_specific") is { } nullNodePlacementSpecific && nullNodePlacementSpecific.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementSpecific = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The global property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupReviewFeedbackGlobalProperty? Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupReviewFeedbackGlobalProperty? Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; AdditionalData?.Remove("global"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupReviewFeedbackGlobalProperty? _explicitNullValueGlobal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupReviewFeedbackGlobalProperty Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupReviewFeedbackGlobalProperty Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; AdditionalData?.Remove("global"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupReviewFeedbackGlobalProperty _explicitNullValueGlobal = default!;
 #endif
         /// <summary>The placement_specific property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback? PlacementSpecific { get => _explicitNullValuePlacementSpecific; set { _explicitNullValuePlacementSpecific = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_specific"); else _explicitNullProperties?.Remove("placement_specific"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback? PlacementSpecific { get => _explicitNullValuePlacementSpecific; set { _explicitNullValuePlacementSpecific = value; AdditionalData?.Remove("placement_specific"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_specific"); else _explicitNullProperties?.Remove("placement_specific"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback? _explicitNullValuePlacementSpecific = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback PlacementSpecific { get => _explicitNullValuePlacementSpecific; set { _explicitNullValuePlacementSpecific = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_specific"); else _explicitNullProperties?.Remove("placement_specific"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback PlacementSpecific { get => _explicitNullValuePlacementSpecific; set { _explicitNullValuePlacementSpecific = value; AdditionalData?.Remove("placement_specific"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_specific"); else _explicitNullProperties?.Remove("placement_specific"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedback _explicitNullValuePlacementSpecific = default!;
 #endif
         /// <summary>

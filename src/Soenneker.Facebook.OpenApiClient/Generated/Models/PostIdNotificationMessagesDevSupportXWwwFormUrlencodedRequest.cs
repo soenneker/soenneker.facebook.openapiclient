@@ -17,23 +17,25 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("developer_action") is { } nullNodeDeveloperAction && nullNodeDeveloperAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeveloperAction = null;
-            if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
+            if (parseNode.GetChildNode("developer_action") is null) { _explicitNullValueDeveloperAction = default!; _explicitNullProperties?.Remove("developer_action"); }
+            else if (parseNode.GetChildNode("developer_action") is { } nullNodeDeveloperAction && nullNodeDeveloperAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeveloperAction = null;
+            if (parseNode.GetChildNode("recipient") is null) { _explicitNullValueRecipient = default!; _explicitNullProperties?.Remove("recipient"); }
+            else if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The developer_action property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessagesDevSupportDeveloperActionEnumParam? DeveloperAction { get => _explicitNullValueDeveloperAction; set { _explicitNullValueDeveloperAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developer_action"); else _explicitNullProperties?.Remove("developer_action"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessagesDevSupportDeveloperActionEnumParam? DeveloperAction { get => _explicitNullValueDeveloperAction; set { _explicitNullValueDeveloperAction = value; AdditionalData?.Remove("developer_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developer_action"); else _explicitNullProperties?.Remove("developer_action"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessagesDevSupportDeveloperActionEnumParam? _explicitNullValueDeveloperAction = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string? _explicitNullValueRecipient = default!;
 #nullable restore
 #else
-        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string _explicitNullValueRecipient = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "developer_action", n => { DeveloperAction = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessagesDevSupportDeveloperActionEnumParam>(); } },
+                { "developer_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagenotificationMessagesDevSupportDeveloperActionEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeveloperAction = default; _explicitNullProperties?.Remove("developer_action"); AdditionalData["developer_action"] = unknown; } else { DeveloperAction = parsed; AdditionalData.Remove("developer_action"); } } },
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
             };
         }

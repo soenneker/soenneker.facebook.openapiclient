@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tracking_specs") is { } nullNodeTrackingSpecs && nullNodeTrackingSpecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingSpecs = null;
+            if (parseNode.GetChildNode("tracking_specs") is null) { _explicitNullValueTrackingSpecs = default!; _explicitNullProperties?.Remove("tracking_specs"); }
+            else if (parseNode.GetChildNode("tracking_specs") is { } nullNodeTrackingSpecs && nullNodeTrackingSpecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingSpecs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingSpecs { get => _explicitNullValueTrackingSpecs; set { _explicitNullValueTrackingSpecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_specs"); else _explicitNullProperties?.Remove("tracking_specs"); } }
+        public string? TrackingSpecs { get => _explicitNullValueTrackingSpecs; set { _explicitNullValueTrackingSpecs = value; AdditionalData?.Remove("tracking_specs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_specs"); else _explicitNullProperties?.Remove("tracking_specs"); } }
         private string? _explicitNullValueTrackingSpecs = default!;
 #nullable restore
 #else
-        public string TrackingSpecs { get => _explicitNullValueTrackingSpecs; set { _explicitNullValueTrackingSpecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_specs"); else _explicitNullProperties?.Remove("tracking_specs"); } }
+        public string TrackingSpecs { get => _explicitNullValueTrackingSpecs; set { _explicitNullValueTrackingSpecs = value; AdditionalData?.Remove("tracking_specs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_specs"); else _explicitNullProperties?.Remove("tracking_specs"); } }
         private string _explicitNullValueTrackingSpecs = default!;
 #endif
         /// <summary>

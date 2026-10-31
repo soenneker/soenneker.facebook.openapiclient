@@ -17,23 +17,27 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accepted_collab_ads_tos") is { } nullNodeAcceptedCollabAdsTos && nullNodeAcceptedCollabAdsTos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedCollabAdsTos = null;
-            if (parseNode.GetChildNode("ad_accounts") is { } nullNodeAdAccounts && nullNodeAdAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccounts = null;
-            if (parseNode.GetChildNode("business_capabilities_status") is { } nullNodeBusinessCapabilitiesStatus && nullNodeBusinessCapabilitiesStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessCapabilitiesStatus = null;
-            if (parseNode.GetChildNode("capabilities_compliance_status") is { } nullNodeCapabilitiesComplianceStatus && nullNodeCapabilitiesComplianceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CapabilitiesComplianceStatus = null;
+            if (parseNode.GetChildNode("accepted_collab_ads_tos") is null) { _explicitNullValueAcceptedCollabAdsTos = default!; _explicitNullProperties?.Remove("accepted_collab_ads_tos"); }
+            else if (parseNode.GetChildNode("accepted_collab_ads_tos") is { } nullNodeAcceptedCollabAdsTos && nullNodeAcceptedCollabAdsTos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedCollabAdsTos = null;
+            if (parseNode.GetChildNode("ad_accounts") is null) { _explicitNullValueAdAccounts = default!; _explicitNullProperties?.Remove("ad_accounts"); }
+            else if (parseNode.GetChildNode("ad_accounts") is { } nullNodeAdAccounts && nullNodeAdAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccounts = null;
+            if (parseNode.GetChildNode("business_capabilities_status") is null) { _explicitNullValueBusinessCapabilitiesStatus = default!; _explicitNullProperties?.Remove("business_capabilities_status"); }
+            else if (parseNode.GetChildNode("business_capabilities_status") is { } nullNodeBusinessCapabilitiesStatus && nullNodeBusinessCapabilitiesStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessCapabilitiesStatus = null;
+            if (parseNode.GetChildNode("capabilities_compliance_status") is null) { _explicitNullValueCapabilitiesComplianceStatus = default!; _explicitNullProperties?.Remove("capabilities_compliance_status"); }
+            else if (parseNode.GetChildNode("capabilities_compliance_status") is { } nullNodeCapabilitiesComplianceStatus && nullNodeCapabilitiesComplianceStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CapabilitiesComplianceStatus = null;
         }
 
         /// <summary>The accepted_collab_ads_tos property</summary>
-        public bool? AcceptedCollabAdsTos { get => _explicitNullValueAcceptedCollabAdsTos; set { _explicitNullValueAcceptedCollabAdsTos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted_collab_ads_tos"); else _explicitNullProperties?.Remove("accepted_collab_ads_tos"); } }
+        public bool? AcceptedCollabAdsTos { get => _explicitNullValueAcceptedCollabAdsTos; set { _explicitNullValueAcceptedCollabAdsTos = value; AdditionalData?.Remove("accepted_collab_ads_tos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accepted_collab_ads_tos"); else _explicitNullProperties?.Remove("accepted_collab_ads_tos"); } }
         private bool? _explicitNullValueAcceptedCollabAdsTos = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdAccounts { get => _explicitNullValueAdAccounts; set { _explicitNullValueAdAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_accounts"); else _explicitNullProperties?.Remove("ad_accounts"); } }
+        public string? AdAccounts { get => _explicitNullValueAdAccounts; set { _explicitNullValueAdAccounts = value; AdditionalData?.Remove("ad_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_accounts"); else _explicitNullProperties?.Remove("ad_accounts"); } }
         private string? _explicitNullValueAdAccounts = default!;
 #nullable restore
 #else
-        public string AdAccounts { get => _explicitNullValueAdAccounts; set { _explicitNullValueAdAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_accounts"); else _explicitNullProperties?.Remove("ad_accounts"); } }
+        public string AdAccounts { get => _explicitNullValueAdAccounts; set { _explicitNullValueAdAccounts = value; AdditionalData?.Remove("ad_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_accounts"); else _explicitNullProperties?.Remove("ad_accounts"); } }
         private string _explicitNullValueAdAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -41,21 +45,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessCapabilitiesStatus { get => _explicitNullValueBusinessCapabilitiesStatus; set { _explicitNullValueBusinessCapabilitiesStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_capabilities_status"); else _explicitNullProperties?.Remove("business_capabilities_status"); } }
+        public string? BusinessCapabilitiesStatus { get => _explicitNullValueBusinessCapabilitiesStatus; set { _explicitNullValueBusinessCapabilitiesStatus = value; AdditionalData?.Remove("business_capabilities_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_capabilities_status"); else _explicitNullProperties?.Remove("business_capabilities_status"); } }
         private string? _explicitNullValueBusinessCapabilitiesStatus = default!;
 #nullable restore
 #else
-        public string BusinessCapabilitiesStatus { get => _explicitNullValueBusinessCapabilitiesStatus; set { _explicitNullValueBusinessCapabilitiesStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_capabilities_status"); else _explicitNullProperties?.Remove("business_capabilities_status"); } }
+        public string BusinessCapabilitiesStatus { get => _explicitNullValueBusinessCapabilitiesStatus; set { _explicitNullValueBusinessCapabilitiesStatus = value; AdditionalData?.Remove("business_capabilities_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_capabilities_status"); else _explicitNullProperties?.Remove("business_capabilities_status"); } }
         private string _explicitNullValueBusinessCapabilitiesStatus = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CapabilitiesComplianceStatus { get => _explicitNullValueCapabilitiesComplianceStatus; set { _explicitNullValueCapabilitiesComplianceStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities_compliance_status"); else _explicitNullProperties?.Remove("capabilities_compliance_status"); } }
+        public string? CapabilitiesComplianceStatus { get => _explicitNullValueCapabilitiesComplianceStatus; set { _explicitNullValueCapabilitiesComplianceStatus = value; AdditionalData?.Remove("capabilities_compliance_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities_compliance_status"); else _explicitNullProperties?.Remove("capabilities_compliance_status"); } }
         private string? _explicitNullValueCapabilitiesComplianceStatus = default!;
 #nullable restore
 #else
-        public string CapabilitiesComplianceStatus { get => _explicitNullValueCapabilitiesComplianceStatus; set { _explicitNullValueCapabilitiesComplianceStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities_compliance_status"); else _explicitNullProperties?.Remove("capabilities_compliance_status"); } }
+        public string CapabilitiesComplianceStatus { get => _explicitNullValueCapabilitiesComplianceStatus; set { _explicitNullValueCapabilitiesComplianceStatus = value; AdditionalData?.Remove("capabilities_compliance_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities_compliance_status"); else _explicitNullProperties?.Remove("capabilities_compliance_status"); } }
         private string _explicitNullValueCapabilitiesComplianceStatus = default!;
 #endif
         /// <summary>

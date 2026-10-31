@@ -17,13 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("max_bid") is { } nullNodeMaxBid && nullNodeMaxBid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBid = null;
+            if (parseNode.GetChildNode("max_bid") is null) { _explicitNullValueMaxBid = default!; _explicitNullProperties?.Remove("max_bid"); }
+            else if (parseNode.GetChildNode("max_bid") is { } nullNodeMaxBid && nullNodeMaxBid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The max_bid property</summary>
-        public long? MaxBid { get => _explicitNullValueMaxBid; set { _explicitNullValueMaxBid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_bid"); else _explicitNullProperties?.Remove("max_bid"); } }
+        public long? MaxBid { get => _explicitNullValueMaxBid; set { _explicitNullValueMaxBid = value; AdditionalData?.Remove("max_bid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_bid"); else _explicitNullProperties?.Remove("max_bid"); } }
         private long? _explicitNullValueMaxBid = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.AdAccountMaxBid"/> and sets the default values.

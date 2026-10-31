@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("psid") is { } nullNodePsid && nullNodePsid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Psid = null;
+            if (parseNode.GetChildNode("psid") is null) { _explicitNullValuePsid = default!; _explicitNullProperties?.Remove("psid"); }
+            else if (parseNode.GetChildNode("psid") is { } nullNodePsid && nullNodePsid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Psid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The psid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Psid { get => _explicitNullValuePsid; set { _explicitNullValuePsid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("psid"); else _explicitNullProperties?.Remove("psid"); } }
+        public string? Psid { get => _explicitNullValuePsid; set { _explicitNullValuePsid = value; AdditionalData?.Remove("psid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("psid"); else _explicitNullProperties?.Remove("psid"); } }
         private string? _explicitNullValuePsid = default!;
 #nullable restore
 #else
-        public string Psid { get => _explicitNullValuePsid; set { _explicitNullValuePsid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("psid"); else _explicitNullProperties?.Remove("psid"); } }
+        public string Psid { get => _explicitNullValuePsid; set { _explicitNullValuePsid = value; AdditionalData?.Remove("psid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("psid"); else _explicitNullProperties?.Remove("psid"); } }
         private string _explicitNullValuePsid = default!;
 #endif
         /// <summary>

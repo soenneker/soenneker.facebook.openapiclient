@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("can_send_message") is { } nullNodeCanSendMessage && nullNodeCanSendMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSendMessage = null;
-            if (parseNode.GetChildNode("entities") is { } nullNodeEntities && nullNodeEntities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entities = null;
+            if (parseNode.GetChildNode("can_send_message") is null) { _explicitNullValueCanSendMessage = default!; _explicitNullProperties?.Remove("can_send_message"); }
+            else if (parseNode.GetChildNode("can_send_message") is { } nullNodeCanSendMessage && nullNodeCanSendMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanSendMessage = null;
+            if (parseNode.GetChildNode("entities") is null) { _explicitNullValueEntities = default!; _explicitNullProperties?.Remove("entities"); }
+            else if (parseNode.GetChildNode("entities") is { } nullNodeEntities && nullNodeEntities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entities = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The can_send_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
+        public string? CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; AdditionalData?.Remove("can_send_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
         private string? _explicitNullValueCanSendMessage = default!;
 #nullable restore
 #else
-        public string CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
+        public string CanSendMessage { get => _explicitNullValueCanSendMessage; set { _explicitNullValueCanSendMessage = value; AdditionalData?.Remove("can_send_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_send_message"); else _explicitNullProperties?.Remove("can_send_message"); } }
         private string _explicitNullValueCanSendMessage = default!;
 #endif
         /// <summary>The entities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatus>? Entities { get => _explicitNullValueEntities; set { _explicitNullValueEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entities"); else _explicitNullProperties?.Remove("entities"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatus>? Entities { get => _explicitNullValueEntities; set { _explicitNullValueEntities = value; AdditionalData?.Remove("entities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entities"); else _explicitNullProperties?.Remove("entities"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatus>? _explicitNullValueEntities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatus> Entities { get => _explicitNullValueEntities; set { _explicitNullValueEntities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entities"); else _explicitNullProperties?.Remove("entities"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatus> Entities { get => _explicitNullValueEntities; set { _explicitNullValueEntities = value; AdditionalData?.Remove("entities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entities"); else _explicitNullProperties?.Remove("entities"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessHealthStatus> _explicitNullValueEntities = default!;
 #endif
         /// <summary>

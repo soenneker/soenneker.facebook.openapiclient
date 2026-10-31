@@ -17,13 +17,20 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("android") is { } nullNodeAndroid && nullNodeAndroid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Android = null;
-            if (parseNode.GetChildNode("config") is { } nullNodeConfig && nullNodeConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Config = null;
-            if (parseNode.GetChildNode("ios") is { } nullNodeIos && nullNodeIos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ios = null;
-            if (parseNode.GetChildNode("ipad") is { } nullNodeIpad && nullNodeIpad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ipad = null;
-            if (parseNode.GetChildNode("iphone") is { } nullNodeIphone && nullNodeIphone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iphone = null;
-            if (parseNode.GetChildNode("web") is { } nullNodeWeb && nullNodeWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Web = null;
-            if (parseNode.GetChildNode("windows_phone") is { } nullNodeWindowsPhone && nullNodeWindowsPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WindowsPhone = null;
+            if (parseNode.GetChildNode("android") is null) { _explicitNullValueAndroid = default!; _explicitNullProperties?.Remove("android"); }
+            else if (parseNode.GetChildNode("android") is { } nullNodeAndroid && nullNodeAndroid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Android = null;
+            if (parseNode.GetChildNode("config") is null) { _explicitNullValueConfig = default!; _explicitNullProperties?.Remove("config"); }
+            else if (parseNode.GetChildNode("config") is { } nullNodeConfig && nullNodeConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Config = null;
+            if (parseNode.GetChildNode("ios") is null) { _explicitNullValueIos = default!; _explicitNullProperties?.Remove("ios"); }
+            else if (parseNode.GetChildNode("ios") is { } nullNodeIos && nullNodeIos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ios = null;
+            if (parseNode.GetChildNode("ipad") is null) { _explicitNullValueIpad = default!; _explicitNullProperties?.Remove("ipad"); }
+            else if (parseNode.GetChildNode("ipad") is { } nullNodeIpad && nullNodeIpad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ipad = null;
+            if (parseNode.GetChildNode("iphone") is null) { _explicitNullValueIphone = default!; _explicitNullProperties?.Remove("iphone"); }
+            else if (parseNode.GetChildNode("iphone") is { } nullNodeIphone && nullNodeIphone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iphone = null;
+            if (parseNode.GetChildNode("web") is null) { _explicitNullValueWeb = default!; _explicitNullProperties?.Remove("web"); }
+            else if (parseNode.GetChildNode("web") is { } nullNodeWeb && nullNodeWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Web = null;
+            if (parseNode.GetChildNode("windows_phone") is null) { _explicitNullValueWindowsPhone = default!; _explicitNullProperties?.Remove("windows_phone"); }
+            else if (parseNode.GetChildNode("windows_phone") is { } nullNodeWindowsPhone && nullNodeWindowsPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WindowsPhone = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,71 +38,71 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The android property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecAndroidProperty? Android { get => _explicitNullValueAndroid; set { _explicitNullValueAndroid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android"); else _explicitNullProperties?.Remove("android"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecAndroidProperty? Android { get => _explicitNullValueAndroid; set { _explicitNullValueAndroid = value; AdditionalData?.Remove("android"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android"); else _explicitNullProperties?.Remove("android"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecAndroidProperty? _explicitNullValueAndroid = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecAndroidProperty Android { get => _explicitNullValueAndroid; set { _explicitNullValueAndroid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android"); else _explicitNullProperties?.Remove("android"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecAndroidProperty Android { get => _explicitNullValueAndroid; set { _explicitNullValueAndroid = value; AdditionalData?.Remove("android"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android"); else _explicitNullProperties?.Remove("android"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecAndroidProperty _explicitNullValueAndroid = default!;
 #endif
         /// <summary>The config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecConfigProperty? Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecConfigProperty? Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; AdditionalData?.Remove("config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecConfigProperty? _explicitNullValueConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecConfigProperty Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecConfigProperty Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; AdditionalData?.Remove("config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecConfigProperty _explicitNullValueConfig = default!;
 #endif
         /// <summary>The ios property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIosProperty? Ios { get => _explicitNullValueIos; set { _explicitNullValueIos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios"); else _explicitNullProperties?.Remove("ios"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIosProperty? Ios { get => _explicitNullValueIos; set { _explicitNullValueIos = value; AdditionalData?.Remove("ios"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios"); else _explicitNullProperties?.Remove("ios"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIosProperty? _explicitNullValueIos = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIosProperty Ios { get => _explicitNullValueIos; set { _explicitNullValueIos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios"); else _explicitNullProperties?.Remove("ios"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIosProperty Ios { get => _explicitNullValueIos; set { _explicitNullValueIos = value; AdditionalData?.Remove("ios"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios"); else _explicitNullProperties?.Remove("ios"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIosProperty _explicitNullValueIos = default!;
 #endif
         /// <summary>The ipad property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIpadProperty? Ipad { get => _explicitNullValueIpad; set { _explicitNullValueIpad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipad"); else _explicitNullProperties?.Remove("ipad"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIpadProperty? Ipad { get => _explicitNullValueIpad; set { _explicitNullValueIpad = value; AdditionalData?.Remove("ipad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipad"); else _explicitNullProperties?.Remove("ipad"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIpadProperty? _explicitNullValueIpad = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIpadProperty Ipad { get => _explicitNullValueIpad; set { _explicitNullValueIpad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipad"); else _explicitNullProperties?.Remove("ipad"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIpadProperty Ipad { get => _explicitNullValueIpad; set { _explicitNullValueIpad = value; AdditionalData?.Remove("ipad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipad"); else _explicitNullProperties?.Remove("ipad"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIpadProperty _explicitNullValueIpad = default!;
 #endif
         /// <summary>The iphone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIphoneProperty? Iphone { get => _explicitNullValueIphone; set { _explicitNullValueIphone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone"); else _explicitNullProperties?.Remove("iphone"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIphoneProperty? Iphone { get => _explicitNullValueIphone; set { _explicitNullValueIphone = value; AdditionalData?.Remove("iphone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone"); else _explicitNullProperties?.Remove("iphone"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIphoneProperty? _explicitNullValueIphone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIphoneProperty Iphone { get => _explicitNullValueIphone; set { _explicitNullValueIphone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone"); else _explicitNullProperties?.Remove("iphone"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIphoneProperty Iphone { get => _explicitNullValueIphone; set { _explicitNullValueIphone = value; AdditionalData?.Remove("iphone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone"); else _explicitNullProperties?.Remove("iphone"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecIphoneProperty _explicitNullValueIphone = default!;
 #endif
         /// <summary>The web property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWebProperty? Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWebProperty? Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; AdditionalData?.Remove("web"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWebProperty? _explicitNullValueWeb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWebProperty Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWebProperty Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; AdditionalData?.Remove("web"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWebProperty _explicitNullValueWeb = default!;
 #endif
         /// <summary>The windows_phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWindowsPhoneProperty? WindowsPhone { get => _explicitNullValueWindowsPhone; set { _explicitNullValueWindowsPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_phone"); else _explicitNullProperties?.Remove("windows_phone"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWindowsPhoneProperty? WindowsPhone { get => _explicitNullValueWindowsPhone; set { _explicitNullValueWindowsPhone = value; AdditionalData?.Remove("windows_phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_phone"); else _explicitNullProperties?.Remove("windows_phone"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWindowsPhoneProperty? _explicitNullValueWindowsPhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWindowsPhoneProperty WindowsPhone { get => _explicitNullValueWindowsPhone; set { _explicitNullValueWindowsPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_phone"); else _explicitNullProperties?.Remove("windows_phone"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWindowsPhoneProperty WindowsPhone { get => _explicitNullValueWindowsPhone; set { _explicitNullValueWindowsPhone = value; AdditionalData?.Remove("windows_phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_phone"); else _explicitNullProperties?.Remove("windows_phone"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpecWindowsPhoneProperty _explicitNullValueWindowsPhone = default!;
 #endif
         /// <summary>

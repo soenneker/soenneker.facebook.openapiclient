@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("business_manager_ids") is { } nullNodeBusinessManagerIds && nullNodeBusinessManagerIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessManagerIds = null;
+            if (parseNode.GetChildNode("business_manager_ids") is null) { _explicitNullValueBusinessManagerIds = default!; _explicitNullProperties?.Remove("business_manager_ids"); }
+            else if (parseNode.GetChildNode("business_manager_ids") is { } nullNodeBusinessManagerIds && nullNodeBusinessManagerIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessManagerIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessManagerIds { get => _explicitNullValueBusinessManagerIds; set { _explicitNullValueBusinessManagerIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_manager_ids"); else _explicitNullProperties?.Remove("business_manager_ids"); } }
+        public string? BusinessManagerIds { get => _explicitNullValueBusinessManagerIds; set { _explicitNullValueBusinessManagerIds = value; AdditionalData?.Remove("business_manager_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_manager_ids"); else _explicitNullProperties?.Remove("business_manager_ids"); } }
         private string? _explicitNullValueBusinessManagerIds = default!;
 #nullable restore
 #else
-        public string BusinessManagerIds { get => _explicitNullValueBusinessManagerIds; set { _explicitNullValueBusinessManagerIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_manager_ids"); else _explicitNullProperties?.Remove("business_manager_ids"); } }
+        public string BusinessManagerIds { get => _explicitNullValueBusinessManagerIds; set { _explicitNullValueBusinessManagerIds = value; AdditionalData?.Remove("business_manager_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_manager_ids"); else _explicitNullProperties?.Remove("business_manager_ids"); } }
         private string _explicitNullValueBusinessManagerIds = default!;
 #endif
         /// <summary>

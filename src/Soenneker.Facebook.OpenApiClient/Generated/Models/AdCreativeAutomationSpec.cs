@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("decision_type") is { } nullNodeDecisionType && nullNodeDecisionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DecisionType = null;
-            if (parseNode.GetChildNode("enrollment_status") is { } nullNodeEnrollmentStatus && nullNodeEnrollmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentStatus = null;
+            if (parseNode.GetChildNode("decision_type") is null) { _explicitNullValueDecisionType = default!; _explicitNullProperties?.Remove("decision_type"); }
+            else if (parseNode.GetChildNode("decision_type") is { } nullNodeDecisionType && nullNodeDecisionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DecisionType = null;
+            if (parseNode.GetChildNode("enrollment_status") is null) { _explicitNullValueEnrollmentStatus = default!; _explicitNullProperties?.Remove("enrollment_status"); }
+            else if (parseNode.GetChildNode("enrollment_status") is { } nullNodeEnrollmentStatus && nullNodeEnrollmentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The decision_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DecisionType { get => _explicitNullValueDecisionType; set { _explicitNullValueDecisionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision_type"); else _explicitNullProperties?.Remove("decision_type"); } }
+        public string? DecisionType { get => _explicitNullValueDecisionType; set { _explicitNullValueDecisionType = value; AdditionalData?.Remove("decision_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision_type"); else _explicitNullProperties?.Remove("decision_type"); } }
         private string? _explicitNullValueDecisionType = default!;
 #nullable restore
 #else
-        public string DecisionType { get => _explicitNullValueDecisionType; set { _explicitNullValueDecisionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision_type"); else _explicitNullProperties?.Remove("decision_type"); } }
+        public string DecisionType { get => _explicitNullValueDecisionType; set { _explicitNullValueDecisionType = value; AdditionalData?.Remove("decision_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision_type"); else _explicitNullProperties?.Remove("decision_type"); } }
         private string _explicitNullValueDecisionType = default!;
 #endif
         /// <summary>The enrollment_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
+        public string? EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; AdditionalData?.Remove("enrollment_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
         private string? _explicitNullValueEnrollmentStatus = default!;
 #nullable restore
 #else
-        public string EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
+        public string EnrollmentStatus { get => _explicitNullValueEnrollmentStatus; set { _explicitNullValueEnrollmentStatus = value; AdditionalData?.Remove("enrollment_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollment_status"); else _explicitNullProperties?.Remove("enrollment_status"); } }
         private string _explicitNullValueEnrollmentStatus = default!;
 #endif
         /// <summary>

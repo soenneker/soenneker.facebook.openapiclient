@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ctm") is { } nullNodeCtm && nullNodeCtm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ctm = null;
+            if (parseNode.GetChildNode("ctm") is null) { _explicitNullValueCtm = default!; _explicitNullProperties?.Remove("ctm"); }
+            else if (parseNode.GetChildNode("ctm") is { } nullNodeCtm && nullNodeCtm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ctm = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The ctm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.CtxOptimizationEligibilityCtmProperty? Ctm { get => _explicitNullValueCtm; set { _explicitNullValueCtm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ctm"); else _explicitNullProperties?.Remove("ctm"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CtxOptimizationEligibilityCtmProperty? Ctm { get => _explicitNullValueCtm; set { _explicitNullValueCtm = value; AdditionalData?.Remove("ctm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ctm"); else _explicitNullProperties?.Remove("ctm"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.CtxOptimizationEligibilityCtmProperty? _explicitNullValueCtm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.CtxOptimizationEligibilityCtmProperty Ctm { get => _explicitNullValueCtm; set { _explicitNullValueCtm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ctm"); else _explicitNullProperties?.Remove("ctm"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.CtxOptimizationEligibilityCtmProperty Ctm { get => _explicitNullValueCtm; set { _explicitNullValueCtm = value; AdditionalData?.Remove("ctm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ctm"); else _explicitNullProperties?.Remove("ctm"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.CtxOptimizationEligibilityCtmProperty _explicitNullValueCtm = default!;
 #endif
         /// <summary>

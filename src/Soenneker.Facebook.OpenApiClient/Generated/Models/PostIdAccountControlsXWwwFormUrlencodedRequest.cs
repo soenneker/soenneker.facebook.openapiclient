@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audience_controls") is { } nullNodeAudienceControls && nullNodeAudienceControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceControls = null;
-            if (parseNode.GetChildNode("placement_controls") is { } nullNodePlacementControls && nullNodePlacementControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControls = null;
-            if (parseNode.GetChildNode("placement_controls_per_objective") is { } nullNodePlacementControlsPerObjective && nullNodePlacementControlsPerObjective.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControlsPerObjective = null;
+            if (parseNode.GetChildNode("audience_controls") is null) { _explicitNullValueAudienceControls = default!; _explicitNullProperties?.Remove("audience_controls"); }
+            else if (parseNode.GetChildNode("audience_controls") is { } nullNodeAudienceControls && nullNodeAudienceControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceControls = null;
+            if (parseNode.GetChildNode("placement_controls") is null) { _explicitNullValuePlacementControls = default!; _explicitNullProperties?.Remove("placement_controls"); }
+            else if (parseNode.GetChildNode("placement_controls") is { } nullNodePlacementControls && nullNodePlacementControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControls = null;
+            if (parseNode.GetChildNode("placement_controls_per_objective") is null) { _explicitNullValuePlacementControlsPerObjective = default!; _explicitNullProperties?.Remove("placement_controls_per_objective"); }
+            else if (parseNode.GetChildNode("placement_controls_per_objective") is { } nullNodePlacementControlsPerObjective && nullNodePlacementControlsPerObjective.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControlsPerObjective = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
+        public string? AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; AdditionalData?.Remove("audience_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
         private string? _explicitNullValueAudienceControls = default!;
 #nullable restore
 #else
-        public string AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
+        public string AudienceControls { get => _explicitNullValueAudienceControls; set { _explicitNullValueAudienceControls = value; AdditionalData?.Remove("audience_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_controls"); else _explicitNullProperties?.Remove("audience_controls"); } }
         private string _explicitNullValueAudienceControls = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
+        public string? PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; AdditionalData?.Remove("placement_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
         private string? _explicitNullValuePlacementControls = default!;
 #nullable restore
 #else
-        public string PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
+        public string PlacementControls { get => _explicitNullValuePlacementControls; set { _explicitNullValuePlacementControls = value; AdditionalData?.Remove("placement_controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls"); else _explicitNullProperties?.Remove("placement_controls"); } }
         private string _explicitNullValuePlacementControls = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
+        public string? PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; AdditionalData?.Remove("placement_controls_per_objective"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
         private string? _explicitNullValuePlacementControlsPerObjective = default!;
 #nullable restore
 #else
-        public string PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
+        public string PlacementControlsPerObjective { get => _explicitNullValuePlacementControlsPerObjective; set { _explicitNullValuePlacementControlsPerObjective = value; AdditionalData?.Remove("placement_controls_per_objective"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placement_controls_per_objective"); else _explicitNullProperties?.Remove("placement_controls_per_objective"); } }
         private string _explicitNullValuePlacementControlsPerObjective = default!;
 #endif
         /// <summary>

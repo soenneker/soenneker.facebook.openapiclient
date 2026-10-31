@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checkin_date") is { } nullNodeCheckinDate && nullNodeCheckinDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckinDate = null;
-            if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
-            if (parseNode.GetChildNode("prices_pretty") is { } nullNodePricesPretty && nullNodePricesPretty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricesPretty = null;
+            if (parseNode.GetChildNode("checkin_date") is null) { _explicitNullValueCheckinDate = default!; _explicitNullProperties?.Remove("checkin_date"); }
+            else if (parseNode.GetChildNode("checkin_date") is { } nullNodeCheckinDate && nullNodeCheckinDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckinDate = null;
+            if (parseNode.GetChildNode("prices") is null) { _explicitNullValuePrices = default!; _explicitNullProperties?.Remove("prices"); }
+            else if (parseNode.GetChildNode("prices") is { } nullNodePrices && nullNodePrices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prices = null;
+            if (parseNode.GetChildNode("prices_pretty") is null) { _explicitNullValuePricesPretty = default!; _explicitNullProperties?.Remove("prices_pretty"); }
+            else if (parseNode.GetChildNode("prices_pretty") is { } nullNodePricesPretty && nullNodePricesPretty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricesPretty = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The checkin_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckinDate { get => _explicitNullValueCheckinDate; set { _explicitNullValueCheckinDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkin_date"); else _explicitNullProperties?.Remove("checkin_date"); } }
+        public string? CheckinDate { get => _explicitNullValueCheckinDate; set { _explicitNullValueCheckinDate = value; AdditionalData?.Remove("checkin_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkin_date"); else _explicitNullProperties?.Remove("checkin_date"); } }
         private string? _explicitNullValueCheckinDate = default!;
 #nullable restore
 #else
-        public string CheckinDate { get => _explicitNullValueCheckinDate; set { _explicitNullValueCheckinDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkin_date"); else _explicitNullProperties?.Remove("checkin_date"); } }
+        public string CheckinDate { get => _explicitNullValueCheckinDate; set { _explicitNullValueCheckinDate = value; AdditionalData?.Remove("checkin_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkin_date"); else _explicitNullProperties?.Remove("checkin_date"); } }
         private string _explicitNullValueCheckinDate = default!;
 #endif
         /// <summary>The prices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        public string? Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; AdditionalData?.Remove("prices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
         private string? _explicitNullValuePrices = default!;
 #nullable restore
 #else
-        public string Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
+        public string Prices { get => _explicitNullValuePrices; set { _explicitNullValuePrices = value; AdditionalData?.Remove("prices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices"); else _explicitNullProperties?.Remove("prices"); } }
         private string _explicitNullValuePrices = default!;
 #endif
         /// <summary>The prices_pretty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPriceConfigByDatePricesPrettyItemProperty>? PricesPretty { get => _explicitNullValuePricesPretty; set { _explicitNullValuePricesPretty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices_pretty"); else _explicitNullProperties?.Remove("prices_pretty"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPriceConfigByDatePricesPrettyItemProperty>? PricesPretty { get => _explicitNullValuePricesPretty; set { _explicitNullValuePricesPretty = value; AdditionalData?.Remove("prices_pretty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices_pretty"); else _explicitNullProperties?.Remove("prices_pretty"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPriceConfigByDatePricesPrettyItemProperty>? _explicitNullValuePricesPretty = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPriceConfigByDatePricesPrettyItemProperty> PricesPretty { get => _explicitNullValuePricesPretty; set { _explicitNullValuePricesPretty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices_pretty"); else _explicitNullProperties?.Remove("prices_pretty"); } }
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPriceConfigByDatePricesPrettyItemProperty> PricesPretty { get => _explicitNullValuePricesPretty; set { _explicitNullValuePricesPretty = value; AdditionalData?.Remove("prices_pretty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prices_pretty"); else _explicitNullProperties?.Remove("prices_pretty"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPriceConfigByDatePricesPrettyItemProperty> _explicitNullValuePricesPretty = default!;
 #endif
         /// <summary>

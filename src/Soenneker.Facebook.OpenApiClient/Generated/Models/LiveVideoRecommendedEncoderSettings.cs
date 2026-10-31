@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audio_codec_settings") is { } nullNodeAudioCodecSettings && nullNodeAudioCodecSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioCodecSettings = null;
-            if (parseNode.GetChildNode("streaming_protocol") is { } nullNodeStreamingProtocol && nullNodeStreamingProtocol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreamingProtocol = null;
-            if (parseNode.GetChildNode("video_codec_settings") is { } nullNodeVideoCodecSettings && nullNodeVideoCodecSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodecSettings = null;
+            if (parseNode.GetChildNode("audio_codec_settings") is null) { _explicitNullValueAudioCodecSettings = default!; _explicitNullProperties?.Remove("audio_codec_settings"); }
+            else if (parseNode.GetChildNode("audio_codec_settings") is { } nullNodeAudioCodecSettings && nullNodeAudioCodecSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioCodecSettings = null;
+            if (parseNode.GetChildNode("streaming_protocol") is null) { _explicitNullValueStreamingProtocol = default!; _explicitNullProperties?.Remove("streaming_protocol"); }
+            else if (parseNode.GetChildNode("streaming_protocol") is { } nullNodeStreamingProtocol && nullNodeStreamingProtocol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StreamingProtocol = null;
+            if (parseNode.GetChildNode("video_codec_settings") is null) { _explicitNullValueVideoCodecSettings = default!; _explicitNullProperties?.Remove("video_codec_settings"); }
+            else if (parseNode.GetChildNode("video_codec_settings") is { } nullNodeVideoCodecSettings && nullNodeVideoCodecSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodecSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The audio_codec_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty? AudioCodecSettings { get => _explicitNullValueAudioCodecSettings; set { _explicitNullValueAudioCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_codec_settings"); else _explicitNullProperties?.Remove("audio_codec_settings"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty? AudioCodecSettings { get => _explicitNullValueAudioCodecSettings; set { _explicitNullValueAudioCodecSettings = value; AdditionalData?.Remove("audio_codec_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_codec_settings"); else _explicitNullProperties?.Remove("audio_codec_settings"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty? _explicitNullValueAudioCodecSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty AudioCodecSettings { get => _explicitNullValueAudioCodecSettings; set { _explicitNullValueAudioCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_codec_settings"); else _explicitNullProperties?.Remove("audio_codec_settings"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty AudioCodecSettings { get => _explicitNullValueAudioCodecSettings; set { _explicitNullValueAudioCodecSettings = value; AdditionalData?.Remove("audio_codec_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_codec_settings"); else _explicitNullProperties?.Remove("audio_codec_settings"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsAudioCodecSettingsProperty _explicitNullValueAudioCodecSettings = default!;
 #endif
         /// <summary>The streaming_protocol property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StreamingProtocol { get => _explicitNullValueStreamingProtocol; set { _explicitNullValueStreamingProtocol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("streaming_protocol"); else _explicitNullProperties?.Remove("streaming_protocol"); } }
+        public string? StreamingProtocol { get => _explicitNullValueStreamingProtocol; set { _explicitNullValueStreamingProtocol = value; AdditionalData?.Remove("streaming_protocol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("streaming_protocol"); else _explicitNullProperties?.Remove("streaming_protocol"); } }
         private string? _explicitNullValueStreamingProtocol = default!;
 #nullable restore
 #else
-        public string StreamingProtocol { get => _explicitNullValueStreamingProtocol; set { _explicitNullValueStreamingProtocol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("streaming_protocol"); else _explicitNullProperties?.Remove("streaming_protocol"); } }
+        public string StreamingProtocol { get => _explicitNullValueStreamingProtocol; set { _explicitNullValueStreamingProtocol = value; AdditionalData?.Remove("streaming_protocol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("streaming_protocol"); else _explicitNullProperties?.Remove("streaming_protocol"); } }
         private string _explicitNullValueStreamingProtocol = default!;
 #endif
         /// <summary>The video_codec_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty? VideoCodecSettings { get => _explicitNullValueVideoCodecSettings; set { _explicitNullValueVideoCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_codec_settings"); else _explicitNullProperties?.Remove("video_codec_settings"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty? VideoCodecSettings { get => _explicitNullValueVideoCodecSettings; set { _explicitNullValueVideoCodecSettings = value; AdditionalData?.Remove("video_codec_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_codec_settings"); else _explicitNullProperties?.Remove("video_codec_settings"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty? _explicitNullValueVideoCodecSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty VideoCodecSettings { get => _explicitNullValueVideoCodecSettings; set { _explicitNullValueVideoCodecSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_codec_settings"); else _explicitNullProperties?.Remove("video_codec_settings"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty VideoCodecSettings { get => _explicitNullValueVideoCodecSettings; set { _explicitNullValueVideoCodecSettings = value; AdditionalData?.Remove("video_codec_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_codec_settings"); else _explicitNullProperties?.Remove("video_codec_settings"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettingsVideoCodecSettingsProperty _explicitNullValueVideoCodecSettings = default!;
 #endif
         /// <summary>

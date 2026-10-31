@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tracking_domains") is { } nullNodeTrackingDomains && nullNodeTrackingDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingDomains = null;
+            if (parseNode.GetChildNode("tracking_domains") is null) { _explicitNullValueTrackingDomains = default!; _explicitNullProperties?.Remove("tracking_domains"); }
+            else if (parseNode.GetChildNode("tracking_domains") is { } nullNodeTrackingDomains && nullNodeTrackingDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingDomains = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingDomains { get => _explicitNullValueTrackingDomains; set { _explicitNullValueTrackingDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_domains"); else _explicitNullProperties?.Remove("tracking_domains"); } }
+        public string? TrackingDomains { get => _explicitNullValueTrackingDomains; set { _explicitNullValueTrackingDomains = value; AdditionalData?.Remove("tracking_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_domains"); else _explicitNullProperties?.Remove("tracking_domains"); } }
         private string? _explicitNullValueTrackingDomains = default!;
 #nullable restore
 #else
-        public string TrackingDomains { get => _explicitNullValueTrackingDomains; set { _explicitNullValueTrackingDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_domains"); else _explicitNullProperties?.Remove("tracking_domains"); } }
+        public string TrackingDomains { get => _explicitNullValueTrackingDomains; set { _explicitNullValueTrackingDomains = value; AdditionalData?.Remove("tracking_domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_domains"); else _explicitNullProperties?.Remove("tracking_domains"); } }
         private string _explicitNullValueTrackingDomains = default!;
 #endif
         /// <summary>

@@ -17,15 +17,24 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audio_stats") is { } nullNodeAudioStats && nullNodeAudioStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioStats = null;
-            if (parseNode.GetChildNode("call_ended_time") is { } nullNodeCallEndedTime && nullNodeCallEndedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallEndedTime = null;
-            if (parseNode.GetChildNode("call_id") is { } nullNodeCallId && nullNodeCallId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallId = null;
-            if (parseNode.GetChildNode("end_call_reason") is { } nullNodeEndCallReason && nullNodeEndCallReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCallReason = null;
-            if (parseNode.GetChildNode("end_call_subreason") is { } nullNodeEndCallSubreason && nullNodeEndCallSubreason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCallSubreason = null;
-            if (parseNode.GetChildNode("first_audio_packet_received_time") is { } nullNodeFirstAudioPacketReceivedTime && nullNodeFirstAudioPacketReceivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstAudioPacketReceivedTime = null;
-            if (parseNode.GetChildNode("first_video_packet_received_time") is { } nullNodeFirstVideoPacketReceivedTime && nullNodeFirstVideoPacketReceivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstVideoPacketReceivedTime = null;
-            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
-            if (parseNode.GetChildNode("video_stats") is { } nullNodeVideoStats && nullNodeVideoStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoStats = null;
+            if (parseNode.GetChildNode("audio_stats") is null) { _explicitNullValueAudioStats = default!; _explicitNullProperties?.Remove("audio_stats"); }
+            else if (parseNode.GetChildNode("audio_stats") is { } nullNodeAudioStats && nullNodeAudioStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioStats = null;
+            if (parseNode.GetChildNode("call_ended_time") is null) { _explicitNullValueCallEndedTime = default!; _explicitNullProperties?.Remove("call_ended_time"); }
+            else if (parseNode.GetChildNode("call_ended_time") is { } nullNodeCallEndedTime && nullNodeCallEndedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallEndedTime = null;
+            if (parseNode.GetChildNode("call_id") is null) { _explicitNullValueCallId = default!; _explicitNullProperties?.Remove("call_id"); }
+            else if (parseNode.GetChildNode("call_id") is { } nullNodeCallId && nullNodeCallId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallId = null;
+            if (parseNode.GetChildNode("end_call_reason") is null) { _explicitNullValueEndCallReason = default!; _explicitNullProperties?.Remove("end_call_reason"); }
+            else if (parseNode.GetChildNode("end_call_reason") is { } nullNodeEndCallReason && nullNodeEndCallReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCallReason = null;
+            if (parseNode.GetChildNode("end_call_subreason") is null) { _explicitNullValueEndCallSubreason = default!; _explicitNullProperties?.Remove("end_call_subreason"); }
+            else if (parseNode.GetChildNode("end_call_subreason") is { } nullNodeEndCallSubreason && nullNodeEndCallSubreason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCallSubreason = null;
+            if (parseNode.GetChildNode("first_audio_packet_received_time") is null) { _explicitNullValueFirstAudioPacketReceivedTime = default!; _explicitNullProperties?.Remove("first_audio_packet_received_time"); }
+            else if (parseNode.GetChildNode("first_audio_packet_received_time") is { } nullNodeFirstAudioPacketReceivedTime && nullNodeFirstAudioPacketReceivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstAudioPacketReceivedTime = null;
+            if (parseNode.GetChildNode("first_video_packet_received_time") is null) { _explicitNullValueFirstVideoPacketReceivedTime = default!; _explicitNullProperties?.Remove("first_video_packet_received_time"); }
+            else if (parseNode.GetChildNode("first_video_packet_received_time") is { } nullNodeFirstVideoPacketReceivedTime && nullNodeFirstVideoPacketReceivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstVideoPacketReceivedTime = null;
+            if (parseNode.GetChildNode("platform") is null) { _explicitNullValuePlatform = default!; _explicitNullProperties?.Remove("platform"); }
+            else if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+            if (parseNode.GetChildNode("video_stats") is null) { _explicitNullValueVideoStats = default!; _explicitNullProperties?.Remove("video_stats"); }
+            else if (parseNode.GetChildNode("video_stats") is { } nullNodeVideoStats && nullNodeVideoStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoStats = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,56 +42,56 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudioStats { get => _explicitNullValueAudioStats; set { _explicitNullValueAudioStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_stats"); else _explicitNullProperties?.Remove("audio_stats"); } }
+        public string? AudioStats { get => _explicitNullValueAudioStats; set { _explicitNullValueAudioStats = value; AdditionalData?.Remove("audio_stats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_stats"); else _explicitNullProperties?.Remove("audio_stats"); } }
         private string? _explicitNullValueAudioStats = default!;
 #nullable restore
 #else
-        public string AudioStats { get => _explicitNullValueAudioStats; set { _explicitNullValueAudioStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_stats"); else _explicitNullProperties?.Remove("audio_stats"); } }
+        public string AudioStats { get => _explicitNullValueAudioStats; set { _explicitNullValueAudioStats = value; AdditionalData?.Remove("audio_stats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audio_stats"); else _explicitNullProperties?.Remove("audio_stats"); } }
         private string _explicitNullValueAudioStats = default!;
 #endif
         /// <summary>The call_ended_time property</summary>
-        public DateTimeOffset? CallEndedTime { get => _explicitNullValueCallEndedTime; set { _explicitNullValueCallEndedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_ended_time"); else _explicitNullProperties?.Remove("call_ended_time"); } }
+        public DateTimeOffset? CallEndedTime { get => _explicitNullValueCallEndedTime; set { _explicitNullValueCallEndedTime = value; AdditionalData?.Remove("call_ended_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_ended_time"); else _explicitNullProperties?.Remove("call_ended_time"); } }
         private DateTimeOffset? _explicitNullValueCallEndedTime = default!;
         /// <summary>The call_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_id"); else _explicitNullProperties?.Remove("call_id"); } }
+        public string? CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; AdditionalData?.Remove("call_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_id"); else _explicitNullProperties?.Remove("call_id"); } }
         private string? _explicitNullValueCallId = default!;
 #nullable restore
 #else
-        public string CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_id"); else _explicitNullProperties?.Remove("call_id"); } }
+        public string CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; AdditionalData?.Remove("call_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("call_id"); else _explicitNullProperties?.Remove("call_id"); } }
         private string _explicitNullValueCallId = default!;
 #endif
         /// <summary>The end_call_reason property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam? EndCallReason { get => _explicitNullValueEndCallReason; set { _explicitNullValueEndCallReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_reason"); else _explicitNullProperties?.Remove("end_call_reason"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam? EndCallReason { get => _explicitNullValueEndCallReason; set { _explicitNullValueEndCallReason = value; AdditionalData?.Remove("end_call_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_reason"); else _explicitNullProperties?.Remove("end_call_reason"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam? _explicitNullValueEndCallReason = default!;
         /// <summary>The end_call_subreason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndCallSubreason { get => _explicitNullValueEndCallSubreason; set { _explicitNullValueEndCallSubreason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_subreason"); else _explicitNullProperties?.Remove("end_call_subreason"); } }
+        public string? EndCallSubreason { get => _explicitNullValueEndCallSubreason; set { _explicitNullValueEndCallSubreason = value; AdditionalData?.Remove("end_call_subreason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_subreason"); else _explicitNullProperties?.Remove("end_call_subreason"); } }
         private string? _explicitNullValueEndCallSubreason = default!;
 #nullable restore
 #else
-        public string EndCallSubreason { get => _explicitNullValueEndCallSubreason; set { _explicitNullValueEndCallSubreason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_subreason"); else _explicitNullProperties?.Remove("end_call_subreason"); } }
+        public string EndCallSubreason { get => _explicitNullValueEndCallSubreason; set { _explicitNullValueEndCallSubreason = value; AdditionalData?.Remove("end_call_subreason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_call_subreason"); else _explicitNullProperties?.Remove("end_call_subreason"); } }
         private string _explicitNullValueEndCallSubreason = default!;
 #endif
         /// <summary>The first_audio_packet_received_time property</summary>
-        public DateTimeOffset? FirstAudioPacketReceivedTime { get => _explicitNullValueFirstAudioPacketReceivedTime; set { _explicitNullValueFirstAudioPacketReceivedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_audio_packet_received_time"); else _explicitNullProperties?.Remove("first_audio_packet_received_time"); } }
+        public DateTimeOffset? FirstAudioPacketReceivedTime { get => _explicitNullValueFirstAudioPacketReceivedTime; set { _explicitNullValueFirstAudioPacketReceivedTime = value; AdditionalData?.Remove("first_audio_packet_received_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_audio_packet_received_time"); else _explicitNullProperties?.Remove("first_audio_packet_received_time"); } }
         private DateTimeOffset? _explicitNullValueFirstAudioPacketReceivedTime = default!;
         /// <summary>The first_video_packet_received_time property</summary>
-        public DateTimeOffset? FirstVideoPacketReceivedTime { get => _explicitNullValueFirstVideoPacketReceivedTime; set { _explicitNullValueFirstVideoPacketReceivedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_video_packet_received_time"); else _explicitNullProperties?.Remove("first_video_packet_received_time"); } }
+        public DateTimeOffset? FirstVideoPacketReceivedTime { get => _explicitNullValueFirstVideoPacketReceivedTime; set { _explicitNullValueFirstVideoPacketReceivedTime = value; AdditionalData?.Remove("first_video_packet_received_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_video_packet_received_time"); else _explicitNullProperties?.Remove("first_video_packet_received_time"); } }
         private DateTimeOffset? _explicitNullValueFirstVideoPacketReceivedTime = default!;
         /// <summary>The platform property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; AdditionalData?.Remove("platform"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam? _explicitNullValuePlatform = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoStats { get => _explicitNullValueVideoStats; set { _explicitNullValueVideoStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_stats"); else _explicitNullProperties?.Remove("video_stats"); } }
+        public string? VideoStats { get => _explicitNullValueVideoStats; set { _explicitNullValueVideoStats = value; AdditionalData?.Remove("video_stats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_stats"); else _explicitNullProperties?.Remove("video_stats"); } }
         private string? _explicitNullValueVideoStats = default!;
 #nullable restore
 #else
-        public string VideoStats { get => _explicitNullValueVideoStats; set { _explicitNullValueVideoStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_stats"); else _explicitNullProperties?.Remove("video_stats"); } }
+        public string VideoStats { get => _explicitNullValueVideoStats; set { _explicitNullValueVideoStats = value; AdditionalData?.Remove("video_stats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_stats"); else _explicitNullProperties?.Remove("video_stats"); } }
         private string _explicitNullValueVideoStats = default!;
 #endif
         /// <summary>
@@ -113,11 +122,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "audio_stats", n => { AudioStats = n.GetStringValue(); } },
                 { "call_ended_time", n => { CallEndedTime = n.GetDateTimeOffsetValue(); } },
                 { "call_id", n => { CallId = n.GetStringValue(); } },
-                { "end_call_reason", n => { EndCallReason = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam>(); } },
+                { "end_call_reason", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsEndCallReasonEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEndCallReason = default; _explicitNullProperties?.Remove("end_call_reason"); AdditionalData["end_call_reason"] = unknown; } else { EndCallReason = parsed; AdditionalData.Remove("end_call_reason"); } } },
                 { "end_call_subreason", n => { EndCallSubreason = n.GetStringValue(); } },
                 { "first_audio_packet_received_time", n => { FirstAudioPacketReceivedTime = n.GetDateTimeOffsetValue(); } },
                 { "first_video_packet_received_time", n => { FirstVideoPacketReceivedTime = n.GetDateTimeOffsetValue(); } },
-                { "platform", n => { Platform = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam>(); } },
+                { "platform", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecallMetricsPlatformEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePlatform = default; _explicitNullProperties?.Remove("platform"); AdditionalData["platform"] = unknown; } else { Platform = parsed; AdditionalData.Remove("platform"); } } },
                 { "video_stats", n => { VideoStats = n.GetStringValue(); } },
             };
         }

@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("partner_business_id") is { } nullNodePartnerBusinessId && nullNodePartnerBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerBusinessId = null;
-            if (parseNode.GetChildNode("preverified_id") is { } nullNodePreverifiedId && nullNodePreverifiedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreverifiedId = null;
+            if (parseNode.GetChildNode("partner_business_id") is null) { _explicitNullValuePartnerBusinessId = default!; _explicitNullProperties?.Remove("partner_business_id"); }
+            else if (parseNode.GetChildNode("partner_business_id") is { } nullNodePartnerBusinessId && nullNodePartnerBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerBusinessId = null;
+            if (parseNode.GetChildNode("preverified_id") is null) { _explicitNullValuePreverifiedId = default!; _explicitNullProperties?.Remove("preverified_id"); }
+            else if (parseNode.GetChildNode("preverified_id") is { } nullNodePreverifiedId && nullNodePreverifiedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreverifiedId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The partner_business_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
+        public string? PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; AdditionalData?.Remove("partner_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
         private string? _explicitNullValuePartnerBusinessId = default!;
 #nullable restore
 #else
-        public string PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
+        public string PartnerBusinessId { get => _explicitNullValuePartnerBusinessId; set { _explicitNullValuePartnerBusinessId = value; AdditionalData?.Remove("partner_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_business_id"); else _explicitNullProperties?.Remove("partner_business_id"); } }
         private string _explicitNullValuePartnerBusinessId = default!;
 #endif
         /// <summary>The preverified_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreverifiedId { get => _explicitNullValuePreverifiedId; set { _explicitNullValuePreverifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preverified_id"); else _explicitNullProperties?.Remove("preverified_id"); } }
+        public string? PreverifiedId { get => _explicitNullValuePreverifiedId; set { _explicitNullValuePreverifiedId = value; AdditionalData?.Remove("preverified_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preverified_id"); else _explicitNullProperties?.Remove("preverified_id"); } }
         private string? _explicitNullValuePreverifiedId = default!;
 #nullable restore
 #else
-        public string PreverifiedId { get => _explicitNullValuePreverifiedId; set { _explicitNullValuePreverifiedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preverified_id"); else _explicitNullProperties?.Remove("preverified_id"); } }
+        public string PreverifiedId { get => _explicitNullValuePreverifiedId; set { _explicitNullValuePreverifiedId = value; AdditionalData?.Remove("preverified_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preverified_id"); else _explicitNullProperties?.Remove("preverified_id"); } }
         private string _explicitNullValuePreverifiedId = default!;
 #endif
         /// <summary>

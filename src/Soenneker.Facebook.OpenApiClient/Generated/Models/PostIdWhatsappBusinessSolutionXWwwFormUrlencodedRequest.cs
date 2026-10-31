@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("owner_permissions") is { } nullNodeOwnerPermissions && nullNodeOwnerPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerPermissions = null;
-            if (parseNode.GetChildNode("partner_app_id") is { } nullNodePartnerAppId && nullNodePartnerAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerAppId = null;
-            if (parseNode.GetChildNode("partner_permissions") is { } nullNodePartnerPermissions && nullNodePartnerPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerPermissions = null;
-            if (parseNode.GetChildNode("solution_name") is { } nullNodeSolutionName && nullNodeSolutionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SolutionName = null;
+            if (parseNode.GetChildNode("owner_permissions") is null) { _explicitNullValueOwnerPermissions = default!; _explicitNullProperties?.Remove("owner_permissions"); }
+            else if (parseNode.GetChildNode("owner_permissions") is { } nullNodeOwnerPermissions && nullNodeOwnerPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerPermissions = null;
+            if (parseNode.GetChildNode("partner_app_id") is null) { _explicitNullValuePartnerAppId = default!; _explicitNullProperties?.Remove("partner_app_id"); }
+            else if (parseNode.GetChildNode("partner_app_id") is { } nullNodePartnerAppId && nullNodePartnerAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerAppId = null;
+            if (parseNode.GetChildNode("partner_permissions") is null) { _explicitNullValuePartnerPermissions = default!; _explicitNullProperties?.Remove("partner_permissions"); }
+            else if (parseNode.GetChildNode("partner_permissions") is { } nullNodePartnerPermissions && nullNodePartnerPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerPermissions = null;
+            if (parseNode.GetChildNode("solution_name") is null) { _explicitNullValueSolutionName = default!; _explicitNullProperties?.Remove("solution_name"); }
+            else if (parseNode.GetChildNode("solution_name") is { } nullNodeSolutionName && nullNodeSolutionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SolutionName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerPermissions { get => _explicitNullValueOwnerPermissions; set { _explicitNullValueOwnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_permissions"); else _explicitNullProperties?.Remove("owner_permissions"); } }
+        public string? OwnerPermissions { get => _explicitNullValueOwnerPermissions; set { _explicitNullValueOwnerPermissions = value; AdditionalData?.Remove("owner_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_permissions"); else _explicitNullProperties?.Remove("owner_permissions"); } }
         private string? _explicitNullValueOwnerPermissions = default!;
 #nullable restore
 #else
-        public string OwnerPermissions { get => _explicitNullValueOwnerPermissions; set { _explicitNullValueOwnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_permissions"); else _explicitNullProperties?.Remove("owner_permissions"); } }
+        public string OwnerPermissions { get => _explicitNullValueOwnerPermissions; set { _explicitNullValueOwnerPermissions = value; AdditionalData?.Remove("owner_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_permissions"); else _explicitNullProperties?.Remove("owner_permissions"); } }
         private string _explicitNullValueOwnerPermissions = default!;
 #endif
         /// <summary>The partner_app_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerAppId { get => _explicitNullValuePartnerAppId; set { _explicitNullValuePartnerAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_id"); else _explicitNullProperties?.Remove("partner_app_id"); } }
+        public string? PartnerAppId { get => _explicitNullValuePartnerAppId; set { _explicitNullValuePartnerAppId = value; AdditionalData?.Remove("partner_app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_id"); else _explicitNullProperties?.Remove("partner_app_id"); } }
         private string? _explicitNullValuePartnerAppId = default!;
 #nullable restore
 #else
-        public string PartnerAppId { get => _explicitNullValuePartnerAppId; set { _explicitNullValuePartnerAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_id"); else _explicitNullProperties?.Remove("partner_app_id"); } }
+        public string PartnerAppId { get => _explicitNullValuePartnerAppId; set { _explicitNullValuePartnerAppId = value; AdditionalData?.Remove("partner_app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_app_id"); else _explicitNullProperties?.Remove("partner_app_id"); } }
         private string _explicitNullValuePartnerAppId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerPermissions { get => _explicitNullValuePartnerPermissions; set { _explicitNullValuePartnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_permissions"); else _explicitNullProperties?.Remove("partner_permissions"); } }
+        public string? PartnerPermissions { get => _explicitNullValuePartnerPermissions; set { _explicitNullValuePartnerPermissions = value; AdditionalData?.Remove("partner_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_permissions"); else _explicitNullProperties?.Remove("partner_permissions"); } }
         private string? _explicitNullValuePartnerPermissions = default!;
 #nullable restore
 #else
-        public string PartnerPermissions { get => _explicitNullValuePartnerPermissions; set { _explicitNullValuePartnerPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_permissions"); else _explicitNullProperties?.Remove("partner_permissions"); } }
+        public string PartnerPermissions { get => _explicitNullValuePartnerPermissions; set { _explicitNullValuePartnerPermissions = value; AdditionalData?.Remove("partner_permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_permissions"); else _explicitNullProperties?.Remove("partner_permissions"); } }
         private string _explicitNullValuePartnerPermissions = default!;
 #endif
         /// <summary>The solution_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SolutionName { get => _explicitNullValueSolutionName; set { _explicitNullValueSolutionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_name"); else _explicitNullProperties?.Remove("solution_name"); } }
+        public string? SolutionName { get => _explicitNullValueSolutionName; set { _explicitNullValueSolutionName = value; AdditionalData?.Remove("solution_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_name"); else _explicitNullProperties?.Remove("solution_name"); } }
         private string? _explicitNullValueSolutionName = default!;
 #nullable restore
 #else
-        public string SolutionName { get => _explicitNullValueSolutionName; set { _explicitNullValueSolutionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_name"); else _explicitNullProperties?.Remove("solution_name"); } }
+        public string SolutionName { get => _explicitNullValueSolutionName; set { _explicitNullValueSolutionName = value; AdditionalData?.Remove("solution_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_name"); else _explicitNullProperties?.Remove("solution_name"); } }
         private string _explicitNullValueSolutionName = default!;
 #endif
         /// <summary>

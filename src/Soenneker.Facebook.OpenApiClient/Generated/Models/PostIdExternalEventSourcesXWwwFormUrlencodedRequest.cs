@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("external_event_sources") is { } nullNodeExternalEventSources && nullNodeExternalEventSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalEventSources = null;
+            if (parseNode.GetChildNode("external_event_sources") is null) { _explicitNullValueExternalEventSources = default!; _explicitNullProperties?.Remove("external_event_sources"); }
+            else if (parseNode.GetChildNode("external_event_sources") is { } nullNodeExternalEventSources && nullNodeExternalEventSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalEventSources = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalEventSources { get => _explicitNullValueExternalEventSources; set { _explicitNullValueExternalEventSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_event_sources"); else _explicitNullProperties?.Remove("external_event_sources"); } }
+        public string? ExternalEventSources { get => _explicitNullValueExternalEventSources; set { _explicitNullValueExternalEventSources = value; AdditionalData?.Remove("external_event_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_event_sources"); else _explicitNullProperties?.Remove("external_event_sources"); } }
         private string? _explicitNullValueExternalEventSources = default!;
 #nullable restore
 #else
-        public string ExternalEventSources { get => _explicitNullValueExternalEventSources; set { _explicitNullValueExternalEventSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_event_sources"); else _explicitNullProperties?.Remove("external_event_sources"); } }
+        public string ExternalEventSources { get => _explicitNullValueExternalEventSources; set { _explicitNullValueExternalEventSources = value; AdditionalData?.Remove("external_event_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_event_sources"); else _explicitNullProperties?.Remove("external_event_sources"); } }
         private string _explicitNullValueExternalEventSources = default!;
 #endif
         /// <summary>

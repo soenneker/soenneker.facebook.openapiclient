@@ -17,39 +17,45 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
-            if (parseNode.GetChildNode("is_aem_ready") is { } nullNodeIsAemReady && nullNodeIsAemReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAemReady = null;
-            if (parseNode.GetChildNode("is_app_aem_install_ready") is { } nullNodeIsAppAemInstallReady && nullNodeIsAppAemInstallReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAppAemInstallReady = null;
-            if (parseNode.GetChildNode("is_app_aem_ready") is { } nullNodeIsAppAemReady && nullNodeIsAppAemReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAppAemReady = null;
-            if (parseNode.GetChildNode("is_skan_ready") is { } nullNodeIsSkanReady && nullNodeIsSkanReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSkanReady = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("app_id") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("app_id"); }
+            else if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("is_aem_ready") is null) { _explicitNullValueIsAemReady = default!; _explicitNullProperties?.Remove("is_aem_ready"); }
+            else if (parseNode.GetChildNode("is_aem_ready") is { } nullNodeIsAemReady && nullNodeIsAemReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAemReady = null;
+            if (parseNode.GetChildNode("is_app_aem_install_ready") is null) { _explicitNullValueIsAppAemInstallReady = default!; _explicitNullProperties?.Remove("is_app_aem_install_ready"); }
+            else if (parseNode.GetChildNode("is_app_aem_install_ready") is { } nullNodeIsAppAemInstallReady && nullNodeIsAppAemInstallReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAppAemInstallReady = null;
+            if (parseNode.GetChildNode("is_app_aem_ready") is null) { _explicitNullValueIsAppAemReady = default!; _explicitNullProperties?.Remove("is_app_aem_ready"); }
+            else if (parseNode.GetChildNode("is_app_aem_ready") is { } nullNodeIsAppAemReady && nullNodeIsAppAemReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAppAemReady = null;
+            if (parseNode.GetChildNode("is_skan_ready") is null) { _explicitNullValueIsSkanReady = default!; _explicitNullProperties?.Remove("is_skan_ready"); }
+            else if (parseNode.GetChildNode("is_skan_ready") is { } nullNodeIsSkanReady && nullNodeIsSkanReady.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSkanReady = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app_id property</summary>
-        public long? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public long? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private long? _explicitNullValueAppId = default!;
         /// <summary>The is_aem_ready property</summary>
-        public bool? IsAemReady { get => _explicitNullValueIsAemReady; set { _explicitNullValueIsAemReady = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_aem_ready"); else _explicitNullProperties?.Remove("is_aem_ready"); } }
+        public bool? IsAemReady { get => _explicitNullValueIsAemReady; set { _explicitNullValueIsAemReady = value; AdditionalData?.Remove("is_aem_ready"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_aem_ready"); else _explicitNullProperties?.Remove("is_aem_ready"); } }
         private bool? _explicitNullValueIsAemReady = default!;
         /// <summary>The is_app_aem_install_ready property</summary>
-        public bool? IsAppAemInstallReady { get => _explicitNullValueIsAppAemInstallReady; set { _explicitNullValueIsAppAemInstallReady = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_app_aem_install_ready"); else _explicitNullProperties?.Remove("is_app_aem_install_ready"); } }
+        public bool? IsAppAemInstallReady { get => _explicitNullValueIsAppAemInstallReady; set { _explicitNullValueIsAppAemInstallReady = value; AdditionalData?.Remove("is_app_aem_install_ready"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_app_aem_install_ready"); else _explicitNullProperties?.Remove("is_app_aem_install_ready"); } }
         private bool? _explicitNullValueIsAppAemInstallReady = default!;
         /// <summary>The is_app_aem_ready property</summary>
-        public bool? IsAppAemReady { get => _explicitNullValueIsAppAemReady; set { _explicitNullValueIsAppAemReady = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_app_aem_ready"); else _explicitNullProperties?.Remove("is_app_aem_ready"); } }
+        public bool? IsAppAemReady { get => _explicitNullValueIsAppAemReady; set { _explicitNullValueIsAppAemReady = value; AdditionalData?.Remove("is_app_aem_ready"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_app_aem_ready"); else _explicitNullProperties?.Remove("is_app_aem_ready"); } }
         private bool? _explicitNullValueIsAppAemReady = default!;
         /// <summary>The is_skan_ready property</summary>
-        public bool? IsSkanReady { get => _explicitNullValueIsSkanReady; set { _explicitNullValueIsSkanReady = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_skan_ready"); else _explicitNullProperties?.Remove("is_skan_ready"); } }
+        public bool? IsSkanReady { get => _explicitNullValueIsSkanReady; set { _explicitNullValueIsSkanReady = value; AdditionalData?.Remove("is_skan_ready"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_skan_ready"); else _explicitNullProperties?.Remove("is_skan_ready"); } }
         private bool? _explicitNullValueIsSkanReady = default!;
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>

@@ -17,22 +17,38 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("android_url") is { } nullNodeAndroidUrl && nullNodeAndroidUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidUrl = null;
-            if (parseNode.GetChildNode("app_destination") is { } nullNodeAppDestination && nullNodeAppDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppDestination = null;
-            if (parseNode.GetChildNode("application") is { } nullNodeApplication && nullNodeApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Application = null;
-            if (parseNode.GetChildNode("app_link") is { } nullNodeAppLink && nullNodeAppLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppLink = null;
-            if (parseNode.GetChildNode("event_id") is { } nullNodeEventId && nullNodeEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventId = null;
-            if (parseNode.GetChildNode("ios_url") is { } nullNodeIosUrl && nullNodeIosUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IosUrl = null;
-            if (parseNode.GetChildNode("land_on_whatsapp_catalog") is { } nullNodeLandOnWhatsappCatalog && nullNodeLandOnWhatsappCatalog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandOnWhatsappCatalog = null;
-            if (parseNode.GetChildNode("land_on_whatsapp_profile") is { } nullNodeLandOnWhatsappProfile && nullNodeLandOnWhatsappProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandOnWhatsappProfile = null;
-            if (parseNode.GetChildNode("lead_gen_form_id") is { } nullNodeLeadGenFormId && nullNodeLeadGenFormId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadGenFormId = null;
-            if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
-            if (parseNode.GetChildNode("link_caption") is { } nullNodeLinkCaption && nullNodeLinkCaption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkCaption = null;
-            if (parseNode.GetChildNode("link_format") is { } nullNodeLinkFormat && nullNodeLinkFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkFormat = null;
-            if (parseNode.GetChildNode("object_store_urls") is { } nullNodeObjectStoreUrls && nullNodeObjectStoreUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectStoreUrls = null;
-            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
-            if (parseNode.GetChildNode("product_link") is { } nullNodeProductLink && nullNodeProductLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductLink = null;
-            if (parseNode.GetChildNode("whatsapp_number") is { } nullNodeWhatsappNumber && nullNodeWhatsappNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappNumber = null;
+            if (parseNode.GetChildNode("android_url") is null) { _explicitNullValueAndroidUrl = default!; _explicitNullProperties?.Remove("android_url"); }
+            else if (parseNode.GetChildNode("android_url") is { } nullNodeAndroidUrl && nullNodeAndroidUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AndroidUrl = null;
+            if (parseNode.GetChildNode("app_destination") is null) { _explicitNullValueAppDestination = default!; _explicitNullProperties?.Remove("app_destination"); }
+            else if (parseNode.GetChildNode("app_destination") is { } nullNodeAppDestination && nullNodeAppDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppDestination = null;
+            if (parseNode.GetChildNode("application") is null) { _explicitNullValueApplication = default!; _explicitNullProperties?.Remove("application"); }
+            else if (parseNode.GetChildNode("application") is { } nullNodeApplication && nullNodeApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Application = null;
+            if (parseNode.GetChildNode("app_link") is null) { _explicitNullValueAppLink = default!; _explicitNullProperties?.Remove("app_link"); }
+            else if (parseNode.GetChildNode("app_link") is { } nullNodeAppLink && nullNodeAppLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppLink = null;
+            if (parseNode.GetChildNode("event_id") is null) { _explicitNullValueEventId = default!; _explicitNullProperties?.Remove("event_id"); }
+            else if (parseNode.GetChildNode("event_id") is { } nullNodeEventId && nullNodeEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventId = null;
+            if (parseNode.GetChildNode("ios_url") is null) { _explicitNullValueIosUrl = default!; _explicitNullProperties?.Remove("ios_url"); }
+            else if (parseNode.GetChildNode("ios_url") is { } nullNodeIosUrl && nullNodeIosUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IosUrl = null;
+            if (parseNode.GetChildNode("land_on_whatsapp_catalog") is null) { _explicitNullValueLandOnWhatsappCatalog = default!; _explicitNullProperties?.Remove("land_on_whatsapp_catalog"); }
+            else if (parseNode.GetChildNode("land_on_whatsapp_catalog") is { } nullNodeLandOnWhatsappCatalog && nullNodeLandOnWhatsappCatalog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandOnWhatsappCatalog = null;
+            if (parseNode.GetChildNode("land_on_whatsapp_profile") is null) { _explicitNullValueLandOnWhatsappProfile = default!; _explicitNullProperties?.Remove("land_on_whatsapp_profile"); }
+            else if (parseNode.GetChildNode("land_on_whatsapp_profile") is { } nullNodeLandOnWhatsappProfile && nullNodeLandOnWhatsappProfile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandOnWhatsappProfile = null;
+            if (parseNode.GetChildNode("lead_gen_form_id") is null) { _explicitNullValueLeadGenFormId = default!; _explicitNullProperties?.Remove("lead_gen_form_id"); }
+            else if (parseNode.GetChildNode("lead_gen_form_id") is { } nullNodeLeadGenFormId && nullNodeLeadGenFormId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadGenFormId = null;
+            if (parseNode.GetChildNode("link") is null) { _explicitNullValueLink = default!; _explicitNullProperties?.Remove("link"); }
+            else if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
+            if (parseNode.GetChildNode("link_caption") is null) { _explicitNullValueLinkCaption = default!; _explicitNullProperties?.Remove("link_caption"); }
+            else if (parseNode.GetChildNode("link_caption") is { } nullNodeLinkCaption && nullNodeLinkCaption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkCaption = null;
+            if (parseNode.GetChildNode("link_format") is null) { _explicitNullValueLinkFormat = default!; _explicitNullProperties?.Remove("link_format"); }
+            else if (parseNode.GetChildNode("link_format") is { } nullNodeLinkFormat && nullNodeLinkFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkFormat = null;
+            if (parseNode.GetChildNode("object_store_urls") is null) { _explicitNullValueObjectStoreUrls = default!; _explicitNullProperties?.Remove("object_store_urls"); }
+            else if (parseNode.GetChildNode("object_store_urls") is { } nullNodeObjectStoreUrls && nullNodeObjectStoreUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectStoreUrls = null;
+            if (parseNode.GetChildNode("page") is null) { _explicitNullValuePage = default!; _explicitNullProperties?.Remove("page"); }
+            else if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("product_link") is null) { _explicitNullValueProductLink = default!; _explicitNullProperties?.Remove("product_link"); }
+            else if (parseNode.GetChildNode("product_link") is { } nullNodeProductLink && nullNodeProductLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductLink = null;
+            if (parseNode.GetChildNode("whatsapp_number") is null) { _explicitNullValueWhatsappNumber = default!; _explicitNullProperties?.Remove("whatsapp_number"); }
+            else if (parseNode.GetChildNode("whatsapp_number") is { } nullNodeWhatsappNumber && nullNodeWhatsappNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,147 +56,147 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The android_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
+        public string? AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; AdditionalData?.Remove("android_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
         private string? _explicitNullValueAndroidUrl = default!;
 #nullable restore
 #else
-        public string AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
+        public string AndroidUrl { get => _explicitNullValueAndroidUrl; set { _explicitNullValueAndroidUrl = value; AdditionalData?.Remove("android_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android_url"); else _explicitNullProperties?.Remove("android_url"); } }
         private string _explicitNullValueAndroidUrl = default!;
 #endif
         /// <summary>The app_destination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppDestination { get => _explicitNullValueAppDestination; set { _explicitNullValueAppDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_destination"); else _explicitNullProperties?.Remove("app_destination"); } }
+        public string? AppDestination { get => _explicitNullValueAppDestination; set { _explicitNullValueAppDestination = value; AdditionalData?.Remove("app_destination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_destination"); else _explicitNullProperties?.Remove("app_destination"); } }
         private string? _explicitNullValueAppDestination = default!;
 #nullable restore
 #else
-        public string AppDestination { get => _explicitNullValueAppDestination; set { _explicitNullValueAppDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_destination"); else _explicitNullProperties?.Remove("app_destination"); } }
+        public string AppDestination { get => _explicitNullValueAppDestination; set { _explicitNullValueAppDestination = value; AdditionalData?.Remove("app_destination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_destination"); else _explicitNullProperties?.Remove("app_destination"); } }
         private string _explicitNullValueAppDestination = default!;
 #endif
         /// <summary>The application property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        public string? Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; AdditionalData?.Remove("application"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
         private string? _explicitNullValueApplication = default!;
 #nullable restore
 #else
-        public string Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        public string Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; AdditionalData?.Remove("application"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
         private string _explicitNullValueApplication = default!;
 #endif
         /// <summary>The app_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppLink { get => _explicitNullValueAppLink; set { _explicitNullValueAppLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_link"); else _explicitNullProperties?.Remove("app_link"); } }
+        public string? AppLink { get => _explicitNullValueAppLink; set { _explicitNullValueAppLink = value; AdditionalData?.Remove("app_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_link"); else _explicitNullProperties?.Remove("app_link"); } }
         private string? _explicitNullValueAppLink = default!;
 #nullable restore
 #else
-        public string AppLink { get => _explicitNullValueAppLink; set { _explicitNullValueAppLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_link"); else _explicitNullProperties?.Remove("app_link"); } }
+        public string AppLink { get => _explicitNullValueAppLink; set { _explicitNullValueAppLink = value; AdditionalData?.Remove("app_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_link"); else _explicitNullProperties?.Remove("app_link"); } }
         private string _explicitNullValueAppLink = default!;
 #endif
         /// <summary>The event_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
+        public string? EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; AdditionalData?.Remove("event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
         private string? _explicitNullValueEventId = default!;
 #nullable restore
 #else
-        public string EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
+        public string EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; AdditionalData?.Remove("event_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_id"); else _explicitNullProperties?.Remove("event_id"); } }
         private string _explicitNullValueEventId = default!;
 #endif
         /// <summary>The ios_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IosUrl { get => _explicitNullValueIosUrl; set { _explicitNullValueIosUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios_url"); else _explicitNullProperties?.Remove("ios_url"); } }
+        public string? IosUrl { get => _explicitNullValueIosUrl; set { _explicitNullValueIosUrl = value; AdditionalData?.Remove("ios_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios_url"); else _explicitNullProperties?.Remove("ios_url"); } }
         private string? _explicitNullValueIosUrl = default!;
 #nullable restore
 #else
-        public string IosUrl { get => _explicitNullValueIosUrl; set { _explicitNullValueIosUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios_url"); else _explicitNullProperties?.Remove("ios_url"); } }
+        public string IosUrl { get => _explicitNullValueIosUrl; set { _explicitNullValueIosUrl = value; AdditionalData?.Remove("ios_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios_url"); else _explicitNullProperties?.Remove("ios_url"); } }
         private string _explicitNullValueIosUrl = default!;
 #endif
         /// <summary>The land_on_whatsapp_catalog property</summary>
-        public long? LandOnWhatsappCatalog { get => _explicitNullValueLandOnWhatsappCatalog; set { _explicitNullValueLandOnWhatsappCatalog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("land_on_whatsapp_catalog"); else _explicitNullProperties?.Remove("land_on_whatsapp_catalog"); } }
+        public long? LandOnWhatsappCatalog { get => _explicitNullValueLandOnWhatsappCatalog; set { _explicitNullValueLandOnWhatsappCatalog = value; AdditionalData?.Remove("land_on_whatsapp_catalog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("land_on_whatsapp_catalog"); else _explicitNullProperties?.Remove("land_on_whatsapp_catalog"); } }
         private long? _explicitNullValueLandOnWhatsappCatalog = default!;
         /// <summary>The land_on_whatsapp_profile property</summary>
-        public long? LandOnWhatsappProfile { get => _explicitNullValueLandOnWhatsappProfile; set { _explicitNullValueLandOnWhatsappProfile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("land_on_whatsapp_profile"); else _explicitNullProperties?.Remove("land_on_whatsapp_profile"); } }
+        public long? LandOnWhatsappProfile { get => _explicitNullValueLandOnWhatsappProfile; set { _explicitNullValueLandOnWhatsappProfile = value; AdditionalData?.Remove("land_on_whatsapp_profile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("land_on_whatsapp_profile"); else _explicitNullProperties?.Remove("land_on_whatsapp_profile"); } }
         private long? _explicitNullValueLandOnWhatsappProfile = default!;
         /// <summary>The lead_gen_form_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadGenFormId { get => _explicitNullValueLeadGenFormId; set { _explicitNullValueLeadGenFormId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_gen_form_id"); else _explicitNullProperties?.Remove("lead_gen_form_id"); } }
+        public string? LeadGenFormId { get => _explicitNullValueLeadGenFormId; set { _explicitNullValueLeadGenFormId = value; AdditionalData?.Remove("lead_gen_form_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_gen_form_id"); else _explicitNullProperties?.Remove("lead_gen_form_id"); } }
         private string? _explicitNullValueLeadGenFormId = default!;
 #nullable restore
 #else
-        public string LeadGenFormId { get => _explicitNullValueLeadGenFormId; set { _explicitNullValueLeadGenFormId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_gen_form_id"); else _explicitNullProperties?.Remove("lead_gen_form_id"); } }
+        public string LeadGenFormId { get => _explicitNullValueLeadGenFormId; set { _explicitNullValueLeadGenFormId = value; AdditionalData?.Remove("lead_gen_form_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead_gen_form_id"); else _explicitNullProperties?.Remove("lead_gen_form_id"); } }
         private string _explicitNullValueLeadGenFormId = default!;
 #endif
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        public string? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; AdditionalData?.Remove("link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
         private string? _explicitNullValueLink = default!;
 #nullable restore
 #else
-        public string Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        public string Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; AdditionalData?.Remove("link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
         private string _explicitNullValueLink = default!;
 #endif
         /// <summary>The link_caption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkCaption { get => _explicitNullValueLinkCaption; set { _explicitNullValueLinkCaption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_caption"); else _explicitNullProperties?.Remove("link_caption"); } }
+        public string? LinkCaption { get => _explicitNullValueLinkCaption; set { _explicitNullValueLinkCaption = value; AdditionalData?.Remove("link_caption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_caption"); else _explicitNullProperties?.Remove("link_caption"); } }
         private string? _explicitNullValueLinkCaption = default!;
 #nullable restore
 #else
-        public string LinkCaption { get => _explicitNullValueLinkCaption; set { _explicitNullValueLinkCaption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_caption"); else _explicitNullProperties?.Remove("link_caption"); } }
+        public string LinkCaption { get => _explicitNullValueLinkCaption; set { _explicitNullValueLinkCaption = value; AdditionalData?.Remove("link_caption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_caption"); else _explicitNullProperties?.Remove("link_caption"); } }
         private string _explicitNullValueLinkCaption = default!;
 #endif
         /// <summary>The link_format property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkFormat { get => _explicitNullValueLinkFormat; set { _explicitNullValueLinkFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_format"); else _explicitNullProperties?.Remove("link_format"); } }
+        public string? LinkFormat { get => _explicitNullValueLinkFormat; set { _explicitNullValueLinkFormat = value; AdditionalData?.Remove("link_format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_format"); else _explicitNullProperties?.Remove("link_format"); } }
         private string? _explicitNullValueLinkFormat = default!;
 #nullable restore
 #else
-        public string LinkFormat { get => _explicitNullValueLinkFormat; set { _explicitNullValueLinkFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_format"); else _explicitNullProperties?.Remove("link_format"); } }
+        public string LinkFormat { get => _explicitNullValueLinkFormat; set { _explicitNullValueLinkFormat = value; AdditionalData?.Remove("link_format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_format"); else _explicitNullProperties?.Remove("link_format"); } }
         private string _explicitNullValueLinkFormat = default!;
 #endif
         /// <summary>The object_store_urls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ObjectStoreUrls { get => _explicitNullValueObjectStoreUrls; set { _explicitNullValueObjectStoreUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_store_urls"); else _explicitNullProperties?.Remove("object_store_urls"); } }
+        public List<string>? ObjectStoreUrls { get => _explicitNullValueObjectStoreUrls; set { _explicitNullValueObjectStoreUrls = value; AdditionalData?.Remove("object_store_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_store_urls"); else _explicitNullProperties?.Remove("object_store_urls"); } }
         private List<string>? _explicitNullValueObjectStoreUrls = default!;
 #nullable restore
 #else
-        public List<string> ObjectStoreUrls { get => _explicitNullValueObjectStoreUrls; set { _explicitNullValueObjectStoreUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_store_urls"); else _explicitNullProperties?.Remove("object_store_urls"); } }
+        public List<string> ObjectStoreUrls { get => _explicitNullValueObjectStoreUrls; set { _explicitNullValueObjectStoreUrls = value; AdditionalData?.Remove("object_store_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_store_urls"); else _explicitNullProperties?.Remove("object_store_urls"); } }
         private List<string> _explicitNullValueObjectStoreUrls = default!;
 #endif
         /// <summary>The page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        public string? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; AdditionalData?.Remove("page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
         private string? _explicitNullValuePage = default!;
 #nullable restore
 #else
-        public string Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        public string Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; AdditionalData?.Remove("page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
         private string _explicitNullValuePage = default!;
 #endif
         /// <summary>The product_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductLink { get => _explicitNullValueProductLink; set { _explicitNullValueProductLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_link"); else _explicitNullProperties?.Remove("product_link"); } }
+        public string? ProductLink { get => _explicitNullValueProductLink; set { _explicitNullValueProductLink = value; AdditionalData?.Remove("product_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_link"); else _explicitNullProperties?.Remove("product_link"); } }
         private string? _explicitNullValueProductLink = default!;
 #nullable restore
 #else
-        public string ProductLink { get => _explicitNullValueProductLink; set { _explicitNullValueProductLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_link"); else _explicitNullProperties?.Remove("product_link"); } }
+        public string ProductLink { get => _explicitNullValueProductLink; set { _explicitNullValueProductLink = value; AdditionalData?.Remove("product_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_link"); else _explicitNullProperties?.Remove("product_link"); } }
         private string _explicitNullValueProductLink = default!;
 #endif
         /// <summary>The whatsapp_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhatsappNumber { get => _explicitNullValueWhatsappNumber; set { _explicitNullValueWhatsappNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_number"); else _explicitNullProperties?.Remove("whatsapp_number"); } }
+        public string? WhatsappNumber { get => _explicitNullValueWhatsappNumber; set { _explicitNullValueWhatsappNumber = value; AdditionalData?.Remove("whatsapp_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_number"); else _explicitNullProperties?.Remove("whatsapp_number"); } }
         private string? _explicitNullValueWhatsappNumber = default!;
 #nullable restore
 #else
-        public string WhatsappNumber { get => _explicitNullValueWhatsappNumber; set { _explicitNullValueWhatsappNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_number"); else _explicitNullProperties?.Remove("whatsapp_number"); } }
+        public string WhatsappNumber { get => _explicitNullValueWhatsappNumber; set { _explicitNullValueWhatsappNumber = value; AdditionalData?.Remove("whatsapp_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_number"); else _explicitNullProperties?.Remove("whatsapp_number"); } }
         private string _explicitNullValueWhatsappNumber = default!;
 #endif
         /// <summary>

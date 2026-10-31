@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("solution_id") is { } nullNodeSolutionId && nullNodeSolutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SolutionId = null;
+            if (parseNode.GetChildNode("solution_id") is null) { _explicitNullValueSolutionId = default!; _explicitNullProperties?.Remove("solution_id"); }
+            else if (parseNode.GetChildNode("solution_id") is { } nullNodeSolutionId && nullNodeSolutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SolutionId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The solution_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SolutionId { get => _explicitNullValueSolutionId; set { _explicitNullValueSolutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_id"); else _explicitNullProperties?.Remove("solution_id"); } }
+        public string? SolutionId { get => _explicitNullValueSolutionId; set { _explicitNullValueSolutionId = value; AdditionalData?.Remove("solution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_id"); else _explicitNullProperties?.Remove("solution_id"); } }
         private string? _explicitNullValueSolutionId = default!;
 #nullable restore
 #else
-        public string SolutionId { get => _explicitNullValueSolutionId; set { _explicitNullValueSolutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_id"); else _explicitNullProperties?.Remove("solution_id"); } }
+        public string SolutionId { get => _explicitNullValueSolutionId; set { _explicitNullValueSolutionId = value; AdditionalData?.Remove("solution_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution_id"); else _explicitNullProperties?.Remove("solution_id"); } }
         private string _explicitNullValueSolutionId = default!;
 #endif
         /// <summary>

@@ -17,27 +17,30 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ad_group_id") is { } nullNodeAdGroupId && nullNodeAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupId = null;
-            if (parseNode.GetChildNode("agency_business_id") is { } nullNodeAgencyBusinessId && nullNodeAgencyBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgencyBusinessId = null;
-            if (parseNode.GetChildNode("backup_image_urls") is { } nullNodeBackupImageUrls && nullNodeBackupImageUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackupImageUrls = null;
+            if (parseNode.GetChildNode("ad_group_id") is null) { _explicitNullValueAdGroupId = default!; _explicitNullProperties?.Remove("ad_group_id"); }
+            else if (parseNode.GetChildNode("ad_group_id") is { } nullNodeAdGroupId && nullNodeAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupId = null;
+            if (parseNode.GetChildNode("agency_business_id") is null) { _explicitNullValueAgencyBusinessId = default!; _explicitNullProperties?.Remove("agency_business_id"); }
+            else if (parseNode.GetChildNode("agency_business_id") is { } nullNodeAgencyBusinessId && nullNodeAgencyBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgencyBusinessId = null;
+            if (parseNode.GetChildNode("backup_image_urls") is null) { _explicitNullValueBackupImageUrls = default!; _explicitNullProperties?.Remove("backup_image_urls"); }
+            else if (parseNode.GetChildNode("backup_image_urls") is { } nullNodeBackupImageUrls && nullNodeBackupImageUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackupImageUrls = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ad_group_id property</summary>
-        public long? AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_group_id"); else _explicitNullProperties?.Remove("ad_group_id"); } }
+        public long? AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; AdditionalData?.Remove("ad_group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_group_id"); else _explicitNullProperties?.Remove("ad_group_id"); } }
         private long? _explicitNullValueAdGroupId = default!;
         /// <summary>The agency_business_id property</summary>
-        public long? AgencyBusinessId { get => _explicitNullValueAgencyBusinessId; set { _explicitNullValueAgencyBusinessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agency_business_id"); else _explicitNullProperties?.Remove("agency_business_id"); } }
+        public long? AgencyBusinessId { get => _explicitNullValueAgencyBusinessId; set { _explicitNullValueAgencyBusinessId = value; AdditionalData?.Remove("agency_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agency_business_id"); else _explicitNullProperties?.Remove("agency_business_id"); } }
         private long? _explicitNullValueAgencyBusinessId = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
+        public string? BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; AdditionalData?.Remove("backup_image_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
         private string? _explicitNullValueBackupImageUrls = default!;
 #nullable restore
 #else
-        public string BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
+        public string BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; AdditionalData?.Remove("backup_image_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
         private string _explicitNullValueBackupImageUrls = default!;
 #endif
         /// <summary>

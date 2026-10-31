@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
-            if (parseNode.GetChildNode("override_callback_uri") is { } nullNodeOverrideCallbackUri && nullNodeOverrideCallbackUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideCallbackUri = null;
-            if (parseNode.GetChildNode("subscribed_fields") is { } nullNodeSubscribedFields && nullNodeSubscribedFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscribedFields = null;
-            if (parseNode.GetChildNode("verify_token") is { } nullNodeVerifyToken && nullNodeVerifyToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifyToken = null;
+            if (parseNode.GetChildNode("app_id") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("app_id"); }
+            else if (parseNode.GetChildNode("app_id") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("override_callback_uri") is null) { _explicitNullValueOverrideCallbackUri = default!; _explicitNullProperties?.Remove("override_callback_uri"); }
+            else if (parseNode.GetChildNode("override_callback_uri") is { } nullNodeOverrideCallbackUri && nullNodeOverrideCallbackUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideCallbackUri = null;
+            if (parseNode.GetChildNode("subscribed_fields") is null) { _explicitNullValueSubscribedFields = default!; _explicitNullProperties?.Remove("subscribed_fields"); }
+            else if (parseNode.GetChildNode("subscribed_fields") is { } nullNodeSubscribedFields && nullNodeSubscribedFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscribedFields = null;
+            if (parseNode.GetChildNode("verify_token") is null) { _explicitNullValueVerifyToken = default!; _explicitNullProperties?.Remove("verify_token"); }
+            else if (parseNode.GetChildNode("verify_token") is { } nullNodeVerifyToken && nullNodeVerifyToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifyToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The app_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private string? _explicitNullValueAppId = default!;
 #nullable restore
 #else
-        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
+        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_id"); else _explicitNullProperties?.Remove("app_id"); } }
         private string _explicitNullValueAppId = default!;
 #endif
         /// <summary>The override_callback_uri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideCallbackUri { get => _explicitNullValueOverrideCallbackUri; set { _explicitNullValueOverrideCallbackUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_callback_uri"); else _explicitNullProperties?.Remove("override_callback_uri"); } }
+        public string? OverrideCallbackUri { get => _explicitNullValueOverrideCallbackUri; set { _explicitNullValueOverrideCallbackUri = value; AdditionalData?.Remove("override_callback_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_callback_uri"); else _explicitNullProperties?.Remove("override_callback_uri"); } }
         private string? _explicitNullValueOverrideCallbackUri = default!;
 #nullable restore
 #else
-        public string OverrideCallbackUri { get => _explicitNullValueOverrideCallbackUri; set { _explicitNullValueOverrideCallbackUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_callback_uri"); else _explicitNullProperties?.Remove("override_callback_uri"); } }
+        public string OverrideCallbackUri { get => _explicitNullValueOverrideCallbackUri; set { _explicitNullValueOverrideCallbackUri = value; AdditionalData?.Remove("override_callback_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_callback_uri"); else _explicitNullProperties?.Remove("override_callback_uri"); } }
         private string _explicitNullValueOverrideCallbackUri = default!;
 #endif
         /// <summary>The subscribed_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
+        public string? SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; AdditionalData?.Remove("subscribed_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
         private string? _explicitNullValueSubscribedFields = default!;
 #nullable restore
 #else
-        public string SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
+        public string SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; AdditionalData?.Remove("subscribed_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
         private string _explicitNullValueSubscribedFields = default!;
 #endif
         /// <summary>The verify_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerifyToken { get => _explicitNullValueVerifyToken; set { _explicitNullValueVerifyToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verify_token"); else _explicitNullProperties?.Remove("verify_token"); } }
+        public string? VerifyToken { get => _explicitNullValueVerifyToken; set { _explicitNullValueVerifyToken = value; AdditionalData?.Remove("verify_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verify_token"); else _explicitNullProperties?.Remove("verify_token"); } }
         private string? _explicitNullValueVerifyToken = default!;
 #nullable restore
 #else
-        public string VerifyToken { get => _explicitNullValueVerifyToken; set { _explicitNullValueVerifyToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verify_token"); else _explicitNullProperties?.Remove("verify_token"); } }
+        public string VerifyToken { get => _explicitNullValueVerifyToken; set { _explicitNullValueVerifyToken = value; AdditionalData?.Remove("verify_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verify_token"); else _explicitNullProperties?.Remove("verify_token"); } }
         private string _explicitNullValueVerifyToken = default!;
 #endif
         /// <summary>

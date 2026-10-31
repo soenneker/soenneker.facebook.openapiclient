@@ -17,32 +17,36 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("budget_value") is { } nullNodeBudgetValue && nullNodeBudgetValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValue = null;
-            if (parseNode.GetChildNode("budget_value_type") is { } nullNodeBudgetValueType && nullNodeBudgetValueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValueType = null;
-            if (parseNode.GetChildNode("time_end") is { } nullNodeTimeEnd && nullNodeTimeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeEnd = null;
-            if (parseNode.GetChildNode("time_start") is { } nullNodeTimeStart && nullNodeTimeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeStart = null;
+            if (parseNode.GetChildNode("budget_value") is null) { _explicitNullValueBudgetValue = default!; _explicitNullProperties?.Remove("budget_value"); }
+            else if (parseNode.GetChildNode("budget_value") is { } nullNodeBudgetValue && nullNodeBudgetValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValue = null;
+            if (parseNode.GetChildNode("budget_value_type") is null) { _explicitNullValueBudgetValueType = default!; _explicitNullProperties?.Remove("budget_value_type"); }
+            else if (parseNode.GetChildNode("budget_value_type") is { } nullNodeBudgetValueType && nullNodeBudgetValueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetValueType = null;
+            if (parseNode.GetChildNode("time_end") is null) { _explicitNullValueTimeEnd = default!; _explicitNullProperties?.Remove("time_end"); }
+            else if (parseNode.GetChildNode("time_end") is { } nullNodeTimeEnd && nullNodeTimeEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeEnd = null;
+            if (parseNode.GetChildNode("time_start") is null) { _explicitNullValueTimeStart = default!; _explicitNullProperties?.Remove("time_start"); }
+            else if (parseNode.GetChildNode("time_start") is { } nullNodeTimeStart && nullNodeTimeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeStart = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The budget_value property</summary>
-        public long? BudgetValue { get => _explicitNullValueBudgetValue; set { _explicitNullValueBudgetValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value"); else _explicitNullProperties?.Remove("budget_value"); } }
+        public long? BudgetValue { get => _explicitNullValueBudgetValue; set { _explicitNullValueBudgetValue = value; AdditionalData?.Remove("budget_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value"); else _explicitNullProperties?.Remove("budget_value"); } }
         private long? _explicitNullValueBudgetValue = default!;
         /// <summary>The budget_value_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
+        public string? BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; AdditionalData?.Remove("budget_value_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
         private string? _explicitNullValueBudgetValueType = default!;
 #nullable restore
 #else
-        public string BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
+        public string BudgetValueType { get => _explicitNullValueBudgetValueType; set { _explicitNullValueBudgetValueType = value; AdditionalData?.Remove("budget_value_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_value_type"); else _explicitNullProperties?.Remove("budget_value_type"); } }
         private string _explicitNullValueBudgetValueType = default!;
 #endif
         /// <summary>The time_end property</summary>
-        public long? TimeEnd { get => _explicitNullValueTimeEnd; set { _explicitNullValueTimeEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_end"); else _explicitNullProperties?.Remove("time_end"); } }
+        public long? TimeEnd { get => _explicitNullValueTimeEnd; set { _explicitNullValueTimeEnd = value; AdditionalData?.Remove("time_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_end"); else _explicitNullProperties?.Remove("time_end"); } }
         private long? _explicitNullValueTimeEnd = default!;
         /// <summary>The time_start property</summary>
-        public long? TimeStart { get => _explicitNullValueTimeStart; set { _explicitNullValueTimeStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_start"); else _explicitNullProperties?.Remove("time_start"); } }
+        public long? TimeStart { get => _explicitNullValueTimeStart; set { _explicitNullValueTimeStart = value; AdditionalData?.Remove("time_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_start"); else _explicitNullProperties?.Remove("time_start"); } }
         private long? _explicitNullValueTimeStart = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdBudgetSchedulesXWwwFormUrlencodedRequest"/> and sets the default values.

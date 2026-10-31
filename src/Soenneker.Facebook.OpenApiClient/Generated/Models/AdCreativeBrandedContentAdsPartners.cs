@@ -17,11 +17,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fb_page_id") is { } nullNodeFbPageId && nullNodeFbPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbPageId = null;
-            if (parseNode.GetChildNode("has_create_ads_access") is { } nullNodeHasCreateAdsAccess && nullNodeHasCreateAdsAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCreateAdsAccess = null;
-            if (parseNode.GetChildNode("identity_type") is { } nullNodeIdentityType && nullNodeIdentityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityType = null;
-            if (parseNode.GetChildNode("ig_asset_id") is { } nullNodeIgAssetId && nullNodeIgAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgAssetId = null;
-            if (parseNode.GetChildNode("ig_user_id") is { } nullNodeIgUserId && nullNodeIgUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUserId = null;
+            if (parseNode.GetChildNode("fb_page_id") is null) { _explicitNullValueFbPageId = default!; _explicitNullProperties?.Remove("fb_page_id"); }
+            else if (parseNode.GetChildNode("fb_page_id") is { } nullNodeFbPageId && nullNodeFbPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbPageId = null;
+            if (parseNode.GetChildNode("has_create_ads_access") is null) { _explicitNullValueHasCreateAdsAccess = default!; _explicitNullProperties?.Remove("has_create_ads_access"); }
+            else if (parseNode.GetChildNode("has_create_ads_access") is { } nullNodeHasCreateAdsAccess && nullNodeHasCreateAdsAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCreateAdsAccess = null;
+            if (parseNode.GetChildNode("identity_type") is null) { _explicitNullValueIdentityType = default!; _explicitNullProperties?.Remove("identity_type"); }
+            else if (parseNode.GetChildNode("identity_type") is { } nullNodeIdentityType && nullNodeIdentityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityType = null;
+            if (parseNode.GetChildNode("ig_asset_id") is null) { _explicitNullValueIgAssetId = default!; _explicitNullProperties?.Remove("ig_asset_id"); }
+            else if (parseNode.GetChildNode("ig_asset_id") is { } nullNodeIgAssetId && nullNodeIgAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgAssetId = null;
+            if (parseNode.GetChildNode("ig_user_id") is null) { _explicitNullValueIgUserId = default!; _explicitNullProperties?.Remove("ig_user_id"); }
+            else if (parseNode.GetChildNode("ig_user_id") is { } nullNodeIgUserId && nullNodeIgUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The fb_page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FbPageId { get => _explicitNullValueFbPageId; set { _explicitNullValueFbPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_page_id"); else _explicitNullProperties?.Remove("fb_page_id"); } }
+        public string? FbPageId { get => _explicitNullValueFbPageId; set { _explicitNullValueFbPageId = value; AdditionalData?.Remove("fb_page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_page_id"); else _explicitNullProperties?.Remove("fb_page_id"); } }
         private string? _explicitNullValueFbPageId = default!;
 #nullable restore
 #else
-        public string FbPageId { get => _explicitNullValueFbPageId; set { _explicitNullValueFbPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_page_id"); else _explicitNullProperties?.Remove("fb_page_id"); } }
+        public string FbPageId { get => _explicitNullValueFbPageId; set { _explicitNullValueFbPageId = value; AdditionalData?.Remove("fb_page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_page_id"); else _explicitNullProperties?.Remove("fb_page_id"); } }
         private string _explicitNullValueFbPageId = default!;
 #endif
         /// <summary>The has_create_ads_access property</summary>
-        public bool? HasCreateAdsAccess { get => _explicitNullValueHasCreateAdsAccess; set { _explicitNullValueHasCreateAdsAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_create_ads_access"); else _explicitNullProperties?.Remove("has_create_ads_access"); } }
+        public bool? HasCreateAdsAccess { get => _explicitNullValueHasCreateAdsAccess; set { _explicitNullValueHasCreateAdsAccess = value; AdditionalData?.Remove("has_create_ads_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_create_ads_access"); else _explicitNullProperties?.Remove("has_create_ads_access"); } }
         private bool? _explicitNullValueHasCreateAdsAccess = default!;
         /// <summary>The identity_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdentityType { get => _explicitNullValueIdentityType; set { _explicitNullValueIdentityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_type"); else _explicitNullProperties?.Remove("identity_type"); } }
+        public string? IdentityType { get => _explicitNullValueIdentityType; set { _explicitNullValueIdentityType = value; AdditionalData?.Remove("identity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_type"); else _explicitNullProperties?.Remove("identity_type"); } }
         private string? _explicitNullValueIdentityType = default!;
 #nullable restore
 #else
-        public string IdentityType { get => _explicitNullValueIdentityType; set { _explicitNullValueIdentityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_type"); else _explicitNullProperties?.Remove("identity_type"); } }
+        public string IdentityType { get => _explicitNullValueIdentityType; set { _explicitNullValueIdentityType = value; AdditionalData?.Remove("identity_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_type"); else _explicitNullProperties?.Remove("identity_type"); } }
         private string _explicitNullValueIdentityType = default!;
 #endif
         /// <summary>The ig_asset_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgAssetId { get => _explicitNullValueIgAssetId; set { _explicitNullValueIgAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_asset_id"); else _explicitNullProperties?.Remove("ig_asset_id"); } }
+        public string? IgAssetId { get => _explicitNullValueIgAssetId; set { _explicitNullValueIgAssetId = value; AdditionalData?.Remove("ig_asset_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_asset_id"); else _explicitNullProperties?.Remove("ig_asset_id"); } }
         private string? _explicitNullValueIgAssetId = default!;
 #nullable restore
 #else
-        public string IgAssetId { get => _explicitNullValueIgAssetId; set { _explicitNullValueIgAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_asset_id"); else _explicitNullProperties?.Remove("ig_asset_id"); } }
+        public string IgAssetId { get => _explicitNullValueIgAssetId; set { _explicitNullValueIgAssetId = value; AdditionalData?.Remove("ig_asset_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_asset_id"); else _explicitNullProperties?.Remove("ig_asset_id"); } }
         private string _explicitNullValueIgAssetId = default!;
 #endif
         /// <summary>The ig_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
+        public string? IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; AdditionalData?.Remove("ig_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
         private string? _explicitNullValueIgUserId = default!;
 #nullable restore
 #else
-        public string IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
+        public string IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; AdditionalData?.Remove("ig_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
         private string _explicitNullValueIgUserId = default!;
 #endif
         /// <summary>

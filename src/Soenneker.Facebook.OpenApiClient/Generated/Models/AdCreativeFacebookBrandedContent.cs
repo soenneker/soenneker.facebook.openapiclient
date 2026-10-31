@@ -17,9 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shared_to_sponsor_status") is { } nullNodeSharedToSponsorStatus && nullNodeSharedToSponsorStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedToSponsorStatus = null;
-            if (parseNode.GetChildNode("sponsor_page_id") is { } nullNodeSponsorPageId && nullNodeSponsorPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsorPageId = null;
-            if (parseNode.GetChildNode("sponsor_relationship") is { } nullNodeSponsorRelationship && nullNodeSponsorRelationship.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsorRelationship = null;
+            if (parseNode.GetChildNode("shared_to_sponsor_status") is null) { _explicitNullValueSharedToSponsorStatus = default!; _explicitNullProperties?.Remove("shared_to_sponsor_status"); }
+            else if (parseNode.GetChildNode("shared_to_sponsor_status") is { } nullNodeSharedToSponsorStatus && nullNodeSharedToSponsorStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedToSponsorStatus = null;
+            if (parseNode.GetChildNode("sponsor_page_id") is null) { _explicitNullValueSponsorPageId = default!; _explicitNullProperties?.Remove("sponsor_page_id"); }
+            else if (parseNode.GetChildNode("sponsor_page_id") is { } nullNodeSponsorPageId && nullNodeSponsorPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsorPageId = null;
+            if (parseNode.GetChildNode("sponsor_relationship") is null) { _explicitNullValueSponsorRelationship = default!; _explicitNullProperties?.Remove("sponsor_relationship"); }
+            else if (parseNode.GetChildNode("sponsor_relationship") is { } nullNodeSponsorRelationship && nullNodeSponsorRelationship.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsorRelationship = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The shared_to_sponsor_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SharedToSponsorStatus { get => _explicitNullValueSharedToSponsorStatus; set { _explicitNullValueSharedToSponsorStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_to_sponsor_status"); else _explicitNullProperties?.Remove("shared_to_sponsor_status"); } }
+        public string? SharedToSponsorStatus { get => _explicitNullValueSharedToSponsorStatus; set { _explicitNullValueSharedToSponsorStatus = value; AdditionalData?.Remove("shared_to_sponsor_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_to_sponsor_status"); else _explicitNullProperties?.Remove("shared_to_sponsor_status"); } }
         private string? _explicitNullValueSharedToSponsorStatus = default!;
 #nullable restore
 #else
-        public string SharedToSponsorStatus { get => _explicitNullValueSharedToSponsorStatus; set { _explicitNullValueSharedToSponsorStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_to_sponsor_status"); else _explicitNullProperties?.Remove("shared_to_sponsor_status"); } }
+        public string SharedToSponsorStatus { get => _explicitNullValueSharedToSponsorStatus; set { _explicitNullValueSharedToSponsorStatus = value; AdditionalData?.Remove("shared_to_sponsor_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_to_sponsor_status"); else _explicitNullProperties?.Remove("shared_to_sponsor_status"); } }
         private string _explicitNullValueSharedToSponsorStatus = default!;
 #endif
         /// <summary>The sponsor_page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SponsorPageId { get => _explicitNullValueSponsorPageId; set { _explicitNullValueSponsorPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_page_id"); else _explicitNullProperties?.Remove("sponsor_page_id"); } }
+        public string? SponsorPageId { get => _explicitNullValueSponsorPageId; set { _explicitNullValueSponsorPageId = value; AdditionalData?.Remove("sponsor_page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_page_id"); else _explicitNullProperties?.Remove("sponsor_page_id"); } }
         private string? _explicitNullValueSponsorPageId = default!;
 #nullable restore
 #else
-        public string SponsorPageId { get => _explicitNullValueSponsorPageId; set { _explicitNullValueSponsorPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_page_id"); else _explicitNullProperties?.Remove("sponsor_page_id"); } }
+        public string SponsorPageId { get => _explicitNullValueSponsorPageId; set { _explicitNullValueSponsorPageId = value; AdditionalData?.Remove("sponsor_page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_page_id"); else _explicitNullProperties?.Remove("sponsor_page_id"); } }
         private string _explicitNullValueSponsorPageId = default!;
 #endif
         /// <summary>The sponsor_relationship property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SponsorRelationship { get => _explicitNullValueSponsorRelationship; set { _explicitNullValueSponsorRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_relationship"); else _explicitNullProperties?.Remove("sponsor_relationship"); } }
+        public string? SponsorRelationship { get => _explicitNullValueSponsorRelationship; set { _explicitNullValueSponsorRelationship = value; AdditionalData?.Remove("sponsor_relationship"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_relationship"); else _explicitNullProperties?.Remove("sponsor_relationship"); } }
         private string? _explicitNullValueSponsorRelationship = default!;
 #nullable restore
 #else
-        public string SponsorRelationship { get => _explicitNullValueSponsorRelationship; set { _explicitNullValueSponsorRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_relationship"); else _explicitNullProperties?.Remove("sponsor_relationship"); } }
+        public string SponsorRelationship { get => _explicitNullValueSponsorRelationship; set { _explicitNullValueSponsorRelationship = value; AdditionalData?.Remove("sponsor_relationship"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsor_relationship"); else _explicitNullProperties?.Remove("sponsor_relationship"); } }
         private string _explicitNullValueSponsorRelationship = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("preferred_events") is { } nullNodePreferredEvents && nullNodePreferredEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredEvents = null;
-            if (parseNode.GetChildNode("product_sales_channel") is { } nullNodeProductSalesChannel && nullNodeProductSalesChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSalesChannel = null;
+            if (parseNode.GetChildNode("preferred_events") is null) { _explicitNullValuePreferredEvents = default!; _explicitNullProperties?.Remove("preferred_events"); }
+            else if (parseNode.GetChildNode("preferred_events") is { } nullNodePreferredEvents && nullNodePreferredEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredEvents = null;
+            if (parseNode.GetChildNode("product_sales_channel") is null) { _explicitNullValueProductSalesChannel = default!; _explicitNullProperties?.Remove("product_sales_channel"); }
+            else if (parseNode.GetChildNode("product_sales_channel") is { } nullNodeProductSalesChannel && nullNodeProductSalesChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSalesChannel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The preferred_events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PreferredEvents { get => _explicitNullValuePreferredEvents; set { _explicitNullValuePreferredEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_events"); else _explicitNullProperties?.Remove("preferred_events"); } }
+        public List<string>? PreferredEvents { get => _explicitNullValuePreferredEvents; set { _explicitNullValuePreferredEvents = value; AdditionalData?.Remove("preferred_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_events"); else _explicitNullProperties?.Remove("preferred_events"); } }
         private List<string>? _explicitNullValuePreferredEvents = default!;
 #nullable restore
 #else
-        public List<string> PreferredEvents { get => _explicitNullValuePreferredEvents; set { _explicitNullValuePreferredEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_events"); else _explicitNullProperties?.Remove("preferred_events"); } }
+        public List<string> PreferredEvents { get => _explicitNullValuePreferredEvents; set { _explicitNullValuePreferredEvents = value; AdditionalData?.Remove("preferred_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_events"); else _explicitNullProperties?.Remove("preferred_events"); } }
         private List<string> _explicitNullValuePreferredEvents = default!;
 #endif
         /// <summary>The product_sales_channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductSalesChannel { get => _explicitNullValueProductSalesChannel; set { _explicitNullValueProductSalesChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_sales_channel"); else _explicitNullProperties?.Remove("product_sales_channel"); } }
+        public string? ProductSalesChannel { get => _explicitNullValueProductSalesChannel; set { _explicitNullValueProductSalesChannel = value; AdditionalData?.Remove("product_sales_channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_sales_channel"); else _explicitNullProperties?.Remove("product_sales_channel"); } }
         private string? _explicitNullValueProductSalesChannel = default!;
 #nullable restore
 #else
-        public string ProductSalesChannel { get => _explicitNullValueProductSalesChannel; set { _explicitNullValueProductSalesChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_sales_channel"); else _explicitNullProperties?.Remove("product_sales_channel"); } }
+        public string ProductSalesChannel { get => _explicitNullValueProductSalesChannel; set { _explicitNullValueProductSalesChannel = value; AdditionalData?.Remove("product_sales_channel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_sales_channel"); else _explicitNullProperties?.Remove("product_sales_channel"); } }
         private string _explicitNullValueProductSalesChannel = default!;
 #endif
         /// <summary>

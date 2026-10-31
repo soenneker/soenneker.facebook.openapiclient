@@ -17,13 +17,20 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("asc_fragmentation_parameters") is { } nullNodeAscFragmentationParameters && nullNodeAscFragmentationParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AscFragmentationParameters = null;
-            if (parseNode.GetChildNode("autoflow_parameters") is { } nullNodeAutoflowParameters && nullNodeAutoflowParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoflowParameters = null;
-            if (parseNode.GetChildNode("extra_data") is { } nullNodeExtraData && nullNodeExtraData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraData = null;
-            if (parseNode.GetChildNode("fragmentation_parameters") is { } nullNodeFragmentationParameters && nullNodeFragmentationParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FragmentationParameters = null;
-            if (parseNode.GetChildNode("music_parameters") is { } nullNodeMusicParameters && nullNodeMusicParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MusicParameters = null;
-            if (parseNode.GetChildNode("recommendation_signature") is { } nullNodeRecommendationSignature && nullNodeRecommendationSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendationSignature = null;
-            if (parseNode.GetChildNode("scale_good_campaign_parameters") is { } nullNodeScaleGoodCampaignParameters && nullNodeScaleGoodCampaignParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScaleGoodCampaignParameters = null;
+            if (parseNode.GetChildNode("asc_fragmentation_parameters") is null) { _explicitNullValueAscFragmentationParameters = default!; _explicitNullProperties?.Remove("asc_fragmentation_parameters"); }
+            else if (parseNode.GetChildNode("asc_fragmentation_parameters") is { } nullNodeAscFragmentationParameters && nullNodeAscFragmentationParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AscFragmentationParameters = null;
+            if (parseNode.GetChildNode("autoflow_parameters") is null) { _explicitNullValueAutoflowParameters = default!; _explicitNullProperties?.Remove("autoflow_parameters"); }
+            else if (parseNode.GetChildNode("autoflow_parameters") is { } nullNodeAutoflowParameters && nullNodeAutoflowParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoflowParameters = null;
+            if (parseNode.GetChildNode("extra_data") is null) { _explicitNullValueExtraData = default!; _explicitNullProperties?.Remove("extra_data"); }
+            else if (parseNode.GetChildNode("extra_data") is { } nullNodeExtraData && nullNodeExtraData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraData = null;
+            if (parseNode.GetChildNode("fragmentation_parameters") is null) { _explicitNullValueFragmentationParameters = default!; _explicitNullProperties?.Remove("fragmentation_parameters"); }
+            else if (parseNode.GetChildNode("fragmentation_parameters") is { } nullNodeFragmentationParameters && nullNodeFragmentationParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FragmentationParameters = null;
+            if (parseNode.GetChildNode("music_parameters") is null) { _explicitNullValueMusicParameters = default!; _explicitNullProperties?.Remove("music_parameters"); }
+            else if (parseNode.GetChildNode("music_parameters") is { } nullNodeMusicParameters && nullNodeMusicParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MusicParameters = null;
+            if (parseNode.GetChildNode("recommendation_signature") is null) { _explicitNullValueRecommendationSignature = default!; _explicitNullProperties?.Remove("recommendation_signature"); }
+            else if (parseNode.GetChildNode("recommendation_signature") is { } nullNodeRecommendationSignature && nullNodeRecommendationSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendationSignature = null;
+            if (parseNode.GetChildNode("scale_good_campaign_parameters") is null) { _explicitNullValueScaleGoodCampaignParameters = default!; _explicitNullProperties?.Remove("scale_good_campaign_parameters"); }
+            else if (parseNode.GetChildNode("scale_good_campaign_parameters") is { } nullNodeScaleGoodCampaignParameters && nullNodeScaleGoodCampaignParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScaleGoodCampaignParameters = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,71 +38,71 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AscFragmentationParameters { get => _explicitNullValueAscFragmentationParameters; set { _explicitNullValueAscFragmentationParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asc_fragmentation_parameters"); else _explicitNullProperties?.Remove("asc_fragmentation_parameters"); } }
+        public string? AscFragmentationParameters { get => _explicitNullValueAscFragmentationParameters; set { _explicitNullValueAscFragmentationParameters = value; AdditionalData?.Remove("asc_fragmentation_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asc_fragmentation_parameters"); else _explicitNullProperties?.Remove("asc_fragmentation_parameters"); } }
         private string? _explicitNullValueAscFragmentationParameters = default!;
 #nullable restore
 #else
-        public string AscFragmentationParameters { get => _explicitNullValueAscFragmentationParameters; set { _explicitNullValueAscFragmentationParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asc_fragmentation_parameters"); else _explicitNullProperties?.Remove("asc_fragmentation_parameters"); } }
+        public string AscFragmentationParameters { get => _explicitNullValueAscFragmentationParameters; set { _explicitNullValueAscFragmentationParameters = value; AdditionalData?.Remove("asc_fragmentation_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asc_fragmentation_parameters"); else _explicitNullProperties?.Remove("asc_fragmentation_parameters"); } }
         private string _explicitNullValueAscFragmentationParameters = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoflowParameters { get => _explicitNullValueAutoflowParameters; set { _explicitNullValueAutoflowParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoflow_parameters"); else _explicitNullProperties?.Remove("autoflow_parameters"); } }
+        public string? AutoflowParameters { get => _explicitNullValueAutoflowParameters; set { _explicitNullValueAutoflowParameters = value; AdditionalData?.Remove("autoflow_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoflow_parameters"); else _explicitNullProperties?.Remove("autoflow_parameters"); } }
         private string? _explicitNullValueAutoflowParameters = default!;
 #nullable restore
 #else
-        public string AutoflowParameters { get => _explicitNullValueAutoflowParameters; set { _explicitNullValueAutoflowParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoflow_parameters"); else _explicitNullProperties?.Remove("autoflow_parameters"); } }
+        public string AutoflowParameters { get => _explicitNullValueAutoflowParameters; set { _explicitNullValueAutoflowParameters = value; AdditionalData?.Remove("autoflow_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoflow_parameters"); else _explicitNullProperties?.Remove("autoflow_parameters"); } }
         private string _explicitNullValueAutoflowParameters = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_data"); else _explicitNullProperties?.Remove("extra_data"); } }
+        public string? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extra_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_data"); else _explicitNullProperties?.Remove("extra_data"); } }
         private string? _explicitNullValueExtraData = default!;
 #nullable restore
 #else
-        public string ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_data"); else _explicitNullProperties?.Remove("extra_data"); } }
+        public string ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extra_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_data"); else _explicitNullProperties?.Remove("extra_data"); } }
         private string _explicitNullValueExtraData = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FragmentationParameters { get => _explicitNullValueFragmentationParameters; set { _explicitNullValueFragmentationParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fragmentation_parameters"); else _explicitNullProperties?.Remove("fragmentation_parameters"); } }
+        public string? FragmentationParameters { get => _explicitNullValueFragmentationParameters; set { _explicitNullValueFragmentationParameters = value; AdditionalData?.Remove("fragmentation_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fragmentation_parameters"); else _explicitNullProperties?.Remove("fragmentation_parameters"); } }
         private string? _explicitNullValueFragmentationParameters = default!;
 #nullable restore
 #else
-        public string FragmentationParameters { get => _explicitNullValueFragmentationParameters; set { _explicitNullValueFragmentationParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fragmentation_parameters"); else _explicitNullProperties?.Remove("fragmentation_parameters"); } }
+        public string FragmentationParameters { get => _explicitNullValueFragmentationParameters; set { _explicitNullValueFragmentationParameters = value; AdditionalData?.Remove("fragmentation_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fragmentation_parameters"); else _explicitNullProperties?.Remove("fragmentation_parameters"); } }
         private string _explicitNullValueFragmentationParameters = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MusicParameters { get => _explicitNullValueMusicParameters; set { _explicitNullValueMusicParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("music_parameters"); else _explicitNullProperties?.Remove("music_parameters"); } }
+        public string? MusicParameters { get => _explicitNullValueMusicParameters; set { _explicitNullValueMusicParameters = value; AdditionalData?.Remove("music_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("music_parameters"); else _explicitNullProperties?.Remove("music_parameters"); } }
         private string? _explicitNullValueMusicParameters = default!;
 #nullable restore
 #else
-        public string MusicParameters { get => _explicitNullValueMusicParameters; set { _explicitNullValueMusicParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("music_parameters"); else _explicitNullProperties?.Remove("music_parameters"); } }
+        public string MusicParameters { get => _explicitNullValueMusicParameters; set { _explicitNullValueMusicParameters = value; AdditionalData?.Remove("music_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("music_parameters"); else _explicitNullProperties?.Remove("music_parameters"); } }
         private string _explicitNullValueMusicParameters = default!;
 #endif
         /// <summary>The recommendation_signature property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecommendationSignature { get => _explicitNullValueRecommendationSignature; set { _explicitNullValueRecommendationSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_signature"); else _explicitNullProperties?.Remove("recommendation_signature"); } }
+        public string? RecommendationSignature { get => _explicitNullValueRecommendationSignature; set { _explicitNullValueRecommendationSignature = value; AdditionalData?.Remove("recommendation_signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_signature"); else _explicitNullProperties?.Remove("recommendation_signature"); } }
         private string? _explicitNullValueRecommendationSignature = default!;
 #nullable restore
 #else
-        public string RecommendationSignature { get => _explicitNullValueRecommendationSignature; set { _explicitNullValueRecommendationSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_signature"); else _explicitNullProperties?.Remove("recommendation_signature"); } }
+        public string RecommendationSignature { get => _explicitNullValueRecommendationSignature; set { _explicitNullValueRecommendationSignature = value; AdditionalData?.Remove("recommendation_signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation_signature"); else _explicitNullProperties?.Remove("recommendation_signature"); } }
         private string _explicitNullValueRecommendationSignature = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScaleGoodCampaignParameters { get => _explicitNullValueScaleGoodCampaignParameters; set { _explicitNullValueScaleGoodCampaignParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scale_good_campaign_parameters"); else _explicitNullProperties?.Remove("scale_good_campaign_parameters"); } }
+        public string? ScaleGoodCampaignParameters { get => _explicitNullValueScaleGoodCampaignParameters; set { _explicitNullValueScaleGoodCampaignParameters = value; AdditionalData?.Remove("scale_good_campaign_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scale_good_campaign_parameters"); else _explicitNullProperties?.Remove("scale_good_campaign_parameters"); } }
         private string? _explicitNullValueScaleGoodCampaignParameters = default!;
 #nullable restore
 #else
-        public string ScaleGoodCampaignParameters { get => _explicitNullValueScaleGoodCampaignParameters; set { _explicitNullValueScaleGoodCampaignParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scale_good_campaign_parameters"); else _explicitNullProperties?.Remove("scale_good_campaign_parameters"); } }
+        public string ScaleGoodCampaignParameters { get => _explicitNullValueScaleGoodCampaignParameters; set { _explicitNullValueScaleGoodCampaignParameters = value; AdditionalData?.Remove("scale_good_campaign_parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scale_good_campaign_parameters"); else _explicitNullProperties?.Remove("scale_good_campaign_parameters"); } }
         private string _explicitNullValueScaleGoodCampaignParameters = default!;
 #endif
         /// <summary>

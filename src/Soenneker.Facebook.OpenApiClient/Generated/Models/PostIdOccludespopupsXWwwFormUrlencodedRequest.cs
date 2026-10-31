@@ -17,17 +17,19 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("flash") is { } nullNodeFlash && nullNodeFlash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flash = null;
-            if (parseNode.GetChildNode("unity") is { } nullNodeUnity && nullNodeUnity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unity = null;
+            if (parseNode.GetChildNode("flash") is null) { _explicitNullValueFlash = default!; _explicitNullProperties?.Remove("flash"); }
+            else if (parseNode.GetChildNode("flash") is { } nullNodeFlash && nullNodeFlash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flash = null;
+            if (parseNode.GetChildNode("unity") is null) { _explicitNullValueUnity = default!; _explicitNullProperties?.Remove("unity"); }
+            else if (parseNode.GetChildNode("unity") is { } nullNodeUnity && nullNodeUnity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unity = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flash property</summary>
-        public bool? Flash { get => _explicitNullValueFlash; set { _explicitNullValueFlash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flash"); else _explicitNullProperties?.Remove("flash"); } }
+        public bool? Flash { get => _explicitNullValueFlash; set { _explicitNullValueFlash = value; AdditionalData?.Remove("flash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flash"); else _explicitNullProperties?.Remove("flash"); } }
         private bool? _explicitNullValueFlash = default!;
         /// <summary>The unity property</summary>
-        public bool? Unity { get => _explicitNullValueUnity; set { _explicitNullValueUnity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unity"); else _explicitNullProperties?.Remove("unity"); } }
+        public bool? Unity { get => _explicitNullValueUnity; set { _explicitNullValueUnity = value; AdditionalData?.Remove("unity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unity"); else _explicitNullProperties?.Remove("unity"); } }
         private bool? _explicitNullValueUnity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdOccludespopupsXWwwFormUrlencodedRequest"/> and sets the default values.

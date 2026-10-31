@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("waba_currency") is { } nullNodeWabaCurrency && nullNodeWabaCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WabaCurrency = null;
-            if (parseNode.GetChildNode("waba_id") is { } nullNodeWabaId && nullNodeWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WabaId = null;
+            if (parseNode.GetChildNode("waba_currency") is null) { _explicitNullValueWabaCurrency = default!; _explicitNullProperties?.Remove("waba_currency"); }
+            else if (parseNode.GetChildNode("waba_currency") is { } nullNodeWabaCurrency && nullNodeWabaCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WabaCurrency = null;
+            if (parseNode.GetChildNode("waba_id") is null) { _explicitNullValueWabaId = default!; _explicitNullProperties?.Remove("waba_id"); }
+            else if (parseNode.GetChildNode("waba_id") is { } nullNodeWabaId && nullNodeWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WabaId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The waba_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WabaCurrency { get => _explicitNullValueWabaCurrency; set { _explicitNullValueWabaCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_currency"); else _explicitNullProperties?.Remove("waba_currency"); } }
+        public string? WabaCurrency { get => _explicitNullValueWabaCurrency; set { _explicitNullValueWabaCurrency = value; AdditionalData?.Remove("waba_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_currency"); else _explicitNullProperties?.Remove("waba_currency"); } }
         private string? _explicitNullValueWabaCurrency = default!;
 #nullable restore
 #else
-        public string WabaCurrency { get => _explicitNullValueWabaCurrency; set { _explicitNullValueWabaCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_currency"); else _explicitNullProperties?.Remove("waba_currency"); } }
+        public string WabaCurrency { get => _explicitNullValueWabaCurrency; set { _explicitNullValueWabaCurrency = value; AdditionalData?.Remove("waba_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_currency"); else _explicitNullProperties?.Remove("waba_currency"); } }
         private string _explicitNullValueWabaCurrency = default!;
 #endif
         /// <summary>The waba_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WabaId { get => _explicitNullValueWabaId; set { _explicitNullValueWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_id"); else _explicitNullProperties?.Remove("waba_id"); } }
+        public string? WabaId { get => _explicitNullValueWabaId; set { _explicitNullValueWabaId = value; AdditionalData?.Remove("waba_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_id"); else _explicitNullProperties?.Remove("waba_id"); } }
         private string? _explicitNullValueWabaId = default!;
 #nullable restore
 #else
-        public string WabaId { get => _explicitNullValueWabaId; set { _explicitNullValueWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_id"); else _explicitNullProperties?.Remove("waba_id"); } }
+        public string WabaId { get => _explicitNullValueWabaId; set { _explicitNullValueWabaId = value; AdditionalData?.Remove("waba_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waba_id"); else _explicitNullProperties?.Remove("waba_id"); } }
         private string _explicitNullValueWabaId = default!;
 #endif
         /// <summary>

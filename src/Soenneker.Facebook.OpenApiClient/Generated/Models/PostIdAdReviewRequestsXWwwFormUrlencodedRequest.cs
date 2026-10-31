@@ -17,17 +17,18 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ad_account_ids") is { } nullNodeAdAccountIds && nullNodeAdAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountIds = null;
+            if (parseNode.GetChildNode("ad_account_ids") is null) { _explicitNullValueAdAccountIds = default!; _explicitNullProperties?.Remove("ad_account_ids"); }
+            else if (parseNode.GetChildNode("ad_account_ids") is { } nullNodeAdAccountIds && nullNodeAdAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountIds = null;
         }
 
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdAccountIds { get => _explicitNullValueAdAccountIds; set { _explicitNullValueAdAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_ids"); else _explicitNullProperties?.Remove("ad_account_ids"); } }
+        public string? AdAccountIds { get => _explicitNullValueAdAccountIds; set { _explicitNullValueAdAccountIds = value; AdditionalData?.Remove("ad_account_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_ids"); else _explicitNullProperties?.Remove("ad_account_ids"); } }
         private string? _explicitNullValueAdAccountIds = default!;
 #nullable restore
 #else
-        public string AdAccountIds { get => _explicitNullValueAdAccountIds; set { _explicitNullValueAdAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_ids"); else _explicitNullProperties?.Remove("ad_account_ids"); } }
+        public string AdAccountIds { get => _explicitNullValueAdAccountIds; set { _explicitNullValueAdAccountIds = value; AdditionalData?.Remove("ad_account_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_ids"); else _explicitNullProperties?.Remove("ad_account_ids"); } }
         private string _explicitNullValueAdAccountIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("source_flow_names") is { } nullNodeSourceFlowNames && nullNodeSourceFlowNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFlowNames = null;
-            if (parseNode.GetChildNode("source_waba_id") is { } nullNodeSourceWabaId && nullNodeSourceWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceWabaId = null;
+            if (parseNode.GetChildNode("source_flow_names") is null) { _explicitNullValueSourceFlowNames = default!; _explicitNullProperties?.Remove("source_flow_names"); }
+            else if (parseNode.GetChildNode("source_flow_names") is { } nullNodeSourceFlowNames && nullNodeSourceFlowNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFlowNames = null;
+            if (parseNode.GetChildNode("source_waba_id") is null) { _explicitNullValueSourceWabaId = default!; _explicitNullProperties?.Remove("source_waba_id"); }
+            else if (parseNode.GetChildNode("source_waba_id") is { } nullNodeSourceWabaId && nullNodeSourceWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceWabaId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceFlowNames { get => _explicitNullValueSourceFlowNames; set { _explicitNullValueSourceFlowNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_names"); else _explicitNullProperties?.Remove("source_flow_names"); } }
+        public string? SourceFlowNames { get => _explicitNullValueSourceFlowNames; set { _explicitNullValueSourceFlowNames = value; AdditionalData?.Remove("source_flow_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_names"); else _explicitNullProperties?.Remove("source_flow_names"); } }
         private string? _explicitNullValueSourceFlowNames = default!;
 #nullable restore
 #else
-        public string SourceFlowNames { get => _explicitNullValueSourceFlowNames; set { _explicitNullValueSourceFlowNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_names"); else _explicitNullProperties?.Remove("source_flow_names"); } }
+        public string SourceFlowNames { get => _explicitNullValueSourceFlowNames; set { _explicitNullValueSourceFlowNames = value; AdditionalData?.Remove("source_flow_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_flow_names"); else _explicitNullProperties?.Remove("source_flow_names"); } }
         private string _explicitNullValueSourceFlowNames = default!;
 #endif
         /// <summary>The source_waba_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
+        public string? SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; AdditionalData?.Remove("source_waba_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
         private string? _explicitNullValueSourceWabaId = default!;
 #nullable restore
 #else
-        public string SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
+        public string SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; AdditionalData?.Remove("source_waba_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
         private string _explicitNullValueSourceWabaId = default!;
 #endif
         /// <summary>

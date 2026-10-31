@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enroll_status") is { } nullNodeEnrollStatus && nullNodeEnrollStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollStatus = null;
+            if (parseNode.GetChildNode("enroll_status") is null) { _explicitNullValueEnrollStatus = default!; _explicitNullProperties?.Remove("enroll_status"); }
+            else if (parseNode.GetChildNode("enroll_status") is { } nullNodeEnrollStatus && nullNodeEnrollStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The enroll_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnrollStatus { get => _explicitNullValueEnrollStatus; set { _explicitNullValueEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enroll_status"); else _explicitNullProperties?.Remove("enroll_status"); } }
+        public string? EnrollStatus { get => _explicitNullValueEnrollStatus; set { _explicitNullValueEnrollStatus = value; AdditionalData?.Remove("enroll_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enroll_status"); else _explicitNullProperties?.Remove("enroll_status"); } }
         private string? _explicitNullValueEnrollStatus = default!;
 #nullable restore
 #else
-        public string EnrollStatus { get => _explicitNullValueEnrollStatus; set { _explicitNullValueEnrollStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enroll_status"); else _explicitNullProperties?.Remove("enroll_status"); } }
+        public string EnrollStatus { get => _explicitNullValueEnrollStatus; set { _explicitNullValueEnrollStatus = value; AdditionalData?.Remove("enroll_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enroll_status"); else _explicitNullProperties?.Remove("enroll_status"); } }
         private string _explicitNullValueEnrollStatus = default!;
 #endif
         /// <summary>

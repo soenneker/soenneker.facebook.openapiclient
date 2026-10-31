@@ -17,71 +17,78 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("duration_in_sec") is { } nullNodeDurationInSec && nullNodeDurationInSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSec = null;
-            if (parseNode.GetChildNode("fingerprint_content_type") is { } nullNodeFingerprintContentType && nullNodeFingerprintContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintContentType = null;
-            if (parseNode.GetChildNode("fingerprint_type") is { } nullNodeFingerprintType && nullNodeFingerprintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintType = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("universal_content_id") is { } nullNodeUniversalContentId && nullNodeUniversalContentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniversalContentId = null;
+            if (parseNode.GetChildNode("duration_in_sec") is null) { _explicitNullValueDurationInSec = default!; _explicitNullProperties?.Remove("duration_in_sec"); }
+            else if (parseNode.GetChildNode("duration_in_sec") is { } nullNodeDurationInSec && nullNodeDurationInSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSec = null;
+            if (parseNode.GetChildNode("fingerprint_content_type") is null) { _explicitNullValueFingerprintContentType = default!; _explicitNullProperties?.Remove("fingerprint_content_type"); }
+            else if (parseNode.GetChildNode("fingerprint_content_type") is { } nullNodeFingerprintContentType && nullNodeFingerprintContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintContentType = null;
+            if (parseNode.GetChildNode("fingerprint_type") is null) { _explicitNullValueFingerprintType = default!; _explicitNullProperties?.Remove("fingerprint_type"); }
+            else if (parseNode.GetChildNode("fingerprint_type") is { } nullNodeFingerprintType && nullNodeFingerprintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintType = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("universal_content_id") is null) { _explicitNullValueUniversalContentId = default!; _explicitNullProperties?.Remove("universal_content_id"); }
+            else if (parseNode.GetChildNode("universal_content_id") is { } nullNodeUniversalContentId && nullNodeUniversalContentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniversalContentId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The duration_in_sec property</summary>
-        public float? DurationInSec { get => _explicitNullValueDurationInSec; set { _explicitNullValueDurationInSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_sec"); else _explicitNullProperties?.Remove("duration_in_sec"); } }
+        public float? DurationInSec { get => _explicitNullValueDurationInSec; set { _explicitNullValueDurationInSec = value; AdditionalData?.Remove("duration_in_sec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_sec"); else _explicitNullProperties?.Remove("duration_in_sec"); } }
         private float? _explicitNullValueDurationInSec = default!;
         /// <summary>The fingerprint_content_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.PagemediaFingerprintsFingerprintContentTypeEnumParam? FingerprintContentType { get => _explicitNullValueFingerprintContentType; set { _explicitNullValueFingerprintContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint_content_type"); else _explicitNullProperties?.Remove("fingerprint_content_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.PagemediaFingerprintsFingerprintContentTypeEnumParam? FingerprintContentType { get => _explicitNullValueFingerprintContentType; set { _explicitNullValueFingerprintContentType = value; AdditionalData?.Remove("fingerprint_content_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint_content_type"); else _explicitNullProperties?.Remove("fingerprint_content_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.PagemediaFingerprintsFingerprintContentTypeEnumParam? _explicitNullValueFingerprintContentType = default!;
         /// <summary>The fingerprint_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FingerprintType { get => _explicitNullValueFingerprintType; set { _explicitNullValueFingerprintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint_type"); else _explicitNullProperties?.Remove("fingerprint_type"); } }
+        public string? FingerprintType { get => _explicitNullValueFingerprintType; set { _explicitNullValueFingerprintType = value; AdditionalData?.Remove("fingerprint_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint_type"); else _explicitNullProperties?.Remove("fingerprint_type"); } }
         private string? _explicitNullValueFingerprintType = default!;
 #nullable restore
 #else
-        public string FingerprintType { get => _explicitNullValueFingerprintType; set { _explicitNullValueFingerprintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint_type"); else _explicitNullProperties?.Remove("fingerprint_type"); } }
+        public string FingerprintType { get => _explicitNullValueFingerprintType; set { _explicitNullValueFingerprintType = value; AdditionalData?.Remove("fingerprint_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint_type"); else _explicitNullProperties?.Remove("fingerprint_type"); } }
         private string _explicitNullValueFingerprintType = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The universal_content_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniversalContentId { get => _explicitNullValueUniversalContentId; set { _explicitNullValueUniversalContentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_content_id"); else _explicitNullProperties?.Remove("universal_content_id"); } }
+        public string? UniversalContentId { get => _explicitNullValueUniversalContentId; set { _explicitNullValueUniversalContentId = value; AdditionalData?.Remove("universal_content_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_content_id"); else _explicitNullProperties?.Remove("universal_content_id"); } }
         private string? _explicitNullValueUniversalContentId = default!;
 #nullable restore
 #else
-        public string UniversalContentId { get => _explicitNullValueUniversalContentId; set { _explicitNullValueUniversalContentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_content_id"); else _explicitNullProperties?.Remove("universal_content_id"); } }
+        public string UniversalContentId { get => _explicitNullValueUniversalContentId; set { _explicitNullValueUniversalContentId = value; AdditionalData?.Remove("universal_content_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_content_id"); else _explicitNullProperties?.Remove("universal_content_id"); } }
         private string _explicitNullValueUniversalContentId = default!;
 #endif
         /// <summary>
@@ -110,7 +117,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "duration_in_sec", n => { DurationInSec = n.GetFloatValue(); } },
-                { "fingerprint_content_type", n => { FingerprintContentType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagemediaFingerprintsFingerprintContentTypeEnumParam>(); } },
+                { "fingerprint_content_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagemediaFingerprintsFingerprintContentTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFingerprintContentType = default; _explicitNullProperties?.Remove("fingerprint_content_type"); AdditionalData["fingerprint_content_type"] = unknown; } else { FingerprintContentType = parsed; AdditionalData.Remove("fingerprint_content_type"); } } },
                 { "fingerprint_type", n => { FingerprintType = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty>(global::Soenneker.Facebook.OpenApiClient.Models.MediaFingerprintMetadataProperty.CreateFromDiscriminatorValue); } },

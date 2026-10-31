@@ -17,7 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_conversion_id") is { } nullNodeCustomConversionId && nullNodeCustomConversionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomConversionId = null;
+            if (parseNode.GetChildNode("custom_conversion_id") is null) { _explicitNullValueCustomConversionId = default!; _explicitNullProperties?.Remove("custom_conversion_id"); }
+            else if (parseNode.GetChildNode("custom_conversion_id") is { } nullNodeCustomConversionId && nullNodeCustomConversionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomConversionId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The custom_conversion_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomConversionId { get => _explicitNullValueCustomConversionId; set { _explicitNullValueCustomConversionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_conversion_id"); else _explicitNullProperties?.Remove("custom_conversion_id"); } }
+        public string? CustomConversionId { get => _explicitNullValueCustomConversionId; set { _explicitNullValueCustomConversionId = value; AdditionalData?.Remove("custom_conversion_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_conversion_id"); else _explicitNullProperties?.Remove("custom_conversion_id"); } }
         private string? _explicitNullValueCustomConversionId = default!;
 #nullable restore
 #else
-        public string CustomConversionId { get => _explicitNullValueCustomConversionId; set { _explicitNullValueCustomConversionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_conversion_id"); else _explicitNullProperties?.Remove("custom_conversion_id"); } }
+        public string CustomConversionId { get => _explicitNullValueCustomConversionId; set { _explicitNullValueCustomConversionId = value; AdditionalData?.Remove("custom_conversion_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_conversion_id"); else _explicitNullProperties?.Remove("custom_conversion_id"); } }
         private string _explicitNullValueCustomConversionId = default!;
 #endif
         /// <summary>

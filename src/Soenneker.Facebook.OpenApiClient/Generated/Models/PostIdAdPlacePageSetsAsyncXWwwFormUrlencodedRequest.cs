@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("location_types") is { } nullNodeLocationTypes && nullNodeLocationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationTypes = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("parent_page") is { } nullNodeParentPage && nullNodeParentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentPage = null;
-            if (parseNode.GetChildNode("targeted_area_type") is { } nullNodeTargetedAreaType && nullNodeTargetedAreaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetedAreaType = null;
+            if (parseNode.GetChildNode("location_types") is null) { _explicitNullValueLocationTypes = default!; _explicitNullProperties?.Remove("location_types"); }
+            else if (parseNode.GetChildNode("location_types") is { } nullNodeLocationTypes && nullNodeLocationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationTypes = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent_page") is null) { _explicitNullValueParentPage = default!; _explicitNullProperties?.Remove("parent_page"); }
+            else if (parseNode.GetChildNode("parent_page") is { } nullNodeParentPage && nullNodeParentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentPage = null;
+            if (parseNode.GetChildNode("targeted_area_type") is null) { _explicitNullValueTargetedAreaType = default!; _explicitNullProperties?.Remove("targeted_area_type"); }
+            else if (parseNode.GetChildNode("targeted_area_type") is { } nullNodeTargetedAreaType && nullNodeTargetedAreaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetedAreaType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
+        public string? LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; AdditionalData?.Remove("location_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
         private string? _explicitNullValueLocationTypes = default!;
 #nullable restore
 #else
-        public string LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
+        public string LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; AdditionalData?.Remove("location_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
         private string _explicitNullValueLocationTypes = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The parent_page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentPage { get => _explicitNullValueParentPage; set { _explicitNullValueParentPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_page"); else _explicitNullProperties?.Remove("parent_page"); } }
+        public string? ParentPage { get => _explicitNullValueParentPage; set { _explicitNullValueParentPage = value; AdditionalData?.Remove("parent_page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_page"); else _explicitNullProperties?.Remove("parent_page"); } }
         private string? _explicitNullValueParentPage = default!;
 #nullable restore
 #else
-        public string ParentPage { get => _explicitNullValueParentPage; set { _explicitNullValueParentPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_page"); else _explicitNullProperties?.Remove("parent_page"); } }
+        public string ParentPage { get => _explicitNullValueParentPage; set { _explicitNullValueParentPage = value; AdditionalData?.Remove("parent_page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_page"); else _explicitNullProperties?.Remove("parent_page"); } }
         private string _explicitNullValueParentPage = default!;
 #endif
         /// <summary>The targeted_area_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam? TargetedAreaType { get => _explicitNullValueTargetedAreaType; set { _explicitNullValueTargetedAreaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targeted_area_type"); else _explicitNullProperties?.Remove("targeted_area_type"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam? TargetedAreaType { get => _explicitNullValueTargetedAreaType; set { _explicitNullValueTargetedAreaType = value; AdditionalData?.Remove("targeted_area_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targeted_area_type"); else _explicitNullProperties?.Remove("targeted_area_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam? _explicitNullValueTargetedAreaType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAdPlacePageSetsAsyncXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -86,7 +90,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "location_types", n => { LocationTypes = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parent_page", n => { ParentPage = n.GetStringValue(); } },
-                { "targeted_area_type", n => { TargetedAreaType = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam>(); } },
+                { "targeted_area_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadPlacePageSetsAsyncTargetedAreaTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTargetedAreaType = default; _explicitNullProperties?.Remove("targeted_area_type"); AdditionalData["targeted_area_type"] = unknown; } else { TargetedAreaType = parsed; AdditionalData.Remove("targeted_area_type"); } } },
             };
         }
         /// <summary>

@@ -17,38 +17,42 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("page_number") is { } nullNodePageNumber && nullNodePageNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageNumber = null;
-            if (parseNode.GetChildNode("source_waba_id") is { } nullNodeSourceWabaId && nullNodeSourceWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceWabaId = null;
-            if (parseNode.GetChildNode("template_ids") is { } nullNodeTemplateIds && nullNodeTemplateIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateIds = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("page_number") is null) { _explicitNullValuePageNumber = default!; _explicitNullProperties?.Remove("page_number"); }
+            else if (parseNode.GetChildNode("page_number") is { } nullNodePageNumber && nullNodePageNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageNumber = null;
+            if (parseNode.GetChildNode("source_waba_id") is null) { _explicitNullValueSourceWabaId = default!; _explicitNullProperties?.Remove("source_waba_id"); }
+            else if (parseNode.GetChildNode("source_waba_id") is { } nullNodeSourceWabaId && nullNodeSourceWabaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceWabaId = null;
+            if (parseNode.GetChildNode("template_ids") is null) { _explicitNullValueTemplateIds = default!; _explicitNullProperties?.Remove("template_ids"); }
+            else if (parseNode.GetChildNode("template_ids") is { } nullNodeTemplateIds && nullNodeTemplateIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The count property</summary>
-        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private long? _explicitNullValueCount = default!;
         /// <summary>The page_number property</summary>
-        public long? PageNumber { get => _explicitNullValuePageNumber; set { _explicitNullValuePageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_number"); else _explicitNullProperties?.Remove("page_number"); } }
+        public long? PageNumber { get => _explicitNullValuePageNumber; set { _explicitNullValuePageNumber = value; AdditionalData?.Remove("page_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_number"); else _explicitNullProperties?.Remove("page_number"); } }
         private long? _explicitNullValuePageNumber = default!;
         /// <summary>The source_waba_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
+        public string? SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; AdditionalData?.Remove("source_waba_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
         private string? _explicitNullValueSourceWabaId = default!;
 #nullable restore
 #else
-        public string SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
+        public string SourceWabaId { get => _explicitNullValueSourceWabaId; set { _explicitNullValueSourceWabaId = value; AdditionalData?.Remove("source_waba_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_waba_id"); else _explicitNullProperties?.Remove("source_waba_id"); } }
         private string _explicitNullValueSourceWabaId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
+        public string? TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; AdditionalData?.Remove("template_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
         private string? _explicitNullValueTemplateIds = default!;
 #nullable restore
 #else
-        public string TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
+        public string TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; AdditionalData?.Remove("template_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
         private string _explicitNullValueTemplateIds = default!;
 #endif
         /// <summary>

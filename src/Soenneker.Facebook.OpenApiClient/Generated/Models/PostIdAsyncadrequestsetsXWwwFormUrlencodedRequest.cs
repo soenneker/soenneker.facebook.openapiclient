@@ -17,10 +17,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ad_specs") is { } nullNodeAdSpecs && nullNodeAdSpecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdSpecs = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("notification_mode") is { } nullNodeNotificationMode && nullNodeNotificationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMode = null;
-            if (parseNode.GetChildNode("notification_uri") is { } nullNodeNotificationUri && nullNodeNotificationUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationUri = null;
+            if (parseNode.GetChildNode("ad_specs") is null) { _explicitNullValueAdSpecs = default!; _explicitNullProperties?.Remove("ad_specs"); }
+            else if (parseNode.GetChildNode("ad_specs") is { } nullNodeAdSpecs && nullNodeAdSpecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdSpecs = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notification_mode") is null) { _explicitNullValueNotificationMode = default!; _explicitNullProperties?.Remove("notification_mode"); }
+            else if (parseNode.GetChildNode("notification_mode") is { } nullNodeNotificationMode && nullNodeNotificationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMode = null;
+            if (parseNode.GetChildNode("notification_uri") is null) { _explicitNullValueNotificationUri = default!; _explicitNullProperties?.Remove("notification_uri"); }
+            else if (parseNode.GetChildNode("notification_uri") is { } nullNodeNotificationUri && nullNodeNotificationUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationUri = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdSpecs { get => _explicitNullValueAdSpecs; set { _explicitNullValueAdSpecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_specs"); else _explicitNullProperties?.Remove("ad_specs"); } }
+        public string? AdSpecs { get => _explicitNullValueAdSpecs; set { _explicitNullValueAdSpecs = value; AdditionalData?.Remove("ad_specs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_specs"); else _explicitNullProperties?.Remove("ad_specs"); } }
         private string? _explicitNullValueAdSpecs = default!;
 #nullable restore
 #else
-        public string AdSpecs { get => _explicitNullValueAdSpecs; set { _explicitNullValueAdSpecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_specs"); else _explicitNullProperties?.Remove("ad_specs"); } }
+        public string AdSpecs { get => _explicitNullValueAdSpecs; set { _explicitNullValueAdSpecs = value; AdditionalData?.Remove("ad_specs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_specs"); else _explicitNullProperties?.Remove("ad_specs"); } }
         private string _explicitNullValueAdSpecs = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The notification_mode property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountasyncadrequestsetsNotificationModeEnumParam? NotificationMode { get => _explicitNullValueNotificationMode; set { _explicitNullValueNotificationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_mode"); else _explicitNullProperties?.Remove("notification_mode"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountasyncadrequestsetsNotificationModeEnumParam? NotificationMode { get => _explicitNullValueNotificationMode; set { _explicitNullValueNotificationMode = value; AdditionalData?.Remove("notification_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_mode"); else _explicitNullProperties?.Remove("notification_mode"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountasyncadrequestsetsNotificationModeEnumParam? _explicitNullValueNotificationMode = default!;
         /// <summary>The notification_uri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationUri { get => _explicitNullValueNotificationUri; set { _explicitNullValueNotificationUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_uri"); else _explicitNullProperties?.Remove("notification_uri"); } }
+        public string? NotificationUri { get => _explicitNullValueNotificationUri; set { _explicitNullValueNotificationUri = value; AdditionalData?.Remove("notification_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_uri"); else _explicitNullProperties?.Remove("notification_uri"); } }
         private string? _explicitNullValueNotificationUri = default!;
 #nullable restore
 #else
-        public string NotificationUri { get => _explicitNullValueNotificationUri; set { _explicitNullValueNotificationUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_uri"); else _explicitNullProperties?.Remove("notification_uri"); } }
+        public string NotificationUri { get => _explicitNullValueNotificationUri; set { _explicitNullValueNotificationUri = value; AdditionalData?.Remove("notification_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_uri"); else _explicitNullProperties?.Remove("notification_uri"); } }
         private string _explicitNullValueNotificationUri = default!;
 #endif
         /// <summary>
@@ -85,7 +89,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "ad_specs", n => { AdSpecs = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "notification_mode", n => { NotificationMode = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountasyncadrequestsetsNotificationModeEnumParam>(); } },
+                { "notification_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountasyncadrequestsetsNotificationModeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNotificationMode = default; _explicitNullProperties?.Remove("notification_mode"); AdditionalData["notification_mode"] = unknown; } else { NotificationMode = parsed; AdditionalData.Remove("notification_mode"); } } },
                 { "notification_uri", n => { NotificationUri = n.GetStringValue(); } },
             };
         }

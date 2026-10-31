@@ -17,127 +17,139 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additional_vertical_option") is { } nullNodeAdditionalVerticalOption && nullNodeAdditionalVerticalOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalVerticalOption = null;
-            if (parseNode.GetChildNode("business_metadata") is { } nullNodeBusinessMetadata && nullNodeBusinessMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessMetadata = null;
-            if (parseNode.GetChildNode("catalog_segment_filter") is { } nullNodeCatalogSegmentFilter && nullNodeCatalogSegmentFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentFilter = null;
-            if (parseNode.GetChildNode("catalog_segment_product_set_id") is { } nullNodeCatalogSegmentProductSetId && nullNodeCatalogSegmentProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentProductSetId = null;
-            if (parseNode.GetChildNode("da_display_settings") is { } nullNodeDaDisplaySettings && nullNodeDaDisplaySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaDisplaySettings = null;
-            if (parseNode.GetChildNode("destination_catalog_settings") is { } nullNodeDestinationCatalogSettings && nullNodeDestinationCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCatalogSettings = null;
-            if (parseNode.GetChildNode("flight_catalog_settings") is { } nullNodeFlightCatalogSettings && nullNodeFlightCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightCatalogSettings = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("parent_catalog_id") is { } nullNodeParentCatalogId && nullNodeParentCatalogId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentCatalogId = null;
-            if (parseNode.GetChildNode("partner_integration") is { } nullNodePartnerIntegration && nullNodePartnerIntegration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerIntegration = null;
-            if (parseNode.GetChildNode("store_catalog_settings") is { } nullNodeStoreCatalogSettings && nullNodeStoreCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreCatalogSettings = null;
-            if (parseNode.GetChildNode("vertical") is { } nullNodeVertical && nullNodeVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vertical = null;
+            if (parseNode.GetChildNode("additional_vertical_option") is null) { _explicitNullValueAdditionalVerticalOption = default!; _explicitNullProperties?.Remove("additional_vertical_option"); }
+            else if (parseNode.GetChildNode("additional_vertical_option") is { } nullNodeAdditionalVerticalOption && nullNodeAdditionalVerticalOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalVerticalOption = null;
+            if (parseNode.GetChildNode("business_metadata") is null) { _explicitNullValueBusinessMetadata = default!; _explicitNullProperties?.Remove("business_metadata"); }
+            else if (parseNode.GetChildNode("business_metadata") is { } nullNodeBusinessMetadata && nullNodeBusinessMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessMetadata = null;
+            if (parseNode.GetChildNode("catalog_segment_filter") is null) { _explicitNullValueCatalogSegmentFilter = default!; _explicitNullProperties?.Remove("catalog_segment_filter"); }
+            else if (parseNode.GetChildNode("catalog_segment_filter") is { } nullNodeCatalogSegmentFilter && nullNodeCatalogSegmentFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentFilter = null;
+            if (parseNode.GetChildNode("catalog_segment_product_set_id") is null) { _explicitNullValueCatalogSegmentProductSetId = default!; _explicitNullProperties?.Remove("catalog_segment_product_set_id"); }
+            else if (parseNode.GetChildNode("catalog_segment_product_set_id") is { } nullNodeCatalogSegmentProductSetId && nullNodeCatalogSegmentProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentProductSetId = null;
+            if (parseNode.GetChildNode("da_display_settings") is null) { _explicitNullValueDaDisplaySettings = default!; _explicitNullProperties?.Remove("da_display_settings"); }
+            else if (parseNode.GetChildNode("da_display_settings") is { } nullNodeDaDisplaySettings && nullNodeDaDisplaySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaDisplaySettings = null;
+            if (parseNode.GetChildNode("destination_catalog_settings") is null) { _explicitNullValueDestinationCatalogSettings = default!; _explicitNullProperties?.Remove("destination_catalog_settings"); }
+            else if (parseNode.GetChildNode("destination_catalog_settings") is { } nullNodeDestinationCatalogSettings && nullNodeDestinationCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCatalogSettings = null;
+            if (parseNode.GetChildNode("flight_catalog_settings") is null) { _explicitNullValueFlightCatalogSettings = default!; _explicitNullProperties?.Remove("flight_catalog_settings"); }
+            else if (parseNode.GetChildNode("flight_catalog_settings") is { } nullNodeFlightCatalogSettings && nullNodeFlightCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightCatalogSettings = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent_catalog_id") is null) { _explicitNullValueParentCatalogId = default!; _explicitNullProperties?.Remove("parent_catalog_id"); }
+            else if (parseNode.GetChildNode("parent_catalog_id") is { } nullNodeParentCatalogId && nullNodeParentCatalogId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentCatalogId = null;
+            if (parseNode.GetChildNode("partner_integration") is null) { _explicitNullValuePartnerIntegration = default!; _explicitNullProperties?.Remove("partner_integration"); }
+            else if (parseNode.GetChildNode("partner_integration") is { } nullNodePartnerIntegration && nullNodePartnerIntegration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerIntegration = null;
+            if (parseNode.GetChildNode("store_catalog_settings") is null) { _explicitNullValueStoreCatalogSettings = default!; _explicitNullProperties?.Remove("store_catalog_settings"); }
+            else if (parseNode.GetChildNode("store_catalog_settings") is { } nullNodeStoreCatalogSettings && nullNodeStoreCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreCatalogSettings = null;
+            if (parseNode.GetChildNode("vertical") is null) { _explicitNullValueVertical = default!; _explicitNullProperties?.Remove("vertical"); }
+            else if (parseNode.GetChildNode("vertical") is { } nullNodeVertical && nullNodeVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vertical = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional_vertical_option property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam? AdditionalVerticalOption { get => _explicitNullValueAdditionalVerticalOption; set { _explicitNullValueAdditionalVerticalOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_vertical_option"); else _explicitNullProperties?.Remove("additional_vertical_option"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam? AdditionalVerticalOption { get => _explicitNullValueAdditionalVerticalOption; set { _explicitNullValueAdditionalVerticalOption = value; AdditionalData?.Remove("additional_vertical_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_vertical_option"); else _explicitNullProperties?.Remove("additional_vertical_option"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam? _explicitNullValueAdditionalVerticalOption = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessMetadata { get => _explicitNullValueBusinessMetadata; set { _explicitNullValueBusinessMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_metadata"); else _explicitNullProperties?.Remove("business_metadata"); } }
+        public string? BusinessMetadata { get => _explicitNullValueBusinessMetadata; set { _explicitNullValueBusinessMetadata = value; AdditionalData?.Remove("business_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_metadata"); else _explicitNullProperties?.Remove("business_metadata"); } }
         private string? _explicitNullValueBusinessMetadata = default!;
 #nullable restore
 #else
-        public string BusinessMetadata { get => _explicitNullValueBusinessMetadata; set { _explicitNullValueBusinessMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_metadata"); else _explicitNullProperties?.Remove("business_metadata"); } }
+        public string BusinessMetadata { get => _explicitNullValueBusinessMetadata; set { _explicitNullValueBusinessMetadata = value; AdditionalData?.Remove("business_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_metadata"); else _explicitNullProperties?.Remove("business_metadata"); } }
         private string _explicitNullValueBusinessMetadata = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CatalogSegmentFilter { get => _explicitNullValueCatalogSegmentFilter; set { _explicitNullValueCatalogSegmentFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_filter"); else _explicitNullProperties?.Remove("catalog_segment_filter"); } }
+        public string? CatalogSegmentFilter { get => _explicitNullValueCatalogSegmentFilter; set { _explicitNullValueCatalogSegmentFilter = value; AdditionalData?.Remove("catalog_segment_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_filter"); else _explicitNullProperties?.Remove("catalog_segment_filter"); } }
         private string? _explicitNullValueCatalogSegmentFilter = default!;
 #nullable restore
 #else
-        public string CatalogSegmentFilter { get => _explicitNullValueCatalogSegmentFilter; set { _explicitNullValueCatalogSegmentFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_filter"); else _explicitNullProperties?.Remove("catalog_segment_filter"); } }
+        public string CatalogSegmentFilter { get => _explicitNullValueCatalogSegmentFilter; set { _explicitNullValueCatalogSegmentFilter = value; AdditionalData?.Remove("catalog_segment_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_filter"); else _explicitNullProperties?.Remove("catalog_segment_filter"); } }
         private string _explicitNullValueCatalogSegmentFilter = default!;
 #endif
         /// <summary>The catalog_segment_product_set_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CatalogSegmentProductSetId { get => _explicitNullValueCatalogSegmentProductSetId; set { _explicitNullValueCatalogSegmentProductSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_product_set_id"); else _explicitNullProperties?.Remove("catalog_segment_product_set_id"); } }
+        public string? CatalogSegmentProductSetId { get => _explicitNullValueCatalogSegmentProductSetId; set { _explicitNullValueCatalogSegmentProductSetId = value; AdditionalData?.Remove("catalog_segment_product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_product_set_id"); else _explicitNullProperties?.Remove("catalog_segment_product_set_id"); } }
         private string? _explicitNullValueCatalogSegmentProductSetId = default!;
 #nullable restore
 #else
-        public string CatalogSegmentProductSetId { get => _explicitNullValueCatalogSegmentProductSetId; set { _explicitNullValueCatalogSegmentProductSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_product_set_id"); else _explicitNullProperties?.Remove("catalog_segment_product_set_id"); } }
+        public string CatalogSegmentProductSetId { get => _explicitNullValueCatalogSegmentProductSetId; set { _explicitNullValueCatalogSegmentProductSetId = value; AdditionalData?.Remove("catalog_segment_product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_product_set_id"); else _explicitNullProperties?.Remove("catalog_segment_product_set_id"); } }
         private string _explicitNullValueCatalogSegmentProductSetId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
+        public string? DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; AdditionalData?.Remove("da_display_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
         private string? _explicitNullValueDaDisplaySettings = default!;
 #nullable restore
 #else
-        public string DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
+        public string DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; AdditionalData?.Remove("da_display_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
         private string _explicitNullValueDaDisplaySettings = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationCatalogSettings { get => _explicitNullValueDestinationCatalogSettings; set { _explicitNullValueDestinationCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_catalog_settings"); else _explicitNullProperties?.Remove("destination_catalog_settings"); } }
+        public string? DestinationCatalogSettings { get => _explicitNullValueDestinationCatalogSettings; set { _explicitNullValueDestinationCatalogSettings = value; AdditionalData?.Remove("destination_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_catalog_settings"); else _explicitNullProperties?.Remove("destination_catalog_settings"); } }
         private string? _explicitNullValueDestinationCatalogSettings = default!;
 #nullable restore
 #else
-        public string DestinationCatalogSettings { get => _explicitNullValueDestinationCatalogSettings; set { _explicitNullValueDestinationCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_catalog_settings"); else _explicitNullProperties?.Remove("destination_catalog_settings"); } }
+        public string DestinationCatalogSettings { get => _explicitNullValueDestinationCatalogSettings; set { _explicitNullValueDestinationCatalogSettings = value; AdditionalData?.Remove("destination_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_catalog_settings"); else _explicitNullProperties?.Remove("destination_catalog_settings"); } }
         private string _explicitNullValueDestinationCatalogSettings = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlightCatalogSettings { get => _explicitNullValueFlightCatalogSettings; set { _explicitNullValueFlightCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_catalog_settings"); else _explicitNullProperties?.Remove("flight_catalog_settings"); } }
+        public string? FlightCatalogSettings { get => _explicitNullValueFlightCatalogSettings; set { _explicitNullValueFlightCatalogSettings = value; AdditionalData?.Remove("flight_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_catalog_settings"); else _explicitNullProperties?.Remove("flight_catalog_settings"); } }
         private string? _explicitNullValueFlightCatalogSettings = default!;
 #nullable restore
 #else
-        public string FlightCatalogSettings { get => _explicitNullValueFlightCatalogSettings; set { _explicitNullValueFlightCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_catalog_settings"); else _explicitNullProperties?.Remove("flight_catalog_settings"); } }
+        public string FlightCatalogSettings { get => _explicitNullValueFlightCatalogSettings; set { _explicitNullValueFlightCatalogSettings = value; AdditionalData?.Remove("flight_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_catalog_settings"); else _explicitNullProperties?.Remove("flight_catalog_settings"); } }
         private string _explicitNullValueFlightCatalogSettings = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The parent_catalog_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentCatalogId { get => _explicitNullValueParentCatalogId; set { _explicitNullValueParentCatalogId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_catalog_id"); else _explicitNullProperties?.Remove("parent_catalog_id"); } }
+        public string? ParentCatalogId { get => _explicitNullValueParentCatalogId; set { _explicitNullValueParentCatalogId = value; AdditionalData?.Remove("parent_catalog_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_catalog_id"); else _explicitNullProperties?.Remove("parent_catalog_id"); } }
         private string? _explicitNullValueParentCatalogId = default!;
 #nullable restore
 #else
-        public string ParentCatalogId { get => _explicitNullValueParentCatalogId; set { _explicitNullValueParentCatalogId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_catalog_id"); else _explicitNullProperties?.Remove("parent_catalog_id"); } }
+        public string ParentCatalogId { get => _explicitNullValueParentCatalogId; set { _explicitNullValueParentCatalogId = value; AdditionalData?.Remove("parent_catalog_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_catalog_id"); else _explicitNullProperties?.Remove("parent_catalog_id"); } }
         private string _explicitNullValueParentCatalogId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerIntegration { get => _explicitNullValuePartnerIntegration; set { _explicitNullValuePartnerIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_integration"); else _explicitNullProperties?.Remove("partner_integration"); } }
+        public string? PartnerIntegration { get => _explicitNullValuePartnerIntegration; set { _explicitNullValuePartnerIntegration = value; AdditionalData?.Remove("partner_integration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_integration"); else _explicitNullProperties?.Remove("partner_integration"); } }
         private string? _explicitNullValuePartnerIntegration = default!;
 #nullable restore
 #else
-        public string PartnerIntegration { get => _explicitNullValuePartnerIntegration; set { _explicitNullValuePartnerIntegration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_integration"); else _explicitNullProperties?.Remove("partner_integration"); } }
+        public string PartnerIntegration { get => _explicitNullValuePartnerIntegration; set { _explicitNullValuePartnerIntegration = value; AdditionalData?.Remove("partner_integration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_integration"); else _explicitNullProperties?.Remove("partner_integration"); } }
         private string _explicitNullValuePartnerIntegration = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
+        public string? StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; AdditionalData?.Remove("store_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
         private string? _explicitNullValueStoreCatalogSettings = default!;
 #nullable restore
 #else
-        public string StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
+        public string StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; AdditionalData?.Remove("store_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
         private string _explicitNullValueStoreCatalogSettings = default!;
 #endif
         /// <summary>The vertical property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
+        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; AdditionalData?.Remove("vertical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? _explicitNullValueVertical = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdOwnedProductCatalogsXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -164,7 +176,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_vertical_option", n => { AdditionalVerticalOption = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam>(); } },
+                { "additional_vertical_option", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdditionalVerticalOption = default; _explicitNullProperties?.Remove("additional_vertical_option"); AdditionalData["additional_vertical_option"] = unknown; } else { AdditionalVerticalOption = parsed; AdditionalData.Remove("additional_vertical_option"); } } },
                 { "business_metadata", n => { BusinessMetadata = n.GetStringValue(); } },
                 { "catalog_segment_filter", n => { CatalogSegmentFilter = n.GetStringValue(); } },
                 { "catalog_segment_product_set_id", n => { CatalogSegmentProductSetId = n.GetStringValue(); } },
@@ -175,7 +187,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "parent_catalog_id", n => { ParentCatalogId = n.GetStringValue(); } },
                 { "partner_integration", n => { PartnerIntegration = n.GetStringValue(); } },
                 { "store_catalog_settings", n => { StoreCatalogSettings = n.GetStringValue(); } },
-                { "vertical", n => { Vertical = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam>(); } },
+                { "vertical", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVertical = default; _explicitNullProperties?.Remove("vertical"); AdditionalData["vertical"] = unknown; } else { Vertical = parsed; AdditionalData.Remove("vertical"); } } },
             };
         }
         /// <summary>
