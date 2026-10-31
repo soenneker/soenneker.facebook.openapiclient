@@ -8,7 +8,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
     public enum ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "")]
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
         EmptyString,
 
         [EnumMember(Value = "Advertiser")]
