@@ -159,8 +159,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("backdated_time_granularity") is { } nullNodeBackdatedTimeGranularity && nullNodeBackdatedTimeGranularity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackdatedTimeGranularity = null;
             if (parseNode.GetChildNode("background_color") is null) { _explicitNullValueBackgroundColor = default!; _explicitNullProperties?.Remove("background_color"); }
             else if (parseNode.GetChildNode("background_color") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
-            if (parseNode.GetChildNode("backup_image_urls") is null) { _explicitNullValueBackupImageUrls = default!; _explicitNullProperties?.Remove("backup_image_urls"); }
-            else if (parseNode.GetChildNode("backup_image_urls") is { } nullNodeBackupImageUrls && nullNodeBackupImageUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackupImageUrls = null;
             if (parseNode.GetChildNode("base_price") is null) { _explicitNullValueBasePrice = default!; _explicitNullProperties?.Remove("base_price"); }
             else if (parseNode.GetChildNode("base_price") is { } nullNodeBasePrice && nullNodeBasePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BasePrice = null;
             if (parseNode.GetChildNode("begin_crossposting_handshake") is null) { _explicitNullValueBeginCrosspostingHandshake = default!; _explicitNullProperties?.Remove("begin_crossposting_handshake"); }
@@ -189,8 +187,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("body_style") is { } nullNodeBodyStyle && nullNodeBodyStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BodyStyle = null;
             if (parseNode.GetChildNode("brand") is null) { _explicitNullValueBrand = default!; _explicitNullProperties?.Remove("brand"); }
             else if (parseNode.GetChildNode("brand") is { } nullNodeBrand && nullNodeBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brand = null;
-            if (parseNode.GetChildNode("brand_safety_config") is null) { _explicitNullValueBrandSafetyConfig = default!; _explicitNullProperties?.Remove("brand_safety_config"); }
-            else if (parseNode.GetChildNode("brand_safety_config") is { } nullNodeBrandSafetyConfig && nullNodeBrandSafetyConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandSafetyConfig = null;
             if (parseNode.GetChildNode("budget_rebalance_flag") is null) { _explicitNullValueBudgetRebalanceFlag = default!; _explicitNullProperties?.Remove("budget_rebalance_flag"); }
             else if (parseNode.GetChildNode("budget_rebalance_flag") is { } nullNodeBudgetRebalanceFlag && nullNodeBudgetRebalanceFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetRebalanceFlag = null;
             if (parseNode.GetChildNode("budget_schedule_specs") is null) { _explicitNullValueBudgetScheduleSpecs = default!; _explicitNullProperties?.Remove("budget_schedule_specs"); }
@@ -229,6 +225,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("cells") is { } nullNodeCells && nullNodeCells.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cells = null;
             if (parseNode.GetChildNode("checkout_config") is null) { _explicitNullValueCheckoutConfig = default!; _explicitNullProperties?.Remove("checkout_config"); }
             else if (parseNode.GetChildNode("checkout_config") is { } nullNodeCheckoutConfig && nullNodeCheckoutConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckoutConfig = null;
+            if (parseNode.GetChildNode("checkout_country") is null) { _explicitNullValueCheckoutCountry = default!; _explicitNullProperties?.Remove("checkout_country"); }
+            else if (parseNode.GetChildNode("checkout_country") is { } nullNodeCheckoutCountry && nullNodeCheckoutCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckoutCountry = null;
             if (parseNode.GetChildNode("checkout_url") is null) { _explicitNullValueCheckoutUrl = default!; _explicitNullProperties?.Remove("checkout_url"); }
             else if (parseNode.GetChildNode("checkout_url") is { } nullNodeCheckoutUrl && nullNodeCheckoutUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckoutUrl = null;
             if (parseNode.GetChildNode("claim_objective") is null) { _explicitNullValueClaimObjective = default!; _explicitNullProperties?.Remove("claim_objective"); }
@@ -615,6 +613,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("iphone_url") is { } nullNodeIphoneUrl && nullNodeIphoneUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IphoneUrl = null;
             if (parseNode.GetChildNode("is_adset_budget_sharing_enabled") is null) { _explicitNullValueIsAdsetBudgetSharingEnabled = default!; _explicitNullProperties?.Remove("is_adset_budget_sharing_enabled"); }
             else if (parseNode.GetChildNode("is_adset_budget_sharing_enabled") is { } nullNodeIsAdsetBudgetSharingEnabled && nullNodeIsAdsetBudgetSharingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAdsetBudgetSharingEnabled = null;
+            if (parseNode.GetChildNode("is_ai_generated") is null) { _explicitNullValueIsAiGenerated = default!; _explicitNullProperties?.Remove("is_ai_generated"); }
+            else if (parseNode.GetChildNode("is_ai_generated") is { } nullNodeIsAiGenerated && nullNodeIsAiGenerated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAiGenerated = null;
             if (parseNode.GetChildNode("is_always_open") is null) { _explicitNullValueIsAlwaysOpen = default!; _explicitNullProperties?.Remove("is_always_open"); }
             else if (parseNode.GetChildNode("is_always_open") is { } nullNodeIsAlwaysOpen && nullNodeIsAlwaysOpen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAlwaysOpen = null;
             if (parseNode.GetChildNode("is_audio_only") is null) { _explicitNullValueIsAudioOnly = default!; _explicitNullProperties?.Remove("is_audio_only"); }
@@ -647,6 +647,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_notifications_enabled") is { } nullNodeIsNotificationsEnabled && nullNodeIsNotificationsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNotificationsEnabled = null;
             if (parseNode.GetChildNode("is_official_group") is null) { _explicitNullValueIsOfficialGroup = default!; _explicitNullProperties?.Remove("is_official_group"); }
             else if (parseNode.GetChildNode("is_official_group") is { } nullNodeIsOfficialGroup && nullNodeIsOfficialGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOfficialGroup = null;
+            if (parseNode.GetChildNode("is_pca_unified") is null) { _explicitNullValueIsPcaUnified = default!; _explicitNullProperties?.Remove("is_pca_unified"); }
+            else if (parseNode.GetChildNode("is_pca_unified") is { } nullNodeIsPcaUnified && nullNodeIsPcaUnified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPcaUnified = null;
             if (parseNode.GetChildNode("is_permanently_closed") is null) { _explicitNullValueIsPermanentlyClosed = default!; _explicitNullProperties?.Remove("is_permanently_closed"); }
             else if (parseNode.GetChildNode("is_permanently_closed") is { } nullNodeIsPermanentlyClosed && nullNodeIsPermanentlyClosed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPermanentlyClosed = null;
             if (parseNode.GetChildNode("is_pinned") is null) { _explicitNullValueIsPinned = default!; _explicitNullProperties?.Remove("is_pinned"); }
@@ -1759,16 +1761,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("background_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("background_color"); else _explicitNullProperties?.Remove("background_color"); } }
         private string _explicitNullValueBackgroundColor = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; AdditionalData?.Remove("backup_image_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
-        private string? _explicitNullValueBackupImageUrls = default!;
-#nullable restore
-#else
-        public string BackupImageUrls { get => _explicitNullValueBackupImageUrls; set { _explicitNullValueBackupImageUrls = value; AdditionalData?.Remove("backup_image_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backup_image_urls"); else _explicitNullProperties?.Remove("backup_image_urls"); } }
-        private string _explicitNullValueBackupImageUrls = default!;
-#endif
         /// <summary>The base_price property</summary>
         public long? BasePrice { get => _explicitNullValueBasePrice; set { _explicitNullValueBasePrice = value; AdditionalData?.Remove("base_price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_price"); else _explicitNullProperties?.Remove("base_price"); } }
         private long? _explicitNullValueBasePrice = default!;
@@ -1873,16 +1865,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string Brand { get => _explicitNullValueBrand; set { _explicitNullValueBrand = value; AdditionalData?.Remove("brand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand"); else _explicitNullProperties?.Remove("brand"); } }
         private string _explicitNullValueBrand = default!;
-#endif
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BrandSafetyConfig { get => _explicitNullValueBrandSafetyConfig; set { _explicitNullValueBrandSafetyConfig = value; AdditionalData?.Remove("brand_safety_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_config"); else _explicitNullProperties?.Remove("brand_safety_config"); } }
-        private string? _explicitNullValueBrandSafetyConfig = default!;
-#nullable restore
-#else
-        public string BrandSafetyConfig { get => _explicitNullValueBrandSafetyConfig; set { _explicitNullValueBrandSafetyConfig = value; AdditionalData?.Remove("brand_safety_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_config"); else _explicitNullProperties?.Remove("brand_safety_config"); } }
-        private string _explicitNullValueBrandSafetyConfig = default!;
 #endif
         /// <summary>The budget_rebalance_flag property</summary>
         public bool? BudgetRebalanceFlag { get => _explicitNullValueBudgetRebalanceFlag; set { _explicitNullValueBudgetRebalanceFlag = value; AdditionalData?.Remove("budget_rebalance_flag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budget_rebalance_flag"); else _explicitNullProperties?.Remove("budget_rebalance_flag"); } }
@@ -2032,6 +2014,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string CheckoutConfig { get => _explicitNullValueCheckoutConfig; set { _explicitNullValueCheckoutConfig = value; AdditionalData?.Remove("checkout_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_config"); else _explicitNullProperties?.Remove("checkout_config"); } }
         private string _explicitNullValueCheckoutConfig = default!;
 #endif
+        /// <summary>The checkout_country property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogCheckoutCountry? CheckoutCountry { get => _explicitNullValueCheckoutCountry; set { _explicitNullValueCheckoutCountry = value; AdditionalData?.Remove("checkout_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_country"); else _explicitNullProperties?.Remove("checkout_country"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogCheckoutCountry? _explicitNullValueCheckoutCountry = default!;
         /// <summary>The checkout_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3507,6 +3492,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The is_adset_budget_sharing_enabled property</summary>
         public bool? IsAdsetBudgetSharingEnabled { get => _explicitNullValueIsAdsetBudgetSharingEnabled; set { _explicitNullValueIsAdsetBudgetSharingEnabled = value; AdditionalData?.Remove("is_adset_budget_sharing_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_adset_budget_sharing_enabled"); else _explicitNullProperties?.Remove("is_adset_budget_sharing_enabled"); } }
         private bool? _explicitNullValueIsAdsetBudgetSharingEnabled = default!;
+        /// <summary>The is_ai_generated property</summary>
+        public bool? IsAiGenerated { get => _explicitNullValueIsAiGenerated; set { _explicitNullValueIsAiGenerated = value; AdditionalData?.Remove("is_ai_generated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ai_generated"); else _explicitNullProperties?.Remove("is_ai_generated"); } }
+        private bool? _explicitNullValueIsAiGenerated = default!;
         /// <summary>The is_always_open property</summary>
         public bool? IsAlwaysOpen { get => _explicitNullValueIsAlwaysOpen; set { _explicitNullValueIsAlwaysOpen = value; AdditionalData?.Remove("is_always_open"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_always_open"); else _explicitNullProperties?.Remove("is_always_open"); } }
         private bool? _explicitNullValueIsAlwaysOpen = default!;
@@ -3555,6 +3543,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The is_official_group property</summary>
         public bool? IsOfficialGroup { get => _explicitNullValueIsOfficialGroup; set { _explicitNullValueIsOfficialGroup = value; AdditionalData?.Remove("is_official_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_official_group"); else _explicitNullProperties?.Remove("is_official_group"); } }
         private bool? _explicitNullValueIsOfficialGroup = default!;
+        /// <summary>The is_pca_unified property</summary>
+        public bool? IsPcaUnified { get => _explicitNullValueIsPcaUnified; set { _explicitNullValueIsPcaUnified = value; AdditionalData?.Remove("is_pca_unified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pca_unified"); else _explicitNullProperties?.Remove("is_pca_unified"); } }
+        private bool? _explicitNullValueIsPcaUnified = default!;
         /// <summary>The is_permanently_closed property</summary>
         public bool? IsPermanentlyClosed { get => _explicitNullValueIsPermanentlyClosed; set { _explicitNullValueIsPermanentlyClosed = value; AdditionalData?.Remove("is_permanently_closed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_permanently_closed"); else _explicitNullProperties?.Remove("is_permanently_closed"); } }
         private bool? _explicitNullValueIsPermanentlyClosed = default!;
@@ -5592,7 +5583,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "backdated_time", n => { BackdatedTime = n.GetDateTimeOffsetValue(); } },
                 { "backdated_time_granularity", n => { BackdatedTimeGranularity = n.GetStringValue(); } },
                 { "background_color", n => { BackgroundColor = n.GetStringValue(); } },
-                { "backup_image_urls", n => { BackupImageUrls = n.GetStringValue(); } },
                 { "base_price", n => { BasePrice = n.GetLongValue(); } },
                 { "begin_crossposting_handshake", n => { BeginCrosspostingHandshake = n.GetStringValue(); } },
                 { "bid_adjustments", n => { BidAdjustments = n.GetStringValue(); } },
@@ -5607,7 +5597,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "body_element_ids", n => { BodyElementIds = n.GetStringValue(); } },
                 { "body_style", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.VehicleBodyStyle>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBodyStyle = default; _explicitNullProperties?.Remove("body_style"); AdditionalData["body_style"] = unknown; } else { BodyStyle = parsed; AdditionalData.Remove("body_style"); } } },
                 { "brand", n => { Brand = n.GetStringValue(); } },
-                { "brand_safety_config", n => { BrandSafetyConfig = n.GetStringValue(); } },
                 { "budget_rebalance_flag", n => { BudgetRebalanceFlag = n.GetBoolValue(); } },
                 { "budget_schedule_specs", n => { BudgetScheduleSpecs = n.GetStringValue(); } },
                 { "budget_value", n => { BudgetValue = n.GetLongValue(); } },
@@ -5627,6 +5616,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "category_specific_fields", n => { CategorySpecificFields = n.GetStringValue(); } },
                 { "cells", n => { Cells = n.GetStringValue(); } },
                 { "checkout_config", n => { CheckoutConfig = n.GetStringValue(); } },
+                { "checkout_country", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogCheckoutCountry>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCheckoutCountry = default; _explicitNullProperties?.Remove("checkout_country"); AdditionalData["checkout_country"] = unknown; } else { CheckoutCountry = parsed; AdditionalData.Remove("checkout_country"); } } },
                 { "checkout_url", n => { CheckoutUrl = n.GetStringValue(); } },
                 { "claim_objective", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.CustomaudienceClaimObjective>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueClaimObjective = default; _explicitNullProperties?.Remove("claim_objective"); AdditionalData["claim_objective"] = unknown; } else { ClaimObjective = parsed; AdditionalData.Remove("claim_objective"); } } },
                 { "clear_pending_email", n => { ClearPendingEmail = n.GetBoolValue(); } },
@@ -5819,6 +5809,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "iphone_destination_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIphoneDestinationType = default; _explicitNullProperties?.Remove("iphone_destination_type"); AdditionalData["iphone_destination_type"] = unknown; } else { IphoneDestinationType = parsed; AdditionalData.Remove("iphone_destination_type"); } } },
                 { "iphone_url", n => { IphoneUrl = n.GetStringValue(); } },
                 { "is_adset_budget_sharing_enabled", n => { IsAdsetBudgetSharingEnabled = n.GetBoolValue(); } },
+                { "is_ai_generated", n => { IsAiGenerated = n.GetBoolValue(); } },
                 { "is_always_open", n => { IsAlwaysOpen = n.GetBoolValue(); } },
                 { "is_audio_only", n => { IsAudioOnly = n.GetBoolValue(); } },
                 { "is_ba_skip_delayed_eligible", n => { IsBaSkipDelayedEligible = n.GetBoolValue(); } },
@@ -5835,6 +5826,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "is_meta_moment_maker_enabled", n => { IsMetaMomentMakerEnabled = n.GetBoolValue(); } },
                 { "is_notifications_enabled", n => { IsNotificationsEnabled = n.GetBoolValue(); } },
                 { "is_official_group", n => { IsOfficialGroup = n.GetBoolValue(); } },
+                { "is_pca_unified", n => { IsPcaUnified = n.GetBoolValue(); } },
                 { "is_permanently_closed", n => { IsPermanentlyClosed = n.GetBoolValue(); } },
                 { "is_pinned", n => { IsPinned = n.GetBoolValue(); } },
                 { "is_primary", n => { IsPrimary = n.GetBoolValue(); } },
@@ -6185,7 +6177,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("backdated_time", BackdatedTime);
             writer.WriteStringValue("backdated_time_granularity", BackdatedTimeGranularity);
             writer.WriteStringValue("background_color", BackgroundColor);
-            writer.WriteStringValue("backup_image_urls", BackupImageUrls);
             writer.WriteLongValue("base_price", BasePrice);
             writer.WriteStringValue("begin_crossposting_handshake", BeginCrosspostingHandshake);
             writer.WriteStringValue("bid_adjustments", BidAdjustments);
@@ -6200,7 +6191,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("body_element_ids", BodyElementIds);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.VehicleBodyStyle>("body_style", BodyStyle);
             writer.WriteStringValue("brand", Brand);
-            writer.WriteStringValue("brand_safety_config", BrandSafetyConfig);
             writer.WriteBoolValue("budget_rebalance_flag", BudgetRebalanceFlag);
             writer.WriteStringValue("budget_schedule_specs", BudgetScheduleSpecs);
             writer.WriteLongValue("budget_value", BudgetValue);
@@ -6220,6 +6210,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("category_specific_fields", CategorySpecificFields);
             writer.WriteStringValue("cells", Cells);
             writer.WriteStringValue("checkout_config", CheckoutConfig);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogCheckoutCountry>("checkout_country", CheckoutCountry);
             writer.WriteStringValue("checkout_url", CheckoutUrl);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.CustomaudienceClaimObjective>("claim_objective", ClaimObjective);
             writer.WriteBoolValue("clear_pending_email", ClearPendingEmail);
@@ -6413,6 +6404,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagecalltoactionIphoneDestinationType>("iphone_destination_type", IphoneDestinationType);
             writer.WriteStringValue("iphone_url", IphoneUrl);
             writer.WriteBoolValue("is_adset_budget_sharing_enabled", IsAdsetBudgetSharingEnabled);
+            writer.WriteBoolValue("is_ai_generated", IsAiGenerated);
             writer.WriteBoolValue("is_always_open", IsAlwaysOpen);
             writer.WriteBoolValue("is_audio_only", IsAudioOnly);
             writer.WriteBoolValue("is_ba_skip_delayed_eligible", IsBaSkipDelayedEligible);
@@ -6429,6 +6421,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("is_meta_moment_maker_enabled", IsMetaMomentMakerEnabled);
             writer.WriteBoolValue("is_notifications_enabled", IsNotificationsEnabled);
             writer.WriteBoolValue("is_official_group", IsOfficialGroup);
+            writer.WriteBoolValue("is_pca_unified", IsPcaUnified);
             writer.WriteBoolValue("is_permanently_closed", IsPermanentlyClosed);
             writer.WriteBoolValue("is_pinned", IsPinned);
             writer.WriteBoolValue("is_primary", IsPrimary);

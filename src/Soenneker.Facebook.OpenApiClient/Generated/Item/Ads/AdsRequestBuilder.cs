@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/ads{?after*,before*,date_format*,date_preset*,effective_status*,fields*,filtering*,limit*,remove_pinned_sort*,sort*,status*,summary*,time_range*,timezone*,updated_since*}", pathParameters)
+        public AdsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/ads{?after*,before*,date_preset*,effective_status*,fields*,limit*,status*,time_range*,updated_since*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/ads{?after*,before*,date_format*,date_preset*,effective_status*,fields*,filtering*,limit*,remove_pinned_sort*,sort*,status*,summary*,time_range*,timezone*,updated_since*}", rawUrl)
+        public AdsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/ads{?after*,before*,date_preset*,effective_status*,fields*,limit*,status*,time_range*,updated_since*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdAds200Response"/></returns>
@@ -153,19 +153,6 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
-            [QueryParameter("date_format")]
-            public string? DateFormat { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("date_format")]
-            public string DateFormat { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("date_preset")]
             public string? DatePreset { get; set; }
             #pragma warning restore CS1591
@@ -202,49 +189,10 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads
             public string Fields { get; set; }
             #pragma warning restore CS1591
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("filtering")]
-            public string? Filtering { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("filtering")]
-            public string Filtering { get; set; }
-            #pragma warning restore CS1591
-#endif
             #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("remove_pinned_sort")]
-            public string? RemovePinnedSort { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("remove_pinned_sort")]
-            public string RemovePinnedSort { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("sort")]
-            public string? Sort { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("sort")]
-            public string Sort { get; set; }
-            #pragma warning restore CS1591
-#endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
@@ -261,19 +209,6 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
-            [QueryParameter("summary")]
-            public string? Summary { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("summary")]
-            public string Summary { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("time_range")]
             public string? TimeRange { get; set; }
             #pragma warning restore CS1591
@@ -284,32 +219,10 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Ads
             public string TimeRange { get; set; }
             #pragma warning restore CS1591
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("timezone")]
-            public string? Timezone { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("timezone")]
-            public string Timezone { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("updated_since")]
-            public string? UpdatedSince { get; set; }
+            public long? UpdatedSince { get; set; }
             #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("updated_since")]
-            public string UpdatedSince { get; set; }
-            #pragma warning restore CS1591
-#endif
         }
     }
 }

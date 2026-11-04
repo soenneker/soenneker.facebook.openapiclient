@@ -39,8 +39,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("bid_strategy") is { } nullNodeBidStrategy && nullNodeBidStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BidStrategy = null;
             if (parseNode.GetChildNode("billing_event") is null) { _explicitNullValueBillingEvent = default!; _explicitNullProperties?.Remove("billing_event"); }
             else if (parseNode.GetChildNode("billing_event") is { } nullNodeBillingEvent && nullNodeBillingEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingEvent = null;
-            if (parseNode.GetChildNode("brand_safety_config") is null) { _explicitNullValueBrandSafetyConfig = default!; _explicitNullProperties?.Remove("brand_safety_config"); }
-            else if (parseNode.GetChildNode("brand_safety_config") is { } nullNodeBrandSafetyConfig && nullNodeBrandSafetyConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrandSafetyConfig = null;
             if (parseNode.GetChildNode("budget_schedule_specs") is null) { _explicitNullValueBudgetScheduleSpecs = default!; _explicitNullProperties?.Remove("budget_schedule_specs"); }
             else if (parseNode.GetChildNode("budget_schedule_specs") is { } nullNodeBudgetScheduleSpecs && nullNodeBudgetScheduleSpecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetScheduleSpecs = null;
             if (parseNode.GetChildNode("budget_source") is null) { _explicitNullValueBudgetSource = default!; _explicitNullProperties?.Remove("budget_source"); }
@@ -246,16 +244,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The billing_event property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBillingEventEnumParam? BillingEvent { get => _explicitNullValueBillingEvent; set { _explicitNullValueBillingEvent = value; AdditionalData?.Remove("billing_event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_event"); else _explicitNullProperties?.Remove("billing_event"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBillingEventEnumParam? _explicitNullValueBillingEvent = default!;
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? BrandSafetyConfig { get => _explicitNullValueBrandSafetyConfig; set { _explicitNullValueBrandSafetyConfig = value; AdditionalData?.Remove("brand_safety_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_config"); else _explicitNullProperties?.Remove("brand_safety_config"); } }
-        private string? _explicitNullValueBrandSafetyConfig = default!;
-#nullable restore
-#else
-        public string BrandSafetyConfig { get => _explicitNullValueBrandSafetyConfig; set { _explicitNullValueBrandSafetyConfig = value; AdditionalData?.Remove("brand_safety_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand_safety_config"); else _explicitNullProperties?.Remove("brand_safety_config"); } }
-        private string _explicitNullValueBrandSafetyConfig = default!;
-#endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -677,7 +665,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "bid_constraints", n => { BidConstraints = n.GetStringValue(); } },
                 { "bid_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBidStrategyEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBidStrategy = default; _explicitNullProperties?.Remove("bid_strategy"); AdditionalData["bid_strategy"] = unknown; } else { BidStrategy = parsed; AdditionalData.Remove("bid_strategy"); } } },
                 { "billing_event", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBillingEventEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBillingEvent = default; _explicitNullProperties?.Remove("billing_event"); AdditionalData["billing_event"] = unknown; } else { BillingEvent = parsed; AdditionalData.Remove("billing_event"); } } },
-                { "brand_safety_config", n => { BrandSafetyConfig = n.GetStringValue(); } },
                 { "budget_schedule_specs", n => { BudgetScheduleSpecs = n.GetStringValue(); } },
                 { "budget_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBudgetSourceEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBudgetSource = default; _explicitNullProperties?.Remove("budget_source"); AdditionalData["budget_source"] = unknown; } else { BudgetSource = parsed; AdditionalData.Remove("budget_source"); } } },
                 { "budget_split_set_id", n => { BudgetSplitSetId = n.GetStringValue(); } },
@@ -761,7 +748,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("bid_constraints", BidConstraints);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBidStrategyEnumParam>("bid_strategy", BidStrategy);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBillingEventEnumParam>("billing_event", BillingEvent);
-            writer.WriteStringValue("brand_safety_config", BrandSafetyConfig);
             writer.WriteStringValue("budget_schedule_specs", BudgetScheduleSpecs);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsBudgetSourceEnumParam>("budget_source", BudgetSource);
             writer.WriteStringValue("budget_split_set_id", BudgetSplitSetId);

@@ -21,6 +21,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("ad_account_id") is { } nullNodeAdAccountId && nullNodeAdAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountId = null;
             if (parseNode.GetChildNode("ad_account_name") is null) { _explicitNullValueAdAccountName = default!; _explicitNullProperties?.Remove("ad_account_name"); }
             else if (parseNode.GetChildNode("ad_account_name") is { } nullNodeAdAccountName && nullNodeAdAccountName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountName = null;
+            if (parseNode.GetChildNode("archived_time") is null) { _explicitNullValueArchivedTime = default!; _explicitNullProperties?.Remove("archived_time"); }
+            else if (parseNode.GetChildNode("archived_time") is { } nullNodeArchivedTime && nullNodeArchivedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedTime = null;
             if (parseNode.GetChildNode("brands") is null) { _explicitNullValueBrands = default!; _explicitNullProperties?.Remove("brands"); }
             else if (parseNode.GetChildNode("brands") is { } nullNodeBrands && nullNodeBrands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brands = null;
             if (parseNode.GetChildNode("catalog_segment") is null) { _explicitNullValueCatalogSegment = default!; _explicitNullProperties?.Remove("catalog_segment"); }
@@ -79,6 +81,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The archived_time property</summary>
+        public DateTimeOffset? ArchivedTime { get => _explicitNullValueArchivedTime; set { _explicitNullValueArchivedTime = value; AdditionalData?.Remove("archived_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archived_time"); else _explicitNullProperties?.Remove("archived_time"); } }
+        private DateTimeOffset? _explicitNullValueArchivedTime = default!;
         /// <summary>The brands property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -262,6 +267,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "ad_account_id", n => { AdAccountId = n.GetStringValue(); } },
                 { "ad_account_name", n => { AdAccountName = n.GetStringValue(); } },
+                { "archived_time", n => { ArchivedTime = n.GetDateTimeOffsetValue(); } },
                 { "brands", n => { Brands = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "catalog_segment", n => { CatalogSegment = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalog>(global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalog.CreateFromDiscriminatorValue); } },
                 { "collaborative_ads_share_settings", n => { CollaborativeAdsShareSettings = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CollaborativeAdsShareSettings>(global::Soenneker.Facebook.OpenApiClient.Models.CollaborativeAdsShareSettings.CreateFromDiscriminatorValue); } },
@@ -290,6 +296,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ad_account_id", AdAccountId);
             writer.WriteStringValue("ad_account_name", AdAccountName);
+            writer.WriteDateTimeOffsetValue("archived_time", ArchivedTime);
             writer.WriteCollectionOfPrimitiveValues<string>("brands", Brands);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalog>("catalog_segment", CatalogSegment);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CollaborativeAdsShareSettings>("collaborative_ads_share_settings", CollaborativeAdsShareSettings);

@@ -36,6 +36,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         AcoToggle,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ADD_10_OR_MORE_CREATIVES_TO_CAMPAIGN")]
+        #pragma warning disable CS1591
+        Add10OrMoreCreativesToCampaign,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ADD_FUNDS_TO_RUN_CAMPAIGN")]
         #pragma warning disable CS1591
         AddFundsToRunCampaign,
@@ -484,6 +488,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         BpbaaWithCapiUpsell,
         #pragma warning restore CS1591
+        [EnumMember(Value = "BRAND_ADVERTISER_INCREASE_CA_OR_LAL_SPEND")]
+        #pragma warning disable CS1591
+        BrandAdvertiserIncreaseCaOrLalSpend,
+        #pragma warning restore CS1591
         [EnumMember(Value = "BRAND_ADVERTISER_VIDEO_FORMAT_ADS")]
         #pragma warning disable CS1591
         BrandAdvertiserVideoFormatAds,
@@ -636,6 +644,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         ConversionLeadAds,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CONVERSION_VOLUME_TO_REV_VALUE_OPT_V2")]
+        #pragma warning disable CS1591
+        ConversionVolumeToRevValueOptV2,
+        #pragma warning restore CS1591
         [EnumMember(Value = "CONVERT_APP_WEB_FALLBACK_TO_A_DESTINATION")]
         #pragma warning disable CS1591
         ConvertAppWebFallbackToADestination,
@@ -760,6 +772,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         CtmPoOdaxPhase2,
         #pragma warning restore CS1591
+        [EnumMember(Value = "CTM_PURCHASE_CA_EXCLUSION")]
+        #pragma warning disable CS1591
+        CtmPurchaseCaExclusion,
+        #pragma warning restore CS1591
         [EnumMember(Value = "CTM_VO_ODAX_PHASE_2")]
         #pragma warning disable CS1591
         CtmVoOdaxPhase2,
@@ -811,6 +827,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "CTX_MULTI_MESSAGE_DESTINATION")]
         #pragma warning disable CS1591
         CtxMultiMessageDestination,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CTX_OUTCOME_FORECASTER")]
+        #pragma warning disable CS1591
+        CtxOutcomeForecaster,
         #pragma warning restore CS1591
         [EnumMember(Value = "CTX_PRECREATE")]
         #pragma warning disable CS1591
@@ -891,6 +911,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "DUPLICATE_HIGH_PERFORMING_CAMPAIGN")]
         #pragma warning disable CS1591
         DuplicateHighPerformingCampaign,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "DUPLICATE_LWI_CAMPAIGN")]
+        #pragma warning disable CS1591
+        DuplicateLwiCampaign,
         #pragma warning restore CS1591
         [EnumMember(Value = "DYNAMIC_ADVANTAGE_CAMPAIGN_BUDGET")]
         #pragma warning disable CS1591

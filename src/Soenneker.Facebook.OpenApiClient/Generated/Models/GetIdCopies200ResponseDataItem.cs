@@ -169,6 +169,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_meta_moment_maker_enabled") is { } nullNodeIsMetaMomentMakerEnabled && nullNodeIsMetaMomentMakerEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMetaMomentMakerEnabled = null;
             if (parseNode.GetChildNode("is_organic_ad_joint_optimized") is null) { _explicitNullValueIsOrganicAdJointOptimized = default!; _explicitNullProperties?.Remove("is_organic_ad_joint_optimized"); }
             else if (parseNode.GetChildNode("is_organic_ad_joint_optimized") is { } nullNodeIsOrganicAdJointOptimized && nullNodeIsOrganicAdJointOptimized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOrganicAdJointOptimized = null;
+            if (parseNode.GetChildNode("is_pca_unified") is null) { _explicitNullValueIsPcaUnified = default!; _explicitNullProperties?.Remove("is_pca_unified"); }
+            else if (parseNode.GetChildNode("is_pca_unified") is { } nullNodeIsPcaUnified && nullNodeIsPcaUnified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPcaUnified = null;
             if (parseNode.GetChildNode("is_reels_trending_ads_enabled") is null) { _explicitNullValueIsReelsTrendingAdsEnabled = default!; _explicitNullProperties?.Remove("is_reels_trending_ads_enabled"); }
             else if (parseNode.GetChildNode("is_reels_trending_ads_enabled") is { } nullNodeIsReelsTrendingAdsEnabled && nullNodeIsReelsTrendingAdsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReelsTrendingAdsEnabled = null;
             if (parseNode.GetChildNode("is_sequenced_conversion_creation") is null) { _explicitNullValueIsSequencedConversionCreation = default!; _explicitNullProperties?.Remove("is_sequenced_conversion_creation"); }
@@ -856,6 +858,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The is_organic_ad_joint_optimized property</summary>
         public bool? IsOrganicAdJointOptimized { get => _explicitNullValueIsOrganicAdJointOptimized; set { _explicitNullValueIsOrganicAdJointOptimized = value; AdditionalData?.Remove("is_organic_ad_joint_optimized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_organic_ad_joint_optimized"); else _explicitNullProperties?.Remove("is_organic_ad_joint_optimized"); } }
         private bool? _explicitNullValueIsOrganicAdJointOptimized = default!;
+        /// <summary>The is_pca_unified property</summary>
+        public bool? IsPcaUnified { get => _explicitNullValueIsPcaUnified; set { _explicitNullValueIsPcaUnified = value; AdditionalData?.Remove("is_pca_unified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pca_unified"); else _explicitNullProperties?.Remove("is_pca_unified"); } }
+        private bool? _explicitNullValueIsPcaUnified = default!;
         /// <summary>The is_reels_trending_ads_enabled property</summary>
         public bool? IsReelsTrendingAdsEnabled { get => _explicitNullValueIsReelsTrendingAdsEnabled; set { _explicitNullValueIsReelsTrendingAdsEnabled = value; AdditionalData?.Remove("is_reels_trending_ads_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_reels_trending_ads_enabled"); else _explicitNullProperties?.Remove("is_reels_trending_ads_enabled"); } }
         private bool? _explicitNullValueIsReelsTrendingAdsEnabled = default!;
@@ -1454,6 +1459,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "is_message_campaign", n => { IsMessageCampaign = n.GetBoolValue(); } },
                 { "is_meta_moment_maker_enabled", n => { IsMetaMomentMakerEnabled = n.GetBoolValue(); } },
                 { "is_organic_ad_joint_optimized", n => { IsOrganicAdJointOptimized = n.GetBoolValue(); } },
+                { "is_pca_unified", n => { IsPcaUnified = n.GetBoolValue(); } },
                 { "is_reels_trending_ads_enabled", n => { IsReelsTrendingAdsEnabled = n.GetBoolValue(); } },
                 { "is_sequenced_conversion_creation", n => { IsSequencedConversionCreation = n.GetBoolValue(); } },
                 { "is_skadnetwork_attribution", n => { IsSkadnetworkAttribution = n.GetBoolValue(); } },
@@ -1602,6 +1608,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("is_message_campaign", IsMessageCampaign);
             writer.WriteBoolValue("is_meta_moment_maker_enabled", IsMetaMomentMakerEnabled);
             writer.WriteBoolValue("is_organic_ad_joint_optimized", IsOrganicAdJointOptimized);
+            writer.WriteBoolValue("is_pca_unified", IsPcaUnified);
             writer.WriteBoolValue("is_reels_trending_ads_enabled", IsReelsTrendingAdsEnabled);
             writer.WriteBoolValue("is_sequenced_conversion_creation", IsSequencedConversionCreation);
             writer.WriteBoolValue("is_skadnetwork_attribution", IsSkadnetworkAttribution);

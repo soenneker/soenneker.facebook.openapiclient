@@ -63,6 +63,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
             if (parseNode.GetChildNode("custom_audience_info") is null) { _explicitNullValueCustomAudienceInfo = default!; _explicitNullProperties?.Remove("custom_audience_info"); }
             else if (parseNode.GetChildNode("custom_audience_info") is { } nullNodeCustomAudienceInfo && nullNodeCustomAudienceInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudienceInfo = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
             if (parseNode.GetChildNode("default_dsa_beneficiary") is null) { _explicitNullValueDefaultDsaBeneficiary = default!; _explicitNullProperties?.Remove("default_dsa_beneficiary"); }
             else if (parseNode.GetChildNode("default_dsa_beneficiary") is { } nullNodeDefaultDsaBeneficiary && nullNodeDefaultDsaBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultDsaBeneficiary = null;
             if (parseNode.GetChildNode("default_dsa_payor") is null) { _explicitNullValueDefaultDsaPayor = default!; _explicitNullProperties?.Remove("default_dsa_payor"); }
@@ -137,6 +139,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
             if (parseNode.GetChildNode("owner_business") is null) { _explicitNullValueOwnerBusiness = default!; _explicitNullProperties?.Remove("owner_business"); }
             else if (parseNode.GetChildNode("owner_business") is { } nullNodeOwnerBusiness && nullNodeOwnerBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerBusiness = null;
+            if (parseNode.GetChildNode("paging") is null) { _explicitNullValuePaging = default!; _explicitNullProperties?.Remove("paging"); }
+            else if (parseNode.GetChildNode("paging") is { } nullNodePaging && nullNodePaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paging = null;
             if (parseNode.GetChildNode("partner") is null) { _explicitNullValuePartner = default!; _explicitNullProperties?.Remove("partner"); }
             else if (parseNode.GetChildNode("partner") is { } nullNodePartner && nullNodePartner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Partner = null;
             if (parseNode.GetChildNode("rf_spec") is null) { _explicitNullValueRfSpec = default!; _explicitNullProperties?.Remove("rf_spec"); }
@@ -149,6 +153,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("sold_to_address") is { } nullNodeSoldToAddress && nullNodeSoldToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoldToAddress = null;
             if (parseNode.GetChildNode("spend_cap") is null) { _explicitNullValueSpendCap = default!; _explicitNullProperties?.Remove("spend_cap"); }
             else if (parseNode.GetChildNode("spend_cap") is { } nullNodeSpendCap && nullNodeSpendCap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendCap = null;
+            if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
+            else if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
             if (parseNode.GetChildNode("tax_id") is null) { _explicitNullValueTaxId = default!; _explicitNullProperties?.Remove("tax_id"); }
             else if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
             if (parseNode.GetChildNode("tax_id_status") is null) { _explicitNullValueTaxIdStatus = default!; _explicitNullProperties?.Remove("tax_id_status"); }
@@ -369,6 +375,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceGroup CustomAudienceInfo { get => _explicitNullValueCustomAudienceInfo; set { _explicitNullValueCustomAudienceInfo = value; AdditionalData?.Remove("custom_audience_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_info"); else _explicitNullProperties?.Remove("custom_audience_info"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceGroup _explicitNullValueCustomAudienceInfo = default!;
+#endif
+        /// <summary>The data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem>? _explicitNullValueData = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>The default_dsa_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -621,6 +637,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public global::Soenneker.Facebook.OpenApiClient.Models.Business OwnerBusiness { get => _explicitNullValueOwnerBusiness; set { _explicitNullValueOwnerBusiness = value; AdditionalData?.Remove("owner_business"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business"); else _explicitNullProperties?.Remove("owner_business"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.Business _explicitNullValueOwnerBusiness = default!;
 #endif
+        /// <summary>The paging property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging? _explicitNullValuePaging = default!;
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging _explicitNullValuePaging = default!;
+#endif
         /// <summary>The partner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -673,6 +699,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string SpendCap { get => _explicitNullValueSpendCap; set { _explicitNullValueSpendCap = value; AdditionalData?.Remove("spend_cap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spend_cap"); else _explicitNullProperties?.Remove("spend_cap"); } }
         private string _explicitNullValueSpendCap = default!;
+#endif
+        /// <summary>The summary property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary? _explicitNullValueSummary = default!;
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary _explicitNullValueSummary = default!;
 #endif
         /// <summary>The tax_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -804,6 +840,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
                 { "currency", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountCurrency>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCurrency = default; _explicitNullProperties?.Remove("currency"); AdditionalData["currency"] = unknown; } else { Currency = parsed; AdditionalData.Remove("currency"); } } },
                 { "custom_audience_info", n => { CustomAudienceInfo = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceGroup>(global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceGroup.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "default_dsa_beneficiary", n => { DefaultDsaBeneficiary = n.GetStringValue(); } },
                 { "default_dsa_payor", n => { DefaultDsaPayor = n.GetStringValue(); } },
                 { "disable_reason", n => { DisableReason = n.GetLongValue(); } },
@@ -841,12 +878,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "opportunity_score_weight", n => { OpportunityScoreWeight = n.GetLongValue(); } },
                 { "owner", n => { Owner = n.GetStringValue(); } },
                 { "owner_business", n => { OwnerBusiness = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Business>(global::Soenneker.Facebook.OpenApiClient.Models.Business.CreateFromDiscriminatorValue); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging.CreateFromDiscriminatorValue); } },
                 { "partner", n => { Partner = n.GetStringValue(); } },
                 { "rf_spec", n => { RfSpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencySpec>(global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencySpec.CreateFromDiscriminatorValue); } },
                 { "send_bill_to_address", n => { SendBillToAddress = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CrmAddress>(global::Soenneker.Facebook.OpenApiClient.Models.CrmAddress.CreateFromDiscriminatorValue); } },
                 { "show_checkout_experience", n => { ShowCheckoutExperience = n.GetBoolValue(); } },
                 { "sold_to_address", n => { SoldToAddress = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CrmAddress>(global::Soenneker.Facebook.OpenApiClient.Models.CrmAddress.CreateFromDiscriminatorValue); } },
                 { "spend_cap", n => { SpendCap = n.GetStringValue(); } },
+                { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary.CreateFromDiscriminatorValue); } },
                 { "tax_id", n => { TaxId = n.GetStringValue(); } },
                 { "tax_id_status", n => { TaxIdStatus = n.GetLongValue(); } },
                 { "tax_id_type", n => { TaxIdType = n.GetStringValue(); } },
@@ -890,6 +929,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_time", CreatedTime);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountCurrency>("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CustomAudienceGroup>("custom_audience_info", CustomAudienceInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemDataItem>("data", Data);
             writer.WriteStringValue("default_dsa_beneficiary", DefaultDsaBeneficiary);
             writer.WriteStringValue("default_dsa_payor", DefaultDsaPayor);
             writer.WriteLongValue("disable_reason", DisableReason);
@@ -927,12 +967,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("opportunity_score_weight", OpportunityScoreWeight);
             writer.WriteStringValue("owner", Owner);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Business>("owner_business", OwnerBusiness);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemPaging>("paging", Paging);
             writer.WriteStringValue("partner", Partner);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencySpec>("rf_spec", RfSpec);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CrmAddress>("send_bill_to_address", SendBillToAddress);
             writer.WriteBoolValue("show_checkout_experience", ShowCheckoutExperience);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CrmAddress>("sold_to_address", SoldToAddress);
             writer.WriteStringValue("spend_cap", SpendCap);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdAdaccounts200ResponseDataItemSummary>("summary", Summary);
             writer.WriteStringValue("tax_id", TaxId);
             writer.WriteLongValue("tax_id_status", TaxIdStatus);
             writer.WriteStringValue("tax_id_type", TaxIdType);

@@ -56,6 +56,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         Buy,
         #pragma warning restore CS1591
+        [EnumMember(Value = "BUY_ACTIVITY_TICKETS")]
+        #pragma warning disable CS1591
+        BuyActivityTickets,
+        #pragma warning restore CS1591
         [EnumMember(Value = "BUY_NOW")]
         #pragma warning disable CS1591
         BuyNow,
@@ -332,6 +336,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         StartOrder,
         #pragma warning restore CS1591
+        [EnumMember(Value = "STREAM_NOW")]
+        #pragma warning disable CS1591
+        StreamNow,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SUBSCRIBE")]
         #pragma warning disable CS1591
         Subscribe,
@@ -403,6 +411,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "WATCH_MORE")]
         #pragma warning disable CS1591
         WatchMore,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "WATCH_NOW")]
+        #pragma warning disable CS1591
+        WatchNow,
         #pragma warning restore CS1591
         [EnumMember(Value = "WATCH_VIDEO")]
         #pragma warning disable CS1591

@@ -25,6 +25,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("destinations") is { } nullNodeDestinations && nullNodeDestinations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Destinations = null;
             if (parseNode.GetChildNode("images") is null) { _explicitNullValueImages = default!; _explicitNullProperties?.Remove("images"); }
             else if (parseNode.GetChildNode("images") is { } nullNodeImages && nullNodeImages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Images = null;
+            if (parseNode.GetChildNode("playables") is null) { _explicitNullValuePlayables = default!; _explicitNullProperties?.Remove("playables"); }
+            else if (parseNode.GetChildNode("playables") is { } nullNodePlayables && nullNodePlayables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Playables = null;
             if (parseNode.GetChildNode("posts") is null) { _explicitNullValuePosts = default!; _explicitNullProperties?.Remove("posts"); }
             else if (parseNode.GetChildNode("posts") is { } nullNodePosts && nullNodePosts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Posts = null;
             if (parseNode.GetChildNode("push_metadata_ids") is null) { _explicitNullValuePushMetadataIds = default!; _explicitNullProperties?.Remove("push_metadata_ids"); }
@@ -78,6 +80,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecImagesItemProperty> Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; AdditionalData?.Remove("images"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
         private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecImagesItemProperty> _explicitNullValueImages = default!;
+#endif
+        /// <summary>The playables property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty>? Playables { get => _explicitNullValuePlayables; set { _explicitNullValuePlayables = value; AdditionalData?.Remove("playables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playables"); else _explicitNullProperties?.Remove("playables"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty>? _explicitNullValuePlayables = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty> Playables { get => _explicitNullValuePlayables; set { _explicitNullValuePlayables = value; AdditionalData?.Remove("playables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playables"); else _explicitNullProperties?.Remove("playables"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty> _explicitNullValuePlayables = default!;
 #endif
         /// <summary>The posts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -158,6 +170,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "descriptions", n => { Descriptions = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecDescriptionsItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecDescriptionsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "destinations", n => { Destinations = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecDestinationsItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecDestinationsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "images", n => { Images = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecImagesItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecImagesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "playables", n => { Playables = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "posts", n => { Posts = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPostsItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPostsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "push_metadata_ids", n => { PushMetadataIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "related_media", n => { RelatedMedia = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecRelatedMediaProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecRelatedMediaProperty.CreateFromDiscriminatorValue); } },
@@ -176,6 +189,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecDescriptionsItemProperty>("descriptions", Descriptions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecDestinationsItemProperty>("destinations", Destinations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecImagesItemProperty>("images", Images);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPlayablesItemProperty>("playables", Playables);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecPostsItemProperty>("posts", Posts);
             writer.WriteCollectionOfPrimitiveValues<string>("push_metadata_ids", PushMetadataIds);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeMediaSourcingSpecRelatedMediaProperty>("related_media", RelatedMedia);

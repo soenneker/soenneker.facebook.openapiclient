@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Diagnostics
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DiagnosticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/diagnostics{?affected_channels*,affected_entities*,affected_features*,after*,before*,fields*,limit*,severities*,types*}", pathParameters)
+        public DiagnosticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/diagnostics{?affected_channels*,affected_entities*,affected_features*,after*,before*,fields*,limit*,severities*,summary*,types*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Diagnostics
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DiagnosticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/diagnostics{?affected_channels*,affected_entities*,affected_features*,after*,before*,fields*,limit*,severities*,types*}", rawUrl)
+        public DiagnosticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/diagnostics{?affected_channels*,affected_entities*,affected_features*,after*,before*,fields*,limit*,severities*,summary*,types*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdDiagnostics200Response"/></returns>
@@ -176,6 +176,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Diagnostics
             #pragma warning disable CS1591
             [QueryParameter("severities")]
             public string Severities { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("summary")]
+            public string? Summary { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("summary")]
+            public string Summary { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

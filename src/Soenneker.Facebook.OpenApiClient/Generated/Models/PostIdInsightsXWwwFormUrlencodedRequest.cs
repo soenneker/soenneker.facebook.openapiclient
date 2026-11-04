@@ -23,12 +23,24 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("action_breakdowns") is { } nullNodeActionBreakdowns && nullNodeActionBreakdowns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionBreakdowns = null;
             if (parseNode.GetChildNode("action_report_time") is null) { _explicitNullValueActionReportTime = default!; _explicitNullProperties?.Remove("action_report_time"); }
             else if (parseNode.GetChildNode("action_report_time") is { } nullNodeActionReportTime && nullNodeActionReportTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionReportTime = null;
+            if (parseNode.GetChildNode("am_call_tags") is null) { _explicitNullValueAmCallTags = default!; _explicitNullProperties?.Remove("am_call_tags"); }
+            else if (parseNode.GetChildNode("am_call_tags") is { } nullNodeAmCallTags && nullNodeAmCallTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmCallTags = null;
             if (parseNode.GetChildNode("breakdowns") is null) { _explicitNullValueBreakdowns = default!; _explicitNullProperties?.Remove("breakdowns"); }
             else if (parseNode.GetChildNode("breakdowns") is { } nullNodeBreakdowns && nullNodeBreakdowns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakdowns = null;
+            if (parseNode.GetChildNode("comparison_fields") is null) { _explicitNullValueComparisonFields = default!; _explicitNullProperties?.Remove("comparison_fields"); }
+            else if (parseNode.GetChildNode("comparison_fields") is { } nullNodeComparisonFields && nullNodeComparisonFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComparisonFields = null;
+            if (parseNode.GetChildNode("comparison_time_ranges") is null) { _explicitNullValueComparisonTimeRanges = default!; _explicitNullProperties?.Remove("comparison_time_ranges"); }
+            else if (parseNode.GetChildNode("comparison_time_ranges") is { } nullNodeComparisonTimeRanges && nullNodeComparisonTimeRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComparisonTimeRanges = null;
+            if (parseNode.GetChildNode("cpas_only") is null) { _explicitNullValueCpasOnly = default!; _explicitNullProperties?.Remove("cpas_only"); }
+            else if (parseNode.GetChildNode("cpas_only") is { } nullNodeCpasOnly && nullNodeCpasOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpasOnly = null;
             if (parseNode.GetChildNode("date_preset") is null) { _explicitNullValueDatePreset = default!; _explicitNullProperties?.Remove("date_preset"); }
             else if (parseNode.GetChildNode("date_preset") is { } nullNodeDatePreset && nullNodeDatePreset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatePreset = null;
+            if (parseNode.GetChildNode("default_attribution_windows") is null) { _explicitNullValueDefaultAttributionWindows = default!; _explicitNullProperties?.Remove("default_attribution_windows"); }
+            else if (parseNode.GetChildNode("default_attribution_windows") is { } nullNodeDefaultAttributionWindows && nullNodeDefaultAttributionWindows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAttributionWindows = null;
             if (parseNode.GetChildNode("default_summary") is null) { _explicitNullValueDefaultSummary = default!; _explicitNullProperties?.Remove("default_summary"); }
             else if (parseNode.GetChildNode("default_summary") is { } nullNodeDefaultSummary && nullNodeDefaultSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSummary = null;
+            if (parseNode.GetChildNode("enable_trace") is null) { _explicitNullValueEnableTrace = default!; _explicitNullProperties?.Remove("enable_trace"); }
+            else if (parseNode.GetChildNode("enable_trace") is { } nullNodeEnableTrace && nullNodeEnableTrace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTrace = null;
             if (parseNode.GetChildNode("export_columns") is null) { _explicitNullValueExportColumns = default!; _explicitNullProperties?.Remove("export_columns"); }
             else if (parseNode.GetChildNode("export_columns") is { } nullNodeExportColumns && nullNodeExportColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportColumns = null;
             if (parseNode.GetChildNode("export_format") is null) { _explicitNullValueExportFormat = default!; _explicitNullProperties?.Remove("export_format"); }
@@ -39,14 +51,28 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("filtering") is null) { _explicitNullValueFiltering = default!; _explicitNullProperties?.Remove("filtering"); }
             else if (parseNode.GetChildNode("filtering") is { } nullNodeFiltering && nullNodeFiltering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filtering = null;
+            if (parseNode.GetChildNode("flog") is null) { _explicitNullValueFlog = default!; _explicitNullProperties?.Remove("flog"); }
+            else if (parseNode.GetChildNode("flog") is { } nullNodeFlog && nullNodeFlog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flog = null;
             if (parseNode.GetChildNode("graph_cache") is null) { _explicitNullValueGraphCache = default!; _explicitNullProperties?.Remove("graph_cache"); }
             else if (parseNode.GetChildNode("graph_cache") is { } nullNodeGraphCache && nullNodeGraphCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphCache = null;
+            if (parseNode.GetChildNode("include_zeros") is null) { _explicitNullValueIncludeZeros = default!; _explicitNullProperties?.Remove("include_zeros"); }
+            else if (parseNode.GetChildNode("include_zeros") is { } nullNodeIncludeZeros && nullNodeIncludeZeros.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeZeros = null;
             if (parseNode.GetChildNode("level") is null) { _explicitNullValueLevel = default!; _explicitNullProperties?.Remove("level"); }
             else if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
             if (parseNode.GetChildNode("limit") is null) { _explicitNullValueLimit = default!; _explicitNullProperties?.Remove("limit"); }
             else if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("meta_breakdowns") is null) { _explicitNullValueMetaBreakdowns = default!; _explicitNullProperties?.Remove("meta_breakdowns"); }
+            else if (parseNode.GetChildNode("meta_breakdowns") is { } nullNodeMetaBreakdowns && nullNodeMetaBreakdowns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaBreakdowns = null;
             if (parseNode.GetChildNode("product_id_limit") is null) { _explicitNullValueProductIdLimit = default!; _explicitNullProperties?.Remove("product_id_limit"); }
             else if (parseNode.GetChildNode("product_id_limit") is { } nullNodeProductIdLimit && nullNodeProductIdLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductIdLimit = null;
+            if (parseNode.GetChildNode("round_up_level") is null) { _explicitNullValueRoundUpLevel = default!; _explicitNullProperties?.Remove("round_up_level"); }
+            else if (parseNode.GetChildNode("round_up_level") is { } nullNodeRoundUpLevel && nullNodeRoundUpLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoundUpLevel = null;
+            if (parseNode.GetChildNode("run_id") is null) { _explicitNullValueRunId = default!; _explicitNullProperties?.Remove("run_id"); }
+            else if (parseNode.GetChildNode("run_id") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
+            if (parseNode.GetChildNode("saber_setsuna_perf_request_id") is null) { _explicitNullValueSaberSetsunaPerfRequestId = default!; _explicitNullProperties?.Remove("saber_setsuna_perf_request_id"); }
+            else if (parseNode.GetChildNode("saber_setsuna_perf_request_id") is { } nullNodeSaberSetsunaPerfRequestId && nullNodeSaberSetsunaPerfRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaberSetsunaPerfRequestId = null;
+            if (parseNode.GetChildNode("scenario_run_id") is null) { _explicitNullValueScenarioRunId = default!; _explicitNullProperties?.Remove("scenario_run_id"); }
+            else if (parseNode.GetChildNode("scenario_run_id") is { } nullNodeScenarioRunId && nullNodeScenarioRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScenarioRunId = null;
             if (parseNode.GetChildNode("sort") is null) { _explicitNullValueSort = default!; _explicitNullProperties?.Remove("sort"); }
             else if (parseNode.GetChildNode("sort") is { } nullNodeSort && nullNodeSort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sort = null;
             if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
@@ -97,6 +123,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The am_call_tags property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AmCallTags { get => _explicitNullValueAmCallTags; set { _explicitNullValueAmCallTags = value; AdditionalData?.Remove("am_call_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("am_call_tags"); else _explicitNullProperties?.Remove("am_call_tags"); } }
+        private string? _explicitNullValueAmCallTags = default!;
+#nullable restore
+#else
+        public string AmCallTags { get => _explicitNullValueAmCallTags; set { _explicitNullValueAmCallTags = value; AdditionalData?.Remove("am_call_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("am_call_tags"); else _explicitNullProperties?.Remove("am_call_tags"); } }
+        private string _explicitNullValueAmCallTags = default!;
+#endif
         /// <summary>The breakdowns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,6 +142,36 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string Breakdowns { get => _explicitNullValueBreakdowns; set { _explicitNullValueBreakdowns = value; AdditionalData?.Remove("breakdowns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakdowns"); else _explicitNullProperties?.Remove("breakdowns"); } }
         private string _explicitNullValueBreakdowns = default!;
+#endif
+        /// <summary>The comparison_fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ComparisonFields { get => _explicitNullValueComparisonFields; set { _explicitNullValueComparisonFields = value; AdditionalData?.Remove("comparison_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparison_fields"); else _explicitNullProperties?.Remove("comparison_fields"); } }
+        private string? _explicitNullValueComparisonFields = default!;
+#nullable restore
+#else
+        public string ComparisonFields { get => _explicitNullValueComparisonFields; set { _explicitNullValueComparisonFields = value; AdditionalData?.Remove("comparison_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparison_fields"); else _explicitNullProperties?.Remove("comparison_fields"); } }
+        private string _explicitNullValueComparisonFields = default!;
+#endif
+        /// <summary>The comparison_time_ranges property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ComparisonTimeRanges { get => _explicitNullValueComparisonTimeRanges; set { _explicitNullValueComparisonTimeRanges = value; AdditionalData?.Remove("comparison_time_ranges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparison_time_ranges"); else _explicitNullProperties?.Remove("comparison_time_ranges"); } }
+        private string? _explicitNullValueComparisonTimeRanges = default!;
+#nullable restore
+#else
+        public string ComparisonTimeRanges { get => _explicitNullValueComparisonTimeRanges; set { _explicitNullValueComparisonTimeRanges = value; AdditionalData?.Remove("comparison_time_ranges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comparison_time_ranges"); else _explicitNullProperties?.Remove("comparison_time_ranges"); } }
+        private string _explicitNullValueComparisonTimeRanges = default!;
+#endif
+        /// <summary>The cpas_only property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CpasOnly { get => _explicitNullValueCpasOnly; set { _explicitNullValueCpasOnly = value; AdditionalData?.Remove("cpas_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpas_only"); else _explicitNullProperties?.Remove("cpas_only"); } }
+        private string? _explicitNullValueCpasOnly = default!;
+#nullable restore
+#else
+        public string CpasOnly { get => _explicitNullValueCpasOnly; set { _explicitNullValueCpasOnly = value; AdditionalData?.Remove("cpas_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpas_only"); else _explicitNullProperties?.Remove("cpas_only"); } }
+        private string _explicitNullValueCpasOnly = default!;
 #endif
         /// <summary>The date_preset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,10 +183,37 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string DatePreset { get => _explicitNullValueDatePreset; set { _explicitNullValueDatePreset = value; AdditionalData?.Remove("date_preset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_preset"); else _explicitNullProperties?.Remove("date_preset"); } }
         private string _explicitNullValueDatePreset = default!;
 #endif
+        /// <summary>The default_attribution_windows property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DefaultAttributionWindows { get => _explicitNullValueDefaultAttributionWindows; set { _explicitNullValueDefaultAttributionWindows = value; AdditionalData?.Remove("default_attribution_windows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_attribution_windows"); else _explicitNullProperties?.Remove("default_attribution_windows"); } }
+        private string? _explicitNullValueDefaultAttributionWindows = default!;
+#nullable restore
+#else
+        public string DefaultAttributionWindows { get => _explicitNullValueDefaultAttributionWindows; set { _explicitNullValueDefaultAttributionWindows = value; AdditionalData?.Remove("default_attribution_windows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_attribution_windows"); else _explicitNullProperties?.Remove("default_attribution_windows"); } }
+        private string _explicitNullValueDefaultAttributionWindows = default!;
+#endif
         /// <summary>The default_summary property</summary>
-        public bool? DefaultSummary { get => _explicitNullValueDefaultSummary; set { _explicitNullValueDefaultSummary = value; AdditionalData?.Remove("default_summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_summary"); else _explicitNullProperties?.Remove("default_summary"); } }
-        private bool? _explicitNullValueDefaultSummary = default!;
-        /// <summary>A JSON-encoded value.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DefaultSummary { get => _explicitNullValueDefaultSummary; set { _explicitNullValueDefaultSummary = value; AdditionalData?.Remove("default_summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_summary"); else _explicitNullProperties?.Remove("default_summary"); } }
+        private string? _explicitNullValueDefaultSummary = default!;
+#nullable restore
+#else
+        public string DefaultSummary { get => _explicitNullValueDefaultSummary; set { _explicitNullValueDefaultSummary = value; AdditionalData?.Remove("default_summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_summary"); else _explicitNullProperties?.Remove("default_summary"); } }
+        private string _explicitNullValueDefaultSummary = default!;
+#endif
+        /// <summary>The enable_trace property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EnableTrace { get => _explicitNullValueEnableTrace; set { _explicitNullValueEnableTrace = value; AdditionalData?.Remove("enable_trace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_trace"); else _explicitNullProperties?.Remove("enable_trace"); } }
+        private string? _explicitNullValueEnableTrace = default!;
+#nullable restore
+#else
+        public string EnableTrace { get => _explicitNullValueEnableTrace; set { _explicitNullValueEnableTrace = value; AdditionalData?.Remove("enable_trace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_trace"); else _explicitNullProperties?.Remove("enable_trace"); } }
+        private string _explicitNullValueEnableTrace = default!;
+#endif
+        /// <summary>The export_columns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExportColumns { get => _explicitNullValueExportColumns; set { _explicitNullValueExportColumns = value; AdditionalData?.Remove("export_columns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_columns"); else _explicitNullProperties?.Remove("export_columns"); } }
@@ -150,7 +243,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string ExportName { get => _explicitNullValueExportName; set { _explicitNullValueExportName = value; AdditionalData?.Remove("export_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("export_name"); else _explicitNullProperties?.Remove("export_name"); } }
         private string _explicitNullValueExportName = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
@@ -160,7 +253,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
         private string _explicitNullValueFields = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The filtering property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Filtering { get => _explicitNullValueFiltering; set { _explicitNullValueFiltering = value; AdditionalData?.Remove("filtering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filtering"); else _explicitNullProperties?.Remove("filtering"); } }
@@ -170,9 +263,36 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Filtering { get => _explicitNullValueFiltering; set { _explicitNullValueFiltering = value; AdditionalData?.Remove("filtering"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filtering"); else _explicitNullProperties?.Remove("filtering"); } }
         private string _explicitNullValueFiltering = default!;
 #endif
+        /// <summary>The flog property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Flog { get => _explicitNullValueFlog; set { _explicitNullValueFlog = value; AdditionalData?.Remove("flog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flog"); else _explicitNullProperties?.Remove("flog"); } }
+        private string? _explicitNullValueFlog = default!;
+#nullable restore
+#else
+        public string Flog { get => _explicitNullValueFlog; set { _explicitNullValueFlog = value; AdditionalData?.Remove("flog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flog"); else _explicitNullProperties?.Remove("flog"); } }
+        private string _explicitNullValueFlog = default!;
+#endif
         /// <summary>The graph_cache property</summary>
-        public bool? GraphCache { get => _explicitNullValueGraphCache; set { _explicitNullValueGraphCache = value; AdditionalData?.Remove("graph_cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("graph_cache"); else _explicitNullProperties?.Remove("graph_cache"); } }
-        private bool? _explicitNullValueGraphCache = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GraphCache { get => _explicitNullValueGraphCache; set { _explicitNullValueGraphCache = value; AdditionalData?.Remove("graph_cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("graph_cache"); else _explicitNullProperties?.Remove("graph_cache"); } }
+        private string? _explicitNullValueGraphCache = default!;
+#nullable restore
+#else
+        public string GraphCache { get => _explicitNullValueGraphCache; set { _explicitNullValueGraphCache = value; AdditionalData?.Remove("graph_cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("graph_cache"); else _explicitNullProperties?.Remove("graph_cache"); } }
+        private string _explicitNullValueGraphCache = default!;
+#endif
+        /// <summary>The include_zeros property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IncludeZeros { get => _explicitNullValueIncludeZeros; set { _explicitNullValueIncludeZeros = value; AdditionalData?.Remove("include_zeros"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_zeros"); else _explicitNullProperties?.Remove("include_zeros"); } }
+        private string? _explicitNullValueIncludeZeros = default!;
+#nullable restore
+#else
+        public string IncludeZeros { get => _explicitNullValueIncludeZeros; set { _explicitNullValueIncludeZeros = value; AdditionalData?.Remove("include_zeros"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_zeros"); else _explicitNullProperties?.Remove("include_zeros"); } }
+        private string _explicitNullValueIncludeZeros = default!;
+#endif
         /// <summary>The level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -184,12 +304,76 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueLevel = default!;
 #endif
         /// <summary>The limit property</summary>
-        public long? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
-        private long? _explicitNullValueLimit = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private string? _explicitNullValueLimit = default!;
+#nullable restore
+#else
+        public string Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private string _explicitNullValueLimit = default!;
+#endif
+        /// <summary>The meta_breakdowns property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MetaBreakdowns { get => _explicitNullValueMetaBreakdowns; set { _explicitNullValueMetaBreakdowns = value; AdditionalData?.Remove("meta_breakdowns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_breakdowns"); else _explicitNullProperties?.Remove("meta_breakdowns"); } }
+        private string? _explicitNullValueMetaBreakdowns = default!;
+#nullable restore
+#else
+        public string MetaBreakdowns { get => _explicitNullValueMetaBreakdowns; set { _explicitNullValueMetaBreakdowns = value; AdditionalData?.Remove("meta_breakdowns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_breakdowns"); else _explicitNullProperties?.Remove("meta_breakdowns"); } }
+        private string _explicitNullValueMetaBreakdowns = default!;
+#endif
         /// <summary>The product_id_limit property</summary>
-        public long? ProductIdLimit { get => _explicitNullValueProductIdLimit; set { _explicitNullValueProductIdLimit = value; AdditionalData?.Remove("product_id_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id_limit"); else _explicitNullProperties?.Remove("product_id_limit"); } }
-        private long? _explicitNullValueProductIdLimit = default!;
-        /// <summary>A JSON-encoded value.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProductIdLimit { get => _explicitNullValueProductIdLimit; set { _explicitNullValueProductIdLimit = value; AdditionalData?.Remove("product_id_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id_limit"); else _explicitNullProperties?.Remove("product_id_limit"); } }
+        private string? _explicitNullValueProductIdLimit = default!;
+#nullable restore
+#else
+        public string ProductIdLimit { get => _explicitNullValueProductIdLimit; set { _explicitNullValueProductIdLimit = value; AdditionalData?.Remove("product_id_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id_limit"); else _explicitNullProperties?.Remove("product_id_limit"); } }
+        private string _explicitNullValueProductIdLimit = default!;
+#endif
+        /// <summary>The round_up_level property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RoundUpLevel { get => _explicitNullValueRoundUpLevel; set { _explicitNullValueRoundUpLevel = value; AdditionalData?.Remove("round_up_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("round_up_level"); else _explicitNullProperties?.Remove("round_up_level"); } }
+        private string? _explicitNullValueRoundUpLevel = default!;
+#nullable restore
+#else
+        public string RoundUpLevel { get => _explicitNullValueRoundUpLevel; set { _explicitNullValueRoundUpLevel = value; AdditionalData?.Remove("round_up_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("round_up_level"); else _explicitNullProperties?.Remove("round_up_level"); } }
+        private string _explicitNullValueRoundUpLevel = default!;
+#endif
+        /// <summary>The run_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; AdditionalData?.Remove("run_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_id"); else _explicitNullProperties?.Remove("run_id"); } }
+        private string? _explicitNullValueRunId = default!;
+#nullable restore
+#else
+        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; AdditionalData?.Remove("run_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_id"); else _explicitNullProperties?.Remove("run_id"); } }
+        private string _explicitNullValueRunId = default!;
+#endif
+        /// <summary>The saber_setsuna_perf_request_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SaberSetsunaPerfRequestId { get => _explicitNullValueSaberSetsunaPerfRequestId; set { _explicitNullValueSaberSetsunaPerfRequestId = value; AdditionalData?.Remove("saber_setsuna_perf_request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saber_setsuna_perf_request_id"); else _explicitNullProperties?.Remove("saber_setsuna_perf_request_id"); } }
+        private string? _explicitNullValueSaberSetsunaPerfRequestId = default!;
+#nullable restore
+#else
+        public string SaberSetsunaPerfRequestId { get => _explicitNullValueSaberSetsunaPerfRequestId; set { _explicitNullValueSaberSetsunaPerfRequestId = value; AdditionalData?.Remove("saber_setsuna_perf_request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saber_setsuna_perf_request_id"); else _explicitNullProperties?.Remove("saber_setsuna_perf_request_id"); } }
+        private string _explicitNullValueSaberSetsunaPerfRequestId = default!;
+#endif
+        /// <summary>The scenario_run_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ScenarioRunId { get => _explicitNullValueScenarioRunId; set { _explicitNullValueScenarioRunId = value; AdditionalData?.Remove("scenario_run_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scenario_run_id"); else _explicitNullProperties?.Remove("scenario_run_id"); } }
+        private string? _explicitNullValueScenarioRunId = default!;
+#nullable restore
+#else
+        public string ScenarioRunId { get => _explicitNullValueScenarioRunId; set { _explicitNullValueScenarioRunId = value; AdditionalData?.Remove("scenario_run_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scenario_run_id"); else _explicitNullProperties?.Remove("scenario_run_id"); } }
+        private string _explicitNullValueScenarioRunId = default!;
+#endif
+        /// <summary>The sort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sort { get => _explicitNullValueSort; set { _explicitNullValueSort = value; AdditionalData?.Remove("sort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort"); else _explicitNullProperties?.Remove("sort"); } }
@@ -199,7 +383,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Sort { get => _explicitNullValueSort; set { _explicitNullValueSort = value; AdditionalData?.Remove("sort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sort"); else _explicitNullProperties?.Remove("sort"); } }
         private string _explicitNullValueSort = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
@@ -229,7 +413,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string TimeIncrement { get => _explicitNullValueTimeIncrement; set { _explicitNullValueTimeIncrement = value; AdditionalData?.Remove("time_increment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_increment"); else _explicitNullProperties?.Remove("time_increment"); } }
         private string _explicitNullValueTimeIncrement = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The time_range property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; AdditionalData?.Remove("time_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_range"); else _explicitNullProperties?.Remove("time_range"); } }
@@ -239,7 +423,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string TimeRange { get => _explicitNullValueTimeRange; set { _explicitNullValueTimeRange = value; AdditionalData?.Remove("time_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_range"); else _explicitNullProperties?.Remove("time_range"); } }
         private string _explicitNullValueTimeRange = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The time_ranges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimeRanges { get => _explicitNullValueTimeRanges; set { _explicitNullValueTimeRanges = value; AdditionalData?.Remove("time_ranges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_ranges"); else _explicitNullProperties?.Remove("time_ranges"); } }
@@ -250,11 +434,25 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueTimeRanges = default!;
 #endif
         /// <summary>The use_account_attribution_setting property</summary>
-        public bool? UseAccountAttributionSetting { get => _explicitNullValueUseAccountAttributionSetting; set { _explicitNullValueUseAccountAttributionSetting = value; AdditionalData?.Remove("use_account_attribution_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_account_attribution_setting"); else _explicitNullProperties?.Remove("use_account_attribution_setting"); } }
-        private bool? _explicitNullValueUseAccountAttributionSetting = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UseAccountAttributionSetting { get => _explicitNullValueUseAccountAttributionSetting; set { _explicitNullValueUseAccountAttributionSetting = value; AdditionalData?.Remove("use_account_attribution_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_account_attribution_setting"); else _explicitNullProperties?.Remove("use_account_attribution_setting"); } }
+        private string? _explicitNullValueUseAccountAttributionSetting = default!;
+#nullable restore
+#else
+        public string UseAccountAttributionSetting { get => _explicitNullValueUseAccountAttributionSetting; set { _explicitNullValueUseAccountAttributionSetting = value; AdditionalData?.Remove("use_account_attribution_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_account_attribution_setting"); else _explicitNullProperties?.Remove("use_account_attribution_setting"); } }
+        private string _explicitNullValueUseAccountAttributionSetting = default!;
+#endif
         /// <summary>The use_unified_attribution_setting property</summary>
-        public bool? UseUnifiedAttributionSetting { get => _explicitNullValueUseUnifiedAttributionSetting; set { _explicitNullValueUseUnifiedAttributionSetting = value; AdditionalData?.Remove("use_unified_attribution_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_unified_attribution_setting"); else _explicitNullProperties?.Remove("use_unified_attribution_setting"); } }
-        private bool? _explicitNullValueUseUnifiedAttributionSetting = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UseUnifiedAttributionSetting { get => _explicitNullValueUseUnifiedAttributionSetting; set { _explicitNullValueUseUnifiedAttributionSetting = value; AdditionalData?.Remove("use_unified_attribution_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_unified_attribution_setting"); else _explicitNullProperties?.Remove("use_unified_attribution_setting"); } }
+        private string? _explicitNullValueUseUnifiedAttributionSetting = default!;
+#nullable restore
+#else
+        public string UseUnifiedAttributionSetting { get => _explicitNullValueUseUnifiedAttributionSetting; set { _explicitNullValueUseUnifiedAttributionSetting = value; AdditionalData?.Remove("use_unified_attribution_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_unified_attribution_setting"); else _explicitNullProperties?.Remove("use_unified_attribution_setting"); } }
+        private string _explicitNullValueUseUnifiedAttributionSetting = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdInsightsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -283,26 +481,39 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "action_attribution_windows", n => { ActionAttributionWindows = n.GetStringValue(); } },
                 { "action_breakdowns", n => { ActionBreakdowns = n.GetStringValue(); } },
                 { "action_report_time", n => { ActionReportTime = n.GetStringValue(); } },
+                { "am_call_tags", n => { AmCallTags = n.GetStringValue(); } },
                 { "breakdowns", n => { Breakdowns = n.GetStringValue(); } },
+                { "comparison_fields", n => { ComparisonFields = n.GetStringValue(); } },
+                { "comparison_time_ranges", n => { ComparisonTimeRanges = n.GetStringValue(); } },
+                { "cpas_only", n => { CpasOnly = n.GetStringValue(); } },
                 { "date_preset", n => { DatePreset = n.GetStringValue(); } },
-                { "default_summary", n => { DefaultSummary = n.GetBoolValue(); } },
+                { "default_attribution_windows", n => { DefaultAttributionWindows = n.GetStringValue(); } },
+                { "default_summary", n => { DefaultSummary = n.GetStringValue(); } },
+                { "enable_trace", n => { EnableTrace = n.GetStringValue(); } },
                 { "export_columns", n => { ExportColumns = n.GetStringValue(); } },
                 { "export_format", n => { ExportFormat = n.GetStringValue(); } },
                 { "export_name", n => { ExportName = n.GetStringValue(); } },
                 { "fields", n => { Fields = n.GetStringValue(); } },
                 { "filtering", n => { Filtering = n.GetStringValue(); } },
-                { "graph_cache", n => { GraphCache = n.GetBoolValue(); } },
+                { "flog", n => { Flog = n.GetStringValue(); } },
+                { "graph_cache", n => { GraphCache = n.GetStringValue(); } },
+                { "include_zeros", n => { IncludeZeros = n.GetStringValue(); } },
                 { "level", n => { Level = n.GetStringValue(); } },
-                { "limit", n => { Limit = n.GetLongValue(); } },
-                { "product_id_limit", n => { ProductIdLimit = n.GetLongValue(); } },
+                { "limit", n => { Limit = n.GetStringValue(); } },
+                { "meta_breakdowns", n => { MetaBreakdowns = n.GetStringValue(); } },
+                { "product_id_limit", n => { ProductIdLimit = n.GetStringValue(); } },
+                { "round_up_level", n => { RoundUpLevel = n.GetStringValue(); } },
+                { "run_id", n => { RunId = n.GetStringValue(); } },
+                { "saber_setsuna_perf_request_id", n => { SaberSetsunaPerfRequestId = n.GetStringValue(); } },
+                { "scenario_run_id", n => { ScenarioRunId = n.GetStringValue(); } },
                 { "sort", n => { Sort = n.GetStringValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "summary_action_breakdowns", n => { SummaryActionBreakdowns = n.GetStringValue(); } },
                 { "time_increment", n => { TimeIncrement = n.GetStringValue(); } },
                 { "time_range", n => { TimeRange = n.GetStringValue(); } },
                 { "time_ranges", n => { TimeRanges = n.GetStringValue(); } },
-                { "use_account_attribution_setting", n => { UseAccountAttributionSetting = n.GetBoolValue(); } },
-                { "use_unified_attribution_setting", n => { UseUnifiedAttributionSetting = n.GetBoolValue(); } },
+                { "use_account_attribution_setting", n => { UseAccountAttributionSetting = n.GetStringValue(); } },
+                { "use_unified_attribution_setting", n => { UseUnifiedAttributionSetting = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -315,26 +526,39 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("action_attribution_windows", ActionAttributionWindows);
             writer.WriteStringValue("action_breakdowns", ActionBreakdowns);
             writer.WriteStringValue("action_report_time", ActionReportTime);
+            writer.WriteStringValue("am_call_tags", AmCallTags);
             writer.WriteStringValue("breakdowns", Breakdowns);
+            writer.WriteStringValue("comparison_fields", ComparisonFields);
+            writer.WriteStringValue("comparison_time_ranges", ComparisonTimeRanges);
+            writer.WriteStringValue("cpas_only", CpasOnly);
             writer.WriteStringValue("date_preset", DatePreset);
-            writer.WriteBoolValue("default_summary", DefaultSummary);
+            writer.WriteStringValue("default_attribution_windows", DefaultAttributionWindows);
+            writer.WriteStringValue("default_summary", DefaultSummary);
+            writer.WriteStringValue("enable_trace", EnableTrace);
             writer.WriteStringValue("export_columns", ExportColumns);
             writer.WriteStringValue("export_format", ExportFormat);
             writer.WriteStringValue("export_name", ExportName);
             writer.WriteStringValue("fields", Fields);
             writer.WriteStringValue("filtering", Filtering);
-            writer.WriteBoolValue("graph_cache", GraphCache);
+            writer.WriteStringValue("flog", Flog);
+            writer.WriteStringValue("graph_cache", GraphCache);
+            writer.WriteStringValue("include_zeros", IncludeZeros);
             writer.WriteStringValue("level", Level);
-            writer.WriteLongValue("limit", Limit);
-            writer.WriteLongValue("product_id_limit", ProductIdLimit);
+            writer.WriteStringValue("limit", Limit);
+            writer.WriteStringValue("meta_breakdowns", MetaBreakdowns);
+            writer.WriteStringValue("product_id_limit", ProductIdLimit);
+            writer.WriteStringValue("round_up_level", RoundUpLevel);
+            writer.WriteStringValue("run_id", RunId);
+            writer.WriteStringValue("saber_setsuna_perf_request_id", SaberSetsunaPerfRequestId);
+            writer.WriteStringValue("scenario_run_id", ScenarioRunId);
             writer.WriteStringValue("sort", Sort);
             writer.WriteStringValue("summary", Summary);
             writer.WriteStringValue("summary_action_breakdowns", SummaryActionBreakdowns);
             writer.WriteStringValue("time_increment", TimeIncrement);
             writer.WriteStringValue("time_range", TimeRange);
             writer.WriteStringValue("time_ranges", TimeRanges);
-            writer.WriteBoolValue("use_account_attribution_setting", UseAccountAttributionSetting);
-            writer.WriteBoolValue("use_unified_attribution_setting", UseUnifiedAttributionSetting);
+            writer.WriteStringValue("use_account_attribution_setting", UseAccountAttributionSetting);
+            writer.WriteStringValue("use_unified_attribution_setting", UseUnifiedAttributionSetting);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

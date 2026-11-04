@@ -25,6 +25,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("execution_spec") is { } nullNodeExecutionSpec && nullNodeExecutionSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionSpec = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("recommended_rule_key") is null) { _explicitNullValueRecommendedRuleKey = default!; _explicitNullProperties?.Remove("recommended_rule_key"); }
+            else if (parseNode.GetChildNode("recommended_rule_key") is { } nullNodeRecommendedRuleKey && nullNodeRecommendedRuleKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendedRuleKey = null;
             if (parseNode.GetChildNode("schedule_spec") is null) { _explicitNullValueScheduleSpec = default!; _explicitNullProperties?.Remove("schedule_spec"); }
             else if (parseNode.GetChildNode("schedule_spec") is { } nullNodeScheduleSpec && nullNodeScheduleSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleSpec = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
@@ -75,6 +77,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
+        /// <summary>The recommended_rule_key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RecommendedRuleKey { get => _explicitNullValueRecommendedRuleKey; set { _explicitNullValueRecommendedRuleKey = value; AdditionalData?.Remove("recommended_rule_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommended_rule_key"); else _explicitNullProperties?.Remove("recommended_rule_key"); } }
+        private string? _explicitNullValueRecommendedRuleKey = default!;
+#nullable restore
+#else
+        public string RecommendedRuleKey { get => _explicitNullValueRecommendedRuleKey; set { _explicitNullValueRecommendedRuleKey = value; AdditionalData?.Remove("recommended_rule_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommended_rule_key"); else _explicitNullProperties?.Remove("recommended_rule_key"); } }
+        private string _explicitNullValueRecommendedRuleKey = default!;
+#endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,6 +132,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "evaluation_spec", n => { EvaluationSpec = n.GetStringValue(); } },
                 { "execution_spec", n => { ExecutionSpec = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "recommended_rule_key", n => { RecommendedRuleKey = n.GetStringValue(); } },
                 { "schedule_spec", n => { ScheduleSpec = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "ui_creation_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUiCreationSource = default; _explicitNullProperties?.Remove("ui_creation_source"); AdditionalData["ui_creation_source"] = unknown; } else { UiCreationSource = parsed; AdditionalData.Remove("ui_creation_source"); } } },
@@ -136,6 +149,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("evaluation_spec", EvaluationSpec);
             writer.WriteStringValue("execution_spec", ExecutionSpec);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("recommended_rule_key", RecommendedRuleKey);
             writer.WriteStringValue("schedule_spec", ScheduleSpec);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryStatusEnumParam>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadrulesLibraryUiCreationSourceEnumParam>("ui_creation_source", UiCreationSource);

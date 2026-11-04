@@ -19,12 +19,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("adaccount_tasks") is null) { _explicitNullValueAdaccountTasks = default!; _explicitNullProperties?.Remove("adaccount_tasks"); }
             else if (parseNode.GetChildNode("adaccount_tasks") is { } nullNodeAdaccountTasks && nullNodeAdaccountTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdaccountTasks = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("offline_conversion_data_set_tasks") is null) { _explicitNullValueOfflineConversionDataSetTasks = default!; _explicitNullProperties?.Remove("offline_conversion_data_set_tasks"); }
             else if (parseNode.GetChildNode("offline_conversion_data_set_tasks") is { } nullNodeOfflineConversionDataSetTasks && nullNodeOfflineConversionDataSetTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfflineConversionDataSetTasks = null;
             if (parseNode.GetChildNode("page_tasks") is null) { _explicitNullValuePageTasks = default!; _explicitNullProperties?.Remove("page_tasks"); }
             else if (parseNode.GetChildNode("page_tasks") is { } nullNodePageTasks && nullNodePageTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageTasks = null;
             if (parseNode.GetChildNode("pixel_tasks") is null) { _explicitNullValuePixelTasks = default!; _explicitNullProperties?.Remove("pixel_tasks"); }
             else if (parseNode.GetChildNode("pixel_tasks") is { } nullNodePixelTasks && nullNodePixelTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PixelTasks = null;
+            if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
+            else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
             if (parseNode.GetChildNode("tasks") is null) { _explicitNullValueTasks = default!; _explicitNullProperties?.Remove("tasks"); }
             else if (parseNode.GetChildNode("tasks") is { } nullNodeTasks && nullNodeTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tasks = null;
             if (parseNode.GetChildNode("user") is null) { _explicitNullValueUser = default!; _explicitNullProperties?.Remove("user"); }
@@ -43,6 +47,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,6 +87,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string PixelTasks { get => _explicitNullValuePixelTasks; set { _explicitNullValuePixelTasks = value; AdditionalData?.Remove("pixel_tasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pixel_tasks"); else _explicitNullProperties?.Remove("pixel_tasks"); } }
         private string _explicitNullValuePixelTasks = default!;
 #endif
+        /// <summary>The role property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private string? _explicitNullValueRole = default!;
+#nullable restore
+#else
+        public string Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private string _explicitNullValueRole = default!;
+#endif
         /// <summary>The tasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,8 +108,15 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueTasks = default!;
 #endif
         /// <summary>The user property</summary>
-        public long? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
-        private long? _explicitNullValueUser = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private string? _explicitNullValueUser = default!;
+#nullable restore
+#else
+        public string User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private string _explicitNullValueUser = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdAssignedUsersXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -112,11 +143,13 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "adaccount_tasks", n => { AdaccountTasks = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
                 { "offline_conversion_data_set_tasks", n => { OfflineConversionDataSetTasks = n.GetStringValue(); } },
                 { "page_tasks", n => { PageTasks = n.GetStringValue(); } },
                 { "pixel_tasks", n => { PixelTasks = n.GetStringValue(); } },
+                { "role", n => { Role = n.GetStringValue(); } },
                 { "tasks", n => { Tasks = n.GetStringValue(); } },
-                { "user", n => { User = n.GetLongValue(); } },
+                { "user", n => { User = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -127,11 +160,13 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("adaccount_tasks", AdaccountTasks);
+            writer.WriteStringValue("fields", Fields);
             writer.WriteStringValue("offline_conversion_data_set_tasks", OfflineConversionDataSetTasks);
             writer.WriteStringValue("page_tasks", PageTasks);
             writer.WriteStringValue("pixel_tasks", PixelTasks);
+            writer.WriteStringValue("role", Role);
             writer.WriteStringValue("tasks", Tasks);
-            writer.WriteLongValue("user", User);
+            writer.WriteStringValue("user", User);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

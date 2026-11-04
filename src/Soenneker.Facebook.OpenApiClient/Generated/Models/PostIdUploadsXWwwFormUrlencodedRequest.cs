@@ -19,8 +19,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("fbe_external_business_id") is null) { _explicitNullValueFbeExternalBusinessId = default!; _explicitNullProperties?.Remove("fbe_external_business_id"); }
             else if (parseNode.GetChildNode("fbe_external_business_id") is { } nullNodeFbeExternalBusinessId && nullNodeFbeExternalBusinessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbeExternalBusinessId = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("file") is null) { _explicitNullValueFile = default!; _explicitNullProperties?.Remove("file"); }
+            else if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
             if (parseNode.GetChildNode("file_length") is null) { _explicitNullValueFileLength = default!; _explicitNullProperties?.Remove("file_length"); }
             else if (parseNode.GetChildNode("file_length") is { } nullNodeFileLength && nullNodeFileLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileLength = null;
+            if (parseNode.GetChildNode("file_meta") is null) { _explicitNullValueFileMeta = default!; _explicitNullProperties?.Remove("file_meta"); }
+            else if (parseNode.GetChildNode("file_meta") is { } nullNodeFileMeta && nullNodeFileMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileMeta = null;
             if (parseNode.GetChildNode("file_name") is null) { _explicitNullValueFileName = default!; _explicitNullProperties?.Remove("file_name"); }
             else if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
             if (parseNode.GetChildNode("file_type") is null) { _explicitNullValueFileType = default!; _explicitNullProperties?.Remove("file_type"); }
@@ -33,6 +39,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("update_only") is { } nullNodeUpdateOnly && nullNodeUpdateOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateOnly = null;
             if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
             else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("use_latest_available_file") is null) { _explicitNullValueUseLatestAvailableFile = default!; _explicitNullProperties?.Remove("use_latest_available_file"); }
+            else if (parseNode.GetChildNode("use_latest_available_file") is { } nullNodeUseLatestAvailableFile && nullNodeUseLatestAvailableFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseLatestAvailableFile = null;
             if (parseNode.GetChildNode("username") is null) { _explicitNullValueUsername = default!; _explicitNullProperties?.Remove("username"); }
             else if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
         }
@@ -49,9 +57,39 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string FbeExternalBusinessId { get => _explicitNullValueFbeExternalBusinessId; set { _explicitNullValueFbeExternalBusinessId = value; AdditionalData?.Remove("fbe_external_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fbe_external_business_id"); else _explicitNullProperties?.Remove("fbe_external_business_id"); } }
         private string _explicitNullValueFbeExternalBusinessId = default!;
 #endif
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
+        /// <summary>The file property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private string? _explicitNullValueFile = default!;
+#nullable restore
+#else
+        public string File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private string _explicitNullValueFile = default!;
+#endif
         /// <summary>The file_length property</summary>
         public long? FileLength { get => _explicitNullValueFileLength; set { _explicitNullValueFileLength = value; AdditionalData?.Remove("file_length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_length"); else _explicitNullProperties?.Remove("file_length"); } }
         private long? _explicitNullValueFileLength = default!;
+        /// <summary>The file_meta property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FileMeta { get => _explicitNullValueFileMeta; set { _explicitNullValueFileMeta = value; AdditionalData?.Remove("file_meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_meta"); else _explicitNullProperties?.Remove("file_meta"); } }
+        private string? _explicitNullValueFileMeta = default!;
+#nullable restore
+#else
+        public string FileMeta { get => _explicitNullValueFileMeta; set { _explicitNullValueFileMeta = value; AdditionalData?.Remove("file_meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_meta"); else _explicitNullProperties?.Remove("file_meta"); } }
+        private string _explicitNullValueFileMeta = default!;
+#endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,8 +124,15 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public global::Soenneker.Facebook.OpenApiClient.Models.ApplicationuploadsSessionTypeEnumParam? SessionType { get => _explicitNullValueSessionType; set { _explicitNullValueSessionType = value; AdditionalData?.Remove("session_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_type"); else _explicitNullProperties?.Remove("session_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.ApplicationuploadsSessionTypeEnumParam? _explicitNullValueSessionType = default!;
         /// <summary>The update_only property</summary>
-        public bool? UpdateOnly { get => _explicitNullValueUpdateOnly; set { _explicitNullValueUpdateOnly = value; AdditionalData?.Remove("update_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_only"); else _explicitNullProperties?.Remove("update_only"); } }
-        private bool? _explicitNullValueUpdateOnly = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UpdateOnly { get => _explicitNullValueUpdateOnly; set { _explicitNullValueUpdateOnly = value; AdditionalData?.Remove("update_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_only"); else _explicitNullProperties?.Remove("update_only"); } }
+        private string? _explicitNullValueUpdateOnly = default!;
+#nullable restore
+#else
+        public string UpdateOnly { get => _explicitNullValueUpdateOnly; set { _explicitNullValueUpdateOnly = value; AdditionalData?.Remove("update_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_only"); else _explicitNullProperties?.Remove("update_only"); } }
+        private string _explicitNullValueUpdateOnly = default!;
+#endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,6 +142,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
+#endif
+        /// <summary>The use_latest_available_file property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UseLatestAvailableFile { get => _explicitNullValueUseLatestAvailableFile; set { _explicitNullValueUseLatestAvailableFile = value; AdditionalData?.Remove("use_latest_available_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_latest_available_file"); else _explicitNullProperties?.Remove("use_latest_available_file"); } }
+        private string? _explicitNullValueUseLatestAvailableFile = default!;
+#nullable restore
+#else
+        public string UseLatestAvailableFile { get => _explicitNullValueUseLatestAvailableFile; set { _explicitNullValueUseLatestAvailableFile = value; AdditionalData?.Remove("use_latest_available_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_latest_available_file"); else _explicitNullProperties?.Remove("use_latest_available_file"); } }
+        private string _explicitNullValueUseLatestAvailableFile = default!;
 #endif
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,13 +189,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "fbe_external_business_id", n => { FbeExternalBusinessId = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
+                { "file", n => { File = n.GetStringValue(); } },
                 { "file_length", n => { FileLength = n.GetLongValue(); } },
+                { "file_meta", n => { FileMeta = n.GetStringValue(); } },
                 { "file_name", n => { FileName = n.GetStringValue(); } },
                 { "file_type", n => { FileType = n.GetStringValue(); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "session_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationuploadsSessionTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSessionType = default; _explicitNullProperties?.Remove("session_type"); AdditionalData["session_type"] = unknown; } else { SessionType = parsed; AdditionalData.Remove("session_type"); } } },
-                { "update_only", n => { UpdateOnly = n.GetBoolValue(); } },
+                { "update_only", n => { UpdateOnly = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
+                { "use_latest_available_file", n => { UseLatestAvailableFile = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
         }
@@ -152,13 +211,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("fbe_external_business_id", FbeExternalBusinessId);
+            writer.WriteStringValue("fields", Fields);
+            writer.WriteStringValue("file", File);
             writer.WriteLongValue("file_length", FileLength);
+            writer.WriteStringValue("file_meta", FileMeta);
             writer.WriteStringValue("file_name", FileName);
             writer.WriteStringValue("file_type", FileType);
             writer.WriteStringValue("password", Password);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ApplicationuploadsSessionTypeEnumParam>("session_type", SessionType);
-            writer.WriteBoolValue("update_only", UpdateOnly);
+            writer.WriteStringValue("update_only", UpdateOnly);
             writer.WriteStringValue("url", Url);
+            writer.WriteStringValue("use_latest_available_file", UseLatestAvailableFile);
             writer.WriteStringValue("username", Username);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

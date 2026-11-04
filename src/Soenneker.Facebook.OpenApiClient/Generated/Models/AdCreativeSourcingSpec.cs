@@ -51,6 +51,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("site_links_spec") is { } nullNodeSiteLinksSpec && nullNodeSiteLinksSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteLinksSpec = null;
             if (parseNode.GetChildNode("source_url") is null) { _explicitNullValueSourceUrl = default!; _explicitNullProperties?.Remove("source_url"); }
             else if (parseNode.GetChildNode("source_url") is { } nullNodeSourceUrl && nullNodeSourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceUrl = null;
+            if (parseNode.GetChildNode("ugc_spec") is null) { _explicitNullValueUgcSpec = default!; _explicitNullProperties?.Remove("ugc_spec"); }
+            else if (parseNode.GetChildNode("ugc_spec") is { } nullNodeUgcSpec && nullNodeUgcSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UgcSpec = null;
             if (parseNode.GetChildNode("website_media_spec") is null) { _explicitNullValueWebsiteMediaSpec = default!; _explicitNullProperties?.Remove("website_media_spec"); }
             else if (parseNode.GetChildNode("website_media_spec") is { } nullNodeWebsiteMediaSpec && nullNodeWebsiteMediaSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebsiteMediaSpec = null;
             if (parseNode.GetChildNode("website_summary_spec") is null) { _explicitNullValueWebsiteSummarySpec = default!; _explicitNullProperties?.Remove("website_summary_spec"); }
@@ -222,6 +224,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string SourceUrl { get => _explicitNullValueSourceUrl; set { _explicitNullValueSourceUrl = value; AdditionalData?.Remove("source_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_url"); else _explicitNullProperties?.Remove("source_url"); } }
         private string _explicitNullValueSourceUrl = default!;
 #endif
+        /// <summary>The ugc_spec property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty? UgcSpec { get => _explicitNullValueUgcSpec; set { _explicitNullValueUgcSpec = value; AdditionalData?.Remove("ugc_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ugc_spec"); else _explicitNullProperties?.Remove("ugc_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty? _explicitNullValueUgcSpec = default!;
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty UgcSpec { get => _explicitNullValueUgcSpec; set { _explicitNullValueUgcSpec = value; AdditionalData?.Remove("ugc_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ugc_spec"); else _explicitNullProperties?.Remove("ugc_spec"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty _explicitNullValueUgcSpec = default!;
+#endif
         /// <summary>The website_media_spec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -284,6 +296,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "site_links_data_consented", n => { SiteLinksDataConsented = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecSiteLinksDataConsentedProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecSiteLinksDataConsentedProperty.CreateFromDiscriminatorValue); } },
                 { "site_links_spec", n => { SiteLinksSpec = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "source_url", n => { SourceUrl = n.GetStringValue(); } },
+                { "ugc_spec", n => { UgcSpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty.CreateFromDiscriminatorValue); } },
                 { "website_media_spec", n => { WebsiteMediaSpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecWebsiteMediaSpecProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecWebsiteMediaSpecProperty.CreateFromDiscriminatorValue); } },
                 { "website_summary_spec", n => { WebsiteSummarySpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecWebsiteSummarySpecProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecWebsiteSummarySpecProperty.CreateFromDiscriminatorValue); } },
             };
@@ -312,6 +325,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecSiteLinksDataConsentedProperty>("site_links_data_consented", SiteLinksDataConsented);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSiteLinksSpec>("site_links_spec", SiteLinksSpec);
             writer.WriteStringValue("source_url", SourceUrl);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecUgcSpecProperty>("ugc_spec", UgcSpec);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecWebsiteMediaSpecProperty>("website_media_spec", WebsiteMediaSpec);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeSourcingSpecWebsiteSummarySpecProperty>("website_summary_spec", WebsiteSummarySpec);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

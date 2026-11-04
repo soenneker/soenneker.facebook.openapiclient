@@ -53,6 +53,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("engagement_audience") is { } nullNodeEngagementAudience && nullNodeEngagementAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagementAudience = null;
             if (parseNode.GetChildNode("execution_options") is null) { _explicitNullValueExecutionOptions = default!; _explicitNullProperties?.Remove("execution_options"); }
             else if (parseNode.GetChildNode("execution_options") is { } nullNodeExecutionOptions && nullNodeExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionOptions = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("include_demolink_hashes") is null) { _explicitNullValueIncludeDemolinkHashes = default!; _explicitNullProperties?.Remove("include_demolink_hashes"); }
             else if (parseNode.GetChildNode("include_demolink_hashes") is { } nullNodeIncludeDemolinkHashes && nullNodeIncludeDemolinkHashes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeDemolinkHashes = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
@@ -207,6 +209,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string ExecutionOptions { get => _explicitNullValueExecutionOptions; set { _explicitNullValueExecutionOptions = value; AdditionalData?.Remove("execution_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution_options"); else _explicitNullProperties?.Remove("execution_options"); } }
         private string _explicitNullValueExecutionOptions = default!;
 #endif
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
         /// <summary>The include_demolink_hashes property</summary>
         public bool? IncludeDemolinkHashes { get => _explicitNullValueIncludeDemolinkHashes; set { _explicitNullValueIncludeDemolinkHashes = value; AdditionalData?.Remove("include_demolink_hashes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_demolink_hashes"); else _explicitNullProperties?.Remove("include_demolink_hashes"); } }
         private bool? _explicitNullValueIncludeDemolinkHashes = default!;
@@ -289,6 +301,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "draft_adgroup_id", n => { DraftAdgroupId = n.GetStringValue(); } },
                 { "engagement_audience", n => { EngagementAudience = n.GetBoolValue(); } },
                 { "execution_options", n => { ExecutionOptions = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
                 { "include_demolink_hashes", n => { IncludeDemolinkHashes = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetLongValue(); } },
@@ -322,6 +335,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("draft_adgroup_id", DraftAdgroupId);
             writer.WriteBoolValue("engagement_audience", EngagementAudience);
             writer.WriteStringValue("execution_options", ExecutionOptions);
+            writer.WriteStringValue("fields", Fields);
             writer.WriteBoolValue("include_demolink_hashes", IncludeDemolinkHashes);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("priority", Priority);

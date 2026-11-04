@@ -30,12 +30,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat>? _explicitNullValueData = default!;
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat> _explicitNullValueData = default!;
+        public List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat>(global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponsePaging>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponsePaging.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseSummary>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseSummary.CreateFromDiscriminatorValue); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.ProductEventStat>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItem>("data", Data);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponsePaging>("paging", Paging);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseSummary>("summary", Summary);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

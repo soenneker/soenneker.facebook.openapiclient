@@ -179,6 +179,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("status_message") is null) { _explicitNullValueStatusMessage = default!; _explicitNullProperties?.Remove("status_message"); }
+            else if (parseNode.GetChildNode("status_message") is { } nullNodeStatusMessage && nullNodeStatusMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMessage = null;
             if (parseNode.GetChildNode("story_event_type") is null) { _explicitNullValueStoryEventType = default!; _explicitNullProperties?.Remove("story_event_type"); }
             else if (parseNode.GetChildNode("story_event_type") is { } nullNodeStoryEventType && nullNodeStoryEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoryEventType = null;
             if (parseNode.GetChildNode("target_cpm") is null) { _explicitNullValueTargetCpm = default!; _explicitNullProperties?.Remove("target_cpm"); }
@@ -676,6 +678,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The status property</summary>
         public long? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private long? _explicitNullValueStatus = default!;
+        /// <summary>The status_message property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StatusMessage { get => _explicitNullValueStatusMessage; set { _explicitNullValueStatusMessage = value; AdditionalData?.Remove("status_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_message"); else _explicitNullProperties?.Remove("status_message"); } }
+        private string? _explicitNullValueStatusMessage = default!;
+#nullable restore
+#else
+        public string StatusMessage { get => _explicitNullValueStatusMessage; set { _explicitNullValueStatusMessage = value; AdditionalData?.Remove("status_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_message"); else _explicitNullProperties?.Remove("status_message"); } }
+        private string _explicitNullValueStatusMessage = default!;
+#endif
         /// <summary>The story_event_type property</summary>
         public long? StoryEventType { get => _explicitNullValueStoryEventType; set { _explicitNullValueStoryEventType = value; AdditionalData?.Remove("story_event_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("story_event_type"); else _explicitNullProperties?.Remove("story_event_type"); } }
         private long? _explicitNullValueStoryEventType = default!;
@@ -849,6 +861,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "reservation_status", n => { ReservationStatus = n.GetLongValue(); } },
                 { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetLongValue(); } },
+                { "status_message", n => { StatusMessage = n.GetStringValue(); } },
                 { "story_event_type", n => { StoryEventType = n.GetLongValue(); } },
                 { "target_cpm", n => { TargetCpm = n.GetLongValue(); } },
                 { "target_frequency", n => { TargetFrequency = n.GetLongValue(); } },
@@ -952,6 +965,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("reservation_status", ReservationStatus);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);
             writer.WriteLongValue("status", Status);
+            writer.WriteStringValue("status_message", StatusMessage);
             writer.WriteLongValue("story_event_type", StoryEventType);
             writer.WriteLongValue("target_cpm", TargetCpm);
             writer.WriteLongValue("target_frequency", TargetFrequency);

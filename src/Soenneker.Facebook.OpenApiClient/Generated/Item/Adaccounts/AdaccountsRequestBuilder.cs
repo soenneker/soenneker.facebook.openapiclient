@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adaccounts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdaccountsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adaccounts{?adaccounts*,after*,before*,business*,fields*,filtering*,limit*,permissions*,sort*,summary*}", pathParameters)
+        public AdaccountsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adaccounts{?adaccounts*,after*,before*,business*,date_format*,fields*,filtering*,limit*,permissions*,sort*,summary*,timezone*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adaccounts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AdaccountsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adaccounts{?adaccounts*,after*,before*,business*,fields*,filtering*,limit*,permissions*,sort*,summary*}", rawUrl)
+        public AdaccountsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/adaccounts{?adaccounts*,after*,before*,business*,date_format*,fields*,filtering*,limit*,permissions*,sort*,summary*,timezone*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdAdaccounts200Response"/></returns>
@@ -221,6 +221,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adaccounts
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string? DateFormat { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string DateFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("fields")]
             public string? Fields { get; set; }
             #pragma warning restore CS1591
@@ -285,6 +298,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Adaccounts
             #pragma warning disable CS1591
             [QueryParameter("summary")]
             public string Summary { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("timezone")]
+            public string? Timezone { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("timezone")]
+            public string Timezone { get; set; }
             #pragma warning restore CS1591
 #endif
         }

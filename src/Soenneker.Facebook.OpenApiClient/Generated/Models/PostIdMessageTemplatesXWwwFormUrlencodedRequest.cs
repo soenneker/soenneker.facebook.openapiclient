@@ -53,6 +53,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("parameter_format") is { } nullNodeParameterFormat && nullNodeParameterFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParameterFormat = null;
             if (parseNode.GetChildNode("product_set_id") is null) { _explicitNullValueProductSetId = default!; _explicitNullProperties?.Remove("product_set_id"); }
             else if (parseNode.GetChildNode("product_set_id") is { } nullNodeProductSetId && nullNodeProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSetId = null;
+            if (parseNode.GetChildNode("routing_entrypoint") is null) { _explicitNullValueRoutingEntrypoint = default!; _explicitNullProperties?.Remove("routing_entrypoint"); }
+            else if (parseNode.GetChildNode("routing_entrypoint") is { } nullNodeRoutingEntrypoint && nullNodeRoutingEntrypoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingEntrypoint = null;
             if (parseNode.GetChildNode("send_type") is null) { _explicitNullValueSendType = default!; _explicitNullProperties?.Remove("send_type"); }
             else if (parseNode.GetChildNode("send_type") is { } nullNodeSendType && nullNodeSendType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendType = null;
             if (parseNode.GetChildNode("source_template_id") is null) { _explicitNullValueSourceTemplateId = default!; _explicitNullProperties?.Remove("source_template_id"); }
@@ -208,6 +210,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string ProductSetId { get => _explicitNullValueProductSetId; set { _explicitNullValueProductSetId = value; AdditionalData?.Remove("product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_id"); else _explicitNullProperties?.Remove("product_set_id"); } }
         private string _explicitNullValueProductSetId = default!;
 #endif
+        /// <summary>The routing_entrypoint property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesRoutingEntrypointEnumParam? RoutingEntrypoint { get => _explicitNullValueRoutingEntrypoint; set { _explicitNullValueRoutingEntrypoint = value; AdditionalData?.Remove("routing_entrypoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routing_entrypoint"); else _explicitNullProperties?.Remove("routing_entrypoint"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesRoutingEntrypointEnumParam? _explicitNullValueRoutingEntrypoint = default!;
         /// <summary>The send_type property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesSendTypeEnumParam? SendType { get => _explicitNullValueSendType; set { _explicitNullValueSendType = value; AdditionalData?.Remove("send_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_type"); else _explicitNullProperties?.Remove("send_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesSendTypeEnumParam? _explicitNullValueSendType = default!;
@@ -260,6 +265,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "optimization_spec", n => { OptimizationSpec = n.GetStringValue(); } },
                 { "parameter_format", n => { ParameterFormat = n.GetStringValue(); } },
                 { "product_set_id", n => { ProductSetId = n.GetStringValue(); } },
+                { "routing_entrypoint", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesRoutingEntrypointEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRoutingEntrypoint = default; _explicitNullProperties?.Remove("routing_entrypoint"); AdditionalData["routing_entrypoint"] = unknown; } else { RoutingEntrypoint = parsed; AdditionalData.Remove("routing_entrypoint"); } } },
                 { "send_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesSendTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSendType = default; _explicitNullProperties?.Remove("send_type"); AdditionalData["send_type"] = unknown; } else { SendType = parsed; AdditionalData.Remove("send_type"); } } },
                 { "source_template_id", n => { SourceTemplateId = n.GetLongValue(); } },
                 { "sub_category", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesSubCategoryEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubCategory = default; _explicitNullProperties?.Remove("sub_category"); AdditionalData["sub_category"] = unknown; } else { SubCategory = parsed; AdditionalData.Remove("sub_category"); } } },
@@ -290,6 +296,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("optimization_spec", OptimizationSpec);
             writer.WriteStringValue("parameter_format", ParameterFormat);
             writer.WriteStringValue("product_set_id", ProductSetId);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesRoutingEntrypointEnumParam>("routing_entrypoint", RoutingEntrypoint);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesSendTypeEnumParam>("send_type", SendType);
             writer.WriteLongValue("source_template_id", SourceTemplateId);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsappbusinessaccountmessageTemplatesSubCategoryEnumParam>("sub_category", SubCategory);

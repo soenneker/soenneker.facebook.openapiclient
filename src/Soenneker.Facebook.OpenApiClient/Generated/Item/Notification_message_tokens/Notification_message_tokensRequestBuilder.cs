@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Notification_message_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/notification_message_tokens{?after*,before*,custom_audience_ids*,do_not_return_duplicates*,fields*,has_received_marketing_message*,limit*,opt_in_source*,since*,subscriber_tag_ids*,until*}", pathParameters)
+        public Notification_message_tokensRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/notification_message_tokens{?after*,before*,custom_audience_ids*,do_not_return_duplicates*,fields*,is_previously_messaged*,limit*,opt_in_source*,since*,subscriber_tag_ids*,until*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Notification_message_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/notification_message_tokens{?after*,before*,custom_audience_ids*,do_not_return_duplicates*,fields*,has_received_marketing_message*,limit*,opt_in_source*,since*,subscriber_tag_ids*,until*}", rawUrl)
+        public Notification_message_tokensRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/notification_message_tokens{?after*,before*,custom_audience_ids*,do_not_return_duplicates*,fields*,is_previously_messaged*,limit*,opt_in_source*,since*,subscriber_tag_ids*,until*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdNotificationMessageTokens200Response"/></returns>
@@ -140,8 +140,8 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591
-            [QueryParameter("has_received_marketing_message")]
-            public bool? HasReceivedMarketingMessage { get; set; }
+            [QueryParameter("is_previously_messaged")]
+            public bool? IsPreviouslyMessaged { get; set; }
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("limit")]

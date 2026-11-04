@@ -61,6 +61,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("num_invalid_items") is { } nullNodeNumInvalidItems && nullNodeNumInvalidItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumInvalidItems = null;
             if (parseNode.GetChildNode("num_persisted_items") is null) { _explicitNullValueNumPersistedItems = default!; _explicitNullProperties?.Remove("num_persisted_items"); }
             else if (parseNode.GetChildNode("num_persisted_items") is { } nullNodeNumPersistedItems && nullNodeNumPersistedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumPersistedItems = null;
+            if (parseNode.GetChildNode("paging") is null) { _explicitNullValuePaging = default!; _explicitNullProperties?.Remove("paging"); }
+            else if (parseNode.GetChildNode("paging") is { } nullNodePaging && nullNodePaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paging = null;
             if (parseNode.GetChildNode("start_time") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("start_time"); }
             else if (parseNode.GetChildNode("start_time") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
             if (parseNode.GetChildNode("upload_tag") is null) { _explicitNullValueUploadTag = default!; _explicitNullProperties?.Remove("upload_tag"); }
@@ -176,6 +178,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The num_persisted_items property</summary>
         public long? NumPersistedItems { get => _explicitNullValueNumPersistedItems; set { _explicitNullValueNumPersistedItems = value; AdditionalData?.Remove("num_persisted_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_persisted_items"); else _explicitNullProperties?.Remove("num_persisted_items"); } }
         private long? _explicitNullValueNumPersistedItems = default!;
+        /// <summary>The paging property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging? _explicitNullValuePaging = default!;
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging _explicitNullValuePaging = default!;
+#endif
         /// <summary>The start_time property</summary>
         public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time"); else _explicitNullProperties?.Remove("start_time"); } }
         private DateTimeOffset? _explicitNullValueStartTime = default!;
@@ -252,6 +264,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "num_detected_items", n => { NumDetectedItems = n.GetLongValue(); } },
                 { "num_invalid_items", n => { NumInvalidItems = n.GetLongValue(); } },
                 { "num_persisted_items", n => { NumPersistedItems = n.GetLongValue(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging.CreateFromDiscriminatorValue); } },
                 { "start_time", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "upload_tag", n => { UploadTag = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -288,6 +301,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("num_detected_items", NumDetectedItems);
             writer.WriteLongValue("num_invalid_items", NumInvalidItems);
             writer.WriteLongValue("num_persisted_items", NumPersistedItems);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200ResponseDataItemPaging>("paging", Paging);
             writer.WriteDateTimeOffsetValue("start_time", StartTime);
             writer.WriteStringValue("upload_tag", UploadTag);
             writer.WriteStringValue("url", Url);

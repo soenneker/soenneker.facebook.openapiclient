@@ -17,8 +17,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("ai_disclosure") is null) { _explicitNullValueAiDisclosure = default!; _explicitNullProperties?.Remove("ai_disclosure"); }
+            else if (parseNode.GetChildNode("ai_disclosure") is { } nullNodeAiDisclosure && nullNodeAiDisclosure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiDisclosure = null;
             if (parseNode.GetChildNode("bot_message_payload_elements") is null) { _explicitNullValueBotMessagePayloadElements = default!; _explicitNullProperties?.Remove("bot_message_payload_elements"); }
             else if (parseNode.GetChildNode("bot_message_payload_elements") is { } nullNodeBotMessagePayloadElements && nullNodeBotMessagePayloadElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotMessagePayloadElements = null;
+            if (parseNode.GetChildNode("button_title") is null) { _explicitNullValueButtonTitle = default!; _explicitNullProperties?.Remove("button_title"); }
+            else if (parseNode.GetChildNode("button_title") is { } nullNodeButtonTitle && nullNodeButtonTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ButtonTitle = null;
             if (parseNode.GetChildNode("filtering") is null) { _explicitNullValueFiltering = default!; _explicitNullProperties?.Remove("filtering"); }
             else if (parseNode.GetChildNode("filtering") is { } nullNodeFiltering && nullNodeFiltering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filtering = null;
             if (parseNode.GetChildNode("game_metadata") is null) { _explicitNullValueGameMetadata = default!; _explicitNullProperties?.Remove("game_metadata"); }
@@ -31,6 +35,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
             if (parseNode.GetChildNode("notification_content_id") is null) { _explicitNullValueNotificationContentId = default!; _explicitNullProperties?.Remove("notification_content_id"); }
             else if (parseNode.GetChildNode("notification_content_id") is { } nullNodeNotificationContentId && nullNodeNotificationContentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationContentId = null;
+            if (parseNode.GetChildNode("notification_contents") is null) { _explicitNullValueNotificationContents = default!; _explicitNullProperties?.Remove("notification_contents"); }
+            else if (parseNode.GetChildNode("notification_contents") is { } nullNodeNotificationContents && nullNodeNotificationContents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationContents = null;
             if (parseNode.GetChildNode("notif_ids") is null) { _explicitNullValueNotifIds = default!; _explicitNullProperties?.Remove("notif_ids"); }
             else if (parseNode.GetChildNode("notif_ids") is { } nullNodeNotifIds && nullNodeNotifIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifIds = null;
             if (parseNode.GetChildNode("payload") is null) { _explicitNullValuePayload = default!; _explicitNullProperties?.Remove("payload"); }
@@ -51,6 +57,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The ai_disclosure property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam? AiDisclosure { get => _explicitNullValueAiDisclosure; set { _explicitNullValueAiDisclosure = value; AdditionalData?.Remove("ai_disclosure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_disclosure"); else _explicitNullProperties?.Remove("ai_disclosure"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam? _explicitNullValueAiDisclosure = default!;
         /// <summary>The bot_message_payload_elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,6 +69,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string BotMessagePayloadElements { get => _explicitNullValueBotMessagePayloadElements; set { _explicitNullValueBotMessagePayloadElements = value; AdditionalData?.Remove("bot_message_payload_elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot_message_payload_elements"); else _explicitNullProperties?.Remove("bot_message_payload_elements"); } }
         private string _explicitNullValueBotMessagePayloadElements = default!;
+#endif
+        /// <summary>The button_title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ButtonTitle { get => _explicitNullValueButtonTitle; set { _explicitNullValueButtonTitle = value; AdditionalData?.Remove("button_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("button_title"); else _explicitNullProperties?.Remove("button_title"); } }
+        private string? _explicitNullValueButtonTitle = default!;
+#nullable restore
+#else
+        public string ButtonTitle { get => _explicitNullValueButtonTitle; set { _explicitNullValueButtonTitle = value; AdditionalData?.Remove("button_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("button_title"); else _explicitNullProperties?.Remove("button_title"); } }
+        private string _explicitNullValueButtonTitle = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,6 +133,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The notification_content_id property</summary>
         public long? NotificationContentId { get => _explicitNullValueNotificationContentId; set { _explicitNullValueNotificationContentId = value; AdditionalData?.Remove("notification_content_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_content_id"); else _explicitNullProperties?.Remove("notification_content_id"); } }
         private long? _explicitNullValueNotificationContentId = default!;
+        /// <summary>A JSON-encoded value.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NotificationContents { get => _explicitNullValueNotificationContents; set { _explicitNullValueNotificationContents = value; AdditionalData?.Remove("notification_contents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_contents"); else _explicitNullProperties?.Remove("notification_contents"); } }
+        private string? _explicitNullValueNotificationContents = default!;
+#nullable restore
+#else
+        public string NotificationContents { get => _explicitNullValueNotificationContents; set { _explicitNullValueNotificationContents = value; AdditionalData?.Remove("notification_contents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_contents"); else _explicitNullProperties?.Remove("notification_contents"); } }
+        private string _explicitNullValueNotificationContents = default!;
+#endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,7 +220,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "ai_disclosure", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAiDisclosure = default; _explicitNullProperties?.Remove("ai_disclosure"); AdditionalData["ai_disclosure"] = unknown; } else { AiDisclosure = parsed; AdditionalData.Remove("ai_disclosure"); } } },
                 { "bot_message_payload_elements", n => { BotMessagePayloadElements = n.GetStringValue(); } },
+                { "button_title", n => { ButtonTitle = n.GetStringValue(); } },
                 { "filtering", n => { Filtering = n.GetStringValue(); } },
                 { "game_metadata", n => { GameMetadata = n.GetStringValue(); } },
                 { "href", n => { Href = n.GetStringValue(); } },
@@ -199,6 +230,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "notif_ids", n => { NotifIds = n.GetStringValue(); } },
                 { "notification_content_id", n => { NotificationContentId = n.GetLongValue(); } },
+                { "notification_contents", n => { NotificationContents = n.GetStringValue(); } },
                 { "payload", n => { Payload = n.GetStringValue(); } },
                 { "read", n => { Read = n.GetBoolValue(); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
@@ -215,13 +247,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam>("ai_disclosure", AiDisclosure);
             writer.WriteStringValue("bot_message_payload_elements", BotMessagePayloadElements);
+            writer.WriteStringValue("button_title", ButtonTitle);
             writer.WriteStringValue("filtering", Filtering);
             writer.WriteStringValue("game_metadata", GameMetadata);
             writer.WriteStringValue("href", Href);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("message", Message);
             writer.WriteLongValue("notification_content_id", NotificationContentId);
+            writer.WriteStringValue("notification_contents", NotificationContents);
             writer.WriteStringValue("notif_ids", NotifIds);
             writer.WriteStringValue("payload", Payload);
             writer.WriteBoolValue("read", Read);

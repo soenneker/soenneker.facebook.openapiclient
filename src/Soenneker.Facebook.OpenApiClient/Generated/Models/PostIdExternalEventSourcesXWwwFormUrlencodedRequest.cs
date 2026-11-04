@@ -19,11 +19,13 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("external_event_sources") is null) { _explicitNullValueExternalEventSources = default!; _explicitNullProperties?.Remove("external_event_sources"); }
             else if (parseNode.GetChildNode("external_event_sources") is { } nullNodeExternalEventSources && nullNodeExternalEventSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalEventSources = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The external_event_sources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalEventSources { get => _explicitNullValueExternalEventSources; set { _explicitNullValueExternalEventSources = value; AdditionalData?.Remove("external_event_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_event_sources"); else _explicitNullProperties?.Remove("external_event_sources"); } }
@@ -32,6 +34,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string ExternalEventSources { get => _explicitNullValueExternalEventSources; set { _explicitNullValueExternalEventSources = value; AdditionalData?.Remove("external_event_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_event_sources"); else _explicitNullProperties?.Remove("external_event_sources"); } }
         private string _explicitNullValueExternalEventSources = default!;
+#endif
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdExternalEventSourcesXWwwFormUrlencodedRequest"/> and sets the default values.
@@ -59,6 +71,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "external_event_sources", n => { ExternalEventSources = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,6 +82,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("external_event_sources", ExternalEventSources);
+            writer.WriteStringValue("fields", Fields);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

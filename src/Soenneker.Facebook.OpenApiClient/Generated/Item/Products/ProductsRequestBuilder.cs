@@ -180,10 +180,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Products
             public string DedupeItemsByGroup { get; set; }
             #pragma warning restore CS1591
 #endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("display_format")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductSetProductsGetDisplayFormatEnumParam? DisplayFormat { get; set; }
+            public string? DisplayFormat { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("display_format")]
+            public string DisplayFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591

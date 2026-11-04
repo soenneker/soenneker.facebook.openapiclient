@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/activities{?add_children*,after*,before*,business_id*,category*,data_source*,display_format*,extra_oids*,fields*,limit*,oid*,since*,summary*,uid*,until*}", pathParameters)
+        public ActivitiesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/activities{?add_children*,after*,before*,business_id*,category*,data_source*,date_format*,display_format*,end_time*,event_type*,extra_oids*,fields*,limit*,oid*,since*,start_time*,summary*,uid*,until*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/activities{?add_children*,after*,before*,business_id*,category*,data_source*,display_format*,extra_oids*,fields*,limit*,oid*,since*,summary*,uid*,until*}", rawUrl)
+        public ActivitiesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/activities{?add_children*,after*,before*,business_id*,category*,data_source*,date_format*,display_format*,end_time*,event_type*,extra_oids*,fields*,limit*,oid*,since*,start_time*,summary*,uid*,until*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdActivities200Response"/></returns>
@@ -52,6 +52,26 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
                 { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.GetIdActivitiesDefaultResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.GetIdActivities200Response>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.GetIdActivities200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivities200ResponseSchema"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivitiesDefaultResponse">When receiving a 4XX or 5XX status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivities200ResponseSchema?> HeadAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Activities.ActivitiesRequestBuilder.ActivitiesRequestBuilderHeadQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivities200ResponseSchema> HeadAsync(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Activities.ActivitiesRequestBuilder.ActivitiesRequestBuilderHeadQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToHeadRequestInformation(requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivitiesDefaultResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivities200ResponseSchema>(requestInfo, global::Soenneker.Facebook.OpenApiClient.Models.HeadIdActivities200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdActivities200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -87,6 +107,22 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
+        }
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToHeadRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Activities.ActivitiesRequestBuilder.ActivitiesRequestBuilderHeadQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToHeadRequestInformation(Action<RequestConfiguration<global::Soenneker.Facebook.OpenApiClient.Item.Activities.ActivitiesRequestBuilder.ActivitiesRequestBuilderHeadQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.HEAD, "{+baseurl}/{nodeId}/activities?business={business}{&date_format*,end_time*,event_type*,fields*,start_time*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -256,6 +292,72 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Activities
             [QueryParameter("until")]
             public DateTimeOffset? Until { get; set; }
             #pragma warning restore CS1591
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        #pragma warning disable CS1591
+        public partial class ActivitiesRequestBuilderHeadQueryParameters 
+        #pragma warning restore CS1591
+        {
+            #pragma warning disable CS1591
+            [QueryParameter("business")]
+            public long? Business { get; set; }
+            #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string? DateFormat { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string DateFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("end_time")]
+            public string? EndTime { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("end_time")]
+            public string EndTime { get; set; }
+            #pragma warning restore CS1591
+#endif
+            #pragma warning disable CS1591
+            [QueryParameter("event_type")]
+            public global::Soenneker.Facebook.OpenApiClient.Models.AdsPixelActivitiesHeadEventTypeEnumParam? EventType { get; set; }
+            #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("fields")]
+            public string? Fields { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("fields")]
+            public string Fields { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("start_time")]
+            public string? StartTime { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("start_time")]
+            public string StartTime { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

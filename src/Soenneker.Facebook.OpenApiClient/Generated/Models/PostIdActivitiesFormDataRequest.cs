@@ -55,6 +55,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("custom_events") is { } nullNodeCustomEvents && nullNodeCustomEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomEvents = null;
             if (parseNode.GetChildNode("custom_events_file") is null) { _explicitNullValueCustomEventsFile = default!; _explicitNullProperties?.Remove("custom_events_file"); }
             else if (parseNode.GetChildNode("custom_events_file") is { } nullNodeCustomEventsFile && nullNodeCustomEventsFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomEventsFile = null;
+            if (parseNode.GetChildNode("custom_vendor_id") is null) { _explicitNullValueCustomVendorId = default!; _explicitNullProperties?.Remove("custom_vendor_id"); }
+            else if (parseNode.GetChildNode("custom_vendor_id") is { } nullNodeCustomVendorId && nullNodeCustomVendorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomVendorId = null;
             if (parseNode.GetChildNode("data_processing_options") is null) { _explicitNullValueDataProcessingOptions = default!; _explicitNullProperties?.Remove("data_processing_options"); }
             else if (parseNode.GetChildNode("data_processing_options") is { } nullNodeDataProcessingOptions && nullNodeDataProcessingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataProcessingOptions = null;
             if (parseNode.GetChildNode("data_processing_options_country") is null) { _explicitNullValueDataProcessingOptionsCountry = default!; _explicitNullProperties?.Remove("data_processing_options_country"); }
@@ -279,6 +281,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public byte[] CustomEventsFile { get => _explicitNullValueCustomEventsFile; set { _explicitNullValueCustomEventsFile = value; AdditionalData?.Remove("custom_events_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_events_file"); else _explicitNullProperties?.Remove("custom_events_file"); } }
         private byte[] _explicitNullValueCustomEventsFile = default!;
+#endif
+        /// <summary>The custom_vendor_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomVendorId { get => _explicitNullValueCustomVendorId; set { _explicitNullValueCustomVendorId = value; AdditionalData?.Remove("custom_vendor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_vendor_id"); else _explicitNullProperties?.Remove("custom_vendor_id"); } }
+        private string? _explicitNullValueCustomVendorId = default!;
+#nullable restore
+#else
+        public string CustomVendorId { get => _explicitNullValueCustomVendorId; set { _explicitNullValueCustomVendorId = value; AdditionalData?.Remove("custom_vendor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_vendor_id"); else _explicitNullProperties?.Remove("custom_vendor_id"); } }
+        private string _explicitNullValueCustomVendorId = default!;
 #endif
         /// <summary>The data_processing_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -549,6 +561,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "consider_views", n => { ConsiderViews = n.GetBoolValue(); } },
                 { "custom_events", n => { CustomEvents = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PostIdActivitiesFormDataRequestCustomEventsItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.PostIdActivitiesFormDataRequestCustomEventsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_events_file", n => { CustomEventsFile = n.GetByteArrayValue(); } },
+                { "custom_vendor_id", n => { CustomVendorId = n.GetStringValue(); } },
                 { "data_processing_options", n => { DataProcessingOptions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "data_processing_options_country", n => { DataProcessingOptionsCountry = n.GetLongValue(); } },
                 { "data_processing_options_state", n => { DataProcessingOptionsState = n.GetLongValue(); } },
@@ -610,6 +623,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("consider_views", ConsiderViews);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PostIdActivitiesFormDataRequestCustomEventsItemProperty>("custom_events", CustomEvents);
             writer.WriteByteArrayValue("custom_events_file", CustomEventsFile);
+            writer.WriteStringValue("custom_vendor_id", CustomVendorId);
             writer.WriteCollectionOfPrimitiveValues<string>("data_processing_options", DataProcessingOptions);
             writer.WriteLongValue("data_processing_options_country", DataProcessingOptionsCountry);
             writer.WriteLongValue("data_processing_options_state", DataProcessingOptionsState);

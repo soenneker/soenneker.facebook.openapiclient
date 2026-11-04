@@ -67,6 +67,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("primary_funding_id") is { } nullNodePrimaryFundingId && nullNodePrimaryFundingId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryFundingId = null;
             if (parseNode.GetChildNode("purchase_order_number") is null) { _explicitNullValuePurchaseOrderNumber = default!; _explicitNullProperties?.Remove("purchase_order_number"); }
             else if (parseNode.GetChildNode("purchase_order_number") is { } nullNodePurchaseOrderNumber && nullNodePurchaseOrderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseOrderNumber = null;
+            if (parseNode.GetChildNode("service_pricing_policy") is null) { _explicitNullValueServicePricingPolicy = default!; _explicitNullProperties?.Remove("service_pricing_policy"); }
+            else if (parseNode.GetChildNode("service_pricing_policy") is { } nullNodeServicePricingPolicy && nullNodeServicePricingPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServicePricingPolicy = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
             if (parseNode.GetChildNode("template_auto_archival_enabled") is null) { _explicitNullValueTemplateAutoArchivalEnabled = default!; _explicitNullProperties?.Remove("template_auto_archival_enabled"); }
@@ -296,6 +298,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; AdditionalData?.Remove("purchase_order_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_order_number"); else _explicitNullProperties?.Remove("purchase_order_number"); } }
         private string _explicitNullValuePurchaseOrderNumber = default!;
 #endif
+        /// <summary>The service_pricing_policy property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ServicePricingPolicy { get => _explicitNullValueServicePricingPolicy; set { _explicitNullValueServicePricingPolicy = value; AdditionalData?.Remove("service_pricing_policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_pricing_policy"); else _explicitNullProperties?.Remove("service_pricing_policy"); } }
+        private string? _explicitNullValueServicePricingPolicy = default!;
+#nullable restore
+#else
+        public string ServicePricingPolicy { get => _explicitNullValueServicePricingPolicy; set { _explicitNullValueServicePricingPolicy = value; AdditionalData?.Remove("service_pricing_policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_pricing_policy"); else _explicitNullProperties?.Remove("service_pricing_policy"); } }
+        private string _explicitNullValueServicePricingPolicy = default!;
+#endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -375,6 +387,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "primary_business_location", n => { PrimaryBusinessLocation = n.GetStringValue(); } },
                 { "primary_funding_id", n => { PrimaryFundingId = n.GetStringValue(); } },
                 { "purchase_order_number", n => { PurchaseOrderNumber = n.GetStringValue(); } },
+                { "service_pricing_policy", n => { ServicePricingPolicy = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "template_auto_archival_enabled", n => { TemplateAutoArchivalEnabled = n.GetBoolValue(); } },
                 { "timezone_id", n => { TimezoneId = n.GetStringValue(); } },
@@ -414,6 +427,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("primary_business_location", PrimaryBusinessLocation);
             writer.WriteStringValue("primary_funding_id", PrimaryFundingId);
             writer.WriteStringValue("purchase_order_number", PurchaseOrderNumber);
+            writer.WriteStringValue("service_pricing_policy", ServicePricingPolicy);
             writer.WriteStringValue("status", Status);
             writer.WriteBoolValue("template_auto_archival_enabled", TemplateAutoArchivalEnabled);
             writer.WriteStringValue("timezone_id", TimezoneId);

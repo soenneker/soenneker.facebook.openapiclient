@@ -3,7 +3,10 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Facebook.OpenApiClient.Item.Insights.BenchmarkAvailability;
+using Soenneker.Facebook.OpenApiClient.Item.Insights.CategoryBenchmark;
 using Soenneker.Facebook.OpenApiClient.Item.Insights.FeatureSettings;
+using Soenneker.Facebook.OpenApiClient.Item.Insights.MyTopProducts;
 using Soenneker.Facebook.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -18,17 +21,32 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The benchmarkAvailability property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Insights.BenchmarkAvailability.BenchmarkAvailabilityRequestBuilder BenchmarkAvailability
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Insights.BenchmarkAvailability.BenchmarkAvailabilityRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The categoryBenchmark property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Insights.CategoryBenchmark.CategoryBenchmarkRequestBuilder CategoryBenchmark
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Insights.CategoryBenchmark.CategoryBenchmarkRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The featureSettings property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Insights.FeatureSettings.FeatureSettingsRequestBuilder FeatureSettings
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Insights.FeatureSettings.FeatureSettingsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The myTopProducts property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Insights.MyTopProducts.MyTopProductsRequestBuilder MyTopProducts
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Insights.MyTopProducts.MyTopProductsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Insights.InsightsRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InsightsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/insights{?action_attribution_windows*,action_breakdowns*,action_report_time*,after*,am_call_tags*,before*,breakdown*,breakdowns*,comparison_fields*,comparison_time_ranges*,date_preset*,debug_enable_trace*,default_attribution_windows*,default_summary*,e2e_scenario_run_id*,export_columns*,export_format*,export_name*,fields*,filtering*,flog*,graph_cache*,include_zeros*,level*,limit*,meta_breakdowns*,metric*,metric_type*,metrics*,period*,platform*,product_id_limit*,round_up_level*,run_id*,saber_setsuna_perf_request_id*,show_description_from_api_doc*,since*,sort*,summary*,summary_action_breakdowns*,time_increment*,time_range*,time_ranges*,timeframe*,until*,use_account_attribution_setting*,use_unified_attribution_setting*}", pathParameters)
+        public InsightsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/insights{?action_attribution_windows*,action_breakdowns*,action_report_time*,after*,before*,breakdown*,breakdowns*,cpas_only*,date_preset*,default_summary*,export_columns*,export_format*,export_name*,fields*,filtering*,graph_cache*,level*,limit*,metric*,metric_type*,metrics*,period*,platform*,product_id_limit*,show_description_from_api_doc*,since*,sort*,summary*,summary_action_breakdowns*,time_increment*,time_range*,time_ranges*,timeframe*,until*,use_account_attribution_setting*,use_unified_attribution_setting*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +54,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InsightsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/insights{?action_attribution_windows*,action_breakdowns*,action_report_time*,after*,am_call_tags*,before*,breakdown*,breakdowns*,comparison_fields*,comparison_time_ranges*,date_preset*,debug_enable_trace*,default_attribution_windows*,default_summary*,e2e_scenario_run_id*,export_columns*,export_format*,export_name*,fields*,filtering*,flog*,graph_cache*,include_zeros*,level*,limit*,meta_breakdowns*,metric*,metric_type*,metrics*,period*,platform*,product_id_limit*,round_up_level*,run_id*,saber_setsuna_perf_request_id*,show_description_from_api_doc*,since*,sort*,summary*,summary_action_breakdowns*,time_increment*,time_range*,time_ranges*,timeframe*,until*,use_account_attribution_setting*,use_unified_attribution_setting*}", rawUrl)
+        public InsightsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/insights{?action_attribution_windows*,action_breakdowns*,action_report_time*,after*,before*,breakdown*,breakdowns*,cpas_only*,date_preset*,default_summary*,export_columns*,export_format*,export_name*,fields*,filtering*,graph_cache*,level*,limit*,metric*,metric_type*,metrics*,period*,platform*,product_id_limit*,show_description_from_api_doc*,since*,sort*,summary*,summary_action_breakdowns*,time_increment*,time_range*,time_ranges*,timeframe*,until*,use_account_attribution_setting*,use_unified_attribution_setting*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdInsights200Response"/></returns>
@@ -185,19 +203,6 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
-            [QueryParameter("am_call_tags")]
-            public string? AmCallTags { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("am_call_tags")]
-            public string AmCallTags { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("before")]
             public string? Before { get; set; }
             #pragma warning restore CS1591
@@ -237,27 +242,14 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
-            [QueryParameter("comparison_fields")]
-            public string? ComparisonFields { get; set; }
+            [QueryParameter("cpas_only")]
+            public string? CpasOnly { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
-            [QueryParameter("comparison_fields")]
-            public string ComparisonFields { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("comparison_time_ranges")]
-            public string? ComparisonTimeRanges { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("comparison_time_ranges")]
-            public string ComparisonTimeRanges { get; set; }
+            [QueryParameter("cpas_only")]
+            public string CpasOnly { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -273,38 +265,17 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
             public string DatePreset { get; set; }
             #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
-            [QueryParameter("debug_enable_trace")]
-            public bool? DebugEnableTrace { get; set; }
-            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("default_attribution_windows")]
-            public string? DefaultAttributionWindows { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("default_attribution_windows")]
-            public string DefaultAttributionWindows { get; set; }
-            #pragma warning restore CS1591
-#endif
             #pragma warning disable CS1591
             [QueryParameter("default_summary")]
-            public bool? DefaultSummary { get; set; }
-            #pragma warning restore CS1591
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("e2e_scenario_run_id")]
-            public string? E2eScenarioRunId { get; set; }
+            public string? DefaultSummary { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
-            [QueryParameter("e2e_scenario_run_id")]
-            public string E2eScenarioRunId { get; set; }
+            [QueryParameter("default_summary")]
+            public string DefaultSummary { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -372,26 +343,9 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
             public string Filtering { get; set; }
             #pragma warning restore CS1591
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("flog")]
-            public string? Flog { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("flog")]
-            public string Flog { get; set; }
-            #pragma warning restore CS1591
-#endif
             #pragma warning disable CS1591
             [QueryParameter("graph_cache")]
             public bool? GraphCache { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
-            [QueryParameter("include_zeros")]
-            public bool? IncludeZeros { get; set; }
             #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -406,21 +360,17 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
             public string Level { get; set; }
             #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
-            [QueryParameter("limit")]
-            public int? Limit { get; set; }
-            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
-            [QueryParameter("meta_breakdowns")]
-            public string? MetaBreakdowns { get; set; }
+            [QueryParameter("limit")]
+            public string? Limit { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
-            [QueryParameter("meta_breakdowns")]
-            public string MetaBreakdowns { get; set; }
+            [QueryParameter("limit")]
+            public string Limit { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -492,45 +442,6 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
             [QueryParameter("product_id_limit")]
             public long? ProductIdLimit { get; set; }
             #pragma warning restore CS1591
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("round_up_level")]
-            public string? RoundUpLevel { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("round_up_level")]
-            public string RoundUpLevel { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("run_id")]
-            public string? RunId { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("run_id")]
-            public string RunId { get; set; }
-            #pragma warning restore CS1591
-#endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            #pragma warning disable CS1591
-            [QueryParameter("saber_setsuna_perf_request_id")]
-            public string? SaberSetsunaPerfRequestId { get; set; }
-            #pragma warning restore CS1591
-#nullable restore
-#else
-            #pragma warning disable CS1591
-            [QueryParameter("saber_setsuna_perf_request_id")]
-            public string SaberSetsunaPerfRequestId { get; set; }
-            #pragma warning restore CS1591
-#endif
             #pragma warning disable CS1591
             [QueryParameter("show_description_from_api_doc")]
             public bool? ShowDescriptionFromApiDoc { get; set; }

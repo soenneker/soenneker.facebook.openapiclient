@@ -23,6 +23,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("campaigns_with_error") is { } nullNodeCampaignsWithError && nullNodeCampaignsWithError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignsWithError = null;
             if (parseNode.GetChildNode("is_age_restriction_enabled") is null) { _explicitNullValueIsAgeRestrictionEnabled = default!; _explicitNullProperties?.Remove("is_age_restriction_enabled"); }
             else if (parseNode.GetChildNode("is_age_restriction_enabled") is { } nullNodeIsAgeRestrictionEnabled && nullNodeIsAgeRestrictionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAgeRestrictionEnabled = null;
+            if (parseNode.GetChildNode("is_gender_exclusion_enabled") is null) { _explicitNullValueIsGenderExclusionEnabled = default!; _explicitNullProperties?.Remove("is_gender_exclusion_enabled"); }
+            else if (parseNode.GetChildNode("is_gender_exclusion_enabled") is { } nullNodeIsGenderExclusionEnabled && nullNodeIsGenderExclusionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGenderExclusionEnabled = null;
             if (parseNode.GetChildNode("placement_controls") is null) { _explicitNullValuePlacementControls = default!; _explicitNullProperties?.Remove("placement_controls"); }
             else if (parseNode.GetChildNode("placement_controls") is { } nullNodePlacementControls && nullNodePlacementControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementControls = null;
             if (parseNode.GetChildNode("placement_controls_per_objective") is null) { _explicitNullValuePlacementControlsPerObjective = default!; _explicitNullProperties?.Remove("placement_controls_per_objective"); }
@@ -56,6 +58,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The is_age_restriction_enabled property</summary>
         public bool? IsAgeRestrictionEnabled { get => _explicitNullValueIsAgeRestrictionEnabled; set { _explicitNullValueIsAgeRestrictionEnabled = value; AdditionalData?.Remove("is_age_restriction_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_age_restriction_enabled"); else _explicitNullProperties?.Remove("is_age_restriction_enabled"); } }
         private bool? _explicitNullValueIsAgeRestrictionEnabled = default!;
+        /// <summary>The is_gender_exclusion_enabled property</summary>
+        public bool? IsGenderExclusionEnabled { get => _explicitNullValueIsGenderExclusionEnabled; set { _explicitNullValueIsGenderExclusionEnabled = value; AdditionalData?.Remove("is_gender_exclusion_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_gender_exclusion_enabled"); else _explicitNullProperties?.Remove("is_gender_exclusion_enabled"); } }
+        private bool? _explicitNullValueIsGenderExclusionEnabled = default!;
         /// <summary>The placement_controls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,6 +112,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "audience_controls", n => { AudienceControls = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty.CreateFromDiscriminatorValue); } },
                 { "campaigns_with_error", n => { CampaignsWithError = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_age_restriction_enabled", n => { IsAgeRestrictionEnabled = n.GetBoolValue(); } },
+                { "is_gender_exclusion_enabled", n => { IsGenderExclusionEnabled = n.GetBoolValue(); } },
                 { "placement_controls", n => { PlacementControls = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty.CreateFromDiscriminatorValue); } },
                 { "placement_controls_per_objective", n => { PlacementControlsPerObjective = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty.CreateFromDiscriminatorValue); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
@@ -122,6 +128,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsAudienceControlsProperty>("audience_controls", AudienceControls);
             writer.WriteCollectionOfPrimitiveValues<string>("campaigns_with_error", CampaignsWithError);
             writer.WriteBoolValue("is_age_restriction_enabled", IsAgeRestrictionEnabled);
+            writer.WriteBoolValue("is_gender_exclusion_enabled", IsGenderExclusionEnabled);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsProperty>("placement_controls", PlacementControls);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsPlacementControlsPerObjectiveProperty>("placement_controls_per_objective", PlacementControlsPerObjective);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAccountBusinessConstraintsStatus>("status", Status);

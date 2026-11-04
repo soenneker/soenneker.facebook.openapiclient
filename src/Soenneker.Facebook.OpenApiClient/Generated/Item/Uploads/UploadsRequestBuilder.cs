@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Uploads
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UploadsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/uploads{?after*,before*,end_time*,fields*,limit*,order*,sort_by*,start_time*,upload_tag*}", pathParameters)
+        public UploadsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/uploads{?after*,before*,date_format*,end_time*,fields*,limit*,order*,sort_by*,start_time*,upload_tag*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Uploads
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UploadsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/uploads{?after*,before*,end_time*,fields*,limit*,order*,sort_by*,start_time*,upload_tag*}", rawUrl)
+        public UploadsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/uploads{?after*,before*,date_format*,end_time*,fields*,limit*,order*,sort_by*,start_time*,upload_tag*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdUploads200Response"/></returns>
@@ -150,10 +150,32 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Uploads
             public string Before { get; set; }
             #pragma warning restore CS1591
 #endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string? DateFormat { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string DateFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("end_time")]
-            public DateTimeOffset? EndTime { get; set; }
+            public string? EndTime { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("end_time")]
+            public string EndTime { get; set; }
+            #pragma warning restore CS1591
+#endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
@@ -171,18 +193,45 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Uploads
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("order")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.OfflineconversiondatasetuploadsOrderEnumParam? Order { get; set; }
+            public string? Order { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("order")]
+            public string Order { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("sort_by")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.OfflineconversiondatasetuploadsSortByEnumParam? SortBy { get; set; }
+            public string? SortBy { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("sort_by")]
+            public string SortBy { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("start_time")]
-            public DateTimeOffset? StartTime { get; set; }
+            public string? StartTime { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("start_time")]
+            public string StartTime { get; set; }
+            #pragma warning restore CS1591
+#endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591

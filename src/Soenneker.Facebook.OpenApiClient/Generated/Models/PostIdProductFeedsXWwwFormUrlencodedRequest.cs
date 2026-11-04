@@ -17,6 +17,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("configuration_source_name") is null) { _explicitNullValueConfigurationSourceName = default!; _explicitNullProperties?.Remove("configuration_source_name"); }
+            else if (parseNode.GetChildNode("configuration_source_name") is { } nullNodeConfigurationSourceName && nullNodeConfigurationSourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigurationSourceName = null;
             if (parseNode.GetChildNode("country") is null) { _explicitNullValueCountry = default!; _explicitNullProperties?.Remove("country"); }
             else if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
             if (parseNode.GetChildNode("default_currency") is null) { _explicitNullValueDefaultCurrency = default!; _explicitNullProperties?.Remove("default_currency"); }
@@ -27,8 +29,12 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("delimiter") is { } nullNodeDelimiter && nullNodeDelimiter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delimiter = null;
             if (parseNode.GetChildNode("encoding") is null) { _explicitNullValueEncoding = default!; _explicitNullProperties?.Remove("encoding"); }
             else if (parseNode.GetChildNode("encoding") is { } nullNodeEncoding && nullNodeEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Encoding = null;
+            if (parseNode.GetChildNode("feed_ingestion_type") is null) { _explicitNullValueFeedIngestionType = default!; _explicitNullProperties?.Remove("feed_ingestion_type"); }
+            else if (parseNode.GetChildNode("feed_ingestion_type") is { } nullNodeFeedIngestionType && nullNodeFeedIngestionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedIngestionType = null;
             if (parseNode.GetChildNode("feed_type") is null) { _explicitNullValueFeedType = default!; _explicitNullProperties?.Remove("feed_type"); }
             else if (parseNode.GetChildNode("feed_type") is { } nullNodeFeedType && nullNodeFeedType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedType = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("file_name") is null) { _explicitNullValueFileName = default!; _explicitNullProperties?.Remove("file_name"); }
             else if (parseNode.GetChildNode("file_name") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
             if (parseNode.GetChildNode("ingestion_source_type") is null) { _explicitNullValueIngestionSourceType = default!; _explicitNullProperties?.Remove("ingestion_source_type"); }
@@ -55,12 +61,24 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("selected_override_fields") is { } nullNodeSelectedOverrideFields && nullNodeSelectedOverrideFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedOverrideFields = null;
             if (parseNode.GetChildNode("update_schedule") is null) { _explicitNullValueUpdateSchedule = default!; _explicitNullProperties?.Remove("update_schedule"); }
             else if (parseNode.GetChildNode("update_schedule") is { } nullNodeUpdateSchedule && nullNodeUpdateSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateSchedule = null;
+            if (parseNode.GetChildNode("uploadable_item_type") is null) { _explicitNullValueUploadableItemType = default!; _explicitNullProperties?.Remove("uploadable_item_type"); }
+            else if (parseNode.GetChildNode("uploadable_item_type") is { } nullNodeUploadableItemType && nullNodeUploadableItemType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadableItemType = null;
             if (parseNode.GetChildNode("use_case") is null) { _explicitNullValueUseCase = default!; _explicitNullProperties?.Remove("use_case"); }
             else if (parseNode.GetChildNode("use_case") is { } nullNodeUseCase && nullNodeUseCase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseCase = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The configuration_source_name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ConfigurationSourceName { get => _explicitNullValueConfigurationSourceName; set { _explicitNullValueConfigurationSourceName = value; AdditionalData?.Remove("configuration_source_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration_source_name"); else _explicitNullProperties?.Remove("configuration_source_name"); } }
+        private string? _explicitNullValueConfigurationSourceName = default!;
+#nullable restore
+#else
+        public string ConfigurationSourceName { get => _explicitNullValueConfigurationSourceName; set { _explicitNullValueConfigurationSourceName = value; AdditionalData?.Remove("configuration_source_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration_source_name"); else _explicitNullProperties?.Remove("configuration_source_name"); } }
+        private string _explicitNullValueConfigurationSourceName = default!;
+#endif
         /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,17 +100,65 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueDefaultCurrency = default!;
 #endif
         /// <summary>The deletion_enabled property</summary>
-        public bool? DeletionEnabled { get => _explicitNullValueDeletionEnabled; set { _explicitNullValueDeletionEnabled = value; AdditionalData?.Remove("deletion_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletion_enabled"); else _explicitNullProperties?.Remove("deletion_enabled"); } }
-        private bool? _explicitNullValueDeletionEnabled = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DeletionEnabled { get => _explicitNullValueDeletionEnabled; set { _explicitNullValueDeletionEnabled = value; AdditionalData?.Remove("deletion_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletion_enabled"); else _explicitNullProperties?.Remove("deletion_enabled"); } }
+        private string? _explicitNullValueDeletionEnabled = default!;
+#nullable restore
+#else
+        public string DeletionEnabled { get => _explicitNullValueDeletionEnabled; set { _explicitNullValueDeletionEnabled = value; AdditionalData?.Remove("deletion_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletion_enabled"); else _explicitNullProperties?.Remove("deletion_enabled"); } }
+        private string _explicitNullValueDeletionEnabled = default!;
+#endif
         /// <summary>The delimiter property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsDelimiterEnumParam? Delimiter { get => _explicitNullValueDelimiter; set { _explicitNullValueDelimiter = value; AdditionalData?.Remove("delimiter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delimiter"); else _explicitNullProperties?.Remove("delimiter"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsDelimiterEnumParam? _explicitNullValueDelimiter = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Delimiter { get => _explicitNullValueDelimiter; set { _explicitNullValueDelimiter = value; AdditionalData?.Remove("delimiter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delimiter"); else _explicitNullProperties?.Remove("delimiter"); } }
+        private string? _explicitNullValueDelimiter = default!;
+#nullable restore
+#else
+        public string Delimiter { get => _explicitNullValueDelimiter; set { _explicitNullValueDelimiter = value; AdditionalData?.Remove("delimiter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delimiter"); else _explicitNullProperties?.Remove("delimiter"); } }
+        private string _explicitNullValueDelimiter = default!;
+#endif
         /// <summary>The encoding property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsEncodingEnumParam? Encoding { get => _explicitNullValueEncoding; set { _explicitNullValueEncoding = value; AdditionalData?.Remove("encoding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoding"); else _explicitNullProperties?.Remove("encoding"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsEncodingEnumParam? _explicitNullValueEncoding = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Encoding { get => _explicitNullValueEncoding; set { _explicitNullValueEncoding = value; AdditionalData?.Remove("encoding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoding"); else _explicitNullProperties?.Remove("encoding"); } }
+        private string? _explicitNullValueEncoding = default!;
+#nullable restore
+#else
+        public string Encoding { get => _explicitNullValueEncoding; set { _explicitNullValueEncoding = value; AdditionalData?.Remove("encoding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoding"); else _explicitNullProperties?.Remove("encoding"); } }
+        private string _explicitNullValueEncoding = default!;
+#endif
+        /// <summary>The feed_ingestion_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FeedIngestionType { get => _explicitNullValueFeedIngestionType; set { _explicitNullValueFeedIngestionType = value; AdditionalData?.Remove("feed_ingestion_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_ingestion_type"); else _explicitNullProperties?.Remove("feed_ingestion_type"); } }
+        private string? _explicitNullValueFeedIngestionType = default!;
+#nullable restore
+#else
+        public string FeedIngestionType { get => _explicitNullValueFeedIngestionType; set { _explicitNullValueFeedIngestionType = value; AdditionalData?.Remove("feed_ingestion_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_ingestion_type"); else _explicitNullProperties?.Remove("feed_ingestion_type"); } }
+        private string _explicitNullValueFeedIngestionType = default!;
+#endif
         /// <summary>The feed_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsFeedTypeEnumParam? FeedType { get => _explicitNullValueFeedType; set { _explicitNullValueFeedType = value; AdditionalData?.Remove("feed_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_type"); else _explicitNullProperties?.Remove("feed_type"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsFeedTypeEnumParam? _explicitNullValueFeedType = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FeedType { get => _explicitNullValueFeedType; set { _explicitNullValueFeedType = value; AdditionalData?.Remove("feed_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_type"); else _explicitNullProperties?.Remove("feed_type"); } }
+        private string? _explicitNullValueFeedType = default!;
+#nullable restore
+#else
+        public string FeedType { get => _explicitNullValueFeedType; set { _explicitNullValueFeedType = value; AdditionalData?.Remove("feed_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_type"); else _explicitNullProperties?.Remove("feed_type"); } }
+        private string _explicitNullValueFeedType = default!;
+#endif
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
         /// <summary>The file_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,11 +170,25 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>The ingestion_source_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsIngestionSourceTypeEnumParam? IngestionSourceType { get => _explicitNullValueIngestionSourceType; set { _explicitNullValueIngestionSourceType = value; AdditionalData?.Remove("ingestion_source_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ingestion_source_type"); else _explicitNullProperties?.Remove("ingestion_source_type"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsIngestionSourceTypeEnumParam? _explicitNullValueIngestionSourceType = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IngestionSourceType { get => _explicitNullValueIngestionSourceType; set { _explicitNullValueIngestionSourceType = value; AdditionalData?.Remove("ingestion_source_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ingestion_source_type"); else _explicitNullProperties?.Remove("ingestion_source_type"); } }
+        private string? _explicitNullValueIngestionSourceType = default!;
+#nullable restore
+#else
+        public string IngestionSourceType { get => _explicitNullValueIngestionSourceType; set { _explicitNullValueIngestionSourceType = value; AdditionalData?.Remove("ingestion_source_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ingestion_source_type"); else _explicitNullProperties?.Remove("ingestion_source_type"); } }
+        private string _explicitNullValueIngestionSourceType = default!;
+#endif
         /// <summary>The item_sub_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsItemSubTypeEnumParam? ItemSubType { get => _explicitNullValueItemSubType; set { _explicitNullValueItemSubType = value; AdditionalData?.Remove("item_sub_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_sub_type"); else _explicitNullProperties?.Remove("item_sub_type"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsItemSubTypeEnumParam? _explicitNullValueItemSubType = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ItemSubType { get => _explicitNullValueItemSubType; set { _explicitNullValueItemSubType = value; AdditionalData?.Remove("item_sub_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_sub_type"); else _explicitNullProperties?.Remove("item_sub_type"); } }
+        private string? _explicitNullValueItemSubType = default!;
+#nullable restore
+#else
+        public string ItemSubType { get => _explicitNullValueItemSubType; set { _explicitNullValueItemSubType = value; AdditionalData?.Remove("item_sub_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item_sub_type"); else _explicitNullProperties?.Remove("item_sub_type"); } }
+        private string _explicitNullValueItemSubType = default!;
+#endif
         /// <summary>The migrated_from_feed_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,8 +210,15 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The override_type property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsOverrideTypeEnumParam? OverrideType { get => _explicitNullValueOverrideType; set { _explicitNullValueOverrideType = value; AdditionalData?.Remove("override_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_type"); else _explicitNullProperties?.Remove("override_type"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsOverrideTypeEnumParam? _explicitNullValueOverrideType = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OverrideType { get => _explicitNullValueOverrideType; set { _explicitNullValueOverrideType = value; AdditionalData?.Remove("override_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_type"); else _explicitNullProperties?.Remove("override_type"); } }
+        private string? _explicitNullValueOverrideType = default!;
+#nullable restore
+#else
+        public string OverrideType { get => _explicitNullValueOverrideType; set { _explicitNullValueOverrideType = value; AdditionalData?.Remove("override_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_type"); else _explicitNullProperties?.Remove("override_type"); } }
+        private string _explicitNullValueOverrideType = default!;
+#endif
         /// <summary>The override_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,7 +229,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string OverrideValue { get => _explicitNullValueOverrideValue; set { _explicitNullValueOverrideValue = value; AdditionalData?.Remove("override_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_value"); else _explicitNullProperties?.Remove("override_value"); } }
         private string _explicitNullValueOverrideValue = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The primary_feed_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrimaryFeedIds { get => _explicitNullValuePrimaryFeedIds; set { _explicitNullValuePrimaryFeedIds = value; AdditionalData?.Remove("primary_feed_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_feed_ids"); else _explicitNullProperties?.Remove("primary_feed_ids"); } }
@@ -153,9 +240,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValuePrimaryFeedIds = default!;
 #endif
         /// <summary>The quoted_fields_mode property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsQuotedFieldsModeEnumParam? QuotedFieldsMode { get => _explicitNullValueQuotedFieldsMode; set { _explicitNullValueQuotedFieldsMode = value; AdditionalData?.Remove("quoted_fields_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoted_fields_mode"); else _explicitNullProperties?.Remove("quoted_fields_mode"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsQuotedFieldsModeEnumParam? _explicitNullValueQuotedFieldsMode = default!;
-        /// <summary>A JSON-encoded value.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? QuotedFieldsMode { get => _explicitNullValueQuotedFieldsMode; set { _explicitNullValueQuotedFieldsMode = value; AdditionalData?.Remove("quoted_fields_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoted_fields_mode"); else _explicitNullProperties?.Remove("quoted_fields_mode"); } }
+        private string? _explicitNullValueQuotedFieldsMode = default!;
+#nullable restore
+#else
+        public string QuotedFieldsMode { get => _explicitNullValueQuotedFieldsMode; set { _explicitNullValueQuotedFieldsMode = value; AdditionalData?.Remove("quoted_fields_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoted_fields_mode"); else _explicitNullProperties?.Remove("quoted_fields_mode"); } }
+        private string _explicitNullValueQuotedFieldsMode = default!;
+#endif
+        /// <summary>The rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
@@ -175,7 +269,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; AdditionalData?.Remove("schedule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
         private string _explicitNullValueSchedule = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The selected_override_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SelectedOverrideFields { get => _explicitNullValueSelectedOverrideFields; set { _explicitNullValueSelectedOverrideFields = value; AdditionalData?.Remove("selected_override_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selected_override_fields"); else _explicitNullProperties?.Remove("selected_override_fields"); } }
@@ -195,9 +289,26 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string UpdateSchedule { get => _explicitNullValueUpdateSchedule; set { _explicitNullValueUpdateSchedule = value; AdditionalData?.Remove("update_schedule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_schedule"); else _explicitNullProperties?.Remove("update_schedule"); } }
         private string _explicitNullValueUpdateSchedule = default!;
 #endif
+        /// <summary>The uploadable_item_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UploadableItemType { get => _explicitNullValueUploadableItemType; set { _explicitNullValueUploadableItemType = value; AdditionalData?.Remove("uploadable_item_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadable_item_type"); else _explicitNullProperties?.Remove("uploadable_item_type"); } }
+        private string? _explicitNullValueUploadableItemType = default!;
+#nullable restore
+#else
+        public string UploadableItemType { get => _explicitNullValueUploadableItemType; set { _explicitNullValueUploadableItemType = value; AdditionalData?.Remove("uploadable_item_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadable_item_type"); else _explicitNullProperties?.Remove("uploadable_item_type"); } }
+        private string _explicitNullValueUploadableItemType = default!;
+#endif
         /// <summary>The use_case property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsUseCaseEnumParam? UseCase { get => _explicitNullValueUseCase; set { _explicitNullValueUseCase = value; AdditionalData?.Remove("use_case"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_case"); else _explicitNullProperties?.Remove("use_case"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsUseCaseEnumParam? _explicitNullValueUseCase = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UseCase { get => _explicitNullValueUseCase; set { _explicitNullValueUseCase = value; AdditionalData?.Remove("use_case"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_case"); else _explicitNullProperties?.Remove("use_case"); } }
+        private string? _explicitNullValueUseCase = default!;
+#nullable restore
+#else
+        public string UseCase { get => _explicitNullValueUseCase; set { _explicitNullValueUseCase = value; AdditionalData?.Remove("use_case"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_case"); else _explicitNullProperties?.Remove("use_case"); } }
+        private string _explicitNullValueUseCase = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdProductFeedsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -223,26 +334,30 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "configuration_source_name", n => { ConfigurationSourceName = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "default_currency", n => { DefaultCurrency = n.GetStringValue(); } },
-                { "deletion_enabled", n => { DeletionEnabled = n.GetBoolValue(); } },
-                { "delimiter", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsDelimiterEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDelimiter = default; _explicitNullProperties?.Remove("delimiter"); AdditionalData["delimiter"] = unknown; } else { Delimiter = parsed; AdditionalData.Remove("delimiter"); } } },
-                { "encoding", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsEncodingEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEncoding = default; _explicitNullProperties?.Remove("encoding"); AdditionalData["encoding"] = unknown; } else { Encoding = parsed; AdditionalData.Remove("encoding"); } } },
-                { "feed_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsFeedTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFeedType = default; _explicitNullProperties?.Remove("feed_type"); AdditionalData["feed_type"] = unknown; } else { FeedType = parsed; AdditionalData.Remove("feed_type"); } } },
+                { "deletion_enabled", n => { DeletionEnabled = n.GetStringValue(); } },
+                { "delimiter", n => { Delimiter = n.GetStringValue(); } },
+                { "encoding", n => { Encoding = n.GetStringValue(); } },
+                { "feed_ingestion_type", n => { FeedIngestionType = n.GetStringValue(); } },
+                { "feed_type", n => { FeedType = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
                 { "file_name", n => { FileName = n.GetStringValue(); } },
-                { "ingestion_source_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsIngestionSourceTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIngestionSourceType = default; _explicitNullProperties?.Remove("ingestion_source_type"); AdditionalData["ingestion_source_type"] = unknown; } else { IngestionSourceType = parsed; AdditionalData.Remove("ingestion_source_type"); } } },
-                { "item_sub_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsItemSubTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueItemSubType = default; _explicitNullProperties?.Remove("item_sub_type"); AdditionalData["item_sub_type"] = unknown; } else { ItemSubType = parsed; AdditionalData.Remove("item_sub_type"); } } },
+                { "ingestion_source_type", n => { IngestionSourceType = n.GetStringValue(); } },
+                { "item_sub_type", n => { ItemSubType = n.GetStringValue(); } },
                 { "migrated_from_feed_id", n => { MigratedFromFeedId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "override_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsOverrideTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverrideType = default; _explicitNullProperties?.Remove("override_type"); AdditionalData["override_type"] = unknown; } else { OverrideType = parsed; AdditionalData.Remove("override_type"); } } },
+                { "override_type", n => { OverrideType = n.GetStringValue(); } },
                 { "override_value", n => { OverrideValue = n.GetStringValue(); } },
                 { "primary_feed_ids", n => { PrimaryFeedIds = n.GetStringValue(); } },
-                { "quoted_fields_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsQuotedFieldsModeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueQuotedFieldsMode = default; _explicitNullProperties?.Remove("quoted_fields_mode"); AdditionalData["quoted_fields_mode"] = unknown; } else { QuotedFieldsMode = parsed; AdditionalData.Remove("quoted_fields_mode"); } } },
+                { "quoted_fields_mode", n => { QuotedFieldsMode = n.GetStringValue(); } },
                 { "rules", n => { Rules = n.GetStringValue(); } },
                 { "schedule", n => { Schedule = n.GetStringValue(); } },
                 { "selected_override_fields", n => { SelectedOverrideFields = n.GetStringValue(); } },
                 { "update_schedule", n => { UpdateSchedule = n.GetStringValue(); } },
-                { "use_case", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsUseCaseEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUseCase = default; _explicitNullProperties?.Remove("use_case"); AdditionalData["use_case"] = unknown; } else { UseCase = parsed; AdditionalData.Remove("use_case"); } } },
+                { "uploadable_item_type", n => { UploadableItemType = n.GetStringValue(); } },
+                { "use_case", n => { UseCase = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -252,26 +367,30 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("configuration_source_name", ConfigurationSourceName);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("default_currency", DefaultCurrency);
-            writer.WriteBoolValue("deletion_enabled", DeletionEnabled);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsDelimiterEnumParam>("delimiter", Delimiter);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsEncodingEnumParam>("encoding", Encoding);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsFeedTypeEnumParam>("feed_type", FeedType);
+            writer.WriteStringValue("deletion_enabled", DeletionEnabled);
+            writer.WriteStringValue("delimiter", Delimiter);
+            writer.WriteStringValue("encoding", Encoding);
+            writer.WriteStringValue("feed_ingestion_type", FeedIngestionType);
+            writer.WriteStringValue("feed_type", FeedType);
+            writer.WriteStringValue("fields", Fields);
             writer.WriteStringValue("file_name", FileName);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsIngestionSourceTypeEnumParam>("ingestion_source_type", IngestionSourceType);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsItemSubTypeEnumParam>("item_sub_type", ItemSubType);
+            writer.WriteStringValue("ingestion_source_type", IngestionSourceType);
+            writer.WriteStringValue("item_sub_type", ItemSubType);
             writer.WriteStringValue("migrated_from_feed_id", MigratedFromFeedId);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsOverrideTypeEnumParam>("override_type", OverrideType);
+            writer.WriteStringValue("override_type", OverrideType);
             writer.WriteStringValue("override_value", OverrideValue);
             writer.WriteStringValue("primary_feed_ids", PrimaryFeedIds);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsQuotedFieldsModeEnumParam>("quoted_fields_mode", QuotedFieldsMode);
+            writer.WriteStringValue("quoted_fields_mode", QuotedFieldsMode);
             writer.WriteStringValue("rules", Rules);
             writer.WriteStringValue("schedule", Schedule);
             writer.WriteStringValue("selected_override_fields", SelectedOverrideFields);
             writer.WriteStringValue("update_schedule", UpdateSchedule);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogproductFeedsUseCaseEnumParam>("use_case", UseCase);
+            writer.WriteStringValue("uploadable_item_type", UploadableItemType);
+            writer.WriteStringValue("use_case", UseCase);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

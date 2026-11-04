@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Da_checksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/da_checks{?after*,before*,capabilities*,categories*,checks*,connection_method*,features*,fields*,limit*,with_issue_only*}", pathParameters)
+        public Da_checksRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/da_checks{?action_source*,after*,before*,capabilities*,catalog_id*,categories*,checks*,connection_method*,features*,fields*,limit*,with_issue_only*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Da_checksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/da_checks{?after*,before*,capabilities*,categories*,checks*,connection_method*,features*,fields*,limit*,with_issue_only*}", rawUrl)
+        public Da_checksRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/da_checks{?action_source*,after*,before*,capabilities*,catalog_id*,categories*,checks*,connection_method*,features*,fields*,limit*,with_issue_only*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdDaChecks200Response"/></returns>
@@ -86,6 +86,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
+            [QueryParameter("action_source")]
+            public string? ActionSource { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("action_source")]
+            public string ActionSource { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("after")]
             public string? After { get; set; }
             #pragma warning restore CS1591
@@ -122,6 +135,10 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Da_checks
             public string Capabilities { get; set; }
             #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
+            [QueryParameter("catalog_id")]
+            public long? CatalogId { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591

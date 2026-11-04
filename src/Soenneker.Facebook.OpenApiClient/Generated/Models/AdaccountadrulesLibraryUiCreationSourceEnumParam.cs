@@ -116,9 +116,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         RulesManagementPageTopNav,
         #pragma warning restore CS1591
+        [EnumMember(Value = "RULES_RECOMMENDED_RULES_CARD")]
+        #pragma warning disable CS1591
+        RulesRecommendedRulesCard,
+        #pragma warning restore CS1591
         [EnumMember(Value = "RULES_RECOMMENDED_RULES_DIALOG")]
         #pragma warning disable CS1591
         RulesRecommendedRulesDialog,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "RULES_RECOMMENDED_RULES_DIALOG_CUSTOM_RULE")]
+        #pragma warning disable CS1591
+        RulesRecommendedRulesDialogCustomRule,
         #pragma warning restore CS1591
         [EnumMember(Value = "RULES_VIEW_ACTIVE_RULES_DIALOG")]
         #pragma warning disable CS1591

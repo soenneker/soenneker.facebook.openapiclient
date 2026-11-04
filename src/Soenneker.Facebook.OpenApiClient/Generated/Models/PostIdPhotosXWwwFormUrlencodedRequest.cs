@@ -95,10 +95,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("privacy") is { } nullNodePrivacy && nullNodePrivacy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Privacy = null;
             if (parseNode.GetChildNode("profile_id") is null) { _explicitNullValueProfileId = default!; _explicitNullProperties?.Remove("profile_id"); }
             else if (parseNode.GetChildNode("profile_id") is { } nullNodeProfileId && nullNodeProfileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileId = null;
-            if (parseNode.GetChildNode("provenance_info") is null) { _explicitNullValueProvenanceInfo = default!; _explicitNullProperties?.Remove("provenance_info"); }
-            else if (parseNode.GetChildNode("provenance_info") is { } nullNodeProvenanceInfo && nullNodeProvenanceInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvenanceInfo = null;
-            if (parseNode.GetChildNode("provenance_metadata") is null) { _explicitNullValueProvenanceMetadata = default!; _explicitNullProperties?.Remove("provenance_metadata"); }
-            else if (parseNode.GetChildNode("provenance_metadata") is { } nullNodeProvenanceMetadata && nullNodeProvenanceMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvenanceMetadata = null;
             if (parseNode.GetChildNode("proxied_app_id") is null) { _explicitNullValueProxiedAppId = default!; _explicitNullProperties?.Remove("proxied_app_id"); }
             else if (parseNode.GetChildNode("proxied_app_id") is { } nullNodeProxiedAppId && nullNodeProxiedAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxiedAppId = null;
             if (parseNode.GetChildNode("published") is null) { _explicitNullValuePublished = default!; _explicitNullProperties?.Remove("published"); }
@@ -401,26 +397,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The profile_id property</summary>
         public long? ProfileId { get => _explicitNullValueProfileId; set { _explicitNullValueProfileId = value; AdditionalData?.Remove("profile_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_id"); else _explicitNullProperties?.Remove("profile_id"); } }
         private long? _explicitNullValueProfileId = default!;
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProvenanceInfo { get => _explicitNullValueProvenanceInfo; set { _explicitNullValueProvenanceInfo = value; AdditionalData?.Remove("provenance_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance_info"); else _explicitNullProperties?.Remove("provenance_info"); } }
-        private string? _explicitNullValueProvenanceInfo = default!;
-#nullable restore
-#else
-        public string ProvenanceInfo { get => _explicitNullValueProvenanceInfo; set { _explicitNullValueProvenanceInfo = value; AdditionalData?.Remove("provenance_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance_info"); else _explicitNullProperties?.Remove("provenance_info"); } }
-        private string _explicitNullValueProvenanceInfo = default!;
-#endif
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProvenanceMetadata { get => _explicitNullValueProvenanceMetadata; set { _explicitNullValueProvenanceMetadata = value; AdditionalData?.Remove("provenance_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance_metadata"); else _explicitNullProperties?.Remove("provenance_metadata"); } }
-        private string? _explicitNullValueProvenanceMetadata = default!;
-#nullable restore
-#else
-        public string ProvenanceMetadata { get => _explicitNullValueProvenanceMetadata; set { _explicitNullValueProvenanceMetadata = value; AdditionalData?.Remove("provenance_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provenance_metadata"); else _explicitNullProperties?.Remove("provenance_metadata"); } }
-        private string _explicitNullValueProvenanceMetadata = default!;
-#endif
         /// <summary>The proxied_app_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -599,8 +575,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "place", n => { Place = n.GetStringValue(); } },
                 { "privacy", n => { Privacy = n.GetStringValue(); } },
                 { "profile_id", n => { ProfileId = n.GetLongValue(); } },
-                { "provenance_info", n => { ProvenanceInfo = n.GetStringValue(); } },
-                { "provenance_metadata", n => { ProvenanceMetadata = n.GetStringValue(); } },
                 { "proxied_app_id", n => { ProxiedAppId = n.GetStringValue(); } },
                 { "published", n => { Published = n.GetBoolValue(); } },
                 { "qn", n => { Qn = n.GetStringValue(); } },
@@ -666,8 +640,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("place", Place);
             writer.WriteStringValue("privacy", Privacy);
             writer.WriteLongValue("profile_id", ProfileId);
-            writer.WriteStringValue("provenance_info", ProvenanceInfo);
-            writer.WriteStringValue("provenance_metadata", ProvenanceMetadata);
             writer.WriteStringValue("proxied_app_id", ProxiedAppId);
             writer.WriteBoolValue("published", Published);
             writer.WriteStringValue("qn", Qn);

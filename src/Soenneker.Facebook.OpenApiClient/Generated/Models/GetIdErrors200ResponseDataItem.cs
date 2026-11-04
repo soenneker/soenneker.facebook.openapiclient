@@ -33,6 +33,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("error_type") is { } nullNodeErrorType && nullNodeErrorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorType = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("paging") is null) { _explicitNullValuePaging = default!; _explicitNullProperties?.Remove("paging"); }
+            else if (parseNode.GetChildNode("paging") is { } nullNodePaging && nullNodePaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paging = null;
             if (parseNode.GetChildNode("severity") is null) { _explicitNullValueSeverity = default!; _explicitNullProperties?.Remove("severity"); }
             else if (parseNode.GetChildNode("severity") is { } nullNodeSeverity && nullNodeSeverity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Severity = null;
             if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
@@ -109,18 +111,28 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
+        /// <summary>The paging property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging? Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging? _explicitNullValuePaging = default!;
+#nullable restore
+#else
+        public global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging Paging { get => _explicitNullValuePaging; set { _explicitNullValuePaging = value; AdditionalData?.Remove("paging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paging"); else _explicitNullProperties?.Remove("paging"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging _explicitNullValuePaging = default!;
+#endif
         /// <summary>The severity property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Models.ProductFeedUploadErrorSeverity? Severity { get => _explicitNullValueSeverity; set { _explicitNullValueSeverity = value; AdditionalData?.Remove("severity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severity"); else _explicitNullProperties?.Remove("severity"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.ProductFeedUploadErrorSeverity? _explicitNullValueSeverity = default!;
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
-        private string? _explicitNullValueSummary = default!;
+        public UntypedNode? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private UntypedNode? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public string Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
-        private string _explicitNullValueSummary = default!;
+        public UntypedNode Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private UntypedNode _explicitNullValueSummary = default!;
 #endif
         /// <summary>The total_count property</summary>
         public long? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; AdditionalData?.Remove("total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_count"); else _explicitNullProperties?.Remove("total_count"); } }
@@ -158,8 +170,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "error_message", n => { ErrorMessage = n.GetStringValue(); } },
                 { "error_type", n => { ErrorType = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging.CreateFromDiscriminatorValue); } },
                 { "severity", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductFeedUploadErrorSeverity>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSeverity = default; _explicitNullProperties?.Remove("severity"); AdditionalData["severity"] = unknown; } else { Severity = parsed; AdditionalData.Remove("severity"); } } },
-                { "summary", n => { Summary = n.GetStringValue(); } },
+                { "summary", n => { Summary = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "total_count", n => { TotalCount = n.GetLongValue(); } },
             };
         }
@@ -178,8 +191,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("error_message", ErrorMessage);
             writer.WriteStringValue("error_type", ErrorType);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.GetIdErrors200ResponseDataItemPaging>("paging", Paging);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductFeedUploadErrorSeverity>("severity", Severity);
-            writer.WriteStringValue("summary", Summary);
+            writer.WriteObjectValue<UntypedNode>("summary", Summary);
             writer.WriteLongValue("total_count", TotalCount);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

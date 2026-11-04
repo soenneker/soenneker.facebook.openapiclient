@@ -17,14 +17,28 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("retailer_id") is null) { _explicitNullValueRetailerId = default!; _explicitNullProperties?.Remove("retailer_id"); }
             else if (parseNode.GetChildNode("retailer_id") is { } nullNodeRetailerId && nullNodeRetailerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetailerId = null;
+            if (parseNode.GetChildNode("retailer_id_mode") is null) { _explicitNullValueRetailerIdMode = default!; _explicitNullProperties?.Remove("retailer_id_mode"); }
+            else if (parseNode.GetChildNode("retailer_id_mode") is { } nullNodeRetailerIdMode && nullNodeRetailerIdMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetailerIdMode = null;
             if (parseNode.GetChildNode("variants") is null) { _explicitNullValueVariants = default!; _explicitNullProperties?.Remove("variants"); }
             else if (parseNode.GetChildNode("variants") is { } nullNodeVariants && nullNodeVariants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variants = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
         /// <summary>The retailer_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,7 +49,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string RetailerId { get => _explicitNullValueRetailerId; set { _explicitNullValueRetailerId = value; AdditionalData?.Remove("retailer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_id"); else _explicitNullProperties?.Remove("retailer_id"); } }
         private string _explicitNullValueRetailerId = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The retailer_id_mode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RetailerIdMode { get => _explicitNullValueRetailerIdMode; set { _explicitNullValueRetailerIdMode = value; AdditionalData?.Remove("retailer_id_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_id_mode"); else _explicitNullProperties?.Remove("retailer_id_mode"); } }
+        private string? _explicitNullValueRetailerIdMode = default!;
+#nullable restore
+#else
+        public string RetailerIdMode { get => _explicitNullValueRetailerIdMode; set { _explicitNullValueRetailerIdMode = value; AdditionalData?.Remove("retailer_id_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_id_mode"); else _explicitNullProperties?.Remove("retailer_id_mode"); } }
+        private string _explicitNullValueRetailerIdMode = default!;
+#endif
+        /// <summary>The variants property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
@@ -70,7 +94,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "fields", n => { Fields = n.GetStringValue(); } },
                 { "retailer_id", n => { RetailerId = n.GetStringValue(); } },
+                { "retailer_id_mode", n => { RetailerIdMode = n.GetStringValue(); } },
                 { "variants", n => { Variants = n.GetStringValue(); } },
             };
         }
@@ -81,7 +107,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("fields", Fields);
             writer.WriteStringValue("retailer_id", RetailerId);
+            writer.WriteStringValue("retailer_id_mode", RetailerIdMode);
             writer.WriteStringValue("variants", Variants);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

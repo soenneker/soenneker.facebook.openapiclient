@@ -80,6 +80,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Assets;
 using Soenneker.Facebook.OpenApiClient.Item.Assigned_ad_accounts;
 using Soenneker.Facebook.OpenApiClient.Item.Assigned_applications;
 using Soenneker.Facebook.OpenApiClient.Item.Assigned_business_asset_groups;
+using Soenneker.Facebook.OpenApiClient.Item.Assigned_instagram_accounts;
 using Soenneker.Facebook.OpenApiClient.Item.Assigned_pages;
 using Soenneker.Facebook.OpenApiClient.Item.Assigned_product_catalogs;
 using Soenneker.Facebook.OpenApiClient.Item.Assigned_users;
@@ -181,10 +182,10 @@ using Soenneker.Facebook.OpenApiClient.Item.Conversion_goals;
 using Soenneker.Facebook.OpenApiClient.Item.Copies;
 using Soenneker.Facebook.OpenApiClient.Item.Copyright_manual_claims;
 using Soenneker.Facebook.OpenApiClient.Item.Cpas_business_setup_config;
-using Soenneker.Facebook.OpenApiClient.Item.Cpas_lsb_image_bank;
 using Soenneker.Facebook.OpenApiClient.Item.Cpas_merchant_config;
 using Soenneker.Facebook.OpenApiClient.Item.Creative_diagnostics;
 using Soenneker.Facebook.OpenApiClient.Item.Creative_folders;
+using Soenneker.Facebook.OpenApiClient.Item.Creative_generations;
 using Soenneker.Facebook.OpenApiClient.Item.Creative_insights;
 using Soenneker.Facebook.OpenApiClient.Item.Creative_stickers;
 using Soenneker.Facebook.OpenApiClient.Item.Creator_asset_creatives;
@@ -203,7 +204,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Da_checks;
 using Soenneker.Facebook.OpenApiClient.Item.Data_sources;
 using Soenneker.Facebook.OpenApiClient.Item.Dataset;
 using Soenneker.Facebook.OpenApiClient.Item.Degrees_of_freedom_spec;
-using Soenneker.Facebook.OpenApiClient.Item.Delete_rule_set;
+using Soenneker.Facebook.OpenApiClient.Item.Deleteruleset;
 using Soenneker.Facebook.OpenApiClient.Item.Delivery_estimate;
 using Soenneker.Facebook.OpenApiClient.Item.Deprecatedtargetingadsets;
 using Soenneker.Facebook.OpenApiClient.Item.Destinations;
@@ -361,7 +362,6 @@ using Soenneker.Facebook.OpenApiClient.Item.Partners;
 using Soenneker.Facebook.OpenApiClient.Item.Partnership_ad_code;
 using Soenneker.Facebook.OpenApiClient.Item.Partnerstudies;
 using Soenneker.Facebook.OpenApiClient.Item.Pass_thread_control;
-using Soenneker.Facebook.OpenApiClient.Item.Passback_attribution_metadata_configs;
 using Soenneker.Facebook.OpenApiClient.Item.Passthreadcontrol;
 using Soenneker.Facebook.OpenApiClient.Item.Past_partnership_ads_media;
 using Soenneker.Facebook.OpenApiClient.Item.Payment_configuration;
@@ -427,6 +427,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Reseller_guidances;
 using Soenneker.Facebook.OpenApiClient.Item.Rich_media_documents;
 using Soenneker.Facebook.OpenApiClient.Item.Roles;
 using Soenneker.Facebook.OpenApiClient.Item.Rtb_dynamic_posts;
+using Soenneker.Facebook.OpenApiClient.Item.Rule_preview_samples;
 using Soenneker.Facebook.OpenApiClient.Item.Rules;
 using Soenneker.Facebook.OpenApiClient.Item.Salts;
 using Soenneker.Facebook.OpenApiClient.Item.Samples;
@@ -924,6 +925,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         public global::Soenneker.Facebook.OpenApiClient.Item.Assigned_business_asset_groups.Assigned_business_asset_groupsRequestBuilder Assigned_business_asset_groups
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Assigned_business_asset_groups.Assigned_business_asset_groupsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The assigned_instagram_accounts property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Assigned_instagram_accounts.Assigned_instagram_accountsRequestBuilder Assigned_instagram_accounts
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Assigned_instagram_accounts.Assigned_instagram_accountsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The assigned_pages property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Assigned_pages.Assigned_pagesRequestBuilder Assigned_pages
@@ -1430,11 +1436,6 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Cpas_business_setup_config.Cpas_business_setup_configRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The cpas_lsb_image_bank property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Item.Cpas_lsb_image_bank.Cpas_lsb_image_bankRequestBuilder Cpas_lsb_image_bank
-        {
-            get => new global::Soenneker.Facebook.OpenApiClient.Item.Cpas_lsb_image_bank.Cpas_lsb_image_bankRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The cpas_merchant_config property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Cpas_merchant_config.Cpas_merchant_configRequestBuilder Cpas_merchant_config
         {
@@ -1449,6 +1450,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         public global::Soenneker.Facebook.OpenApiClient.Item.Creative_folders.Creative_foldersRequestBuilder Creative_folders
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Creative_folders.Creative_foldersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The creative_generations property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Creative_generations.Creative_generationsRequestBuilder Creative_generations
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Creative_generations.Creative_generationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The creative_insights property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Creative_insights.Creative_insightsRequestBuilder Creative_insights
@@ -1540,10 +1546,10 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Degrees_of_freedom_spec.Degrees_of_freedom_specRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The delete_rule_set property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Item.Delete_rule_set.Delete_rule_setRequestBuilder Delete_rule_set
+        /// <summary>The deleteruleset property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Deleteruleset.DeleterulesetRequestBuilder Deleteruleset
         {
-            get => new global::Soenneker.Facebook.OpenApiClient.Item.Delete_rule_set.Delete_rule_setRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Deleteruleset.DeleterulesetRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The delivery_estimate property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Delivery_estimate.Delivery_estimateRequestBuilder Delivery_estimate
@@ -2330,11 +2336,6 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Pass_thread_control.Pass_thread_controlRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The passback_attribution_metadata_configs property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Item.Passback_attribution_metadata_configs.Passback_attribution_metadata_configsRequestBuilder Passback_attribution_metadata_configs
-        {
-            get => new global::Soenneker.Facebook.OpenApiClient.Item.Passback_attribution_metadata_configs.Passback_attribution_metadata_configsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The passthreadcontrol property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Passthreadcontrol.PassthreadcontrolRequestBuilder Passthreadcontrol
         {
@@ -2659,6 +2660,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         public global::Soenneker.Facebook.OpenApiClient.Item.Rtb_dynamic_posts.Rtb_dynamic_postsRequestBuilder Rtb_dynamic_posts
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Rtb_dynamic_posts.Rtb_dynamic_postsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The rule_preview_samples property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Rule_preview_samples.Rule_preview_samplesRequestBuilder Rule_preview_samples
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Rule_preview_samples.Rule_preview_samplesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The rules property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Rules.RulesRequestBuilder Rules
@@ -3393,6 +3399,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
+            [QueryParameter("fields")]
+            public string? Fields { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("fields")]
+            public string Fields { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("ids")]
             public string? Ids { get; set; }
             #pragma warning restore CS1591
@@ -3594,10 +3613,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item
             public string DatePreset { get; set; }
             #pragma warning restore CS1591
 #endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             #pragma warning disable CS1591
             [QueryParameter("display_format")]
-            public global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogHotelsItemGetDisplayFormatEnumParam? DisplayFormat { get; set; }
+            public string? DisplayFormat { get; set; }
             #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("display_format")]
+            public string DisplayFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591

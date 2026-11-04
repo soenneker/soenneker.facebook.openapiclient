@@ -20,6 +20,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         SelfServe,
         #pragma warning restore CS1591
+        [EnumMember(Value = "SELF_SERVE_ADS_MANAGER")]
+        #pragma warning disable CS1591
+        SelfServeAdsManager,
+        #pragma warning restore CS1591
         [EnumMember(Value = "SELF_SERVE_CONTACT_FORM")]
         #pragma warning disable CS1591
         SelfServeContactForm,

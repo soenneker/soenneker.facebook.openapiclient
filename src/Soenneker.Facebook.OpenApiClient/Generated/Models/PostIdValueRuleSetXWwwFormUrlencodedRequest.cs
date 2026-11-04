@@ -21,6 +21,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("entry_point") is { } nullNodeEntryPoint && nullNodeEntryPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntryPoint = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("origin") is null) { _explicitNullValueOrigin = default!; _explicitNullProperties?.Remove("origin"); }
+            else if (parseNode.GetChildNode("origin") is { } nullNodeOrigin && nullNodeOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origin = null;
             if (parseNode.GetChildNode("product_type") is null) { _explicitNullValueProductType = default!; _explicitNullProperties?.Remove("product_type"); }
             else if (parseNode.GetChildNode("product_type") is { } nullNodeProductType && nullNodeProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductType = null;
             if (parseNode.GetChildNode("rules") is null) { _explicitNullValueRules = default!; _explicitNullProperties?.Remove("rules"); }
@@ -42,6 +44,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
+        /// <summary>The origin property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetOriginEnumParam? Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; AdditionalData?.Remove("origin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetOriginEnumParam? _explicitNullValueOrigin = default!;
         /// <summary>The product_type property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetProductTypeEnumParam? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; AdditionalData?.Remove("product_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_type"); else _explicitNullProperties?.Remove("product_type"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetProductTypeEnumParam? _explicitNullValueProductType = default!;
@@ -82,6 +87,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             {
                 { "entry_point", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetEntryPointEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEntryPoint = default; _explicitNullProperties?.Remove("entry_point"); AdditionalData["entry_point"] = unknown; } else { EntryPoint = parsed; AdditionalData.Remove("entry_point"); } } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "origin", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetOriginEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOrigin = default; _explicitNullProperties?.Remove("origin"); AdditionalData["origin"] = unknown; } else { Origin = parsed; AdditionalData.Remove("origin"); } } },
                 { "product_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetProductTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProductType = default; _explicitNullProperties?.Remove("product_type"); AdditionalData["product_type"] = unknown; } else { ProductType = parsed; AdditionalData.Remove("product_type"); } } },
                 { "rules", n => { Rules = n.GetStringValue(); } },
             };
@@ -95,6 +101,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetEntryPointEnumParam>("entry_point", EntryPoint);
             writer.WriteStringValue("name", Name);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetOriginEnumParam>("origin", Origin);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetProductTypeEnumParam>("product_type", ProductType);
             writer.WriteStringValue("rules", Rules);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

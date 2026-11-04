@@ -23,6 +23,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("ad_ids") is { } nullNodeAdIds && nullNodeAdIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdIds = null;
             if (parseNode.GetChildNode("control_percentage") is null) { _explicitNullValueControlPercentage = default!; _explicitNullProperties?.Remove("control_percentage"); }
             else if (parseNode.GetChildNode("control_percentage") is { } nullNodeControlPercentage && nullNodeControlPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlPercentage = null;
+            if (parseNode.GetChildNode("exclusion_geo") is null) { _explicitNullValueExclusionGeo = default!; _explicitNullProperties?.Remove("exclusion_geo"); }
+            else if (parseNode.GetChildNode("exclusion_geo") is { } nullNodeExclusionGeo && nullNodeExclusionGeo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExclusionGeo = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
@@ -49,6 +51,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The control_percentage property</summary>
         public float? ControlPercentage { get => _explicitNullValueControlPercentage; set { _explicitNullValueControlPercentage = value; AdditionalData?.Remove("control_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("control_percentage"); else _explicitNullProperties?.Remove("control_percentage"); } }
         private float? _explicitNullValueControlPercentage = default!;
+        /// <summary>The exclusion_geo property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ExclusionGeo { get => _explicitNullValueExclusionGeo; set { _explicitNullValueExclusionGeo = value; AdditionalData?.Remove("exclusion_geo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusion_geo"); else _explicitNullProperties?.Remove("exclusion_geo"); } }
+        private List<string>? _explicitNullValueExclusionGeo = default!;
+#nullable restore
+#else
+        public List<string> ExclusionGeo { get => _explicitNullValueExclusionGeo; set { _explicitNullValueExclusionGeo = value; AdditionalData?.Remove("exclusion_geo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusion_geo"); else _explicitNullProperties?.Remove("exclusion_geo"); } }
+        private List<string> _explicitNullValueExclusionGeo = default!;
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,6 +112,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "ad_entities_count", n => { AdEntitiesCount = n.GetLongValue(); } },
                 { "ad_ids", n => { AdIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "control_percentage", n => { ControlPercentage = n.GetFloatValue(); } },
+                { "exclusion_geo", n => { ExclusionGeo = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "treatment_percentage", n => { TreatmentPercentage = n.GetFloatValue(); } },
@@ -115,6 +128,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("ad_entities_count", AdEntitiesCount);
             writer.WriteCollectionOfPrimitiveValues<string>("ad_ids", AdIds);
             writer.WriteFloatValue("control_percentage", ControlPercentage);
+            writer.WriteCollectionOfPrimitiveValues<string>("exclusion_geo", ExclusionGeo);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteFloatValue("treatment_percentage", TreatmentPercentage);

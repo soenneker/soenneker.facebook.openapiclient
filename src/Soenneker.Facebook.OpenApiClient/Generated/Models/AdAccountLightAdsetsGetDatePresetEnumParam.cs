@@ -12,6 +12,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         DataMaximum,
         #pragma warning restore CS1591
+        [EnumMember(Value = "LAST_12M")]
+        #pragma warning disable CS1591
+        Last12M,
+        #pragma warning restore CS1591
         [EnumMember(Value = "LAST_14D")]
         #pragma warning disable CS1591
         Last14D,
@@ -19,6 +23,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "LAST_14_DAYS")]
         #pragma warning disable CS1591
         Last14Days,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "LAST_180D")]
+        #pragma warning disable CS1591
+        Last180D,
         #pragma warning restore CS1591
         [EnumMember(Value = "LAST_180_DAYS")]
         #pragma warning disable CS1591
@@ -67,6 +75,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "LAST_40D")]
         #pragma warning disable CS1591
         Last40D,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "LAST_60D")]
+        #pragma warning disable CS1591
+        Last60D,
         #pragma warning restore CS1591
         [EnumMember(Value = "LAST_7D")]
         #pragma warning disable CS1591
