@@ -352,7 +352,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(28)
             {
                 { "background_color", n => { BackgroundColor = n.GetStringValue(); } },
                 { "body_elements", n => { BodyElements = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.CanvasBodyElementsItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.CanvasBodyElementsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },

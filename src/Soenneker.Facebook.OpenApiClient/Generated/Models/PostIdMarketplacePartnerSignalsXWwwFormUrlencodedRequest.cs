@@ -119,7 +119,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "conversion_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductcatalogmarketplacePartnerSignalsConversionTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueConversionType = default; _explicitNullProperties?.Remove("conversion_type"); AdditionalData["conversion_type"] = unknown; } else { ConversionType = parsed; AdditionalData.Remove("conversion_type"); } } },
                 { "event_id", n => { EventId = n.GetStringValue(); } },

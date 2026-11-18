@@ -181,7 +181,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "auto_creation_url", n => { AutoCreationUrl = n.GetStringValue(); } },
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdProductSets200ResponseDataItemDataItem>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdProductSets200ResponseDataItemDataItem.CreateFromDiscriminatorValue)?.AsList(); } },

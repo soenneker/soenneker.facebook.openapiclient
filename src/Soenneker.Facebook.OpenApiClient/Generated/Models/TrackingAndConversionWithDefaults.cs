@@ -92,7 +92,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "custom_conversion", n => { CustomConversion = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomConversionItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_tracking", n => { CustomTracking = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.TrackingAndConversionWithDefaultsCustomTrackingItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },

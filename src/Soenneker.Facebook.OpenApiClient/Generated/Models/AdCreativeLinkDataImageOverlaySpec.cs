@@ -91,7 +91,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "custom_text_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageOverlaySpecCustomTextType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCustomTextType = default; _explicitNullProperties?.Remove("custom_text_type"); AdditionalData["custom_text_type"] = unknown; } else { CustomTextType = parsed; AdditionalData.Remove("custom_text_type"); } } },
                 { "float_with_margin", n => { FloatWithMargin = n.GetBoolValue(); } },

@@ -104,7 +104,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultDataProperty.CreateFromDiscriminatorValue); } },
                 { "omitted_results", n => { OmittedResults = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdNetworkAnalyticsAsyncQueryResultOmittedResultsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },

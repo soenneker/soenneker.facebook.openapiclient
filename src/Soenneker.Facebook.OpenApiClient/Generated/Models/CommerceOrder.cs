@@ -191,7 +191,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "buyer_details", n => { BuyerDetails = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderBuyerDetailsProperty>(global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderBuyerDetailsProperty.CreateFromDiscriminatorValue); } },
                 { "channel", n => { Channel = n.GetStringValue(); } },

@@ -488,7 +488,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(37)
             {
                 { "account_admin", n => { AccountAdmin = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAccountAdminProperty.CreateFromDiscriminatorValue); } },
                 { "ad", n => { Ad = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdgroupPlacementSpecificReviewFeedbackAdProperty.CreateFromDiscriminatorValue); } },

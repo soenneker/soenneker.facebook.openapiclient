@@ -169,7 +169,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "child_attachments", n => { ChildAttachments = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.DynamicPostChildAttachment>(global::Soenneker.Facebook.OpenApiClient.Models.DynamicPostChildAttachment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created", n => { Created = n.GetDateTimeOffsetValue(); } },

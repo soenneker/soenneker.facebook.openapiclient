@@ -138,7 +138,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "average_monthly_revenue_spend_with_partner", n => { AverageMonthlyRevenueSpendWithPartner = n.GetStringValue(); } },
                 { "business_documents", n => { BusinessDocuments = n.GetStringValue(); } },

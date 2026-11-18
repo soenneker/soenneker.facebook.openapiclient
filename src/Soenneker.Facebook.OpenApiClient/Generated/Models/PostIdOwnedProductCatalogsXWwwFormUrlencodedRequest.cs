@@ -174,7 +174,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "additional_vertical_option", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdditionalVerticalOption = default; _explicitNullProperties?.Remove("additional_vertical_option"); AdditionalData["additional_vertical_option"] = unknown; } else { AdditionalVerticalOption = parsed; AdditionalData.Remove("additional_vertical_option"); } } },
                 { "business_metadata", n => { BusinessMetadata = n.GetStringValue(); } },

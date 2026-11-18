@@ -778,7 +778,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(95)
             {
                 { "account_id", n => { AccountId = n.GetLongValue(); } },
                 { "activity_status", n => { ActivityStatus = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity>(global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity.CreateFromDiscriminatorValue); } },

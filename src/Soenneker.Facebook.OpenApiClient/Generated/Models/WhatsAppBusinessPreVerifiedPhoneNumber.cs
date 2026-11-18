@@ -95,7 +95,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "code_verification_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.WhatsAppBusinessPreVerifiedPhoneNumberCodeVerificationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCodeVerificationStatus = default; _explicitNullProperties?.Remove("code_verification_status"); AdditionalData["code_verification_status"] = unknown; } else { CodeVerificationStatus = parsed; AdditionalData.Remove("code_verification_status"); } } },
                 { "code_verification_time", n => { CodeVerificationTime = n.GetDateTimeOffsetValue(); } },

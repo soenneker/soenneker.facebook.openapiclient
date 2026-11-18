@@ -285,7 +285,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(30)
             {
                 { "adlabels", n => { Adlabels = n.GetStringValue(); } },
                 { "bid_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountcampaignsBidStrategyEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBidStrategy = default; _explicitNullProperties?.Remove("bid_strategy"); AdditionalData["bid_strategy"] = unknown; } else { BidStrategy = parsed; AdditionalData.Remove("bid_strategy"); } } },

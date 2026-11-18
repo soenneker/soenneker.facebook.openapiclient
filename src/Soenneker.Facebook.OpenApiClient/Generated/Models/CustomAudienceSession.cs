@@ -140,7 +140,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "end_time", n => { EndTime = n.GetStringValue(); } },
                 { "num_invalid_entries", n => { NumInvalidEntries = n.GetStringValue(); } },

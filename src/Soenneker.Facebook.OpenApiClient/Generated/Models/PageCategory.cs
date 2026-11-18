@@ -92,7 +92,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "api_enum", n => { ApiEnum = n.GetStringValue(); } },
                 { "fb_page_categories", n => { FbPageCategories = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.PageCategory>(global::Soenneker.Facebook.OpenApiClient.Models.PageCategory.CreateFromDiscriminatorValue)?.AsList(); } },

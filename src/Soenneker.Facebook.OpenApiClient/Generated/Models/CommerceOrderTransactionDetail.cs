@@ -200,7 +200,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "merchant_order_id", n => { MerchantOrderId = n.GetStringValue(); } },
                 { "net_payment_amount", n => { NetPaymentAmount = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty>(global::Soenneker.Facebook.OpenApiClient.Models.CommerceOrderTransactionDetailNetPaymentAmountProperty.CreateFromDiscriminatorValue); } },

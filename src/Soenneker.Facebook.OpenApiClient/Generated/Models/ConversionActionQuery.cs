@@ -368,7 +368,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(27)
             {
                 { "action.type", n => { ActionType = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.ConversionActionQueryActionTypeItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.ConversionActionQueryActionTypeItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "application", n => { Application = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.ConversionActionQueryApplicationItemProperty>(global::Soenneker.Facebook.OpenApiClient.Models.ConversionActionQueryApplicationItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },

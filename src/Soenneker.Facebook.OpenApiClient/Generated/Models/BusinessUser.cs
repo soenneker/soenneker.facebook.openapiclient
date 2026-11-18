@@ -210,7 +210,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "business", n => { Business = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Business>(global::Soenneker.Facebook.OpenApiClient.Models.Business.CreateFromDiscriminatorValue); } },
                 { "business_role_request", n => { BusinessRoleRequest = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessRoleRequest>(global::Soenneker.Facebook.OpenApiClient.Models.BusinessRoleRequest.CreateFromDiscriminatorValue); } },

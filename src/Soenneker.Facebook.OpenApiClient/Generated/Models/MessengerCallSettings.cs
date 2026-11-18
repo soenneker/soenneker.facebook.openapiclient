@@ -83,7 +83,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "audio_enabled", n => { AudioEnabled = n.GetBoolValue(); } },
                 { "call_hours", n => { CallHours = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty>(global::Soenneker.Facebook.OpenApiClient.Models.MessengerCallSettingsCallHoursProperty.CreateFromDiscriminatorValue); } },

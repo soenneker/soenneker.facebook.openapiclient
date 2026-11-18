@@ -128,7 +128,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "fblead_form", n => { FbleadForm = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm>(global::Soenneker.Facebook.OpenApiClient.Models.LeadgenForm.CreateFromDiscriminatorValue); } },
                 { "first_step_id", n => { FirstStepId = n.GetStringValue(); } },

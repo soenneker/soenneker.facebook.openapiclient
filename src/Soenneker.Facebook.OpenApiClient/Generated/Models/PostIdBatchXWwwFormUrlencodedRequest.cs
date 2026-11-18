@@ -78,7 +78,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "allow_upsert", n => { AllowUpsert = n.GetBoolValue(); } },
                 { "fbe_external_business_id", n => { FbeExternalBusinessId = n.GetStringValue(); } },

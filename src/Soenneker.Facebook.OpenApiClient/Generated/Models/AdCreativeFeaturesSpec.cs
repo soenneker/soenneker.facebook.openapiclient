@@ -1052,7 +1052,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(84)
             {
                 { "adapt_to_placement", n => { AdaptToPlacement = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails.CreateFromDiscriminatorValue); } },
                 { "add_text_overlay", n => { AddTextOverlay = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeFeatureDetails.CreateFromDiscriminatorValue); } },

@@ -132,7 +132,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItemDataItem>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdEventStats200ResponseDataItemDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "date_start", n => { DateStart = n.GetStringValue(); } },

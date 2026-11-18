@@ -95,7 +95,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "allow_upsert", n => { AllowUpsert = n.GetBoolValue(); } },
                 { "item_sub_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.ProductCatalogVersionItemsBatchPostItemSubTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueItemSubType = default; _explicitNullProperties?.Remove("item_sub_type"); AdditionalData["item_sub_type"] = unknown; } else { ItemSubType = parsed; AdditionalData.Remove("item_sub_type"); } } },

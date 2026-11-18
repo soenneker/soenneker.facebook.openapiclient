@@ -138,7 +138,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "async_request_set", n => { AsyncRequestSet = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdAsyncRequestSet>(global::Soenneker.Facebook.OpenApiClient.Models.AdAsyncRequestSet.CreateFromDiscriminatorValue); } },
                 { "created_time", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },

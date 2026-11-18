@@ -248,7 +248,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "block_offline_analytics", n => { BlockOfflineAnalytics = n.GetBoolValue(); } },
                 { "collaborative_ads_managed_partner_business_info", n => { CollaborativeAdsManagedPartnerBusinessInfo = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ManagedPartnerBusiness>(global::Soenneker.Facebook.OpenApiClient.Models.ManagedPartnerBusiness.CreateFromDiscriminatorValue); } },

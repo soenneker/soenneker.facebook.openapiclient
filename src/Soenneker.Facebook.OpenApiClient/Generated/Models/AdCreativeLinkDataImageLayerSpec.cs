@@ -149,7 +149,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "blending_mode", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecBlendingMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBlendingMode = default; _explicitNullProperties?.Remove("blending_mode"); AdditionalData["blending_mode"] = unknown; } else { BlendingMode = parsed; AdditionalData.Remove("blending_mode"); } } },
                 { "content", n => { Content = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeLinkDataImageLayerSpecContentProperty.CreateFromDiscriminatorValue); } },

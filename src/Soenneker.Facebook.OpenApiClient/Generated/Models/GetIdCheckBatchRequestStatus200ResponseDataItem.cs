@@ -138,7 +138,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdCheckBatchRequestStatus200ResponseDataItemDataItem>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdCheckBatchRequestStatus200ResponseDataItemDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.GetIdCheckBatchRequestStatus200ResponseDataItemErrorsItem>(global::Soenneker.Facebook.OpenApiClient.Models.GetIdCheckBatchRequestStatus200ResponseDataItemErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -104,7 +104,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "auto_optimization", n => { AutoOptimization = n.GetStringValue(); } },
                 { "details_page_product_id", n => { DetailsPageProductId = n.GetStringValue(); } },

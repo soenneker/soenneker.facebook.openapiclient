@@ -83,7 +83,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "entry_point", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountvalueRuleSetEntryPointEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEntryPoint = default; _explicitNullProperties?.Remove("entry_point"); AdditionalData["entry_point"] = unknown; } else { EntryPoint = parsed; AdditionalData.Remove("entry_point"); } } },
                 { "name", n => { Name = n.GetStringValue(); } },

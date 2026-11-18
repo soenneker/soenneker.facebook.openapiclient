@@ -114,7 +114,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "duration_in_sec", n => { DurationInSec = n.GetFloatValue(); } },
                 { "fingerprint_content_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PagemediaFingerprintsFingerprintContentTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFingerprintContentType = default; _explicitNullProperties?.Remove("fingerprint_content_type"); AdditionalData["fingerprint_content_type"] = unknown; } else { FingerprintContentType = parsed; AdditionalData.Remove("fingerprint_content_type"); } } },
