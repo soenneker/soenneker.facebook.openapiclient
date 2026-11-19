@@ -21,6 +21,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("additional_vertical_option") is { } nullNodeAdditionalVerticalOption && nullNodeAdditionalVerticalOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalVerticalOption = null;
             if (parseNode.GetChildNode("business_metadata") is null) { _explicitNullValueBusinessMetadata = default!; _explicitNullProperties?.Remove("business_metadata"); }
             else if (parseNode.GetChildNode("business_metadata") is { } nullNodeBusinessMetadata && nullNodeBusinessMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessMetadata = null;
+            if (parseNode.GetChildNode("capabilities") is null) { _explicitNullValueCapabilities = default!; _explicitNullProperties?.Remove("capabilities"); }
+            else if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
             if (parseNode.GetChildNode("catalog_segment_filter") is null) { _explicitNullValueCatalogSegmentFilter = default!; _explicitNullProperties?.Remove("catalog_segment_filter"); }
             else if (parseNode.GetChildNode("catalog_segment_filter") is { } nullNodeCatalogSegmentFilter && nullNodeCatalogSegmentFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegmentFilter = null;
             if (parseNode.GetChildNode("catalog_segment_product_set_id") is null) { _explicitNullValueCatalogSegmentProductSetId = default!; _explicitNullProperties?.Remove("catalog_segment_product_set_id"); }
@@ -29,8 +31,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("da_display_settings") is { } nullNodeDaDisplaySettings && nullNodeDaDisplaySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaDisplaySettings = null;
             if (parseNode.GetChildNode("destination_catalog_settings") is null) { _explicitNullValueDestinationCatalogSettings = default!; _explicitNullProperties?.Remove("destination_catalog_settings"); }
             else if (parseNode.GetChildNode("destination_catalog_settings") is { } nullNodeDestinationCatalogSettings && nullNodeDestinationCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCatalogSettings = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("flight_catalog_settings") is null) { _explicitNullValueFlightCatalogSettings = default!; _explicitNullProperties?.Remove("flight_catalog_settings"); }
             else if (parseNode.GetChildNode("flight_catalog_settings") is { } nullNodeFlightCatalogSettings && nullNodeFlightCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightCatalogSettings = null;
+            if (parseNode.GetChildNode("hotel_catalog_settings") is null) { _explicitNullValueHotelCatalogSettings = default!; _explicitNullProperties?.Remove("hotel_catalog_settings"); }
+            else if (parseNode.GetChildNode("hotel_catalog_settings") is { } nullNodeHotelCatalogSettings && nullNodeHotelCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HotelCatalogSettings = null;
+            if (parseNode.GetChildNode("image_display_settings") is null) { _explicitNullValueImageDisplaySettings = default!; _explicitNullProperties?.Remove("image_display_settings"); }
+            else if (parseNode.GetChildNode("image_display_settings") is { } nullNodeImageDisplaySettings && nullNodeImageDisplaySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageDisplaySettings = null;
+            if (parseNode.GetChildNode("localization_settings") is null) { _explicitNullValueLocalizationSettings = default!; _explicitNullProperties?.Remove("localization_settings"); }
+            else if (parseNode.GetChildNode("localization_settings") is { } nullNodeLocalizationSettings && nullNodeLocalizationSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalizationSettings = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
             if (parseNode.GetChildNode("parent_catalog_id") is null) { _explicitNullValueParentCatalogId = default!; _explicitNullProperties?.Remove("parent_catalog_id"); }
@@ -46,9 +56,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The additional_vertical_option property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam? AdditionalVerticalOption { get => _explicitNullValueAdditionalVerticalOption; set { _explicitNullValueAdditionalVerticalOption = value; AdditionalData?.Remove("additional_vertical_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_vertical_option"); else _explicitNullProperties?.Remove("additional_vertical_option"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam? _explicitNullValueAdditionalVerticalOption = default!;
-        /// <summary>A JSON-encoded value.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AdditionalVerticalOption { get => _explicitNullValueAdditionalVerticalOption; set { _explicitNullValueAdditionalVerticalOption = value; AdditionalData?.Remove("additional_vertical_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_vertical_option"); else _explicitNullProperties?.Remove("additional_vertical_option"); } }
+        private string? _explicitNullValueAdditionalVerticalOption = default!;
+#nullable restore
+#else
+        public string AdditionalVerticalOption { get => _explicitNullValueAdditionalVerticalOption; set { _explicitNullValueAdditionalVerticalOption = value; AdditionalData?.Remove("additional_vertical_option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_vertical_option"); else _explicitNullProperties?.Remove("additional_vertical_option"); } }
+        private string _explicitNullValueAdditionalVerticalOption = default!;
+#endif
+        /// <summary>The business_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BusinessMetadata { get => _explicitNullValueBusinessMetadata; set { _explicitNullValueBusinessMetadata = value; AdditionalData?.Remove("business_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_metadata"); else _explicitNullProperties?.Remove("business_metadata"); } }
@@ -58,7 +75,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string BusinessMetadata { get => _explicitNullValueBusinessMetadata; set { _explicitNullValueBusinessMetadata = value; AdditionalData?.Remove("business_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business_metadata"); else _explicitNullProperties?.Remove("business_metadata"); } }
         private string _explicitNullValueBusinessMetadata = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The capabilities property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private string? _explicitNullValueCapabilities = default!;
+#nullable restore
+#else
+        public string Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; AdditionalData?.Remove("capabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private string _explicitNullValueCapabilities = default!;
+#endif
+        /// <summary>The catalog_segment_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CatalogSegmentFilter { get => _explicitNullValueCatalogSegmentFilter; set { _explicitNullValueCatalogSegmentFilter = value; AdditionalData?.Remove("catalog_segment_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_filter"); else _explicitNullProperties?.Remove("catalog_segment_filter"); } }
@@ -78,7 +105,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string CatalogSegmentProductSetId { get => _explicitNullValueCatalogSegmentProductSetId; set { _explicitNullValueCatalogSegmentProductSetId = value; AdditionalData?.Remove("catalog_segment_product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment_product_set_id"); else _explicitNullProperties?.Remove("catalog_segment_product_set_id"); } }
         private string _explicitNullValueCatalogSegmentProductSetId = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The da_display_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; AdditionalData?.Remove("da_display_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
@@ -88,7 +115,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; AdditionalData?.Remove("da_display_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
         private string _explicitNullValueDaDisplaySettings = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The destination_catalog_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DestinationCatalogSettings { get => _explicitNullValueDestinationCatalogSettings; set { _explicitNullValueDestinationCatalogSettings = value; AdditionalData?.Remove("destination_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_catalog_settings"); else _explicitNullProperties?.Remove("destination_catalog_settings"); } }
@@ -98,7 +125,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string DestinationCatalogSettings { get => _explicitNullValueDestinationCatalogSettings; set { _explicitNullValueDestinationCatalogSettings = value; AdditionalData?.Remove("destination_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_catalog_settings"); else _explicitNullProperties?.Remove("destination_catalog_settings"); } }
         private string _explicitNullValueDestinationCatalogSettings = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
+        /// <summary>The flight_catalog_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FlightCatalogSettings { get => _explicitNullValueFlightCatalogSettings; set { _explicitNullValueFlightCatalogSettings = value; AdditionalData?.Remove("flight_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_catalog_settings"); else _explicitNullProperties?.Remove("flight_catalog_settings"); } }
@@ -107,6 +144,36 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 #else
         public string FlightCatalogSettings { get => _explicitNullValueFlightCatalogSettings; set { _explicitNullValueFlightCatalogSettings = value; AdditionalData?.Remove("flight_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flight_catalog_settings"); else _explicitNullProperties?.Remove("flight_catalog_settings"); } }
         private string _explicitNullValueFlightCatalogSettings = default!;
+#endif
+        /// <summary>The hotel_catalog_settings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HotelCatalogSettings { get => _explicitNullValueHotelCatalogSettings; set { _explicitNullValueHotelCatalogSettings = value; AdditionalData?.Remove("hotel_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hotel_catalog_settings"); else _explicitNullProperties?.Remove("hotel_catalog_settings"); } }
+        private string? _explicitNullValueHotelCatalogSettings = default!;
+#nullable restore
+#else
+        public string HotelCatalogSettings { get => _explicitNullValueHotelCatalogSettings; set { _explicitNullValueHotelCatalogSettings = value; AdditionalData?.Remove("hotel_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hotel_catalog_settings"); else _explicitNullProperties?.Remove("hotel_catalog_settings"); } }
+        private string _explicitNullValueHotelCatalogSettings = default!;
+#endif
+        /// <summary>The image_display_settings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImageDisplaySettings { get => _explicitNullValueImageDisplaySettings; set { _explicitNullValueImageDisplaySettings = value; AdditionalData?.Remove("image_display_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_display_settings"); else _explicitNullProperties?.Remove("image_display_settings"); } }
+        private string? _explicitNullValueImageDisplaySettings = default!;
+#nullable restore
+#else
+        public string ImageDisplaySettings { get => _explicitNullValueImageDisplaySettings; set { _explicitNullValueImageDisplaySettings = value; AdditionalData?.Remove("image_display_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image_display_settings"); else _explicitNullProperties?.Remove("image_display_settings"); } }
+        private string _explicitNullValueImageDisplaySettings = default!;
+#endif
+        /// <summary>The localization_settings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LocalizationSettings { get => _explicitNullValueLocalizationSettings; set { _explicitNullValueLocalizationSettings = value; AdditionalData?.Remove("localization_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localization_settings"); else _explicitNullProperties?.Remove("localization_settings"); } }
+        private string? _explicitNullValueLocalizationSettings = default!;
+#nullable restore
+#else
+        public string LocalizationSettings { get => _explicitNullValueLocalizationSettings; set { _explicitNullValueLocalizationSettings = value; AdditionalData?.Remove("localization_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localization_settings"); else _explicitNullProperties?.Remove("localization_settings"); } }
+        private string _explicitNullValueLocalizationSettings = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -128,7 +195,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string ParentCatalogId { get => _explicitNullValueParentCatalogId; set { _explicitNullValueParentCatalogId = value; AdditionalData?.Remove("parent_catalog_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_catalog_id"); else _explicitNullProperties?.Remove("parent_catalog_id"); } }
         private string _explicitNullValueParentCatalogId = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The partner_integration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PartnerIntegration { get => _explicitNullValuePartnerIntegration; set { _explicitNullValuePartnerIntegration = value; AdditionalData?.Remove("partner_integration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_integration"); else _explicitNullProperties?.Remove("partner_integration"); } }
@@ -138,7 +205,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string PartnerIntegration { get => _explicitNullValuePartnerIntegration; set { _explicitNullValuePartnerIntegration = value; AdditionalData?.Remove("partner_integration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_integration"); else _explicitNullProperties?.Remove("partner_integration"); } }
         private string _explicitNullValuePartnerIntegration = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The store_catalog_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; AdditionalData?.Remove("store_catalog_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
@@ -149,8 +216,15 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueStoreCatalogSettings = default!;
 #endif
         /// <summary>The vertical property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; AdditionalData?.Remove("vertical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? _explicitNullValueVertical = default!;
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; AdditionalData?.Remove("vertical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
+        private string? _explicitNullValueVertical = default!;
+#nullable restore
+#else
+        public string Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; AdditionalData?.Remove("vertical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
+        private string _explicitNullValueVertical = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.PostIdOwnedProductCatalogsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -174,20 +248,25 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(12)
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
-                { "additional_vertical_option", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdditionalVerticalOption = default; _explicitNullProperties?.Remove("additional_vertical_option"); AdditionalData["additional_vertical_option"] = unknown; } else { AdditionalVerticalOption = parsed; AdditionalData.Remove("additional_vertical_option"); } } },
+                { "additional_vertical_option", n => { AdditionalVerticalOption = n.GetStringValue(); } },
                 { "business_metadata", n => { BusinessMetadata = n.GetStringValue(); } },
+                { "capabilities", n => { Capabilities = n.GetStringValue(); } },
                 { "catalog_segment_filter", n => { CatalogSegmentFilter = n.GetStringValue(); } },
                 { "catalog_segment_product_set_id", n => { CatalogSegmentProductSetId = n.GetStringValue(); } },
                 { "da_display_settings", n => { DaDisplaySettings = n.GetStringValue(); } },
                 { "destination_catalog_settings", n => { DestinationCatalogSettings = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
                 { "flight_catalog_settings", n => { FlightCatalogSettings = n.GetStringValue(); } },
+                { "hotel_catalog_settings", n => { HotelCatalogSettings = n.GetStringValue(); } },
+                { "image_display_settings", n => { ImageDisplaySettings = n.GetStringValue(); } },
+                { "localization_settings", n => { LocalizationSettings = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parent_catalog_id", n => { ParentCatalogId = n.GetStringValue(); } },
                 { "partner_integration", n => { PartnerIntegration = n.GetStringValue(); } },
                 { "store_catalog_settings", n => { StoreCatalogSettings = n.GetStringValue(); } },
-                { "vertical", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVertical = default; _explicitNullProperties?.Remove("vertical"); AdditionalData["vertical"] = unknown; } else { Vertical = parsed; AdditionalData.Remove("vertical"); } } },
+                { "vertical", n => { Vertical = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -197,18 +276,23 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsAdditionalVerticalOptionEnumParam>("additional_vertical_option", AdditionalVerticalOption);
+            writer.WriteStringValue("additional_vertical_option", AdditionalVerticalOption);
             writer.WriteStringValue("business_metadata", BusinessMetadata);
+            writer.WriteStringValue("capabilities", Capabilities);
             writer.WriteStringValue("catalog_segment_filter", CatalogSegmentFilter);
             writer.WriteStringValue("catalog_segment_product_set_id", CatalogSegmentProductSetId);
             writer.WriteStringValue("da_display_settings", DaDisplaySettings);
             writer.WriteStringValue("destination_catalog_settings", DestinationCatalogSettings);
+            writer.WriteStringValue("fields", Fields);
             writer.WriteStringValue("flight_catalog_settings", FlightCatalogSettings);
+            writer.WriteStringValue("hotel_catalog_settings", HotelCatalogSettings);
+            writer.WriteStringValue("image_display_settings", ImageDisplaySettings);
+            writer.WriteStringValue("localization_settings", LocalizationSettings);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parent_catalog_id", ParentCatalogId);
             writer.WriteStringValue("partner_integration", PartnerIntegration);
             writer.WriteStringValue("store_catalog_settings", StoreCatalogSettings);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam>("vertical", Vertical);
+            writer.WriteStringValue("vertical", Vertical);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

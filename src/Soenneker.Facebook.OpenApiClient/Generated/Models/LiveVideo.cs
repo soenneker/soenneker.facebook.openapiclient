@@ -225,8 +225,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValueSecureStreamUrl = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.EventliveVideosStatusEnumParam? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.EventliveVideosStatusEnumParam? _explicitNullValueStatus = default!;
+        public global::Soenneker.Facebook.OpenApiClient.Models.GroupliveVideosStatusEnumParam? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.GroupliveVideosStatusEnumParam? _explicitNullValueStatus = default!;
         /// <summary>The stream_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -322,7 +322,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "recommended_encoder_settings", n => { RecommendedEncoderSettings = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings>(global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings.CreateFromDiscriminatorValue); } },
                 { "seconds_left", n => { SecondsLeft = n.GetLongValue(); } },
                 { "secure_stream_url", n => { SecureStreamUrl = n.GetStringValue(); } },
-                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.EventliveVideosStatusEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.GroupliveVideosStatusEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "stream_url", n => { StreamUrl = n.GetStringValue(); } },
                 { "targeting", n => { Targeting = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting>(global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -357,7 +357,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoRecommendedEncoderSettings>("recommended_encoder_settings", RecommendedEncoderSettings);
             writer.WriteLongValue("seconds_left", SecondsLeft);
             writer.WriteStringValue("secure_stream_url", SecureStreamUrl);
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.EventliveVideosStatusEnumParam>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.GroupliveVideosStatusEnumParam>("status", Status);
             writer.WriteStringValue("stream_url", StreamUrl);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.LiveVideoTargeting>("targeting", Targeting);
             writer.WriteStringValue("title", Title);

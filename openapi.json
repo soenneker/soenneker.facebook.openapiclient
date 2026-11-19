@@ -631,7 +631,6 @@
           "ExtendedCreditAllocationConfig",
           "ExtendedCreditApplication",
           "ExtendedCreditInvoiceGroup",
-          "ExternalMerchantSettings",
           "FAMEKumo",
           "FBImageCopyrightMatch",
           "FantasyGame",
@@ -788,8 +787,7 @@
           "WithAsset3D",
           "WoodhengePurchasedPAYGReceipt",
           "WoodhengeSupporter",
-          "WorkExperience",
-          "WorkSkill"
+          "WorkExperience"
         ],
         "parameters": [
           {
@@ -2711,15 +2709,6 @@
             "parameters": []
           },
           {
-            "node": "ExternalMerchantSettings",
-            "name": "#get",
-            "method": "get",
-            "endpoint": "",
-            "basePath": null,
-            "returnType": "ExternalMerchantSettings",
-            "parameters": []
-          },
-          {
             "node": "FAMEKumo",
             "name": "#get",
             "method": "get",
@@ -4323,15 +4312,6 @@
             "endpoint": "",
             "basePath": null,
             "returnType": "WorkExperience",
-            "parameters": []
-          },
-          {
-            "node": "WorkSkill",
-            "name": "#get",
-            "method": "get",
-            "endpoint": "",
-            "basePath": null,
-            "returnType": "WorkSkill",
             "parameters": []
           }
         ],
@@ -6458,6 +6438,9 @@
                     "source_instagram_media_id": {
                       "type": "string"
                     },
+                    "source_threads_media_id": {
+                      "type": "string"
+                    },
                     "template_url": {
                       "type": "string"
                     },
@@ -7041,9 +7024,6 @@
                     },
                     "max_budget_spend_percentage": {
                       "type": "string"
-                    },
-                    "meta_moment_maker_spec": {
-                      "$ref": "#/components/schemas/MetaMomentMakerConfig"
                     },
                     "min_budget_spend_percentage": {
                       "type": "string"
@@ -13393,12 +13373,6 @@
                     "customer_po_number": {
                       "type": "string"
                     },
-                    "connect_woo": {
-                      "type": "string"
-                    },
-                    "external_platform": {
-                      "type": "string"
-                    },
                     "added_to_dashboard_time": {
                       "type": "string",
                       "format": "date-time"
@@ -14639,6 +14613,9 @@
                     "page_id": {
                       "type": "string"
                     },
+                    "phone_otp_verification_type": {
+                      "$ref": "#/components/schemas/pageleadgen_forms_phone_otp_verification_type_enum_param"
+                    },
                     "multi_share_optimized": {
                       "type": "boolean"
                     },
@@ -14694,6 +14671,14 @@
                       "type": "string"
                     },
                     "total_views": {
+                      "type": "string"
+                    },
+                    "declared_live_seconds": {
+                      "type": "integer",
+                      "format": "int64",
+                      "minimum": 0
+                    },
+                    "live_cadence": {
                       "type": "string"
                     },
                     "live_video_ad_type": {
@@ -18168,9 +18153,6 @@
                       "$ref": "#/components/schemas/ExtendedCreditInvoiceGroup"
                     },
                     {
-                      "$ref": "#/components/schemas/ExternalMerchantSettings"
-                    },
-                    {
                       "$ref": "#/components/schemas/FAMEKumo"
                     },
                     {
@@ -18640,9 +18622,6 @@
                     },
                     {
                       "$ref": "#/components/schemas/WorkExperience"
-                    },
-                    {
-                      "$ref": "#/components/schemas/WorkSkill"
                     }
                   ]
                 }
@@ -20024,11 +20003,6 @@
                 "name": "max_budget_spend_percentage",
                 "required": false,
                 "type": "unsigned int"
-              },
-              {
-                "name": "meta_moment_maker_spec",
-                "required": false,
-                "type": "map"
               },
               {
                 "name": "min_budget_spend_percentage",
@@ -22681,6 +22655,11 @@
                 "type": "pagepost_feed_story_visibility"
               },
               {
+                "name": "is_ai_generated",
+                "required": false,
+                "type": "bool"
+              },
+              {
                 "name": "is_explicit_location",
                 "required": false,
                 "type": "bool"
@@ -22844,6 +22823,11 @@
                 "name": "feed_story_visibility",
                 "required": false,
                 "type": "post_feed_story_visibility"
+              },
+              {
+                "name": "is_ai_generated",
+                "required": false,
+                "type": "bool"
               },
               {
                 "name": "is_explicit_location",
@@ -24803,15 +24787,6 @@
                     "type": "integer",
                     "format": "int64",
                     "minimum": 0
-                  },
-                  "meta_moment_maker_spec": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
                   },
                   "min_budget_spend_percentage": {
                     "type": "integer",
@@ -27731,15 +27706,6 @@
                         "type": "integer",
                         "format": "int64",
                         "minimum": 0
-                      },
-                      "meta_moment_maker_spec": {
-                        "type": "string",
-                        "description": "A JSON-encoded value.",
-                        "contentMediaType": "application/json",
-                        "contentSchema": {
-                          "type": "object",
-                          "additionalProperties": true
-                        }
                       },
                       "min_budget_spend_percentage": {
                         "type": "integer",
@@ -30732,15 +30698,6 @@
                             "format": "int64",
                             "minimum": 0
                           },
-                          "meta_moment_maker_spec": {
-                            "type": "string",
-                            "description": "A JSON-encoded value.",
-                            "contentMediaType": "application/json",
-                            "contentSchema": {
-                              "type": "object",
-                              "additionalProperties": true
-                            }
-                          },
                           "min_budget_spend_percentage": {
                             "type": "integer",
                             "format": "int64",
@@ -33063,6 +33020,9 @@
                           "feed_story_visibility": {
                             "$ref": "#/components/schemas/pagepost_feed_story_visibility"
                           },
+                          "is_ai_generated": {
+                            "type": "boolean"
+                          },
                           "is_explicit_location": {
                             "type": "boolean"
                           },
@@ -33207,6 +33167,9 @@
                           },
                           "feed_story_visibility": {
                             "$ref": "#/components/schemas/post_feed_story_visibility"
+                          },
+                          "is_ai_generated": {
+                            "type": "boolean"
                           },
                           "is_explicit_location": {
                             "type": "boolean"
@@ -35332,6 +35295,11 @@
                 "type": "string"
               },
               {
+                "name": "source_threads_media_id",
+                "required": false,
+                "type": "string"
+              },
+              {
                 "name": "template_url",
                 "required": false,
                 "type": "string"
@@ -35753,6 +35721,9 @@
                     "type": "string"
                   },
                   "source_instagram_media_id": {
+                    "type": "string"
+                  },
+                  "source_threads_media_id": {
                     "type": "string"
                   },
                   "template_url": {
@@ -37041,9 +37012,6 @@
                           },
                           "max_budget_spend_percentage": {
                             "type": "string"
-                          },
-                          "meta_moment_maker_spec": {
-                            "$ref": "#/components/schemas/MetaMomentMakerConfig"
                           },
                           "min_budget_spend_percentage": {
                             "type": "string"
@@ -48810,11 +48778,6 @@
                 "type": "unsigned int"
               },
               {
-                "name": "meta_moment_maker_spec",
-                "required": false,
-                "type": "map"
-              },
-              {
                 "name": "min_budget_spend_percentage",
                 "required": false,
                 "type": "unsigned int"
@@ -49261,15 +49224,6 @@
                     "type": "integer",
                     "format": "int64",
                     "minimum": 0
-                  },
-                  "meta_moment_maker_spec": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
                   },
                   "min_budget_spend_percentage": {
                     "type": "integer",
@@ -51946,7 +51900,8 @@
           "AdsPixel",
           "InstagramBusinessAsset",
           "Page",
-          "ProductCatalog"
+          "ProductCatalog",
+          "ProductCatalogAgencies"
         ],
         "parameters": [
           {
@@ -52078,6 +52033,51 @@
                 "type": "map"
               }
             ]
+          },
+          {
+            "node": "ProductCatalogAgencies",
+            "name": "genPost",
+            "method": "post",
+            "endpoint": "agencies",
+            "basePath": null,
+            "returnType": "ProductCatalogAgenciesPost",
+            "parameters": [
+              {
+                "name": "business",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "enabled_collab_terms",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "permitted_roles",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "permitted_tasks",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "skip_defaults",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "utm_settings",
+                "required": false,
+                "type": "string"
+              }
+            ]
           }
         ],
         "responses": {
@@ -52124,6 +52124,11 @@
                       "type": "object",
                       "additionalProperties": true,
                       "x-meta-return-type": "ProductCatalog"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": true,
+                      "x-meta-return-type": "ProductCatalogAgenciesPost"
                     }
                   ]
                 }
@@ -52148,7 +52153,7 @@
           }
         },
         "requestBody": {
-          "required": true,
+          "required": false,
           "content": {
             "application/x-www-form-urlencoded": {
               "schema": {
@@ -52161,44 +52166,24 @@
                     "type": "string"
                   },
                   "enabled_collab_terms": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/productcatalogagencies_enabled_collab_terms_enum_param"
-                      }
-                    }
+                    "type": "string"
                   },
                   "permitted_roles": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/productcatalogagencies_permitted_roles_enum_param"
-                      }
-                    }
+                    "type": "string"
                   },
                   "skip_defaults": {
-                    "type": "boolean"
+                    "type": "string",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {}
                   },
                   "utm_settings": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
+                  },
+                  "fields": {
+                    "type": "string"
                   }
                 },
                 "additionalProperties": true,
-                "required": [
-                  "business"
-                ],
                 "x-meta-schema-variants": [
                   {
                     "type": "object",
@@ -52345,6 +52330,32 @@
                     "required": [
                       "business"
                     ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "business": {
+                        "type": "string"
+                      },
+                      "enabled_collab_terms": {
+                        "type": "string"
+                      },
+                      "fields": {
+                        "type": "string"
+                      },
+                      "permitted_roles": {
+                        "type": "string"
+                      },
+                      "permitted_tasks": {
+                        "type": "string"
+                      },
+                      "skip_defaults": {
+                        "type": "string"
+                      },
+                      "utm_settings": {
+                        "type": "string"
+                      }
+                    }
                   }
                 ]
               }
@@ -64484,8 +64495,7 @@
       "get": {
         "operationId": "get_id_users",
         "tags": [
-          "AdAccount",
-          "WorkSkill"
+          "AdAccount"
         ],
         "parameters": [
           {
@@ -64501,8 +64511,7 @@
             "in": "query",
             "schema": {
               "type": "string"
-            },
-            "required": false
+            }
           },
           {
             "name": "limit",
@@ -64510,24 +64519,21 @@
             "schema": {
               "type": "integer",
               "minimum": 1
-            },
-            "required": false
+            }
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
               "type": "string"
-            },
-            "required": false
+            }
           },
           {
             "name": "before",
             "in": "query",
             "schema": {
               "type": "string"
-            },
-            "required": false
+            }
           }
         ],
         "x-meta-operations": [
@@ -64538,15 +64544,6 @@
             "endpoint": "users",
             "basePath": null,
             "returnType": "AdAccountUser",
-            "parameters": []
-          },
-          {
-            "node": "WorkSkill",
-            "name": null,
-            "method": "get",
-            "endpoint": "users",
-            "basePath": null,
-            "returnType": "User",
             "parameters": []
           }
         ],
@@ -64561,187 +64558,7 @@
                     "data": {
                       "type": "array",
                       "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "tasks": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          },
-                          "about": {
-                            "type": "string"
-                          },
-                          "age_range": {
-                            "$ref": "#/components/schemas/AgeRange"
-                          },
-                          "birthday": {
-                            "type": "string"
-                          },
-                          "client_business_id": {
-                            "type": "string"
-                          },
-                          "community": {
-                            "$ref": "#/components/schemas/Group"
-                          },
-                          "cover": {
-                            "$ref": "#/components/schemas/UserCoverPhoto"
-                          },
-                          "currency": {
-                            "$ref": "#/components/schemas/Currency"
-                          },
-                          "education": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/EducationExperience"
-                            }
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "favorite_athletes": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/Experience"
-                            }
-                          },
-                          "favorite_teams": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/Experience"
-                            }
-                          },
-                          "first_name": {
-                            "type": "string"
-                          },
-                          "gender": {
-                            "type": "string"
-                          },
-                          "hometown": {
-                            "$ref": "#/components/schemas/Page"
-                          },
-                          "inspirational_people": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/Experience"
-                            }
-                          },
-                          "install_type": {
-                            "type": "string"
-                          },
-                          "installed": {
-                            "type": "boolean"
-                          },
-                          "is_guest_user": {
-                            "type": "boolean"
-                          },
-                          "is_work_account": {
-                            "type": "boolean"
-                          },
-                          "languages": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/Experience"
-                            }
-                          },
-                          "last_name": {
-                            "type": "string"
-                          },
-                          "link": {
-                            "type": "string"
-                          },
-                          "local_news_megaphone_dismiss_status": {
-                            "type": "boolean"
-                          },
-                          "local_news_subscription_status": {
-                            "type": "boolean"
-                          },
-                          "locale": {
-                            "type": "string"
-                          },
-                          "location": {
-                            "$ref": "#/components/schemas/Page"
-                          },
-                          "meeting_for": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          },
-                          "middle_name": {
-                            "type": "string"
-                          },
-                          "name_format": {
-                            "type": "string"
-                          },
-                          "payment_pricepoints": {
-                            "$ref": "#/components/schemas/PaymentPricepoints"
-                          },
-                          "political": {
-                            "type": "string"
-                          },
-                          "profile_pic": {
-                            "type": "string"
-                          },
-                          "quotes": {
-                            "type": "string"
-                          },
-                          "relationship_status": {
-                            "type": "string"
-                          },
-                          "religion": {
-                            "type": "string"
-                          },
-                          "shared_login_upgrade_required_by": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "short_name": {
-                            "type": "string"
-                          },
-                          "significant_other": {
-                            "$ref": "#/components/schemas/User"
-                          },
-                          "sports": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/components/schemas/Experience"
-                            }
-                          },
-                          "supports_donate_button_in_live_video": {
-                            "type": "boolean"
-                          },
-                          "third_party_id": {
-                            "type": "string"
-                          },
-                          "timezone": {
-                            "type": "number",
-                            "format": "float"
-                          },
-                          "token_for_business": {
-                            "type": "string"
-                          },
-                          "updated_time": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "verified": {
-                            "type": "boolean"
-                          },
-                          "video_upload_limits": {
-                            "$ref": "#/components/schemas/VideoUploadLimits"
-                          },
-                          "website": {
-                            "type": "string"
-                          }
-                        },
-                        "additionalProperties": true
+                        "$ref": "#/components/schemas/AdAccountUser"
                       }
                     },
                     "paging": {
@@ -64752,48 +64569,7 @@
                       "type": "object",
                       "additionalProperties": true
                     }
-                  },
-                  "additionalProperties": true,
-                  "x-meta-schema-variants": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "data": {
-                          "type": "array",
-                          "items": {
-                            "$ref": "#/components/schemas/AdAccountUser"
-                          }
-                        },
-                        "paging": {
-                          "type": "object",
-                          "additionalProperties": true
-                        },
-                        "summary": {
-                          "type": "object",
-                          "additionalProperties": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "properties": {
-                        "data": {
-                          "type": "array",
-                          "items": {
-                            "$ref": "#/components/schemas/User"
-                          }
-                        },
-                        "paging": {
-                          "type": "object",
-                          "additionalProperties": true
-                        },
-                        "summary": {
-                          "type": "object",
-                          "additionalProperties": true
-                        }
-                      }
-                    }
-                  ]
+                  }
                 }
               }
             }
@@ -68138,6 +67914,87 @@
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/naming_templates": {
+      "post": {
+        "operationId": "post_id_naming_templates",
+        "tags": [
+          "AdAccountNamingTemplates"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "AdAccountNamingTemplates",
+            "name": "genPost",
+            "method": "post",
+            "endpoint": "naming_templates",
+            "basePath": null,
+            "returnType": "AdAccountNamingTemplatesPost",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "x-meta-return-type": "AdAccountNamingTemplatesPost",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "post_id": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {}
               }
             }
           }
@@ -87533,11 +87390,6 @@
                 "type": "unsigned int"
               },
               {
-                "name": "click_id",
-                "required": false,
-                "type": "string"
-              },
-              {
                 "name": "custom_events",
                 "required": false,
                 "type": "list\u003CObject\u003E"
@@ -87591,6 +87443,11 @@
                 "name": "fb_view_time",
                 "required": false,
                 "type": "unsigned int"
+              },
+              {
+                "name": "fbc",
+                "required": false,
+                "type": "string"
               },
               {
                 "name": "google_install_referrer",
@@ -87706,9 +87563,6 @@
                     "format": "int64",
                     "minimum": 0
                   },
-                  "click_id": {
-                    "type": "string"
-                  },
                   "custom_events": {
                     "type": "string",
                     "description": "A JSON-encoded value.",
@@ -87760,6 +87614,9 @@
                     "type": "integer",
                     "format": "int64",
                     "minimum": 0
+                  },
+                  "fbc": {
+                    "type": "string"
                   },
                   "google_install_referrer": {
                     "type": "string"
@@ -93416,6 +93273,881 @@
         }
       }
     },
+    "/{node-id}/assigned_ad_accounts": {
+      "get": {
+        "operationId": "get_id_assigned_ad_accounts",
+        "tags": [
+          "AssignedAdAccounts",
+          "BusinessUser",
+          "SystemUser",
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtering",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "x-meta-schema-variants": [
+                {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              ]
+            }
+          },
+          {
+            "name": "summary",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "AssignedAdAccounts",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "assigned_ad_accounts",
+            "basePath": null,
+            "returnType": "AssignedAdAccountsGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "filtering",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              },
+              {
+                "name": "summary",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "BusinessUser",
+            "name": null,
+            "method": "get",
+            "endpoint": "assigned_ad_accounts",
+            "basePath": null,
+            "returnType": "AdAccount",
+            "parameters": []
+          },
+          {
+            "node": "SystemUser",
+            "name": null,
+            "method": "get",
+            "endpoint": "assigned_ad_accounts",
+            "basePath": null,
+            "returnType": "AdAccount",
+            "parameters": []
+          },
+          {
+            "node": "User",
+            "name": null,
+            "method": "get",
+            "endpoint": "assigned_ad_accounts",
+            "basePath": null,
+            "returnType": "AdAccount",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": true
+                            }
+                          },
+                          "paging": {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          "account_id": {
+                            "type": "string"
+                          },
+                          "account_status": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "ad_account_promotable_objects": {
+                            "$ref": "#/components/schemas/AdAccountPromotableObjects"
+                          },
+                          "age": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "agency_client_declaration": {
+                            "$ref": "#/components/schemas/AgencyClientDeclaration"
+                          },
+                          "all_capabilities": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "amount_spent": {
+                            "type": "string"
+                          },
+                          "attribution_spec": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/components/schemas/AttributionSpec"
+                            }
+                          },
+                          "balance": {
+                            "type": "string"
+                          },
+                          "brand_safety_content_filter_levels": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "business_city": {
+                            "type": "string"
+                          },
+                          "business_country_code": {
+                            "type": "string"
+                          },
+                          "business_name": {
+                            "type": "string"
+                          },
+                          "business_state": {
+                            "type": "string"
+                          },
+                          "business_street": {
+                            "type": "string"
+                          },
+                          "business_street2": {
+                            "type": "string"
+                          },
+                          "business_zip": {
+                            "type": "string"
+                          },
+                          "can_create_brand_lift_study": {
+                            "type": "boolean"
+                          },
+                          "capabilities": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "created_time": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "currency": {
+                            "$ref": "#/components/schemas/adaccount_currency"
+                          },
+                          "custom_audience_info": {
+                            "$ref": "#/components/schemas/CustomAudienceGroup"
+                          },
+                          "default_dsa_beneficiary": {
+                            "type": "string"
+                          },
+                          "default_dsa_payor": {
+                            "type": "string"
+                          },
+                          "disable_reason": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "end_advertiser": {
+                            "type": "string"
+                          },
+                          "end_advertiser_name": {
+                            "type": "string"
+                          },
+                          "existing_customers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "expired_funding_source_details": {
+                            "$ref": "#/components/schemas/FundingSourceDetails"
+                          },
+                          "extended_credit_invoice_group": {
+                            "$ref": "#/components/schemas/ExtendedCreditInvoiceGroup"
+                          },
+                          "failed_delivery_checks": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/components/schemas/DeliveryCheck"
+                            }
+                          },
+                          "fb_entity": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "funding_source": {
+                            "type": "string"
+                          },
+                          "funding_source_details": {
+                            "$ref": "#/components/schemas/FundingSourceDetails"
+                          },
+                          "has_migrated_permissions": {
+                            "type": "boolean"
+                          },
+                          "has_page_authorized_adaccount": {
+                            "type": "boolean"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "io_number": {
+                            "type": "string"
+                          },
+                          "is_attribution_spec_system_default": {
+                            "type": "boolean"
+                          },
+                          "is_ba_skip_delayed_eligible": {
+                            "type": "boolean"
+                          },
+                          "is_direct_deals_enabled": {
+                            "type": "boolean"
+                          },
+                          "is_in_3ds_authorization_enabled_market": {
+                            "type": "boolean"
+                          },
+                          "is_notifications_enabled": {
+                            "type": "boolean"
+                          },
+                          "is_personal": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "is_prepay_account": {
+                            "type": "boolean"
+                          },
+                          "is_tax_id_required": {
+                            "type": "boolean"
+                          },
+                          "liable_address": {
+                            "$ref": "#/components/schemas/CRMAddress"
+                          },
+                          "line_numbers": {
+                            "type": "array",
+                            "items": {
+                              "type": "integer",
+                              "format": "int64"
+                            }
+                          },
+                          "marketing_messages_settings": {
+                            "$ref": "#/components/schemas/AdAccountMarketingMessagesSettings"
+                          },
+                          "media_agency": {
+                            "type": "string"
+                          },
+                          "min_campaign_group_spend_cap": {
+                            "type": "string"
+                          },
+                          "min_daily_budget": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "offsite_clo_signal_status": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "offsite_pixels_tos_accepted": {
+                            "type": "boolean"
+                          },
+                          "opportunity_score": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "opportunity_score_weight": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "owner": {
+                            "type": "string"
+                          },
+                          "owner_business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "partner": {
+                            "type": "string"
+                          },
+                          "rf_spec": {
+                            "$ref": "#/components/schemas/ReachFrequencySpec"
+                          },
+                          "send_bill_to_address": {
+                            "$ref": "#/components/schemas/CRMAddress"
+                          },
+                          "show_checkout_experience": {
+                            "type": "boolean"
+                          },
+                          "sold_to_address": {
+                            "$ref": "#/components/schemas/CRMAddress"
+                          },
+                          "spend_cap": {
+                            "type": "string"
+                          },
+                          "tax_id": {
+                            "type": "string"
+                          },
+                          "tax_id_status": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "tax_id_type": {
+                            "type": "string"
+                          },
+                          "timezone_id": {
+                            "type": "integer",
+                            "format": "int64",
+                            "minimum": 0
+                          },
+                          "timezone_name": {
+                            "type": "string"
+                          },
+                          "timezone_offset_hours_utc": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "tos_accepted": {
+                            "type": "object",
+                            "additionalProperties": {
+                              "type": "integer",
+                              "format": "int64"
+                            }
+                          },
+                          "user_access_expire_time": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "user_tasks": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "user_tos_accepted": {
+                            "type": "object",
+                            "additionalProperties": {
+                              "type": "integer",
+                              "format": "int64"
+                            }
+                          },
+                          "viewable_business": {
+                            "$ref": "#/components/schemas/Business"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "additionalProperties": true,
+                  "x-meta-schema-variants": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/AssignedAdAccountsGet"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/AdAccount"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/assigned_product_catalogs": {
+      "get": {
+        "operationId": "get_id_assigned_product_catalogs",
+        "tags": [
+          "AssignedProductCatalogs",
+          "BusinessUser",
+          "SystemUser",
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date_format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtering",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "x-meta-schema-variants": [
+                {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              ]
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "summary",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "AssignedProductCatalogs",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "assigned_product_catalogs",
+            "basePath": null,
+            "returnType": "AssignedProductCatalogsGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "date_format",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "filtering",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              },
+              {
+                "name": "sort",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "summary",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "BusinessUser",
+            "name": null,
+            "method": "get",
+            "endpoint": "assigned_product_catalogs",
+            "basePath": null,
+            "returnType": "ProductCatalog",
+            "parameters": []
+          },
+          {
+            "node": "SystemUser",
+            "name": null,
+            "method": "get",
+            "endpoint": "assigned_product_catalogs",
+            "basePath": null,
+            "returnType": "ProductCatalog",
+            "parameters": []
+          },
+          {
+            "node": "User",
+            "name": null,
+            "method": "get",
+            "endpoint": "assigned_product_catalogs",
+            "basePath": null,
+            "returnType": "ProductCatalog",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": true
+                            }
+                          },
+                          "paging": {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          "summary": {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          "ad_account_to_collaborative_ads_share_settings": {
+                            "$ref": "#/components/schemas/CollaborativeAdsShareSettings"
+                          },
+                          "agency_collaborative_ads_share_settings": {
+                            "$ref": "#/components/schemas/CollaborativeAdsShareSettings"
+                          },
+                          "business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "catalog_store": {
+                            "$ref": "#/components/schemas/StoreCatalogSettings"
+                          },
+                          "commerce_merchant_settings": {
+                            "$ref": "#/components/schemas/CommerceMerchantSettings"
+                          },
+                          "creator_user": {
+                            "$ref": "#/components/schemas/User"
+                          },
+                          "da_display_settings": {
+                            "$ref": "#/components/schemas/ProductCatalogImageSettings"
+                          },
+                          "default_image_url": {
+                            "type": "string"
+                          },
+                          "fallback_image_url": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "feed_count": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "is_catalog_segment": {
+                            "type": "boolean"
+                          },
+                          "is_local_catalog": {
+                            "type": "boolean"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "owner_business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "product_count": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "show_assign_permissions": {
+                            "type": "boolean"
+                          },
+                          "store_catalog_settings": {
+                            "$ref": "#/components/schemas/StoreCatalogSettings"
+                          },
+                          "user_access_expire_time": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "vertical": {
+                            "$ref": "#/components/schemas/businessowned_product_catalogs_vertical_enum_param"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "additionalProperties": true,
+                  "x-meta-schema-variants": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/AssignedProductCatalogsGet"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ProductCatalog"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/{node-id}/update_records": {
       "get": {
         "operationId": "get_id_update_records",
@@ -97707,7 +98439,8 @@
       "get": {
         "operationId": "get_id_client_product_catalogs",
         "tags": [
-          "Business"
+          "Business",
+          "BusinessClientProductCatalogs"
         ],
         "parameters": [
           {
@@ -97723,26 +98456,71 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "required": false
           },
           {
             "name": "limit",
             "in": "query",
             "schema": {
               "type": "integer",
-              "minimum": 1
-            }
+              "x-meta-schema-variants": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              ]
+            },
+            "required": false
           },
           {
             "name": "after",
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "required": false
           },
           {
             "name": "before",
             "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "name": "date_format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtering",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "summary",
+            "in": "query",
+            "required": false,
             "schema": {
               "type": "string"
             }
@@ -97757,6 +98535,56 @@
             "basePath": null,
             "returnType": "ProductCatalog",
             "parameters": []
+          },
+          {
+            "node": "BusinessClientProductCatalogs",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "client_product_catalogs",
+            "basePath": null,
+            "returnType": "BusinessClientProductCatalogsGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "date_format",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "filtering",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              },
+              {
+                "name": "sort",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "summary",
+                "required": false,
+                "type": "string"
+              }
+            ]
           }
         ],
         "responses": {
@@ -97770,7 +98598,91 @@
                     "data": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/ProductCatalog"
+                        "type": "object",
+                        "properties": {
+                          "ad_account_to_collaborative_ads_share_settings": {
+                            "$ref": "#/components/schemas/CollaborativeAdsShareSettings"
+                          },
+                          "agency_collaborative_ads_share_settings": {
+                            "$ref": "#/components/schemas/CollaborativeAdsShareSettings"
+                          },
+                          "business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "catalog_store": {
+                            "$ref": "#/components/schemas/StoreCatalogSettings"
+                          },
+                          "commerce_merchant_settings": {
+                            "$ref": "#/components/schemas/CommerceMerchantSettings"
+                          },
+                          "creator_user": {
+                            "$ref": "#/components/schemas/User"
+                          },
+                          "da_display_settings": {
+                            "$ref": "#/components/schemas/ProductCatalogImageSettings"
+                          },
+                          "default_image_url": {
+                            "type": "string"
+                          },
+                          "fallback_image_url": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "feed_count": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "is_catalog_segment": {
+                            "type": "boolean"
+                          },
+                          "is_local_catalog": {
+                            "type": "boolean"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "owner_business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "product_count": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "show_assign_permissions": {
+                            "type": "boolean"
+                          },
+                          "store_catalog_settings": {
+                            "$ref": "#/components/schemas/StoreCatalogSettings"
+                          },
+                          "user_access_expire_time": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "vertical": {
+                            "$ref": "#/components/schemas/businessowned_product_catalogs_vertical_enum_param"
+                          },
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": true
+                            }
+                          },
+                          "paging": {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          "summary": {
+                            "type": "object",
+                            "additionalProperties": true
+                          }
+                        },
+                        "additionalProperties": true
                       }
                     },
                     "paging": {
@@ -97781,7 +98693,48 @@
                       "type": "object",
                       "additionalProperties": true
                     }
-                  }
+                  },
+                  "additionalProperties": true,
+                  "x-meta-schema-variants": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ProductCatalog"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/BusinessClientProductCatalogsGet"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -102358,6 +103311,7 @@
         "operationId": "post_id_owned_product_catalogs",
         "tags": [
           "Business",
+          "BusinessOwnedProductCatalogs",
           "PageOwnedProductCatalog"
         ],
         "parameters": [
@@ -102442,6 +103396,101 @@
             ]
           },
           {
+            "node": "BusinessOwnedProductCatalogs",
+            "name": "genPost",
+            "method": "post",
+            "endpoint": "owned_product_catalogs",
+            "basePath": null,
+            "returnType": "BusinessOwnedProductCatalogsPost",
+            "parameters": [
+              {
+                "name": "additional_vertical_option",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "business_metadata",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "capabilities",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "catalog_segment_filter",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "catalog_segment_product_set_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "da_display_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "destination_catalog_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "flight_catalog_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "hotel_catalog_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "image_display_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "localization_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "name",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "parent_catalog_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "partner_integration",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "store_catalog_settings",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "vertical",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
             "node": "PageOwnedProductCatalog",
             "name": "genPost",
             "method": "post",
@@ -102479,6 +103528,11 @@
                     {
                       "type": "object",
                       "additionalProperties": true,
+                      "x-meta-return-type": "BusinessOwnedProductCatalogsPost"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": true,
                       "x-meta-return-type": "PageOwnedProductCatalogPost"
                     }
                   ]
@@ -102511,55 +103565,25 @@
                 "type": "object",
                 "properties": {
                   "additional_vertical_option": {
-                    "$ref": "#/components/schemas/businessowned_product_catalogs_additional_vertical_option_enum_param"
+                    "type": "string"
                   },
                   "business_metadata": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "catalog_segment_filter": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "catalog_segment_product_set_id": {
                     "type": "string"
                   },
                   "da_display_settings": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "destination_catalog_settings": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "flight_catalog_settings": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "name": {
                     "type": "string"
@@ -102568,25 +103592,28 @@
                     "type": "string"
                   },
                   "partner_integration": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "store_catalog_settings": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
+                    "type": "string"
                   },
                   "vertical": {
-                    "$ref": "#/components/schemas/businessowned_product_catalogs_vertical_enum_param"
+                    "type": "string"
+                  },
+                  "capabilities": {
+                    "type": "string"
+                  },
+                  "fields": {
+                    "type": "string"
+                  },
+                  "hotel_catalog_settings": {
+                    "type": "string"
+                  },
+                  "image_display_settings": {
+                    "type": "string"
+                  },
+                  "localization_settings": {
+                    "type": "string"
                   }
                 },
                 "additionalProperties": true,
@@ -102676,6 +103703,62 @@
                     "required": [
                       "name"
                     ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "additional_vertical_option": {
+                        "type": "string"
+                      },
+                      "business_metadata": {
+                        "type": "string"
+                      },
+                      "capabilities": {
+                        "type": "string"
+                      },
+                      "catalog_segment_filter": {
+                        "type": "string"
+                      },
+                      "catalog_segment_product_set_id": {
+                        "type": "string"
+                      },
+                      "da_display_settings": {
+                        "type": "string"
+                      },
+                      "destination_catalog_settings": {
+                        "type": "string"
+                      },
+                      "fields": {
+                        "type": "string"
+                      },
+                      "flight_catalog_settings": {
+                        "type": "string"
+                      },
+                      "hotel_catalog_settings": {
+                        "type": "string"
+                      },
+                      "image_display_settings": {
+                        "type": "string"
+                      },
+                      "localization_settings": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "parent_catalog_id": {
+                        "type": "string"
+                      },
+                      "partner_integration": {
+                        "type": "string"
+                      },
+                      "store_catalog_settings": {
+                        "type": "string"
+                      },
+                      "vertical": {
+                        "type": "string"
+                      }
+                    }
                   },
                   {
                     "type": "object",
@@ -110786,13 +111869,11 @@
         }
       }
     },
-    "/{node-id}/assigned_ad_accounts": {
+    "/{node-id}/catalog_advertiser_insights": {
       "get": {
-        "operationId": "get_id_assigned_ad_accounts",
+        "operationId": "get_id_catalog_advertiser_insights",
         "tags": [
-          "BusinessUser",
-          "SystemUser",
-          "User"
+          "BusinessCatalogAdvertiserInsights"
         ],
         "parameters": [
           {
@@ -110804,66 +111885,121 @@
             }
           },
           {
-            "name": "fields",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "required": false
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1
-            },
-            "required": false
-          },
-          {
             "name": "after",
             "in": "query",
+            "required": false,
             "schema": {
               "type": "string"
-            },
-            "required": false
+            }
           },
           {
             "name": "before",
             "in": "query",
+            "required": false,
             "schema": {
               "type": "string"
-            },
-            "required": false
+            }
+          },
+          {
+            "name": "category_filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category_level_down",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "country_code",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "time_range",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "x-meta-operations": [
           {
-            "node": "BusinessUser",
-            "name": null,
+            "node": "BusinessCatalogAdvertiserInsights",
+            "name": "genGet",
             "method": "get",
-            "endpoint": "assigned_ad_accounts",
+            "endpoint": "catalog_advertiser_insights",
             "basePath": null,
-            "returnType": "AdAccount",
-            "parameters": []
-          },
-          {
-            "node": "SystemUser",
-            "name": null,
-            "method": "get",
-            "endpoint": "assigned_ad_accounts",
-            "basePath": null,
-            "returnType": "AdAccount",
-            "parameters": []
-          },
-          {
-            "node": "User",
-            "name": null,
-            "method": "get",
-            "endpoint": "assigned_ad_accounts",
-            "basePath": null,
-            "returnType": "AdAccount",
-            "parameters": []
+            "returnType": "BusinessCatalogAdvertiserInsightsGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "category_filter",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "category_level_down",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "country_code",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              },
+              {
+                "name": "time_range",
+                "required": false,
+                "type": "string"
+              }
+            ]
           }
         ],
         "responses": {
@@ -110877,7 +112013,7 @@
                     "data": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/AdAccount"
+                        "$ref": "#/components/schemas/BusinessCatalogAdvertiserInsightsGet"
                       }
                     },
                     "paging": {
@@ -111191,132 +112327,6 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/Page"
-                      }
-                    },
-                    "paging": {
-                      "type": "object",
-                      "additionalProperties": true
-                    },
-                    "summary": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Graph API error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "error": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/{node-id}/assigned_product_catalogs": {
-      "get": {
-        "operationId": "get_id_assigned_product_catalogs",
-        "tags": [
-          "BusinessUser",
-          "SystemUser",
-          "User"
-        ],
-        "parameters": [
-          {
-            "name": "node-id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "fields",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "required": false
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "minimum": 1
-            },
-            "required": false
-          },
-          {
-            "name": "after",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "required": false
-          },
-          {
-            "name": "before",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "required": false
-          }
-        ],
-        "x-meta-operations": [
-          {
-            "node": "BusinessUser",
-            "name": null,
-            "method": "get",
-            "endpoint": "assigned_product_catalogs",
-            "basePath": null,
-            "returnType": "ProductCatalog",
-            "parameters": []
-          },
-          {
-            "node": "SystemUser",
-            "name": null,
-            "method": "get",
-            "endpoint": "assigned_product_catalogs",
-            "basePath": null,
-            "returnType": "ProductCatalog",
-            "parameters": []
-          },
-          {
-            "node": "User",
-            "name": null,
-            "method": "get",
-            "endpoint": "assigned_product_catalogs",
-            "basePath": null,
-            "returnType": "ProductCatalog",
-            "parameters": []
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ProductCatalog"
                       }
                     },
                     "paging": {
@@ -112940,6 +113950,8 @@
         "tags": [
           "CommerceMerchantSettings",
           "Page",
+          "PageProductCatalogs",
+          "UserProductCatalogs",
           "WhatsAppBusinessAccount"
         ],
         "parameters": [
@@ -112964,7 +113976,16 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "minimum": 1
+              "x-meta-schema-variants": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              ]
             },
             "required": false
           },
@@ -112983,6 +114004,70 @@
               "type": "string"
             },
             "required": false
+          },
+          {
+            "name": "date_format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "summary",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "business_catalogs_with_role_filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "exclude_user_owned_catalog_segments_filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name_filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "owner_types",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parent_catalogs_only",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "x-meta-operations": [
@@ -113005,6 +114090,116 @@
             "parameters": []
           },
           {
+            "node": "PageProductCatalogs",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "product_catalogs",
+            "basePath": null,
+            "returnType": "PageProductCatalogsGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "date_format",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              },
+              {
+                "name": "summary",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "UserProductCatalogs",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "product_catalogs",
+            "basePath": null,
+            "returnType": "UserProductCatalogsGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "business_catalogs_with_role_filter",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "date_format",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "exclude_user_owned_catalog_segments_filter",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "fields",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              },
+              {
+                "name": "name_filter",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "owner_types",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "parent_catalogs_only",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "sort",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "summary",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
             "node": "WhatsAppBusinessAccount",
             "name": null,
             "method": "get",
@@ -113025,7 +114220,91 @@
                     "data": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/ProductCatalog"
+                        "type": "object",
+                        "properties": {
+                          "ad_account_to_collaborative_ads_share_settings": {
+                            "$ref": "#/components/schemas/CollaborativeAdsShareSettings"
+                          },
+                          "agency_collaborative_ads_share_settings": {
+                            "$ref": "#/components/schemas/CollaborativeAdsShareSettings"
+                          },
+                          "business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "catalog_store": {
+                            "$ref": "#/components/schemas/StoreCatalogSettings"
+                          },
+                          "commerce_merchant_settings": {
+                            "$ref": "#/components/schemas/CommerceMerchantSettings"
+                          },
+                          "creator_user": {
+                            "$ref": "#/components/schemas/User"
+                          },
+                          "da_display_settings": {
+                            "$ref": "#/components/schemas/ProductCatalogImageSettings"
+                          },
+                          "default_image_url": {
+                            "type": "string"
+                          },
+                          "fallback_image_url": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "feed_count": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "is_catalog_segment": {
+                            "type": "boolean"
+                          },
+                          "is_local_catalog": {
+                            "type": "boolean"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "owner_business": {
+                            "$ref": "#/components/schemas/Business"
+                          },
+                          "product_count": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "show_assign_permissions": {
+                            "type": "boolean"
+                          },
+                          "store_catalog_settings": {
+                            "$ref": "#/components/schemas/StoreCatalogSettings"
+                          },
+                          "user_access_expire_time": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "vertical": {
+                            "$ref": "#/components/schemas/businessowned_product_catalogs_vertical_enum_param"
+                          },
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": true
+                            }
+                          },
+                          "paging": {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          "summary": {
+                            "type": "object",
+                            "additionalProperties": true
+                          }
+                        },
+                        "additionalProperties": true
                       }
                     },
                     "paging": {
@@ -113036,7 +114315,67 @@
                       "type": "object",
                       "additionalProperties": true
                     }
-                  }
+                  },
+                  "additionalProperties": true,
+                  "x-meta-schema-variants": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ProductCatalog"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PageProductCatalogsGet"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/UserProductCatalogsGet"
+                          }
+                        },
+                        "paging": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "summary": {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -119174,7 +120513,7 @@
                             "type": "string"
                           },
                           "status": {
-                            "$ref": "#/components/schemas/eventlive_videos_status_enum_param"
+                            "$ref": "#/components/schemas/grouplive_videos_status_enum_param"
                           },
                           "stream_url": {
                             "type": "string"
@@ -119292,7 +120631,7 @@
             "method": "post",
             "endpoint": "live_videos",
             "basePath": null,
-            "returnType": "LiveVideo",
+            "returnType": "Object",
             "parameters": [
               {
                 "name": "content_tags",
@@ -119642,7 +120981,7 @@
             "method": "post",
             "endpoint": "live_videos",
             "basePath": null,
-            "returnType": "LiveVideo",
+            "returnType": "Object",
             "parameters": [
               {
                 "name": "content_tags",
@@ -119754,8 +121093,6 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "additionalProperties": true,
-                  "x-meta-return-type": "LiveVideo",
                   "properties": {
                     "id": {
                       "type": "string"
@@ -119766,7 +121103,20 @@
                     "success": {
                       "type": "boolean"
                     }
-                  }
+                  },
+                  "additionalProperties": true,
+                  "x-meta-schema-variants": [
+                    {
+                      "type": "object",
+                      "additionalProperties": true,
+                      "x-meta-return-type": "Object"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": true,
+                      "x-meta-return-type": "LiveVideo"
+                    }
+                  ]
                 }
               }
             }
@@ -122686,179 +124036,6 @@
                     }
                   }
                 }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "operationId": "post_id_groups",
-        "tags": [
-          "Group"
-        ],
-        "parameters": [
-          {
-            "name": "node-id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-meta-operations": [
-          {
-            "node": "Group",
-            "name": null,
-            "method": "post",
-            "endpoint": "groups",
-            "basePath": null,
-            "returnType": "Group",
-            "parameters": [
-              {
-                "name": "admin",
-                "required": false,
-                "type": "int"
-              },
-              {
-                "name": "description",
-                "required": false,
-                "type": "string"
-              },
-              {
-                "name": "group_icon_id",
-                "required": false,
-                "type": "string"
-              },
-              {
-                "name": "group_type",
-                "required": false,
-                "type": "groupgroups_group_type_enum_param"
-              },
-              {
-                "name": "join_setting",
-                "required": false,
-                "type": "groupgroups_join_setting_enum_param"
-              },
-              {
-                "name": "name",
-                "required": true,
-                "type": "string"
-              },
-              {
-                "name": "parent_id",
-                "required": false,
-                "type": "string"
-              },
-              {
-                "name": "post_permissions",
-                "required": false,
-                "type": "groupgroups_post_permissions_enum_param"
-              },
-              {
-                "name": "post_requires_admin_approval",
-                "required": false,
-                "type": "bool"
-              },
-              {
-                "name": "privacy",
-                "required": false,
-                "type": "string"
-              },
-              {
-                "name": "ref",
-                "required": false,
-                "type": "string"
-              }
-            ]
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": true,
-                  "x-meta-return-type": "Group",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "post_id": {
-                      "type": "string"
-                    },
-                    "success": {
-                      "type": "boolean"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Graph API error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "error": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "admin": {
-                    "type": "integer",
-                    "format": "int64"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "group_icon_id": {
-                    "type": "string"
-                  },
-                  "group_type": {
-                    "$ref": "#/components/schemas/groupgroups_group_type_enum_param"
-                  },
-                  "join_setting": {
-                    "$ref": "#/components/schemas/groupgroups_join_setting_enum_param"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "parent_id": {
-                    "type": "string"
-                  },
-                  "post_permissions": {
-                    "$ref": "#/components/schemas/groupgroups_post_permissions_enum_param"
-                  },
-                  "post_requires_admin_approval": {
-                    "type": "boolean"
-                  },
-                  "privacy": {
-                    "type": "string"
-                  },
-                  "ref": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "name"
-                ]
               }
             }
           }
@@ -138808,6 +139985,11 @@
             "returnType": "LeadgenForm",
             "parameters": [
               {
+                "name": "ad_account_id",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
                 "name": "allow_organic_lead_retrieval",
                 "required": false,
                 "type": "bool"
@@ -138866,6 +140048,11 @@
                 "name": "name",
                 "required": true,
                 "type": "string"
+              },
+              {
+                "name": "phone_otp_verification_type",
+                "required": false,
+                "type": "pageleadgen_forms_phone_otp_verification_type_enum_param"
               },
               {
                 "name": "privacy_policy",
@@ -138953,6 +140140,11 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "ad_account_id": {
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0
+                  },
                   "allow_organic_lead_retrieval": {
                     "type": "boolean"
                   },
@@ -138991,6 +140183,9 @@
                   },
                   "name": {
                     "type": "string"
+                  },
+                  "phone_otp_verification_type": {
+                    "$ref": "#/components/schemas/pageleadgen_forms_phone_otp_verification_type_enum_param"
                   },
                   "privacy_policy": {
                     "type": "object",
@@ -146507,135 +147702,6 @@
                     }
                   }
                 }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/{node-id}/batch": {
-      "post": {
-        "operationId": "post_id_batch",
-        "tags": [
-          "ProductCatalog"
-        ],
-        "parameters": [
-          {
-            "name": "node-id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "x-meta-operations": [
-          {
-            "node": "ProductCatalog",
-            "name": null,
-            "method": "post",
-            "endpoint": "batch",
-            "basePath": null,
-            "returnType": "ProductItem",
-            "parameters": [
-              {
-                "name": "allow_upsert",
-                "required": false,
-                "type": "bool"
-              },
-              {
-                "name": "fbe_external_business_id",
-                "required": false,
-                "type": "string"
-              },
-              {
-                "name": "requests",
-                "required": true,
-                "type": "list\u003Cmap\u003E"
-              },
-              {
-                "name": "version",
-                "required": false,
-                "type": "unsigned int"
-              }
-            ]
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": true,
-                  "x-meta-return-type": "ProductItem",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "post_id": {
-                      "type": "string"
-                    },
-                    "success": {
-                      "type": "boolean"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Graph API error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "error": {
-                      "type": "object",
-                      "additionalProperties": true
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "allow_upsert": {
-                    "type": "boolean"
-                  },
-                  "fbe_external_business_id": {
-                    "type": "string"
-                  },
-                  "requests": {
-                    "type": "string",
-                    "description": "A JSON-encoded value.",
-                    "contentMediaType": "application/json",
-                    "contentSchema": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "additionalProperties": true
-                      }
-                    }
-                  },
-                  "version": {
-                    "type": "integer",
-                    "format": "int64",
-                    "minimum": 0
-                  }
-                },
-                "required": [
-                  "requests"
-                ]
               }
             }
           }
@@ -155548,6 +156614,243 @@
         }
       }
     },
+    "/{node-id}/batch": {
+      "post": {
+        "operationId": "post_id_batch",
+        "tags": [
+          "ProductCatalogBatch"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ProductCatalogBatch",
+            "name": "genPost",
+            "method": "post",
+            "endpoint": "batch",
+            "basePath": null,
+            "returnType": "ProductCatalogBatchPost",
+            "parameters": [
+              {
+                "name": "allow_upsert",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "fbe_external_business_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "requests",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "version",
+                "required": false,
+                "type": "int"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "x-meta-return-type": "ProductCatalogBatchPost",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "post_id": {
+                      "type": "string"
+                    },
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "allow_upsert": {
+                    "type": "boolean"
+                  },
+                  "fbe_external_business_id": {
+                    "type": "string"
+                  },
+                  "requests": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/data_source_priorities": {
+      "get": {
+        "operationId": "get_id_data_source_priorities",
+        "tags": [
+          "ProductCatalogDataSourcePriorities"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ProductCatalogDataSourcePriorities",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "data_source_priorities",
+            "basePath": null,
+            "returnType": "ProductCatalogDataSourcePrioritiesGet",
+            "parameters": [
+              {
+                "name": "after",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "before",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "limit",
+                "required": false,
+                "type": "int"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ProductCatalogDataSourcePrioritiesGet"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/{node-id}/media_titles": {
       "post": {
         "operationId": "post_id_media_titles",
@@ -157534,6 +158837,174 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/IGMedia"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/insights/share-of-voice": {
+      "get": {
+        "operationId": "get_id_insights_share_of_voice",
+        "tags": [
+          "ShareOfVoice"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "compare_with",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date_preset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entity",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ShareOfVoice",
+            "name": "genGet",
+            "method": "get",
+            "endpoint": "insights/share-of-voice",
+            "basePath": null,
+            "returnType": "ShareOfVoiceGet",
+            "parameters": [
+              {
+                "name": "category",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "name": "compare_with",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "country",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "name": "date_preset",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "entity",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShareOfVoiceGet"
                       }
                     },
                     "paging": {
@@ -159632,11 +161103,6 @@
             "returnType": "User",
             "parameters": [
               {
-                "name": "ai_disclosure",
-                "required": false,
-                "type": "usernotifications_ai_disclosure_enum_param"
-              },
-              {
                 "name": "bot_message_payload_elements",
                 "required": false,
                 "type": "string"
@@ -159772,9 +161238,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "ai_disclosure": {
-                    "$ref": "#/components/schemas/usernotifications_ai_disclosure_enum_param"
-                  },
                   "bot_message_payload_elements": {
                     "type": "string"
                   },
@@ -167482,6 +168945,7 @@
           "AGENTIC_CHECKOUT_PRE_CLICK",
           "AMAZON_BUY_WITH_PRIME",
           "AUGMENTED_REALITY",
+          "CATALOG_RECOMMENDATIONS_ALPHA",
           "CHECKOUT",
           "INTEGRATED_CHECKOUT_LOWES",
           "INTEGRATED_CHECKOUT_MELI",
@@ -167603,6 +169067,7 @@
           "AGENTIC_CHECKOUT_PRE_CLICK",
           "AMAZON_BUY_WITH_PRIME",
           "AUGMENTED_REALITY",
+          "CATALOG_RECOMMENDATIONS_ALPHA",
           "CHECKOUT",
           "INTEGRATED_CHECKOUT_LOWES",
           "INTEGRATED_CHECKOUT_MELI",
@@ -167648,6 +169113,72 @@
         "enum": [
           "PUBLISHED",
           "STAGING"
+        ],
+        "type": "string"
+      },
+      "BusinessOwnedProductCatalogsPost_catalog_item_type": {
+        "enum": [
+          "ACTIVITY",
+          "APP_AND_SOFTWARE",
+          "ARTICLE_AND_PUBLICATION",
+          "AUTOMOTIVE",
+          "DESTINATION",
+          "FLIGHT",
+          "HOME_LISTING",
+          "HOTEL",
+          "MEDIA_TITLE",
+          "OTHER",
+          "PRODUCT",
+          "SERVICE",
+          "TEST_ITEM"
+        ],
+        "type": "string"
+      },
+      "BusinessOwnedProductCatalogsPost_suggested_conversion_event": {
+        "enum": [
+          "ACHIEVEMENT_UNLOCKED",
+          "ACTIVATE_APP",
+          "ADD_PAYMENT_INFO",
+          "ADD_TO_CART",
+          "ADD_TO_WISHLIST",
+          "AD_IMPRESSION",
+          "COMPLETE_REGISTRATION",
+          "CONTACT",
+          "CONTENT_VIEW",
+          "CUSTOMIZE_PRODUCT",
+          "D2_RETENTION",
+          "D7_RETENTION",
+          "DONATE",
+          "FIND_LOCATION",
+          "FLOW_COMPLETE",
+          "INITIATED_CHECKOUT",
+          "LEAD",
+          "LEVEL_ACHIEVED",
+          "LISTING_INTERACTION",
+          "MESSAGING_ACCEPT",
+          "MESSAGING_BLOCK",
+          "MESSAGING_CONVERSATION_STARTED_7D",
+          "MESSAGING_DELETE_MESSAGE",
+          "MESSAGING_DELETE_THREAD",
+          "MESSAGING_DELIVERY_RECEIPT",
+          "MESSAGING_FIRST_REPLY",
+          "MESSAGING_IGNORE_REQUEST",
+          "MESSAGING_MARK_SPAM",
+          "MESSAGING_OPEN_THREAD",
+          "MESSAGING_PROMOTIONAL_OFF",
+          "MESSAGING_READ_RECEIPT",
+          "MESSAGING_REPLY",
+          "OTHER",
+          "PURCHASE",
+          "RATE",
+          "SCHEDULE",
+          "SEARCH",
+          "SERVICE_BOOKING_REQUEST",
+          "SPENT_CREDITS",
+          "START_TRIAL",
+          "SUBMIT_APPLICATION",
+          "SUBSCRIBE",
+          "TUTORIAL_COMPLETION"
         ],
         "type": "string"
       },
@@ -168165,76 +169696,38 @@
       "HomeListingGet_capabilities": {
         "enum": [
           "B2C_MARKETPLACE",
-          "BIZ_MSG_AI_AGENT",
-          "BUSINESS_INBOX_IN_MESSENGER",
-          "BUY_ON_FACEBOOK",
           "C2C_MARKETPLACE",
-          "CPAS_PARENT_CATALOG",
           "DA",
           "DAILY_DEALS",
           "DAILY_DEALS_LEGACY",
-          "EVENT",
-          "EVENT_DEPRECATED",
-          "GROUPS",
-          "IG_ONSITE_SHOPPING",
           "IG_PRODUCT_TAGGING",
-          "LDP",
           "MARKETPLACE",
           "MARKETPLACE_ADS_DEPRECATED",
-          "MARKETPLACE_HOME_RENTALS",
-          "MARKETPLACE_HOME_SALES",
-          "MARKETPLACE_MOTORS",
           "MARKETPLACE_SHOPS",
           "MINI_SHOPS",
-          "NEIGHBORHOODS",
           "OFFLINE_CONVERSIONS",
-          "ORGANIC_DISCOVERY",
-          "PROFILE",
-          "SERVICE",
           "SHOPS",
-          "TEST_CAPABILITY",
           "UNIVERSAL_CHECKOUT",
-          "US_MARKETPLACE",
-          "WHATSAPP",
-          "WHATSAPP_MARKETING_MESSAGE"
+          "WHATSAPP"
         ],
         "type": "string"
       },
       "HomeListingGet_capabilities_rendering_catalog_manager": {
         "enum": [
           "B2C_MARKETPLACE",
-          "BIZ_MSG_AI_AGENT",
-          "BUSINESS_INBOX_IN_MESSENGER",
-          "BUY_ON_FACEBOOK",
           "C2C_MARKETPLACE",
-          "CPAS_PARENT_CATALOG",
           "DA",
           "DAILY_DEALS",
           "DAILY_DEALS_LEGACY",
-          "EVENT",
-          "EVENT_DEPRECATED",
-          "GROUPS",
-          "IG_ONSITE_SHOPPING",
           "IG_PRODUCT_TAGGING",
-          "LDP",
           "MARKETPLACE",
           "MARKETPLACE_ADS_DEPRECATED",
-          "MARKETPLACE_HOME_RENTALS",
-          "MARKETPLACE_HOME_SALES",
-          "MARKETPLACE_MOTORS",
           "MARKETPLACE_SHOPS",
           "MINI_SHOPS",
-          "NEIGHBORHOODS",
           "OFFLINE_CONVERSIONS",
-          "ORGANIC_DISCOVERY",
-          "PROFILE",
-          "SERVICE",
           "SHOPS",
-          "TEST_CAPABILITY",
           "UNIVERSAL_CHECKOUT",
-          "US_MARKETPLACE",
-          "WHATSAPP",
-          "WHATSAPP_MARKETING_MESSAGE"
+          "WHATSAPP"
         ],
         "type": "string"
       },
@@ -169296,6 +170789,8 @@
           "EMPTY_BRAND",
           "EMPTY_CONDITION",
           "EMPTY_DESCRIPTION",
+          "EMPTY_GPC_AND_FPC",
+          "EMPTY_GTIN_AND_MPN",
           "EMPTY_IMAGE_URL",
           "EMPTY_PRICE",
           "EMPTY_PRODUCT_URL",
@@ -169810,6 +171305,7 @@
           "AGENTIC_CHECKOUT_PRE_CLICK",
           "AMAZON_BUY_WITH_PRIME",
           "AUGMENTED_REALITY",
+          "CATALOG_RECOMMENDATIONS_ALPHA",
           "CHECKOUT",
           "INTEGRATED_CHECKOUT_LOWES",
           "INTEGRATED_CHECKOUT_MELI",
@@ -169882,6 +171378,8 @@
           "EMPTY_BRAND",
           "EMPTY_CONDITION",
           "EMPTY_DESCRIPTION",
+          "EMPTY_GPC_AND_FPC",
+          "EMPTY_GTIN_AND_MPN",
           "EMPTY_IMAGE_URL",
           "EMPTY_PRICE",
           "EMPTY_PRODUCT_URL",
@@ -170699,6 +172197,8 @@
           "BLENDED_ADS_DUPLICATION",
           "BLENDED_ADS_FOR_SHOPS_ADS_DUPLICATION",
           "BPBAA_WITH_CAPI_UPSELL",
+          "BRAND_ADVERTISER_ADOPT_CORE_6_PLACEMENTS",
+          "BRAND_ADVERTISER_ADOPT_SHORT_FORM_VIDEO",
           "BRAND_ADVERTISER_INCREASE_CA_OR_LAL_SPEND",
           "BRAND_ADVERTISER_VIDEO_FORMAT_ADS",
           "BROADGEO_AM_UPSELL_GUIDANCE",
@@ -170719,6 +172219,7 @@
           "CAPI_CRM_GUIDANCE_V2",
           "CAPI_CRM_SETUP",
           "CAPI_EVENT_COVERAGE",
+          "CAPI_EVENT_COVERAGE_V2",
           "CAPI_PENETRATION",
           "CAPI_PERFORMANCE_MATCH_KEY",
           "CAPI_PERFORMANCE_MATCH_KEY_V2",
@@ -170743,6 +172244,8 @@
           "CONVERT_CTX_REPLIES_TO_CTX_LEADS",
           "CONVERT_CTX_REPLIES_TO_CTX_PURCHASE",
           "CONVERT_IG_PROFILE_VISIT_TO_PTWA",
+          "CONVERT_INSTANT_FORM_LO_TO_LEAD_GEN_PLUS",
+          "CONVERT_ONSITE_LO_TO_ONSITE_QLO_CAPI_CRM",
           "COST_GOAL",
           "COST_GOAL_BUDGET_LIMITED",
           "COST_GOAL_CPA_LIMITED",
@@ -170904,6 +172407,7 @@
           "PAYMENT_METHOD",
           "PERFORMANT_CREATIVE_REELS_OPT_IN",
           "PERFORMANT_CREATIVE_REELS_OPT_IN_V2",
+          "PERFORM_CHANNEL_LIFT_STUDY_FOR_FIRST_TIME",
           "PFR_L1_INLINE_MMT",
           "PIXELLESS_LPV_OPTIMIZATION_GOAL",
           "PIXEL_OPTIMIZATION_AAM",
@@ -170985,6 +172489,7 @@
           "TAILORED_LEAD_AD_CAMPAIGN",
           "TAILORED_MESSAGES_CAMPAIGN",
           "TARGETING_CREATIVE_FRAGMENTATION",
+          "TEST_SGP_MIGRATE_TO_UGP",
           "THIVIYA_SALES_GUIDANCE_E2E_TEST",
           "THREECO_WEB_PLUS_APP_APLUSD",
           "THREECO_WEB_PLUS_APP_UPSELL",
@@ -172406,6 +173911,8 @@
           "product_group_content_id_breakdown",
           "product_id",
           "publisher_platform",
+          "purchased_brand",
+          "purchased_category",
           "redownload",
           "reels_trending_topic",
           "region",
@@ -172842,6 +174349,8 @@
           "BLENDED_ADS_DUPLICATION",
           "BLENDED_ADS_FOR_SHOPS_ADS_DUPLICATION",
           "BPBAA_WITH_CAPI_UPSELL",
+          "BRAND_ADVERTISER_ADOPT_CORE_6_PLACEMENTS",
+          "BRAND_ADVERTISER_ADOPT_SHORT_FORM_VIDEO",
           "BRAND_ADVERTISER_INCREASE_CA_OR_LAL_SPEND",
           "BRAND_ADVERTISER_VIDEO_FORMAT_ADS",
           "BROADGEO_AM_UPSELL_GUIDANCE",
@@ -172862,6 +174371,7 @@
           "CAPI_CRM_GUIDANCE_V2",
           "CAPI_CRM_SETUP",
           "CAPI_EVENT_COVERAGE",
+          "CAPI_EVENT_COVERAGE_V2",
           "CAPI_PENETRATION",
           "CAPI_PERFORMANCE_MATCH_KEY",
           "CAPI_PERFORMANCE_MATCH_KEY_V2",
@@ -172886,6 +174396,8 @@
           "CONVERT_CTX_REPLIES_TO_CTX_LEADS",
           "CONVERT_CTX_REPLIES_TO_CTX_PURCHASE",
           "CONVERT_IG_PROFILE_VISIT_TO_PTWA",
+          "CONVERT_INSTANT_FORM_LO_TO_LEAD_GEN_PLUS",
+          "CONVERT_ONSITE_LO_TO_ONSITE_QLO_CAPI_CRM",
           "COST_GOAL",
           "COST_GOAL_BUDGET_LIMITED",
           "COST_GOAL_CPA_LIMITED",
@@ -173047,6 +174559,7 @@
           "PAYMENT_METHOD",
           "PERFORMANT_CREATIVE_REELS_OPT_IN",
           "PERFORMANT_CREATIVE_REELS_OPT_IN_V2",
+          "PERFORM_CHANNEL_LIFT_STUDY_FOR_FIRST_TIME",
           "PFR_L1_INLINE_MMT",
           "PIXELLESS_LPV_OPTIMIZATION_GOAL",
           "PIXEL_OPTIMIZATION_AAM",
@@ -173128,6 +174641,7 @@
           "TAILORED_LEAD_AD_CAMPAIGN",
           "TAILORED_MESSAGES_CAMPAIGN",
           "TARGETING_CREATIVE_FRAGMENTATION",
+          "TEST_SGP_MIGRATE_TO_UGP",
           "THIVIYA_SALES_GUIDANCE_E2E_TEST",
           "THREECO_WEB_PLUS_APP_APLUSD",
           "THREECO_WEB_PLUS_APP_UPSELL",
@@ -175801,6 +177315,8 @@
           "product_group_content_id_breakdown",
           "product_id",
           "publisher_platform",
+          "purchased_brand",
+          "purchased_category",
           "redownload",
           "reels_trending_topic",
           "region",
@@ -176020,6 +177536,8 @@
           "product_group_content_id_breakdown",
           "product_id",
           "publisher_platform",
+          "purchased_brand",
+          "purchased_category",
           "redownload",
           "reels_trending_topic",
           "region",
@@ -176484,6 +178002,8 @@
           "product_group_content_id_breakdown",
           "product_id",
           "publisher_platform",
+          "purchased_brand",
+          "purchased_category",
           "redownload",
           "reels_trending_topic",
           "region",
@@ -177639,7 +179159,6 @@
           "INSTREAM_VIDEO_DESKTOP",
           "INSTREAM_VIDEO_IMAGE",
           "INSTREAM_VIDEO_MOBILE",
-          "MESSENGER_MOBILE_INBOX_MEDIA",
           "MESSENGER_MOBILE_STORY_MEDIA",
           "MOBILE_FEED_STANDARD",
           "MOBILE_FULLWIDTH",
@@ -180082,7 +181601,6 @@
           "INSTREAM_VIDEO_DESKTOP",
           "INSTREAM_VIDEO_IMAGE",
           "INSTREAM_VIDEO_MOBILE",
-          "MESSENGER_MOBILE_INBOX_MEDIA",
           "MESSENGER_MOBILE_STORY_MEDIA",
           "MOBILE_FEED_STANDARD",
           "MOBILE_FULLWIDTH",
@@ -180453,56 +181971,6 @@
           "REVIEWABLE_BRANDED_CONTENT",
           "SCHEDULED",
           "SCHEDULED_RECURRING"
-        ],
-        "type": "string"
-      },
-      "groupgroups_group_type_enum_param": {
-        "enum": [
-          "CASUAL",
-          "COWORKERS",
-          "CUSTOM",
-          "FOR_SALE",
-          "FOR_WORK",
-          "GAME",
-          "HEALTH_SUPPORT",
-          "JOBS",
-          "LEARNING",
-          "NONE",
-          "PARENTING",
-          "STREAMER",
-          "WORK_AGENT_TO_AGENT",
-          "WORK_ANNOUNCEMENT",
-          "WORK_DEMO_GROUP",
-          "WORK_DISCUSSION",
-          "WORK_EPHEMERAL",
-          "WORK_FEEDBACK",
-          "WORK_FOR_SALE",
-          "WORK_GARDEN",
-          "WORK_INTEGRITY",
-          "WORK_LEARNING",
-          "WORK_MENTORSHIP",
-          "WORK_MULTI_COMPANY",
-          "WORK_RECRUITING",
-          "WORK_SOCIAL",
-          "WORK_STAGES",
-          "WORK_TEAM",
-          "WORK_TEAMWORK"
-        ],
-        "type": "string"
-      },
-      "groupgroups_join_setting_enum_param": {
-        "enum": [
-          "ADMIN_ONLY",
-          "ANYONE",
-          "NONE"
-        ],
-        "type": "string"
-      },
-      "groupgroups_post_permissions_enum_param": {
-        "enum": [
-          "ADMIN_ONLY",
-          "ANYONE",
-          "NONE"
         ],
         "type": "string"
       },
@@ -181385,7 +182853,9 @@
           "total_comments",
           "total_interactions",
           "total_likes",
+          "total_viewers",
           "total_views",
+          "viewers",
           "views"
         ],
         "type": "string"
@@ -182333,6 +183803,14 @@
           "ZH_CN",
           "ZH_HK",
           "ZH_TW"
+        ],
+        "type": "string"
+      },
+      "pageleadgen_forms_phone_otp_verification_type_enum_param": {
+        "enum": [
+          "NOT_ENABLED",
+          "OTP_OPTIONAL",
+          "OTP_REQUIRED"
         ],
         "type": "string"
       },
@@ -184086,6 +185564,8 @@
           "EMPTY_BRAND",
           "EMPTY_CONDITION",
           "EMPTY_DESCRIPTION",
+          "EMPTY_GPC_AND_FPC",
+          "EMPTY_GTIN_AND_MPN",
           "EMPTY_IMAGE_URL",
           "EMPTY_PRICE",
           "EMPTY_PRODUCT_URL",
@@ -184706,6 +186186,8 @@
           "EMPTY_BRAND",
           "EMPTY_CONDITION",
           "EMPTY_DESCRIPTION",
+          "EMPTY_GPC_AND_FPC",
+          "EMPTY_GTIN_AND_MPN",
           "EMPTY_IMAGE_URL",
           "EMPTY_PRICE",
           "EMPTY_PRODUCT_URL",
@@ -185742,6 +187224,8 @@
           "EMPTY_BRAND",
           "EMPTY_CONDITION",
           "EMPTY_DESCRIPTION",
+          "EMPTY_GPC_AND_FPC",
+          "EMPTY_GTIN_AND_MPN",
           "EMPTY_IMAGE_URL",
           "EMPTY_PRICE",
           "EMPTY_PRODUCT_URL",
@@ -185979,7 +187463,9 @@
           "total_comments",
           "total_interactions",
           "total_likes",
+          "total_viewers",
           "total_views",
+          "viewers",
           "views"
         ],
         "type": "string"
@@ -187754,13 +189240,6 @@
         "enum": [
           "AMBIENT",
           "REGULAR"
-        ],
-        "type": "string"
-      },
-      "usernotifications_ai_disclosure_enum_param": {
-        "enum": [
-          "AI_GENERATED",
-          "NOT_AI_GENERATED"
         ],
         "type": "string"
       },
@@ -191262,6 +192741,14 @@
           }
         }
       },
+      "AdAccountNamingTemplates": {
+        "type": "object",
+        "properties": {}
+      },
+      "AdAccountNamingTemplatesPost": {
+        "type": "object",
+        "properties": {}
+      },
       "AdAccountOptimizationGoalsAEMv2Eligibility": {
         "type": "object",
         "properties": {
@@ -193526,9 +195013,6 @@
               "type": "string"
             }
           },
-          "cas_segment": {
-            "type": "string"
-          },
           "conversions": {
             "type": "integer",
             "format": "int64",
@@ -194287,6 +195771,9 @@
           "source_instagram_media_id": {
             "type": "string"
           },
+          "source_threads_media_id": {
+            "type": "string"
+          },
           "status": {
             "$ref": "#/components/schemas/AdCreative_status"
           },
@@ -194965,6 +196452,10 @@
           "actor_type": {
             "$ref": "#/components/schemas/AdCreativeGet_actor_type"
           },
+          "ad_disclaimer_spec": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "adlabels": {
             "type": "array",
             "items": {
@@ -195106,6 +196597,10 @@
           "link_url": {
             "type": "string"
           },
+          "marketing_message_structured_spec": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "media_sourcing_spec": {
             "type": "object",
             "additionalProperties": true
@@ -195170,6 +196665,10 @@
             "type": "integer",
             "format": "int64"
           },
+          "product_suggestion_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "recommender_settings": {
             "type": "object",
             "additionalProperties": true
@@ -195183,6 +196682,10 @@
             "format": "int64"
           },
           "source_instagram_media_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "source_threads_media_id": {
             "type": "integer",
             "format": "int64"
           },
@@ -195231,6 +196734,10 @@
           "visual_hash": {
             "type": "integer",
             "format": "int64"
+          },
+          "wamo_whatsapp_identity_spec": {
+            "type": "object",
+            "additionalProperties": true
           }
         }
       },
@@ -198120,9 +199627,6 @@
           "max_budget_spend_percentage": {
             "type": "string"
           },
-          "meta_moment_maker_spec": {
-            "$ref": "#/components/schemas/MetaMomentMakerConfig"
-          },
           "min_budget_spend_percentage": {
             "type": "string"
           },
@@ -198841,8 +200345,16 @@
           "ad_active_time": {
             "type": "string"
           },
+          "ad_review_feedback": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "ad_schedule_end_time": {},
           "ad_schedule_start_time": {},
+          "ad_studies": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "adcreatives": {
             "type": "object",
             "additionalProperties": true
@@ -198908,6 +200420,10 @@
               "additionalProperties": true
             }
           },
+          "copies": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "created_time": {},
           "creative": {
             "type": "object",
@@ -198962,6 +200478,13 @@
           "engagement_audience": {
             "type": "boolean"
           },
+          "failed_delivery_checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
           "frequency": {
             "type": "number",
             "format": "float"
@@ -198974,13 +200497,91 @@
             "type": "integer",
             "format": "int64"
           },
+          "insights": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "is_autobid": {
             "type": "boolean"
+          },
+          "issues_info": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
           },
           "last_updated_by_app_id": {
             "type": "string"
           },
+          "leadgens": {
+            "type": "string"
+          },
+          "leads": {
+            "type": "object",
+            "additionalProperties": true
+          },
           "meta_reward_adgroup_status": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "mrl_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "objective_for_cost": {
+            "type": "string"
+          },
+          "objective_for_results": {
+            "type": "string"
+          },
+          "preview_link": {
+            "type": "string"
+          },
+          "preview_shareable_link": {
+            "type": "string"
+          },
+          "previews": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "related_media_user_opted_out": {
+            "type": "boolean"
+          },
+          "related_page_post_id": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string"
+          },
+          "result_rate": {
+            "type": "string"
+          },
+          "source_ad": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "source_ad_id": {
+            "type": "string"
+          },
+          "source_app_id": {
             "type": "string"
           },
           "special_ad_categories": {
@@ -198994,6 +200595,25 @@
           },
           "status": {
             "type": "string"
+          },
+          "targeting": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "targetingsentencelines": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "tracking_and_conversion_with_defaults": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "tracking_specs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
           },
           "updated_time": {},
           "view_tags": {
@@ -200428,9 +202048,6 @@
               "$ref": "#/components/schemas/AdsActionStats"
             }
           },
-          "configurable_reachbyfrequency_converters_count": {
-            "type": "string"
-          },
           "configurable_reachbyfrequency_impressions_cost": {
             "type": "string"
           },
@@ -201742,17 +203359,6 @@
               "type": "object",
               "additionalProperties": true
             }
-          }
-        }
-      },
-      "AdsPixelDeliveryRecommendations": {
-        "type": "object",
-        "properties": {
-          "custom_event_type": {
-            "type": "string"
-          },
-          "optimization_goal": {
-            "type": "string"
           }
         }
       },
@@ -204359,6 +205965,50 @@
           }
         }
       },
+      "AssignedAdAccounts": {
+        "type": "object",
+        "properties": {}
+      },
+      "AssignedAdAccountsGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "AssignedProductCatalogs": {
+        "type": "object",
+        "properties": {}
+      },
+      "AssignedProductCatalogsGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "summary": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
       "AssignedUser": {
         "type": "object",
         "properties": {
@@ -205935,6 +207585,50 @@
           }
         }
       },
+      "BusinessCatalogAdvertiserInsights": {
+        "type": "object",
+        "properties": {}
+      },
+      "BusinessCatalogAdvertiserInsightsGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "BusinessClientProductCatalogs": {
+        "type": "object",
+        "properties": {}
+      },
+      "BusinessClientProductCatalogsGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "summary": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
       "BusinessCreative": {
         "type": "object",
         "properties": {
@@ -206267,6 +207961,289 @@
           },
           "status": {
             "$ref": "#/components/schemas/adaccountonbehalf_requests_status_enum_param"
+          }
+        }
+      },
+      "BusinessOwnedProductCatalogs": {
+        "type": "object",
+        "properties": {}
+      },
+      "BusinessOwnedProductCatalogsPost": {
+        "type": "object",
+        "properties": {
+          "ad_account_to_collaborative_ads_share_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "agencies": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "agency_collaborative_ads_share_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "assigned_users": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "business": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "can_advertise": {
+            "type": "boolean"
+          },
+          "can_catalog_segment_create_campaign": {
+            "type": "boolean"
+          },
+          "can_create_catalog_segments": {
+            "type": "boolean"
+          },
+          "can_manage": {
+            "type": "boolean"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "capability_features": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "catalog_duplicate_data": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "catalog_item_type": {
+            "$ref": "#/components/schemas/BusinessOwnedProductCatalogsPost_catalog_item_type"
+          },
+          "catalog_segment_filter": {
+            "type": "string"
+          },
+          "catalog_segment_type": {
+            "type": "string"
+          },
+          "catalog_segments": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "catalog_store": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "check_external_event_source_association": {
+            "type": "string"
+          },
+          "checkout_urls": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "collaborative_ads_share_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "commerce_merchant_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "cpas_catalog_compliance_status": {
+            "type": "string"
+          },
+          "cpas_customization_enabled_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cpas_is_mpa_lite_omni_enabled_catalog_segment": {
+            "type": "boolean"
+          },
+          "cpas_parent_catalog_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "creation_source": {
+            "type": "string"
+          },
+          "creator_user": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "da_display_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "da_pe_spend_28d": {
+            "type": "number",
+            "format": "float"
+          },
+          "da_spend_28d": {
+            "type": "number",
+            "format": "float"
+          },
+          "data_sources": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "default_image_url": {
+            "type": "string"
+          },
+          "destinations": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "diagnostics": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "dominant_pixel": {
+            "type": "string"
+          },
+          "dpa_eligible_ad_accounts": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "event_stats": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "external_event_sources": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fallback_image_url": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "feed_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "has_external_event_source_associated_skip_privacy": {
+            "type": "boolean"
+          },
+          "has_issues": {
+            "type": "boolean"
+          },
+          "has_localized_overrides": {
+            "type": "boolean"
+          },
+          "has_multiple_partner_integrations_for_platform": {
+            "type": "boolean"
+          },
+          "home_listings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "hotels": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "hpi_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "is_catalog_segment": {
+            "type": "boolean"
+          },
+          "is_eligible_for_category_targeting": {
+            "type": "boolean"
+          },
+          "is_eligible_for_checkout": {
+            "type": "boolean"
+          },
+          "is_eligible_for_value_optimization": {
+            "type": "boolean"
+          },
+          "is_local_catalog": {
+            "type": "boolean"
+          },
+          "localization_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner_business": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "page": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "parent_catalog_id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "product_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "product_feeds": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "product_groups": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "product_sets": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "products": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "smart_pixel_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "source_app": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "store_catalog_settings": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "sub_vertical": {
+            "type": "string"
+          },
+          "suggested_conversion_event": {
+            "$ref": "#/components/schemas/BusinessOwnedProductCatalogsPost_suggested_conversion_event"
+          },
+          "user_tasks": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "vehicles": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "vertical": {
+            "type": "string"
+          },
+          "website_onboarding_settings": {
+            "type": "object",
+            "additionalProperties": true
           }
         }
       },
@@ -212739,20 +214716,6 @@
           }
         }
       },
-      "ExternalMerchantSettings": {
-        "type": "object",
-        "properties": {
-          "connect_woo": {
-            "type": "string"
-          },
-          "external_platform": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string"
-          }
-        }
-      },
       "FAMEKumo": {
         "type": "object",
         "properties": {
@@ -214035,6 +215998,12 @@
           "days_on_market": {
             "type": "integer",
             "format": "int64"
+          },
+          "default_country": {
+            "type": "string"
+          },
+          "default_language_locale": {
+            "type": "string"
           },
           "description": {
             "type": "string"
@@ -216513,6 +218482,9 @@
           "page_id": {
             "type": "string"
           },
+          "phone_otp_verification_type": {
+            "$ref": "#/components/schemas/pageleadgen_forms_phone_otp_verification_type_enum_param"
+          },
           "privacy_policy_url": {
             "type": "string"
           },
@@ -216716,7 +218688,7 @@
             "type": "string"
           },
           "status": {
-            "$ref": "#/components/schemas/eventlive_videos_status_enum_param"
+            "$ref": "#/components/schemas/grouplive_videos_status_enum_param"
           },
           "stream_url": {
             "type": "string"
@@ -216785,7 +218757,15 @@
       "LiveVideoAdCampaignConfig": {
         "type": "object",
         "properties": {
+          "declared_live_seconds": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
           "id": {
+            "type": "string"
+          },
+          "live_cadence": {
             "type": "string"
           },
           "live_video_ad_type": {
@@ -220099,6 +222079,26 @@
           }
         }
       },
+      "PageProductCatalogs": {
+        "type": "object",
+        "properties": {}
+      },
+      "PageProductCatalogsGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
       "PagePublisher": {
         "type": "object",
         "properties": {
@@ -221779,6 +223779,23 @@
           }
         }
       },
+      "ProductCatalogAgencies": {
+        "type": "object",
+        "properties": {}
+      },
+      "ProductCatalogAgenciesPost": {
+        "type": "object",
+        "properties": {
+          "__firstOneOf": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "__secondOneOf": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
       "ProductCatalogAppsAndSoftware": {
         "type": "object",
         "properties": {}
@@ -222221,6 +224238,28 @@
           }
         }
       },
+      "ProductCatalogBatch": {
+        "type": "object",
+        "properties": {}
+      },
+      "ProductCatalogBatchPost": {
+        "type": "object",
+        "properties": {
+          "handles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "validation_status": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        }
+      },
       "ProductCatalogCategory": {
         "type": "object",
         "properties": {
@@ -222330,6 +224369,26 @@
           }
         }
       },
+      "ProductCatalogDataSourcePriorities": {
+        "type": "object",
+        "properties": {}
+      },
+      "ProductCatalogDataSourcePrioritiesGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
       "ProductCatalogDataSources": {
         "type": "object",
         "properties": {}
@@ -222347,6 +224406,14 @@
           "paging": {
             "type": "object",
             "additionalProperties": true
+          }
+        }
+      },
+      "ProductCatalogDelete": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
           }
         }
       },
@@ -222814,19 +224881,6 @@
           "id": {
             "type": "integer",
             "format": "int64"
-          }
-        }
-      },
-      "ProductCatalogPost": {
-        "type": "object",
-        "properties": {
-          "__firstOneOf": {
-            "type": "object",
-            "additionalProperties": true
-          },
-          "__secondOneOf": {
-            "type": "object",
-            "additionalProperties": true
           }
         }
       },
@@ -226144,9 +228198,6 @@
           "is_trp": {
             "type": "boolean"
           },
-          "meta_moment_maker_spec": {
-            "$ref": "#/components/schemas/MetaMomentMakerConfig"
-          },
           "name": {
             "type": "string"
           },
@@ -227203,6 +229254,19 @@
         "type": "object",
         "properties": {
           "thread_owner": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "ShareOfVoice": {
+        "type": "object",
+        "properties": {}
+      },
+      "ShareOfVoiceGet": {
+        "type": "object",
+        "properties": {
+          "data": {
             "type": "object",
             "additionalProperties": true
           }
@@ -229746,6 +231810,30 @@
           }
         }
       },
+      "UserProductCatalogs": {
+        "type": "object",
+        "properties": {}
+      },
+      "UserProductCatalogsGet": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "paging": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "summary": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
       "ValueBasedEligibleSource": {
         "type": "object",
         "properties": {
@@ -231156,21 +233244,6 @@
           }
         }
       },
-      "WhatsAppPaymentCapabilities": {
-        "type": "object",
-        "properties": {
-          "is_enabled": {
-            "type": "boolean"
-          },
-          "payment_capability_details": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": true
-            }
-          }
-        }
-      },
       "WhatsappSubscribedAppsInfo": {
         "type": "object",
         "properties": {
@@ -231375,17 +233448,6 @@
           }
         }
       },
-      "WorkSkill": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          }
-        }
-      },
       "WorkUserBadges": {
         "type": "object",
         "properties": {
@@ -231432,10 +233494,10 @@
   ],
   "x-meta-source": {
     "repository": "https://github.com/facebook/facebook-business-sdk-codegen",
-    "revision": "c7448c585357d46db25c1711120109c767e55161",
+    "revision": "5c1fa8a1653722b402133f033fcc321d67981bbd",
     "profile": "Facebook",
-    "sourceOperationCount": 1545,
-    "includedOperationCount": 1545,
+    "sourceOperationCount": 1552,
+    "includedOperationCount": 1552,
     "supplementalOperationCount": 1,
     "operations": [
       {
@@ -232162,6 +234224,11 @@
         "node": "AdAccountLightCampaigns",
         "method": "GET",
         "endpoint": "light_campaigns"
+      },
+      {
+        "node": "AdAccountNamingTemplates",
+        "method": "POST",
+        "endpoint": "naming_templates"
       },
       {
         "node": "AdAccountUserSettings",
@@ -233394,6 +235461,16 @@
         "endpoint": ""
       },
       {
+        "node": "AssignedAdAccounts",
+        "method": "GET",
+        "endpoint": "assigned_ad_accounts"
+      },
+      {
+        "node": "AssignedProductCatalogs",
+        "method": "GET",
+        "endpoint": "assigned_product_catalogs"
+      },
+      {
         "node": "AudioAsset",
         "method": "GET",
         "endpoint": null
@@ -234179,6 +236256,16 @@
         "endpoint": null
       },
       {
+        "node": "BusinessCatalogAdvertiserInsights",
+        "method": "GET",
+        "endpoint": "catalog_advertiser_insights"
+      },
+      {
+        "node": "BusinessClientProductCatalogs",
+        "method": "GET",
+        "endpoint": "client_product_catalogs"
+      },
+      {
         "node": "BusinessCreativeFolder",
         "method": "GET",
         "endpoint": null
@@ -234202,6 +236289,11 @@
         "node": "BusinessOwnedObjectOnBehalfOfRequest",
         "method": "GET",
         "endpoint": null
+      },
+      {
+        "node": "BusinessOwnedProductCatalogs",
+        "method": "POST",
+        "endpoint": "owned_product_catalogs"
       },
       {
         "node": "BusinessProject",
@@ -234994,11 +237086,6 @@
         "endpoint": null
       },
       {
-        "node": "ExternalMerchantSettings",
-        "method": "GET",
-        "endpoint": null
-      },
-      {
         "node": "FAMEKumo",
         "method": "GET",
         "endpoint": null
@@ -235126,11 +237213,6 @@
       {
         "node": "Group",
         "method": "GET",
-        "endpoint": "groups"
-      },
-      {
-        "node": "Group",
-        "method": "POST",
         "endpoint": "groups"
       },
       {
@@ -237119,6 +239201,11 @@
         "endpoint": null
       },
       {
+        "node": "PageProductCatalogs",
+        "method": "GET",
+        "endpoint": "product_catalogs"
+      },
+      {
         "node": "PageUpcomingChange",
         "method": "GET",
         "endpoint": null
@@ -237376,11 +239463,6 @@
       {
         "node": "ProductCatalog",
         "method": "POST",
-        "endpoint": "batch"
-      },
-      {
-        "node": "ProductCatalog",
-        "method": "POST",
         "endpoint": "catalog_store"
       },
       {
@@ -237634,6 +239716,11 @@
         "endpoint": ""
       },
       {
+        "node": "ProductCatalogAgencies",
+        "method": "POST",
+        "endpoint": "agencies"
+      },
+      {
         "node": "ProductCatalogAppsAndSoftware",
         "method": "POST",
         "endpoint": "apps_and_software"
@@ -237659,9 +239746,19 @@
         "endpoint": ""
       },
       {
+        "node": "ProductCatalogBatch",
+        "method": "POST",
+        "endpoint": "batch"
+      },
+      {
         "node": "ProductCatalogCheckBatchRequestStatus",
         "method": "GET",
         "endpoint": "check_batch_request_status"
+      },
+      {
+        "node": "ProductCatalogDataSourcePriorities",
+        "method": "GET",
+        "endpoint": "data_source_priorities"
       },
       {
         "node": "ProductCatalogDataSources",
@@ -238259,6 +240356,11 @@
         "endpoint": null
       },
       {
+        "node": "ShareOfVoice",
+        "method": "GET",
+        "endpoint": "insights/share-of-voice"
+      },
+      {
         "node": "Shop",
         "method": "GET",
         "endpoint": null
@@ -238724,6 +240826,11 @@
         "endpoint": null
       },
       {
+        "node": "UserProductCatalogs",
+        "method": "GET",
+        "endpoint": "product_catalogs"
+      },
+      {
         "node": "Vehicle",
         "method": "GET",
         "endpoint": "channels_to_integrity_status"
@@ -239150,16 +241257,6 @@
       },
       {
         "node": "WorkExperience",
-        "method": "GET",
-        "endpoint": null
-      },
-      {
-        "node": "WorkSkill",
-        "method": "GET",
-        "endpoint": "users"
-      },
-      {
-        "node": "WorkSkill",
         "method": "GET",
         "endpoint": null
       }

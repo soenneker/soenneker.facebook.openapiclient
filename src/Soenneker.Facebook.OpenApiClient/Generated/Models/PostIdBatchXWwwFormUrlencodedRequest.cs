@@ -42,7 +42,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string FbeExternalBusinessId { get => _explicitNullValueFbeExternalBusinessId; set { _explicitNullValueFbeExternalBusinessId = value; AdditionalData?.Remove("fbe_external_business_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fbe_external_business_id"); else _explicitNullProperties?.Remove("fbe_external_business_id"); } }
         private string _explicitNullValueFbeExternalBusinessId = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The requests property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Requests { get => _explicitNullValueRequests; set { _explicitNullValueRequests = value; AdditionalData?.Remove("requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requests"); else _explicitNullProperties?.Remove("requests"); } }

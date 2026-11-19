@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Product_catalogs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Product_catalogsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/product_catalogs{?after*,before*,fields*,limit*}", pathParameters)
+        public Product_catalogsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/product_catalogs{?after*,before*,business_catalogs_with_role_filter*,date_format*,exclude_user_owned_catalog_segments_filter*,fields*,limit*,name_filter*,owner_types*,parent_catalogs_only*,sort*,summary*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Product_catalogs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Product_catalogsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/product_catalogs{?after*,before*,fields*,limit*}", rawUrl)
+        public Product_catalogsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/product_catalogs{?after*,before*,business_catalogs_with_role_filter*,date_format*,exclude_user_owned_catalog_segments_filter*,fields*,limit*,name_filter*,owner_types*,parent_catalogs_only*,sort*,summary*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.DeleteIdProductCatalogs200Response"/></returns>
@@ -208,6 +208,45 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Product_catalogs
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
+            [QueryParameter("business_catalogs_with_role_filter")]
+            public string? BusinessCatalogsWithRoleFilter { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("business_catalogs_with_role_filter")]
+            public string BusinessCatalogsWithRoleFilter { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string? DateFormat { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string DateFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("exclude_user_owned_catalog_segments_filter")]
+            public string? ExcludeUserOwnedCatalogSegmentsFilter { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("exclude_user_owned_catalog_segments_filter")]
+            public string ExcludeUserOwnedCatalogSegmentsFilter { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("fields")]
             public string? Fields { get; set; }
             #pragma warning restore CS1591
@@ -222,6 +261,71 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Product_catalogs
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("name_filter")]
+            public string? NameFilter { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("name_filter")]
+            public string NameFilter { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("owner_types")]
+            public string? OwnerTypes { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("owner_types")]
+            public string OwnerTypes { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("parent_catalogs_only")]
+            public string? ParentCatalogsOnly { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("parent_catalogs_only")]
+            public string ParentCatalogsOnly { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("sort")]
+            public string? Sort { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("sort")]
+            public string Sort { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("summary")]
+            public string? Summary { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("summary")]
+            public string Summary { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

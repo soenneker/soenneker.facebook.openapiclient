@@ -153,6 +153,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("source_facebook_post_id") is { } nullNodeSourceFacebookPostId && nullNodeSourceFacebookPostId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFacebookPostId = null;
             if (parseNode.GetChildNode("source_instagram_media_id") is null) { _explicitNullValueSourceInstagramMediaId = default!; _explicitNullProperties?.Remove("source_instagram_media_id"); }
             else if (parseNode.GetChildNode("source_instagram_media_id") is { } nullNodeSourceInstagramMediaId && nullNodeSourceInstagramMediaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceInstagramMediaId = null;
+            if (parseNode.GetChildNode("source_threads_media_id") is null) { _explicitNullValueSourceThreadsMediaId = default!; _explicitNullProperties?.Remove("source_threads_media_id"); }
+            else if (parseNode.GetChildNode("source_threads_media_id") is { } nullNodeSourceThreadsMediaId && nullNodeSourceThreadsMediaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceThreadsMediaId = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
             if (parseNode.GetChildNode("template_url") is null) { _explicitNullValueTemplateUrl = default!; _explicitNullProperties?.Remove("template_url"); }
@@ -787,6 +789,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string SourceInstagramMediaId { get => _explicitNullValueSourceInstagramMediaId; set { _explicitNullValueSourceInstagramMediaId = value; AdditionalData?.Remove("source_instagram_media_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_instagram_media_id"); else _explicitNullProperties?.Remove("source_instagram_media_id"); } }
         private string _explicitNullValueSourceInstagramMediaId = default!;
 #endif
+        /// <summary>The source_threads_media_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SourceThreadsMediaId { get => _explicitNullValueSourceThreadsMediaId; set { _explicitNullValueSourceThreadsMediaId = value; AdditionalData?.Remove("source_threads_media_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_threads_media_id"); else _explicitNullProperties?.Remove("source_threads_media_id"); } }
+        private string? _explicitNullValueSourceThreadsMediaId = default!;
+#nullable restore
+#else
+        public string SourceThreadsMediaId { get => _explicitNullValueSourceThreadsMediaId; set { _explicitNullValueSourceThreadsMediaId = value; AdditionalData?.Remove("source_threads_media_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_threads_media_id"); else _explicitNullProperties?.Remove("source_threads_media_id"); } }
+        private string _explicitNullValueSourceThreadsMediaId = default!;
+#endif
         /// <summary>The status property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeStatus? _explicitNullValueStatus = default!;
@@ -896,7 +908,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(78)
+            return new Dictionary<string, Action<IParseNode>>(79)
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "actor_id", n => { ActorId = n.GetStringValue(); } },
@@ -966,6 +978,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "regional_regulation_disclaimer_spec", n => { RegionalRegulationDisclaimerSpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer.CreateFromDiscriminatorValue); } },
                 { "source_facebook_post_id", n => { SourceFacebookPostId = n.GetStringValue(); } },
                 { "source_instagram_media_id", n => { SourceInstagramMediaId = n.GetStringValue(); } },
+                { "source_threads_media_id", n => { SourceThreadsMediaId = n.GetStringValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "template_url", n => { TemplateUrl = n.GetStringValue(); } },
                 { "template_url_spec", n => { TemplateUrlSpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpec>(global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpec.CreateFromDiscriminatorValue); } },
@@ -1053,6 +1066,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeRegionalRegulationDisclaimer>("regional_regulation_disclaimer_spec", RegionalRegulationDisclaimerSpec);
             writer.WriteStringValue("source_facebook_post_id", SourceFacebookPostId);
             writer.WriteStringValue("source_instagram_media_id", SourceInstagramMediaId);
+            writer.WriteStringValue("source_threads_media_id", SourceThreadsMediaId);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeStatus>("status", Status);
             writer.WriteStringValue("template_url", TemplateUrl);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.AdCreativeTemplateUrlSpec>("template_url_spec", TemplateUrlSpec);

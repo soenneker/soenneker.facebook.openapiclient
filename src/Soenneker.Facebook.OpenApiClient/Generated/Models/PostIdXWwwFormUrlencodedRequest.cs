@@ -735,8 +735,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
             if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
             else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("meta_moment_maker_spec") is null) { _explicitNullValueMetaMomentMakerSpec = default!; _explicitNullProperties?.Remove("meta_moment_maker_spec"); }
-            else if (parseNode.GetChildNode("meta_moment_maker_spec") is { } nullNodeMetaMomentMakerSpec && nullNodeMetaMomentMakerSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaMomentMakerSpec = null;
             if (parseNode.GetChildNode("migrated_from_feed_id") is null) { _explicitNullValueMigratedFromFeedId = default!; _explicitNullProperties?.Remove("migrated_from_feed_id"); }
             else if (parseNode.GetChildNode("migrated_from_feed_id") is { } nullNodeMigratedFromFeedId && nullNodeMigratedFromFeedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigratedFromFeedId = null;
             if (parseNode.GetChildNode("migrate_to_advantage_plus") is null) { _explicitNullValueMigrateToAdvantagePlus = default!; _explicitNullProperties?.Remove("migrate_to_advantage_plus"); }
@@ -3822,16 +3820,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private string? _explicitNullValueMetaMomentMakerSpec = default!;
-#nullable restore
-#else
-        public string MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private string _explicitNullValueMetaMomentMakerSpec = default!;
-#endif
         /// <summary>The migrated_from_feed_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5510,7 +5498,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(585)
+            return new Dictionary<string, Action<IParseNode>>(584)
             {
                 { "about", n => { About = n.GetStringValue(); } },
                 { "accept_crossposting_handshake", n => { AcceptCrosspostingHandshake = n.GetStringValue(); } },
@@ -5868,7 +5856,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "menu", n => { Menu = n.GetStringValue(); } },
                 { "merchant_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.CommercemerchantsettingsMerchantStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMerchantStatus = default; _explicitNullProperties?.Remove("merchant_status"); AdditionalData["merchant_status"] = unknown; } else { MerchantStatus = parsed; AdditionalData.Remove("merchant_status"); } } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "meta_moment_maker_spec", n => { MetaMomentMakerSpec = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "migrate_to_advantage_plus", n => { MigrateToAdvantagePlus = n.GetBoolValue(); } },
                 { "migrated_from_feed_id", n => { MigratedFromFeedId = n.GetStringValue(); } },
@@ -6465,7 +6452,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.CommercemerchantsettingsMerchantStatus>("merchant_status", MerchantStatus);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteStringValue("meta_moment_maker_spec", MetaMomentMakerSpec);
             writer.WriteStringValue("migrated_from_feed_id", MigratedFromFeedId);
             writer.WriteBoolValue("migrate_to_advantage_plus", MigrateToAdvantagePlus);
             writer.WriteStringValue("mileage", Mileage);

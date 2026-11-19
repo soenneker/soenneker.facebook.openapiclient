@@ -21,6 +21,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
             if (parseNode.GetChildNode("enabled_collab_terms") is null) { _explicitNullValueEnabledCollabTerms = default!; _explicitNullProperties?.Remove("enabled_collab_terms"); }
             else if (parseNode.GetChildNode("enabled_collab_terms") is { } nullNodeEnabledCollabTerms && nullNodeEnabledCollabTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledCollabTerms = null;
+            if (parseNode.GetChildNode("fields") is null) { _explicitNullValueFields = default!; _explicitNullProperties?.Remove("fields"); }
+            else if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
             if (parseNode.GetChildNode("permitted_roles") is null) { _explicitNullValuePermittedRoles = default!; _explicitNullProperties?.Remove("permitted_roles"); }
             else if (parseNode.GetChildNode("permitted_roles") is { } nullNodePermittedRoles && nullNodePermittedRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermittedRoles = null;
             if (parseNode.GetChildNode("permitted_tasks") is null) { _explicitNullValuePermittedTasks = default!; _explicitNullProperties?.Remove("permitted_tasks"); }
@@ -43,7 +45,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; AdditionalData?.Remove("business"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
         private string _explicitNullValueBusiness = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The enabled_collab_terms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EnabledCollabTerms { get => _explicitNullValueEnabledCollabTerms; set { _explicitNullValueEnabledCollabTerms = value; AdditionalData?.Remove("enabled_collab_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_collab_terms"); else _explicitNullProperties?.Remove("enabled_collab_terms"); } }
@@ -53,7 +55,17 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string EnabledCollabTerms { get => _explicitNullValueEnabledCollabTerms; set { _explicitNullValueEnabledCollabTerms = value; AdditionalData?.Remove("enabled_collab_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_collab_terms"); else _explicitNullProperties?.Remove("enabled_collab_terms"); } }
         private string _explicitNullValueEnabledCollabTerms = default!;
 #endif
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string? _explicitNullValueFields = default!;
+#nullable restore
+#else
+        public string Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private string _explicitNullValueFields = default!;
+#endif
+        /// <summary>The permitted_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PermittedRoles { get => _explicitNullValuePermittedRoles; set { _explicitNullValuePermittedRoles = value; AdditionalData?.Remove("permitted_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permitted_roles"); else _explicitNullProperties?.Remove("permitted_roles"); } }
@@ -74,9 +86,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         private string _explicitNullValuePermittedTasks = default!;
 #endif
         /// <summary>The skip_defaults property</summary>
-        public bool? SkipDefaults { get => _explicitNullValueSkipDefaults; set { _explicitNullValueSkipDefaults = value; AdditionalData?.Remove("skip_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_defaults"); else _explicitNullProperties?.Remove("skip_defaults"); } }
-        private bool? _explicitNullValueSkipDefaults = default!;
-        /// <summary>A JSON-encoded value.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SkipDefaults { get => _explicitNullValueSkipDefaults; set { _explicitNullValueSkipDefaults = value; AdditionalData?.Remove("skip_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_defaults"); else _explicitNullProperties?.Remove("skip_defaults"); } }
+        private string? _explicitNullValueSkipDefaults = default!;
+#nullable restore
+#else
+        public string SkipDefaults { get => _explicitNullValueSkipDefaults; set { _explicitNullValueSkipDefaults = value; AdditionalData?.Remove("skip_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_defaults"); else _explicitNullProperties?.Remove("skip_defaults"); } }
+        private string _explicitNullValueSkipDefaults = default!;
+#endif
+        /// <summary>The utm_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UtmSettings { get => _explicitNullValueUtmSettings; set { _explicitNullValueUtmSettings = value; AdditionalData?.Remove("utm_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utm_settings"); else _explicitNullProperties?.Remove("utm_settings"); } }
@@ -109,13 +128,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(6)
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "business", n => { Business = n.GetStringValue(); } },
                 { "enabled_collab_terms", n => { EnabledCollabTerms = n.GetStringValue(); } },
+                { "fields", n => { Fields = n.GetStringValue(); } },
                 { "permitted_roles", n => { PermittedRoles = n.GetStringValue(); } },
                 { "permitted_tasks", n => { PermittedTasks = n.GetStringValue(); } },
-                { "skip_defaults", n => { SkipDefaults = n.GetBoolValue(); } },
+                { "skip_defaults", n => { SkipDefaults = n.GetStringValue(); } },
                 { "utm_settings", n => { UtmSettings = n.GetStringValue(); } },
             };
         }
@@ -128,9 +148,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("business", Business);
             writer.WriteStringValue("enabled_collab_terms", EnabledCollabTerms);
+            writer.WriteStringValue("fields", Fields);
             writer.WriteStringValue("permitted_roles", PermittedRoles);
             writer.WriteStringValue("permitted_tasks", PermittedTasks);
-            writer.WriteBoolValue("skip_defaults", SkipDefaults);
+            writer.WriteStringValue("skip_defaults", SkipDefaults);
             writer.WriteStringValue("utm_settings", UtmSettings);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

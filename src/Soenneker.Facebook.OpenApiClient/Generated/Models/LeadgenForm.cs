@@ -51,6 +51,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
             if (parseNode.GetChildNode("page_id") is null) { _explicitNullValuePageId = default!; _explicitNullProperties?.Remove("page_id"); }
             else if (parseNode.GetChildNode("page_id") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("phone_otp_verification_type") is null) { _explicitNullValuePhoneOtpVerificationType = default!; _explicitNullProperties?.Remove("phone_otp_verification_type"); }
+            else if (parseNode.GetChildNode("phone_otp_verification_type") is { } nullNodePhoneOtpVerificationType && nullNodePhoneOtpVerificationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneOtpVerificationType = null;
             if (parseNode.GetChildNode("privacy_policy_url") is null) { _explicitNullValuePrivacyPolicyUrl = default!; _explicitNullProperties?.Remove("privacy_policy_url"); }
             else if (parseNode.GetChildNode("privacy_policy_url") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
             if (parseNode.GetChildNode("question_page_custom_headline") is null) { _explicitNullValueQuestionPageCustomHeadline = default!; _explicitNullProperties?.Remove("question_page_custom_headline"); }
@@ -181,6 +183,9 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; AdditionalData?.Remove("page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_id"); else _explicitNullProperties?.Remove("page_id"); } }
         private string _explicitNullValuePageId = default!;
 #endif
+        /// <summary>The phone_otp_verification_type property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Models.PageleadgenFormsPhoneOtpVerificationTypeEnumParam? PhoneOtpVerificationType { get => _explicitNullValuePhoneOtpVerificationType; set { _explicitNullValuePhoneOtpVerificationType = value; AdditionalData?.Remove("phone_otp_verification_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_otp_verification_type"); else _explicitNullProperties?.Remove("phone_otp_verification_type"); } }
+        private global::Soenneker.Facebook.OpenApiClient.Models.PageleadgenFormsPhoneOtpVerificationTypeEnumParam? _explicitNullValuePhoneOtpVerificationType = default!;
         /// <summary>The privacy_policy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -257,7 +262,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(23)
+            return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "allow_organic_lead", n => { AllowOrganicLead = n.GetBoolValue(); } },
                 { "block_display_for_non_targeted_viewer", n => { BlockDisplayForNonTargetedViewer = n.GetBoolValue(); } },
@@ -276,6 +281,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "organic_leads_count", n => { OrganicLeadsCount = n.GetLongValue(); } },
                 { "page", n => { Page = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Page>(global::Soenneker.Facebook.OpenApiClient.Models.Page.CreateFromDiscriminatorValue); } },
                 { "page_id", n => { PageId = n.GetStringValue(); } },
+                { "phone_otp_verification_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PageleadgenFormsPhoneOtpVerificationTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePhoneOtpVerificationType = default; _explicitNullProperties?.Remove("phone_otp_verification_type"); AdditionalData["phone_otp_verification_type"] = unknown; } else { PhoneOtpVerificationType = parsed; AdditionalData.Remove("phone_otp_verification_type"); } } },
                 { "privacy_policy_url", n => { PrivacyPolicyUrl = n.GetStringValue(); } },
                 { "question_page_custom_headline", n => { QuestionPageCustomHeadline = n.GetStringValue(); } },
                 { "questions", n => { Questions = n.GetCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion>(global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -308,6 +314,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("organic_leads_count", OrganicLeadsCount);
             writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.Page>("page", Page);
             writer.WriteStringValue("page_id", PageId);
+            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.PageleadgenFormsPhoneOtpVerificationTypeEnumParam>("phone_otp_verification_type", PhoneOtpVerificationType);
             writer.WriteStringValue("privacy_policy_url", PrivacyPolicyUrl);
             writer.WriteStringValue("question_page_custom_headline", QuestionPageCustomHeadline);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Facebook.OpenApiClient.Models.LeadGenQuestion>("questions", Questions);

@@ -31,8 +31,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("auditing_token") is { } nullNodeAuditingToken && nullNodeAuditingToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuditingToken = null;
             if (parseNode.GetChildNode("click_attr_window") is null) { _explicitNullValueClickAttrWindow = default!; _explicitNullProperties?.Remove("click_attr_window"); }
             else if (parseNode.GetChildNode("click_attr_window") is { } nullNodeClickAttrWindow && nullNodeClickAttrWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClickAttrWindow = null;
-            if (parseNode.GetChildNode("click_id") is null) { _explicitNullValueClickId = default!; _explicitNullProperties?.Remove("click_id"); }
-            else if (parseNode.GetChildNode("click_id") is { } nullNodeClickId && nullNodeClickId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClickId = null;
             if (parseNode.GetChildNode("custom_events") is null) { _explicitNullValueCustomEvents = default!; _explicitNullProperties?.Remove("custom_events"); }
             else if (parseNode.GetChildNode("custom_events") is { } nullNodeCustomEvents && nullNodeCustomEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomEvents = null;
             if (parseNode.GetChildNode("decline_reason") is null) { _explicitNullValueDeclineReason = default!; _explicitNullProperties?.Remove("decline_reason"); }
@@ -51,6 +49,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("fb_adgroup_id") is { } nullNodeFbAdgroupId && nullNodeFbAdgroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbAdgroupId = null;
             if (parseNode.GetChildNode("fb_ad_id") is null) { _explicitNullValueFbAdId = default!; _explicitNullProperties?.Remove("fb_ad_id"); }
             else if (parseNode.GetChildNode("fb_ad_id") is { } nullNodeFbAdId && nullNodeFbAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbAdId = null;
+            if (parseNode.GetChildNode("fbc") is null) { _explicitNullValueFbc = default!; _explicitNullProperties?.Remove("fbc"); }
+            else if (parseNode.GetChildNode("fbc") is { } nullNodeFbc && nullNodeFbc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fbc = null;
             if (parseNode.GetChildNode("fb_click_time") is null) { _explicitNullValueFbClickTime = default!; _explicitNullProperties?.Remove("fb_click_time"); }
             else if (parseNode.GetChildNode("fb_click_time") is { } nullNodeFbClickTime && nullNodeFbClickTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbClickTime = null;
             if (parseNode.GetChildNode("fb_view_time") is null) { _explicitNullValueFbViewTime = default!; _explicitNullProperties?.Remove("fb_view_time"); }
@@ -138,16 +138,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The click_attr_window property</summary>
         public long? ClickAttrWindow { get => _explicitNullValueClickAttrWindow; set { _explicitNullValueClickAttrWindow = value; AdditionalData?.Remove("click_attr_window"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click_attr_window"); else _explicitNullProperties?.Remove("click_attr_window"); } }
         private long? _explicitNullValueClickAttrWindow = default!;
-        /// <summary>The click_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ClickId { get => _explicitNullValueClickId; set { _explicitNullValueClickId = value; AdditionalData?.Remove("click_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click_id"); else _explicitNullProperties?.Remove("click_id"); } }
-        private string? _explicitNullValueClickId = default!;
-#nullable restore
-#else
-        public string ClickId { get => _explicitNullValueClickId; set { _explicitNullValueClickId = value; AdditionalData?.Remove("click_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("click_id"); else _explicitNullProperties?.Remove("click_id"); } }
-        private string _explicitNullValueClickId = default!;
-#endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -217,6 +207,16 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The fb_ad_id property</summary>
         public long? FbAdId { get => _explicitNullValueFbAdId; set { _explicitNullValueFbAdId = value; AdditionalData?.Remove("fb_ad_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_ad_id"); else _explicitNullProperties?.Remove("fb_ad_id"); } }
         private long? _explicitNullValueFbAdId = default!;
+        /// <summary>The fbc property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Fbc { get => _explicitNullValueFbc; set { _explicitNullValueFbc = value; AdditionalData?.Remove("fbc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fbc"); else _explicitNullProperties?.Remove("fbc"); } }
+        private string? _explicitNullValueFbc = default!;
+#nullable restore
+#else
+        public string Fbc { get => _explicitNullValueFbc; set { _explicitNullValueFbc = value; AdditionalData?.Remove("fbc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fbc"); else _explicitNullProperties?.Remove("fbc"); } }
+        private string _explicitNullValueFbc = default!;
+#endif
         /// <summary>The fb_click_time property</summary>
         public long? FbClickTime { get => _explicitNullValueFbClickTime; set { _explicitNullValueFbClickTime = value; AdditionalData?.Remove("fb_click_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_click_time"); else _explicitNullProperties?.Remove("fb_click_time"); } }
         private long? _explicitNullValueFbClickTime = default!;
@@ -300,7 +300,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "attribution_referrer", n => { AttributionReferrer = n.GetStringValue(); } },
                 { "auditing_token", n => { AuditingToken = n.GetStringValue(); } },
                 { "click_attr_window", n => { ClickAttrWindow = n.GetLongValue(); } },
-                { "click_id", n => { ClickId = n.GetStringValue(); } },
                 { "custom_events", n => { CustomEvents = n.GetStringValue(); } },
                 { "decline_reason", n => { DeclineReason = n.GetStringValue(); } },
                 { "device_os", n => { DeviceOs = n.GetStringValue(); } },
@@ -312,6 +311,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "fb_adgroup_id", n => { FbAdgroupId = n.GetLongValue(); } },
                 { "fb_click_time", n => { FbClickTime = n.GetLongValue(); } },
                 { "fb_view_time", n => { FbViewTime = n.GetLongValue(); } },
+                { "fbc", n => { Fbc = n.GetStringValue(); } },
                 { "google_install_referrer", n => { GoogleInstallReferrer = n.GetStringValue(); } },
                 { "inactivity_window_hours", n => { InactivityWindowHours = n.GetLongValue(); } },
                 { "install_id", n => { InstallId = n.GetStringValue(); } },
@@ -336,7 +336,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteStringValue("attribution_referrer", AttributionReferrer);
             writer.WriteStringValue("auditing_token", AuditingToken);
             writer.WriteLongValue("click_attr_window", ClickAttrWindow);
-            writer.WriteStringValue("click_id", ClickId);
             writer.WriteStringValue("custom_events", CustomEvents);
             writer.WriteStringValue("decline_reason", DeclineReason);
             writer.WriteStringValue("device_os", DeviceOs);
@@ -346,6 +345,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("event_reported_time", EventReportedTime);
             writer.WriteLongValue("fb_adgroup_id", FbAdgroupId);
             writer.WriteLongValue("fb_ad_id", FbAdId);
+            writer.WriteStringValue("fbc", Fbc);
             writer.WriteLongValue("fb_click_time", FbClickTime);
             writer.WriteLongValue("fb_view_time", FbViewTime);
             writer.WriteStringValue("google_install_referrer", GoogleInstallReferrer);

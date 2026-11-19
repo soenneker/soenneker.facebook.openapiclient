@@ -22,7 +22,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Assigned_product_catalogs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Assigned_product_catalogsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/assigned_product_catalogs{?after*,before*,fields*,limit*}", pathParameters)
+        public Assigned_product_catalogsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/assigned_product_catalogs{?after*,before*,date_format*,fields*,filtering*,limit*,sort*,summary*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Assigned_product_catalogs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Assigned_product_catalogsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/assigned_product_catalogs{?after*,before*,fields*,limit*}", rawUrl)
+        public Assigned_product_catalogsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/assigned_product_catalogs{?after*,before*,date_format*,fields*,filtering*,limit*,sort*,summary*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdAssignedProductCatalogs200Response"/></returns>
@@ -112,6 +112,19 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Assigned_product_catalogs
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string? DateFormat { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("date_format")]
+            public string DateFormat { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("fields")]
             public string? Fields { get; set; }
             #pragma warning restore CS1591
@@ -122,10 +135,49 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Assigned_product_catalogs
             public string Fields { get; set; }
             #pragma warning restore CS1591
 #endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("filtering")]
+            public string? Filtering { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("filtering")]
+            public string Filtering { get; set; }
+            #pragma warning restore CS1591
+#endif
             #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("sort")]
+            public string? Sort { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("sort")]
+            public string Sort { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("summary")]
+            public string? Summary { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("summary")]
+            public string Summary { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

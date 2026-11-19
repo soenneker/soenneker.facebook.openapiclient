@@ -128,6 +128,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Campaignsbylabels;
 using Soenneker.Facebook.OpenApiClient.Item.Canvas_elements;
 using Soenneker.Facebook.OpenApiClient.Item.Canvases;
 using Soenneker.Facebook.OpenApiClient.Item.Captions;
+using Soenneker.Facebook.OpenApiClient.Item.Catalog_advertiser_insights;
 using Soenneker.Facebook.OpenApiClient.Item.Catalog_product_search;
 using Soenneker.Facebook.OpenApiClient.Item.Catalog_store;
 using Soenneker.Facebook.OpenApiClient.Item.Categories;
@@ -201,6 +202,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Customaudiences;
 using Soenneker.Facebook.OpenApiClient.Item.Customaudiencestos;
 using Soenneker.Facebook.OpenApiClient.Item.Customconversions;
 using Soenneker.Facebook.OpenApiClient.Item.Da_checks;
+using Soenneker.Facebook.OpenApiClient.Item.Data_source_priorities;
 using Soenneker.Facebook.OpenApiClient.Item.Data_sources;
 using Soenneker.Facebook.OpenApiClient.Item.Dataset;
 using Soenneker.Facebook.OpenApiClient.Item.Degrees_of_freedom_spec;
@@ -322,6 +324,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Mobile_sdk_gk;
 using Soenneker.Facebook.OpenApiClient.Item.Moderate_conversations;
 using Soenneker.Facebook.OpenApiClient.Item.Monetized_digital_store_objects;
 using Soenneker.Facebook.OpenApiClient.Item.Music;
+using Soenneker.Facebook.OpenApiClient.Item.Naming_templates;
 using Soenneker.Facebook.OpenApiClient.Item.Nlp_configs;
 using Soenneker.Facebook.OpenApiClient.Item.Notification_message_tokens;
 using Soenneker.Facebook.OpenApiClient.Item.Notification_messages_dev_support;
@@ -1166,6 +1169,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Captions.CaptionsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The catalog_advertiser_insights property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Catalog_advertiser_insights.Catalog_advertiser_insightsRequestBuilder Catalog_advertiser_insights
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Catalog_advertiser_insights.Catalog_advertiser_insightsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The catalog_product_search property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Catalog_product_search.Catalog_product_searchRequestBuilder Catalog_product_search
         {
@@ -1530,6 +1538,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         public global::Soenneker.Facebook.OpenApiClient.Item.Da_checks.Da_checksRequestBuilder Da_checks
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Da_checks.Da_checksRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The data_source_priorities property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Data_source_priorities.Data_source_prioritiesRequestBuilder Data_source_priorities
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Data_source_priorities.Data_source_prioritiesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The data_sources property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Data_sources.Data_sourcesRequestBuilder Data_sources
@@ -2135,6 +2148,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item
         public global::Soenneker.Facebook.OpenApiClient.Item.Music.MusicRequestBuilder Music
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Music.MusicRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The naming_templates property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Naming_templates.Naming_templatesRequestBuilder Naming_templates
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Naming_templates.Naming_templatesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The nlp_configs property</summary>
         public global::Soenneker.Facebook.OpenApiClient.Item.Nlp_configs.Nlp_configsRequestBuilder Nlp_configs

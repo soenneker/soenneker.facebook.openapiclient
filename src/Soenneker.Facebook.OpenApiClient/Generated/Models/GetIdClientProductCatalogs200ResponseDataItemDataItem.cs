@@ -9,7 +9,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class MetaMomentMakerConfig : IAdditionalDataHolder, IParsable
+    public partial class GetIdClientProductCatalogs200ResponseDataItemDataItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -17,38 +17,26 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("saturation_mode") is null) { _explicitNullValueSaturationMode = default!; _explicitNullProperties?.Remove("saturation_mode"); }
-            else if (parseNode.GetChildNode("saturation_mode") is { } nullNodeSaturationMode && nullNodeSaturationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturationMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The saturation_mode property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SaturationMode { get => _explicitNullValueSaturationMode; set { _explicitNullValueSaturationMode = value; AdditionalData?.Remove("saturation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation_mode"); else _explicitNullProperties?.Remove("saturation_mode"); } }
-        private string? _explicitNullValueSaturationMode = default!;
-#nullable restore
-#else
-        public string SaturationMode { get => _explicitNullValueSaturationMode; set { _explicitNullValueSaturationMode = value; AdditionalData?.Remove("saturation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation_mode"); else _explicitNullProperties?.Remove("saturation_mode"); } }
-        private string _explicitNullValueSaturationMode = default!;
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdClientProductCatalogs200ResponseDataItemDataItem"/> and sets the default values.
         /// </summary>
-        public MetaMomentMakerConfig()
+        public GetIdClientProductCatalogs200ResponseDataItemDataItem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Facebook.OpenApiClient.Models.GetIdClientProductCatalogs200ResponseDataItemDataItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Facebook.OpenApiClient.Models.GetIdClientProductCatalogs200ResponseDataItemDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Facebook.OpenApiClient.Models.GetIdClientProductCatalogs200ResponseDataItemDataItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +46,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "saturation_mode", n => { SaturationMode = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -68,7 +55,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("saturation_mode", SaturationMode);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

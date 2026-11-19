@@ -488,6 +488,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         BpbaaWithCapiUpsell,
         #pragma warning restore CS1591
+        [EnumMember(Value = "BRAND_ADVERTISER_ADOPT_CORE_6_PLACEMENTS")]
+        #pragma warning disable CS1591
+        BrandAdvertiserAdoptCore6Placements,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "BRAND_ADVERTISER_ADOPT_SHORT_FORM_VIDEO")]
+        #pragma warning disable CS1591
+        BrandAdvertiserAdoptShortFormVideo,
+        #pragma warning restore CS1591
         [EnumMember(Value = "BRAND_ADVERTISER_INCREASE_CA_OR_LAL_SPEND")]
         #pragma warning disable CS1591
         BrandAdvertiserIncreaseCaOrLalSpend,
@@ -567,6 +575,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "CAPI_EVENT_COVERAGE")]
         #pragma warning disable CS1591
         CapiEventCoverage,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CAPI_EVENT_COVERAGE_V2")]
+        #pragma warning disable CS1591
+        CapiEventCoverageV2,
         #pragma warning restore CS1591
         [EnumMember(Value = "CAPI_PENETRATION")]
         #pragma warning disable CS1591
@@ -663,6 +675,14 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "CONVERT_IG_PROFILE_VISIT_TO_PTWA")]
         #pragma warning disable CS1591
         ConvertIgProfileVisitToPtwa,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONVERT_INSTANT_FORM_LO_TO_LEAD_GEN_PLUS")]
+        #pragma warning disable CS1591
+        ConvertInstantFormLoToLeadGenPlus,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "CONVERT_ONSITE_LO_TO_ONSITE_QLO_CAPI_CRM")]
+        #pragma warning disable CS1591
+        ConvertOnsiteLoToOnsiteQloCapiCrm,
         #pragma warning restore CS1591
         [EnumMember(Value = "COST_GOAL")]
         #pragma warning disable CS1591
@@ -1304,6 +1324,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         #pragma warning disable CS1591
         PerformantCreativeReelsOptInV2,
         #pragma warning restore CS1591
+        [EnumMember(Value = "PERFORM_CHANNEL_LIFT_STUDY_FOR_FIRST_TIME")]
+        #pragma warning disable CS1591
+        PerformChannelLiftStudyForFirstTime,
+        #pragma warning restore CS1591
         [EnumMember(Value = "PFR_L1_INLINE_MMT")]
         #pragma warning disable CS1591
         PfrL1InlineMmt,
@@ -1627,6 +1651,10 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         [EnumMember(Value = "TARGETING_CREATIVE_FRAGMENTATION")]
         #pragma warning disable CS1591
         TargetingCreativeFragmentation,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TEST_SGP_MIGRATE_TO_UGP")]
+        #pragma warning disable CS1591
+        TestSgpMigrateToUgp,
         #pragma warning restore CS1591
         [EnumMember(Value = "THIVIYA_SALES_GUIDANCE_E2E_TEST")]
         #pragma warning disable CS1591

@@ -7,6 +7,7 @@ using Soenneker.Facebook.OpenApiClient.Item.Insights.BenchmarkAvailability;
 using Soenneker.Facebook.OpenApiClient.Item.Insights.CategoryBenchmark;
 using Soenneker.Facebook.OpenApiClient.Item.Insights.FeatureSettings;
 using Soenneker.Facebook.OpenApiClient.Item.Insights.MyTopProducts;
+using Soenneker.Facebook.OpenApiClient.Item.Insights.ShareOfVoice;
 using Soenneker.Facebook.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -40,6 +41,11 @@ namespace Soenneker.Facebook.OpenApiClient.Item.Insights
         public global::Soenneker.Facebook.OpenApiClient.Item.Insights.MyTopProducts.MyTopProductsRequestBuilder MyTopProducts
         {
             get => new global::Soenneker.Facebook.OpenApiClient.Item.Insights.MyTopProducts.MyTopProductsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The shareOfVoice property</summary>
+        public global::Soenneker.Facebook.OpenApiClient.Item.Insights.ShareOfVoice.ShareOfVoiceRequestBuilder ShareOfVoice
+        {
+            get => new global::Soenneker.Facebook.OpenApiClient.Item.Insights.ShareOfVoice.ShareOfVoiceRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Facebook.OpenApiClient.Item.Insights.InsightsRequestBuilder"/> and sets the default values.

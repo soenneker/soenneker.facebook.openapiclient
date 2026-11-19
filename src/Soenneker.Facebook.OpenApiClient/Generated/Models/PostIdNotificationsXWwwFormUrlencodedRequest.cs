@@ -17,8 +17,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ai_disclosure") is null) { _explicitNullValueAiDisclosure = default!; _explicitNullProperties?.Remove("ai_disclosure"); }
-            else if (parseNode.GetChildNode("ai_disclosure") is { } nullNodeAiDisclosure && nullNodeAiDisclosure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiDisclosure = null;
             if (parseNode.GetChildNode("bot_message_payload_elements") is null) { _explicitNullValueBotMessagePayloadElements = default!; _explicitNullProperties?.Remove("bot_message_payload_elements"); }
             else if (parseNode.GetChildNode("bot_message_payload_elements") is { } nullNodeBotMessagePayloadElements && nullNodeBotMessagePayloadElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotMessagePayloadElements = null;
             if (parseNode.GetChildNode("button_title") is null) { _explicitNullValueButtonTitle = default!; _explicitNullProperties?.Remove("button_title"); }
@@ -57,9 +55,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ai_disclosure property</summary>
-        public global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam? AiDisclosure { get => _explicitNullValueAiDisclosure; set { _explicitNullValueAiDisclosure = value; AdditionalData?.Remove("ai_disclosure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_disclosure"); else _explicitNullProperties?.Remove("ai_disclosure"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam? _explicitNullValueAiDisclosure = default!;
         /// <summary>The bot_message_payload_elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -218,9 +213,8 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(18)
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
-                { "ai_disclosure", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAiDisclosure = default; _explicitNullProperties?.Remove("ai_disclosure"); AdditionalData["ai_disclosure"] = unknown; } else { AiDisclosure = parsed; AdditionalData.Remove("ai_disclosure"); } } },
                 { "bot_message_payload_elements", n => { BotMessagePayloadElements = n.GetStringValue(); } },
                 { "button_title", n => { ButtonTitle = n.GetStringValue(); } },
                 { "filtering", n => { Filtering = n.GetStringValue(); } },
@@ -247,7 +241,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.UsernotificationsAiDisclosureEnumParam>("ai_disclosure", AiDisclosure);
             writer.WriteStringValue("bot_message_payload_elements", BotMessagePayloadElements);
             writer.WriteStringValue("button_title", ButtonTitle);
             writer.WriteStringValue("filtering", Filtering);

@@ -109,8 +109,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("live_video_ad_campaign_config") is { } nullNodeLiveVideoAdCampaignConfig && nullNodeLiveVideoAdCampaignConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveVideoAdCampaignConfig = null;
             if (parseNode.GetChildNode("max_budget_spend_percentage") is null) { _explicitNullValueMaxBudgetSpendPercentage = default!; _explicitNullProperties?.Remove("max_budget_spend_percentage"); }
             else if (parseNode.GetChildNode("max_budget_spend_percentage") is { } nullNodeMaxBudgetSpendPercentage && nullNodeMaxBudgetSpendPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBudgetSpendPercentage = null;
-            if (parseNode.GetChildNode("meta_moment_maker_spec") is null) { _explicitNullValueMetaMomentMakerSpec = default!; _explicitNullProperties?.Remove("meta_moment_maker_spec"); }
-            else if (parseNode.GetChildNode("meta_moment_maker_spec") is { } nullNodeMetaMomentMakerSpec && nullNodeMetaMomentMakerSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaMomentMakerSpec = null;
             if (parseNode.GetChildNode("min_budget_spend_percentage") is null) { _explicitNullValueMinBudgetSpendPercentage = default!; _explicitNullProperties?.Remove("min_budget_spend_percentage"); }
             else if (parseNode.GetChildNode("min_budget_spend_percentage") is { } nullNodeMinBudgetSpendPercentage && nullNodeMinBudgetSpendPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinBudgetSpendPercentage = null;
             if (parseNode.GetChildNode("multi_event_conversion_attribution_window_seconds") is null) { _explicitNullValueMultiEventConversionAttributionWindowSeconds = default!; _explicitNullProperties?.Remove("multi_event_conversion_attribution_window_seconds"); }
@@ -433,16 +431,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The max_budget_spend_percentage property</summary>
         public long? MaxBudgetSpendPercentage { get => _explicitNullValueMaxBudgetSpendPercentage; set { _explicitNullValueMaxBudgetSpendPercentage = value; AdditionalData?.Remove("max_budget_spend_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_budget_spend_percentage"); else _explicitNullProperties?.Remove("max_budget_spend_percentage"); } }
         private long? _explicitNullValueMaxBudgetSpendPercentage = default!;
-        /// <summary>A JSON-encoded value.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private string? _explicitNullValueMetaMomentMakerSpec = default!;
-#nullable restore
-#else
-        public string MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private string _explicitNullValueMetaMomentMakerSpec = default!;
-#endif
         /// <summary>The min_budget_spend_percentage property</summary>
         public long? MinBudgetSpendPercentage { get => _explicitNullValueMinBudgetSpendPercentage; set { _explicitNullValueMinBudgetSpendPercentage = value; AdditionalData?.Remove("min_budget_spend_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_budget_spend_percentage"); else _explicitNullProperties?.Remove("min_budget_spend_percentage"); } }
         private long? _explicitNullValueMinBudgetSpendPercentage = default!;
@@ -652,7 +640,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(74)
+            return new Dictionary<string, Action<IParseNode>>(73)
             {
                 { "ad_set_goal", n => { AdSetGoal = n.GetStringValue(); } },
                 { "adlabels", n => { Adlabels = n.GetStringValue(); } },
@@ -700,7 +688,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "line_number", n => { LineNumber = n.GetLongValue(); } },
                 { "live_video_ad_campaign_config", n => { LiveVideoAdCampaignConfig = n.GetStringValue(); } },
                 { "max_budget_spend_percentage", n => { MaxBudgetSpendPercentage = n.GetLongValue(); } },
-                { "meta_moment_maker_spec", n => { MetaMomentMakerSpec = n.GetStringValue(); } },
                 { "min_budget_spend_percentage", n => { MinBudgetSpendPercentage = n.GetLongValue(); } },
                 { "multi_event_conversion_attribution_window_seconds", n => { MultiEventConversionAttributionWindowSeconds = n.GetLongValue(); } },
                 { "multi_optimization_goal_weight", n => { var parsed = n.GetEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsMultiOptimizationGoalWeightEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMultiOptimizationGoalWeight = default; _explicitNullProperties?.Remove("multi_optimization_goal_weight"); AdditionalData["multi_optimization_goal_weight"] = unknown; } else { MultiOptimizationGoalWeight = parsed; AdditionalData.Remove("multi_optimization_goal_weight"); } } },
@@ -783,7 +770,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteLongValue("line_number", LineNumber);
             writer.WriteStringValue("live_video_ad_campaign_config", LiveVideoAdCampaignConfig);
             writer.WriteLongValue("max_budget_spend_percentage", MaxBudgetSpendPercentage);
-            writer.WriteStringValue("meta_moment_maker_spec", MetaMomentMakerSpec);
             writer.WriteLongValue("min_budget_spend_percentage", MinBudgetSpendPercentage);
             writer.WriteLongValue("multi_event_conversion_attribution_window_seconds", MultiEventConversionAttributionWindowSeconds);
             writer.WriteEnumValue<global::Soenneker.Facebook.OpenApiClient.Models.AdaccountadsetsMultiOptimizationGoalWeightEnumParam>("multi_optimization_goal_weight", MultiOptimizationGoalWeight);

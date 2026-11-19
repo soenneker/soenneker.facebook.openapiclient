@@ -5,20 +5,20 @@ namespace Soenneker.Facebook.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum GroupgroupsPostPermissionsEnumParam
+    public enum PageleadgenFormsPhoneOtpVerificationTypeEnumParam
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "ADMIN_ONLY")]
+        [EnumMember(Value = "NOT_ENABLED")]
         #pragma warning disable CS1591
-        AdminOnly,
+        NotEnabled,
         #pragma warning restore CS1591
-        [EnumMember(Value = "ANYONE")]
+        [EnumMember(Value = "OTP_OPTIONAL")]
         #pragma warning disable CS1591
-        Anyone,
+        OtpOptional,
         #pragma warning restore CS1591
-        [EnumMember(Value = "NONE")]
+        [EnumMember(Value = "OTP_REQUIRED")]
         #pragma warning disable CS1591
-        None,
+        OtpRequired,
         #pragma warning restore CS1591
     }
 }

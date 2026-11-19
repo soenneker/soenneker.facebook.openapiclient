@@ -137,8 +137,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_reserved_buying") is { } nullNodeIsReservedBuying && nullNodeIsReservedBuying.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReservedBuying = null;
             if (parseNode.GetChildNode("is_trp") is null) { _explicitNullValueIsTrp = default!; _explicitNullProperties?.Remove("is_trp"); }
             else if (parseNode.GetChildNode("is_trp") is { } nullNodeIsTrp && nullNodeIsTrp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTrp = null;
-            if (parseNode.GetChildNode("meta_moment_maker_spec") is null) { _explicitNullValueMetaMomentMakerSpec = default!; _explicitNullProperties?.Remove("meta_moment_maker_spec"); }
-            else if (parseNode.GetChildNode("meta_moment_maker_spec") is { } nullNodeMetaMomentMakerSpec && nullNodeMetaMomentMakerSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaMomentMakerSpec = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
             if (parseNode.GetChildNode("objective") is null) { _explicitNullValueObjective = default!; _explicitNullProperties?.Remove("objective"); }
@@ -538,16 +536,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <summary>The is_trp property</summary>
         public bool? IsTrp { get => _explicitNullValueIsTrp; set { _explicitNullValueIsTrp = value; AdditionalData?.Remove("is_trp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_trp"); else _explicitNullProperties?.Remove("is_trp"); } }
         private bool? _explicitNullValueIsTrp = default!;
-        /// <summary>The meta_moment_maker_spec property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig? MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig? _explicitNullValueMetaMomentMakerSpec = default!;
-#nullable restore
-#else
-        public global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig _explicitNullValueMetaMomentMakerSpec = default!;
-#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -778,7 +766,7 @@ namespace Soenneker.Facebook.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(95)
+            return new Dictionary<string, Action<IParseNode>>(94)
             {
                 { "account_id", n => { AccountId = n.GetLongValue(); } },
                 { "activity_status", n => { ActivityStatus = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity>(global::Soenneker.Facebook.OpenApiClient.Models.ReachFrequencyActivity.CreateFromDiscriminatorValue); } },
@@ -840,7 +828,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
                 { "is_io", n => { IsIo = n.GetBoolValue(); } },
                 { "is_reserved_buying", n => { IsReservedBuying = n.GetLongValue(); } },
                 { "is_trp", n => { IsTrp = n.GetBoolValue(); } },
-                { "meta_moment_maker_spec", n => { MetaMomentMakerSpec = n.GetObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig>(global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objective", n => { Objective = n.GetLongValue(); } },
                 { "objective_name", n => { ObjectiveName = n.GetStringValue(); } },
@@ -944,7 +931,6 @@ namespace Soenneker.Facebook.OpenApiClient.Models
             writer.WriteBoolValue("is_io", IsIo);
             writer.WriteLongValue("is_reserved_buying", IsReservedBuying);
             writer.WriteBoolValue("is_trp", IsTrp);
-            writer.WriteObjectValue<global::Soenneker.Facebook.OpenApiClient.Models.MetaMomentMakerConfig>("meta_moment_maker_spec", MetaMomentMakerSpec);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("objective", Objective);
             writer.WriteStringValue("objective_name", ObjectiveName);
